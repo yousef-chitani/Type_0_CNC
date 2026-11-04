@@ -8,3 +8,5 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [Requirements](docs/requirements.md): what the machine must do
 - [Decision log](docs/decisions.md): what was decided, and why
 - [Open questions](docs/open-questions.md): what's still to decide
+- [EG moulds](docs/eg-moulds.md): mould diagrams, cores, fabrication and demoulding (draft)
+- [Epoxy options](docs/epoxy-options.md): UK resin comparison

@@ -29,3 +29,5 @@
 | D-25 | Molds made of melamine-faced MDF/ply with packing tape, wax and PVA release | Cheap, flat, easy to cut. Good for one-off castings |
 | D-26 | Graded aggregate mix with about 10–12% epoxy by weight | Kiln-dried quartz gravel, sand and fine filler following a packing curve, with low-viscosity casting epoxy. Less epoxy means less cost, less heat and less shrinkage |
 | D-27 | Compact on a sprung vibration table driven by unbalanced motors | Even compaction, no voids, reusable for every casting |
+| D-28 | Rail and pad fixings are steel insert bars (40×10 mm, tapped), bolted to the mould floor during the pour | Holes stay in line at the rail-bolt pitch and can't drift during vibration |
+| D-29 | Gantry joins the base with M12 bolts plus a grout layer: shim the gantry square, inject epoxy grout, tighten after cure | Square and stiff, and the joint isn't stressed while it cures |
