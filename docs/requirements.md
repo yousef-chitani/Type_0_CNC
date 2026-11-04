@@ -2,9 +2,9 @@
 
 | Item | Requirement | Notes |
 |---|---|---|
-| Work envelope | 250 x 250 mm in X and Y | Z to be decided: likely about 150 mm travel and about 200 mm clearance (see D-08) |
+| Work envelope | 250 x 250 mm in X and Y | Z travel 150 mm, about 180–200 mm clearance from table to spindle nose (D-09) |
 | Materials | Aluminium, brass, steel | Small, high-precision parts |
-| Part accuracy | ±0.02 mm | Sets the grade of screws and rails, and how rail seats are made |
+| Part accuracy | ±0.02 mm | Reached with C7 screws plus LinuxCNC screw compensation (D-10) |
 | Layout | Fixed gantry, moving table (Y) | Spindle moves in X and Z on the gantry |
 | Frame | Epoxy granite, cast DIY at home | |
 | Spindle | Jianken 2.2 kW ATC, ISO20 | About 24,000 rpm. Low torque at low rpm, so steel needs light cuts and small tools |
