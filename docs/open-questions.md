@@ -6,8 +6,8 @@ Roughly in the order we'll work through them.
 3. Rack mechanism: pneumatic slide or linear actuator, dust cover, tool-length sensor location
 5. EG details: aggregate gradings and UK suppliers, test samples, insert anchoring
 6. Self-leveling epoxy process details, and the design of inserts and fixings
-8. Mesa board choice (e.g. 7i96S, 7i76EU, 7i95T) and I/O count (ATC, air, sensors, VFD), plus a 4th stepper output for the rack
-9. Spindle cooling (water or air) and VFD control (Modbus vs analog)
+8. Pin assignment on the 7i76EU (after checking the manual), e-stop and safety chain, power supplies, cabinet layout
+9. Water-cooling loop parts (pump, radiator, flow switch), VFD model, Modbus driver in LinuxCNC
 10. Budget split across subsystems
 11. Rack details: fork design, row spacing, dust cover, rack slide travel, and interlocks with the table position
 12. **Thermal management for solid castings:** owner researching. Checklist in eg-moulds.md

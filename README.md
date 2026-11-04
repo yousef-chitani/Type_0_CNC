@@ -10,3 +10,4 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [Open questions](docs/open-questions.md): what's still to decide
 - [EG moulds](docs/eg-moulds.md): mould diagrams, cores, fabrication and demoulding (draft)
 - [Epoxy options](docs/epoxy-options.md): UK resin comparison
+- [I/O list](docs/io-list.md): signals the control system must handle (draft)

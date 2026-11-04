@@ -32,3 +32,7 @@
 | D-28 | Rail and pad fixings are steel insert bars (40×10 mm, tapped), bolted to the mould floor during the pour | Holes stay in line at the rail-bolt pitch and can't drift during vibration |
 | D-29 | Gantry joins the base with M12 bolts plus a grout layer: shim the gantry square, inject epoxy grout, tighten after cure | Square and stiff, and the joint isn't stressed while it cures |
 | D-30 | Solid castings (no cores) | No documented DIY example of large foam cores was found. Solid is the most proven. Cost: about 315 kg and about 41 kg of epoxy. Curing heat must be managed (see eg-moulds.md) |
+| D-31 | Mesa 7i76EU (Ethernet) as the only interface board | 5 step/dir (4 used, 1 spare), 32 inputs and 16 outputs cover the about 20 inputs and 10 outputs needed, with room to spare |
+| D-32 | Spindle VFD controlled over Modbus RS-485 | Speed command plus readback of actual speed, faults and load. Lets LinuxCNC confirm the spindle has stopped before releasing a tool |
+| D-33 | Water-cooled spindle, with a flow switch interlocked into LinuxCNC | Quiet and doesn't stir up dust in the enclosure. The spindle can't run without coolant flow |
+| D-34 | x86 mini-PC with an Intel network port dedicated to the Mesa board | Reliable timing, cheap used |
