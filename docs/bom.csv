@@ -1,0 +1,72 @@
+id,subsystem,item,qty,unit,specification,decision,source_preference,price_gbp,date_checked,link,notes
+F01,Frame,Epoxy for main frame mix,37,kg,Low-viscosity epoxy with slow hardener,D-26,UK stockist,,,,Product pending owner's recommendations (open question 13)
+F02,Frame,Epoxy for leveling pour / grout / samples,5,kg,Very low viscosity and slow cure (e.g. GlassCast 50 PLUS),D-12,UK stockist,,,,Price on epoxy-options.md once the product is chosen
+F03,Frame,Kiln-dried quartz gravel 2-5 mm,1,lot,Graded aggregate: coarse fraction,D-26,UK stockist,,,,Grading split to be set from the packing curve. Total aggregate is about 280 kg plus test bricks
+F04,Frame,Kiln-dried sand 0.5-2 mm,1,lot,Graded aggregate: medium fraction,D-26,UK stockist,,,,
+F05,Frame,Fine sand 0.1-0.5 mm,1,lot,Graded aggregate: fine fraction,D-26,UK stockist,,,,
+F06,Frame,Fine filler (silica flour or fly ash),1,lot,Below 0.1 mm,D-26,UK stockist,,,,
+F07,Frame,Steel flat bar 40 x 10 mm,4,m,Insert bars for rails and pads. Drill and tap M5 for rails and M12 for the gantry joint,D-28,UK stockist,,,,Covers Y and X rails plus gantry pads and bearing-block pads
+F08,Frame,M12 threaded rod + nuts (lifting points and joint),1,lot,Zinc or plain steel,D-29,UK stockist,,,,
+F09,Frame,Steel or PVC tube for M12 bolt sleeves,2,m,About 14-16 mm bore,D-29,UK stockist,,,,
+F10,Frame,Melamine-faced board 2440 x 1220 x 18 mm,3,sheet,Mould walls and floors,D-25,UK stockist,,,,
+F11,Frame,Timber battens 44 x 44 mm,20,m,Floor support and wall bracing,D-25,UK stockist,,,,
+F12,Frame,Release wax + PVA release film,1,set,,D-25,UK stockist,,,,
+F13,Frame,Packing tape / silicone / plasticine for fillets,1,set,,D-25,UK stockist,,,,
+F14,Frame,Vibration motors,2,pcs,Unbalanced vibration motors for the vibration table,D-27,AliExpress / UK,,,,Single-phase 230 V
+F15,Frame,Vibration table springs or rubber mounts + top sheet,1,set,Takes about 330 kg (mould + casting),D-27,UK stockist,,,,
+F16,Frame,Temperature probes + logger,1,set,Thermocouples or DS18B20 probes cast in,D-30,AliExpress / UK,,,,For curing-heat monitoring
+F17,Frame,Mixer,1,pcs,Paddle mixer or small forced-action mixer,D-26,UK / used,,,,
+M01,Motion,HGR20 rail 650 mm,2,pcs,Y axis,D-11 D-20,AliExpress,,,,Lengths are drafts and will be confirmed in the layout
+M02,Motion,HGR20 rail 450 mm,2,pcs,X axis,D-11 D-21,AliExpress,,,,
+M03,Motion,HGR20 rail 300 mm,2,pcs,Z axis,D-11 D-22,AliExpress,,,,
+M04,Motion,HGH20CA carriage Z1 preload,12,pcs,4 per axis,D-11,AliExpress,,,,Usually bundled with the rails
+M05,Motion,SFU1605 ballscrew + DFU1605 preloaded nut,3,pcs,C7 rolled. Ends machined for BK12/BF12. X about 420 mm / Y about 500 mm / Z about 280 mm,D-10 D-13,AliExpress,,,,Lengths are drafts
+M06,Motion,BK12 + BF12 end supports,3,sets,,D-13,AliExpress,,,,Often bundled with the screws
+M07,Motion,Nut housing DSG16H,3,pcs,,D-13,AliExpress,,,,
+M08,Motion,Disc or bellows coupling 8 mm to 10 mm,3,pcs,Matches the NEMA 24 shaft and the BK12 end. Check the motor shaft size,D-14,AliExpress / UK,,,,
+M09,Motion,NEMA 24 closed-loop stepper + driver about 4 Nm,2,sets,X and Y. Driver accepts 48 V DC,D-15,Manufacturer direct,,,,
+M10,Motion,NEMA 24 closed-loop stepper with 24 V brake + driver,1,set,Z,D-15 D-16,Manufacturer direct,,,,
+M11,Motion,Aluminium tooling plate 330 x 330 x 30 mm,1,pcs,Table. Drill an M6/M8 threaded grid,D-23,UK stockist,,,,
+M12,Motion,Aluminium plate for X saddle and Z spindle plate,1,lot,About 20 mm thick. Sizes from the layout,D-22,UK stockist,,,,
+M13,Motion,Motor and bearing mounts,1,lot,Machined or bought brackets,D-14,UK / AliExpress,,,,
+S01,Spindle,Jianken 2.2 kW ATC spindle ISO20 water-cooled,1,pcs,Owner's chosen listing. Must have tool clamp/unclamp sensors,D-04 D-33,Owner pinned,,,,Waiting for the owner's link
+S02,Spindle,VFD 2.2 kW single-phase input with RS-485 Modbus,1,pcs,Matched to the spindle's voltage and frequency,D-32,AliExpress / UK,,,,
+S03,Spindle,Spindle mount clamp to suit spindle body diameter,1,pcs,Usually 80 mm,D-22,AliExpress,,,,
+S04,Spindle,Shielded 4-core spindle cable,5,m,,D-32,UK stockist,,,,
+S05,Spindle,CW-3000-style radiator unit with flow alarm,1,pcs,,D-38,AliExpress / UK,,,,Confirm the flow alarm output
+S06,Spindle,ISO20 ER holders with pull studs,8,pcs,Collet size to suit the spindle's tool range (ER11 or ER16),D-04,AliExpress,,,,
+S07,Spindle,ER collet set,1,set,Matches S06,D-04,AliExpress / UK,,,,
+A01,Tool changer,ISO20 tool forks,8,pcs,For the 2 x 4 rack,D-17,AliExpress,,,,
+A02,Tool changer,Rack slide linear guide (e.g. MGN15) + carriage,2,sets,Rack carrier,D-18,AliExpress,,,,
+A03,Tool changer,Small closed-loop stepper + driver (48 V),1,set,Drives the rack slide,D-18 D-36,Manufacturer direct,,,,
+A04,Tool changer,Rack drive screw or belt + pulleys,1,set,Stroke about 300 mm. Sized in the layout,D-18,AliExpress,,,,
+A05,Tool changer,Tool length setter (wired switch),1,pcs,On the rack carrier,D-19,AliExpress / UK,,,,
+A06,Tool changer,Rack plate and fork mount,1,lot,Aluminium plate,D-17,UK stockist,,,,
+P01,Pneumatics,Filter / regulator / dryer,1,pcs,,—,UK stockist,,,,
+P02,Pneumatics,24 V solenoid valves,3,pcs,Tool release / taper clean / air blast,—,UK / AliExpress,,,,
+P03,Pneumatics,Air pressure switch,1,pcs,About 5.5 bar trip point,—,UK / AliExpress,,,,
+P04,Pneumatics,Mist coolant system with 24 V solenoid,1,set,,D-07,UK / AliExpress,,,,
+P05,Pneumatics,Push-fit tubing and fittings 6/8 mm,1,lot,,—,UK stockist,,,,
+E01,Electronics,Mesa 7i76EU,1,pcs,,D-31,Manufacturer direct,,,,Import VAT and duty if bought from the USA. Check for a UK or EU reseller
+E02,Electronics,x86 mini-PC with Intel NIC (2nd port for Mesa),1,pcs,,D-34,eBay / used,,,,
+E03,Electronics,Monitor + keyboard + mouse,1,set,,D-34,eBay / used,,,,
+E04,Electronics,48 V DC power supply about 10 A,1,pcs,For the stepper drives,D-36,UK stockist,,,,
+E05,Electronics,24 V DC power supply,1,pcs,For I/O / brake / valves / sensors,—,UK stockist,,,,
+E06,Electronics,Safety relay (e-stop),1,pcs,,D-35,UK / AliExpress,,,,
+E07,Electronics,Contactor with 24 V coil,1,pcs,,D-35,UK / eBay,,,,
+E08,Electronics,E-stop mushroom buttons + reset button,1,set,,D-35,UK stockist,,,,
+E09,Electronics,MCBs / main isolator / EMC filter for VFD,1,set,,—,UK stockist,,,,
+E10,Electronics,Inductive proximity switches 24 V,4,pcs,Homing X / Y / Z / rack,—,AliExpress / UK,,,,
+E11,Electronics,USB to RS-485 adapter,1,pcs,For VFD Modbus if not using the board's port,D-32,AliExpress / UK,,,,
+E12,Electronics,Steel cabinet + filtered fan,1,set,Built into the stand,D-37,UK / eBay,,,,
+E13,Electronics,DIN rail / terminals / wiring / ferrules,1,lot,,—,UK stockist,,,,
+E14,Electronics,Cable chain and shielded motor cables,1,lot,,—,AliExpress / UK,,,,
+E15,Electronics,Enclosure door switch,1,pcs,,—,UK stockist,,,,
+N01,Enclosure,Enclosure frame (aluminium extrusion),1,lot,,D-07,UK stockist,,,,
+N02,Enclosure,Polycarbonate panels + door,1,lot,,D-07,UK stockist,,,,
+N03,Enclosure,LED light,1,pcs,,—,UK / AliExpress,,,,
+T01,Stand,Steel box section for stand,1,lot,Rated for about 400 kg. Owner fabricates,D-37,UK stockist,,,,
+T02,Stand,Levelling feet,4,pcs,,—,UK stockist,,,,
+X01,Metrology,Dial test indicator + magnetic base,1,set,For rail alignment and squaring the gantry,D-03,UK / used,,,,
+X02,Metrology,Precision level 0.02 mm/m,1,pcs,For the leveling pour and machine setup,D-12,UK / used,,,,
+X03,Fixings,Socket cap screw assortment M5-M12,1,lot,Includes rail bolts,—,UK stockist,,,,
