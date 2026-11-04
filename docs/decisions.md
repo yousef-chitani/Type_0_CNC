@@ -18,3 +18,6 @@
 | D-14 | Direct drive through disc or bellows couplings | No backlash and nothing to tension |
 | D-15 | NEMA 24 closed-loop steppers, about 4 Nm, on all axes | Margin for the heavy table and for steel |
 | D-16 | Z motor has a built-in 24 V holding brake | Stops the spindle drifting down with the power off. Simplest and safest option |
+| D-17 | Rack holds two rows of 4 ISO20 pockets at about 60 mm pitch | 4 × 60 mm fits within the 250 mm X travel. Keeps all 8 tools without widening the machine |
+| D-18 | Rack driven by a small stepper on a screw or belt, run as a 4th joint in LinuxCNC with a home switch | Exact stop for each row and adjustable in software. Doesn't depend on air pressure |
+| D-19 | Tool-length sensor on the rack carrier | Protected from chips and takes no table space. Measures each tool right after pickup |
