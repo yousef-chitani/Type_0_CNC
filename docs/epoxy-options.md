@@ -7,18 +7,22 @@ We need about **41 kg** in total (see [eg-moulds.md](eg-moulds.md)). There are t
 
 | Product | Supplier | Kit | Price | £/kg | Notes |
 |---|---|---|---|---|---|
-| Ampreg 30 + slow hardener | EC Fibreglass Supplies (Gurit) | 22.68 kg | £295 | about £13 | Structural laminating epoxy with low viscosity. Several hardener speeds. **Cheapest per kg for the bulk EG.** |
+| Ampreg 30 + slow hardener | EC Fibreglass Supplies (Gurit) | 22.68 kg | £295 (page doesn't say whether VAT is included) | about £13 | Structural laminating epoxy with low viscosity. Several hardener speeds. **Cheapest per kg for the bulk EG.** |
 | GlassCast 50 PLUS | Easy Composites | 5 / 15 / 30 kg | from £76.46 + VAT (5 kg) | about £15 + VAT | Viscosity about 300 mPa·s, slow cure (about 7 days to initial cure at 20 °C), deep pours up to 50–80 mm. **Good choice for the leveling pour.** |
-| PureCast Slow | CFS Fibreglass | 21.75 kg | £348 | about £16 | 2:1 mix, 17 h pot life, 10–50 mm pours. Viscosity not listed |
-| West System 105 + 209 extra slow | Several | — | price not confirmed | likely more | The usual UK forum pick for leveling pours and EG. Proven, but costly |
+| PureCast Slow | CFS Fibreglass | 21.75 kg | £348 (page doesn't say whether VAT is included) | about £16 | 2:1 mix, 17 h pot life, 10–50 mm pours. Viscosity not listed |
+| West System 105 + 209 extra slow | Several | — | not confirmed | not confirmed | The usual UK forum pick for leveling pours and EG. Proven, but costly |
 
 ## Suggested plan (to confirm)
 
-- **Bulk EG:** Ampreg 30 with the slow hardener, about 37 kg (two 22.68 kg kits). **About £590.**
-- **Leveling, grout and samples:** GlassCast 50 PLUS, 5 kg. **About £92 inc. VAT.**
-- **Total: about £680.**
+- **Bulk EG:** Ampreg 30 with the slow hardener, about 37 kg (two 22.68 kg kits). **2 × £295 listed = £590**, VAT basis to confirm.
+- **Leveling, grout and samples:** GlassCast 50 PLUS, 5 kg. **£76.46 + VAT listed = £91.75 inc. VAT.**
+- **Total: £681.75 from listed prices**, plus VAT on the Ampreg if the listed price excludes it.
 
 Before committing, make 3–4 test bricks (about 150 × 150 × 100 mm) at 10%, 11% and 12% epoxy. Check for voids, surface finish and how they break.
+
+## Pricing rule
+
+Only prices read from a live supplier page are listed, with the date checked. Anything unconfirmed is marked *not confirmed*.
 
 ## Still to check
 

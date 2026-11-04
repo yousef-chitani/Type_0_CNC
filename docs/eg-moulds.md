@@ -54,7 +54,7 @@ The owner asked for real examples before choosing cores. What I found:
 - **Industrial mineral casting** does use hollow and weight-reduced structures ([Big Daishowa mineral cast catalogue](https://catalog.bigdaishowa.com/view/494013/129)), but there are no DIY details.
 
 **Conclusion:** large closed foam cores are not a proven DIY method. The options are:
-1. **Solid** (most proven, about 230 kg base, about 6 kg more epoxy, about +£80).
+1. **Solid** (most proven. About 245 kg base, about 11 kg more epoxy).
 2. **PVC pipe cores** (proven in DIY, smaller weight saving). A row of capped 75–110 mm pipes is easy to hold down and gives a closed section.
 3. **XPS cores, but only after a test casting.** For example, cast a 500 mm beam with a core, then cut it in half to check for voids and core movement.
 
