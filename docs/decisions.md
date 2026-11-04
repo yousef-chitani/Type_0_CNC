@@ -36,3 +36,7 @@
 | D-32 | Spindle VFD controlled over Modbus RS-485 | Speed command plus readback of actual speed, faults and load. Lets LinuxCNC confirm the spindle has stopped before releasing a tool |
 | D-33 | Water-cooled spindle, with a flow switch interlocked into LinuxCNC | Quiet and doesn't stir up dust in the enclosure. The spindle can't run without coolant flow |
 | D-34 | x86 mini-PC with an Intel network port dedicated to the Mesa board | Reliable timing, cheap used |
+| D-35 | Hardwired e-stop: buttons and the Mesa watchdog run through a safety relay that drops a contactor, cutting drive power and the VFD run signal | Still stops if the PC or software crashes. The Z brake engages when power drops. LinuxCNC only reads status |
+| D-36 | One 48 V DC supply (about 10 A) for all 4 stepper drivers | Keeps torque up at speed. The rack driver must accept 48 V |
+| D-37 | Electrical cabinet built into the stand, underneath the machine | Owner's choice: compact. Mitigations: sealed steel box with a sloped drip lip above it, filtered fan blowing air in (keeps dust and mist out), raised off the floor, away from the coolant drain, VFD mounted at the top with heat vented clear of the drives, door reachable from the front |
+| D-38 | CW-3000-style radiator unit for the spindle water loop, using its flow alarm output for the interlock | Plenty for 2.2 kW, cheap. Confirm the model has a flow alarm output before buying |
