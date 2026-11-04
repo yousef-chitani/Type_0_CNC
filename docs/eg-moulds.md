@@ -45,6 +45,19 @@ How to make the cores:
 - **Cross ribs** (60 mm) split each core row into segments, adding stiffness against twist. Keep **solid EG under the gantry feet** and under the motor and bearing mounts.
 - **Gantry:** core the beam only. The uprights (120 mm wide) are too narrow to leave useful walls around a core.
 
+### Evidence check (2026-11-04)
+
+The owner asked for real examples before choosing cores. What I found:
+
+- **PVC pipe cores** are well documented in DIY EG builds, mostly for cable and bolt channels and for ballscrew clearance ([model-engineer.co.uk](https://www.model-engineer.co.uk/forums/topic/diy-epoxy-frame-based-cnc-mill/), [lostzeros mini-mill](https://www.lostzeros.com/mini-mill-cnc-conversion-epoxy-granite-base-and-column-assembly/), [CNCCookbook](https://www.cnccookbook.com/epoxy-granite-cnc-machine-fill/)).
+- **XPS foam cores** in DIY EG are rarely documented. One builder planned XPS cores to save epoxy and weight, but the result was never reported ([MyCNCUK thread 12972](https://www.mycncuk.com/archive/index.php/t-12972.html)). In the long CNCZone/CNCArena EG thread, one builder reported a 5×5×10 in foam core showing through the back of a test base, because the wall over it was too thin. I couldn't open that thread to verify the details.
+- **Industrial mineral casting** does use hollow and weight-reduced structures ([Big Daishowa mineral cast catalogue](https://catalog.bigdaishowa.com/view/494013/129)), but there are no DIY details.
+
+**Conclusion:** large closed foam cores are not a proven DIY method. The options are:
+1. **Solid** (most proven, about 230 kg base, about 6 kg more epoxy, about +£80).
+2. **PVC pipe cores** (proven in DIY, smaller weight saving). A row of capped 75–110 mm pipes is easy to hold down and gives a closed section.
+3. **XPS cores, but only after a test casting.** For example, cast a 500 mm beam with a core, then cut it in half to check for voids and core movement.
+
 ## Building the moulds
 
 - **Material:** 18 mm melamine-faced MDF or ply. The floor sits on 40 × 40 mm battens every 300 mm or so, so it stays flat on the vibration table.

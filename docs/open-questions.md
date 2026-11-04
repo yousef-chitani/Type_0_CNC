@@ -10,3 +10,5 @@ Roughly in the order we'll work through them.
 9. Spindle cooling (water or air) and VFD control (Modbus vs analog)
 10. Budget split across subsystems
 11. Rack details: fork design, row spacing, dust cover, rack slide travel, and interlocks with the table position
+12. **Base and gantry cores:** solid vs PVC pipe cores vs XPS cores (XPS only after a test casting). See the evidence check in eg-moulds.md
+13. **Epoxy choice:** the owner is asking others for recommendations. Current shortlist in epoxy-options.md
