@@ -29,9 +29,9 @@ M10,Motion,NEMA 24 closed-loop stepper with 24 V brake + driver,1,set,Z,D-15 D-1
 M11,Motion,Aluminium tooling plate 330 x 330 x 30 mm,1,pcs,Table. Drill an M6/M8 threaded grid,D-23,UK stockist,,,,
 M12,Motion,Aluminium plate for X saddle and Z spindle plate,1,lot,About 20 mm thick. Sizes from the layout,D-22,UK stockist,,,,
 M13,Motion,Motor and bearing mounts,1,lot,Machined or bought brackets,D-14,UK / AliExpress,,,,
-S01,Spindle,Jianken 2.2 kW ATC spindle ISO20 water-cooled,1,pcs,Owner's chosen listing. Must have tool clamp/unclamp sensors,D-04 D-33,Owner pinned,,,,Waiting for the owner's link
-S02,Spindle,VFD 2.2 kW single-phase input with RS-485 Modbus,1,pcs,Matched to the spindle's voltage and frequency,D-32,AliExpress / UK,,,,
-S03,Spindle,Spindle mount clamp to suit spindle body diameter,1,pcs,Usually 80 mm,D-22,AliExpress,,,,
+S01,Spindle,Jianken JGL-80/2.2R24-20 ATC spindle,1,pcs,2.2 kW / 24000 rpm / 400 Hz / 220 V / about 0.87 Nm / ISO20 / water-cooled / 80 mm body. Order the clamp/unclamp sensor variant (PNP),D-39,AliExpress / Alibaba / Amazon,,,,Owner's pick. Confirm specs with the seller
+S02,Spindle,VFD 2.2 kW single-phase input with RS-485 Modbus,1,pcs,220 V 3-phase output / up to 400 Hz / single-phase 230 V input,D-32,AliExpress / UK,,,,
+S03,Spindle,Spindle mount clamp to suit spindle body diameter,1,pcs,80 mm,D-22,AliExpress,,,,
 S04,Spindle,Shielded 4-core spindle cable,5,m,,D-32,UK stockist,,,,
 S05,Spindle,CW-3000-style radiator unit with flow alarm,1,pcs,,D-38,AliExpress / UK,,,,Confirm the flow alarm output
 S06,Spindle,ISO20 ER holders with pull studs,8,pcs,Collet size to suit the spindle's tool range (ER11 or ER16),D-04,AliExpress,,,,
