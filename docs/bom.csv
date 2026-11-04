@@ -23,9 +23,9 @@ M04,Motion,HGH20CA carriage Z1 preload,12,pcs,4 per axis,D-11,AliExpress,,,,Usua
 M05,Motion,SFU1605 ballscrew + DFU1605 preloaded nut,3,pcs,C7 rolled. Ends machined for BK12/BF12. X about 420 mm / Y about 500 mm / Z about 280 mm,D-10 D-13,AliExpress,,,,Lengths are drafts
 M06,Motion,BK12 + BF12 end supports,3,sets,,D-13,AliExpress,,,,Often bundled with the screws
 M07,Motion,Nut housing DSG16H,3,pcs,,D-13,AliExpress,,,,
-M08,Motion,Disc or bellows coupling 8 mm to 10 mm,3,pcs,Matches the NEMA 24 shaft and the BK12 end. Check the motor shaft size,D-14,AliExpress / UK,,,,
-M09,Motion,NEMA 24 closed-loop stepper + driver about 4 Nm,2,sets,X and Y. Driver accepts 48 V DC,D-15,Manufacturer direct,,,,
-M10,Motion,NEMA 24 closed-loop stepper with 24 V brake + driver,1,set,Z,D-15 D-16,Manufacturer direct,,,,
+M08,Motion,Disc or bellows coupling 10 mm to 10 mm,3,pcs,Listings give a 10 mm shaft on the 4 Nm NEMA 24 (24HS40-5004D-E1000). Verify. BK12 end is 10 mm,D-14,AliExpress / UK,,,,
+M09,Motion,NEMA 24 closed-loop stepper + driver about 4 Nm,2,sets,X and Y. Candidate: StepperOnline 1-CL57T-S40-V41 (24HS40-5004D-E1000 + CL57T V4.1 / 24-48 V DC / 1000 PPR encoder),D-15,Manufacturer direct,,,https://www.omc-stepperonline.com/ye-series-1-axis-closed-loop-stepper-cnc-kit-4-0-nm-566-56oz-in-nema-24-motor-and-driver.html,Price not confirmed (site blocks automated reading)
+M10,Motion,NEMA 24 closed-loop stepper with 24 V brake + driver,1,set,Z,D-15 D-16,Manufacturer direct,,,,No 4 Nm NEMA 24 closed-loop kit with a brake found in search. Needs checking (see open questions)
 M11,Motion,Aluminium tooling plate 330 x 330 x 30 mm,1,pcs,Table. Drill an M6/M8 threaded grid,D-23,UK stockist,,,,
 M12,Motion,Aluminium plate for X saddle and Z spindle plate,1,lot,About 20 mm thick. Sizes from the layout,D-22,UK stockist,,,,
 M13,Motion,Motor and bearing mounts,1,lot,Machined or bought brackets,D-14,UK / AliExpress,,,,
@@ -34,8 +34,8 @@ S02,Spindle,VFD 2.2 kW single-phase input with RS-485 Modbus,1,pcs,220 V 3-phase
 S03,Spindle,Spindle mount clamp to suit spindle body diameter,1,pcs,80 mm,D-22,AliExpress,,,,
 S04,Spindle,Shielded 4-core spindle cable,5,m,,D-32,UK stockist,,,,
 S05,Spindle,CW-3000-style radiator unit with flow alarm,1,pcs,,D-38,AliExpress / UK,,,,Confirm the flow alarm output
-S06,Spindle,ISO20 ER holders with pull studs,8,pcs,Collet size to suit the spindle's tool range (ER11 or ER16),D-04,AliExpress,,,,
-S07,Spindle,ER collet set,1,set,Matches S06,D-04,AliExpress / UK,,,,
+S06,Spindle,ISO20 ER16 holders with pull studs,8,pcs,ISO20-ER16. Pull studs must match the spindle drawbar,D-04 D-40,AliExpress,,,,
+S07,Spindle,ER16 collet set,1,set,Precision (AA grade or better) 1-10 mm,D-04,AliExpress / UK,,,,
 A01,Tool changer,ISO20 tool forks,8,pcs,For the 2 x 4 rack,D-17,AliExpress,,,,
 A02,Tool changer,Rack slide linear guide (e.g. MGN15) + carriage,2,sets,Rack carrier,D-18,AliExpress,,,,
 A03,Tool changer,Small closed-loop stepper + driver (48 V),1,set,Drives the rack slide,D-18 D-36,Manufacturer direct,,,,
@@ -47,7 +47,7 @@ P02,Pneumatics,24 V solenoid valves,3,pcs,Tool release / taper clean / air blast
 P03,Pneumatics,Air pressure switch,1,pcs,About 5.5 bar trip point,—,UK / AliExpress,,,,
 P04,Pneumatics,Mist coolant system with 24 V solenoid,1,set,,D-07,UK / AliExpress,,,,
 P05,Pneumatics,Push-fit tubing and fittings 6/8 mm,1,lot,,—,UK stockist,,,,
-E01,Electronics,Mesa 7i76EU,1,pcs,,D-31,Manufacturer direct,,,,Import VAT and duty if bought from the USA. Check for a UK or EU reseller
+E01,Electronics,Mesa 7i76EU,1,pcs,,D-31,Manufacturer direct,,,https://store.mesanet.com,No UK reseller found. EU option: EuSurplus (per LinuxCNC forum). Price not confirmed
 E02,Electronics,x86 mini-PC with Intel NIC (2nd port for Mesa),1,pcs,,D-34,eBay / used,,,,
 E03,Electronics,Monitor + keyboard + mouse,1,set,,D-34,eBay / used,,,,
 E04,Electronics,48 V DC power supply about 10 A,1,pcs,For the stepper drives,D-36,UK stockist,,,,

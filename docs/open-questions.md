@@ -12,3 +12,5 @@ Roughly in the order we'll work through them.
 11. Rack details: fork design, row spacing, dust cover, rack slide travel, and interlocks with the table position
 12. **Thermal management for solid castings:** owner researching. Checklist in eg-moulds.md
 13. **Epoxy choice:** the owner is asking others for recommendations. Current shortlist in epoxy-options.md
+14. **Z brake motor:** no 4 Nm NEMA 24 closed-loop kit with a brake found yet. Options: a brake version from another maker, a NEMA 23 brake motor on Z, or a separate brake
+15. **Price confirmation:** StepperOnline, Mesa and AliExpress block automated page reading. The owner confirms prices, or pastes them in
