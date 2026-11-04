@@ -25,3 +25,7 @@
 | D-21 | X: 2 rails on the gantry front face, about 150 mm apart vertically, screw between them | Only one face to level-pour. Simple and proven on DIY gantries |
 | D-22 | Z: rails on the moving spindle plate, blocks fixed on the X saddle | Compact, light saddle. Fine for 150 mm of travel |
 | D-23 | Table: 25–30 mm aluminium tooling plate with a threaded M6/M8 grid, about 320 × 320 mm | Light, cheap, can be surfaced on the machine. Suits small fixtured parts |
+| D-24 | Separate EG castings (base; gantry), bolted and epoxy-bonded | Smaller molds, each about 60–150 kg, so easier to vibrate and handle. The gantry can be squared to the Y rails before bonding |
+| D-25 | Molds made of melamine-faced MDF/ply with packing tape, wax and PVA release | Cheap, flat, easy to cut. Good for one-off castings |
+| D-26 | Graded aggregate mix with about 10–12% epoxy by weight | Kiln-dried quartz gravel, sand and fine filler following a packing curve, with low-viscosity casting epoxy. Less epoxy means less cost, less heat and less shrinkage |
+| D-27 | Compact on a sprung vibration table driven by unbalanced motors | Even compaction, no voids, reusable for every casting |
