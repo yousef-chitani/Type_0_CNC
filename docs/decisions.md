@@ -21,3 +21,7 @@
 | D-17 | Rack holds two rows of 4 ISO20 pockets at about 60 mm pitch | 4 × 60 mm fits within the 250 mm X travel. Keeps all 8 tools without widening the machine |
 | D-18 | Rack driven by a small stepper on a screw or belt, run as a 4th joint in LinuxCNC with a home switch | Exact stop for each row and adjustable in software. Doesn't depend on air pressure |
 | D-19 | Tool-length sensor on the rack carrier | Protected from chips and takes no table space. Measures each tool right after pickup |
+| D-20 | Y: 2 rails about 220 mm apart, 2 carriages per rail, about 150 mm apart along Y | Wide stance resists cutting moments. Room for the screw between the rails |
+| D-21 | X: 2 rails on the gantry front face, about 150 mm apart vertically, screw between them | Only one face to level-pour. Simple and proven on DIY gantries |
+| D-22 | Z: rails on the moving spindle plate, blocks fixed on the X saddle | Compact, light saddle. Fine for 150 mm of travel |
+| D-23 | Table: 25–30 mm aluminium tooling plate with a threaded M6/M8 grid, about 320 × 320 mm | Light, cheap, can be surfaced on the machine. Suits small fixtured parts |
