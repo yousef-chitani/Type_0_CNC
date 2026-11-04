@@ -1,4 +1,4 @@
-# EG moulds: hollow cores, fabrication and demoulding
+# EG moulds: fabrication and demoulding
 
 > **Status:** draft for review. All dimensions are placeholders to make the drawings concrete. They will be fixed when we do the full layout.
 
@@ -6,15 +6,15 @@
 
 ![Gantry mould](img/gantry-mould.svg)
 
-## Draft sizes and mass
+## Draft sizes and mass (solid castings, D-30)
 
-| Casting | Size (mm) | Cores | EG mass | Epoxy at 11% |
-|---|---|---|---|---|
-| Base | 900 L × 660 W × 180 H | 3 rows, split by cross ribs (about 35% of volume) | about 160 kg | about 18 kg |
-| Gantry | 640 W × 460 H; beam 200 × 160; uprights 120 × 160 | Beam only (about 25% of beam volume) | about 55 kg | about 6 kg |
-| **Total** | | | **about 215 kg** | **about 24 kg** |
+| Casting | Size (mm) | EG mass | Epoxy at 11% |
+|---|---|---|---|
+| Base | 900 L × 660 W × 180 H | about 245 kg | about 27 kg |
+| Gantry | 640 W × 460 H; beam 200 × 160; uprights 120 × 160 | about 70 kg | about 8 kg |
+| **Total** | | **about 315 kg** | **about 35 kg** |
 
-Add about 3 kg of epoxy for the leveling pours, 1 kg for grout and 2–3 kg for test samples: **about 30 kg to buy**.
+Add about 3 kg of epoxy for the leveling pours, 1 kg for grout and 2–3 kg for test samples: **about 41 kg to buy**. The base alone is near the top of the frame-mass budget (200–350 kg). Check the stand design against about 400 kg in total, including the moving parts and the enclosure.
 
 ## The key idea: the mould floor is the jig
 
@@ -29,7 +29,7 @@ The other side benefits too. Air rises when the mix is vibrated, so the floor-si
 
 Shallow **raised strips** on the floor (about 3–5 mm) leave recessed channels over each insert bar. Those channels later take the **self-leveling epoxy pour** that forms the rail seat. Link the two channels with a cross-channel so both rails settle at the same level.
 
-## Hollow cores: assessment
+## Hollow cores: assessment (not used, see D-30)
 
 **Recommendation: closed cores (XPS foam left inside), not open channels.**
 
@@ -71,7 +71,7 @@ The owner asked for real examples before choosing cores. What I found:
 
 ## Pour and demould sequence
 
-1. Mould on the vibration table, checked level and flat. Inserts bolted on, cores in place, posts fixed.
+1. Mould on the vibration table, checked level and flat. Inserts bolted on. Temperature probes in place (see Thermal management).
 2. Mix in small batches. Wet the aggregate with resin first, then vibrate while pouring in layers about 50 mm deep.
 3. Cure **48–72 h at 18 °C or above** before demoulding. Allow about 7 days for full cure, or warm it to about 40 °C to speed it up.
 4. **Remove the jig bolts through the floor first.** They hold the casting to the floor.
@@ -83,10 +83,20 @@ The owner asked for real examples before choosing cores. What I found:
 
 | Risk | Mitigation |
 |---|---|
-| Cores float or shift | Post hold-downs. Check before the epoxy gels |
 | Mould bulges | Battens every 200 mm. Run the vibration test with sand first |
 | Resin leaks at corners | Silicone fillets and taped edges |
 | Casting sticks to the mould | Wax + PVA. Test on samples. Screw-only joints |
 | Opening plug jams | Three-piece wedge plug with draft |
-| Hidden voids around closed cores | Low-viscosity resin, thorough vibration, test pours first |
-| Warping from curing heat | Cores keep the sections thinner. Use a slow hardener and a cool room |
+| Warping or cracking from curing heat | See Thermal management |
+
+## Thermal management (to research; owner is looking into this)
+
+Solid sections up to 180–200 mm thick concentrate the curing heat. Starting points to verify:
+
+- **The aggregate soaks up the heat.** At about 11% epoxy, most of the mass is stone, so the temperature rise is far smaller than for a pure resin pour of the same size. Measure it on the test bricks before relying on this.
+- **Slow hardener** and a **cool, steady room** (about 15–20 °C). Avoid days when the garage gets very warm.
+- **Pre-condition the materials.** Store the aggregate and resin in the same room for 24 h, so the starting temperature is known.
+- **Measure it.** Cast thermocouples or cheap DS18B20 probes into the centre and near the surface of the base, and log the temperatures. Make the test bricks the same thickness (180 mm) as the real casting, so the peak temperature is representative.
+- **Pour continuously, without stopping.** Pouring in stages can leave weak joints between layers. Mix in batches, but keep pouring.
+- **Even cooling.** Leave the walls and insulation on until the peak has passed, so the surface and core cool together. This avoids stresses locked in by uneven cooling. Post-cure warm (e.g. 40 °C) only after the first cure.
+- **Let it settle before the leveling pour.** Wait for full cure (about 7 days or more) before the rail-seat leveling pour, so the casting has finished shrinking.

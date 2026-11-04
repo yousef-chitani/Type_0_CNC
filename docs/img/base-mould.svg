@@ -8,24 +8,14 @@
   </defs>
   <rect width="1080" height="1010" fill="#ffffff"/>
   <text x="500" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#111">Base mould: section across X, as cast (upside down)</text>
-  <text x="500" y="54" text-anchor="middle" fill="#555">Draft dimensions: 900 L × 660 W × 180 H mm, about 160 kg. The machine's top face is cast against the mould floor</text>
+  <text x="500" y="54" text-anchor="middle" fill="#555">Draft dimensions: 900 L × 660 W × 180 H mm, solid, about 245 kg. The machine's top face is cast against the mould floor</text>
 
-  <!-- hold-down batten -->
-  <rect x="135" y="80" width="730" height="20" fill="#b07a3c" stroke="#5a3a14"/>
-  <!-- posts -->
-  <rect x="280" y="100" width="20" height="60" fill="#b07a3c" stroke="#5a3a14"/>
-  <rect x="490" y="100" width="20" height="60" fill="#b07a3c" stroke="#5a3a14"/>
-  <rect x="700" y="100" width="20" height="60" fill="#b07a3c" stroke="#5a3a14"/>
   <!-- walls -->
   <rect x="152" y="100" width="18" height="218" fill="#d9b98a" stroke="#5a3a14"/>
   <rect x="830" y="100" width="18" height="218" fill="#d9b98a" stroke="#5a3a14"/>
   <!-- EG -->
   <rect x="170" y="120" width="660" height="180" fill="url(#eg)" stroke="#555"/>
   <!-- post holes through bottom skin (already covered by posts) -->
-  <!-- cores -->
-  <rect x="230" y="160" width="120" height="80" fill="#f6c6d0" stroke="#b5596c"/>
-  <rect x="430" y="160" width="140" height="80" fill="#f6c6d0" stroke="#b5596c"/>
-  <rect x="650" y="160" width="120" height="80" fill="#f6c6d0" stroke="#b5596c"/>
   <!-- insert bars -->
   <rect x="370" y="286" width="40" height="10" fill="#3d4f66" stroke="#1d2836"/>
   <rect x="590" y="286" width="40" height="10" fill="#3d4f66" stroke="#1d2836"/>
@@ -43,20 +33,13 @@
 
   <!-- labels -->
   <g fill="#222">
-    <text x="500" y="74" text-anchor="middle">Hold-down batten, screwed to the wall tops</text>
-    <text x="40" y="140" text-anchor="start">Open face</text>
+    <text x="40" y="140" text-anchor="start">Open face, trowelled</text>
     <text x="40" y="156">(machine underside)</text>
     <line x1="120" y1="140" x2="170" y2="122" stroke="#333" marker-end="url(#ar)"/>
-    <text x="865" y="130">Posts hold the cores down</text>
-    <text x="865" y="146">(each leaves a small hole)</text>
-    <text x="40" y="210">XPS foam cores,</text>
-    <text x="40" y="226">left in (lost cores)</text>
-    <line x1="150" y1="214" x2="232" y2="200" stroke="#333" marker-end="url(#ar)"/>
     <text x="40" y="282">60 mm wall</text>
     <line x1="110" y1="278" x2="185" y2="270" stroke="#333" marker-end="url(#ar)"/>
-    <text x="865" y="200">40 mm bottom skin</text>
-    <text x="865" y="216">60 mm top skin</text>
-    <text x="865" y="232">80 mm cores</text>
+    <text x="865" y="200">Solid section</text>
+    <text x="865" y="216">(no cores)</text>
     <text x="865" y="290">Steel insert bar,</text>
     <text x="865" y="305">40×10, tapped M5</text>
     <line x1="862" y1="292" x2="632" y2="291" stroke="#333" marker-end="url(#ar)"/>
@@ -80,12 +63,6 @@
   <line x1="40" y1="470" x2="960" y2="470" stroke="#ddd"/>
   <text x="500" y="500" text-anchor="middle" font-size="17" font-weight="bold" fill="#111">Base: top view, the machine's way up (scale ½)</text>
   <rect x="335" y="520" width="330" height="450" fill="url(#eg)" stroke="#555"/>
-  <!-- cores dashed -->
-  <g fill="none" stroke="#b5596c" stroke-dasharray="5 3">
-    <rect x="365" y="845" width="60" height="105"/><rect x="465" y="845" width="70" height="105" transform="translate(0,0)"/><rect x="575" y="845" width="60" height="105"/>
-    <rect x="365" y="690" width="60" height="125"/><rect x="465" y="690" width="70" height="125"/><rect x="575" y="690" width="60" height="125"/>
-    <rect x="365" y="550" width="60" height="30"/><rect x="465" y="550" width="70" height="30"/><rect x="575" y="550" width="60" height="30"/>
-  </g>
   <!-- gantry pads -->
   <rect x="340" y="590" width="60" height="80" fill="#9fc3e6" fill-opacity="0.7" stroke="#2c5d8f"/>
   <rect x="600" y="590" width="60" height="80" fill="#9fc3e6" fill-opacity="0.7" stroke="#2c5d8f"/>
@@ -102,9 +79,6 @@
     <text x="680" y="620">Gantry foot pads: insert bars +</text>
     <text x="680" y="636">grout layer, solid EG under them</text>
     <line x1="677" y1="625" x2="662" y2="628" stroke="#333" marker-end="url(#ar)"/>
-    <text x="680" y="760">Hidden cores (dashed), split by</text>
-    <text x="680" y="776">60 mm cross ribs for torsional stiffness</text>
-    <line x1="677" y1="765" x2="637" y2="760" stroke="#333" marker-end="url(#ar)"/>
     <text x="680" y="880">Y rails on insert bars</text>
     <text x="680" y="896">Y ballscrew between them (red)</text>
     <line x1="677" y1="885" x2="564" y2="880" stroke="#333" marker-end="url(#ar)"/>

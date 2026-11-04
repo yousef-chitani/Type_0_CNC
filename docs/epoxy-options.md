@@ -1,8 +1,8 @@
 # Epoxy options (UK)
 
-We need about **30 kg** in total (see [eg-moulds.md](eg-moulds.md)). There are two separate jobs:
+We need about **41 kg** in total (see [eg-moulds.md](eg-moulds.md)). There are two separate jobs:
 
-1. **Bulk EG binder** (about 25 kg). Low viscosity, so it wets fine filler well. Curing heat matters less here, because the aggregate (about 89% of the mass) soaks up the heat. Clear, UV-stable resin isn't needed.
+1. **Bulk EG binder** (about 37 kg). Low viscosity, so it wets fine filler well. Curing heat matters less here, because the aggregate (about 89% of the mass) soaks up the heat. Clear, UV-stable resin isn't needed.
 2. **Rail-seat leveling pour** (about 3 kg). Very low viscosity and a slow cure, so it has time to settle flat. Low shrinkage. Poured only 3–5 mm deep.
 
 | Product | Supplier | Kit | Price | £/kg | Notes |
@@ -14,9 +14,9 @@ We need about **30 kg** in total (see [eg-moulds.md](eg-moulds.md)). There are t
 
 ## Suggested plan (to confirm)
 
-- **Bulk EG:** Ampreg 30 with the slow hardener, about 25 kg. **About £295.**
+- **Bulk EG:** Ampreg 30 with the slow hardener, about 37 kg (two 22.68 kg kits). **About £590.**
 - **Leveling, grout and samples:** GlassCast 50 PLUS, 5 kg. **About £92 inc. VAT.**
-- **Total: about £390.**
+- **Total: about £680.**
 
 Before committing, make 3–4 test bricks (about 150 × 150 × 100 mm) at 10%, 11% and 12% epoxy. Check for voids, surface finish and how they break.
 
