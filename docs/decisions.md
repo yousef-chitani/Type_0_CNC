@@ -49,3 +49,7 @@
 | D-45 | Fine aggregate: B&Q kiln-dried sand 2 × 25 kg, sieve-checked | Saves £152.42. Already dry and washed |
 | D-46 | Coarse and medium aggregate: washed, kiln-dried resin-bound quartz from GCL (2-5 mm and 1-3 mm) | Graded and dried for resin use. Horticultural grit and the Rugeley collection were declined. Pallet delivery cost to Swansea still to confirm |
 | D-47 | Build in two stages. Stage 1: frame, motion, spindle, electronics, air, stand: a working mill with manual tool changes (air release button). Stage 2: tool rack and its drive, enclosure, mist, door interlock | Spreads cost and gets the machine cutting sooner. The frame already includes the rack zone and inserts, so stage 2 bolts on |
+| D-48 | Layout as a parametric CadQuery script producing STEP + dimensioned SVG views | One set of numbers drives the model, drawings and cut lists |
+| D-49 | Table top about 950 mm above the floor | Comfortable standing height; cabinet fits under |
+| D-50 | Y motor at the front, X motor on the right | Keeps the rear rack zone clear |
+| D-51 | Design workholding height about 100 mm (small precision vise) | Sets Z clearance and gantry opening height |
