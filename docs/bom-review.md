@@ -2,9 +2,9 @@
 
 Mark each line **Keep / Cut / Later**, or reply with IDs, e.g. `cut F16; later N03`.
 
-Priced total: **£5,238.51** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 items are marked **2**. £0.00 = owner-supplied or included in another line.
+Priced total: **£5,516.05** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 items are marked **2**. £0.00 = owner-supplied or included in another line.
 
-## Frame (£1,548.40)
+## Frame (£1,568.20)
 
 | ID | Stg | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
@@ -23,7 +23,7 @@ Priced total: **£5,238.51** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | F12 | 1 | Release agent: PVA + wax | 1 set | £31.68 | |
 | F13 | 1 | Plasticine for corner fillets | 1 set | £19.04 | |
 | F14 | 1 | Vibration motors | 2 pcs | £99.72 | |
-| F15 | 1 | Vibration table springs or rubber mounts + top sheet | 1 set | NOT FOUND | |
+| F15 | 1 | Vibration table rubber feet | 8 pcs | £19.80 | |
 | F16 | 1 | Temperature probes + logger | 1 set | £76.99 | |
 | F17 | 1 | Mixer | 1 pcs | £69.99 | |
 | F18 | 1 | Packing tape + silicone | 1 set | £16.98 | |
@@ -81,11 +81,11 @@ Priced total: **£5,238.51** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | P05 | 1 | Push-fit tubing and fittings 6/8 mm | 1 lot | £11.87 | |
 | P06 | 1 | Push-in fittings | 12 pcs | £34.12 | |
 
-## Electronics (£502.15)
+## Electronics (£759.89)
 
 | ID | Stg | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
-| E01 | 1 | Mesa 7i76EU | 1 pcs | €309.31 | |
+| E01 | 1 | Mesa 7i76EU | 1 pcs | £257.74 | |
 | E02 | 1 | Mini-PC (owner already has) | 1 pcs | £0.00 | |
 | E03 | 1 | Monitor + keyboard + mouse (owner already has) | 1 set | £0.00 | |
 | E04 | 1 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 1 pcs | £138.60 | |

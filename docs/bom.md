@@ -1,38 +1,39 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **81 line items, 79 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **81 line items, 81 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
-| Frame | 19 | 18 | £1,548.40 |
+| Frame | 19 | 19 | £1,568.20 |
 | Motion | 14 | 14 | £890.04 |
 | Spindle | 7 | 7 | £1,325.91 |
 | Tool changer | 6 | 6 | £256.96 |
 | Pneumatics | 6 | 6 | £117.00 |
-| Electronics | 20 | 19 | £502.15 |
+| Electronics | 20 | 20 | £759.89 |
 | Enclosure | 3 | 3 | £217.59 |
 | Stand | 2 | 2 | £225.98 |
 | Metrology | 2 | 2 | £85.70 |
 | Fixings | 2 | 2 | £68.78 |
-| **All** | **81** | **79** | **£5,238.51** |
+| **All** | **81** | **81** | **£5,516.05** |
 
-**Budget (D-57): Stage 1 £5,300, Stage 2 £600.** Priced total: **£5,238.51**. Not priced yet: F15, E01.
+**Budget (D-57): Stage 1 £5,300, Stage 2 £600.** Priced total: **£5,516.05**. Not priced yet: .
 
 ## Stage totals (D-47)
 | Stage | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, spindle, electronics, air, stand, tools | £4,738.30 |
+| 1 | Frame, motion, spindle, electronics, air, stand, tools | £5,015.84 |
 | 2 | Tool rack + drive, enclosure, mist, door switch | £500.21 |
 
-Stage 1 excludes the Mesa board (€309.31, owner-confirmed, not converted) and any import VAT on the spindle. Forks are 3D printed (owner).
+Stage 1 includes the Mesa board (£257.74). It excludes and any import VAT on the spindle. Forks are 3D printed (owner).
 
 ## Ten biggest lines
 | ID | Item | £ |
 |---|---|---|
 | S01 | Jianken JGL-80/2.2R24-20 ATC spindle | 990.57 |
 | F01 | Epoxy for main frame mix | 666.59 |
+| E01 | Mesa 7i76EU | 257.74 |
 | T01 | Stand steel 60 x 60 x 3 | 204.00 |
 | M11 | Aluminium tooling plate 330 x 330 x 30 mm | 190.54 |
 | M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 186.82 |
@@ -40,10 +41,9 @@ Stage 1 excludes the Mesa board (€309.31, owner-confirmed, not converted) and 
 | N02 | Polycarbonate panels + door | 142.12 |
 | E04 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 138.60 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 112.71 |
-| M12 | Aluminium plate for X saddle and Z spindle plate | 104.98 |
 
 ## Warnings
-- **Not in the total yet:** Mesa 7i76EU (US$219 + shipping; UK import VAT/duty paid on arrival) and 8 forks (US$47.92 + US$13.99 shipping).
+- **Not in the total yet:** spindle import VAT (if not collected at checkout), GCL pallet delivery, vibration table top sheet.
 - **S01 spindle:** UK import VAT (20%) is likely on top unless Alibaba collects it at checkout. Torque on the page says 0.7 Nm vs 0.87 Nm elsewhere: confirm.
 - **M01–M03 rails:** sale price limited to 1 per shopper. At list prices the three kits are £387.63 (+£202.52).
 - **S06 holders:** £6.05 may be a new-shopper price. At list price 8 holders are £178.96 (+£130.56). Pull stud must match the spindle.
@@ -70,7 +70,7 @@ Stage 1 excludes the Mesa board (€309.31, owner-confirmed, not converted) and 
 | F12 | 1 | Release agent: PVA + wax | 1 set |  | [product](https://www.ebay.co.uk/itm/235827548462) | PVA £13.50 free shipping (eBay UK) + wax £9.39 inc VAT + £8.79 express (AliExpress) | 31.68 | Wax: https://www.aliexpress.com/item/1005006037723287.html |
 | F13 | 1 | Plasticine for corner fillets | 1 set |  | [product](https://www.ebay.co.uk/itm/357951022386) | Plasticine £16.10 + £2.94 shipping (eBay UK) | 19.04 | Packing tape and silicone NOT priced |
 | F14 | 1 | Vibration motors | 2 pcs | Unbalanced vibration motors for the vibration table | [product](https://www.ebay.co.uk/itm/900058009643) | £49.86 each, free shipping (eBay UK) | 99.72 | 100 W 230 V with controller. Exciting force not stated. Genuine OLI MVE 200/3E (about 2 kN class) £129.99 + £9.99 each: https://www.ebay.co.uk/itm/277703089794 . Size before buying |
-| F15 | 1 | Vibration table springs or rubber mounts + top sheet | 1 set | Takes about 330 kg (mould + casting) | [product](https://www.ebay.co.uk/itm/326960605104) | NOT FOUND (page blocked). Search card: £8.66 + £2.72 per M10 bobbin, 192 kg |  | Unconfirmed. Top sheet not priced |
+| F15 | 1 | Vibration table rubber feet | 8 pcs | M6 stud, 20 mm dia × 20 mm high rubber feet | [product]() | £19.80 for 8 (owner-confirmed) | 19.80 | Load rating not stated. Base pour = about 265 kg casting + about 30 kg mould, about 37 kg per foot. Check the rating, or add feet / use larger mounts. Table top sheet not priced |
 | F16 | 1 | Temperature probes + logger | 1 set | Thermocouples or DS18B20 probes cast in | [product](https://www.ebay.co.uk/itm/800631453870) | £76.99, free shipping (eBay UK) | 76.99 | 4-ch K/J/T logger. Probes included not stated. AliExpress full match £44.02 is a new-shopper deal (normal £93.84): keep eBay unless the deal is available |
 | F17 | 1 | Mixer | 1 pcs | Paddle mixer or small forced-action mixer | [product](https://www.screwfix.com/p/erbauer-epm1600-1600w-electric-paddle-mixer-220-240v/981kj) | £69.99 inc VAT (Screwfix) | 69.99 | Erbauer EPM1600 |
 | F18 | 1 | Packing tape + silicone | 1 set | 6 rolls clear tape + neutral-cure silicone | [product](https://www.ebay.co.uk/itm/165130410287) | £8.99 tape + £7.99 silicone, free delivery (eBay UK) | 16.98 | Silicone: https://www.ebay.co.uk/itm/257643689613 |
@@ -107,7 +107,7 @@ Stage 1 excludes the Mesa board (€309.31, owner-confirmed, not converted) and 
 | P04 | 2 | Mist coolant system with 24 V solenoid | 1 set |  | [product](https://www.aliexpress.com/item/1005012241646016.html) | £17.59 inc VAT (AliExpress) | 17.59 | BPV-3000 mist unit, no solenoid (uses 4th P02 valve) |
 | P05 | 1 | Push-fit tubing and fittings 6/8 mm | 1 lot |  | [product](https://www.aliexpress.com/item/1005006780298909.html) | £4.31 + £7.56 inc VAT (AliExpress) | 11.87 | 10 m 6 × 4 + 10 m 8 × 5 PU. Fittings NOT priced |
 | P06 | 1 | Push-in fittings | 12 pcs | 8 × 6 mm-1/8 BSP + 4 × 8 mm-1/4 BSP (PROVISIONAL quantities) | [product](https://www.ebay.co.uk/itm/156691426151) | £2.77 each (6 mm) + £2.99 each (8 mm), free delivery (eBay UK) | 34.12 | 8 mm: https://www.ebay.co.uk/itm/110811089560 . Quantities to confirm from the pneumatic layout |
-| E01 | 1 | Mesa 7i76EU | 1 pcs |  | [product](https://store.mesanet.com/index.php?route=product/product&product_id=399) | €309.31 (owner-confirmed total) |  | Owner-confirmed price in EUR. Not converted to GBP: add the GBP card charge once paid. Import VAT may apply |
+| E01 | 1 | Mesa 7i76EU | 1 pcs |  | [product](https://store.mesanet.com/index.php?route=product/product&product_id=399) | €309.31 = £257.74 (owner-confirmed) | 257.74 | Owner-confirmed GBP charge. Import VAT may still apply on arrival |
 | E02 | 1 | Mini-PC (owner already has) | 1 pcs |  | [product]() | Owner sourced | 0.00 | D-58. Onboard Intel NIC goes to the Mesa board. No 2nd NIC: machine stays offline |
 | E03 | 1 | Monitor + keyboard + mouse (owner already has) | 1 set |  | [product]() | Owner sourced | 0.00 | D-58 |
 | E04 | 1 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 1 pcs | Mean Well NDR-480-48, 48 V 10 A, DIN rail | [product](https://www.rapidonline.com/mean-well-sdr-480-48-rail-psu-48v-10a-480w-din-rail-mount-universal-input-05-1702) | £108.00 ex VAT + £7.50 shipping ex VAT (owner basket; order total £153.60 inc VAT with E22) | 138.60 | Owner-confirmed basket. Line = (£108 + £7.50 shipping) + 20% VAT |
