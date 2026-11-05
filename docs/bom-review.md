@@ -1,10 +1,10 @@
 # Parts list for review
 
-Mark each line **Keep / Cut / Later** in the last column, then send it back. You can also just reply with IDs, e.g. `cut F16, X01; later E03`.
+Mark each line **Keep / Cut / Later**, or reply with IDs, e.g. `cut F16; later N03`.
 
-Priced total: **£5,307.36** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 items are marked **2**. Prices are line totals inc. listed shipping. Lines at £0.00 are included in another line.
+Priced total: **£5,084.91** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 items are marked **2**. £0.00 = owner-supplied or included in another line.
 
-## Frame (£1,528.23)
+## Frame (£1,548.40)
 
 | ID | Stg | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
@@ -17,8 +17,9 @@ Priced total: **£5,307.36** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | F07 | 1 | Steel flat bar 40 x 10 mm | 2 3 m bars | £72.00 | |
 | F08 | 1 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | £28.74 | |
 | F09 | 1 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 | |
-| F10 | 1 | Plain MDF 18 mm sheets (moulds) | 3 sheets | £90.00 | |
-| F11 | 1 | CLS timber 38 x 63 x 2400 (mould bracing) | 9 lengths | £31.50 | |
+| F10 | 1 | MDF sheet for mould floors | 1 sheet | £28.00 | |
+| F19 | 1 | White gloss furniture panels for mould walls | 2 panels | £77.94 | |
+| F11 | 1 | CLS timber 38 x 63 x 2400 (mould bracing) | 9 lengths | £35.73 | |
 | F12 | 1 | Release agent: PVA + wax | 1 set | £31.68 | |
 | F13 | 1 | Plasticine for corner fillets | 1 set | £19.04 | |
 | F14 | 1 | Vibration motors | 2 pcs | £99.72 | |
@@ -62,7 +63,7 @@ Priced total: **£5,307.36** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 
 | ID | Stg | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
-| A01 | 2 | ISO20 tool forks | 8 pcs | US$5.99 | |
+| A01 | 2 | ISO20 tool forks (3D printed) | 8 pcs | £0.00 | |
 | A02 | 2 | Rack slide linear guide (e.g. MGN15) + carriage | 2 sets | £65.98 | |
 | A03 | 2 | Small closed-loop stepper + driver (48 V) | 1 set | £47.77 | |
 | A04 | 2 | Rack drive screw or belt + pulleys | 1 set | £46.59 | |
@@ -80,26 +81,25 @@ Priced total: **£5,307.36** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | P05 | 1 | Push-fit tubing and fittings 6/8 mm | 1 lot | £11.87 | |
 | P06 | 1 | Push-in fittings | 12 pcs | £34.12 | |
 
-## Electronics (£591.17)
+## Electronics (£348.55)
 
 | ID | Stg | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
-| E01 | 1 | Mesa 7i76EU | 1 pcs | US$219.00 | |
-| E02 | 1 | x86 mini-PC with Intel NIC (2nd port for Mesa) | 1 pcs | £120.00 | |
-| E03 | 1 | Monitor + keyboard + mouse | 1 set | £37.11 | |
-| E04 | 1 | 48 V DC PSU (Mean Well LRS-600-48) | 1 pcs | £53.67 | |
-| E05 | 1 | 24 V DC PSU (Mean Well LRS-150-24) | 1 pcs | £11.10 | |
+| E01 | 1 | Mesa 7i76EU | 1 pcs | €309.31 | |
+| E02 | 1 | Mini-PC (owner already has) | 1 pcs | £0.00 | |
+| E03 | 1 | Monitor + keyboard + mouse (owner already has) | 1 set | £0.00 | |
+| E04 | 1 | 48 V DC PSU, DIN rail (Mean Well) | 1 pcs | Rapid SDR-480-48 £168.56 ex VAT | |
+| E05 | 1 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | £27.62 | |
+| E22 | 1 | 5 V DC PSU, DIN rail (low wattage) | 1 pcs | to price | |
 | E06 | 1 | E-stop safety relay (used Pilz PNOZ X2.1) | 1 pcs | £30.68 | |
 | E07 | 1 | Contactor with 24 V coil | 1 pcs | £26.19 | |
 | E08 | 1 | E-stop mushroom buttons + reset button | 1 set | £8.15 | |
 | E09 | 1 | MCBs / main isolator / EMC filter for VFD | 1 set | £10.39 | |
 | E10 | 1 | Inductive proximity switches 24 V | 4 pcs | £9.57 | |
-| E11 | 1 | USB to RS-485 adapter | 1 pcs | £10.92 | |
 | E12 | 1 | Electrical cabinet 600 x 400 x 200 | 1 set | £65.95 | |
 | E13 | 1 | DIN rail / terminals / wiring / ferrules | 1 lot | £33.79 | |
 | E14 | 1 | Cable chain and shielded motor cables | 1 lot | £15.69 | |
 | E15 | 2 | Enclosure door switch | 1 pcs | £8.07 | |
-| E16 | 1 | 2nd Intel NIC + riser for M720q | 1 set | £37.44 | |
 | E17 | 1 | Main isolator + MCBs | 1 set | £24.49 | |
 | E18 | 1 | Cabinet fan + filters | 1 set | £17.46 | |
 | E19 | 1 | DIN rail + ferrules + wire | 1 set | £28.06 | |

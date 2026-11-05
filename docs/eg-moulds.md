@@ -60,7 +60,7 @@ The owner asked for real examples before choosing cores. What I found:
 
 ## Building the moulds
 
-- **Material:** 18 mm melamine-faced MDF or ply. The floor sits on 40 × 40 mm battens every 300 mm or so, so it stays flat on the vibration table.
+- **Material (D-61):** floors from one 18 mm MDF sheet, sealed and coated. Walls from white gloss 18 mm furniture panel. The floor sits on 40 × 40 mm battens every 300 mm or so, so it stays flat on the vibration table.
 - **Joints:** screws only, **no glue**, so every wall comes off. Seal inside corners with a small fillet of silicone or plasticine, which also gives the casting rounded edges that resist chipping.
 - **Release:** packing tape on cut edges, 3 coats of release wax, then PVA film. Test it on the sample moulds first.
 - **Bracing:** batten the walls every 200 mm. Vibration makes unbraced walls bulge.

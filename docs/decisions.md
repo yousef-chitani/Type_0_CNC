@@ -33,7 +33,7 @@
 | D-29 | Gantry joins the base with M12 bolts plus a grout layer: shim the gantry square, inject epoxy grout, tighten after cure | Square and stiff, and the joint isn't stressed while it cures |
 | D-30 | Solid castings (no cores) | No documented DIY example of large foam cores was found. Solid is the most proven. Cost: about 315 kg and about 41 kg of epoxy. Curing heat must be managed (see eg-moulds.md) |
 | D-31 | Mesa 7i76EU (Ethernet) as the only interface board | 5 step/dir (4 used, 1 spare), 32 inputs and 16 outputs cover the about 20 inputs and 10 outputs needed, with room to spare |
-| D-32 | Spindle VFD controlled over Modbus RS-485 | Speed command plus readback of actual speed, faults and load. Lets LinuxCNC confirm the spindle has stopped before releasing a tool |
+| D-32 | Spindle VFD controlled over Modbus RS-485 (via the 7i76EU's RS-485 port, D-58) | Speed command plus readback of actual speed, faults and load. Lets LinuxCNC confirm the spindle has stopped before releasing a tool |
 | D-33 | Water-cooled spindle, with a flow switch interlocked into LinuxCNC | Quiet and doesn't stir up dust in the enclosure. The spindle can't run without coolant flow |
 | D-34 | x86 mini-PC with an Intel network port dedicated to the Mesa board | Reliable timing, cheap used |
 | D-35 | Hardwired e-stop: buttons and the Mesa watchdog run through a safety relay that drops a contactor, cutting drive power and the VFD run signal | Still stops if the PC or software crashes. The Z brake engages when power drops. LinuxCNC only reads status |
@@ -59,3 +59,7 @@
 | D-55 | Rails from Kaiyade (3 kits in one order), ballscrews X 450 / Y 550 / Z 350 from METALWORK, 60 × 60 × 3 steel from eBay (6 × 2 m), 600 × 400 × 200 galvanised cabinet | Cheapest full matches without per-shopper deal limits |
 | D-56 | Cast a Y-screw channel about 70 × 25 mm into the base between the Y rails | The DSG16H housing hangs 10 mm below the base top when bolted under the table |
 | D-57 | Budget: Stage 1 £5,300, Stage 2 £600 | Priced Stage 1 is £4,807 plus the Mesa board, spindle import VAT and aggregate delivery. Margin for shipping and surprises |
+| D-58 | Owner supplies: mini-PC, monitor/keyboard/mouse, 3D-printed ISO20 forks. No 2nd NIC, no USB-RS485 adapter | PC stays offline, so the onboard Intel NIC runs the Mesa. VFD Modbus runs on the 7i76EU's own RS-485 port |
+| D-59 | All power supplies DIN-rail Mean Well: 48 V (≥ 10 A), 24 V (HDR-150-24), plus a low-wattage 5 V | Saves cabinet space. Mounts on the same DIN rail |
+| D-60 | Mesa 7i76EU at €309.31 (owner-confirmed) | Owner's price check |
+| D-61 | Moulds: 1 B&Q MDF sheet (£28) for both floors (sealed + coated), 2 B&Q white gloss panels (£38.97 each) for walls and plug. Replaces D-44 | No seam in the precision floor face. Gloss walls need no sealing |
