@@ -41,3 +41,10 @@ Need about **300 kg** in total for solid castings (layout: 298 kg at 89%) plus t
 - The 1–2 mm gap is acceptable (gap-graded). Test bricks will show the epoxy demand. If it is too high, add 2 bags of GCL 1–3 mm.
 
 Other local option on file: Hancock & Brown 6 mm limestone chippings £4.74 / 25 kg (needs washing and drying).
+
+## Whiting datasheet (Valentine Clays, owner-supplied)
+- Moisture 0.1% ex works: use as supplied, no drying.
+- d50 9 µm, top cut (d98) 110 µm, 4% retained on 53 µm, 19% below 2 µm.
+- SG 2.7, 99% CaCO₃, pH 9, oil absorption 17 g/100 g, Blaine 480 m²/kg.
+- **Limit to about 8–10% of the aggregate mass.** The very fine part raises viscosity and epoxy demand. Tune on test bricks.
+- Paper bags: decant into a sealed tub once opened. Warm before use if stored in a damp garage.
