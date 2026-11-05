@@ -2,7 +2,7 @@
 
 Mark each line **Keep / Cut / Later**, or reply with IDs, e.g. `cut F16; later N03`.
 
-Priced total: **£5,084.91** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 items are marked **2**. £0.00 = owner-supplied or included in another line.
+Priced total: **£5,238.51** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 items are marked **2**. £0.00 = owner-supplied or included in another line.
 
 ## Frame (£1,548.40)
 
@@ -81,16 +81,16 @@ Priced total: **£5,084.91** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | P05 | 1 | Push-fit tubing and fittings 6/8 mm | 1 lot | £11.87 | |
 | P06 | 1 | Push-in fittings | 12 pcs | £34.12 | |
 
-## Electronics (£348.55)
+## Electronics (£502.15)
 
 | ID | Stg | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | E01 | 1 | Mesa 7i76EU | 1 pcs | €309.31 | |
 | E02 | 1 | Mini-PC (owner already has) | 1 pcs | £0.00 | |
 | E03 | 1 | Monitor + keyboard + mouse (owner already has) | 1 set | £0.00 | |
-| E04 | 1 | 48 V DC PSU, DIN rail (Mean Well) | 1 pcs | Rapid SDR-480-48 £168.56 ex VAT | |
+| E04 | 1 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 1 pcs | £138.60 | |
 | E05 | 1 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | £27.62 | |
-| E22 | 1 | 5 V DC PSU, DIN rail (low wattage) | 1 pcs | to price | |
+| E22 | 1 | 5 V DC PSU, DIN rail (low wattage) | 1 pcs | £15.00 | |
 | E06 | 1 | E-stop safety relay (used Pilz PNOZ X2.1) | 1 pcs | £30.68 | |
 | E07 | 1 | Contactor with 24 V coil | 1 pcs | £26.19 | |
 | E08 | 1 | E-stop mushroom buttons + reset button | 1 set | £8.15 | |

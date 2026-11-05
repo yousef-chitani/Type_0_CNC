@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **81 line items, 77 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **81 line items, 79 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -11,22 +11,22 @@ Full list: [bom.csv](bom.csv). **81 line items, 77 priced.** Prices were read fr
 | Spindle | 7 | 7 | £1,325.91 |
 | Tool changer | 6 | 6 | £256.96 |
 | Pneumatics | 6 | 6 | £117.00 |
-| Electronics | 20 | 17 | £348.55 |
+| Electronics | 20 | 19 | £502.15 |
 | Enclosure | 3 | 3 | £217.59 |
 | Stand | 2 | 2 | £225.98 |
 | Metrology | 2 | 2 | £85.70 |
 | Fixings | 2 | 2 | £68.78 |
-| **All** | **81** | **77** | **£5,084.91** |
+| **All** | **81** | **79** | **£5,238.51** |
 
-**Budget (D-57): Stage 1 £5,300, Stage 2 £600.** Priced total: **£5,084.91**. Not priced yet: F15, E01, E04, E22.
+**Budget (D-57): Stage 1 £5,300, Stage 2 £600.** Priced total: **£5,238.51**. Not priced yet: F15, E01.
 
 ## Stage totals (D-47)
 | Stage | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, spindle, electronics, air, stand, tools | £4,584.70 |
+| 1 | Frame, motion, spindle, electronics, air, stand, tools | £4,738.30 |
 | 2 | Tool rack + drive, enclosure, mist, door switch | £500.21 |
 
-Stage 1 excludes the Mesa board (€309.31, owner-confirmed, not converted), the 48 V and 5 V DIN PSUs (to price) and any import VAT on the spindle. Forks are 3D printed (owner).
+Stage 1 excludes the Mesa board (€309.31, owner-confirmed, not converted) and any import VAT on the spindle. Forks are 3D printed (owner).
 
 ## Ten biggest lines
 | ID | Item | £ |
@@ -38,9 +38,9 @@ Stage 1 excludes the Mesa board (€309.31, owner-confirmed, not converted), the
 | M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 186.82 |
 | S05 | Spindle water cooler CW-3000 | 144.00 |
 | N02 | Polycarbonate panels + door | 142.12 |
+| E04 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 138.60 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 112.71 |
 | M12 | Aluminium plate for X saddle and Z spindle plate | 104.98 |
-| M01 | HGR20 rail 650 mm | 104.59 |
 
 ## Warnings
 - **Not in the total yet:** Mesa 7i76EU (US$219 + shipping; UK import VAT/duty paid on arrival) and 8 forks (US$47.92 + US$13.99 shipping).
@@ -110,9 +110,9 @@ Stage 1 excludes the Mesa board (€309.31, owner-confirmed, not converted), the
 | E01 | 1 | Mesa 7i76EU | 1 pcs |  | [product](https://store.mesanet.com/index.php?route=product/product&product_id=399) | €309.31 (owner-confirmed total) |  | Owner-confirmed price in EUR. Not converted to GBP: add the GBP card charge once paid. Import VAT may apply |
 | E02 | 1 | Mini-PC (owner already has) | 1 pcs |  | [product]() | Owner sourced | 0.00 | D-58. Onboard Intel NIC goes to the Mesa board. No 2nd NIC: machine stays offline |
 | E03 | 1 | Monitor + keyboard + mouse (owner already has) | 1 set |  | [product]() | Owner sourced | 0.00 | D-58 |
-| E04 | 1 | 48 V DC PSU, DIN rail (Mean Well) | 1 pcs | Mean Well DIN rail 48 V ≥ 10 A (e.g. NDR-480-48, SDR-480-48, XDR-480-48) | [product](https://www.rapidonline.com/mean-well-sdr-480-48-rail-psu-48v-10a-480w-din-rail-mount-universal-input-05-1702) | Rapid SDR-480-48 £168.56 ex VAT (confirmed 2026-11-04); others to price |  | D-59: DIN rail for cabinet space. TO PRICE: cheapest DIN 48 V 10 A Mean Well |
+| E04 | 1 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 1 pcs | Mean Well NDR-480-48, 48 V 10 A, DIN rail | [product](https://www.rapidonline.com/mean-well-sdr-480-48-rail-psu-48v-10a-480w-din-rail-mount-universal-input-05-1702) | £108.00 ex VAT + £7.50 shipping ex VAT (owner basket; order total £153.60 inc VAT with E22) | 138.60 | Owner-confirmed basket. Line = (£108 + £7.50 shipping) + 20% VAT |
 | E05 | 1 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | Mean Well HDR-150-24, DIN rail | [product](https://www.omc-stepperonline.com/hdr-150-24-mean-well-24vdc-5-31a-127-4w-115vac-6-25a-150w-230vac-ultra-slim-step-shape-din-rail-power-supply-hdr-150-24) | £27.62 (VAT?), pre-order (StepperOnline, read 2026-11-05) | 27.62 | D-59. Pre-order: check stock. Shipping not shown |
-| E22 | 1 | 5 V DC PSU, DIN rail (low wattage) | 1 pcs | Mean Well DIN rail 5 V, about 15 W (e.g. HDR-15-5) | [product]() |  |  | TO PRICE |
+| E22 | 1 | 5 V DC PSU, DIN rail (low wattage) | 1 pcs | Mean Well DIN rail 5 V, about 15 W (e.g. HDR-15-5) | [product]() | £12.50 ex VAT (same order as E04) | 15.00 | Assumed to be the 5 V DIN supply in the owner basket. Inc VAT calculated (order VAT £25.60 matches 20%) |
 | E06 | 1 | E-stop safety relay (used Pilz PNOZ X2.1) | 1 pcs | CM Manufactory SAFE 4.3eco 45320 (24 V AC/DC / 3 NO + 1 NC) | [product](https://www.ebay.co.uk/itm/407310782945) | £27.74 (VAT?) + £2.94 tracked, used (eBay UK) | 30.68 | Used Pilz PNOZ X2.1 774306, 24 V, dual channel, 2 NO, manual reset. Better used PNOZ X2 £39.99 (seller 4.6K): https://www.ebay.co.uk/itm/375423870735 . Previous: £116.20 new |
 | E07 | 1 | Contactor with 24 V coil | 1 pcs |  | [product](https://www.aliexpress.com/item/1005005356561757.html) | £26.19 inc VAT, free shipping (AliExpress) | 26.19 | Schneider LC1D09BDC 9 A 24 V DC coil. Genuine not verified. 9 A is enough for the 48 V / VFD control duty but check against the circuit design |
 | E08 | 1 | E-stop mushroom buttons + reset button | 1 set |  | [product](https://www.aliexpress.com/item/1005008293871583.html) | £8.15 inc VAT for 5, free shipping (AliExpress) | 8.15 | XB2-BS542, 1 NC. Reset button not included |
