@@ -8,7 +8,7 @@ Full list: [bom.csv](bom.csv). **81 line items, 78 priced.** Prices were read fr
 |---|---|---|---|
 | Frame | 18 | 17 | £1,528.23 |
 | Motion | 14 | 14 | £923.29 |
-| Spindle | 7 | 7 | £1,361.81 |
+| Spindle | 7 | 7 | £1,325.91 |
 | Tool changer | 6 | 5 | £239.76 |
 | Pneumatics | 6 | 6 | £117.00 |
 | Electronics | 21 | 20 | £617.55 |
@@ -16,14 +16,14 @@ Full list: [bom.csv](bom.csv). **81 line items, 78 priced.** Prices were read fr
 | Stand | 2 | 2 | £132.98 |
 | Metrology | 2 | 2 | £85.70 |
 | Fixings | 2 | 2 | £68.78 |
-| **All** | **81** | **78** | **£5,292.69** |
+| **All** | **81** | **78** | **£5,256.79** |
 
-**Budget: £4,500.** Priced total: **£5,292.69**. Not priced yet: F15, A01, E01.
+**Budget: £4,500.** Priced total: **£5,256.79**. Not priced yet: F15, A01, E01.
 
 ## Stage totals (D-47)
 | Stage | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, spindle, electronics, air, stand, tools | £4,809.68 |
+| 1 | Frame, motion, spindle, electronics, air, stand, tools | £4,773.78 |
 | 2 | Tool rack + drive, enclosure, mist, door switch | £483.01 |
 
 Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import VAT on the spindle. Stage 2 excludes the forks (US$61.91 incl. shipping).
@@ -37,10 +37,10 @@ Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import 
 | M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 182.83 |
 | S05 | CW-3000-style radiator unit with flow alarm | 144.00 |
 | N02 | Polycarbonate panels + door | 142.12 |
-| S02 | VFD 2.2 kW single-phase input with RS-485 Modbus | 124.84 |
 | E02 | x86 mini-PC with Intel NIC (2nd port for Mesa) | 120.00 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 112.71 |
 | T01 | Steel box section for stand | 111.00 |
+| M12 | Aluminium plate for X saddle and Z spindle plate | 104.98 |
 
 ## Warnings
 - **Not in the total yet:** Mesa 7i76EU (US$219 + shipping; UK import VAT/duty paid on arrival) and 8 forks (US$47.92 + US$13.99 shipping).
@@ -70,10 +70,10 @@ Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import 
 | F13 | 1 | Packing tape / silicone / plasticine for fillets | 1 set |  | [product](https://www.ebay.co.uk/itm/357951022386) | Plasticine £16.10 + £2.94 shipping (eBay UK) | 19.04 | Packing tape and silicone NOT priced |
 | F14 | 1 | Vibration motors | 2 pcs | Unbalanced vibration motors for the vibration table | [product](https://www.ebay.co.uk/itm/900058009643) | £49.86 each, free shipping (eBay UK) | 99.72 | 100 W 230 V with controller. Exciting force not stated. Genuine OLI MVE 200/3E (about 2 kN class) £129.99 + £9.99 each: https://www.ebay.co.uk/itm/277703089794 . Size before buying |
 | F15 | 1 | Vibration table springs or rubber mounts + top sheet | 1 set | Takes about 330 kg (mould + casting) | [product](https://www.ebay.co.uk/itm/326960605104) | NOT FOUND (page blocked). Search card: £8.66 + £2.72 per M10 bobbin, 192 kg |  | Unconfirmed. Top sheet not priced |
-| F16 | 1 | Temperature probes + logger | 1 set | Thermocouples or DS18B20 probes cast in | [product](https://www.ebay.co.uk/itm/800631453870) | £76.99, free shipping (eBay UK) | 76.99 | 4-ch K/J/T logger. Probes included not stated |
+| F16 | 1 | Temperature probes + logger | 1 set | Thermocouples or DS18B20 probes cast in | [product](https://www.ebay.co.uk/itm/800631453870) | £76.99, free shipping (eBay UK) | 76.99 | 4-ch K/J/T logger. Probes included not stated. AliExpress full match £44.02 is a new-shopper deal (normal £93.84): keep eBay unless the deal is available |
 | F17 | 1 | Mixer | 1 pcs | Paddle mixer or small forced-action mixer | [product](https://www.screwfix.com/p/erbauer-epm1600-1600w-electric-paddle-mixer-220-240v/981kj) | £69.99 inc VAT (Screwfix) | 69.99 | Erbauer EPM1600 |
 | F18 | 1 | Packing tape + silicone | 1 set | 6 rolls clear tape + neutral-cure silicone | [product](https://www.ebay.co.uk/itm/165130410287) | £8.99 tape + £7.99 silicone, free delivery (eBay UK) | 16.98 | Silicone: https://www.ebay.co.uk/itm/257643689613 |
-| M01 | 1 | HGR20 rail 650 mm | 2 pcs | Y axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | £70.85 inc VAT, free shipping (AliExpress sale; list £147.49) | 70.85 | 2 × 650 mm + 4 HGH20CA. SALE LIMIT 1 per shopper: may not get all 3 kits at sale price. Preload not stated (Z1 not offered). HIWIN-branded alt: 1 rail + 2 blocks £70.99 + £32.52 https://www.aliexpress.com/item/1005008442623745.html |
+| M01 | 1 | HGR20 rail 650 mm | 2 pcs | Y axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | £70.85 inc VAT, free shipping (AliExpress sale; list £147.49) | 70.85 | 2 × 650 mm + 4 HGH20CA. SALE LIMIT 1 per shopper: may not get all 3 kits at sale price. Preload not stated (Z1 not offered). HIWIN-branded alt: 1 rail + 2 blocks £70.99 + £32.52 https://www.aliexpress.com/item/1005008442623745.html. Kaiyade alt: 3 sets £67.07 + £79.00 shipping (if charged once = £146.07): check basket. https://www.aliexpress.com/item/1005009213173130.html |
 | M02 | 1 | HGR20 rail 450 mm | 2 pcs | X axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | £59.05 inc VAT, free shipping (AliExpress sale; list £123.91) | 59.05 | 2 × 450 mm + 4 HGH20CA. Same listing and sale limit as M01 |
 | M03 | 1 | HGR20 rail 300 mm | 2 pcs | Z axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | £55.21 inc VAT, free shipping (AliExpress sale; list £116.23) | 55.21 | 2 × 300 mm + 4 HGH20CA. Same listing and sale limit as M01 |
 | M04 | 1 | HGH20CA carriage Z1 preload | 12 pcs | 4 per axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | Included in M01-M03 | 0 | 4 HGH20CA per kit. Z1 preload not offered |
@@ -88,7 +88,7 @@ Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import 
 | M12 | 1 | Aluminium plate for X saddle and Z spindle plate | 1 lot | About 20 mm thick. Sizes from the layout | [product](https://www.aluminiumwarehouse.co.uk/products/20-mm-6082-aluminium-plate) | £87.48 ex VAT for reference 300 × 300 × 20 (Aluminium Warehouse) | 104.98 | REFERENCE SIZE ONLY: real sizes come from the layout. Inc VAT calculated |
 | M13 | 1 | Motor and bearing mounts | 1 lot | Machined or bought brackets | [product](https://www.aliexpress.com/item/1005006232398099.html) | £9.99 inc VAT each + £10.62 shipping (AliExpress) | 40.59 | HM12-60 motor bracket with fixed bearing seat (replaces BK12 at motor end). Check fit with M05 |
 | S01 | 1 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | 2.2 kW / 24000 rpm / 400 Hz / 220 V / about 0.87 Nm / ISO20 / water-cooled / 80 mm body. Order the clamp/unclamp sensor variant (PNP) | [product](https://www.alibaba.com/product-detail/Jianken-JGL-80-2-2KW-24000RPM_1601249825246.html) | £937.79 (VAT?) + £52.78 shipping (Alibaba, 1-4 pcs) | 990.57 | Drawing confirms JGL-80/2.2R24, 220 V, 400 Hz, ISO20-ER16, water-cooled. Sensors: clamped/released + temperature, PNP 24 V. VFD not included. Pull stud not shown. KEY ATTRIBUTES SAY 0.7 Nm (other listings 0.87 Nm): confirm with Jianken. Import VAT likely on top. Delivery 18 Nov-19 Dec. Alt AliExpress with 2.2 kW VFD £1402.79 inc VAT + £140.15: https://www.aliexpress.com/item/1005010706946690.html |
-| S02 | 1 | VFD 2.2 kW single-phase input with RS-485 Modbus | 1 pcs | 220 V 3-phase output / up to 400 Hz / single-phase 230 V input | [product](https://www.aliexpress.com/item/1005007299382924.html) | £94.19 inc VAT + £30.65 shipping (AliExpress) | 124.84 | Huanyang HY02D223B, 220 V, 0-400 Hz. RS-485 NOT stated: ask seller before buying (needed for D-32). Alt StepperOnline EV51S20022BX0 £62.74 (VAT?), pre-order, RS-485 not stated: https://www.omc-stepperonline.com/ev51-series-vfd-3hp-2-2kw-12-5a-single-phase-220v-cnc-spindle-motor-variable-frequency-drive-ev51s20022bx0 |
+| S02 | 1 | VFD 2.2 kW single-phase input with RS-485 Modbus | 1 pcs | 2.2 kW, 1-phase 220 V in, 3-phase 220 V out, 0-600 Hz, RS-485 Modbus-RTU stated | [product](https://www.aliexpress.com/item/1005013518595862.html) | £71.99 inc VAT early-bird deal (only 1 left); normal £88.94; free shipping (AliExpress, ZEST Factory Store) | 88.94 | FULL MATCH incl. RS-485 Modbus (D-32). Budgeted at the normal price. Store 96.7%, 216 sold. Previous Huanyang £124.84 had no RS-485 stated |
 | S03 | 1 | Spindle mount clamp to suit spindle body diameter | 1 pcs | 80 mm | [product](https://www.aliexpress.com/item/4001010906801.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | 80 mm clamp |
 | S04 | 1 | Shielded 4-core spindle cable | 5 m |  | [product](https://www.aliexpress.com/item/32971008305.html) | £18.22 inc VAT for 5 m (AliExpress) | 18.22 | 4-core 16 AWG (about 1.3 mm²) shielded: slightly under 1.5 mm². Shipping not shown |
 | S05 | 1 | CW-3000-style radiator unit with flow alarm | 1 pcs | CW-3000TG (220 V 1-phase / 9 L tank / 10 L/min max) | [product](https://www.ebay.co.uk/itm/315204411696) | £144.00 (VAT?), free courier (eBay UK) | 144.00 | CW-3000 SDKEHUI, flow + temperature alarms, 3-year warranty. ALARM OUTPUT TERMINAL NOT STATED: ask seller. Previous: £208.42 |
