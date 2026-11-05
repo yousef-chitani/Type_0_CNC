@@ -37,7 +37,7 @@ Need about **300 kg** in total for solid castings (layout: 298 kg at 89%) plus t
 ## Decision (D-63)
 - **Coarse:** GCL Winter Quartz 2–5 mm, 6 × 25 kg, washed and kiln-dried (delivered).
 - **Medium and fine:** Hancock & Brown kiln-dried pavior sand 0–1 mm, 8 × 20 kg (collect: confirm on 01792 462346).
-- **Filler:** Hancock & Brown limestone dust, 1 × 25 kg. Dry it in the oven and sieve it.
+- **Filler (D-64):** pottery whiting, 25 kg, from Valentine Clays (£20.42), bought dry. Replaces the limestone dust (drying fine dust at home is impractical).
 - The 1–2 mm gap is acceptable (gap-graded). Test bricks will show the epoxy demand. If it is too high, add 2 bags of GCL 1–3 mm.
 
 Other local option on file: Hancock & Brown 6 mm limestone chippings £4.74 / 25 kg (needs washing and drying).

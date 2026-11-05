@@ -6,7 +6,7 @@ Full list: [bom.csv](bom.csv). **80 line items, 80 priced.** Prices were read fr
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
-| Frame | 18 | 18 | £1,479.64 |
+| Frame | 18 | 18 | £1,495.82 |
 | Motion | 14 | 14 | £890.04 |
 | Spindle | 7 | 7 | £1,325.91 |
 | Tool changer | 6 | 6 | £256.96 |
@@ -16,14 +16,14 @@ Full list: [bom.csv](bom.csv). **80 line items, 80 priced.** Prices were read fr
 | Stand | 2 | 2 | £225.98 |
 | Metrology | 2 | 2 | £85.70 |
 | Fixings | 2 | 2 | £68.78 |
-| **All** | **80** | **80** | **£5,427.49** |
+| **All** | **80** | **80** | **£5,443.67** |
 
-**Budget (D-57): Stage 1 £5,300, Stage 2 £600.** Priced total: **£5,427.49**. Not priced yet: .
+**Budget (D-57): Stage 1 £5,300, Stage 2 £600.** Priced total: **£5,443.67**. Not priced yet: .
 
 ## Stage totals (D-47)
 | Stage | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, spindle, electronics, air, stand, tools | £4,927.28 |
+| 1 | Frame, motion, spindle, electronics, air, stand, tools | £4,943.46 |
 | 2 | Tool rack + drive, enclosure, mist, door switch | £500.21 |
 
 Stage 1 includes the Mesa board (£257.74). It excludes any spindle import VAT and aggregate delivery or collection costs. Forks are 3D printed (owner).
@@ -59,7 +59,7 @@ Stage 1 includes the Mesa board (£257.74). It excludes any spindle import VAT a
 | F02 | 1 | Epoxy for leveling pour / grout / samples | 5 kg | Very low viscosity and slow cure (e.g. GlassCast 50 PLUS) | [product](https://www.easycomposites.co.uk/glasscast-50-plus-clear-epoxy-casting-resin) | £76.46 ex VAT per 5 kg kit (Easy Composites) | 91.75 | Inc VAT calculated at 20% |
 | F03 | 1 | Coarse aggregate: quartz 2-5 mm | 6 25 kg bags | Washed, kiln-dried angular quartz 2-5 mm (resin-bound grade) | [product](https://www.gclproducts.co.uk/p/resin-bound-gravel/winter-quartz-2-5mm-gravel) | £12.10 ex VAT / £14.52 inc VAT per 25 kg (GCL PermaBound Winter Quartz) | 87.12 | D-63. 150 kg ready to use (washed, kiln-dried). Pallet delivery cost at checkout, to confirm for Swansea |
 | F04 | 1 | Medium + fine: kiln-dried sand 0-1 mm | 8 20 kg bags | Kiln Dried KDIS Pavior Sand 0-1 mm | [product](https://hancockandbrown.com/kiln-dried-block-paving-sand-20kg-bag) | £6.38 inc VAT per 20 kg (Hancock & Brown, Swansea) | 51.04 | D-63. 160 kg, already dry. Collection to confirm by phone 01792 462346. Leaves a 1-2 mm gap in the grading (gap-graded mix): check epoxy demand on test bricks |
-| F06 | 1 | Filler: limestone dust | 1 25 kg bag | Limestone stone dust, below about 0.1 mm portion used | [product](https://hancockandbrown.com/25kg-bag-of-stone-dust) | £4.24 inc VAT per 25 kg (Hancock & Brown) | 4.24 | D-63. Must be dried (oven 100-120 °C) and sieved. Silica flour (Potterycrafts £43.26) is the dry alternative |
+| F06 | 1 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | Pottery-grade whiting, dry powder (< 0.1 mm) | [product](https://valentineclays.co.uk/products/whiting) | £20.42 inc VAT per 25 kg (Valentine Clays) | 20.42 | D-64. Delivery cost not shown: check in the basket. Alternatives: Potterycrafts silica flour £36.05 ex VAT (£43.26 inc), Womersleys Trucarb whiting from £11.55 ex VAT (construction chalk, dryness not stated). Keep the bag sealed and dry |
 | F07 | 1 | Steel flat bar 40 x 10 mm | 2 3 m bars | 40 × 10 mild steel flat bar, 3 m | [product](https://www.themetalstore.co.uk/products/3-metre-lengths-10mm-flat-bar) | £30.00 ex VAT / £36.00 inc VAT per 3 m bar (The Metal Store) | 72.00 | Delivery not shown. Bright (EN3B) bar is an option for flatter inserts |
 | F08 | 1 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | Zinc or plain steel | [product](https://www.ebay.co.uk/itm/361927188666) | £19.65 for 2 × 1 m rods, free shipping (eBay UK) + nuts £9.09 inc VAT (Screwfix) | 28.74 | Nuts: https://www.screwfix.com/p/easyfix-bzp-steel-hex-nuts-m12-100-pack/15569 |
 | F09 | 1 | Steel or PVC tube for M12 bolt sleeves | 2 m | About 14-16 mm bore | [product](https://www.screwfix.com/p/deta-tte-round-upvc-white-conduit-20mm-x-3m/256vt) | £2.29 inc VAT per 3 m (Screwfix) | 2.29 | 20 mm uPVC conduit, bore not stated (about 16-17 mm expected, clears M12). Steel alt £10.99: https://www.screwfix.com/p/deta-tte-round-steel-galvanised-class-4-conduit-tube-20mm-x-3m/7734j |
