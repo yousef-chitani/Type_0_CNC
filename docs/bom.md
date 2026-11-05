@@ -18,7 +18,7 @@ Full list: [bom.csv](bom.csv). **81 line items, 78 priced.** Prices were read fr
 | Fixings | 2 | 2 | £68.78 |
 | **All** | **81** | **78** | **£5,307.36** |
 
-**Budget: £4,500.** Priced total: **£5,307.36**. Not priced yet: F15, A01, E01.
+**Budget (D-57): Stage 1 £5,300, Stage 2 £600.** Priced total: **£5,307.36**. Not priced yet: F15, A01, E01.
 
 ## Stage totals (D-47)
 | Stage | What | GBP priced |

@@ -15,4 +15,4 @@
 | Enclosure | Full enclosure | Also keeps chips out of the rack |
 | Air | Existing compressor | ATC tool release needs about 6 bar or more |
 | Site | Garage, on a heavy stand built by the owner | Frame mass budget about 200–350 kg |
-| Budget | £4,500 total | Nothing bought yet. Covers everything |
+| Budget | **Stage 1 £5,300, Stage 2 £600 (about £5,900 total)** | Originally £4,500. Raised after pricing (D-57). Nothing bought yet |

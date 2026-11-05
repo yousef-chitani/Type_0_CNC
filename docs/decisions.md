@@ -58,3 +58,4 @@
 | D-54 | Stand from 60 × 60 × 3 box section with diagonal bracing (about 11.9 m) | Ample for about 400 kg when braced. Cheaper and lighter than 80 × 80 × 5 |
 | D-55 | Rails from Kaiyade (3 kits in one order), ballscrews X 450 / Y 550 / Z 350 from METALWORK, 60 × 60 × 3 steel from eBay (6 × 2 m), 600 × 400 × 200 galvanised cabinet | Cheapest full matches without per-shopper deal limits |
 | D-56 | Cast a Y-screw channel about 70 × 25 mm into the base between the Y rails | The DSG16H housing hangs 10 mm below the base top when bolted under the table |
+| D-57 | Budget: Stage 1 £5,300, Stage 2 £600 | Priced Stage 1 is £4,807 plus the Mesa board, spindle import VAT and aggregate delivery. Margin for shipping and surprises |
