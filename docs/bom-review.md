@@ -2,18 +2,17 @@
 
 Mark each line **Keep / Cut / Later**, or reply with IDs, e.g. `cut F16; later N03`.
 
-Priced total: **£5,516.05** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 items are marked **2**. £0.00 = owner-supplied or included in another line.
+Priced total: **£5,427.49** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 items are marked **2**. £0.00 = owner-supplied or included in another line.
 
-## Frame (£1,568.20)
+## Frame (£1,479.64)
 
 | ID | Stg | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | F01 | 1 | Epoxy for main frame mix | 1 set | £666.59 | |
 | F02 | 1 | Epoxy for leveling pour / grout / samples | 5 kg | £91.75 | |
 | F03 | 1 | Coarse aggregate: quartz 2-5 mm | 6 25 kg bags | £87.12 | |
-| F04 | 1 | Medium aggregate: quartz 1-3 mm | 4 25 kg bags | £64.60 | |
-| F05 | 1 | Fine sand 0.1-0.5 mm | 2 25 kg bags | £35.98 | |
-| F06 | 1 | Fine filler (silica flour or fly ash) | 1 lot | £43.26 | |
+| F04 | 1 | Medium + fine: kiln-dried sand 0-1 mm | 8 20 kg bags | £51.04 | |
+| F06 | 1 | Filler: limestone dust | 1 25 kg bag | £4.24 | |
 | F07 | 1 | Steel flat bar 40 x 10 mm | 2 3 m bars | £72.00 | |
 | F08 | 1 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | £28.74 | |
 | F09 | 1 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 | |

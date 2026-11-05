@@ -15,4 +15,4 @@ Roughly in the order we'll work through them. Resolved items are in decisions.md
    - METALWORK: are the screw lengths overall or thread length?
    - CW-3000 chiller: does it have an alarm output terminal?
    - Jianken (owner ordering): torque (0.7 vs 0.87 Nm), pull-stud spec, clamp/unclamp sensors PNP, import VAT at checkout?
-   - Aggregates: phone Gravel Works Swansea (questions in aggregates.md) vs B&Q grit vs GCL delivered.
+   - Hancock & Brown: collection of 8 × 20 kg sand + 1 dust bag. GCL: pallet delivery cost to Swansea.

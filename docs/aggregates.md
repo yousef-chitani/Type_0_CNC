@@ -33,3 +33,11 @@ Need about **300 kg** in total for solid castings (layout: 298 kg at 89%) plus t
 - **Filler:** silica flour (Potterycrafts) or granite stone dust, if it is dry and clay-free.
 - **Drying:** spread thinly and dry, then finish in an oven at about 100–120 °C, or a hot day plus a few days under cover. Check by weighing a sample before and after oven drying: there should be no weight loss.
 - **Kit:** 2 mm and 5 mm sieves (add to the BOM if this route is chosen).
+
+## Decision (D-63)
+- **Coarse:** GCL Winter Quartz 2–5 mm, 6 × 25 kg, washed and kiln-dried (delivered).
+- **Medium and fine:** Hancock & Brown kiln-dried pavior sand 0–1 mm, 8 × 20 kg (collect: confirm on 01792 462346).
+- **Filler:** Hancock & Brown limestone dust, 1 × 25 kg. Dry it in the oven and sieve it.
+- The 1–2 mm gap is acceptable (gap-graded). Test bricks will show the epoxy demand. If it is too high, add 2 bags of GCL 1–3 mm.
+
+Other local option on file: Hancock & Brown 6 mm limestone chippings £4.74 / 25 kg (needs washing and drying).
