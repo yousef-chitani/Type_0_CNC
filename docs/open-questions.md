@@ -14,6 +14,5 @@ Roughly in the order we'll work through them. Resolved items are in decisions.md
    - Kaiyade: is the £79 shipping charged once for all 3 rail kits?
    - METALWORK: are the screw lengths overall or thread length?
    - CW-3000 chiller: does it have an alarm output terminal?
-   - Jianken: torque (0.7 vs 0.87 Nm), pull-stud spec, and import VAT at checkout?
-   - GCL: pallet delivery cost to Swansea.
-   - Mesa or EuSurplus: shipping and import VAT.
+   - Jianken (owner ordering): torque (0.7 vs 0.87 Nm), pull-stud spec, clamp/unclamp sensors PNP, import VAT at checkout?
+   - Aggregates: phone Gravel Works Swansea (questions in aggregates.md) vs B&Q grit vs GCL delivered.

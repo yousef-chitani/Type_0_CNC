@@ -63,3 +63,4 @@
 | D-59 | All power supplies DIN-rail Mean Well: 48 V (≥ 10 A), 24 V (HDR-150-24), plus a low-wattage 5 V | Saves cabinet space. Mounts on the same DIN rail |
 | D-60 | Mesa 7i76EU at €309.31 (owner-confirmed) | Owner's price check |
 | D-61 | Moulds: 1 B&Q MDF sheet (£28) for both floors (sealed + coated), 2 B&Q white gloss panels (£38.97 each) for walls and plug. Replaces D-44 | No seam in the precision floor face. Gloss walls need no sealing |
+| D-62 | Owner orders the spindle direct from Jianken. Mesa import VAT already paid in the £257.74 | Owner action |
