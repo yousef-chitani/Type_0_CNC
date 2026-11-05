@@ -14,11 +14,11 @@ Full list: [bom.csv](bom.csv). **72 line items, 69 priced.** Prices were read fr
 | Electronics | 15 | 14 | £744.50 |
 | Enclosure | 3 | 3 | £217.59 |
 | Stand | 2 | 2 | £132.98 |
-| Metrology | 2 | 2 | £350.92 |
+| Metrology | 2 | 2 | £85.70 |
 | Fixings | 1 | 1 | £40.99 |
-| **All** | **72** | **69** | **£6,288.90** |
+| **All** | **72** | **69** | **£6,023.68** |
 
-**Budget: £4,500.** Priced total: **£6,288.90**. Not priced yet: F15, A01, E01.
+**Budget: £4,500.** Priced total: **£6,023.68**. Not priced yet: F15, A01, E01.
 
 ## Ten biggest lines
 | ID | Item | £ |
@@ -26,13 +26,13 @@ Full list: [bom.csv](bom.csv). **72 line items, 69 priced.** Prices were read fr
 | S01 | Jianken JGL-80/2.2R24-20 ATC spindle | 990.57 |
 | F01 | Epoxy for main frame mix | 590.00 |
 | F10 | Melamine-faced board 2440 x 1220 x 18 mm | 376.20 |
-| X02 | Precision level 0.02 mm/m | 333.72 |
 | S05 | CW-3000-style radiator unit with flow alarm | 208.42 |
 | E04 | 48 V DC power supply about 10 A | 202.27 |
 | M11 | Aluminium tooling plate 330 x 330 x 30 mm | 190.54 |
 | F05 | Fine sand 0.1-0.5 mm | 188.40 |
 | F03 | Kiln-dried quartz gravel 2-5 mm | 183.60 |
 | F04 | Kiln-dried sand 0.5-2 mm | 183.60 |
+| M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 182.83 |
 
 ## Warnings
 - **S01 spindle:** the Alibaba key attributes say 0.7 Nm, but other listings say 0.87 Nm. Confirm with Jianken. Import VAT (about 20%) is likely on top of £990.57.
@@ -42,7 +42,6 @@ Full list: [bom.csv](bom.csv). **72 line items, 69 priced.** Prices were read fr
 - **E01 Mesa:** US$219 (Mesa) or €250 (EuSurplus), not yet in the GBP total. Shipping and import VAT not shown.
 - **F03–F05 aggregates:** pallet quantities are provisional (about 650 kg vs about 300 kg needed). Set them from the grading.
 - **F10 melamine:** a 5-pack is £376.20. A local merchant selling 3 sheets would cut this a lot.
-- **X02 level:** £333.72 for 0.02 mm/m vs £68.50 for 0.05 mm/m. Decision needed.
 - **Reference sizes:** M12, A06, N02 and T01 are priced at placeholder sizes until the layout is drawn.
 - **Missing sub-items:** the 2nd Intel NIC and riser (E02), MCBs/isolator (E09), filter fan (E12), DIN rail/ferrules/wire (E13), shielded motor cable (E14), pneumatic fittings (P05), tape/silicone (F13), M5/M12 screws (X03), and the epoxy hardener (F01).
 
@@ -120,5 +119,5 @@ Full list: [bom.csv](bom.csv). **72 line items, 69 priced.** Prices were read fr
 | T01 | Steel box section for stand | 1 lot | Rated for about 400 kg. Owner fabricates | [product](https://www.ebay.co.uk/itm/128036584011) | £111.00 for 2 × 1.5 m 80 × 80 × 5, free shipping (eBay UK) | 111.00 | REFERENCE ONLY: stand cut list TBD (likely much more than 3 m). 80 × 80 × 5 at £35/m |
 | T02 | Levelling feet | 4 pcs |  | [product](https://www.ebay.co.uk/itm/283465312452) | £21.98 for 4, free shipping (eBay UK) | 21.98 | M16, 750 kg each |
 | X01 | Dial test indicator + magnetic base | 1 set | For rail alignment and squaring the gantry | [product](https://www.aliexpress.com/item/1005013036061506.html) | £17.20 inc VAT (AliExpress) | 17.20 | Lever DTI 0.01 mm + flexible base |
-| X02 | Precision level 0.02 mm/m | 1 pcs | For the leveling pour and machine setup | [product](https://www.aliexpress.com/item/1005011960456151.html) | £285.59 inc VAT + £48.13 shipping (AliExpress) | 333.72 | 200 mm frame level 0.02 mm/m. UK alt 0.05 mm/m Dasqua £68.50 inc VAT: https://www.rdgtools.co.uk/product/dasqua-200mm-machine-bar-level-high-sensitivity-0-05mm-graduations-8301-0010/ . Decision needed |
+| X02 | Precision level 0.05 mm/m | 1 pcs | Dasqua 200 mm machine bar level, 0.05 mm/m | [product](https://www.rdgtools.co.uk/product/dasqua-200mm-machine-bar-level-high-sensitivity-0-05mm-graduations-8301-0010/) | £68.50 inc VAT (RDG Tools) | 68.50 | D-42: Dasqua 200 mm 0.05 mm/m. Shipping not shown. 0.02 mm/m alt was £333.72 |
 | X03 | Socket cap screw assortment M5-M12 | 1 lot | Includes rail bolts | [product](https://www.ebay.co.uk/itm/336213901049) | £40.99 for 5 kg, free shipping (eBay UK) | 40.99 | M6/M8/M10 only: M5 (rail bolts) and M12 NOT included |
