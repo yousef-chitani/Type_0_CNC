@@ -90,7 +90,7 @@ Priced total: **£5,238.51** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | E03 | 1 | Monitor + keyboard + mouse (owner already has) | 1 set | £0.00 | |
 | E04 | 1 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 1 pcs | £138.60 | |
 | E05 | 1 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | £27.62 | |
-| E22 | 1 | 5 V DC PSU, DIN rail (low wattage) | 1 pcs | £15.00 | |
+| E22 | 1 | 5 V DC PSU, DIN rail (Mean Well MDR-10-5) | 1 pcs | £15.00 | |
 | E06 | 1 | E-stop safety relay (used Pilz PNOZ X2.1) | 1 pcs | £30.68 | |
 | E07 | 1 | Contactor with 24 V coil | 1 pcs | £26.19 | |
 | E08 | 1 | E-stop mushroom buttons + reset button | 1 set | £8.15 | |
