@@ -13,3 +13,4 @@ Roughly in the order we'll work through them.
 12. **Thermal management for solid castings:** owner researching. Checklist in eg-moulds.md
 13. **Epoxy choice:** the owner is asking others for recommendations. Current shortlist in epoxy-options.md
 15. **Price confirmation:** every BOM row has a link. The owner checks prices and pastes them back (or fills in price_gbp + date_checked)
+16. **Budget gap:** priced items total about £6,289 against £4,500, before Mesa, forks, import VAT and missing sub-items. Decide: raise the budget, cut scope, or find savings
