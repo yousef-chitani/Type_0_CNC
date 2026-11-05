@@ -7,24 +7,24 @@ Full list: [bom.csv](bom.csv). **81 line items, 78 priced.** Prices were read fr
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
 | Frame | 18 | 17 | £1,528.23 |
-| Motion | 14 | 14 | £923.29 |
+| Motion | 14 | 14 | £890.04 |
 | Spindle | 7 | 7 | £1,325.91 |
-| Tool changer | 6 | 5 | £239.76 |
+| Tool changer | 6 | 5 | £256.96 |
 | Pneumatics | 6 | 6 | £117.00 |
-| Electronics | 21 | 20 | £617.55 |
+| Electronics | 21 | 20 | £591.17 |
 | Enclosure | 3 | 3 | £217.59 |
-| Stand | 2 | 2 | £132.98 |
+| Stand | 2 | 2 | £225.98 |
 | Metrology | 2 | 2 | £85.70 |
 | Fixings | 2 | 2 | £68.78 |
-| **All** | **81** | **78** | **£5,256.79** |
+| **All** | **81** | **78** | **£5,307.36** |
 
-**Budget: £4,500.** Priced total: **£5,256.79**. Not priced yet: F15, A01, E01.
+**Budget: £4,500.** Priced total: **£5,307.36**. Not priced yet: F15, A01, E01.
 
 ## Stage totals (D-47)
 | Stage | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, spindle, electronics, air, stand, tools | £4,773.78 |
-| 2 | Tool rack + drive, enclosure, mist, door switch | £483.01 |
+| 1 | Frame, motion, spindle, electronics, air, stand, tools | £4,807.15 |
+| 2 | Tool rack + drive, enclosure, mist, door switch | £500.21 |
 
 Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import VAT on the spindle. Stage 2 excludes the forks (US$61.91 incl. shipping).
 
@@ -33,13 +33,13 @@ Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import 
 |---|---|---|
 | S01 | Jianken JGL-80/2.2R24-20 ATC spindle | 990.57 |
 | F01 | Epoxy for main frame mix | 666.59 |
+| T01 | Steel box section for stand | 204.00 |
 | M11 | Aluminium tooling plate 330 x 330 x 30 mm | 190.54 |
-| M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 182.83 |
+| M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 186.82 |
 | S05 | CW-3000-style radiator unit with flow alarm | 144.00 |
 | N02 | Polycarbonate panels + door | 142.12 |
 | E02 | x86 mini-PC with Intel NIC (2nd port for Mesa) | 120.00 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 112.71 |
-| T01 | Steel box section for stand | 111.00 |
 | M12 | Aluminium plate for X saddle and Z spindle plate | 104.98 |
 
 ## Warnings
@@ -73,11 +73,11 @@ Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import 
 | F16 | 1 | Temperature probes + logger | 1 set | Thermocouples or DS18B20 probes cast in | [product](https://www.ebay.co.uk/itm/800631453870) | £76.99, free shipping (eBay UK) | 76.99 | 4-ch K/J/T logger. Probes included not stated. AliExpress full match £44.02 is a new-shopper deal (normal £93.84): keep eBay unless the deal is available |
 | F17 | 1 | Mixer | 1 pcs | Paddle mixer or small forced-action mixer | [product](https://www.screwfix.com/p/erbauer-epm1600-1600w-electric-paddle-mixer-220-240v/981kj) | £69.99 inc VAT (Screwfix) | 69.99 | Erbauer EPM1600 |
 | F18 | 1 | Packing tape + silicone | 1 set | 6 rolls clear tape + neutral-cure silicone | [product](https://www.ebay.co.uk/itm/165130410287) | £8.99 tape + £7.99 silicone, free delivery (eBay UK) | 16.98 | Silicone: https://www.ebay.co.uk/itm/257643689613 |
-| M01 | 1 | HGR20 rail 650 mm | 2 pcs | Y axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | £70.85 inc VAT, free shipping (AliExpress sale; list £147.49) | 70.85 | 2 × 650 mm + 4 HGH20CA. SALE LIMIT 1 per shopper: may not get all 3 kits at sale price. Preload not stated (Z1 not offered). HIWIN-branded alt: 1 rail + 2 blocks £70.99 + £32.52 https://www.aliexpress.com/item/1005008442623745.html. Kaiyade alt: 3 sets £67.07 + £79.00 shipping (if charged once = £146.07): check basket. https://www.aliexpress.com/item/1005009213173130.html |
-| M02 | 1 | HGR20 rail 450 mm | 2 pcs | X axis: buy 2 × 500 mm (layout min 448) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £59.05 inc VAT, free shipping (AliExpress sale; list £123.91) | 59.05 | LENGTH CHANGED BY LAYOUT: price is for the old length, re-check. 2 × 450 mm + 4 HGH20CA. Same listing and sale limit as M01 |
-| M03 | 1 | HGR20 rail 300 mm | 2 pcs | Z axis: buy 2 × 350 mm (layout min 328) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £55.21 inc VAT, free shipping (AliExpress sale; list £116.23) | 55.21 | LENGTH CHANGED BY LAYOUT: price is for the old length, re-check. 2 × 300 mm + 4 HGH20CA. Same listing and sale limit as M01 |
-| M04 | 1 | HGH20CA carriage Z1 preload | 12 pcs | 4 per axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | Included in M01-M03 | 0 | 4 HGH20CA per kit. Z1 preload not offered |
-| M05 | 1 | SFU1605 ballscrew + DFU1605 preloaded nut | 3 pcs | C7 rolled, DFU1605 preloaded. Ends machined for BK12/BF12. X 420 / Y 550 / Z 310 mm (layout) | [product](https://www.aliexpress.com/item/1005010046279521.html) | £52.99 (300) + £58.99 (450) + £62.99 (500) inc VAT + £7.86 shipping (AliExpress) | 182.83 | LENGTH CHANGED BY LAYOUT: price is for the old length, re-check. DFU1605 double nut, machined ends, housing, BK12/BF12, coupler. C7 and preload value not stated. New listing (0 sold). Shipping shown for 1 kit: may be per kit |
+| M01 | 1 | HGR20 rail 650 mm | 2 pcs | Y: 2 × 650 mm HGR20 + 4 × HGH20CA | [product](https://www.aliexpress.com/item/1005009213173130.html) | £25.59 inc VAT (Kaiyade; normal £26.66) + £79.00 Economy shipping per order | 104.59 | Kaiyade chosen over MHCN (£189.69 at sale prices, but each size is "max 1 per shopper"; £396.77 normal). £79 shipping appears to be per order: CONFIRM IN BASKET that it is charged once for M01-M03. Delivery Nov 21-Dec 18. Store 97.8% |
+| M02 | 1 | HGR20 rail 450 mm | 2 pcs | X: 2 × 500 mm HGR20 + 4 × HGH20CA | [product](https://www.aliexpress.com/item/1005009213173130.html) | £22.99 inc VAT (Kaiyade; normal £23.95) | 22.99 | Shipping counted on M01 (one order) |
+| M03 | 1 | HGR20 rail 300 mm | 2 pcs | Z: 2 × 350 mm HGR20 + 4 × HGH20CA | [product](https://www.aliexpress.com/item/1005009213173130.html) | £20.29 inc VAT (Kaiyade; normal £21.14) | 20.29 | Shipping counted on M01 (one order) |
+| M04 | 1 | HGH20CA carriage Z1 preload | 12 pcs | 4 per axis | [product](https://www.aliexpress.com/item/1005009213173130.html) | Included in M01-M03 | 0 | 4 HGH20CA per Kaiyade kit. Preload not stated |
+| M05 | 1 | SFU1605 ballscrew + DFU1605 preloaded nut | 3 pcs | DFU1605 kits (double nut, machined ends, BK12/BF12, housing, coupler): X 450, Y 550, Z 350 mm (listing has no 420/310: next size up, longer than the layout minimums 405/305) | [product](https://www.aliexpress.com/item/1005010046279521.html) | £58.99 (450) + £65.39 (550) + £54.59 (350) inc VAT + £7.85 shipping (AliExpress METALWORK) | 186.82 | Listing does not say overall vs thread length: confirm with the seller (needs overall ≥ X 405 / Y 550 / Z 305). Shipping shown for 1 kit: may be per kit. Normal Y price £74.31 |
 | M06 | 1 | BK12 + BF12 end supports | 3 sets |  | [product](https://www.aliexpress.com/item/1005010046279521.html) | Included in M05 | 0 |  |
 | M07 | 1 | Nut housing DSG16H | 3 pcs |  | [product](https://www.aliexpress.com/item/1005010046279521.html) | Included in M05 | 0 |  |
 | M08 | 1 | Disc or bellows coupling 10 mm to 10 mm | 3 pcs | Listings give a 10 mm shaft on the 4 Nm NEMA 24 (24HS40-5004D-E1000). Verify. BK12 end is 10 mm | [product](https://www.aliexpress.com/item/1005009879991986.html) | £3.35 inc VAT each + £3.04 shipping (AliExpress) | 13.09 | D26 L35 double diaphragm, 10 × 10 bore. All 3 motors confirmed 10 mm shaft |
@@ -95,9 +95,9 @@ Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import 
 | S06 | 1 | ISO20 ER16 holders with pull studs | 8 pcs | ISO20-ER16. Pull studs must match the spindle drawbar | [product](https://www.aliexpress.com/item/4000141590118.html) | £6.05 inc VAT each, free shipping (AliExpress; list £22.37) | 48.40 | ISO20-ER16-35L, 0.003 mm. £6.05 may be a new-shopper deal: at list price 8 × £22.37 = £178.96. PULL STUD NOT STATED: must match Jianken. Jianken own holders £37.52-75.03 on the S01 page. DamenCNC Teknomotor €123.50 each |
 | S07 | 1 | ER16 collet set | 1 set | Precision (AA grade or better) 1-10 mm | [product](https://www.aliexpress.com/item/1005005626185405.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | AA ER16 10-piece set. Sizes not listed. AAA set £68.39 |
 | A01 | 2 | ISO20 tool forks | 8 pcs | For the 2 x 4 rack | [product](https://www.ebay.co.uk/itm/354640713143) | US$5.99 (VAT?) each + US$13.99 shipping (eBay, from USA) |  | 8 forks = US$47.92 + US$13.99. Import fees estimated £0. Not converted to GBP. DamenCNC alt €31.50 each |
-| A02 | 2 | Rack slide linear guide (e.g. MGN15) + carriage | 2 sets | 2 × MGN15 550 mm + MGN15H (layout: rack stroke 395) | [product](https://www.ebay.co.uk/itm/227244866634) | £25.99 per set, free shipping (eBay UK) | 51.98 | LENGTH CHANGED BY LAYOUT: price is for the old length, re-check. MGN15 400 mm + MGN15H. 2 sets |
+| A02 | 2 | Rack slide linear guide (e.g. MGN15) + carriage | 2 sets | 2 × MGN15H rail 550 mm + 1 block each | [product](https://www.ebay.co.uk/itm/227244866634) | £32.99 each (VAT?), free courier (eBay UK, VAT-registered seller) | 65.98 | Same listing, full match |
 | A03 | 2 | Small closed-loop stepper + driver (48 V) | 1 set | Drives the rack slide | [product](https://www.omc-stepperonline.com/1-axis-closed-loop-stepper-cnc-kit-80ncm-113-29oz-in-nema-17-motor-driver-1-cl42t-s08-v41) | £39.43 (VAT?) + £8.34 DE warehouse (StepperOnline) | 47.77 | 1-CL42T-S08-V41: NEMA 17 0.8 Nm + CL42T 24-48 V. 5 mm shaft |
-| A04 | 2 | Rack drive screw or belt + pulleys | 1 set | SFU1204 500 mm + BK10/BF10 (layout) | [product](https://www.aliexpress.com/item/1005006187129418.html) | £43.39 inc VAT, free shipping (AliExpress) | 43.39 | LENGTH CHANGED BY LAYOUT: price is for the old length, re-check. SFU1204 400 mm + housing + BK10/BF10 + coupling. Single nut is fine for the rack |
+| A04 | 2 | Rack drive screw or belt + pulleys | 1 set | SFU1204 500 mm + housing + BK10/BF10 + coupling | [product](https://www.aliexpress.com/item/1005006187129418.html) | £46.59 inc VAT, free shipping (AliExpress BST; normal £54.81) | 46.59 | Full match |
 | A05 | 2 | Tool length setter (wired switch) | 1 pcs | On the rack carrier | [product](https://www.aliexpress.com/item/1005012101891449.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | N96R, 24 V, NC |
 | A06 | 2 | Rack plate and fork mount | 1 lot | Aluminium plate | [product](https://www.aluminiumwarehouse.co.uk/products/15-mm-6082-aluminium-plate) | £65.61 ex VAT for reference 300 × 300 × 15 (Aluminium Warehouse) | 78.73 | REFERENCE SIZE ONLY. Inc VAT calculated |
 | P01 | 1 | Filter / regulator / dryer | 1 pcs |  | [product](https://www.aliexpress.com/item/1005002589702135.html) | £6.50 inc VAT (AliExpress) | 6.50 | AW2000-02 filter-regulator. No dryer |
@@ -117,7 +117,7 @@ Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import 
 | E09 | 1 | MCBs / main isolator / EMC filter for VFD | 1 set |  | [product](https://www.aliexpress.com/item/1005010519550019.html) | £10.39 inc VAT (AliExpress) | 10.39 | CW4L2-20A-S. MCBs and isolator NOT priced |
 | E10 | 1 | Inductive proximity switches 24 V | 4 pcs | Homing X / Y / Z / rack | [product](https://www.aliexpress.com/item/1005010648075147.html) | £1.54 inc VAT each + £3.41 shipping (AliExpress) | 9.57 | LJ12A3-4-Z/BY PNP NO |
 | E11 | 1 | USB to RS-485 adapter | 1 pcs | For VFD Modbus if not using the board's port | [product](https://www.aliexpress.com/item/1005008303150448.html) | £6.90 inc VAT + £4.02 shipping (AliExpress) | 10.92 | FT232, isolated |
-| E12 | 1 | Steel cabinet + filtered fan | 1 set | Steel, 600 W × 400 H × 200 D (max 440 tall), IP54+, mounting plate | [product](https://www.ebay.co.uk/itm/327345335863) | £78.70 + £13.63 shipping (eBay UK) | 92.33 | D-53. PRICE IS FOR THE OLD 600 × 500 × 200: re-check. MCG M65200 600 × 500 × 200 IP65 with plate. Filter fan NOT priced |
+| E12 | 1 | Steel cabinet + filtered fan | 1 set | Galvanised steel 600 × 400 × 200, IP66, 2 mm mounting plate (mount on its side) | [product](https://www.ebay.co.uk/itm/206672920149) | £65.95 (VAT?), free courier (eBay UK) | 65.95 | D-53. 0.8 mm body steel. Better: MCG M64200 IP65 with gland plate £85.03 delivered https://www.ebay.co.uk/itm/327344915454 . Filter fan on E18 |
 | E13 | 1 | DIN rail / terminals / wiring / ferrules | 1 lot |  | [product](https://www.aliexpress.com/item/1690060053.html) | £33.79 inc VAT for 100, free shipping (AliExpress) | 33.79 | Terminals only. DIN rail, ferrules, wire NOT priced |
 | E14 | 1 | Cable chain and shielded motor cables | 1 lot |  | [product](https://www.aliexpress.com/item/1005012723966521.html) | £15.69 inc VAT per 1 m, free shipping (AliExpress) | 15.69 | 1 m only: length TBD. Shielded motor cable NOT priced |
 | E15 | 2 | Enclosure door switch | 1 pcs |  | [product](https://www.aliexpress.com/item/1005006072968001.html) | £8.07 inc VAT (AliExpress) | 8.07 | CZ-93B key interlock, 2 NC. No safety standard stated |
@@ -130,7 +130,7 @@ Stage 1 excludes the Mesa board (US$219 + shipping + import VAT) and any import 
 | N01 | 2 | Enclosure frame (aluminium extrusion) | 1 lot |  | [product](https://www.ebay.co.uk/itm/401900585637) | £72.73 for 8 × 1000 mm, free shipping (eBay UK) | 72.73 | 4040 slot 8. Cut list TBD |
 | N02 | 2 | Polycarbonate panels + door | 1 lot |  | [product](https://www.cutmy.co.uk/plastic/polycarbonate-sheets/6mm/L1000-W1000/) | £129.17 inc VAT for reference 1000 × 1000 × 6 + shipping from £12.95 (Cut My) | 142.12 | REFERENCE SIZE ONLY: panel sizes TBD |
 | N03 | 2 | LED light | 1 pcs |  | [product](https://www.aliexpress.com/item/1005013221981188.html) | £2.74 inc VAT (AliExpress) | 2.74 | 24-36 V 5 W |
-| T01 | 1 | Steel box section for stand | 1 lot | About 11.9 m of 60 × 60 × 3 box section incl. diagonal braces (cad/out/dimensions.md) | [product](https://www.ebay.co.uk/itm/128036584011) | £111.00 for 2 × 1.5 m 80 × 80 × 5, free shipping (eBay UK) | 111.00 | D-54. PRICE IS FOR OLD 80 × 80 × 5 3 m PLACEHOLDER: re-check. REFERENCE ONLY: stand cut list TBD (likely much more than 3 m). 80 × 80 × 5 at £35/m |
+| T01 | 1 | Steel box section for stand | 1 lot | 60 × 60 × 3 mild steel box, 6 × 2000 mm (12 m) | [product](https://www.ebay.co.uk/itm/128036584011) | £34.00 per 2 m (VAT?), free Royal Mail 48 or collect Newport (eBay UK) | 204.00 | D-54. Each 2 m gives 1010 + 700 or 700 + 620 + 620. Alt BM Steel 2 × 7.5 m £158.60 inc VAT + delivery (needs postcode): https://www.bmsteel.co.uk/60-x-60-x-3mm-75m-square-hollow-section-bsen10219-s235jr/p381 |
 | T02 | 1 | Levelling feet | 4 pcs |  | [product](https://www.ebay.co.uk/itm/283465312452) | £21.98 for 4, free shipping (eBay UK) | 21.98 | M16, 750 kg each |
 | X01 | 1 | Dial test indicator + magnetic base | 1 set | For rail alignment and squaring the gantry | [product](https://www.aliexpress.com/item/1005013036061506.html) | £17.20 inc VAT (AliExpress) | 17.20 | Lever DTI 0.01 mm + flexible base |
 | X02 | 1 | Precision level 0.05 mm/m | 1 pcs | Dasqua 200 mm machine bar level, 0.05 mm/m | [product](https://www.rdgtools.co.uk/product/dasqua-200mm-machine-bar-level-high-sensitivity-0-05mm-graduations-8301-0010/) | £68.50 inc VAT (RDG Tools) | 68.50 | D-42: Dasqua 200 mm 0.05 mm/m. Shipping not shown. 0.02 mm/m alt was £333.72 |

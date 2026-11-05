@@ -32,6 +32,8 @@ Generated from [`cad/type0_layout.py`](../cad/type0_layout.py) (3D STEP: `cad/ou
 
 ## Assumptions to verify (marked VERIFY in the script)
 - HGR20/HGH20CA: block height 30 mm, block length 77.5 mm.
-- DFU1605 nut length 90 mm, BK12/BF12 45 mm total. **Ballscrew nut clearance under the table**: the screw centre must sit low enough for the nut housing to clear the table underside (30 mm above the base). A shallow channel cast into the base is likely needed: check against the DSG16H housing drawing.
+- DFU1605 nut length 90 mm, BK12/BF12 45 mm total.
+- **Y nut housing vs table (checked 2026-11-05):** DSG16H drawing: screw centre 20 mm below its mounting face, total height 40 mm. Bolted under the table (underside 30 mm above the base), the screw centre sits **10 mm above the base** and the housing bottom **10 mm below** it. **Plan: cast a channel about 70 mm wide × 25 mm deep along Y between the rails** (a raised strip on the mould floor), with pads for the BK12/BF12 supports set so their centre height matches. Check the BK12/BF12 centre height on the parts you receive before making the mould.
+- Ballscrew kits bought at the next size up: X 450, Y 550, Z 350 (listing lengths). Confirm whether they are overall or thread length.
 - Spindle length about 300 mm including the release cylinder.
 - Stack from spindle axis to beam face: 160 mm.

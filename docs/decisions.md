@@ -56,3 +56,5 @@
 | D-52 | Layout draft 1 accepted as the working basis: Y travel 395 (250 + 145 for the tool change), base 970 × 660 × 180 | Generated from cad/type0_layout.py, see layout.md |
 | D-53 | Electrical cabinet inside the stand, max 440 mm tall: prefer 600 W × 400 H × 200 D (fallback 400 × 400 × 200) | Fits between the stand rings. The wider box leaves room for VFD heat and wiring |
 | D-54 | Stand from 60 × 60 × 3 box section with diagonal bracing (about 11.9 m) | Ample for about 400 kg when braced. Cheaper and lighter than 80 × 80 × 5 |
+| D-55 | Rails from Kaiyade (3 kits in one order), ballscrews X 450 / Y 550 / Z 350 from METALWORK, 60 × 60 × 3 steel from eBay (6 × 2 m), 600 × 400 × 200 galvanised cabinet | Cheapest full matches without per-shopper deal limits |
+| D-56 | Cast a Y-screw channel about 70 × 25 mm into the base between the Y rails | The DSG16H housing hangs 10 mm below the base top when bolted under the table |
