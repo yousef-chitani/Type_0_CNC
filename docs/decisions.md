@@ -70,3 +70,4 @@
 | D-66 | Three phases. **Phase 1:** frame, motion, electronics, 2.2 kW water-cooled ER20 spindle (manual tool changes). **Phase 2:** Jianken ISO20 ATC spindle + holders, air system, mist, enclosure. **Phase 3:** tool rack, its drive, forks. Replaces D-47 | Spreads the cost. ER20 and ATC spindles share the 80 mm clamp, VFD and cooling loop |
 | D-67 | UHPC frame rejected after costing: IN2 €67.50 ex VAT / 25 kg (11.7 L) needs about 13 bags (about €877). Polcrete about £45.60 / 20 kg (about 16 bags, about £730). Epoxy granite stays | Not cheaper in the UK at retail (Bootstrap Bill's about 50 CAD bags are Canadian prices) |
 | D-68 | Budget: Phase 1 ≤ £4,000. Phases 2 and 3 budgeted later. Replaces D-57 | Owner target |
+| D-69 | Phase 1 replacements: Wanhongcnc 2.2 kW ER20 spindle £150.59; ER20 collets + spanner £34.49; 24 V DIY cooling loop £104.77; stand from 8 m of 60 × 60 × 3 (no lower ring) £136.00 | Budgeted at normal (non-deal) prices. Phase 1 total £3,638.39 |

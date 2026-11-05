@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **81 line items, 77 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **81 line items, 81 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -8,22 +8,22 @@ Full list: [bom.csv](bom.csv). **81 line items, 77 priced.** Prices were read fr
 |---|---|---|---|
 | Frame | 17 | 17 | £1,269.17 |
 | Motion | 14 | 14 | £890.04 |
-| Spindle | 9 | 6 | £1,181.91 |
+| Spindle | 9 | 9 | £1,471.76 |
 | Tool changer | 6 | 6 | £256.96 |
 | Pneumatics | 6 | 6 | £117.00 |
 | Electronics | 20 | 20 | £759.89 |
 | Enclosure | 3 | 3 | £217.59 |
-| Stand | 2 | 1 | £21.98 |
+| Stand | 2 | 2 | £157.98 |
 | Metrology | 2 | 2 | £85.70 |
 | Fixings | 2 | 2 | £68.78 |
-| **All** | **81** | **77** | **£4,869.02** |
+| **All** | **81** | **81** | **£5,294.87** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,869.02**. Not priced yet: S08, S09, S05, T01.
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£5,294.87**. Not priced yet: .
 
 ## Phase totals (D-66)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,212.54 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,638.39 |
 | 2 | ATC spindle + holders, air, mist, enclosure | £1,399.52 |
 | 3 | Tool rack, drive, forks | £256.96 |
 
@@ -37,11 +37,11 @@ Lines still TO PRICE: see the list above.
 | E01 | Mesa 7i76EU | 257.74 |
 | M11 | Aluminium tooling plate 330 x 330 x 30 mm | 190.54 |
 | M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 186.82 |
+| S08 | Phase 1 spindle: 2.2 kW water-cooled ER20 (Wanhongcnc CS) | 150.59 |
 | N02 | Polycarbonate panels + door | 142.12 |
 | E04 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 138.60 |
+| T01 | Stand steel 60 × 60 × 3 (reduced cut list) | 136.00 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 112.71 |
-| M12 | Aluminium plate for X saddle and Z spindle plate | 104.98 |
-| M01 | HGR20 rail 650 mm | 104.59 |
 
 ## Warnings
 - **Not in the total yet:** spindle import VAT (if not collected at checkout), GCL pallet delivery, vibration table top sheet.
@@ -88,12 +88,12 @@ Lines still TO PRICE: see the list above.
 | M12 | 1 | Aluminium plate for X saddle and Z spindle plate | 1 lot | 20 mm 6082: X saddle about 200 × 230, Z plate about 160 × 330 (layout) | [product](https://www.aluminiumwarehouse.co.uk/products/20-mm-6082-aluminium-plate) | £87.48 ex VAT for reference 300 × 300 × 20 (Aluminium Warehouse) | 104.98 | REFERENCE SIZE ONLY: real sizes come from the layout. Inc VAT calculated |
 | M13 | 1 | Motor and bearing mounts | 1 lot | Machined or bought brackets | [product](https://www.aliexpress.com/item/1005006232398099.html) | £9.99 inc VAT each + £10.62 shipping (AliExpress) | 40.59 | HM12-60 motor bracket with fixed bearing seat (replaces BK12 at motor end). Check fit with M05 |
 | S01 | 2 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | 2.2 kW / 24000 rpm / 400 Hz / 220 V / about 0.87 Nm / ISO20 / water-cooled / 80 mm body. Order the clamp/unclamp sensor variant (PNP) | [product](https://www.alibaba.com/product-detail/Jianken-JGL-80-2-2KW-24000RPM_1601249825246.html) | £937.79 (VAT?) + £52.78 shipping (Alibaba, 1-4 pcs) | 990.57 | Owner is contacting Jianken and ordering. Drawing confirms JGL-80/2.2R24, 220 V, 400 Hz, ISO20-ER16, water-cooled. Sensors: clamped/released + temperature, PNP 24 V. VFD not included. Pull stud not shown. KEY ATTRIBUTES SAY 0.7 Nm (other listings 0.87 Nm): confirm with Jianken. Import VAT likely on top. Delivery 18 Nov-19 Dec. Alt AliExpress with 2.2 kW VFD £1402.79 inc VAT + £140.15: https://www.aliexpress.com/item/1005010706946690.html |
-| S08 | 1 | Phase 1 spindle: 2.2 kW water-cooled ER20 | 1 pcs | 80 mm body, 220 V, 400 Hz, 24,000 rpm, ER20, water-cooled (spindle only: VFD is S02) | [product]() |  |  | TO PRICE (task 5). Same 80 mm clamp and VFD as the ATC spindle |
-| S09 | 1 | ER20 collet set | 1 set | ER20 precision collets 1-13 mm | [product]() |  |  | TO PRICE (task 5) |
+| S08 | 1 | Phase 1 spindle: 2.2 kW water-cooled ER20 (Wanhongcnc CS) | 1 pcs | 2.2 kW, 220 V, 80 × 213 mm, water-cooled, 24,000 rpm, 0.8 N·m, ER20 | [product](https://www.aliexpress.com/item/1005012262087123.html) | £92.19 + £58.40 Economy shipping (AliExpress Wanhongcnc, VAT not read) | 150.59 | D-69. Chosen: 266 sold, 100% positive, no deal limit, cheaper than POWACE at normal price (£169.86). Confirm 400 Hz and coolant port size with the listing. Alt POWACE GDZ-80-2.2B £132.98 new-shopper (https://www.aliexpress.com/item/1005009084332695.html) |
+| S09 | 1 | ER20 collet set | 1 set | 13 × ER20 collets 1-13 mm, AA 0.008 mm, boxed + ER20A spanner | [product](https://www.aliexpress.com/item/1005010595086817.html) | £27.69 collets + £6.80 spanner (normal price; deal £0.99), free shipping (AliExpress) | 34.49 | D-69. Spanner: https://www.aliexpress.com/item/1005009699735202.html . UK alt Rennie Tool 14 pc £89.99 |
 | S02 | 1 | VFD 2.2 kW with RS-485 Modbus | 1 pcs | 2.2 kW, 1-phase 220 V in, 3-phase 220 V out, 0-600 Hz, RS-485 Modbus-RTU stated | [product](https://www.aliexpress.com/item/1005013518595862.html) | £71.99 inc VAT early-bird deal (only 1 left); normal £88.94; free shipping (AliExpress, ZEST Factory Store) | 88.94 | FULL MATCH incl. RS-485 Modbus (D-32). Budgeted at the normal price. Store 96.7%, 216 sold. Previous Huanyang £124.84 had no RS-485 stated |
 | S03 | 1 | Spindle mount clamp to suit spindle body diameter | 1 pcs | 80 mm | [product](https://www.aliexpress.com/item/4001010906801.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | 80 mm clamp |
 | S04 | 1 | Shielded 4-core spindle cable | 5 m |  | [product](https://www.aliexpress.com/item/32971008305.html) | £18.22 inc VAT for 5 m (AliExpress) | 18.22 | 4-core 16 AWG (about 1.3 mm²) shielded: slightly under 1.5 mm². Shipping not shown |
-| S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | Pump, radiator + fan, reservoir, flow switch with contacts, hose and fittings | [product]() |  |  | D-65. TO PRICE (task 5). Replaces CW-3000 £144 |
+| S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | 24 V AW500S brushless pump; 240 mm aluminium radiator (G1/4) + 2 × 120 mm 24 V fans; 1 L aluminium tank; magnetic flow switch 1/2" (contacts close on flow); 5 m 8 mm silicone tube, barbs, clips | [product](https://www.aliexpress.com/item/1005004896354890.html) | Pump £8.71, radiator £31.12, 2 fans 24 V £14.44, tank £22.88 (RASTP inc ship), flow switch £11.99 (eBay UK), hose/barbs/clips £15.63: normal prices | 104.77 | D-69. 24 V parts run from the existing HDR-150-24 (no 12 V supply). Budgeted at normal prices (deals would save about £40). Radiator https://www.aliexpress.com/item/1005007038307491.html ; fans https://www.aliexpress.com/item/1005007587285872.html ; tank https://www.aliexpress.com/item/1005009921237962.html ; flow switch https://www.ebay.co.uk/itm/204638752140 (switch-on flow not stated; use as a signal into a 7i76EU input). Check pump, tank and spindle port sizes before buying barbs |
 | S06 | 2 | ISO20 ER16 holders with pull studs | 8 pcs | ISO20-ER16. Pull studs must match the spindle drawbar | [product](https://www.aliexpress.com/item/4000141590118.html) | £6.05 inc VAT each, free shipping (AliExpress; list £22.37) | 48.40 | ISO20-ER16-35L, 0.003 mm. £6.05 may be a new-shopper deal: at list price 8 × £22.37 = £178.96. PULL STUD NOT STATED: must match Jianken. Jianken own holders £37.52-75.03 on the S01 page. DamenCNC Teknomotor €123.50 each |
 | S07 | 2 | ER16 collet set | 1 set | Precision (AA grade or better) 1-10 mm | [product](https://www.aliexpress.com/item/1005005626185405.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | AA ER16 10-piece set. Sizes not listed. AAA set £68.39 |
 | A01 | 3 | ISO20 tool forks (3D printed) | 8 pcs | 3D-printed ISO20 forks from a friend's model | [product]() | Owner sourcing (3D printed) | 0.00 | D-58. Print in PETG/ASA/PA for stiffness and heat. Check grip force and holder fit before Stage 2 |
@@ -131,7 +131,7 @@ Lines still TO PRICE: see the list above.
 | N01 | 2 | Enclosure frame (aluminium extrusion) | 1 lot |  | [product](https://www.ebay.co.uk/itm/401900585637) | £72.73 for 8 × 1000 mm, free shipping (eBay UK) | 72.73 | 4040 slot 8. Cut list TBD |
 | N02 | 2 | Polycarbonate panels + door | 1 lot |  | [product](https://www.cutmy.co.uk/plastic/polycarbonate-sheets/6mm/L1000-W1000/) | £129.17 inc VAT for reference 1000 × 1000 × 6 + shipping from £12.95 (Cut My) | 142.12 | REFERENCE SIZE ONLY: panel sizes TBD |
 | N03 | 2 | LED light | 1 pcs |  | [product](https://www.aliexpress.com/item/1005013221981188.html) | £2.74 inc VAT (AliExpress) | 2.74 | 24-36 V 5 W |
-| T01 | 1 | Stand (cheaper option) | 1 lot | Must carry about 400 kg rigidly at 710 mm to base underside. Options: used heavy steel bench/welding table, or reduced 60 × 60 cut list | [product](https://www.ebay.co.uk/itm/128036584011) |  |  | D-65. TO PRICE (task 5). Was 12 m 60 × 60 × 3 £204 |
+| T01 | 1 | Stand steel 60 × 60 × 3 (reduced cut list) | 1 lot | 4 × 2000 mm (8 m): top ring, 4 legs, diagonal braces, no lower ring | [product](https://www.ebay.co.uk/itm/128036584011) | £34.00 per 2 m (VAT?), free Royal Mail 48 or collect Newport (eBay UK) | 136.00 | D-69. No suitable used bench found near Swansea (nearest partial match: BenchMaster £180, no load rating). Cut list to be redrawn for 8 m |
 | T02 | 1 | Levelling feet | 4 pcs |  | [product](https://www.ebay.co.uk/itm/283465312452) | £21.98 for 4, free shipping (eBay UK) | 21.98 | M16, 750 kg each |
 | X01 | 1 | Dial test indicator + magnetic base | 1 set | For rail alignment and squaring the gantry | [product](https://www.aliexpress.com/item/1005013036061506.html) | £17.20 inc VAT (AliExpress) | 17.20 | Lever DTI 0.01 mm + flexible base |
 | X02 | 1 | Precision level 0.05 mm/m | 1 pcs | Dasqua 200 mm machine bar level, 0.05 mm/m | [product](https://www.rdgtools.co.uk/product/dasqua-200mm-machine-bar-level-high-sensitivity-0-05mm-graduations-8301-0010/) | £68.50 inc VAT (RDG Tools) | 68.50 | D-42: Dasqua 200 mm 0.05 mm/m. Shipping not shown. 0.02 mm/m alt was £333.72 |

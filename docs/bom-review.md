@@ -2,7 +2,7 @@
 
 Mark each line **Keep / Cut / Later**, or reply with IDs.
 
-Priced total: **£4,869.02** across 3 phases (D-66). Column **Ph** = phase. £0.00 = owner-supplied, DIY, or included in another line.
+Priced total: **£5,294.87** across 3 phases (D-66). Column **Ph** = phase. £0.00 = owner-supplied, DIY, or included in another line.
 
 ## Frame (£1,269.17)
 
@@ -45,17 +45,17 @@ Priced total: **£4,869.02** across 3 phases (D-66). Column **Ph** = phase. £0.
 | M12 | 1 | Aluminium plate for X saddle and Z spindle plate | 1 lot | £104.98 | |
 | M13 | 1 | Motor and bearing mounts | 1 lot | £40.59 | |
 
-## Spindle (£1,181.91)
+## Spindle (£1,471.76)
 
 | ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | S01 | 2 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | £990.57 | |
-| S08 | 1 | Phase 1 spindle: 2.2 kW water-cooled ER20 | 1 pcs | to price | |
-| S09 | 1 | ER20 collet set | 1 set | to price | |
+| S08 | 1 | Phase 1 spindle: 2.2 kW water-cooled ER20 (Wanhongcnc CS) | 1 pcs | £150.59 | |
+| S09 | 1 | ER20 collet set | 1 set | £34.49 | |
 | S02 | 1 | VFD 2.2 kW with RS-485 Modbus | 1 pcs | £88.94 | |
 | S03 | 1 | Spindle mount clamp to suit spindle body diameter | 1 pcs | £17.89 | |
 | S04 | 1 | Shielded 4-core spindle cable | 5 m | £18.22 | |
-| S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | to price | |
+| S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | £104.77 | |
 | S06 | 2 | ISO20 ER16 holders with pull studs | 8 pcs | £48.40 | |
 | S07 | 2 | ER16 collet set | 1 set | £17.89 | |
 
@@ -114,11 +114,11 @@ Priced total: **£4,869.02** across 3 phases (D-66). Column **Ph** = phase. £0.
 | N02 | 2 | Polycarbonate panels + door | 1 lot | £142.12 | |
 | N03 | 2 | LED light | 1 pcs | £2.74 | |
 
-## Stand (£21.98)
+## Stand (£157.98)
 
 | ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
-| T01 | 1 | Stand (cheaper option) | 1 lot | to price | |
+| T01 | 1 | Stand steel 60 × 60 × 3 (reduced cut list) | 1 lot | £136.00 | |
 | T02 | 1 | Levelling feet | 4 pcs | £21.98 | |
 
 ## Metrology (£85.70)
