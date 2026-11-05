@@ -1,15 +1,19 @@
 # Open questions
 
-Roughly in the order we'll work through them.
+Roughly in the order we'll work through them. Resolved items are in decisions.md.
 
-2. Y clearance for the tool change: how far past the spindle the table must move for the rack to slide in
-3. Rack mechanism: pneumatic slide or linear actuator, dust cover, tool-length sensor location
-5. EG details: aggregate gradings and UK suppliers, test samples, insert anchoring
-6. Self-leveling epoxy process details, and the design of inserts and fixings
-8. Pin assignment on the 7i76EU (after checking the manual). E-stop wiring diagram. Stand and cabinet layout
-9. VFD model and the Modbus driver in LinuxCNC. Mains supply (dedicated 16 A circuit?)
-10. Budget split across subsystems
-11. Rack details: fork design, row spacing, dust cover, rack slide travel, and interlocks with the table position
-12. **Thermal management for solid castings:** owner researching. Checklist in eg-moulds.md
-13. **Epoxy choice:** the owner is asking others for recommendations. Current shortlist in epoxy-options.md
-15. **Price confirmation:** every BOM row has a link. The owner checks prices and pastes them back (or fills in price_gbp + date_checked)
+1. **Epoxy choice:** the owner is asking others for recommendations. Shortlist in epoxy-options.md. Confirm with ECF that the Ampreg 30 slow packs include hardener.
+2. **Thermal management for solid castings:** the owner is researching. Checklist in eg-moulds.md.
+3. **EG mix design:** packing curve and grading split for the GCL quartz (2-5, 1-3 mm), B&Q kiln-dried sand and silica flour. Test-brick plan. Insert-bar anchoring.
+4. **Self-leveling rail-seat pour:** process, dams, linking channels, protecting the tapped holes.
+5. **Mould detail:** Y-screw channel (D-56), BK12/BF12 pads, gantry joint sleeves, lifting points, from the layout model.
+6. **Rack detail:** fork plate, row spacing (60 or staggered), dust cover, interlocks with the table position (Stage 2).
+7. **Electrical:** 7i76EU pin assignment (from the manual), e-stop wiring diagram, cabinet layout, mains supply (dedicated 16 A circuit?).
+8. **LinuxCNC config:** Modbus VFD driver, tool-change routine, homing, screw compensation.
+9. **Seller confirmations before ordering:**
+   - Kaiyade: is the £79 shipping charged once for all 3 rail kits?
+   - METALWORK: are the screw lengths overall or thread length?
+   - CW-3000 chiller: does it have an alarm output terminal?
+   - Jianken: torque (0.7 vs 0.87 Nm), pull-stud spec, and import VAT at checkout?
+   - GCL: pallet delivery cost to Swansea.
+   - Mesa or EuSurplus: shipping and import VAT.
