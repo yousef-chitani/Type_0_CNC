@@ -17,10 +17,10 @@ Priced total: **£5,307.36** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | F07 | 1 | Steel flat bar 40 x 10 mm | 2 3 m bars | £72.00 | |
 | F08 | 1 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | £28.74 | |
 | F09 | 1 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 | |
-| F10 | 1 | Melamine-faced board 2440 x 1220 x 18 mm | 3 sheets | £90.00 | |
-| F11 | 1 | Timber battens 44 x 44 mm | 9 lengths | £31.50 | |
-| F12 | 1 | Release wax + PVA release film | 1 set | £31.68 | |
-| F13 | 1 | Packing tape / silicone / plasticine for fillets | 1 set | £19.04 | |
+| F10 | 1 | Plain MDF 18 mm sheets (moulds) | 3 sheets | £90.00 | |
+| F11 | 1 | CLS timber 38 x 63 x 2400 (mould bracing) | 9 lengths | £31.50 | |
+| F12 | 1 | Release agent: PVA + wax | 1 set | £31.68 | |
+| F13 | 1 | Plasticine for corner fillets | 1 set | £19.04 | |
 | F14 | 1 | Vibration motors | 2 pcs | £99.72 | |
 | F15 | 1 | Vibration table springs or rubber mounts + top sheet | 1 set | NOT FOUND | |
 | F16 | 1 | Temperature probes + logger | 1 set | £76.99 | |
@@ -51,10 +51,10 @@ Priced total: **£5,307.36** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | ID | Stg | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | S01 | 1 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | £990.57 | |
-| S02 | 1 | VFD 2.2 kW single-phase input with RS-485 Modbus | 1 pcs | £88.94 | |
+| S02 | 1 | VFD 2.2 kW with RS-485 Modbus | 1 pcs | £88.94 | |
 | S03 | 1 | Spindle mount clamp to suit spindle body diameter | 1 pcs | £17.89 | |
 | S04 | 1 | Shielded 4-core spindle cable | 5 m | £18.22 | |
-| S05 | 1 | CW-3000-style radiator unit with flow alarm | 1 pcs | £144.00 | |
+| S05 | 1 | Spindle water cooler CW-3000 | 1 pcs | £144.00 | |
 | S06 | 1 | ISO20 ER16 holders with pull studs | 8 pcs | £48.40 | |
 | S07 | 1 | ER16 collet set | 1 set | £17.89 | |
 
@@ -87,15 +87,15 @@ Priced total: **£5,307.36** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | E01 | 1 | Mesa 7i76EU | 1 pcs | US$219.00 | |
 | E02 | 1 | x86 mini-PC with Intel NIC (2nd port for Mesa) | 1 pcs | £120.00 | |
 | E03 | 1 | Monitor + keyboard + mouse | 1 set | £37.11 | |
-| E04 | 1 | 48 V DC power supply about 10 A | 1 pcs | £53.67 | |
-| E05 | 1 | 24 V DC power supply | 1 pcs | £11.10 | |
-| E06 | 1 | Safety relay (e-stop) | 1 pcs | £30.68 | |
+| E04 | 1 | 48 V DC PSU (Mean Well LRS-600-48) | 1 pcs | £53.67 | |
+| E05 | 1 | 24 V DC PSU (Mean Well LRS-150-24) | 1 pcs | £11.10 | |
+| E06 | 1 | E-stop safety relay (used Pilz PNOZ X2.1) | 1 pcs | £30.68 | |
 | E07 | 1 | Contactor with 24 V coil | 1 pcs | £26.19 | |
 | E08 | 1 | E-stop mushroom buttons + reset button | 1 set | £8.15 | |
 | E09 | 1 | MCBs / main isolator / EMC filter for VFD | 1 set | £10.39 | |
 | E10 | 1 | Inductive proximity switches 24 V | 4 pcs | £9.57 | |
 | E11 | 1 | USB to RS-485 adapter | 1 pcs | £10.92 | |
-| E12 | 1 | Steel cabinet + filtered fan | 1 set | £65.95 | |
+| E12 | 1 | Electrical cabinet 600 x 400 x 200 | 1 set | £65.95 | |
 | E13 | 1 | DIN rail / terminals / wiring / ferrules | 1 lot | £33.79 | |
 | E14 | 1 | Cable chain and shielded motor cables | 1 lot | £15.69 | |
 | E15 | 2 | Enclosure door switch | 1 pcs | £8.07 | |
@@ -118,7 +118,7 @@ Priced total: **£5,307.36** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 
 | ID | Stg | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
-| T01 | 1 | Steel box section for stand | 1 lot | £204.00 | |
+| T01 | 1 | Stand steel 60 x 60 x 3 | 1 lot | £204.00 | |
 | T02 | 1 | Levelling feet | 4 pcs | £21.98 | |
 
 ## Metrology (£85.70)
