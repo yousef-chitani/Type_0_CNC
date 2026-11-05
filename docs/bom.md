@@ -26,7 +26,7 @@ Full list: [bom.csv](bom.csv). **81 line items, 81 priced.** Prices were read fr
 | 1 | Frame, motion, spindle, electronics, air, stand, tools | £5,015.84 |
 | 2 | Tool rack + drive, enclosure, mist, door switch | £500.21 |
 
-Stage 1 includes the Mesa board (£257.74). It excludes and any import VAT on the spindle. Forks are 3D printed (owner).
+Stage 1 includes the Mesa board (£257.74). It excludes any spindle import VAT and GCL delivery. Forks are 3D printed (owner).
 
 ## Ten biggest lines
 | ID | Item | £ |
