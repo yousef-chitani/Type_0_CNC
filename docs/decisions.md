@@ -45,3 +45,7 @@
 | D-41 | Z motor: StepperOnline 24HS34-5004D-E1000-B280 (3 Nm closed-loop with 2.8 Nm 24 V brake) on a CL57T driver | Same frame, maker and driver as X and Y. 3 Nm is plenty for Z: holding the spindle needs only about 0.1 Nm through a 5 mm lead |
 | D-42 | Precision level 0.05 mm/m (Dasqua 200 mm, £68.50) instead of 0.02 mm/m (£333.72) | The rail seats level themselves in one linked pour. The level only sets the casting and stand roughly level. Saves £265.22 |
 | D-43 | Prefer collecting materials in person from B&Q (Nissan Qashqai) | Owner's preference: avoids delivery costs. Aggregates must still be clean and dry |
+| D-44 | Molds from plain 18 mm MDF (Wickes, 3 sheets), faces and edges sealed, then wax + PVA | Saves £286.20 over the melamine 5-pack |
+| D-45 | Fine aggregate: B&Q kiln-dried sand 2 × 25 kg, sieve-checked | Saves £152.42. Already dry and washed |
+| D-46 | Coarse and medium aggregate: washed, kiln-dried resin-bound quartz from GCL (2-5 mm and 1-3 mm) | Graded and dried for resin use. Horticultural grit and the Rugeley collection were declined. Pallet delivery cost to Swansea still to confirm |
+| D-47 | Build in two stages. Stage 1: frame, motion, spindle, electronics, air, stand: a working mill with manual tool changes (air release button). Stage 2: tool rack and its drive, enclosure, mist, door interlock | Spreads cost and gets the machine cutting sooner. The frame already includes the rack zone and inserts, so stage 2 bolts on |
