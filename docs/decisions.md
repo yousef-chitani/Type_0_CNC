@@ -53,3 +53,4 @@
 | D-49 | Table top about 950 mm above the floor | Comfortable standing height; cabinet fits under |
 | D-50 | Y motor at the front, X motor on the right | Keeps the rear rack zone clear |
 | D-51 | Design workholding height about 100 mm (small precision vise) | Sets Z clearance and gantry opening height |
+| D-52 | Layout draft 1 accepted as the working basis: Y travel 395 (250 + 145 for the tool change), base 970 × 660 × 180 | Generated from cad/type0_layout.py, see layout.md |

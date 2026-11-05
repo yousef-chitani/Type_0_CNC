@@ -12,3 +12,4 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [Epoxy options](docs/epoxy-options.md): UK resin comparison
 - [I/O list](docs/io-list.md): signals the control system must handle (draft)
 - [Bill of materials](docs/bom.md): parts list, confirmed prices only
+- [Layout](docs/layout.md): parametric model, drawings, key dimensions
