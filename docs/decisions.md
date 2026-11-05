@@ -69,3 +69,4 @@
 | D-65 | Cuts: DIY vibrator, DIY temperature logging, MDF for mould walls (2 sheets total), DIY spindle cooling loop, cheaper stand | Owner's choices to reach about £4,000 |
 | D-66 | Three phases. **Phase 1:** frame, motion, electronics, 2.2 kW water-cooled ER20 spindle (manual tool changes). **Phase 2:** Jianken ISO20 ATC spindle + holders, air system, mist, enclosure. **Phase 3:** tool rack, its drive, forks. Replaces D-47 | Spreads the cost. ER20 and ATC spindles share the 80 mm clamp, VFD and cooling loop |
 | D-67 | UHPC frame rejected after costing: IN2 €67.50 ex VAT / 25 kg (11.7 L) needs about 13 bags (about €877). Polcrete about £45.60 / 20 kg (about 16 bags, about £730). Epoxy granite stays | Not cheaper in the UK at retail (Bootstrap Bill's about 50 CAD bags are Canadian prices) |
+| D-68 | Budget: Phase 1 ≤ £4,000. Phases 2 and 3 budgeted later. Replaces D-57 | Owner target |
