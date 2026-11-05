@@ -37,7 +37,7 @@ P = dict(
     base_x=660, base_h=180, wall=60,
     upright_w=120, gantry_depth=160, beam_h=200,
     beam_front_offset=160,     # spindle axis to beam front face (spindle r + Z/X stack)
-    stand_tube=80, stand_tube_t=5, stand_low_ring=150, feet_h=30,
+    stand_tube=60, stand_tube_t=3, stand_low_ring=150, feet_h=30,   # D-54: 60x60x3 + bracing
     eg_density=2300,
 )
 
@@ -102,7 +102,8 @@ def derive(p):
     ring = 2 * sx + 2 * (sy - 2 * p["stand_tube"])
     d["stand_xy"] = (sx, sy)
     d["stand_cut"] = {"top ring": ring, "lower ring": ring, "legs (4)": 4 * leg,
-                      "rear/side braces (est.)": 2 * math.hypot(sy - 160, leg)}
+                      "diagonal braces: 2 sides + rear (est.)": 2 * math.hypot(sy - 2 * p["stand_tube"], leg) + math.hypot(sx - 2 * p["stand_tube"], leg)}
+    d["cabinet_clear_h"] = d["stand_top_above_floor"] - p["stand_tube"] - (p["stand_low_ring"] + p["stand_tube"])
     d["stand_steel_m"] = sum(d["stand_cut"].values()) / 1000
     return d
 
@@ -221,7 +222,8 @@ def report():
              f"| Footprint | {r(d['stand_xy'][0])} x {r(d['stand_xy'][1])} mm |"]
     for k, v in d["stand_cut"].items():
         lines.append(f"| {k} | {r(v)} mm |")
-    lines.append(f"| **80x80x5 total** | **{d['stand_steel_m']:.1f} m** |")
+    lines.append(f"| **60x60x3 total** | **{d['stand_steel_m']:.1f} m** |")
+    lines.append(f"| Clear height between rings (cabinet) | {r(d['cabinet_clear_h'])} mm |")
     (OUT / "dimensions.md").write_text("\n".join(lines) + "\n")
     (OUT / "dimensions.json").write_text(json.dumps({k: v for k, v in d.items()}, indent=1, default=str))
 

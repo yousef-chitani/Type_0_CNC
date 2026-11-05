@@ -46,8 +46,8 @@ def side(t, rack_off, znose, name, title):
     v.rect(X(y0s), Y(floor+p["stand_low_ring"]+st), X(y1s), Y(floor+p["stand_low_ring"]), COL["stand"])
     for yy in (y0s, y1s-st):
         v.rect(X(yy), Y(-p["base_h"]-st), X(yy+st), Y(floor+p["feet_h"]), COL["stand"])
-    v.rect(X(y0s+st+40), Y(-p["base_h"]-st-40), X(y0s+st+240), Y(-p["base_h"]-st-540), "#ddd", dash="4 3")
-    v.text(X(y0s+st+140), Y(-p["base_h"]-st-290), "cabinet", "middle", 10, "#666")
+    v.rect(X(y0s+st+30), Y(-p["base_h"]-st-20), X(y0s+st+230), Y(-p["base_h"]-st-420), "#ddd", dash="4 3")
+    v.text(X(y0s+st+130), Y(-p["base_h"]-st-220), "cabinet 600x400x200", "middle", 10, "#666")
     v.items.append(f'<line x1="{X(y0s)-40}" y1="{Y(floor)}" x2="{X(y1s)+40}" y2="{Y(floor)}" stroke="#333" stroke-width="2"/>')
     # base, gantry
     v.rect(X(d["base_y0"]), Y(0), X(d["base_y1"]), Y(-p["base_h"]), COL["eg"])

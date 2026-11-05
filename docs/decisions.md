@@ -54,3 +54,5 @@
 | D-50 | Y motor at the front, X motor on the right | Keeps the rear rack zone clear |
 | D-51 | Design workholding height about 100 mm (small precision vise) | Sets Z clearance and gantry opening height |
 | D-52 | Layout draft 1 accepted as the working basis: Y travel 395 (250 + 145 for the tool change), base 970 × 660 × 180 | Generated from cad/type0_layout.py, see layout.md |
+| D-53 | Electrical cabinet inside the stand, max 440 mm tall: prefer 600 W × 400 H × 200 D (fallback 400 × 400 × 200) | Fits between the stand rings. The wider box leaves room for VFD heat and wiring |
+| D-54 | Stand from 60 × 60 × 3 box section with diagonal bracing (about 11.9 m) | Ample for about 400 kg when braced. Cheaper and lighter than 80 × 80 × 5 |

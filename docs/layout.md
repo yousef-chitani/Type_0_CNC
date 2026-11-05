@@ -22,13 +22,13 @@ Generated from [`cad/type0_layout.py`](../cad/type0_layout.py) (3D STEP: `cad/ou
 | X / Z ballscrews | 420 / 280 | 405 / 305 minimum: buy **420 / 310** | |
 | Rack slide rails (MGN15) | 2 × 400 | **2 × 550** | Rack stroke 395 mm |
 | Rack screw (SFU1204) | 400 | **500** | |
-| Stand steel | 3 m (placeholder) | **10.7 m of 80 × 80 × 5** | 950 mm table height, 700 × 1,010 footprint |
+| Stand steel | 3 m (placeholder) | **11.9 m of 60 × 60 × 3, braced** | 950 mm table height, 700 × 1,010 footprint |
 | Rack fork plane | — | 140 above base | Tools hang clear of the Y rails |
 | Z assembly | — | Rises about 170 mm above the beam at Z top | Normal for 150 mm Z: the enclosure must be tall enough |
 
 ## Problems found
-1. **Cabinet does not fit inside the stand.** The clear height between the top and lower rings is about 400 mm, and the cabinet is 500 mm tall.
-2. **Stand steel cost.** 10.7 m at the £35/m confirmed for 80 × 80 × 5 is about £375, against the £111 placeholder.
+1. **Cabinet did not fit inside the stand** (500 mm tall vs about 400 clear). Fixed: 600 × 400 × 200 cabinet inside (D-53), and 440 mm clear with 60 mm tube.
+2. **Stand steel.** Changed to 60 × 60 × 3 with diagonal bracing, about 11.9 m (D-54). Price to re-check.
 
 ## Assumptions to verify (marked VERIFY in the script)
 - HGR20/HGH20CA: block height 30 mm, block length 77.5 mm.

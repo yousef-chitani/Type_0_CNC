@@ -39,10 +39,11 @@
   1010.0
  ],
  "stand_cut": {
-  "top ring": 3100.0,
-  "lower ring": 3100.0,
-  "legs (4)": 2400,
-  "rear/side braces (est.)": 2080.865204668481
+  "top ring": 3180.0,
+  "lower ring": 3180.0,
+  "legs (4)": 2480,
+  "diagonal braces: 2 sides + rear (est.)": 3018.3311053959596
  },
- "stand_steel_m": 10.68086520466848
+ "cabinet_clear_h": 440,
+ "stand_steel_m": 11.858331105395958
 }
