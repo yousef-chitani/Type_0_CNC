@@ -1,71 +1,70 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **72 line items, 69 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **81 line items, 78 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
-| Frame | 17 | 16 | £2,129.76 |
+| Frame | 18 | 17 | £1,624.64 |
 | Motion | 14 | 14 | £923.29 |
-| Spindle | 7 | 7 | £1,426.23 |
+| Spindle | 7 | 7 | £1,361.81 |
 | Tool changer | 6 | 5 | £239.76 |
-| Pneumatics | 5 | 5 | £82.88 |
-| Electronics | 15 | 14 | £744.50 |
+| Pneumatics | 6 | 6 | £117.00 |
+| Electronics | 21 | 20 | £617.55 |
 | Enclosure | 3 | 3 | £217.59 |
 | Stand | 2 | 2 | £132.98 |
 | Metrology | 2 | 2 | £85.70 |
-| Fixings | 1 | 1 | £40.99 |
-| **All** | **72** | **69** | **£6,023.68** |
+| Fixings | 2 | 2 | £68.78 |
+| **All** | **81** | **78** | **£5,389.10** |
 
-**Budget: £4,500.** Priced total: **£6,023.68**. Not priced yet: F15, A01, E01.
+**Budget: £4,500.** Priced total: **£5,389.10**. Not priced yet: F15, A01, E01.
 
 ## Ten biggest lines
 | ID | Item | £ |
 |---|---|---|
 | S01 | Jianken JGL-80/2.2R24-20 ATC spindle | 990.57 |
-| F01 | Epoxy for main frame mix | 590.00 |
-| F10 | Melamine-faced board 2440 x 1220 x 18 mm | 376.20 |
-| S05 | CW-3000-style radiator unit with flow alarm | 208.42 |
-| E04 | 48 V DC power supply about 10 A | 202.27 |
+| F01 | Epoxy for main frame mix | 666.59 |
 | M11 | Aluminium tooling plate 330 x 330 x 30 mm | 190.54 |
-| F05 | Fine sand 0.1-0.5 mm | 188.40 |
-| F03 | Kiln-dried quartz gravel 2-5 mm | 183.60 |
-| F04 | Kiln-dried sand 0.5-2 mm | 183.60 |
 | M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 182.83 |
+| S05 | CW-3000-style radiator unit with flow alarm | 144.00 |
+| N02 | Polycarbonate panels + door | 142.12 |
+| F03 | Kiln-dried quartz gravel 2-5 mm | 132.93 |
+| S02 | VFD 2.2 kW single-phase input with RS-485 Modbus | 124.84 |
+| E02 | x86 mini-PC with Intel NIC (2nd port for Mesa) | 120.00 |
+| F04 | Kiln-dried sand 0.5-2 mm | 115.20 |
 
 ## Warnings
-- **S01 spindle:** the Alibaba key attributes say 0.7 Nm, but other listings say 0.87 Nm. Confirm with Jianken. Import VAT (about 20%) is likely on top of £990.57.
-- **S02 VFD:** RS-485/Modbus is not stated on the page. Confirm before buying (D-32).
-- **M01–M03 rails:** the sale price is limited to 1 per shopper. At list prices the three kits are £387.63.
-- **S06 tool holders:** £6.05 may be a new-shopper price. At list price, 8 holders cost £178.96. The pull stud must match the spindle.
-- **E01 Mesa:** US$219 (Mesa) or €250 (EuSurplus), not yet in the GBP total. Shipping and import VAT not shown.
-- **F03–F05 aggregates:** pallet quantities are provisional (about 650 kg vs about 300 kg needed). Set them from the grading.
-- **F10 melamine:** a 5-pack is £376.20. A local merchant selling 3 sheets would cut this a lot.
+- **Not in the total yet:** Mesa 7i76EU (US$219 + shipping; UK import VAT/duty paid on arrival) and 8 forks (US$47.92 + US$13.99 shipping).
+- **S01 spindle:** UK import VAT (20%) is likely on top unless Alibaba collects it at checkout. Torque on the page says 0.7 Nm vs 0.87 Nm elsewhere: confirm.
+- **M01–M03 rails:** sale price limited to 1 per shopper. At list prices the three kits are £387.63 (+£202.52).
+- **S06 holders:** £6.05 may be a new-shopper price. At list price 8 holders are £178.96 (+£130.56). Pull stud must match the spindle.
+- **Partial matches to accept or reject:** F03 grit (wash, dry, sieve), F05 kiln-dried sand (sieve-check size), F10 plain MDF instead of melamine (seal + release), S05 chiller alarm output, S02 VFD RS-485.
+- **F01 epoxy:** hardener probably included in the ECF packs: confirm by phone.
 - **Reference sizes:** M12, A06, N02 and T01 are priced at placeholder sizes until the layout is drawn.
-- **Missing sub-items:** the 2nd Intel NIC and riser (E02), MCBs/isolator (E09), filter fan (E12), DIN rail/ferrules/wire (E13), shielded motor cable (E14), pneumatic fittings (P05), tape/silicone (F13), M5/M12 screws (X03), and the epoxy hardener (F01).
 
 ## Full list with links
 
 | ID | Item | Qty | Spec | Link | Listed price | Line £ | Notes |
 |---|---|---|---|---|---|---|---|
-| F01 | Epoxy for main frame mix | 37 kg | Low-viscosity epoxy with slow hardener | [product](https://ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow) | £295.00 per 22.68 kg pack (EC Fibreglass) — VAT basis not stated | 590.00 | 2 packs. Hardener appears to be SOLD SEPARATELY (100:26 ratio): extra cost not confirmed. Epoxy choice still open |
+| F01 | Epoxy for main frame mix | 1 set | Low-viscosity epoxy with slow hardener | [product](https://ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow) | £295.00 ex VAT (22.68 kg) + 3 × £86.83 ex VAT (4.66 kg) (EC Fibreglass) | 666.59 | 36.66 kg = £555.49 ex VAT, inc VAT calculated. Pack sizes match resin + slow hardener at 100:26, so hardener is PROBABLY INCLUDED: confirm with ECF (0191 4975134). Alt Easy Composites EL2 + AT30 slow £534.00 ex VAT, out of stock. Epoxy choice still open |
 | F02 | Epoxy for leveling pour / grout / samples | 5 kg | Very low viscosity and slow cure (e.g. GlassCast 50 PLUS) | [product](https://www.easycomposites.co.uk/glasscast-50-plus-clear-epoxy-casting-resin) | £76.46 ex VAT per 5 kg kit (Easy Composites) | 91.75 | Inc VAT calculated at 20% |
-| F03 | Kiln-dried quartz gravel 2-5 mm | 1 lot | Graded aggregate: coarse fraction | [product](https://www.specialistaggregates.com/waterford-quartz-gravel-fine-p-2059.html) | Quartz gravel 3-5 mm: £29.60 per 15 kg; 2-3 mm: £183.60 per pallet 10 × 15 kg; all inc VAT and delivery (Specialist Aggregates) | 183.60 | PROVISIONAL: 1 pallet of 2-3 mm. Quantities depend on the grading (open question 5). Medium 3-5 mm: https://www.specialistaggregates.com/waterford-quartz-gravel-medium-p-1316.html |
-| F04 | Kiln-dried sand 0.5-2 mm | 1 lot | Graded aggregate: medium fraction | [product](https://www.specialistaggregates.com/filter-media-silica-sand-p-1464.html) | £183.60 per pallet 10 × 25 kg inc VAT and delivery (Specialist Aggregates) | 183.60 | PROVISIONAL quantity. Silica sand 1.0-2.0 mm, washed. Kiln-dried NOT stated: dry before use |
-| F05 | Fine sand 0.1-0.5 mm | 1 lot | Graded aggregate: fine fraction | [product](https://www.specialistaggregates.com/sand-water-worn-ultra-fine-p-1303.html) | £188.40 per pallet 10 × 25 kg inc VAT and delivery; £32.40 per 15 kg bag (Specialist Aggregates) | 188.40 | PROVISIONAL quantity. Kiln-dried silica 0.1-0.3 mm. A few bags may be enough once the grading is set |
+| F03 | Kiln-dried quartz gravel 2-5 mm | 7 20 kg bags | Graded aggregate: coarse fraction | [product](https://www.diy.com/departments/fargro-melcourt-horticultural-grit-coarse-for-improving-drainage-in-heavy-soils-and-pots-20kg/5060447500810_BQ.prd) | £18.99 (VAT?) per 20 kg bag, free next-day delivery (B&Q online) | 132.93 | 7 bags (140 kg). Melcourt coarse grit 2-6 mm, lime free. PARTIAL: not stated dry or washed: wash, dry and sieve to 2-5 mm. B&Q in-store Verve grit £6/20 kg (size unknown). Previous: quartz pallet £183.60 |
+| F04 | Kiln-dried sand 0.5-2 mm | 4 25 kg packs | Graded aggregate: medium fraction | [product](https://www.specialistaggregates.com/filter-media-silica-sand-click-collect-p-6077.html) | £28.80 inc VAT per 25 kg, collection only Rugeley WS15 3HF (Specialist Aggregates) | 115.20 | 4 packs (100 kg) silica 1.0-2.0 mm. Collection at Rugeley, or courier +£15.60/pack (£177.60). B&Q sharp sand is damp and ungraded |
+| F05 | Fine sand 0.1-0.5 mm | 2 25 kg bags | Graded aggregate: fine fraction | [product](https://www.diy.com/departments/heidelberg-materials-large-bag-kiln-dried-sand-25kg/5012016180015_BQ.prd) | £17.99 (VAT?) per 25 kg, free next-day delivery (B&Q online) | 35.98 | 2 bags. Kiln-dried washed silica. PARTIAL: particle size not stated: sieve-check. Previous: £188.40 pallet |
 | F06 | Fine filler (silica flour or fly ash) | 1 lot | Below 0.1 mm | [product](https://potterycrafts.co.uk/products/potterycrafts-quartz-silica-sand?variant=49197100859674) | £36.05 ex VAT per 25 kg (Potterycrafts) | 43.26 | Fine ground quartz. Particle size not stated. Inc VAT calculated. Shipping not shown |
 | F07 | Steel flat bar 40 x 10 mm | 2 3 m bars | 40 × 10 mild steel flat bar, 3 m | [product](https://www.themetalstore.co.uk/products/3-metre-lengths-10mm-flat-bar) | £30.00 ex VAT / £36.00 inc VAT per 3 m bar (The Metal Store) | 72.00 | Delivery not shown. Bright (EN3B) bar is an option for flatter inserts |
 | F08 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | Zinc or plain steel | [product](https://www.ebay.co.uk/itm/361927188666) | £19.65 for 2 × 1 m rods, free shipping (eBay UK) + nuts £9.09 inc VAT (Screwfix) | 28.74 | Nuts: https://www.screwfix.com/p/easyfix-bzp-steel-hex-nuts-m12-100-pack/15569 |
 | F09 | Steel or PVC tube for M12 bolt sleeves | 2 m | About 14-16 mm bore | [product](https://www.screwfix.com/p/deta-tte-round-upvc-white-conduit-20mm-x-3m/256vt) | £2.29 inc VAT per 3 m (Screwfix) | 2.29 | 20 mm uPVC conduit, bore not stated (about 16-17 mm expected, clears M12). Steel alt £10.99: https://www.screwfix.com/p/deta-tte-round-steel-galvanised-class-4-conduit-tube-20mm-x-3m/7734j |
-| F10 | Melamine-faced board 2440 x 1220 x 18 mm | 5 sheet | Mould walls and floors | [product](https://www.diy.com/departments/18mm-white-melamine-faced-mdf-board-2440mm-x-1220mm-8-x-4-pack-of-5/1234564004017_BQ.prd) | £376.20 for 5 sheets, free delivery (B&Q / Materials Market) | 376.20 | Need 3: only a 5-pack delivers. A local timber merchant may sell single sheets much cheaper. eBay single MFC sheet £37.10 collection only |
-| F11 | Timber battens 44 x 44 mm | 9 m | Floor support and wall bracing | [product](https://www.wickes.co.uk/Wickes-Redwood-PSE-Timber---44-x-44-x-2400mm/p/9000281515) | £7.50 per 2.4 m + delivery from £5 (Wickes) | 72.50 | 9 lengths. Offer ended 4 Nov: page also shows "from £6.20" |
+| F10 | Melamine-faced board 2440 x 1220 x 18 mm | 3 sheets | Mould walls and floors | [product](https://www.wickes.co.uk/General-Purpose-MDF-Sheet---18-x-1220-x-2440mm/p/110113) | £30 (VAT?) per sheet, click and collect (Wickes) | 90.00 | 3 sheets PLAIN MDF (PARTIAL: no melamine face): seal faces and edges, then wax + PVA. Full match stays B&Q 5-pack melamine £376.20 |
+| F11 | Timber battens 44 x 44 mm | 9 lengths | Floor support and wall bracing | [product](https://www.wickes.co.uk/Wickes-Studwork-CLS-Timber---38-x-63-x-2400mm/p/107177) | £3.50 (VAT?) per 2.4 m, click and collect (Wickes) | 31.50 | 9 × 38 × 63 CLS C16 planed (21.6 m) |
 | F12 | Release wax + PVA release film | 1 set |  | [product](https://www.ebay.co.uk/itm/235827548462) | PVA £13.50 free shipping (eBay UK) + wax £9.39 inc VAT + £8.79 express (AliExpress) | 31.68 | Wax: https://www.aliexpress.com/item/1005006037723287.html |
 | F13 | Packing tape / silicone / plasticine for fillets | 1 set |  | [product](https://www.ebay.co.uk/itm/357951022386) | Plasticine £16.10 + £2.94 shipping (eBay UK) | 19.04 | Packing tape and silicone NOT priced |
-| F14 | Vibration motors | 2 pcs | Unbalanced vibration motors for the vibration table | [product](https://www.ebay.co.uk/itm/900058009643) | £49.86 each, free shipping (eBay UK) | 99.72 | 100 W 230 V 3000 rpm with speed controller. Exciting force not stated: NOT yet sized for about 330 kg. Check before buying |
+| F14 | Vibration motors | 2 pcs | Unbalanced vibration motors for the vibration table | [product](https://www.ebay.co.uk/itm/900058009643) | £49.86 each, free shipping (eBay UK) | 99.72 | 100 W 230 V with controller. Exciting force not stated. Genuine OLI MVE 200/3E (about 2 kN class) £129.99 + £9.99 each: https://www.ebay.co.uk/itm/277703089794 . Size before buying |
 | F15 | Vibration table springs or rubber mounts + top sheet | 1 set | Takes about 330 kg (mould + casting) | [product](https://www.ebay.co.uk/itm/326960605104) | NOT FOUND (page blocked). Search card: £8.66 + £2.72 per M10 bobbin, 192 kg |  | Unconfirmed. Top sheet not priced |
 | F16 | Temperature probes + logger | 1 set | Thermocouples or DS18B20 probes cast in | [product](https://www.ebay.co.uk/itm/800631453870) | £76.99, free shipping (eBay UK) | 76.99 | 4-ch K/J/T logger. Probes included not stated |
 | F17 | Mixer | 1 pcs | Paddle mixer or small forced-action mixer | [product](https://www.screwfix.com/p/erbauer-epm1600-1600w-electric-paddle-mixer-220-240v/981kj) | £69.99 inc VAT (Screwfix) | 69.99 | Erbauer EPM1600 |
+| F18 | Packing tape + silicone | 1 set | 6 rolls clear tape + neutral-cure silicone | [product](https://www.ebay.co.uk/itm/165130410287) | £8.99 tape + £7.99 silicone, free delivery (eBay UK) | 16.98 | Silicone: https://www.ebay.co.uk/itm/257643689613 |
 | M01 | HGR20 rail 650 mm | 2 pcs | Y axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | £70.85 inc VAT, free shipping (AliExpress sale; list £147.49) | 70.85 | 2 × 650 mm + 4 HGH20CA. SALE LIMIT 1 per shopper: may not get all 3 kits at sale price. Preload not stated (Z1 not offered). HIWIN-branded alt: 1 rail + 2 blocks £70.99 + £32.52 https://www.aliexpress.com/item/1005008442623745.html |
 | M02 | HGR20 rail 450 mm | 2 pcs | X axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | £59.05 inc VAT, free shipping (AliExpress sale; list £123.91) | 59.05 | 2 × 450 mm + 4 HGH20CA. Same listing and sale limit as M01 |
 | M03 | HGR20 rail 300 mm | 2 pcs | Z axis | [product](https://www.aliexpress.com/item/1005010242098397.html) | £55.21 inc VAT, free shipping (AliExpress sale; list £116.23) | 55.21 | 2 × 300 mm + 4 HGH20CA. Same listing and sale limit as M01 |
@@ -84,10 +83,10 @@ Full list: [bom.csv](bom.csv). **72 line items, 69 priced.** Prices were read fr
 | S02 | VFD 2.2 kW single-phase input with RS-485 Modbus | 1 pcs | 220 V 3-phase output / up to 400 Hz / single-phase 230 V input | [product](https://www.aliexpress.com/item/1005007299382924.html) | £94.19 inc VAT + £30.65 shipping (AliExpress) | 124.84 | Huanyang HY02D223B, 220 V, 0-400 Hz. RS-485 NOT stated: ask seller before buying (needed for D-32). Alt StepperOnline EV51S20022BX0 £62.74 (VAT?), pre-order, RS-485 not stated: https://www.omc-stepperonline.com/ev51-series-vfd-3hp-2-2kw-12-5a-single-phase-220v-cnc-spindle-motor-variable-frequency-drive-ev51s20022bx0 |
 | S03 | Spindle mount clamp to suit spindle body diameter | 1 pcs | 80 mm | [product](https://www.aliexpress.com/item/4001010906801.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | 80 mm clamp |
 | S04 | Shielded 4-core spindle cable | 5 m |  | [product](https://www.aliexpress.com/item/32971008305.html) | £18.22 inc VAT for 5 m (AliExpress) | 18.22 | 4-core 16 AWG (about 1.3 mm²) shielded: slightly under 1.5 mm². Shipping not shown |
-| S05 | CW-3000-style radiator unit with flow alarm | 1 pcs | CW-3000TG (220 V 1-phase / 9 L tank / 10 L/min max) | [product](https://www.megacold.uk.com/cw-3000ag-water-chiller) | £173.68 ex VAT / £208.42 inc VAT (Megacold) | 208.42 | In stock. Flow alarm output NOT stated: confirm with seller |
+| S05 | CW-3000-style radiator unit with flow alarm | 1 pcs | CW-3000TG (220 V 1-phase / 9 L tank / 10 L/min max) | [product](https://www.ebay.co.uk/itm/315204411696) | £144.00 (VAT?), free courier (eBay UK) | 144.00 | CW-3000 SDKEHUI, flow + temperature alarms, 3-year warranty. ALARM OUTPUT TERMINAL NOT STATED: ask seller. Previous: £208.42 |
 | S06 | ISO20 ER16 holders with pull studs | 8 pcs | ISO20-ER16. Pull studs must match the spindle drawbar | [product](https://www.aliexpress.com/item/4000141590118.html) | £6.05 inc VAT each, free shipping (AliExpress; list £22.37) | 48.40 | ISO20-ER16-35L, 0.003 mm. £6.05 may be a new-shopper deal: at list price 8 × £22.37 = £178.96. PULL STUD NOT STATED: must match Jianken. Jianken own holders £37.52-75.03 on the S01 page. DamenCNC Teknomotor €123.50 each |
 | S07 | ER16 collet set | 1 set | Precision (AA grade or better) 1-10 mm | [product](https://www.aliexpress.com/item/1005005626185405.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | AA ER16 10-piece set. Sizes not listed. AAA set £68.39 |
-| A01 | ISO20 tool forks | 8 pcs | For the 2 x 4 rack | [product](https://damencnc.com/en/teknomotor-toolholder-fork-iso-20/a4038) | €31.50 ex VAT each at 5+ (DamenCNC art. 5400) |  | 8 × €31.50 = €252 ex VAT. RicoCNC forks: price on request |
+| A01 | ISO20 tool forks | 8 pcs | For the 2 x 4 rack | [product](https://www.ebay.co.uk/itm/354640713143) | US$5.99 (VAT?) each + US$13.99 shipping (eBay, from USA) |  | 8 forks = US$47.92 + US$13.99. Import fees estimated £0. Not converted to GBP. DamenCNC alt €31.50 each |
 | A02 | Rack slide linear guide (e.g. MGN15) + carriage | 2 sets | Rack carrier | [product](https://www.ebay.co.uk/itm/227244866634) | £25.99 per set, free shipping (eBay UK) | 51.98 | MGN15 400 mm + MGN15H. 2 sets |
 | A03 | Small closed-loop stepper + driver (48 V) | 1 set | Drives the rack slide | [product](https://www.omc-stepperonline.com/1-axis-closed-loop-stepper-cnc-kit-80ncm-113-29oz-in-nema-17-motor-driver-1-cl42t-s08-v41) | £39.43 (VAT?) + £8.34 DE warehouse (StepperOnline) | 47.77 | 1-CL42T-S08-V41: NEMA 17 0.8 Nm + CL42T 24-48 V. 5 mm shaft |
 | A04 | Rack drive screw or belt + pulleys | 1 set | Stroke about 300 mm. Sized in the layout | [product](https://www.aliexpress.com/item/1005006187129418.html) | £43.39 inc VAT, free shipping (AliExpress) | 43.39 | SFU1204 400 mm + housing + BK10/BF10 + coupling. Single nut is fine for the rack |
@@ -98,12 +97,13 @@ Full list: [bom.csv](bom.csv). **72 line items, 69 priced.** Prices were read fr
 | P03 | Air pressure switch | 1 pcs | About 5.5 bar trip point | [product](https://www.aliexpress.com/item/1005013285557375.html) | £5.17 (VAT?) + £3.79 shipping (AliExpress) | 8.96 | QPM11-NO-02. NO contact |
 | P04 | Mist coolant system with 24 V solenoid | 1 set |  | [product](https://www.aliexpress.com/item/1005012241646016.html) | £17.59 inc VAT (AliExpress) | 17.59 | BPV-3000 mist unit, no solenoid (uses 4th P02 valve) |
 | P05 | Push-fit tubing and fittings 6/8 mm | 1 lot |  | [product](https://www.aliexpress.com/item/1005006780298909.html) | £4.31 + £7.56 inc VAT (AliExpress) | 11.87 | 10 m 6 × 4 + 10 m 8 × 5 PU. Fittings NOT priced |
-| E01 | Mesa 7i76EU | 1 pcs |  | [product](https://store.mesanet.com/index.php?route=product/product&product_id=399) | US$219.00 (VAT?) (Mesa). EU: €250.00 (VAT?) EuSurplus |  | Not converted to GBP. Mesa stock 128. EuSurplus in stock: https://eusurplus.com/index.php?route=product/product&product_id=50 . Shipping and import VAT not shown |
+| P06 | Push-in fittings | 12 pcs | 8 × 6 mm-1/8 BSP + 4 × 8 mm-1/4 BSP (PROVISIONAL quantities) | [product](https://www.ebay.co.uk/itm/156691426151) | £2.77 each (6 mm) + £2.99 each (8 mm), free delivery (eBay UK) | 34.12 | 8 mm: https://www.ebay.co.uk/itm/110811089560 . Quantities to confirm from the pneumatic layout |
+| E01 | Mesa 7i76EU | 1 pcs |  | [product](https://store.mesanet.com/index.php?route=product/product&product_id=399) | US$219.00 (VAT?) (Mesa); €250.00 (VAT?) EuSurplus |  | Mesa does not collect UK import VAT/duty (HS 84716070): pay on arrival. Shipping only at checkout. EuSurplus ships DHL/UPS, export fee outside Schengen. Not converted to GBP |
 | E02 | x86 mini-PC with Intel NIC (2nd port for Mesa) | 1 pcs |  | [product](https://www.ebay.co.uk/itm/168320664800) | £120.00 (VAT?), free shipping (eBay UK) | 120.00 | Lenovo M720q i3-8100T 8 GB 240 GB, refurbished, last one. Riser + 2nd Intel NIC card NOT included or priced |
 | E03 | Monitor + keyboard + mouse | 1 set |  | [product](https://www.ebay.co.uk/itm/197551264739) | £31.90 + £5.21 shipping (eBay UK, used) | 37.11 | Dell 22 in monitor + keyboard + mouse |
-| E04 | 48 V DC power supply about 10 A | 1 pcs | Mean Well SDR-480-48 (48 V / 10 A / 480 W / DIN rail / universal input) | [product](https://www.rapidonline.com/mean-well-sdr-480-48-rail-psu-48v-10a-480w-din-rail-mount-universal-input-05-1702) | £168.56 ex VAT each (Rapid 05-1702) | 202.27 | Chosen over PSP-600-48 (£182.78 ex VAT at Rapid). In stock |
-| E05 | 24 V DC power supply | 1 pcs | Mean Well HDR-150-24 (24 V / 150 W / DIN rail) | [product](https://www.rapidonline.com/mean-well-hdr-150-24-hdr-rail-psu-24v-150w-din-rail-mounted-1-output-reinforced-05-0748) | £44.85 ex VAT each (Rapid 05-0748) | 53.82 | Search link |
-| E06 | Safety relay (e-stop) | 1 pcs | CM Manufactory SAFE 4.3eco 45320 (24 V AC/DC / 3 NO + 1 NC) | [product](https://www.rapidonline.com/cm-manufactory-45320-safety-relay-safe-4-3eco-24v-dc-ac-emergency-stop-08-7835) | £116.20 each (Rapid 08-7835) — page labels conflict on VAT | 116.20 | Back order, 10 days. Check single vs dual channel. VAT basis unclear |
+| E04 | 48 V DC power supply about 10 A | 1 pcs | Mean Well SDR-480-48 (48 V / 10 A / 480 W / DIN rail / universal input) | [product](https://www.omc-stepperonline.com/lrs-600-48-mean-well-600w-48vdc-12-5a-115-230vac-enclosed-switching-power-supply-lrs-600-48) | £46.76 (VAT?) + £6.91 Germany stock (StepperOnline) | 53.67 | Mean Well LRS-600-48 48 V 12.5 A, enclosed (not DIN). Previous: SDR-480-48 £202.27 at Rapid |
+| E05 | 24 V DC power supply | 1 pcs | Mean Well HDR-150-24 (24 V / 150 W / DIN rail) | [product](https://www.omc-stepperonline.com/lrs-150-24-mean-well-150w-24vdc-6-5a-115-230vac-enclosed-switching-power-supply-lrs-150-24) | £9.20 (VAT?) + £1.90 Germany stock (StepperOnline) | 11.10 | Mean Well LRS-150-24 enclosed. DIN alt HDR-150-24 £27.62 pre-order |
+| E06 | Safety relay (e-stop) | 1 pcs | CM Manufactory SAFE 4.3eco 45320 (24 V AC/DC / 3 NO + 1 NC) | [product](https://www.ebay.co.uk/itm/407310782945) | £27.74 (VAT?) + £2.94 tracked, used (eBay UK) | 30.68 | Used Pilz PNOZ X2.1 774306, 24 V, dual channel, 2 NO, manual reset. Better used PNOZ X2 £39.99 (seller 4.6K): https://www.ebay.co.uk/itm/375423870735 . Previous: £116.20 new |
 | E07 | Contactor with 24 V coil | 1 pcs |  | [product](https://www.aliexpress.com/item/1005005356561757.html) | £26.19 inc VAT, free shipping (AliExpress) | 26.19 | Schneider LC1D09BDC 9 A 24 V DC coil. Genuine not verified. 9 A is enough for the 48 V / VFD control duty but check against the circuit design |
 | E08 | E-stop mushroom buttons + reset button | 1 set |  | [product](https://www.aliexpress.com/item/1005008293871583.html) | £8.15 inc VAT for 5, free shipping (AliExpress) | 8.15 | XB2-BS542, 1 NC. Reset button not included |
 | E09 | MCBs / main isolator / EMC filter for VFD | 1 set |  | [product](https://www.aliexpress.com/item/1005010519550019.html) | £10.39 inc VAT (AliExpress) | 10.39 | CW4L2-20A-S. MCBs and isolator NOT priced |
@@ -113,6 +113,12 @@ Full list: [bom.csv](bom.csv). **72 line items, 69 priced.** Prices were read fr
 | E13 | DIN rail / terminals / wiring / ferrules | 1 lot |  | [product](https://www.aliexpress.com/item/1690060053.html) | £33.79 inc VAT for 100, free shipping (AliExpress) | 33.79 | Terminals only. DIN rail, ferrules, wire NOT priced |
 | E14 | Cable chain and shielded motor cables | 1 lot |  | [product](https://www.aliexpress.com/item/1005012723966521.html) | £15.69 inc VAT per 1 m, free shipping (AliExpress) | 15.69 | 1 m only: length TBD. Shielded motor cable NOT priced |
 | E15 | Enclosure door switch | 1 pcs |  | [product](https://www.aliexpress.com/item/1005006072968001.html) | £8.07 inc VAT (AliExpress) | 8.07 | CZ-93B key interlock, 2 NC. No safety standard stated |
+| E16 | 2nd Intel NIC + riser for M720q | 1 set | PCIe riser 01AJ940 + Intel i210-T1 low profile | [product](https://www.ebay.co.uk/itm/307093011393) | £10.44 riser + £18.00 NIC + £9.00 courier (eBay UK) | 37.44 | NIC (used Dell OEM): https://www.ebay.co.uk/itm/286497813197 . New I210-T1 £42.12: https://www.ebay.co.uk/itm/366331604931 |
+| E17 | Main isolator + MCBs | 1 set | 2-pole isolator, 1 × C16, 2 × C6 | [product](https://www.toolstation.com/altrion-dp-incomer-switch/pAH631) | £7.99 inc VAT isolator (Toolstation) + £6.50 C16 + 2 × £5.00 C6 used (eBay UK) | 24.49 | C16: https://www.ebay.co.uk/itm/137268981930 . C6: https://www.ebay.co.uk/itm/387438925848 |
+| E18 | Cabinet fan + filters | 1 set | 120 mm 230 V fan + 2 washable filters | [product](https://www.ebay.co.uk/itm/128137523659) | £9.71 + £3.38 fan, £4.37 filters (eBay UK) | 17.46 | Filters (PC type, not IP rated): https://www.ebay.co.uk/itm/257636727653 |
+| E19 | DIN rail + ferrules + wire | 1 set | 1 m DIN, ferrule kit + crimper, 0.75 and 1.5 mm² wire 10 m each | [product](https://www.ebay.co.uk/itm/174026089905) | £7.94 + £1.99 DIN, £7.99 ferrules, £4.30 + £2.99 + £2.85 wire (eBay UK) | 28.06 | Ferrules: https://www.ebay.co.uk/itm/860051234272 . 0.75: https://www.ebay.co.uk/itm/115469225740 . 1.5: https://www.ebay.co.uk/itm/257223178155 |
+| E20 | Shielded motor/encoder cable | 15 m | CY 4-core 1.0 mm² | [product](https://www.ebay.co.uk/itm/171352110328) | £2.14 per m + £3.95 (eBay UK) | 36.05 |  |
+| E21 | Reset push button | 1 pcs | 22 mm green momentary | [product](https://www.ebay.co.uk/itm/286127619269) | £6.39, free delivery (eBay UK) | 6.39 |  |
 | N01 | Enclosure frame (aluminium extrusion) | 1 lot |  | [product](https://www.ebay.co.uk/itm/401900585637) | £72.73 for 8 × 1000 mm, free shipping (eBay UK) | 72.73 | 4040 slot 8. Cut list TBD |
 | N02 | Polycarbonate panels + door | 1 lot |  | [product](https://www.cutmy.co.uk/plastic/polycarbonate-sheets/6mm/L1000-W1000/) | £129.17 inc VAT for reference 1000 × 1000 × 6 + shipping from £12.95 (Cut My) | 142.12 | REFERENCE SIZE ONLY: panel sizes TBD |
 | N03 | LED light | 1 pcs |  | [product](https://www.aliexpress.com/item/1005013221981188.html) | £2.74 inc VAT (AliExpress) | 2.74 | 24-36 V 5 W |
@@ -121,3 +127,4 @@ Full list: [bom.csv](bom.csv). **72 line items, 69 priced.** Prices were read fr
 | X01 | Dial test indicator + magnetic base | 1 set | For rail alignment and squaring the gantry | [product](https://www.aliexpress.com/item/1005013036061506.html) | £17.20 inc VAT (AliExpress) | 17.20 | Lever DTI 0.01 mm + flexible base |
 | X02 | Precision level 0.05 mm/m | 1 pcs | Dasqua 200 mm machine bar level, 0.05 mm/m | [product](https://www.rdgtools.co.uk/product/dasqua-200mm-machine-bar-level-high-sensitivity-0-05mm-graduations-8301-0010/) | £68.50 inc VAT (RDG Tools) | 68.50 | D-42: Dasqua 200 mm 0.05 mm/m. Shipping not shown. 0.02 mm/m alt was £333.72 |
 | X03 | Socket cap screw assortment M5-M12 | 1 lot | Includes rail bolts | [product](https://www.ebay.co.uk/itm/336213901049) | £40.99 for 5 kg, free shipping (eBay UK) | 40.99 | M6/M8/M10 only: M5 (rail bolts) and M12 NOT included |
+| X04 | M5 and M12 socket caps | 1 set | 100 × M5 × 16 + 10 × M12 × 120, grade 12.9 | [product](https://www.ebay.co.uk/itm/164030323707) | £9.82 + £17.97, free delivery (eBay UK) | 27.79 | M12: https://www.ebay.co.uk/itm/361974204301 |
