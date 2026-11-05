@@ -1,35 +1,34 @@
 # Parts list for review
 
-Mark each line **Keep / Cut / Later**, or reply with IDs, e.g. `cut F16; later N03`.
+Mark each line **Keep / Cut / Later**, or reply with IDs.
 
-Priced total: **£5,427.49** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 items are marked **2**. £0.00 = owner-supplied or included in another line.
+Priced total: **£4,869.02** across 3 phases (D-66). Column **Ph** = phase. £0.00 = owner-supplied, DIY, or included in another line.
 
-## Frame (£1,479.64)
+## Frame (£1,269.17)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | F01 | 1 | Epoxy for main frame mix | 1 set | £666.59 | |
 | F02 | 1 | Epoxy for leveling pour / grout / samples | 5 kg | £91.75 | |
 | F03 | 1 | Coarse aggregate: quartz 2-5 mm | 6 25 kg bags | £87.12 | |
 | F04 | 1 | Medium + fine: kiln-dried sand 0-1 mm | 8 20 kg bags | £51.04 | |
-| F06 | 1 | Filler: limestone dust | 1 25 kg bag | £4.24 | |
+| F06 | 1 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 | |
 | F07 | 1 | Steel flat bar 40 x 10 mm | 2 3 m bars | £72.00 | |
 | F08 | 1 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | £28.74 | |
 | F09 | 1 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 | |
-| F10 | 1 | MDF sheet for mould floors | 1 sheet | £28.00 | |
-| F19 | 1 | White gloss furniture panels for mould walls | 2 panels | £77.94 | |
+| F10 | 1 | MDF sheets for moulds (floors + walls) | 2 sheets | £56.00 | |
 | F11 | 1 | CLS timber 38 x 63 x 2400 (mould bracing) | 9 lengths | £35.73 | |
 | F12 | 1 | Release agent: PVA + wax | 1 set | £31.68 | |
 | F13 | 1 | Plasticine for corner fillets | 1 set | £19.04 | |
-| F14 | 1 | Vibration motors | 2 pcs | £99.72 | |
+| F14 | 1 | Vibrator (owner DIY) | 2 pcs | £0.00 | |
 | F15 | 1 | Vibration table rubber feet | 8 pcs | £19.80 | |
-| F16 | 1 | Temperature probes + logger | 1 set | £76.99 | |
+| F16 | 1 | Temperature logging (owner DIY) | 1 set | £0.00 | |
 | F17 | 1 | Mixer | 1 pcs | £69.99 | |
 | F18 | 1 | Packing tape + silicone | 1 set | £16.98 | |
 
 ## Motion (£890.04)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | M01 | 1 | HGR20 rail 650 mm | 2 pcs | £104.59 | |
 | M02 | 1 | HGR20 rail 450 mm | 2 pcs | £22.99 | |
@@ -46,43 +45,45 @@ Priced total: **£5,427.49** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 | M12 | 1 | Aluminium plate for X saddle and Z spindle plate | 1 lot | £104.98 | |
 | M13 | 1 | Motor and bearing mounts | 1 lot | £40.59 | |
 
-## Spindle (£1,325.91)
+## Spindle (£1,181.91)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
-| S01 | 1 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | £990.57 | |
+| S01 | 2 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | £990.57 | |
+| S08 | 1 | Phase 1 spindle: 2.2 kW water-cooled ER20 | 1 pcs | to price | |
+| S09 | 1 | ER20 collet set | 1 set | to price | |
 | S02 | 1 | VFD 2.2 kW with RS-485 Modbus | 1 pcs | £88.94 | |
 | S03 | 1 | Spindle mount clamp to suit spindle body diameter | 1 pcs | £17.89 | |
 | S04 | 1 | Shielded 4-core spindle cable | 5 m | £18.22 | |
-| S05 | 1 | Spindle water cooler CW-3000 | 1 pcs | £144.00 | |
-| S06 | 1 | ISO20 ER16 holders with pull studs | 8 pcs | £48.40 | |
-| S07 | 1 | ER16 collet set | 1 set | £17.89 | |
+| S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | to price | |
+| S06 | 2 | ISO20 ER16 holders with pull studs | 8 pcs | £48.40 | |
+| S07 | 2 | ER16 collet set | 1 set | £17.89 | |
 
 ## Tool changer (£256.96)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
-| A01 | 2 | ISO20 tool forks (3D printed) | 8 pcs | £0.00 | |
-| A02 | 2 | Rack slide linear guide (e.g. MGN15) + carriage | 2 sets | £65.98 | |
-| A03 | 2 | Small closed-loop stepper + driver (48 V) | 1 set | £47.77 | |
-| A04 | 2 | Rack drive screw or belt + pulleys | 1 set | £46.59 | |
-| A05 | 2 | Tool length setter (wired switch) | 1 pcs | £17.89 | |
-| A06 | 2 | Rack plate and fork mount | 1 lot | £78.73 | |
+| A01 | 3 | ISO20 tool forks (3D printed) | 8 pcs | £0.00 | |
+| A02 | 3 | Rack slide linear guide (e.g. MGN15) + carriage | 2 sets | £65.98 | |
+| A03 | 3 | Small closed-loop stepper + driver (48 V) | 1 set | £47.77 | |
+| A04 | 3 | Rack drive screw or belt + pulleys | 1 set | £46.59 | |
+| A05 | 3 | Tool length setter (wired switch) | 1 pcs | £17.89 | |
+| A06 | 3 | Rack plate and fork mount | 1 lot | £78.73 | |
 
 ## Pneumatics (£117.00)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
-| P01 | 1 | Filter / regulator / dryer | 1 pcs | £6.50 | |
-| P02 | 1 | 24 V solenoid valves | 4 pcs | £37.96 | |
-| P03 | 1 | Air pressure switch | 1 pcs | £8.96 | |
+| P01 | 2 | Filter / regulator / dryer | 1 pcs | £6.50 | |
+| P02 | 2 | 24 V solenoid valves | 4 pcs | £37.96 | |
+| P03 | 2 | Air pressure switch | 1 pcs | £8.96 | |
 | P04 | 2 | Mist coolant system with 24 V solenoid | 1 set | £17.59 | |
-| P05 | 1 | Push-fit tubing and fittings 6/8 mm | 1 lot | £11.87 | |
-| P06 | 1 | Push-in fittings | 12 pcs | £34.12 | |
+| P05 | 2 | Push-fit tubing and fittings 6/8 mm | 1 lot | £11.87 | |
+| P06 | 2 | Push-in fittings | 12 pcs | £34.12 | |
 
 ## Electronics (£759.89)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | E01 | 1 | Mesa 7i76EU | 1 pcs | £257.74 | |
 | E02 | 1 | Mini-PC (owner already has) | 1 pcs | £0.00 | |
@@ -107,29 +108,29 @@ Priced total: **£5,427.49** (Stage 1 budget £5,300, Stage 2 £600). Stage 2 it
 
 ## Enclosure (£217.59)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | N01 | 2 | Enclosure frame (aluminium extrusion) | 1 lot | £72.73 | |
 | N02 | 2 | Polycarbonate panels + door | 1 lot | £142.12 | |
 | N03 | 2 | LED light | 1 pcs | £2.74 | |
 
-## Stand (£225.98)
+## Stand (£21.98)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
-| T01 | 1 | Stand steel 60 x 60 x 3 | 1 lot | £204.00 | |
+| T01 | 1 | Stand (cheaper option) | 1 lot | to price | |
 | T02 | 1 | Levelling feet | 4 pcs | £21.98 | |
 
 ## Metrology (£85.70)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | X01 | 1 | Dial test indicator + magnetic base | 1 set | £17.20 | |
 | X02 | 1 | Precision level 0.05 mm/m | 1 pcs | £68.50 | |
 
 ## Fixings (£68.78)
 
-| ID | Stg | Item | Qty | £ | Keep / Cut / Later |
+| ID | Ph | Item | Qty | £ | Keep / Cut / Later |
 |---|---|---|---|---|---|
 | X03 | 1 | Socket cap screw assortment M5-M12 | 1 lot | £40.99 | |
 | X04 | 1 | M5 and M12 socket caps | 1 set | £27.79 | |
