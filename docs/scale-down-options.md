@@ -39,3 +39,15 @@ Welding locks in stress. Proposed **3-piece cast layout** (concept sketch: `cad/
 | **Total** | | **about 101 kg** |
 
 Rack on the table's +X side (D-72): X travel 340 (200 work + rack), portal opening offset towards the rack side.
+
+## Rev B (owner feedback, D-73)
+Legs span only the table. Beam overhangs past the right leg. Ferris-wheel ATC beside the leg (edge-on, turns in Y-Z).
+
+| Casting | Size (mm) | Mass |
+|---|---|---|
+| Y spine | 260 × 550 × 110 | about 36 kg |
+| Rear foot (U round spine end, under the legs only) | 460 × 230 × 110 | about 16 kg |
+| Gantry portal | 620 W × 355 H × 130 D, opening 320 × 225, overhang 160 | about 34 kg (about 29 kg with PVC cores) |
+| **Total** | | **about 85 kg** |
+
+X travel about 380 (X rails about 560), Y 200, Z 150. Wheel about Ø178, 8 pockets.
