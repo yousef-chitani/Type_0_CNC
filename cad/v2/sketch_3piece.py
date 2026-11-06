@@ -72,8 +72,8 @@ def top():
     W, H = 900, 640; ox, oy = 380, 330
     X = lambda x: ox + x*S; Y = lambda y: oy - y*S
     b = ""
-    b += R(X(d["portal_x0"]), Y(d["foot_y1"]), X(d["leg_r_x1"]), Y(d["foot_y0"]), COL["foot"])
-    b += R(X(-p["spine_w"]/2), Y(d["spine_y1"]), X(p["spine_w"]/2), Y(d["spine_y0"]), COL["spine"])
+    b += R(X(d["portal_x0"]), Y(d["foot_y1"]), X(d["leg_r_x1"]), Y(d["foot_y0"]), COL["spine"])
+    b += R(X(-p["spine_w"]/2), Y(d["foot_y0"]), X(p["spine_w"]/2), Y(d["spine_y0"]), COL["spine"])
     for s_ in (-1, 1):
         b += R(X(s_*p["y_rail_spacing"]/2-10), Y(200), X(s_*p["y_rail_spacing"]/2+10), Y(-200), COL["rail"])
     b += R(X(d["table_x0"]), Y(p["table_y"]/2), X(d["table_x1"]), Y(-p["table_y"]/2), COL["table"], 0.85)
@@ -81,21 +81,19 @@ def top():
     b += R(X(d["pickup_x"]-p["wheel_t"]/2), Y(d["wheel_d"]/2), X(d["pickup_x"]+p["wheel_t"]/2), Y(-d["wheel_d"]/2), COL["rack"], 0.9)
     b += f'<line x1="{X(d["portal_x0"]-30)}" y1="{Y(0)}" x2="{X(d["portal_x1"]+30)}" y2="{Y(0)}" stroke="#2c5d8f" stroke-dasharray="8 4"/>'
     b += T(X(d["portal_x1"]+34), Y(0)+4, "spindle line", "start", 10, "#2c5d8f")
-    b += T(X(0), Y(d["spine_y0"])+16, f'Y SPINE {p["spine_w"]}×{d["spine_y1"]-d["spine_y0"]:.0f}×{p["h"]}  ≈{d["kg"]["spine"]:.0f} kg', "middle", 11, "#222", True)
-    b += T(X(d["portal_x0"]), Y(d["foot_y1"])-6, f'REAR FOOT {d["foot_w"]:.0f}×{d["foot_y1"]-d["foot_y0"]:.0f}×{p["h"]} (U round spine end) ≈{d["kg"]["foot"]:.0f} kg', "start", 11, "#222", True)
+    b += T(X(0), Y(d["spine_y0"])+16, f'BASE: one T-shaped casting ≈{d["kg"]["spine"]+d["kg"]["foot"]:.0f} kg (2-person lift)', "middle", 11, "#222", True)
     b += T(X(d["portal_x1"])+6, Y(d["portal_y1"])+12, f'PORTAL ≈{d["kg"]["portal"]:.0f} kg ({d["portal_cored"]:.0f} kg cored)', "start", 11, "#222", True)
     b += T(X(d["pickup_x"]+p["wheel_t"]/2+6), Y(-d["wheel_d"]/2)+12, "ferris-wheel ATC, turns in Y-Z", "start", 10, "#9a7514")
     b += T(X(0), Y(d["spine_y0"])+34, "FRONT (Y motor)", "middle", 10)
-    b += T(W/2, H-40, f'Top view. Frame ≈{d["kg"]["total"]:.0f} kg EG in 3 castings. Only joint: spine end into the rear-foot U (dowels + bolts).', "middle", 11, "#555")
+    b += T(W/2, H-40, f'Top view. Frame ≈{d["kg"]["total"]:.0f} kg EG in 2 castings (base + portal). Only joint: portal legs to base (dowels + bolts).', "middle", 11, "#555")
     b += T(W/2, H-24, f'X travel {d["travel_x_total"]:.0f} (200 work + reach to wheel), X rails {d["x_rail_len"]:.0f}, Y {p["travel_y"]}, Z {p["travel_z"]}. Legs span the table only (opening {d["open_x1"]-d["open_x0"]:.0f}).', "middle", 11, "#555")
-    svg("sketch_top.svg", W, H, "Type 0 v2: 3-piece cast frame (concept, rev B)", b)
+    svg("sketch_top.svg", W, H, "Type 0 v2: 2-piece cast frame (concept, rev C)", b)
 
 def front():
     p, d = P, D
     W, H = 900, 470; ox, oy = 380, 360
     X = lambda x: ox + x*S; Z = lambda z: oy - z*S
-    b = R(X(d["portal_x0"]), Z(0), X(d["leg_r_x1"]), Z(-p["h"]), COL["foot"])
-    b += R(X(-p["spine_w"]/2), Z(0), X(p["spine_w"]/2), Z(-p["h"]), COL["spine"], 0.9, "4 3")
+    b = R(X(d["portal_x0"]), Z(0), X(d["leg_r_x1"]), Z(-p["h"]), COL["spine"])
     b += R(X(d["portal_x0"]), Z(d["open_h"]), X(d["open_x0"]), Z(0), COL["portal"])
     b += R(X(d["open_x1"]), Z(d["open_h"]), X(d["leg_r_x1"]), Z(0), COL["portal"])
     b += R(X(d["portal_x0"]), Z(d["portal_h"]), X(d["portal_x1"]), Z(d["open_h"]), COL["portal"])
@@ -112,8 +110,8 @@ def front():
     b += T(X(d["pickup_x"]+p["wheel_t"]/2+6), Z(fork_z-d["wheel_d"]/2)-13, '8 pockets, top pocket = pickup', "start", 10, "#9a7514")
     b += T(X((d["open_x0"]+d["open_x1"])/2), Z(d["open_h"])+14, f'opening {d["open_x1"]-d["open_x0"]:.0f} × {d["open_h"]:.0f}', "middle", 11, "#c0392b")
     b += T(X((d["portal_x0"]+d["portal_x1"])/2), Z(d["portal_h"])-8, f'portal {d["portal_w"]:.0f} W × {d["portal_h"]:.0f} H × {p["portal_d"]} D, beam overhang {d["portal_x1"]-d["leg_r_x1"]:.0f}', "middle", 11, "#c0392b")
-    b += T(X(0), Z(-p["h"])+16, "spine (dashed) inside the rear foot U. Dashed line in beam: capped PVC cores", "middle", 10)
-    svg("sketch_front.svg", W, H, "Type 0 v2: front view (concept, rev B)", b)
+    b += T(X(0), Z(-p["h"])+16, "base: one casting (spine + rear cross-piece). Dashed line in beam: capped PVC cores", "middle", 10)
+    svg("sketch_front.svg", W, H, "Type 0 v2: front view (concept, rev C)", b)
 
 if __name__ == "__main__":
     top(); front()

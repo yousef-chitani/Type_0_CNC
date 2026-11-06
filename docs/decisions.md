@@ -77,3 +77,4 @@
 | D-73 | Portal legs span only the table (opening 320). Beam overhangs about 160 mm past the right leg. The ATC (if added) is an independent **ferris wheel**, 8 pockets, about Ø178, turning in the Y-Z plane beside the right leg, with the top pocket as the pickup. Replaces D-72 | Narrower, lighter portal. No rack on the table. X travel about 380 (200 work + reach) |
 | D-74 | If the portal is over 40 kg, use capped PVC pipe cores in the beam (2 × 50 mm: about 34 → about 29 kg) | Documented DIY method (owner choice) |
 | D-75 | v2 model accepted: castings 36.2 / 15.6 / 29.0 kg (80.8 kg). Travel X 380 / Y 200 / Z 150. Rails X 560, Y 400, Z 350. Screws X 550, Y 400, Z 350. Bench top 785 mm. Joints and wheel mount in v2-design.md | Rev B approved by owner |
+| D-76 | Spine and rear foot cast as **one T-shaped base**, about 52 kg (2-person carry). Frame = 2 castings: base + portal | Owner: 2 people can carry it upstairs. Removes the only frame joint |

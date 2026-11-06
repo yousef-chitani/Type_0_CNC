@@ -56,6 +56,8 @@ def derive(p):
     beam = d["portal_w"] * p["portal_d"] * p["beam_h"]
     cores = p["pvc_cores"] * math.pi * (p["pvc_core_d"]/2)**2 * (d["portal_w"] - 120)
     vol["portal"] = legs + beam - cores
+    vol["base"] = vol.pop("spine") + vol.pop("foot")            # D-76: one T-shaped base casting
+    vol = {"base": vol["base"], "portal": vol["portal"]}
     d["kg"] = {k: v * 1e-9 * p["eg_density"] for k, v in vol.items()}
     d["kg_total"] = sum(d["kg"].values())
     d["epoxy_kg_11pct"] = 0.11 * d["kg_total"]; d["aggregate_kg"] = 0.89 * d["kg_total"]
@@ -71,9 +73,8 @@ def box(x0, x1, y0, y1, z0, z1):
 def build(t=0.0, x=0.0, znose=None):
     p, d = P, D; znose = d["nose_top"] if znose is None else znose
     parts = {}
-    parts["spine"] = box(-p["spine_w"]/2, p["spine_w"]/2, d["spine_y0"], d["spine_y1"], -p["h"], 0)
-    foot = box(d["portal_x0"], d["leg_r_x1"], d["foot_y0"], d["foot_y1"], -p["h"], 0)
-    parts["foot"] = foot.cut(box(-p["spine_w"]/2, p["spine_w"]/2, d["foot_y0"]-1, d["spine_y1"], -p["h"]-1, 1))
+    base = box(-p["spine_w"]/2, p["spine_w"]/2, d["spine_y0"], d["foot_y1"], -p["h"], 0)
+    parts["base"] = base.union(box(d["portal_x0"], d["leg_r_x1"], d["foot_y0"], d["foot_y1"], -p["h"], 0))
     portal = box(d["portal_x0"], d["portal_x1"], d["portal_y0"], d["portal_y1"], 0, d["beam_top"])
     portal = portal.cut(box(d["open_x0"], d["open_x1"], d["portal_y0"]-1, d["portal_y1"]+1, -1, d["beam_bottom"]))
     portal = portal.cut(box(d["leg_r_x1"], d["portal_x1"]+1, d["portal_y0"]-1, d["portal_y1"]+1, -1, d["beam_bottom"]))
@@ -106,8 +107,7 @@ def report():
          f"| Gantry opening | {r(d['open_x1']-d['open_x0'])} wide x {r(d['beam_bottom'])} high. Beam top Z {r(d['beam_top'])} |",
          f"| ATC wheel | dia {r(d['wheel_d'])}, {p['wheel_pockets']} pockets, pickup at X {r(d['pickup_x'])}, fork plane Z {r(d['fork_z'])} |", "",
          "## Castings", "| Casting | Size (mm) | Mass |", "|---|---|---|",
-         f"| Y spine | {p['spine_w']} x {r(d['spine_y1']-d['spine_y0'])} x {p['h']} | {d['kg']['spine']:.1f} kg |",
-         f"| Rear foot (U) | {r(d['foot_w'])} x {r(d['foot_y1']-d['foot_y0'])} x {p['h']} | {d['kg']['foot']:.1f} kg |",
+         f"| Base (T-shape: spine {p['spine_w']} wide x {r(d['foot_y1']-d['spine_y0'])} long, rear cross-piece {r(d['foot_w'])} x {r(d['foot_y1']-d['foot_y0'])}), {p['h']} high | one piece, 2-person lift | {d['kg']['base']:.1f} kg |",
          f"| Gantry portal ({p['pvc_cores']} x {p['pvc_core_d']} mm PVC cores) | {r(d['portal_w'])} W x {r(d['beam_top'])} H x {p['portal_d']} D | {d['kg']['portal']:.1f} kg |",
          f"| **Total** | | **{d['kg_total']:.1f} kg** |",
          f"| Epoxy at 11% / aggregate at 89% | | {d['epoxy_kg_11pct']:.1f} / {d['aggregate_kg']:.1f} kg |", "",

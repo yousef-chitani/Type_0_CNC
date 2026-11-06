@@ -13,8 +13,7 @@ From `cad/v2/type0_v2.py`. Z = 0 is the top of the spine/foot castings.
 ## Castings
 | Casting | Size (mm) | Mass |
 |---|---|---|
-| Y spine | 260 x 550 x 110 | 36.2 kg |
-| Rear foot (U) | 460 x 230 x 110 | 15.6 kg |
+| Base (T-shape: spine 260 wide x 610 long, rear cross-piece 460 x 230), 110 high | one piece, 2-person lift | 51.8 kg |
 | Gantry portal (2 x 50 mm PVC cores) | 620 W x 355 H x 130 D | 29.0 kg |
 | **Total** | | **80.8 kg** |
 | Epoxy at 11% / aggregate at 89% | | 8.9 / 71.9 kg |
