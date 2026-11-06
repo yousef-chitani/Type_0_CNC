@@ -72,3 +72,5 @@
 | D-68 | Budget: Phase 1 ≤ £4,000. Phases 2 and 3 budgeted later. Replaces D-57 | Owner target |
 | D-69 | Phase 1 replacements: Wanhongcnc 2.2 kW ER20 spindle £150.59; ER20 collets + spanner £34.49; 24 V DIY cooling loop £104.77; stand from 8 m of 60 × 60 × 3 (no lower ring) £136.00 | Budgeted at normal (non-deal) prices. Phase 1 total £3,638.39 |
 | D-70 | Phase 1 spindle from a known maker only: Jianken JGD-80 2.2 kW ER20, quoted together with the ATC spindle. Replaces the Wanhongcnc choice in D-69 | Unknown makers risk poor runout |
+| D-71 | **Scale-down (v2):** upstairs flat, pieces ≤ 40 kg, total about 150 kg on anti-vibration feet, work area 200 × 200 × 150, coolant only inside an enclosure, timber bench made by the owner. Frame stays cast epoxy granite (no welded frame: weld stress) | Owner must be able to move out and keep it indoors |
+| D-72 | If ATC is added, the rack (2 × 4) bolts to the table's +X side: table Y travel selects the pocket, spindle X travel extends by about 140 mm. No extra Y travel | Keeps the Y spine short and under 40 kg |
