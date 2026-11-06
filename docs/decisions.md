@@ -78,3 +78,4 @@
 | D-74 | If the portal is over 40 kg, use capped PVC pipe cores in the beam (2 × 50 mm: about 34 → about 29 kg) | Documented DIY method (owner choice) |
 | D-75 | v2 model accepted: castings 36.2 / 15.6 / 29.0 kg (80.8 kg). Travel X 380 / Y 200 / Z 150. Rails X 560, Y 400, Z 350. Screws X 550, Y 400, Z 350. Bench top 785 mm. Joints and wheel mount in v2-design.md | Rev B approved by owner |
 | D-76 | Spine and rear foot cast as **one T-shaped base**, about 52 kg (2-person carry). Frame = 2 castings: base + portal | Owner: 2 people can carry it upstairs. Removes the only frame joint |
+| D-77 | Vibration table: 1–2 old tyres as springs, a stiff board, and a motor with an unbalanced shaft. Replaces the vibration motors and rubber feet | Owner's method: cheap and proven |

@@ -100,3 +100,11 @@ Solid sections up to 180–200 mm thick concentrate the curing heat. Starting po
 - **Pour continuously, without stopping.** Pouring in stages can leave weak joints between layers. Mix in batches, but keep pouring.
 - **Even cooling.** Leave the walls and insulation on until the peak has passed, so the surface and core cool together. This avoids stresses locked in by uneven cooling. Post-cure warm (e.g. 40 °C) only after the first cure.
 - **Let it settle before the leveling pour.** Wait for full cure (about 7 days or more) before the rail-seat leveling pour, so the casting has finished shrinking.
+
+## DIY vibration table (D-77)
+- **Springs:** 1–2 old tyres lying flat. Two tyres side by side give a steadier platform for the base mould (about 700 × 500 mm).
+- **Deck:** stiff board (18 mm ply or MDF on CLS battens) slightly bigger than the largest mould. Screw blocks to the deck so the mould can't walk off.
+- **Exciter:** a motor bolted under or on the deck edge, with an eccentric weight on its shaft (e.g. a drilled disc or bolt with a nut stack). Aim for roughly 3,000 rpm (50 Hz), the usual range for compacting concrete. Add weight until the surface of a test pour ripples and air bubbles rise steadily.
+- **Safety:** guard the spinning weight. Clamp the motor so it can't shake loose. Use an RCD-protected socket.
+- **Test first:** run it with a sand-filled mould. Check the deck doesn't flex or walk, and the mould joints don't leak.
+- **Tip:** vibrate each layer for a short time as you pour, not one long run at the end. Over-vibrating can let the coarse grit settle to the bottom.

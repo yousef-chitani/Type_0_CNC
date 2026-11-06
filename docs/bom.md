@@ -6,7 +6,7 @@ Full list: [bom.csv](bom.csv). **82 line items, 70 priced.** Prices were read fr
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
-| Frame | 17 | 17 | £638.70 |
+| Frame | 17 | 17 | £618.90 |
 | Motion | 14 | 10 | £465.14 |
 | Spindle | 9 | 8 | £1,321.17 |
 | Tool changer | 7 | 3 | £65.66 |
@@ -16,14 +16,14 @@ Full list: [bom.csv](bom.csv). **82 line items, 70 priced.** Prices were read fr
 | Stand | 2 | 1 | £0.00 |
 | Metrology | 2 | 2 | £85.70 |
 | Fixings | 2 | 2 | £68.78 |
-| **All** | **82** | **70** | **£3,524.78** |
+| **All** | **82** | **70** | **£3,504.98** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£3,524.78**. Not priced yet: M01, M02, M11, M12, S08, A06, A07, A08, A09, N01, N02, T02.
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£3,504.98**. Not priced yet: M01, M02, M11, M12, S08, A06, A07, A08, A09, N01, N02, T02.
 
 ## Phase totals (D-66)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £2,274.45 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £2,254.65 |
 | 2 | ATC spindle + holders, air, mist, enclosure | £1,184.67 |
 | 3 | Tool rack, drive, forks | £65.66 |
 
@@ -68,8 +68,8 @@ Lines still TO PRICE: see the list above.
 | F11 | 1 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | Essentials smooth planed C16 whitewood CLS 38 x 63 x 2.4 m | [product](https://www.diy.com/departments/essentials-smooth-planed-c16-whitewood-spruce-cls-timber-l-2-4m-w-63mm-t-38mm/1798294_BQ.prd) | £3.97 each (B&Q, owner-confirmed), collect | 23.82 | v2: smaller moulds. B&Q £3.97 each |
 | F12 | 1 | Release agent: PVA + wax | 1 set |  | [product](https://www.ebay.co.uk/itm/235827548462) | PVA £13.50 free shipping (eBay UK) + wax £9.39 inc VAT + £8.79 express (AliExpress) | 31.68 | Wax: https://www.aliexpress.com/item/1005006037723287.html |
 | F13 | 1 | Plasticine for corner fillets | 1 set |  | [product](https://www.ebay.co.uk/itm/357951022386) | Plasticine £16.10 + £2.94 shipping (eBay UK) | 19.04 | Packing tape and silicone NOT priced |
-| F14 | 1 | Vibrator (owner DIY) | 2 pcs | Unbalanced vibration motors for the vibration table | [product]() | Owner DIY | 0.00 | D-65. DIY vibrator (e.g. unbalanced weight on a motor/sander). Test on a sample mould first |
-| F15 | 1 | Vibration table rubber feet | 8 pcs | M6 stud, 20 mm dia × 20 mm high rubber feet | [product]() | £19.80 for 8 (owner-confirmed) | 19.80 | Load rating not stated. Base pour = about 265 kg casting + about 30 kg mould, about 37 kg per foot. Check the rating, or add feet / use larger mounts. Table top sheet not priced |
+| F14 | 1 | Vibration table (owner DIY: tyres + board + unbalanced motor) | 2 pcs | 1-2 old tyres as springs, stiff board on top, motor with an eccentric weight | [product]() | Owner DIY | 0.00 | D-77 |
+| F15 | 1 | Vibration table mounts (replaced by tyres) | 8 pcs | M6 stud, 20 mm dia × 20 mm high rubber feet | [product]() | Not needed | 0.00 | D-77: tyres replace the rubber feet |
 | F16 | 1 | Temperature logging (owner DIY) | 1 set | Thermocouples or DS18B20 probes cast in | [product]() | Owner DIY | 0.00 | D-65. DS18B20 probes on a microcontroller |
 | F17 | 1 | Mixer | 1 pcs | Paddle mixer or small forced-action mixer | [product](https://www.screwfix.com/p/erbauer-epm1600-1600w-electric-paddle-mixer-220-240v/981kj) | £69.99 inc VAT (Screwfix) | 69.99 | Erbauer EPM1600 |
 | F18 | 1 | Packing tape + silicone | 1 set | 6 rolls clear tape + neutral-cure silicone | [product](https://www.ebay.co.uk/itm/165130410287) | £8.99 tape + £7.99 silicone, free delivery (eBay UK) | 16.98 | Silicone: https://www.ebay.co.uk/itm/257643689613 |
