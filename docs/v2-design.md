@@ -10,7 +10,7 @@ Model: [`cad/v2/type0_v2.py`](../cad/v2/type0_v2.py) → `cad/v2/out/type0_v2.st
 ## Joints
 **Base: one casting (D-76).** The spine and rear cross-piece are cast as one T-shaped base, about 52 kg (a 2-person lift). There is no frame joint, so the gantry's squareness to Y is set by the casting and the grout layer under the portal legs.
 
-**Portal → base (the only frame joint).** Each leg sits on the base's rear cross-piece. First assembly: shim the portal square to the Y rails, grout, cure, then ream for the dowels. 2 × M12 bolts per leg through cast sleeves into tapped insert bars in the foot, plus 1 × Ø10 dowel per leg.
+**Portal → base (the only frame joint).** Each leg sits on the base's rear cross-piece. First assembly: shim the portal square to the Y rails, grout, cure, then ream for the dowels. 2 × M12 bolts per leg through cast sleeves into tapped insert bars in the base, plus 1 × Ø10 dowel per leg.
 
 ## ATC wheel (Phase 3, D-73)
 - Ferris wheel, about Ø178, 8 ISO20 pockets (3D-printed forks, D-58), turning about an X axis in the Y–Z plane beside the right leg, under the beam overhang.
