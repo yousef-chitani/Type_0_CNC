@@ -1,0 +1,29 @@
+# Scale-down: frame options compared (draft)
+
+**New brief (2026-11-06):** upstairs flat. Every piece **≤ 40 kg** for moving. Work area **200 × 200 × 150 mm**. Total **about 150 kg** on anti-vibration feet. Coolant only inside an enclosure. ATC: decide later (leave room).
+
+Both options keep the fixed gantry and moving table, 1605 screws, HGR20 rails, closed-loop steppers, Mesa 7i76EU and the 80 mm spindle. The sizes below are first estimates for comparison only.
+
+| | **A. Bolt-together epoxy-granite modules** | **B. Steel box frame + removable sand fill** |
+|---|---|---|
+| How it's built | Base cast as 3 pieces, plus 2 uprights and a beam. Joined with dowels, bolts and a thin grout layer | Welded 100 × 100 × 5 box-section base ladder and gantry (two weldments), bolted together. Cavities sealed with fill/drain plugs |
+| Frame mass | About 137 kg of EG (base about 3 × 32 kg, uprights about 9 kg each, beam about 23 kg) | About 64 kg of steel (base about 43 kg: split in two or use 4 mm wall; gantry about 21 kg) + about 35 L of sand (**about 56 kg, added after it's in place**) |
+| Machine total | About 180 kg (over the 150 kg target unless the castings are thinned or cored) | **About 105 kg dry to move, about 160 kg filled** |
+| Heaviest piece | About 32 kg | About 43 kg (base: split or lighter wall) |
+| Stiffness | Good in each piece, but **every joint is a weak spot**. The Y rails must sit on one piece or cross a joint | High: steel is about 5× stiffer than EG. Welded joints. **Weld distortion**: rail seats need epoxy levelling or replication (process already planned) |
+| Damping | Best: EG's main advantage | Good once filled. Dry sand in steel tube is a well-known damping method. Poor when empty |
+| Accuracy after a move | Re-dowel, re-grout and re-square the gantry. Rails crossing a base joint need re-aligning | Bolt the gantry back on its dowels. Rails stay on one weldment, so their alignment is kept |
+| Epoxy needed | About 15 kg at 11% + levelling (Ampreg is about £15.60/kg inc VAT: about £235) | About 3 kg for levelling/replication only (the 5 kg GlassCast kit already covers it) |
+| Moulds, vibration table, aggregate | All still needed (about 6 moulds) | **None.** Kiln-dried sand for fill (already on the list as H&B 0–1 mm) |
+| Skills / tools | Mould making, casting, curing-heat control | Welding, cutting, a weld jig. Owner fabricates |
+| Build time | Long: castings cure about 7 days each, plus re-work if a casting fails | Shorter: weld, stress-relieve (or rough-machine then rest), level the seats, fill |
+| Indoor suitability | Heavy lifting into the flat. Casting must happen elsewhere (garage) | Weld elsewhere. Moves in light, filled in the room |
+
+## Recommendation
+**B: steel frame with removable sand fill.** It meets the 40 kg and 150 kg limits with margin, keeps its accuracy through a move, and drops the moulds, vibration table and most of the epoxy. A is the better damper, but the joints and the extra mass work against a flat that you'll move out of.
+
+## What changes in the parts list if B is chosen (to price)
+- Remove: main epoxy (F01), aggregates (F03, F04, F06), mould boards, timber and release (F10–F13, F18), vibration rubber feet (F15), mixer (F17), insert flat bar (F07 → smaller rail-seat bars), lifting rod (F08/F09).
+- Add: box-section steel for the frame (about 100 × 100 × 5, plus a 150 × 100 × 6 beam), steel plate for rail pads and the gantry joint, fill/drain plugs, kiln-dried sand for fill (about 56 kg), anti-vibration feet (4).
+- Shorter rails and screws (200 mm travel), smaller table plate (about 280 × 280).
+- The stand becomes a sturdy bench or low cabinet: the enclosure sits on the same base.

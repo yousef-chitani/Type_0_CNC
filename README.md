@@ -14,3 +14,4 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [Bill of materials](docs/bom.md): parts list, confirmed prices only
 - [Layout](docs/layout.md): parametric model, drawings, key dimensions
 - [Aggregates](docs/aggregates.md): sourcing options and questions for local suppliers
+- [Scale-down options](docs/scale-down-options.md): EG modules vs steel + sand fill
