@@ -15,3 +15,4 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [Layout](docs/layout.md): parametric model, drawings, key dimensions
 - [Aggregates](docs/aggregates.md): sourcing options and questions for local suppliers
 - [Scale-down options](docs/scale-down-options.md): EG modules vs steel + sand fill
+- [v2 design notes](docs/v2-design.md): flat-sized 3-casting machine, joints, ATC wheel
