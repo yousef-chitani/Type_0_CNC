@@ -1,26 +1,26 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £2,821.29** (budget £4,000, D-68). Every line priced.
+**Phase 1 priced total: £3,065.46** (budget £4,000, D-68). Every line priced. Work area 400 × 250 (D-79).
 
 | Subsystem | £ |
 |---|---|
-| Frame | £618.90 |
-| Motion | £830.09 |
+| Frame | £729.48 |
+| Motion | £963.68 |
 | Spindle | £444.05 |
 | Electronics | £751.82 |
 | Stand | £21.95 |
 | Metrology | £85.70 |
 | Fixings | £68.78 |
-| **Total** | **£2,821.29** |
+| **Total** | **£3,065.46** |
 
 ## Frame
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| F01 | Epoxy for main frame mix | 2 4.66 kg packs | £208.39 |
+| F01 | Epoxy for main frame mix | 3 4.66 kg packs | £312.59 |
 | F02 | Epoxy for leveling pour / grout / samples | 5 kg | £91.75 |
 | F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
-| F04 | Medium + fine: kiln-dried sand 0-1 mm | 2 20 kg bags | £12.76 |
+| F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
 | F07 | Steel flat bar 40 x 10 mm | 1 3 m bar | £36.00 |
 | F08 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | £28.74 |
@@ -39,18 +39,18 @@
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| M01 | HGR20 rail 650 mm | 2 pcs | £60.50 |
-| M02 | HGR20 rail 450 mm | 2 pcs | £67.24 |
+| M01 | HGR20 rail 650 mm | 2 pcs | £61.64 |
+| M02 | HGR20 rail 450 mm | 2 pcs | £79.04 |
 | M03 | HGR20 rail 300 mm | 2 pcs | £57.34 |
 | M04 | HGH20CA carriage Z1 preload | 12 pcs | £0.00 |
-| M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 3 pcs | £185.02 |
+| M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 3 pcs | £198.65 |
 | M06 | BK12 + BF12 end supports | 3 sets | £0.00 |
 | M07 | Nut housing DSG16H | 3 pcs | £0.00 |
 | M08 | Disc or bellows coupling 10 mm to 10 mm | 3 pcs | £13.09 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | £112.71 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
-| M11 | Aluminium tooling plate 330 x 330 x 30 mm | 1 pcs | £114.31 |
+| M11 | Aluminium tooling plate 330 x 330 x 30 mm | 1 pcs | £221.33 |
 | M12 | Aluminium plate for X saddle and Z spindle plate | 1 lot | £85.85 |
 | M13 | Motor and bearing mounts | 1 lot | £40.59 |
 
