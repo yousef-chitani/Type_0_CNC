@@ -1,36 +1,36 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,487.80** (budget £4,000, D-68). Not yet priced: S08 Phase 1 spindle: Jianken JGD-80 2.2 kW water-cooled ER20.
+**Phase 1 priced total: £2,641.55** (budget £4,000, D-68). Not yet priced: S08 Phase 1 spindle: Jianken JGD-80 2.2 kW water-cooled ER20.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £1,269.17 |
-| Motion | £890.04 |
+| Frame | £618.90 |
+| Motion | £830.09 |
 | Spindle | £264.31 |
 | Electronics | £751.82 |
-| Stand | £157.98 |
+| Stand | £21.95 |
 | Metrology | £85.70 |
 | Fixings | £68.78 |
-| **Total** | **£3,487.80** |
+| **Total** | **£2,641.55** |
 
 ## Frame
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| F01 | Epoxy for main frame mix | 1 set | £666.59 |
+| F01 | Epoxy for main frame mix | 2 4.66 kg packs | £208.39 |
 | F02 | Epoxy for leveling pour / grout / samples | 5 kg | £91.75 |
-| F03 | Coarse aggregate: quartz 2-5 mm | 6 25 kg bags | £87.12 |
-| F04 | Medium + fine: kiln-dried sand 0-1 mm | 8 20 kg bags | £51.04 |
+| F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
+| F04 | Medium + fine: kiln-dried sand 0-1 mm | 2 20 kg bags | £12.76 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
-| F07 | Steel flat bar 40 x 10 mm | 2 3 m bars | £72.00 |
+| F07 | Steel flat bar 40 x 10 mm | 1 3 m bar | £36.00 |
 | F08 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | £28.74 |
 | F09 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 |
-| F10 | MDF sheets for moulds (floors + walls) | 2 sheets | £56.00 |
-| F11 | CLS timber 38 x 63 x 2400 (mould bracing) | 9 lengths | £35.73 |
+| F10 | MDF sheets for moulds (floors + walls) | 1 sheet | £28.00 |
+| F11 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | £23.82 |
 | F12 | Release agent: PVA + wax | 1 set | £31.68 |
 | F13 | Plasticine for corner fillets | 1 set | £19.04 |
-| F14 | Vibrator (owner DIY) | 2 pcs | £0.00 |
-| F15 | Vibration table rubber feet | 8 pcs | £19.80 |
+| F14 | Vibration table (owner DIY: tyres + board + unbalanced motor) | 2 pcs | £0.00 |
+| F15 | Vibration table mounts (replaced by tyres) | 8 pcs | £0.00 |
 | F16 | Temperature logging (owner DIY) | 1 set | £0.00 |
 | F17 | Mixer | 1 pcs | £69.99 |
 | F18 | Packing tape + silicone | 1 set | £16.98 |
@@ -39,19 +39,19 @@
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| M01 | HGR20 rail 650 mm | 2 pcs | £104.59 |
-| M02 | HGR20 rail 450 mm | 2 pcs | £22.99 |
-| M03 | HGR20 rail 300 mm | 2 pcs | £20.29 |
+| M01 | HGR20 rail 650 mm | 2 pcs | £60.50 |
+| M02 | HGR20 rail 450 mm | 2 pcs | £67.24 |
+| M03 | HGR20 rail 300 mm | 2 pcs | £57.34 |
 | M04 | HGH20CA carriage Z1 preload | 12 pcs | £0.00 |
-| M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 3 pcs | £186.82 |
+| M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 3 pcs | £185.02 |
 | M06 | BK12 + BF12 end supports | 3 sets | £0.00 |
 | M07 | Nut housing DSG16H | 3 pcs | £0.00 |
 | M08 | Disc or bellows coupling 10 mm to 10 mm | 3 pcs | £13.09 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | £112.71 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
-| M11 | Aluminium tooling plate 330 x 330 x 30 mm | 1 pcs | £190.54 |
-| M12 | Aluminium plate for X saddle and Z spindle plate | 1 lot | £104.98 |
+| M11 | Aluminium tooling plate 330 x 330 x 30 mm | 1 pcs | £114.31 |
+| M12 | Aluminium plate for X saddle and Z spindle plate | 1 lot | £85.85 |
 | M13 | Motor and bearing mounts | 1 lot | £40.59 |
 
 ## Spindle
@@ -93,8 +93,8 @@
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| T01 | Stand steel 60 × 60 × 3 (reduced cut list) | 1 lot | £136.00 |
-| T02 | Levelling feet | 4 pcs | £21.98 |
+| T01 | Bench (owner-built timber) | 1 lot | £0.00 |
+| T02 | Anti-vibration feet | 4 pcs | £21.95 |
 
 ## Metrology
 
