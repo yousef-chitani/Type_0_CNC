@@ -79,3 +79,4 @@
 | D-75 | v2 model accepted: castings 36.2 / 15.6 / 29.0 kg (80.8 kg). Travel X 380 / Y 200 / Z 150. Rails X 560, Y 400, Z 350. Screws X 550, Y 400, Z 350. Bench top 785 mm. Joints and wheel mount in v2-design.md | Rev B approved by owner |
 | D-76 | Spine and rear foot cast as **one T-shaped base**, about 52 kg (2-person carry). Frame = 2 castings: base + portal | Owner: 2 people can carry it upstairs. Removes the only frame joint |
 | D-77 | Vibration table: 1–2 old tyres as springs, a stiff board, and a motor with an unbalanced shaft. Replaces the vibration motors and rubber feet | Owner's method: cheap and proven |
+| D-78 | Phase 1 spindle: **G-Penny 2.2 kW ER20 water-cooled kit** (£217.39) with Huanyang VFD, clamp, pump and collets. Replaces the Jianken JGD-80 (D-70) and the separate VFD, clamp and 24 V pump | Known maker, runout 0.005 mm stated, P4 angular-contact bearings, LinuxCNC has a Huanyang driver |

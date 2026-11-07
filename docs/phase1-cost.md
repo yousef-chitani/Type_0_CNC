@@ -1,17 +1,17 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £2,641.55** (budget £4,000, D-68). Not yet priced: S08 Phase 1 spindle: Jianken JGD-80 2.2 kW water-cooled ER20.
+**Phase 1 priced total: £2,720.52** (budget £4,000, D-68). Not yet priced: none.
 
 | Subsystem | £ |
 |---|---|
 | Frame | £618.90 |
 | Motion | £830.09 |
-| Spindle | £264.31 |
+| Spindle | £343.28 |
 | Electronics | £751.82 |
 | Stand | £21.95 |
 | Metrology | £85.70 |
 | Fixings | £68.78 |
-| **Total** | **£2,641.55** |
+| **Total** | **£2,720.52** |
 
 ## Frame
 
@@ -58,12 +58,12 @@
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| S08 | Phase 1 spindle: Jianken JGD-80 2.2 kW water-cooled ER20 | 1 pcs | Awaiting Jianken quote |
+| S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 1 pcs | £217.39 |
 | S09 | ER20 collet set | 1 set | £34.49 |
-| S02 | VFD 2.2 kW with RS-485 Modbus | 1 pcs | £88.94 |
-| S03 | Spindle mount clamp to suit spindle body diameter | 1 pcs | £17.89 |
+| S02 | VFD (included in the G-Penny kit, S08) | 1 pcs | £0.00 |
+| S03 | 80 mm spindle clamp (included in S08) | 1 pcs | £0.00 |
 | S04 | Shielded 4-core spindle cable | 5 m | £18.22 |
-| S05 | Spindle cooling loop (DIY) | 1 pcs | £104.77 |
+| S05 | Spindle cooling loop (DIY) | 1 pcs | £73.18 |
 
 ## Electronics
 
