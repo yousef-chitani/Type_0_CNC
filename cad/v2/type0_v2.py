@@ -9,14 +9,14 @@ import cadquery as cq
 OUT = pathlib.Path(__file__).parent / "out"; OUT.mkdir(exist_ok=True)
 
 P = dict(
-    travel_x_work=200, travel_y=200, travel_z=150, vise=100, nose_clear=180,
-    table_x=280, table_y=280, table_t=25,
+    travel_x_work=400, travel_y=250, travel_z=150, vise=100, nose_clear=180,   # D-79: work area 400 x 250
+    table_x=460, table_y=330, table_t=25,
     rail_w=20, rail_h=17.5, block_h=30, block_l=77.5,          # HGR20/HGH20CA VERIFY
-    y_rail_spacing=180, y_block_pitch=120, x_rail_spacing=80, x_block_pitch=100,
+    y_rail_spacing=280, y_block_pitch=150, x_rail_spacing=80, x_block_pitch=100,   # D-80
     z_rail_spacing=80, z_block_pitch=90, saddle_w=180,
     nut_len=90, ends_len=45, screw_margin=20,                  # DFU1605 + BK/BF12 VERIFY
     spindle_d=80, spindle_len=213,                             # ER20 80x213 (ATC about 300)
-    h=110, spine_w=260, upright_w=70, portal_d=130, beam_h=130, beam_front=110,
+    h=110, spine_w=320, upright_w=70, portal_d=130, beam_h=130, beam_front=110,
     leg_clear=20, foot_back_bar=60, opening_h=225,
     wheel_pockets=8, pocket_pitch=70, wheel_gap=20, wheel_t=60,
     bench_top_to_table=None, table_top_above_floor=950,
@@ -101,7 +101,7 @@ def report():
     p, d = P, D; r = lambda v: f"{v:,.0f}"
     L = ["# Type 0 v2: key dimensions (generated)", "", "From `cad/v2/type0_v2.py`. Z = 0 is the top of the spine/foot castings.", "",
          "| | |", "|---|---|",
-         f"| Travel X / Y / Z | {r(d['travel_x'])} (200 work + reach to the ATC wheel) / {r(p['travel_y'])} / {r(p['travel_z'])} |",
+         f"| Travel X / Y / Z | {r(d['travel_x'])} (400 work + reach to the ATC wheel) / {r(p['travel_y'])} / {r(p['travel_z'])} |",
          f"| Table | {p['table_x']} x {p['table_y']} x {p['table_t']}, top at Z {r(d['table_top_z'])} |",
          f"| Spindle nose top / bottom | Z {r(d['nose_top'])} / {r(d['nose_bottom'])} |",
          f"| Gantry opening | {r(d['open_x1']-d['open_x0'])} wide x {r(d['beam_bottom'])} high. Beam top Z {r(d['beam_top'])} |",

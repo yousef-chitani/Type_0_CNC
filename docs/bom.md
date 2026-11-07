@@ -1,13 +1,13 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **82 line items, 82 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **82 line items, 79 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
-| Frame | 17 | 17 | £618.90 |
-| Motion | 14 | 14 | £830.09 |
+| Frame | 17 | 17 | £729.48 |
+| Motion | 14 | 11 | £464.66 |
 | Spindle | 9 | 9 | £1,500.91 |
 | Tool changer | 7 | 7 | £164.78 |
 | Pneumatics | 6 | 6 | £117.00 |
@@ -16,14 +16,14 @@ Full list: [bom.csv](bom.csv). **82 line items, 82 priced.** Prices were read fr
 | Stand | 2 | 2 | £21.95 |
 | Metrology | 2 | 2 | £85.70 |
 | Fixings | 2 | 2 | £68.78 |
-| **All** | **82** | **82** | **£4,254.67** |
+| **All** | **82** | **79** | **£3,999.82** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,254.67**. Not priced yet: .
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£3,999.82**. Not priced yet: M02, M05, M11.
 
 ## Phase totals (D-66)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £2,821.29 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £2,566.44 |
 | 2 | ATC spindle + holders, air, mist, enclosure | £1,268.60 |
 | 3 | Tool rack, drive, forks | £164.78 |
 
@@ -34,14 +34,14 @@ Lines still TO PRICE: see the list above.
 |---|---|---|
 | S01 | Jianken JGL-80/2.2R24-20 ATC spindle | 990.57 |
 | S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 318.16 |
+| F01 | Epoxy for main frame mix | 312.59 |
 | E01 | Mesa 7i76EU | 257.74 |
-| F01 | Epoxy for main frame mix | 208.39 |
-| M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 185.02 |
 | E04 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 138.60 |
-| M11 | Aluminium tooling plate 330 x 330 x 30 mm | 114.31 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 112.71 |
 | F02 | Epoxy for leveling pour / grout / samples | 91.75 |
 | M12 | Aluminium plate for X saddle and Z spindle plate | 85.85 |
+| S05 | Spindle cooling loop (DIY) | 73.18 |
+| F17 | Mixer | 69.99 |
 
 ## Warnings
 - **Not in the total yet:** spindle import VAT (if not collected at checkout), GCL pallet delivery, vibration table top sheet.
@@ -56,10 +56,10 @@ Lines still TO PRICE: see the list above.
 
 | ID | Stage | Item | Qty | Spec | Link | Listed price | Line £ | Notes |
 |---|---|---|---|---|---|---|---|---|
-| F01 | 1 | Epoxy for main frame mix | 2 4.66 kg packs | Ampreg 30 slow, 2 × 4.66 kg (9.3 kg): v2 needs about 9 kg at 11% | [product](https://ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow) | £86.83 ex VAT per 4.66 kg pack (EC Fibreglass, read 2026-11-05) | 208.39 | v2 resize. Inc VAT calculated. Hardener believed included: confirm with ECF. Epoxy choice still open |
+| F01 | 1 | Epoxy for main frame mix | 3 4.66 kg packs | Ampreg 30 slow, 3 × 4.66 kg (14 kg): frame needs about 11.7 kg at 11% | [product](https://ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow) | £86.83 ex VAT per 4.66 kg pack (EC Fibreglass, read 2026-11-05) | 312.59 | D-79 resize. £86.83 ex VAT per pack (read 2026-11-05), inc VAT calculated. Hardener believed included: confirm with ECF |
 | F02 | 1 | Epoxy for leveling pour / grout / samples | 5 kg | Very low viscosity and slow cure (e.g. GlassCast 50 PLUS) | [product](https://www.easycomposites.co.uk/glasscast-50-plus-clear-epoxy-casting-resin) | £76.46 ex VAT per 5 kg kit (Easy Composites) | 91.75 | Inc VAT calculated at 20% |
 | F03 | 1 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | Washed, kiln-dried angular quartz 2-5 mm (resin-bound grade) | [product](https://www.gclproducts.co.uk/p/resin-bound-gravel/winter-quartz-2-5mm-gravel) | £12.10 ex VAT / £14.52 inc VAT per 25 kg (GCL PermaBound Winter Quartz) | 29.04 | v2 resize: about 32 kg coarse needed. GCL pallet delivery cost to confirm |
-| F04 | 1 | Medium + fine: kiln-dried sand 0-1 mm | 2 20 kg bags | Kiln Dried KDIS Pavior Sand 0-1 mm | [product](https://hancockandbrown.com/kiln-dried-block-paving-sand-20kg-bag) | £6.38 inc VAT per 20 kg (Hancock & Brown, Swansea) | 12.76 | v2 resize: about 32 kg medium + fine. Collect from Hancock & Brown |
+| F04 | 1 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | Kiln Dried KDIS Pavior Sand 0-1 mm | [product](https://hancockandbrown.com/kiln-dried-block-paving-sand-20kg-bag) | £6.38 inc VAT per 20 kg (Hancock & Brown, Swansea) | 19.14 | D-79 resize: about 43 kg medium + fine. Hancock & Brown £6.38 each |
 | F06 | 1 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | Pottery-grade whiting, dry powder (< 0.1 mm) | [product](https://valentineclays.co.uk/products/whiting) | £20.42 inc VAT per 25 kg (Valentine Clays) | 20.42 | D-64. Delivery cost not shown: check in the basket. Alternatives: Potterycrafts silica flour £36.05 ex VAT (£43.26 inc), Womersleys Trucarb whiting from £11.55 ex VAT (construction chalk, dryness not stated). Keep the bag sealed and dry |
 | F07 | 1 | Steel flat bar 40 x 10 mm | 1 3 m bar | 40 × 10 mild steel flat bar, 3 m | [product](https://www.themetalstore.co.uk/products/3-metre-lengths-10mm-flat-bar) | £30.00 ex VAT / £36.00 inc VAT per 3 m bar (The Metal Store) | 36.00 | v2: rail inserts (Y 2 × 400, X 2 × 560) + joint bars, about 3 m |
 | F08 | 1 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | Zinc or plain steel | [product](https://www.ebay.co.uk/itm/361927188666) | £19.65 for 2 × 1 m rods, free shipping (eBay UK) + nuts £9.09 inc VAT (Screwfix) | 28.74 | Nuts: https://www.screwfix.com/p/easyfix-bzp-steel-hex-nuts-m12-100-pack/15569 |
@@ -73,18 +73,18 @@ Lines still TO PRICE: see the list above.
 | F16 | 1 | Temperature logging (owner DIY) | 1 set | Thermocouples or DS18B20 probes cast in | [product]() | Owner DIY | 0.00 | D-65. DS18B20 probes on a microcontroller |
 | F17 | 1 | Mixer | 1 pcs | Paddle mixer or small forced-action mixer | [product](https://www.screwfix.com/p/erbauer-epm1600-1600w-electric-paddle-mixer-220-240v/981kj) | £69.99 inc VAT (Screwfix) | 69.99 | Erbauer EPM1600 |
 | F18 | 1 | Packing tape + silicone | 1 set | 6 rolls clear tape + neutral-cure silicone | [product](https://www.ebay.co.uk/itm/165130410287) | £8.99 tape + £7.99 silicone, free delivery (eBay UK) | 16.98 | Silicone: https://www.ebay.co.uk/itm/257643689613 |
-| M01 | 1 | HGR20 rail 650 mm | 2 pcs | Y: 2 × 400 mm HGR20 + 4 × HGH20CA (v2) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £60.50 inc VAT, free shipping (AliExpress MHCN; "max 1 per shopper", normal £126.79) | 60.50 | Y 2 × 400 mm. Deal price per size: if refused, normal £126.79. Kaiyade fallback £21.29 + £79.28 shipping PER ITEM (not per order) |
-| M02 | 1 | HGR20 rail 450 mm | 2 pcs | X: 2 × 600 mm HGR20 + 4 × HGH20CA (560 not offered; min 558) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £67.24 inc VAT, free shipping (MHCN; "max 1 per shopper", normal £140.29) | 67.24 | Deal price per size: if refused, normal £140.29 |
+| M01 | 1 | HGR20 rail 650 mm | 2 pcs | Y: 2 × 500 mm HGR20 + 4 × HGH20CA (min 478, D-80) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £61.64 inc VAT, free shipping (MHCN 500 mm, read 2026-11-05; "max 1 per shopper", normal £129.08) | 61.64 | Y 2 × 400 mm. Deal price per size: if refused, normal £126.79. Kaiyade fallback £21.29 + £79.28 shipping PER ITEM (not per order) |
+| M02 | 1 | HGR20 rail 450 mm | 2 pcs | X: 2 × 800 mm HGR20 + 4 × HGH20CA (min 748, D-79) | [product](https://www.aliexpress.com/item/1005010242098397.html) | TO PRICE (MHCN 800 mm option) |  | Deal price per size: if refused, normal £140.29 |
 | M03 | 1 | HGR20 rail 300 mm | 2 pcs | Z: 2 × 350 mm HGR20 + 4 × HGH20CA (v2, min 318) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £57.34 inc VAT, free shipping (MHCN, read 2026-11-05; "max 1 per shopper", normal £120.47) | 57.34 | Switched from Kaiyade: its shipping is per item, not per order (task 6). Deal price: if refused, normal £120.47 |
 | M04 | 1 | HGH20CA carriage Z1 preload | 12 pcs | 4 per axis | [product](https://www.aliexpress.com/item/1005009213173130.html) | Included in M01-M03 | 0 | 4 HGH20CA per Kaiyade kit. Preload not stated |
-| M05 | 1 | SFU1605 ballscrew + DFU1605 preloaded nut | 3 pcs | DFU1605 kits: X 550, Y 400, Z 350 mm (v2 mins 535 / 355 / 305) | [product](https://www.aliexpress.com/item/1005010046279521.html) | £65.39 (550) + £57.19 (400) + £54.59 (350) inc VAT + £7.85 shipping (AliExpress METALWORK, read 2026-11-05) | 185.02 | v2 resize, all three lengths read from the listing. Confirm overall vs thread length |
+| M05 | 1 | SFU1605 ballscrew + DFU1605 preloaded nut | 3 pcs | DFU1605 kits: X 750, Y 450, Z 350 mm (mins 725 / 405 / 305, D-79) | [product](https://www.aliexpress.com/item/1005010046279521.html) | Y 450 £58.99 + Z 350 £54.59 inc VAT (read 2026-11-05); X 750 TO PRICE |  | D-79 resize. Confirm overall vs thread length |
 | M06 | 1 | BK12 + BF12 end supports | 3 sets |  | [product](https://www.aliexpress.com/item/1005010046279521.html) | Included in M05 | 0 |  |
 | M07 | 1 | Nut housing DSG16H | 3 pcs |  | [product](https://www.aliexpress.com/item/1005010046279521.html) | Included in M05 | 0 |  |
 | M08 | 1 | Disc or bellows coupling 10 mm to 10 mm | 3 pcs | Listings give a 10 mm shaft on the 4 Nm NEMA 24 (24HS40-5004D-E1000). Verify. BK12 end is 10 mm | [product](https://www.aliexpress.com/item/1005009879991986.html) | £3.35 inc VAT each + £3.04 shipping (AliExpress) | 13.09 | D26 L35 double diaphragm, 10 × 10 bore. All 3 motors confirmed 10 mm shaft |
 | M09 | 1 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | X and Y. Candidate: StepperOnline 1-CL57T-S40-V41 (24HS40-5004D-E1000 + CL57T V4.1 / 24-48 V DC / 1000 PPR encoder) | [product](https://www.omc-stepperonline.com/ts-series-4-0-nm-566-56oz-in-1-axis-closed-loop-stepper-cnc-kit-nema-24-motor-driver-1-cl57t-s40-v41) | £51.34 (VAT?) per set + £10.03 UK warehouse (StepperOnline) | 112.71 | 24HS40-5004D-E1000 + CL57T-V41. Shaft 10 mm D-cut. UK stock 5. VAT basis unclear |
 | M10 | 1 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | StepperOnline 24HS34-5004D-E1000-B280: 3 Nm / 5 A / 1000 PPR encoder / 2.8 Nm 24 V power-off brake | [product](https://www.omc-stepperonline.com/s-series-nema-24-closed-loop-stepper-motor-3-0nm-424-92oz-in-with-2-8nm-396-51oz-in-electromagnetic-brake-24hs34-5004d-e1000-b280) | £59.22 (VAT?) (StepperOnline) | 59.22 | China warehouse only, backorder, est. 13-19 Nov. Shaft 10 mm D-cut. Shipping not shown |
 | M14 | 1 | CL57T V4.1 closed-loop driver | 1 pcs | For the Z brake motor. 24-48 V DC / 0-8 A | [product](https://www.omc-stepperonline.com/closed-loop-stepper-driver-v4-1-0-8-0a-24-48vdc-for-nema-17-23-24-stepper-motor-cl57t-v41) | £28.75 (VAT?) + £5.47 DE warehouse (StepperOnline) | 34.22 | No UK stock |
-| M11 | 1 | Aluminium tooling plate 330 x 330 x 30 mm | 1 pcs | 6082 aluminium 280 × 280 × 25 mm (v2) | [product](https://www.aluminiumwarehouse.co.uk/products/25-mm-6082-aluminium-plate) | £95.26 ex VAT, 6082 280 × 280 × 25 custom cut (Aluminium Warehouse) | 114.31 | Inc VAT calculated. Free delivery when the order is ≥ £150 ex VAT (M11 + M12 = £166.80 ex VAT), except Dyfed/Powys etc.: check SA2 at checkout, else £24.95. Cast tooling plate £129.65 ex VAT |
+| M11 | 1 | Aluminium tooling plate 330 x 330 x 30 mm | 1 pcs | 6082 aluminium 460 × 330 × 25 mm (D-79) | [product](https://www.aluminiumwarehouse.co.uk/products/25-mm-6082-aluminium-plate) | TO PRICE (Aluminium Warehouse 25 mm, custom cut) |  | Inc VAT calculated. Free delivery when the order is ≥ £150 ex VAT (M11 + M12 = £166.80 ex VAT), except Dyfed/Powys etc.: check SA2 at checkout, else £24.95. Cast tooling plate £129.65 ex VAT |
 | M12 | 1 | Aluminium plate for X saddle and Z spindle plate | 1 lot | 6082 20 mm: saddle about 180 × 160, Z plate about 140 × 320 (v2) | [product](https://www.aluminiumwarehouse.co.uk/products/20-mm-6082-aluminium-plate) | £27.99 (180 × 160 × 20) + £43.55 (320 × 140 × 20) ex VAT (Aluminium Warehouse) | 85.85 | Same order as M11. Inc VAT calculated |
 | M13 | 1 | Motor and bearing mounts | 1 lot | Machined or bought brackets | [product](https://www.aliexpress.com/item/1005006232398099.html) | £9.99 inc VAT each + £10.62 shipping (AliExpress) | 40.59 | HM12-60 motor bracket with fixed bearing seat (replaces BK12 at motor end). Check fit with M05 |
 | S01 | 2 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | 2.2 kW / 24000 rpm / 400 Hz / 220 V / about 0.87 Nm / ISO20 / water-cooled / 80 mm body. Order the clamp/unclamp sensor variant (PNP) | [product](https://www.alibaba.com/product-detail/Jianken-JGL-80-2-2KW-24000RPM_1601249825246.html) | £937.79 (VAT?) + £52.78 shipping (Alibaba, 1-4 pcs) | 990.57 | Owner is contacting Jianken and ordering. Drawing confirms JGL-80/2.2R24, 220 V, 400 Hz, ISO20-ER16, water-cooled. Sensors: clamped/released + temperature, PNP 24 V. VFD not included. Pull stud not shown. KEY ATTRIBUTES SAY 0.7 Nm (other listings 0.87 Nm): confirm with Jianken. Import VAT likely on top. Delivery 18 Nov-19 Dec. Alt AliExpress with 2.2 kW VFD £1402.79 inc VAT + £140.15: https://www.aliexpress.com/item/1005010706946690.html |
@@ -129,7 +129,7 @@ Lines still TO PRICE: see the list above.
 | E19 | 1 | DIN rail + ferrules + wire | 1 set | 1 m DIN, ferrule kit + crimper, 0.75 and 1.5 mm² wire 10 m each | [product](https://www.ebay.co.uk/itm/174026089905) | £7.94 + £1.99 DIN, £7.99 ferrules, £4.30 + £2.99 + £2.85 wire (eBay UK) | 28.06 | Ferrules: https://www.ebay.co.uk/itm/860051234272 . 0.75: https://www.ebay.co.uk/itm/115469225740 . 1.5: https://www.ebay.co.uk/itm/257223178155 |
 | E20 | 1 | Shielded motor/encoder cable | 15 m | CY 4-core 1.0 mm² | [product](https://www.ebay.co.uk/itm/171352110328) | £2.14 per m + £3.95 (eBay UK) | 36.05 |  |
 | E21 | 1 | Reset push button | 1 pcs | 22 mm green momentary | [product](https://www.ebay.co.uk/itm/286127619269) | £6.39, free delivery (eBay UK) | 6.39 |  |
-| N01 | 2 | Enclosure box: 12 mm MDF | 2 sheets | 12 × 1220 × 2440 MDF, box about 760 W × 780 D × 700 H | [product](https://www.wickes.co.uk/General-Purpose-MDF-Sheet---12-x-1220-x-2440mm/p/110034) | £26 each inc VAT (Wickes), click and collect | 52.00 | MDF route (cheapest). Seal inside against coolant. Screws, hinges, edge strip not priced |
+| N01 | 2 | Enclosure box: 12 mm MDF | 2 sheets | 12 × 1220 × 2440 MDF, box about 760 W × 780 D × 700 H | [product](https://www.wickes.co.uk/General-Purpose-MDF-Sheet---12-x-1220-x-2440mm/p/110034) | £26 each inc VAT (Wickes), click and collect | 52.00 | D-79: the machine is now about 840 × 780 footprint: enclosure about 950 W × 850 D × 700 H internal. 2 MDF sheets may no longer be enough: re-check |
 | N02 | 2 | Enclosure window: 4 mm polycarbonate | 1 pcs | 4 mm clear polycarbonate 600 × 600 | [product](https://www.ebay.co.uk/itm/127568551200) | £31.93 (VAT?), free delivery (eBay UK) | 31.93 | Extrusion + full polycarbonate route would be about £563 |
 | N03 | 2 | LED light | 1 pcs |  | [product](https://www.aliexpress.com/item/1005013221981188.html) | £2.74 inc VAT (AliExpress) | 2.74 | 24-36 V 5 W |
 | T01 | 1 | Bench (owner-built timber) | 1 lot | Owner-built timber bench, top 785 mm above the floor, carries about 150 kg + enclosure | [product]() | Owner build | 0.00 | D-71 |

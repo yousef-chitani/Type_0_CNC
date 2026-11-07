@@ -4,8 +4,8 @@ Model: [`cad/v2/type0_v2.py`](../cad/v2/type0_v2.py) → `cad/v2/out/type0_v2.st
 
 ## Brief (D-71, D-73)
 - Upstairs flat. Every piece ≤ 40 kg. Machine about 120–130 kg plus enclosure, on 4 anti-vibration feet on the owner's timber bench (top 785 mm above the floor).
-- Travel X 380 (200 work + reach to the ATC wheel), Y 200, Z 150. Table 280 × 280.
-- 2 solid epoxy-granite castings (D-76), with capped PVC cores in the portal beam (D-74): base 51.8 kg (2-person lift), portal 29.0 kg.
+- **Work area 400 × 250 (D-79).** Travel X 570 (400 work + reach to the ATC wheel), Y 250, Z 150. Table 460 × 330 × 25. Y rails 280 apart on a 320 spine (D-80).
+- 2 solid epoxy-granite castings (D-76), with capped PVC cores in the portal beam (D-74): base about 72 kg (2-person lift, FEA to trim later: D-81), portal about 34 kg.
 
 ## Joints
 **Base: one casting (D-76).** The spine and rear cross-piece are cast as one T-shaped base, about 52 kg (a 2-person lift). There is no frame joint, so the gantry's squareness to Y is set by the casting and the grout layer under the portal legs.

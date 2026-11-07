@@ -80,3 +80,6 @@
 | D-76 | Spine and rear foot cast as **one T-shaped base**, about 52 kg (2-person carry). Frame = 2 castings: base + portal | Owner: 2 people can carry it upstairs. Removes the only frame joint |
 | D-77 | Vibration table: 1–2 old tyres as springs, a stiff board, and a motor with an unbalanced shaft. Replaces the vibration motors and rubber feet | Owner's method: cheap and proven |
 | D-78 | Phase 1 spindle: **G-Penny 2.2 kW ER20 water-cooled kit** (£217.39) with Huanyang VFD, clamp, pump and collets. Replaces the Jianken JGD-80 (D-70) and the separate VFD, clamp and 24 V pump | Known maker, runout 0.005 mm stated, P4 angular-contact bearings, LinuxCNC has a Huanyang driver |
+| D-79 | Work area **400 × 250**, Z 150 (fits 75% keyboards with room for fixtures). Table 460 × 330 × 25. Travel X 570 (incl. ATC reach) / Y 250 / Z 150 | Owner: wider range of work |
+| D-80 | Y rails 280 mm apart on a 320 mm-wide spine (block pitch 150). Base about 72 kg, portal about 34 kg, frame about 106 kg | Table overhang about 90 mm per side instead of 140 |
+| D-81 | Base mass accepted for now. Owner will run FEA later to find where material can be removed (ribs, cores) | Owner |
