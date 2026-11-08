@@ -21,7 +21,7 @@ Panel area about 3.59 m². One 2440 × 1220 sheet is 2.98 m², so **2 sheets** a
 - 2 gas struts (about 100–150 N each, sized for the door weight) or a fold-down stay to hold the door open.
 - Door handle and a magnetic catch.
 - Door interlock: the E15 switch (already in Phase 2), wired to stop the spindle when the door opens.
-- Cables and hoses leave through a slot in the bench top at the back right, inside the enclosure (D-97): no slot in the back panel needed.
+- Cables and hoses leave through an 80 × 160 grommet in the bench top, right of the base, inside the enclosure (D-97, D-99): no slot in the back panel needed.
 - Seal the inside with 2–3 coats of varnish or paint (MDF swells with coolant mist). Silicone the inside corners.
 - Foam tape along the bottom edges to seal against the bench top.
 

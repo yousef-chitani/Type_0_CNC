@@ -1,6 +1,8 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,082.35** (budget £4,000). Every line priced except the bench materials T03–T15 (D-97, price-check-task-11.md). No eBay.
+**Phase 1 priced total: £3,335.69** (budget £4,000). Every line priced. No eBay.
+
+Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
@@ -8,10 +10,10 @@
 | Motion | £1,004.77 |
 | Spindle | £489.14 |
 | Electronics | £818.49 |
-| Stand | £12.19 |
+| Stand | £265.53 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,082.35** |
+| **Total** | **£3,335.69** |
 
 ## Frame
 
@@ -74,6 +76,9 @@
 | E03 | Monitor + keyboard + mouse (owner already has) | 1 set | £0.00 |
 | E04 | 48 V PSU Mean Well SDR-480-48 (DIN) | 1 pcs | £136.06 |
 | E05 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | £27.62 |
+| E23 | Coolant pump relay (DIN interface relay, 24 V DC coil) | 1 pcs | £15.43 |
+| E24 | USB-RS485 adapter for the VFD link | 1 pcs | £13.59 |
+| E25 | TVS diode for the Z brake coil | 10 pcs (1 pack) | £2.57 |
 | E06 | E-stop safety relay Schneider Preventa XPSAC5121 | 1 pcs | £84.39 |
 | E07 | Contactor with 24 V coil | 1 pcs | £26.29 |
 | E08 | E-stop buttons 2 NC (×5) | 1 set | £12.39 |
@@ -87,9 +92,6 @@
 | E19 | (covered by E13) | 1 set | £0.00 |
 | E20 | (covered by S04) | 15 m | £0.00 |
 | E21 | Reset button 22 mm green (in your basket) | 1 pcs | £4.25 |
-| E23 | Coolant pump relay (Phoenix PLC-RSC, RS) | 1 pcs | £15.43 |
-| E24 | USB-RS485 adapter (Waveshare FT232RL, AliExpress) | 1 pcs | £13.59 |
-| E25 | TVS diode P6KE33CA (RS, pack of 10) | 1 pack | £2.57 |
 
 ## Stand
 
@@ -97,6 +99,19 @@
 |---|---|---|---|
 | T01 | Bench (owner-built timber) | 1 lot | £0.00 |
 | T02 | Anti-vibration feet | 4 pcs | £12.19 |
+| T03 | CLS timber 38 x 89 x 2.4 m (bench frame) | 6 lengths | £39.90 |
+| T04 | CLS timber 38 x 63 x 2.4 m (bench rails) | 2 lengths | £7.94 |
+| T05 | Hardwood plywood 18 mm 2440 x 1220 (bench top, shelf, back) | 2 sheets | £74.60 |
+| T06 | Hardwood plywood 12 mm 2440 x 1220 (bench side panels) | 1 sheet | £27.65 |
+| T07 | M8 x 120 bolts + nuts, washers, M8 barrel nuts | 20 sets | £28.59 |
+| T08 | Joist hangers (not needed: joists bolted, D-99) | 0 pcs | £0.00 |
+| T09 | M10 x 24 hex-drive threaded inserts, stainless | 4 pcs | £10.56 |
+| T10 | Steel corner braces + angle brackets | 10 pcs | £11.80 |
+| T11 | Wood screws 5 x 70, 4 x 30, 4 x 40 | 3 boxes | £10.47 |
+| T12 | PVA wood glue D3/D4, 1 L | 1 pcs | £11.99 |
+| T13 | Yacht varnish 750 ml | 1 pcs | £11.99 |
+| T14 | 120 mm fan finger guards | 2 pcs | £6.81 |
+| T15 | Desk cable grommet 80 x 160 with lid and brush (bench top) | 1 pcs | £11.04 |
 
 ## Metrology
 

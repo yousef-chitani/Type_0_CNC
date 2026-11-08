@@ -1,11 +1,11 @@
 # Open questions (updated 2026-11-08, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-98). Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-99). **Every Phase 1 BOM line is now priced: £3,335.69.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
 
 ## Before wave 1 (4 Jan 2027)
 
-1. **Price T14 (120 mm fan guards, AliExpress)** for the wave 1 basket. (E23, E24, E25 priced: D-98.)
-   Who: owner, from `price-check-task-11.md`. Also check the Waveshare USB-RS485 (E24) photos show A+/B-/GND screw terminals before ordering.
+1. **USB-RS485 adapter (E24):** check the Waveshare photos show A+/B-/GND screw terminals before ordering.
+   Who: owner, on the AliExpress page.
 2. **AliExpress basket clean-up**: remove the 6 mm ID tube; check the 12 ferrule packs, the HSC8 16-6 crimper, the 20/14 AWG wire. Add S08 + S05 to the wave 1 basket (D-94) and re-check the S08 price.
    Who: owner, logged in to AliExpress.
 3. **Safety relay terminal names** (S11/S12, S21/S22, S33/S34, 13-14, 23-24, 33-34). The product datasheet confirms 3 NO safety outputs but doesn't show the terminals.
@@ -13,8 +13,8 @@ Resolved items are in decisions.md (D-01 … D-98). Ordered by when the answer i
 
 ## Before wave 2 (15 Feb 2027)
 
-4. **Price the bench materials T03–T13, T15** and check whether B&Q Swansea cuts the ply sheets.
-    Who: owner, `price-check-task-11.md`.
+4. **Screwfix Swansea stock** for T11 (screws) and T13 (varnish): not read (Screwfix asked for a human check). Low risk: both are common lines.
+    Who: owner, at order time.
 5. **T02 foot height** sets the leg length (bench_cutlist.md assumes 30 mm from the floor to the leg bottom). T02 is in wave 2, so cut the legs after the feet arrive.
     Who: owner, measure the feet.
 6. **Reservoir size** for the cooling loop (not chosen yet): the bench leaves about 160 wide × 300 deep × 200 high at the back right of the shelf.
@@ -70,5 +70,6 @@ Resolved items are in decisions.md (D-01 … D-98). Ordered by when the answer i
 - Z brake hardwiring: done (D-93).
 - VFD driver: USB-RS485 + hy_vfd (D-92).
 - Spindle kit timing vs the VFD bench test: kit moved to wave 1 (D-94).
+- E23/E24/E25 and the bench materials priced (D-98, D-99).
 - Curing heat: estimate done, not the main risk (D-96); test-brick confirmation is item 6.
 - CL57T step/dir/ENA signal levels, step timing, DIP setting for 1,600 pulses/rev; XPSAC5121 output rating; 7I76EU output mode: from the manuals (electrical.md).
