@@ -32,7 +32,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 - Most supplier sites block this cloud session. Prices are gathered by the owner's **local browser session** using `docs/price-check-task-N.md` files (task 9 was the last). The owner logs in to AliExpress themselves; the session never handles credentials.
 - **Cast, not welded** (weld stress). Keep the frame in carriable pieces.
 - Write plainly; record every decision in `docs/decisions.md` with a D-number.
-- The owner has 3 × Bambu P1S printers: design small, low-load parts for printing (ASA) rather than buying them (D-100). Task 4 includes printed mould helpers.
+- The owner has 3 × Bambu P1S printers: design small, low-load parts for printing (PETG, D-101) rather than buying them (D-100). Task 4 includes printed mould helpers.
 
 ## 6. Next tasks (agreed order)
 1. ~~Electrical design~~: done, `docs/electrical.md` (D-91). Has CHECK items.
@@ -49,7 +49,7 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-100 |
+| `docs/decisions.md` | Decision log D-01 … D-101 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |

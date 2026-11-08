@@ -27,7 +27,7 @@ def fan_grill(size=120.0, pitch=105.0, t=3.0, hole_d=4.4, open_d=114.0, ring_w=2
 
 # ---------------------------------------------------------------------------
 # T15: cable + hose grommet for the bench top (36 mm thick). 3 parts:
-#   frame (ASA) drops into a 70 x 150 hole; membrane (TPU 95A) with slits; clamp ring (ASA)
+#   frame (PETG) drops into a 70 x 150 hole; membrane (TPU 95A) with slits; clamp ring (PETG)
 #   held by 4 x 4 x 30 wood screws (T11) through the ring and the flange into the bench top.
 #   Opening 60 x 140 for the hoses and cables.
 # ---------------------------------------------------------------------------
@@ -61,7 +61,7 @@ def grommet_ring():
     return r
 
 # ---------------------------------------------------------------------------
-# Bench front e-stop box (D-91): XB2-BS544 (E08) in a yellow ASA box on the front apron.
+# Bench front e-stop box (D-91): XB2-BS544 (E08) in a yellow PETG box on the front apron.
 #   Body: open front, 4 screw bosses, cable entry for an M20 gland in the bottom, 2 wood-screw
 #   holes in the back. Lid: 4 mm plate with a 22.5 mm hole (+ anti-turn notch).
 #   Inside 70 x 70 x 75 deep: CHECK the depth behind the panel on the button that arrives.
@@ -101,12 +101,12 @@ def estop_lid():
     return l
 
 PARTS = {
-    "T14_fan_grill_120": (fan_grill, "ASA or PETG", 2),
-    "T15_grommet_frame": (grommet_frame, "ASA", 1),
+    "T14_fan_grill_120": (fan_grill, "PETG", 2),
+    "T15_grommet_frame": (grommet_frame, "PETG", 1),
     "T15_grommet_membrane": (grommet_membrane, "TPU 95A", 1),
-    "T15_grommet_ring": (grommet_ring, "ASA", 1),
-    "E26_estop_box_body": (estop_body, "ASA, yellow", 1),
-    "E26_estop_box_lid": (estop_lid, "ASA, yellow", 1),
+    "T15_grommet_ring": (grommet_ring, "PETG", 1),
+    "E26_estop_box_body": (estop_body, "PETG, yellow", 1),
+    "E26_estop_box_lid": (estop_lid, "PETG, yellow", 1),
 }
 
 def bbox(shape):

@@ -407,7 +407,7 @@ HARDWARE = [   # price check 11 (2026-11-08), D-99
     ("T11", "Goldscrew 5 × 70 (100), 4 × 30 (200); Silverscrew 4 × 40 (200)", "3 boxes", "Screwfix, £10.47"),
     ("T12", "D4 PVA wood glue 1 L", "1", "B&Q marketplace (delivered), £11.99"),
     ("T13", "Yacht varnish 750 ml", "1", "Screwfix, £11.99"),
-    ("T14", "120 mm fan grills", "2", "3D printed (D-100): cad/v2/out/print/T14_fan_grill_120.stl, ASA/PETG"),
+    ("T14", "120 mm fan grills", "2", "3D printed (D-100): cad/v2/out/print/T14_fan_grill_120.stl, PETG"),
     ("T15", "Cable grommet: frame + TPU membrane + clamp ring, held by 4 of the T11 4 × 30 screws", "1", "3D printed (D-100): cad/v2/out/print/T15_*.stl"),
 ]
 
