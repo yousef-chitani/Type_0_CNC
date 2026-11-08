@@ -1,18 +1,20 @@
-# Open questions
+# Open questions (updated at handover, 2026-11-08)
 
-Roughly in the order we'll work through them. Resolved items are in decisions.md.
+Resolved items are in decisions.md (D-01 … D-91).
 
-1. **Epoxy choice:** the owner is asking others for recommendations. Shortlist in epoxy-options.md. Confirm with ECF that the Ampreg 30 slow packs include hardener.
-2. **Thermal management for solid castings:** the owner is researching. Checklist in eg-moulds.md.
-3. **EG mix design:** packing curve and grading split for the GCL quartz (2-5, 1-3 mm), B&Q kiln-dried sand and silica flour. Test-brick plan. Insert-bar anchoring.
-4. **Self-leveling rail-seat pour:** process, dams, linking channels, protecting the tapped holes.
-5. **Mould detail:** Y-screw channel (D-56), BK12/BF12 pads, gantry joint sleeves, lifting points, from the layout model.
-6. **Rack detail:** fork plate, row spacing (60 or staggered), dust cover, interlocks with the table position (Stage 2).
-7. **Electrical:** 7i76EU pin assignment (from the manual), e-stop wiring diagram, cabinet layout, mains supply (dedicated 16 A circuit?).
-8. **LinuxCNC config:** Modbus VFD driver, tool-change routine, homing, screw compensation.
-9. **Seller confirmations before ordering:**
-   - Kaiyade: is the £79 shipping charged once for all 3 rail kits?
-   - METALWORK: are the screw lengths overall or thread length?
-   - CW-3000 chiller: does it have an alarm output terminal?
-   - Jianken (owner ordering): torque (0.7 vs 0.87 Nm), pull-stud spec, clamp/unclamp sensors PNP, import VAT at checkout?
-   - Hancock & Brown: collection of 8 × 20 kg sand + 1 dust bag. GCL: pallet delivery cost to Swansea.
+## Before ordering (Phase 1, wave 1 on 4 Jan 2027)
+1. AliExpress METALWORK ballscrews: is "Guide Length" overall or thread length? (needs overall ≥ X 725 / Y 405 / Z 305)
+2. Aluminium Warehouse: free delivery for SA2 at checkout (order ≥ £150 ex VAT)?
+3. Flow switch (S05): contact rating suitable for a 24 V DC Mesa input?
+4. B&Q Swansea stock: 12 mm MDF (enclosure, Phase 2). GCL pallet delivery cost to Swansea. Hancock & Brown collection.
+5. E23 pump relay: price at RS.
+6. AliExpress basket clean-up (6 mm ID tube, 12 ferrule packs, HSC8 16-6 crimper, 20/14 AWG wire).
+7. Jianken (Phase 2 ATC spindle): torque 0.7 vs 0.87 Nm, pull-stud spec, PNP sensors, import VAT.
+
+## Design
+8. Epoxy: GlassCast 50 PLUS chosen (D-84). Confirm with test bricks (slow clear casting resin).
+9. Curing heat in solid castings and the cold shed (heater + insulated cover; probes).
+10. Owner FEA on the base (72 kg) to remove material (D-81).
+11. Portal beam overhang (160 mm) deflection with the saddle at the ATC pickup.
+12. Wiring CHECKs in electrical.md (XPSAC5121 terminals, CL57T ENA/ALM, VFD parameters).
+13. LinuxCNC driver for Modbus over the 7I76EU RS-485 port (task 2). Fallback: USB-RS485 + hy_vfd.
