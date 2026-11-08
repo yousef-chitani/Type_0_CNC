@@ -80,7 +80,7 @@ def svg_views(win):
     b += rect(Xs(win[0]-E["window_w"]/2), Zs(win[1]+E["window_h"]/2), Xs(win[0]+E["window_w"]/2), Zs(win[1]-E["window_h"]/2), win_c, 0.55)
     b += f'<line x1="{Xs(X["x0"]-t)}" y1="{Zs(X["z0"]+E["fixed_front_strip"])}" x2="{Xs(X["x1"]+t)}" y2="{Zs(X["z0"]+E["fixed_front_strip"])}" stroke="#7a4f1d" stroke-width="2"/>'
     b += text(Xs((X["x0"]+X["x1"])/2), Zs(X["z1"]+t)-8, f'outside {iw+2*t:.0f} W × {ih+t:.0f} H (on the bench)  ·  internal {iw:.0f} × {idp:.0f} × {ih:.0f}', c="#c0392b")
-    b += text(Xs((X["x0"]+X["x1"])/2), Zs(win[1]+E["window_h"]/2)-6, f'window {E["window_w"]} × {E["window_h"]} (twinwall) in the top-hinged door', c="#2c5d8f")
+    b += text(Xs((X["x0"]+X["x1"])/2), Zs(win[1]+E["window_h"]/2)-6, f'window {E["window_w"]} × {E["window_h"]} (4 mm polycarbonate) in the top-hinged door', c="#2c5d8f")
     b += text(Xs((X["x0"]+X["x1"])/2), Zs(X["z0"])+18, f'fixed strip {E["fixed_front_strip"]} high · door {door_h:.0f} high, hinged along the top edge', c="#7a4f1d")
     page("enclosure_front.svg", "Type 0 v2 enclosure: front view", b, h=int(Zs(X["z0"]) + 60))
     # side view (Y-Z), front on the left
@@ -110,7 +110,7 @@ def cutlist():
     for k, (a, b) in panels.items():
         L.append(f"| {k.replace(' (×2)','')} | {a:.0f} × {b:.0f} | {2 if '×2' in k else 1} |")
     L += ["", f"Panel area about {area:.2f} m². One 2440 × 1220 sheet is {sw*sh/1e6:.2f} m², so **{math.ceil(area/(sw*sh/1e6)*1.15)} sheets** allowing about 15% for cutting.", "",
-          f"**Window:** {E['window_w']} × {E['window_h']} cut-out in the door, covered by the 610 × 610 twinwall sheet screwed over it from inside with a foam or rubber seal strip.", "",
+          f"**Window:** {E['window_w']} × {E['window_h']} cut-out in the door, covered by a 600 × 420 × 4 mm solid clear polycarbonate panel (D-88) screwed over it from inside with a foam or rubber seal strip.", "",
           "## Fittings (not yet priced)",
           "- Piano hinge, about the door width, along the top edge (door to top panel).",
           "- 2 gas struts (about 100–150 N each, sized for the door weight) or a fold-down stay to hold the door open.",
