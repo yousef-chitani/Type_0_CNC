@@ -7,7 +7,7 @@
 2. Record the price exactly as listed, ex or inc VAT (RS shows both), pack size, and stock / click & collect at the **Swansea** Screwfix or B&Q stores.
 3. The product must match the spec. Say so if it only partly matches. Prefer **RS PRO** or Mean Well / Schneider / Pilz where RS has them.
 4. **AliExpress login:** before the first AliExpress page, stop and ask the person to **log in to AliExpress themselves** in the browser pane (UK address, GBP). Wait until they confirm. **Never type, read or store their password or codes.** Read every AliExpress price while logged in. For other sites, do not sign in.
-5. Do not add to basket, check out, buy or contact sellers. `NOT FOUND` with the reason if no live price.
+5. **Reading the person's AliExpress basket is allowed** (step A below). Do not add, remove or change basket items, check out, buy or contact sellers. `NOT FOUND` with the reason if no live price.
 6. If a page asks for a human check, stop and ask the person.
 
 ## RS Components (uk.rs-online.com)
@@ -39,6 +39,17 @@
 |---|---|---|---|
 | F18 | Silicone | Neutral-cure silicone (clear), 310 ml × 2 | £16.98 (F18 tape + silicone together) |
 | F17 | Mixer | 1,400–1,600 W paddle mixer (current: Erbauer EPM1600 £69.99) | £69.99 |
+
+## Step A: read the AliExpress basket (after the person has logged in)
+
+Open the AliExpress basket/cart and list **every item** in it: title, seller/store, selected option (size, length, voltage, etc.), quantity, price shown, shipping shown, and the product URL.
+
+Then match each basket item against the **Phase 1 parts** in this file and in the re-check table below (IDs M, S, E, F, X):
+- **FULL** — it meets the spec of a parts-list line (give the ID). Use its basket price as that line's new price, and still report the delta against current.
+- **PARTIAL** — close but not to spec (say what differs, e.g. rail length, coil voltage, bore).
+- **NOT NEEDED** — not useful for Type 0 (just list it, no detail needed).
+
+Do not change the basket. If one basket item could cover several lines, say so. Lines covered by a FULL basket match need no further searching.
 
 ## AliExpress: re-check every Phase 1 line while logged in
 
@@ -98,4 +109,4 @@ For **every** line, compare the new **all-in** price (item + its share of shippi
 ```
 ID | vendor | price as listed (currency, VAT basis; AliExpress: logged-in price, deal applies Y/N) | quantity it covers | stock / collect / delivery | product URL | all-in £ | current £ | delta £ (OK / PREMIUM / SAVING) | notes
 ```
-Finish with: the **vendor list** with a subtotal per vendor, the **total delta** against current, and a list of every **PREMIUM** line.
+Start the reply with the **Step A basket table** (`basket item | option | qty | price | shipping | URL | match: FULL ID / PARTIAL ID / NOT NEEDED | notes`). Finish with: the **vendor list** with a subtotal per vendor, the **total delta** against current, and a list of every **PREMIUM** line.
