@@ -37,7 +37,7 @@ Castings are planned for April–May: epoxy needs **≥ 18 °C** for its 7-day c
 Owner-built or DIY (no cost): timber bench, vibration table, temperature logging, PC, monitor.
 
 ## Watch points
-- **Mesa:** already paid (£257.74 in wave 1).
+- **Mesa 7i76EU:** £257.74 including import VAT, ordered in wave 1 (week 1). Needed first for the LinuxCNC bench tests.
 - **Spindle kit:** order by week 14. Shipping was quoted at about 8 weeks, and it's needed in week 23.
 - **AliExpress motion parts:** order by week 13 to arrive by week 21 (2–6 weeks).
 - **Cold:** if the shed is below 18 °C, cure under an insulated cover with a small heater, and check with the temperature probes.
