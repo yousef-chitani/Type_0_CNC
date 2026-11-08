@@ -1,0 +1,27 @@
+# sim_spindle.hal: stands in for spindle.hal (no VFD). The simulated spindle speeds up at
+# 12,000 rpm/s while it is allowed to run, and reports at-speed within 2%.
+# "halcmd sets vfd-comm-ok 0" simulates a lost VFD link.
+loadrt mux2  names=sim-vfd-run
+loadrt limit2 names=sim-vfd-ramp
+loadrt near  names=sim-vfd-near
+loadrt scale names=sim-rpm
+addf sim-vfd-run  servo-thread
+addf sim-vfd-ramp servo-thread
+addf sim-vfd-near servo-thread
+addf sim-rpm      servo-thread
+
+net spindle-speed-cmd spindle.0.speed-out-rps-abs => sim-vfd-run.in1 sim-vfd-near.in1
+setp sim-vfd-run.in0 0
+net spindle-run      => sim-vfd-run.sel
+net sim-vfd-target   sim-vfd-run.out => sim-vfd-ramp.in
+setp sim-vfd-ramp.maxv 200
+setp sim-vfd-ramp.max 400
+setp sim-vfd-ramp.min 0
+net spindle-speed-fb sim-vfd-ramp.out => spindle.0.speed-in sim-vfd-near.in2 sim-rpm.in
+setp sim-vfd-near.scale 1.02
+setp sim-vfd-near.difference 0.5
+net spindle-at-speed sim-vfd-near.out => spindle.0.at-speed
+setp sim-rpm.gain 60
+net spindle-rpm sim-rpm.out
+
+newsig spindle-amps float

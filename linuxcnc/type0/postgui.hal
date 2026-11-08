@@ -1,0 +1,11 @@
+# postgui.hal: side-panel indicators (panel.xml)
+net spindle-rpm      => pyvcp.spindle-rpm
+net spindle-amps     => pyvcp.spindle-amps
+net spindle-at-speed => pyvcp.at-speed
+net vfd-comm-ok      => pyvcp.vfd-comm
+net flow-ok-stable   => pyvcp.flow-ok
+net machine-power-ok => pyvcp.power-ok
+net alarm-x          => pyvcp.alarm-x
+net alarm-y          => pyvcp.alarm-y
+net alarm-z          => pyvcp.alarm-z
+net z-brake-release  => pyvcp.brake-released

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pyvcp>
+  <labelframe text="Spindle">
+    <hbox><label><text>"rpm"</text></label><number><halpin>"spindle-rpm"</halpin><format>"5.0f"</format></number></hbox>
+    <hbox><label><text>"amps"</text></label><number><halpin>"spindle-amps"</halpin><format>"4.1f"</format></number></hbox>
+    <hbox><led><halpin>"at-speed"</halpin><size>12</size><on_color>"green"</on_color><off_color>"grey"</off_color></led><label><text>"at speed"</text></label></hbox>
+    <hbox><led><halpin>"vfd-comm"</halpin><size>12</size><on_color>"green"</on_color><off_color>"red"</off_color></led><label><text>"VFD link"</text></label></hbox>
+  </labelframe>
+  <labelframe text="Interlocks">
+    <hbox><led><halpin>"power-ok"</halpin><size>12</size><on_color>"green"</on_color><off_color>"red"</off_color></led><label><text>"power (e-stop chain)"</text></label></hbox>
+    <hbox><led><halpin>"flow-ok"</halpin><size>12</size><on_color>"green"</on_color><off_color>"red"</off_color></led><label><text>"coolant flow"</text></label></hbox>
+    <hbox><led><halpin>"brake-released"</halpin><size>12</size><on_color>"yellow"</on_color><off_color>"grey"</off_color></led><label><text>"Z brake released"</text></label></hbox>
+  </labelframe>
+  <labelframe text="Drive alarms">
+    <hbox><led><halpin>"alarm-x"</halpin><size>12</size><on_color>"red"</on_color><off_color>"grey"</off_color></led><label><text>"X"</text></label>
+          <led><halpin>"alarm-y"</halpin><size>12</size><on_color>"red"</on_color><off_color>"grey"</off_color></led><label><text>"Y"</text></label>
+          <led><halpin>"alarm-z"</halpin><size>12</size><on_color>"red"</on_color><off_color>"grey"</off_color></led><label><text>"Z"</text></label></hbox>
+  </labelframe>
+</pyvcp>

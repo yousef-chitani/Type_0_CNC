@@ -1,0 +1,9 @@
+# sim_init.hal: start values for the simulated inputs. Loaded after all other HAL files,
+# because HAL resets a signal's value when the first pin is linked to it.
+sets machine-power-ok 1
+sets alarm-x 0
+sets alarm-y 0
+sets alarm-z 0
+sets coolant-flow-ok 1
+sets board-fault 0
+sets vfd-comm-ok 1

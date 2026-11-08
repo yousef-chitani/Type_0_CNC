@@ -1,0 +1,105 @@
+# machine.hal: e-stop chain, drive enable, Z brake, coolant interlock, homing, tool change.
+# Uses only the signals named in hm2.hal, so it runs the same on the real board and the simulator.
+
+loadrt estop_latch
+# 6-input OR: anything that should stop the machine
+loadrt logic names=fault-or personality=0x206
+loadrt timedelay names=brake-delay,drive-off-delay,flow-stable,flow-fault-delay,vfd-comm-delay
+loadrt not names=not-flow,not-vfd-comm
+loadrt and2 names=spindle-run-ok,flow-block,vfd-comm-bad
+loadrt or2 names=pump-or
+
+addf estop-latch.0       servo-thread
+addf fault-or            servo-thread
+addf brake-delay         servo-thread
+addf drive-off-delay     servo-thread
+addf flow-stable         servo-thread
+addf flow-fault-delay    servo-thread
+addf vfd-comm-delay      servo-thread
+addf not-flow            servo-thread
+addf not-vfd-comm        servo-thread
+addf spindle-run-ok      servo-thread
+addf flow-block          servo-thread
+addf vfd-comm-bad        servo-thread
+addf pump-or             servo-thread
+
+# ---------------------------------------------------------------------------
+# E-stop. The hardwired chain (2 e-stops -> XPSAC5121 -> contactor) does the stopping;
+# LinuxCNC only reads it (D-35). LinuxCNC can't be enabled unless the contactor is in
+# (machine-power-ok) and there is no fault. A fault latches until "e-stop reset" in AXIS.
+# ---------------------------------------------------------------------------
+net alarm-x          => fault-or.in-00
+net alarm-y          => fault-or.in-01
+net alarm-z          => fault-or.in-02
+net flow-fault       => fault-or.in-03
+net vfd-comm-fault   => fault-or.in-04
+net board-fault      => fault-or.in-05
+net any-fault        fault-or.or => estop-latch.0.fault-in
+
+net machine-power-ok => estop-latch.0.ok-in
+net estop-reset      iocontrol.0.user-request-enable => estop-latch.0.reset
+net estop-ok         estop-latch.0.ok-out => iocontrol.0.emc-enable-in
+
+# ---------------------------------------------------------------------------
+# Drive enable and Z brake.
+# On:  drives enable, then the brake releases after BRAKE_RELEASE_DELAY.
+# Off: the brake engages at once, the drives stay enabled for DRIVE_OFF_DELAY so Z
+#      doesn't drop while the brake grips. (A hardware e-stop cuts both at once.)
+# ---------------------------------------------------------------------------
+# x-enable is joint.0.amp-enable-out (all joints enable together)
+net x-enable         => brake-delay.in drive-off-delay.in
+setp brake-delay.on-delay       [TYPE0]BRAKE_RELEASE_DELAY
+setp brake-delay.off-delay      0
+setp drive-off-delay.on-delay   0
+setp drive-off-delay.off-delay  [TYPE0]DRIVE_OFF_DELAY
+net z-brake-release  brake-delay.out
+net drive-enable-out drive-off-delay.out
+
+# ---------------------------------------------------------------------------
+# Coolant: pump and radiator fans (both on signal pump-on) run whenever the machine is
+# on, or the spindle is on.
+# ---------------------------------------------------------------------------
+net machine-is-on    motion.motion-enabled => pump-or.in0
+net spindle-cmd-on   spindle.0.on        => pump-or.in1 spindle-run-ok.in0 flow-block.in0 vfd-comm-bad.in0
+net pump-on          pump-or.out
+
+# Flow must be steady for FLOW_ON_DELAY before the spindle may run.
+net coolant-flow-ok  => flow-stable.in
+setp flow-stable.on-delay  [TYPE0]FLOW_ON_DELAY
+setp flow-stable.off-delay [TYPE0]FLOW_OFF_DELAY
+net flow-ok-stable   flow-stable.out => spindle-run-ok.in1 not-flow.in
+
+# Spindle commanded but no flow: hold the feed at once (and the VFD is not started or is
+# stopped, see spindle.hal). If it lasts FLOW_FAULT_DELAY -> e-stop.
+net no-flow          not-flow.out => flow-block.in1
+net flow-blocked     flow-block.out => motion.feed-inhibit flow-fault-delay.in
+setp flow-fault-delay.on-delay  [TYPE0]FLOW_FAULT_DELAY
+setp flow-fault-delay.off-delay 0
+net flow-fault       flow-fault-delay.out
+
+# Spindle commanded but the VFD isn't answering for VFD_COMM_FAULT_DELAY -> e-stop.
+net vfd-comm-ok      => not-vfd-comm.in
+net vfd-no-comm      not-vfd-comm.out => vfd-comm-bad.in1
+net vfd-comm-lost    vfd-comm-bad.out => vfd-comm-delay.in
+setp vfd-comm-delay.on-delay  [TYPE0]VFD_COMM_FAULT_DELAY
+setp vfd-comm-delay.off-delay 0
+net vfd-comm-fault   vfd-comm-delay.out
+
+# Spindle allowed to run (used by spindle.hal)
+net spindle-run      spindle-run-ok.out
+
+# ---------------------------------------------------------------------------
+# Homing: one switch per axis, no limit switches (D-91).
+# ---------------------------------------------------------------------------
+net home-x => joint.0.home-sw-in
+net home-y => joint.1.home-sw-in
+net home-z => joint.2.home-sw-in
+
+# ---------------------------------------------------------------------------
+# Manual tool change (Phase 1, ER20): M6 opens a dialog and waits.
+# ---------------------------------------------------------------------------
+loadusr -W hal_manualtoolchange
+net tool-change      iocontrol.0.tool-change      => hal_manualtoolchange.change
+net tool-changed     iocontrol.0.tool-changed     <= hal_manualtoolchange.changed
+net tool-number      iocontrol.0.tool-prep-number => hal_manualtoolchange.number
+net tool-prepare     iocontrol.0.tool-prepare     => iocontrol.0.tool-prepared

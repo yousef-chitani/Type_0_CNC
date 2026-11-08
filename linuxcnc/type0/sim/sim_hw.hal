@@ -1,0 +1,42 @@
+# sim_hw.hal: stands in for hm2.hal in the simulator (type0_sim.ini).
+# Provides the same signal names. Motors follow the command exactly; each axis has a
+# simulated home switch. The other inputs are plain signals you can change with "sets",
+# e.g.  halcmd sets coolant-flow-ok 0   or   halcmd sets alarm-x 1
+
+loadrt [KINS]KINEMATICS
+loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS num_spindles=1
+loadrt sim_home_switch names=sim-home-x,sim-home-y,sim-home-z
+
+addf motion-command-handler servo-thread
+addf motion-controller      servo-thread
+addf sim-home-x             servo-thread
+addf sim-home-y             servo-thread
+addf sim-home-z             servo-thread
+
+net x-pos joint.0.motor-pos-cmd => joint.0.motor-pos-fb sim-home-x.cur-pos
+net y-pos joint.1.motor-pos-cmd => joint.1.motor-pos-fb sim-home-y.cur-pos
+net z-pos joint.2.motor-pos-cmd => joint.2.motor-pos-fb sim-home-z.cur-pos
+net x-enable joint.0.amp-enable-out
+net y-enable joint.1.amp-enable-out
+net z-enable joint.2.amp-enable-out
+
+# Home switches a little way from the start-up position (motor counts start at 0)
+setp sim-home-x.home-pos 20
+setp sim-home-y.home-pos 15
+setp sim-home-z.home-pos 5
+net home-x sim-home-x.home-sw
+net home-y sim-home-y.home-sw
+net home-z sim-home-z.home-sw
+
+# Inputs from the cabinet (start values are set in sim_init.hal, loaded last)
+newsig machine-power-ok bit
+newsig alarm-x bit
+newsig alarm-y bit
+newsig alarm-z bit
+newsig coolant-flow-ok bit
+newsig board-fault bit
+
+# Outputs (read them with: halcmd show sig drive-enable-out z-brake-release pump-on)
+newsig drive-enable-out bit
+newsig z-brake-release bit
+newsig pump-on bit

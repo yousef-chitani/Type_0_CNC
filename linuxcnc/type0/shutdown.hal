@@ -1,0 +1,2 @@
+# shutdown.hal: run when LinuxCNC exits. Drives off; brake engages (power removed from OUT1).
+setp vfd.enable 0

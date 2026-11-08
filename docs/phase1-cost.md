@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,066.41** (budget £4,000). Every line priced. No eBay.
+**Phase 1 priced total: £3,066.41** (budget £4,000). Every line priced except E23 (pump relay) and E24 (USB-RS485 adapter, D-92): both to price. No eBay.
 
 | Subsystem | £ |
 |---|---|

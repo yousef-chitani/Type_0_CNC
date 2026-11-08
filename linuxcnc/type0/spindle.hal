@@ -1,0 +1,31 @@
+# spindle.hal: Huanyang VFD over a USB-RS485 adapter with LinuxCNC's hy_vfd driver (D-92).
+# The classic Huanyang HY uses its own protocol, not standard Modbus, so it can't use the
+# Mesa RS-485 port (hm2_modbus only speaks standard Modbus).
+#
+# VFD panel settings (CHECK against the kit's VFD manual):
+#   PD001 = 2, PD002 = 2 (run and frequency from RS-485)
+#   PD163 = 1 (address), PD164 = 1 (9,600 baud), PD165 = 3 (8N1 RTU)
+#   PD003/PD004/PD005 = 400, PD141 = 220, PD142 = nameplate amps, PD143 = 2, PD144 = 3000
+#
+# hy_vfd waits (retrying) until the VFD answers, so it is fine to start LinuxCNC before the
+# safety relay is reset and the VFD has power.
+
+loadusr -Wn vfd hy_vfd -n vfd -d [TYPE0]VFD_PORT -r [TYPE0]VFD_BAUD -p none -s 1 -t [TYPE0]VFD_ADDRESS
+setp vfd.enable 1
+setp vfd.spindle-at-speed-tolerance 0.05
+
+net spindle-speed-cmd spindle.0.speed-out-abs => vfd.speed-command
+net spindle-fwd       spindle.0.forward       => vfd.spindle-forward
+net spindle-rev       spindle.0.reverse       => vfd.spindle-reverse
+# Only run when spindle.0.on AND coolant flow is steady (machine.hal)
+net spindle-run       => vfd.spindle-on
+
+# hy_vfd in LinuxCNC 2.9 reports rpm only; motion wants rev/s
+loadrt scale names=spindle-rps
+addf spindle-rps servo-thread
+setp spindle-rps.gain 0.0166667
+net spindle-rpm       vfd.spindle-speed-fb  => spindle-rps.in
+net spindle-speed-fb  spindle-rps.out       => spindle.0.speed-in
+net spindle-at-speed  vfd.spindle-at-speed  => spindle.0.at-speed
+net vfd-comm-ok       vfd.hycomm-ok
+net spindle-amps      vfd.OutA

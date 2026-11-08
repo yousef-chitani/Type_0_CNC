@@ -1,1 +1,5 @@
 __pycache__/
+# LinuxCNC runtime files
+linuxcnc/type0/*.var
+linuxcnc/type0/*.var.bak
+linuxcnc/type0/position*.txt

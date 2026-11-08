@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **83 line items, 82 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **84 line items, 82 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -11,14 +11,14 @@ Full list: [bom.csv](bom.csv). **83 line items, 82 priced.** Prices were read fr
 | Spindle | 9 | 9 | £1,546.00 |
 | Tool changer | 7 | 7 | £154.46 |
 | Pneumatics | 6 | 6 | £110.22 |
-| Electronics | 21 | 20 | £810.62 |
+| Electronics | 22 | 20 | £810.62 |
 | Enclosure | 3 | 3 | £78.61 |
 | Stand | 2 | 2 | £12.19 |
 | Metrology | 2 | 2 | £50.17 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **83** | **82** | **£4,474.63** |
+| **All** | **84** | **82** | **£4,474.63** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,474.63**. Not priced yet: E23.
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,474.63**. Not priced yet: E23, E24.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
@@ -115,6 +115,7 @@ Lines still TO PRICE: see the list above.
 | E05 | 1 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | Mean Well HDR-150-24, DIN rail | [product](https://www.omc-stepperonline.com/hdr-150-24-mean-well-24vdc-5-31a-127-4w-115vac-6-25a-150w-230vac-ultra-slim-step-shape-din-rail-power-supply-hdr-150-24) | £27.62 (VAT?), pre-order (StepperOnline, read 2026-11-05) | 27.62 | D-84: kept at StepperOnline (already a vendor, genuine). Was pre-order: check stock |
 | E22 | 2 | 5 V DC PSU (shelved: not needed for Phase 1) | 1 pcs | Mean Well MDR-10-5, 5 V 2 A, DIN rail | [product](https://uk.rs-online.com/web/p/din-rail-power-supplies/7127402) | £13.04 ex / £15.65 inc VAT (RS 712-7402) | 15.65 | D-91: the 7I76EU runs from 24 V. Kept for later use (owner) |
 | E23 | 1 | Coolant pump relay (DIN interface relay, 24 V DC coil) | 1 pcs | DIN-rail interface relay, 24 V DC coil, 1 CO, about 10 A 250 V AC contact, with LED (e.g. Finder 38/39 series) | [product](https://uk.rs-online.com/) | TO PRICE (RS) |  | Switches the 220 V kit pump from Mesa OUT2 |
+| E24 | 1 | USB-RS485 adapter for the VFD link | 1 pcs | USB to RS-485 converter (2-wire A/B + GND), CH340 or FTDI chip, works with the Linux ftdi_sio/ch341 driver | [product](https://uk.rs-online.com/) | TO PRICE |  | For hy_vfd: the Huanyang protocol is not standard Modbus, so the Mesa RS-485 port cannot drive it (D-92). Reverses the no-adapter part of D-58 |
 | E06 | 1 | E-stop safety relay Schneider Preventa XPSAC5121 | 1 pcs | 24 V AC/DC, e-stop monitoring, 1 or 2 channel, manual reset | [product](https://www.aliexpress.com/item/1005012583131933.html) | £84.39 inc VAT, free shipping (AliExpress, 107 sold) | 84.39 | D-84: premium accepted (no eBay). Genuine part not verified. Wire each e-stop's 2 NC contacts as two channels; reset button to the reset input; safety outputs to the E07 coil |
 | E07 | 1 | Contactor with 24 V coil | 1 pcs |  | [product](https://www.aliexpress.com/item/1005005356561757.html) | £26.29 inc VAT, free shipping (AliExpress, logged in) | 26.29 | Schneider LC1D09BDC 24 V DC coil. Genuine not verified |
 | E08 | 1 | E-stop buttons 2 NC (×5) | 1 set | XB2-BS544 22 mm, 2 NC, twist release (2 NC for the dual-channel relay) | [product](https://www.aliexpress.com/item/1005008293871583.html) | £12.39 inc VAT for 5, free shipping (AliExpress, option BS544-2NC) | 12.39 | D-84: 2 NC needed for dual-channel E06 |

@@ -39,7 +39,7 @@ Output:    +24V ─ 13 ─ 14 ─ contactor coil A1 (E07, 24 V DC) ─ A2 ─ 0V
 |---|---|---|
 | W1 | **Left** (default) | VIN taken from VFIELD: one 24 V supply powers the field I/O |
 | W5 | Operate (default) | Normal 2.5 Mbaud field I/O |
-| W6 | **Right** | RS-485 termination **off** for low-speed Modbus (manual's advice) |
+| W6 | **Right** | RS-485 termination off. TB3 RS-485 is now unused in Phase 1 (VFD moved to USB, D-92) |
 | W13 / W14 | Down / down (default) | Fixed IP **192.168.1.121** |
 | W7 | Up (default) | Primary flash |
 
@@ -62,18 +62,17 @@ Logic power: +24 V to **TB3-21/22**, 0 V to **TB3-23/24** (on-card regulator; bo
 | 3 | *Phase 2: ATC wheel* | 20 / 21 | 22 / 23 |
 Wire STEP+→PUL+, STEP−→PUL−, DIR+→DIR+, DIR−→DIR− at each driver, using screened twisted pairs (GND pins 1, 7, 13, 19 to the screen at the cabinet end only).
 
-### TB3: logic power and RS-485 (Modbus to the VFD)
+### TB3: logic power (RS-485 not used in Phase 1, D-92)
 | Pin | Signal | Connect to |
 |---|---|---|
-| 16 + 18 | RX+ linked to TX+ | **RS-485 B** → VFD **RS+** |
-| 17 + 19 | RX− linked to TX− | **RS-485 A** → VFD **RS−** |
-| 15 | GND | screen / VFD signal ground if it has one |
 | 21, 22 | Unreg logic + | +24 V |
 | 23, 24 | GND | 0 V |
-Use one twisted pair, screened, kept away from the motor and spindle cables.
+| 15–19 | RS-485 | Not used in Phase 1. Free for a later standard-Modbus device (`hm2_modbus`) |
+
+**VFD link (D-92):** USB-RS485 adapter (E24) in the mini-PC. Adapter **A/+** → VFD **RS+**, **B/−** → VFD **RS−** (swap if it doesn't talk), adapter GND → VFD signal ground if it has one. One screened twisted pair, screen to the cabinet end only, kept away from the motor and spindle cables.
 
 ### TB4: analogue spindle
-Not used (spindle on Modbus, D-91).
+Not used (spindle over RS-485 via a USB adapter, D-92).
 
 ### TB6: field I/O 0–15 inputs, 0–7 outputs
 Inputs are **sinking** (they read a positive voltage). The PNP sensors connect directly. Outputs set to **sourcing** mode in the config (the 7I76EU allows per-output mode). Each load returns to 0 V.
@@ -127,10 +126,10 @@ All spare for later (probe, pendant, Phase 2 additions).
 | PD142 | spindle nameplate (about 10 A) | Rated motor current |
 | PD143 | 2 | Motor poles |
 | PD163 | 1 | Modbus address |
-| PD164 | 2 (9,600 baud) | Baud rate |
+| PD164 | **1** (9,600 baud) | Baud rate (0 = 4,800, 1 = 9,600, 2 = 19,200, 3 = 38,400). Was wrongly given as 2 |
 | PD165 | 3 (8N1 RTU) | Data format |
 
-- LinuxCNC talks Modbus to it through the 7I76EU serial port. The exact LinuxCNC driver for Modbus over the Mesa port is chosen in task 2. Fallback: a USB–RS485 adapter with LinuxCNC's `hy_vfd` driver.
+- LinuxCNC talks to it with the `hy_vfd` driver through a USB-RS485 adapter (D-92). The classic Huanyang uses its own protocol, not standard Modbus, so the Mesa RS-485 port can't drive it. Also set PD144 = 3000 (rpm at 50 Hz for a 24,000 rpm / 400 Hz spindle). Config: `linuxcnc/type0/spindle.hal`, set-up in `docs/linuxcnc.md`.
 
 ## 7. Cabinet layout (600 × 400 × 200, top to bottom)
 1. Top: VFD (hot; vents clear above it), filter fan exhaust grille.
@@ -145,6 +144,7 @@ All spare for later (probe, pendant, Phase 2 additions).
 - Cable screens: bonded at the cabinet end only (drives, VFD and the Mesa GND).
 
 ## 9. Parts this adds or changes
+- **E24 USB-RS485 adapter** (D-92): to price.
 - **E23 DIN interface relay, 24 V DC coil, about 10 A contact** (for the 220 V pump): to price (RS).
 - **E22 5 V PSU: shelved** (not needed for Phase 1).
 - Cable glands and ferrules: already covered (basket glands, E13 crimper kit).

@@ -1,0 +1,104 @@
+# hm2.hal: Mesa 7I76EU hardware layer.
+# Everything board-specific is here. Other HAL files only use the signal names below,
+# so the simulator (sim/sim_hw.hal) can replace this file.
+#
+# Signals provided to machine.hal:
+#   home-x, home-y, home-z          (TB6 IN0-2, LJ12A3 PNP, true = on target)
+#   machine-power-ok                (TB6 IN3, contactor aux: true = safety chain closed)
+#   alarm-x, alarm-y, alarm-z       (TB6 IN4-6, CL57T ALM, true = drive fault)
+#   coolant-flow-ok                 (TB6 IN7, flow switch, true = flowing)
+#   board-fault                     (Mesa watchdog bit)
+# Signals used from machine.hal:
+#   drive-enable-out -> OUT0, z-brake-release -> OUT1, pump-on -> OUT2 and OUT3 (fans)
+
+loadrt [KINS]KINEMATICS
+loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS num_spindles=1
+
+loadrt hostmot2
+loadrt [HOSTMOT2]DRIVER board_ip=[HOSTMOT2]IPADDR config=[HOSTMOT2]CONFIG
+
+# Mesa watchdog: outputs go off if the PC stops talking for 5 ms
+setp hm2_[HOSTMOT2]BOARD.0.watchdog.timeout_ns 5000000
+
+addf hm2_[HOSTMOT2]BOARD.0.read         servo-thread
+addf motion-command-handler             servo-thread
+addf motion-controller                  servo-thread
+addf hm2_[HOSTMOT2]BOARD.0.write        servo-thread
+# machine.hal adds its logic after this, so its outputs reach the board one servo
+# cycle (1 ms) later. That is fine for the relay, brake and pump.
+
+# ---------------------------------------------------------------------------
+# Step generators (TB2). Channel 0 = X, 1 = Y, 2 = Z.
+# ---------------------------------------------------------------------------
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.00.step_type      0
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.00.control-type   0
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.00.position-scale [JOINT_0]SCALE
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.00.maxvel         [JOINT_0]STEPGEN_MAX_VEL
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.00.maxaccel       [JOINT_0]STEPGEN_MAX_ACC
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.00.steplen        [JOINT_0]STEPLEN
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.00.stepspace      [JOINT_0]STEPSPACE
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.00.dirsetup       [JOINT_0]DIRSETUP
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.00.dirhold        [JOINT_0]DIRHOLD
+net x-enable  joint.0.amp-enable-out => hm2_[HOSTMOT2]BOARD.0.stepgen.00.enable
+net x-pos-cmd joint.0.motor-pos-cmd  => hm2_[HOSTMOT2]BOARD.0.stepgen.00.position-cmd
+net x-pos-fb  hm2_[HOSTMOT2]BOARD.0.stepgen.00.position-fb => joint.0.motor-pos-fb
+
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.01.step_type      0
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.01.control-type   0
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.01.position-scale [JOINT_1]SCALE
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.01.maxvel         [JOINT_1]STEPGEN_MAX_VEL
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.01.maxaccel       [JOINT_1]STEPGEN_MAX_ACC
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.01.steplen        [JOINT_1]STEPLEN
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.01.stepspace      [JOINT_1]STEPSPACE
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.01.dirsetup       [JOINT_1]DIRSETUP
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.01.dirhold        [JOINT_1]DIRHOLD
+net y-enable  joint.1.amp-enable-out => hm2_[HOSTMOT2]BOARD.0.stepgen.01.enable
+net y-pos-cmd joint.1.motor-pos-cmd  => hm2_[HOSTMOT2]BOARD.0.stepgen.01.position-cmd
+net y-pos-fb  hm2_[HOSTMOT2]BOARD.0.stepgen.01.position-fb => joint.1.motor-pos-fb
+
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.02.step_type      0
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.02.control-type   0
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.02.position-scale [JOINT_2]SCALE
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.02.maxvel         [JOINT_2]STEPGEN_MAX_VEL
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.02.maxaccel       [JOINT_2]STEPGEN_MAX_ACC
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.02.steplen        [JOINT_2]STEPLEN
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.02.stepspace      [JOINT_2]STEPSPACE
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.02.dirsetup       [JOINT_2]DIRSETUP
+setp hm2_[HOSTMOT2]BOARD.0.stepgen.02.dirhold        [JOINT_2]DIRHOLD
+net z-enable  joint.2.amp-enable-out => hm2_[HOSTMOT2]BOARD.0.stepgen.02.enable
+net z-pos-cmd joint.2.motor-pos-cmd  => hm2_[HOSTMOT2]BOARD.0.stepgen.02.position-cmd
+net z-pos-fb  hm2_[HOSTMOT2]BOARD.0.stepgen.02.position-fb => joint.2.motor-pos-fb
+
+# ---------------------------------------------------------------------------
+# Field inputs (TB6). Inputs read +24 V as true.
+# ---------------------------------------------------------------------------
+net home-x           <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-00
+net home-y           <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-01
+net home-z           <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-02
+net machine-power-ok <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-03
+# CHECK the CL57T ALM polarity on the bench: with the drive healthy, the input LED
+# should be OFF. If it is ON when healthy, change "input-0N" to "input-0N-not" here.
+net alarm-x          <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-04
+net alarm-y          <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-05
+net alarm-z          <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-06
+net coolant-flow-ok  <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-07
+# Phase 2 (not wired yet): IN8 tool setter, IN9 door, IN10 air, IN11/12 tool clamped/released,
+# IN13 ATC index, IN14 ATC drive alarm.
+
+net board-fault      <= hm2_[HOSTMOT2]BOARD.0.watchdog.has_bit
+
+# ---------------------------------------------------------------------------
+# Field outputs (TB6). Each load returns to 0 V.
+# CHECK in the 7I76EU manual how outputs are set to sourcing mode (electrical.md section 4).
+# ---------------------------------------------------------------------------
+# OUT0: drive enable, CL57T ENA on all 3 drives in parallel.
+# CHECK the CL57T ENA logic. Many CL57T drives are ENABLED when ENA is NOT energised;
+# if so, set the invert below to 1 (then 24 V on ENA = disabled).
+net drive-enable-out => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-00
+setp hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-00-invert 0
+# OUT1: Z brake coil (energised = released)
+net z-brake-release  => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-01
+# OUT2: coolant pump interface relay (E23)
+net pump-on          => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-02
+# OUT3: radiator fans (run with the pump)
+net pump-on          => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-03

@@ -1,6 +1,6 @@
 # Type 0 CNC: handover (2026-11-08)
 
-**Branch:** `claude/ecstatic-ramanujan-mhh3xe` on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed.
+**Branch:** `claude/trusting-shannon-uwrpm9` (task 2; earlier work on `claude/ecstatic-ramanujan-mhh3xe`) on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed.
 
 ## 1. What the project is
 A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite (EG) frame**, **LinuxCNC + Mesa 7I76EU**, closed-loop NEMA 24 steppers, and (Phase 2) a **Jianken ISO20 ATC spindle** with an 8-pocket ferris-wheel tool changer. Inspiration: Bootstrap Bill. The owner is in **Swansea, UK**. It will be built and used in a **shed**, but must later move into an **upstairs flat**: every piece must be carriable (≤ about 40 kg, base about 72 kg is a 2-person lift).
@@ -17,7 +17,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 ## 3. Money and phases (D-66, D-86, D-68)
 | Phase | Scope | Priced | Budget |
 |---|---|---|---|
-| 1 | Working mill, manual ER20 tool changes | **£3,066.41** (+ E23 relay to price) | £4,000 |
+| 1 | Working mill, manual ER20 tool changes | **£3,066.41** (+ E23 relay, E24 USB-RS485 adapter to price) | £4,000 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel | £1,408.22 | not set |
 - Source of truth: **`docs/bom.csv`**. Generated from it: `docs/bom.md` (`python tools/gen_bom_md.py`), `docs/phase1-bom.xlsx` (`python tools/gen_phase1_xlsx.py`), `docs/phase1-cost.md`, `tools/open_links.py` (`python tools/build_open_links.py`).
 - Phase 1 vendors (12): AliExpress, Screwfix, StepperOnline, RS, Easy Composites, Aluminium Warehouse, GCL, Hancock & Brown, Valentine Clays, The Metal Store, B&Q, Mesa.
@@ -35,7 +35,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 
 ## 6. Next tasks (agreed order)
 1. ~~Electrical design~~: done, `docs/electrical.md` (D-91). Has CHECK items.
-2. **LinuxCNC starter config** for the 7I76EU (3 closed-loop axes, Modbus spindle via the Mesa RS-485 port or USB fallback, e-stop chain on IN3, drive alarms IN4–6, brake on OUT1, flow interlock IN7), plus a latency test and bench-test procedure.
+2. ~~LinuxCNC starter config~~: done, `linuxcnc/type0/` + `docs/linuxcnc.md` (D-92). VFD moved to USB-RS485 + hy_vfd. Simulator test 23/23. Has CHECK items for the bench test.
 3. **Timber bench design:** cut list, top 785 mm, about 150 kg + enclosure, cabinet space; adds B&Q items to wave 2.
 4. **Mould drawings** for the base and portal from the v2 model (panels, jig-bolt hole pattern for insert bars, Y-screw channel 70 × 25, PVC cores, M12 sleeves, dowels, lifting points, vibration-table deck).
 5. **EG mix design + test-brick plan:** GlassCast 50 PLUS with GCL quartz 2–5, H&B 0–1 sand, whiting (≤ 8–10%), 2–3 epoxy ratios; mixing order, vibration, curing heat checks.
@@ -48,9 +48,10 @@ See `docs/open-questions.md` (updated at handover).
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-91 |
+| `docs/decisions.md` | Decision log D-01 … D-92 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
+| `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |
 | `docs/bom.csv` / `bom.md` / `phase1-bom.xlsx` / `phase1-cost.md` | Parts list and costs |
 | `docs/phase1-schedule.md` | Timeline and order waves |
 | `docs/eg-moulds.md`, `aggregates.md`, `epoxy-options.md` | Casting notes (partly v1 sizes: check against v2) |
