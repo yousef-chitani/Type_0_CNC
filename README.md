@@ -17,3 +17,4 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [Scale-down options](docs/scale-down-options.md): EG modules vs steel + sand fill
 - [v2 design notes](docs/v2-design.md): flat-sized 3-casting machine, joints, ATC wheel
 - [Phase 1 schedule](docs/phase1-schedule.md): weeks, order waves
+- [Electrical design](docs/electrical.md): power, safety chain, 7I76EU pin map, VFD settings
