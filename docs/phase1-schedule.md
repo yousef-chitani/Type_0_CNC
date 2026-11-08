@@ -29,10 +29,10 @@ Castings are planned for April–May: GlassCast 50 PLUS needs **17–23 °C, ide
 | Wave | Order in week | Date | What | £ |
 |---|---|---|---|---|
 | 1 | 1 | 04 Jan 2027 | Electrical, motors, **spindle kit and cooling loop** (bench-test indoors): E01, E04, E05, E06, E07, E08, E09, E10, E12, E13, E14, E17, E18, E21, **E23, E24, E25**, **T14** (fan grills), S04, **S08, S05**, M09, M10, M14 | £1,489.55 |
-| 2 | 7 | 15 Feb 2027 | Bench, moulds and local items (B&Q, Screwfix): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T07, T09–T13, T15** (bench, D-99: B&Q Swansea with in-store ply cutting, Screwfix, B&Q marketplace, AliExpress) | £500.06 |
+| 2 | 7 | 15 Feb 2027 | Bench, moulds and local items (B&Q, Screwfix): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T07, T09–T13, T15** (bench, D-99: B&Q Swansea with in-store ply cutting, Screwfix, B&Q marketplace, AliExpress) | £495.74 |
 | 3 | 9 | 01 Mar 2027 | Casting materials and measuring tools: F01, F02, F12, F03, F04, F06, F07, X01, X02 | £516.42 |
 | 4 | 13 | 29 Mar 2027 | Motion parts, plates, ER20 collets: M01, M02, M03, M05, M08, M13, M11, M12, S09 | £829.66 |
-| | | | **Total** | **£3,335.69** |
+| | | | **Total** | **£3,331.37** |
 
 Wave 5 is gone (D-94): the spindle kit and cooling loop moved to wave 1 so the VFD can be bench-tested early, and the collets (S09) joined wave 4. E22 (5 V PSU) is shelved (D-91) and no longer ordered.
 

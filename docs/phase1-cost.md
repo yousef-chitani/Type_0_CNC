@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,335.69** (budget £4,000). Every line priced. No eBay.
+**Phase 1 priced total: £3,331.37** (budget £4,000). Every line priced. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -10,10 +10,10 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | Motion | £1,004.77 |
 | Spindle | £489.14 |
 | Electronics | £818.49 |
-| Stand | £265.53 |
+| Stand | £261.21 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,335.69** |
+| **Total** | **£3,331.37** |
 
 ## Frame
 
@@ -106,7 +106,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | T07 | M8 x 120 bolts + nuts, washers, M8 barrel nuts | 20 sets | £28.59 |
 | T08 | Joist hangers (not needed: joists bolted, D-99) | 0 pcs | £0.00 |
 | T09 | M10 x 24 hex-drive threaded inserts, stainless | 4 pcs | £10.56 |
-| T10 | Steel corner braces + angle brackets | 10 pcs | £11.80 |
+| T10 | Steel corner braces + angle brackets | 10 pcs | £7.48 |
 | T11 | Wood screws 5 x 70, 4 x 30, 4 x 40 | 3 boxes | £10.47 |
 | T12 | PVA wood glue D3/D4, 1 L | 1 pcs | £11.99 |
 | T13 | Yacht varnish 750 ml | 1 pcs | £11.99 |

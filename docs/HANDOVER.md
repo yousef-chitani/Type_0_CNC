@@ -17,7 +17,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 ## 3. Money and phases (D-66, D-86, D-68)
 | Phase | Scope | Priced | Budget |
 |---|---|---|---|
-| 1 | Working mill, manual ER20 tool changes | **£3,335.69**, every line priced (incl. bench, D-99) | £4,000 |
+| 1 | Working mill, manual ER20 tool changes | **£3,331.37**, every line priced (incl. bench, D-99) | £4,000 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel | £1,408.22 | not set |
 - Source of truth: **`docs/bom.csv`**. Generated from it: `docs/bom.md` (`python tools/gen_bom_md.py`), `docs/phase1-bom.xlsx` (`python tools/gen_phase1_xlsx.py`), `docs/phase1-cost.md` (`python tools/gen_phase1_cost.py`), `tools/open_links.py` (`python tools/build_open_links.py`).
 - Phase 1 vendors (12): AliExpress, Screwfix, StepperOnline, RS, Easy Composites, Aluminium Warehouse, GCL, Hancock & Brown, Valentine Clays, The Metal Store, B&Q, Mesa.
@@ -36,7 +36,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 ## 6. Next tasks (agreed order)
 1. ~~Electrical design~~: done, `docs/electrical.md` (D-91). Has CHECK items.
 2. ~~LinuxCNC starter config~~: done, `linuxcnc/type0/` + `docs/linuxcnc.md` (D-92). VFD moved to USB-RS485 + hy_vfd. Simulator test 23/23. Has CHECK items for the bench test.
-3. ~~Timber bench design~~: done, `cad/v2/bench.py` → `cad/v2/out/bench_cutlist.md` + drawings + STEP (D-97, D-99). Materials priced: £253.34.
+3. ~~Timber bench design~~: done, `cad/v2/bench.py` → `cad/v2/out/bench_cutlist.md` + drawings + STEP (D-97, D-99). Materials priced: £249.02.
 4. **Mould drawings** for the base and portal from the v2 model (panels, jig-bolt hole pattern for insert bars, Y-screw channel 70 × 25, PVC cores, M12 sleeves, dowels, lifting points, vibration-table deck).
 5. **EG mix design + test-brick plan:** GlassCast 50 PLUS with GCL quartz 2–5, H&B 0–1 sand, whiting (≤ 8–10%), 2–3 epoxy ratios; mixing order, vibration, curing heat checks.
 Then: rail-seat levelling and assembly procedures, Phase 2 detailing.

@@ -13,17 +13,17 @@ Full list: [bom.csv](bom.csv). **98 line items, 98 priced.** Prices were read fr
 | Pneumatics | 6 | 6 | £110.22 |
 | Electronics | 23 | 23 | £842.21 |
 | Enclosure | 3 | 3 | £78.61 |
-| Stand | 15 | 15 | £265.53 |
+| Stand | 15 | 15 | £261.21 |
 | Metrology | 2 | 2 | £50.17 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **98** | **98** | **£4,759.56** |
+| **All** | **98** | **98** | **£4,755.24** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,759.56**. Not priced yet: .
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,755.24**. Not priced yet: .
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,335.69 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,331.37 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -143,10 +143,10 @@ Lines still TO PRICE: see the list above.
 | T07 | 1 | M8 x 120 bolts + nuts, washers, M8 barrel nuts | 20 sets | Diall M8 x 120 hex bolt + nut grade 5.8 (2 x 10), Diall M8 washers (20), M8 x 15 barrel nuts (2 x 10): 12 frame joints + 8 joist ends (D-99) | [product](https://www.diy.com/departments/diall-m8-hex-carbon-steel-grade-5-8-bolt-nut-l-120mm-pack-of-10/3663602739456_BQ.prd) | Bolts £7.54 per 10 x 2 + washers £4.96 (B&Q Swansea) + barrel nuts £3.48 per 10 x 2 + £1.59 shipping (AliExpress) | 28.59 | D-99. Barrel nuts: https://www.aliexpress.com/item/32923747012.html (check 10 mm diameter before drilling). Order wave 2 |
 | T08 | 1 | Joist hangers (not needed: joists bolted, D-99) | 0 pcs | For the doubled 38 x 89 joists (76 wide), with hanger screws | [product]() | Not needed | 0.00 | D-99: joists bolted to the aprons with T07 bolts instead |
 | T09 | 1 | M10 x 24 hex-drive threaded inserts, stainless | 4 pcs | In the leg bottoms for the T02 levelling feet | [product](https://www.aliexpress.com/item/1005007440736508.html) | £2.64 each inc VAT, free shipping over £6.13 (AliExpress, logged in) | 10.56 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
-| T10 | 1 | Steel corner braces + angle brackets | 10 pcs | 8 x Expamet AB505035 50 x 35 x 50 angle brackets (top to aprons) + 2 x Expamet HD9090 (cabinet top to front apron) | [product](https://www.diy.com/departments/expamet-silver-galvanised-steel-light-duty-perforated-angle-bracket-h-50mm-w-35mm-l-50mm/5014316025232_BQ.prd) | £0.85 x 8 + £2.50 x 2 inc VAT (B&Q Swansea, aisle 101) | 11.80 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
-| T11 | 1 | Wood screws 5 x 70, 4 x 30, 4 x 40 | 3 boxes | Leg lamination, side frames, top lamination, panels | [product](https://www.screwfix.com/p/goldscrew-pz-double-countersunk-thread-cutting-multipurpose-screws-5mm-x-70mm-100-pack/16221) | Goldscrew 5 x 70 (100) £4.29 + 4 x 30 (200) £2.89 + Silverscrew 4 x 40 (200) £3.29 inc VAT (Screwfix; Swansea stock not read) | 10.47 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T10 | 1 | Steel corner braces + angle brackets | 10 pcs | 10 x Essentials zinc-plated corner braces 52 x 52 x 16.35 (Screwfix 11013; 8 used, top to aprons) + 2 x Expamet HD9090 90 x 59 x 90 (B&Q; cabinet top to front apron) | [product](https://www.screwfix.com/p/essentials-corner-braces-zinc-plated-52mm-x-52mm-x-16-35mm-10-pack/11013) | Braces £2.48 per 10 (Screwfix, Parc Tawe 33 in stock) + HD9090 £2.50 x 2 (B&Q Swansea, aisle 101), inc VAT | 7.48 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T11 | 1 | Wood screws 5 x 70, 4 x 30, 4 x 40 | 3 boxes | Leg lamination, side frames, top lamination, panels | [product](https://www.screwfix.com/p/goldscrew-pz-double-countersunk-thread-cutting-multipurpose-screws-5mm-x-70mm-100-pack/16221) | Goldscrew 5 x 70 (100) £4.29 + 4 x 30 (200) £2.89 + Silverscrew 4 x 40 (200) £3.29 inc VAT (Screwfix; Swansea stock 2026-11-08: all 3 stores, 4 x 40 only 2-3 per store) | 10.47 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
 | T12 | 1 | PVA wood glue D3/D4, 1 L | 1 pcs | Leg and joist lamination, side frames, top layers | [product](https://www.diy.com/departments/bond-it-premium-water-resistant-d4-wood-adhesive-glue-internal-external-fast-drying-white-1l/5056437400864_BQ.prd) | £11.99 inc VAT, free delivery (B&Q marketplace, Bond It D4 1 L) | 11.99 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
-| T13 | 1 | Yacht varnish 750 ml | 1 pcs | Seal the top and shelf (coolant, shed damp): 3 coats | [product](https://www.screwfix.com/p/fortress-trade-750ml-clear-gloss-solvent-based-exterior-yacht-varnish/326pc) | £11.99 inc VAT (Screwfix, Fortress Trade yacht varnish 750 ml; Swansea stock not read) | 11.99 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T13 | 1 | Yacht varnish 750 ml | 1 pcs | Seal the top and shelf (coolant, shed damp): 3 coats | [product](https://www.screwfix.com/p/fortress-trade-750ml-clear-gloss-solvent-based-exterior-yacht-varnish/326pc) | £11.99 inc VAT, sale (Screwfix, Fortress Trade yacht varnish 750 ml; Swansea stock 2026-11-08: 1 at Parc Tawe, 1 at Cwmdu Parc) | 11.99 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
 | T14 | 1 | 120 mm fan finger guards | 2 pcs | For the 2 radiator fan holes in the right side panel | [product](https://www.aliexpress.com/item/1005002406653644.html) | £6.81 per 2 inc VAT, free shipping (AliExpress, logged in); screws not stated | 6.81 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 (T14: wave 1 AliExpress basket) |
 | T15 | 1 | Desk cable grommet 80 x 160 with lid and brush (bench top) | 1 pcs | Metal rectangular desk grommet 80 x 160 mm, lid + dust brush. Through the top at x 850-930, y 700-860 (D-99) | [product](https://www.diy.com/departments/metal-desk-cable-grommet-80x160-mm-black-rectangular/5056369505101_BQ.prd) | £11.04 inc VAT, free delivery (B&Q marketplace) | 11.04 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
 | X01 | 1 | Dial test indicator + magnetic base | 1 set | For rail alignment and squaring the gantry | [product](https://www.aliexpress.com/item/1005013036061506.html) | £17.23 inc VAT, free shipping (AliExpress) | 17.23 | Lever DTI 0.01 mm + flexible base |

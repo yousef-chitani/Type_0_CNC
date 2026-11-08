@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-08, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-99). **Every Phase 1 BOM line is now priced: £3,335.69.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-99). **Every Phase 1 BOM line is now priced: £3,331.37.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
 
 ## Before wave 1 (4 Jan 2027)
 
@@ -13,7 +13,7 @@ Resolved items are in decisions.md (D-01 … D-99). **Every Phase 1 BOM line is 
 
 ## Before wave 2 (15 Feb 2027)
 
-4. **Screwfix Swansea stock** for T11 (screws) and T13 (varnish): not read (Screwfix asked for a human check). Low risk: both are common lines.
+4. **Screwfix Swansea stock is thin** for T13 varnish (1 each at Parc Tawe and Cwmdu Parc) and the 4 × 40 screws (2–3 per store) on 8 Nov. Re-check before 15 Feb, or order for delivery.
     Who: owner, at order time.
 5. **T02 foot height** sets the leg length (bench_cutlist.md assumes 30 mm from the floor to the leg bottom). T02 is in wave 2, so cut the legs after the feet arrive.
     Who: owner, measure the feet.
