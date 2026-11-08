@@ -1,31 +1,31 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **82 line items, 81 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **82 line items, 82 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
-| Frame | 17 | 16 | £608.04 |
+| Frame | 17 | 17 | £637.12 |
 | Motion | 14 | 14 | £1,004.77 |
-| Spindle | 9 | 9 | £1,524.50 |
-| Tool changer | 7 | 7 | £164.78 |
-| Pneumatics | 6 | 6 | £117.00 |
+| Spindle | 9 | 9 | £1,546.00 |
+| Tool changer | 7 | 7 | £154.46 |
+| Pneumatics | 6 | 6 | £110.22 |
 | Electronics | 20 | 20 | £810.62 |
-| Enclosure | 3 | 3 | £86.67 |
+| Enclosure | 3 | 3 | £78.73 |
 | Stand | 2 | 2 | £12.19 |
 | Metrology | 2 | 2 | £50.17 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **82** | **81** | **£4,449.21** |
+| **All** | **82** | **82** | **£4,474.75** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,449.21**. Not priced yet: F08.
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,474.75**. Not priced yet: .
 
 ## Phase totals (D-66)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,015.83 |
-| 2 | ATC spindle + holders, air, mist, enclosure | £1,268.60 |
-| 3 | Tool rack, drive, forks | £164.78 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,066.41 |
+| 2 | ATC spindle + holders, air, mist, enclosure | £1,253.88 |
+| 3 | Tool rack, drive, forks | £154.46 |
 
 Lines still TO PRICE: see the list above.
 
@@ -62,7 +62,7 @@ Lines still TO PRICE: see the list above.
 | F04 | 1 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | Kiln Dried KDIS Pavior Sand 0-1 mm | [product](https://hancockandbrown.com/kiln-dried-block-paving-sand-20kg-bag) | £6.38 inc VAT per 20 kg (Hancock & Brown, Swansea) | 19.14 | D-79 resize: about 43 kg medium + fine. Hancock & Brown £6.38 each |
 | F06 | 1 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | Pottery-grade whiting, dry powder (< 0.1 mm) | [product](https://valentineclays.co.uk/products/whiting) | £20.42 inc VAT per 25 kg (Valentine Clays) | 20.42 | D-64. Delivery cost not shown: check in the basket. Alternatives: Potterycrafts silica flour £36.05 ex VAT (£43.26 inc), Womersleys Trucarb whiting from £11.55 ex VAT (construction chalk, dryness not stated). Keep the bag sealed and dry |
 | F07 | 1 | Steel flat bar 40 x 10 mm | 1 3 m bar | 40 × 10 mild steel flat bar, 3 m | [product](https://www.themetalstore.co.uk/products/3-metre-lengths-10mm-flat-bar) | £30.00 ex VAT / £36.00 inc VAT per 3 m bar (The Metal Store) | 36.00 | v2: rail inserts (Y 2 × 400, X 2 × 560) + joint bars, about 3 m |
-| F08 | 1 | M12 threaded rod 2 × 1 m + nuts | 1 lot | Zinc M12 rod 2 × 1 m + M12 nuts | [product](https://www.screwfix.com/) | TO PRICE (Screwfix): stainless AliExpress option £57.08 rejected |  | D-84 |
+| F08 | 1 | M12 threaded rod 2 × 1 m + nuts | 1 lot | 5 × Easyfix BZP M12 × 1000 mm rod (5-pack) + 100 × M12 BZP nuts | [product](https://www.screwfix.com/p/easyfix-bzp-steel-threaded-rods-m12-x-1000mm-5-pack/98942) | Rods £19.99 per 5 + nuts £9.09 per 100 inc VAT (Screwfix 98942, 15569), collect Swansea | 29.08 | Nuts: https://www.screwfix.com/p/easyfix-bzp-steel-hex-nuts-m12-100-pack/15569 . Spare rods and nuts |
 | F09 | 1 | Steel or PVC tube for M12 bolt sleeves | 2 m | About 14-16 mm bore | [product](https://www.screwfix.com/p/deta-tte-round-upvc-white-conduit-20mm-x-3m/256vt) | £2.29 inc VAT (Screwfix, 20 mm uPVC conduit 3 m) | 2.29 | D-84: back to Screwfix (cheaper than the AliExpress hose, same shopping trip) |
 | F10 | 1 | MDF sheets for moulds (floors + walls) | 1 sheet | 18 mm MDF 2440 × 1220: base floor (about 700 × 1,010) + gantry floor (about 700 × 520) in one piece each | [product]() | £28 each (B&Q, owner-confirmed), collect | 28.00 | v2: 3 small moulds fit in one sheet (about 1.5 m²) |
 | F11 | 1 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | Essentials smooth planed C16 whitewood CLS 38 x 63 x 2.4 m | [product](https://www.diy.com/departments/essentials-smooth-planed-c16-whitewood-spruce-cls-timber-l-2-4m-w-63mm-t-38mm/1798294_BQ.prd) | £3.97 each (B&Q, owner-confirmed), collect | 23.82 | v2: smaller moulds. B&Q £3.97 each |
@@ -93,22 +93,22 @@ Lines still TO PRICE: see the list above.
 | S02 | 1 | VFD (included in the G-Penny kit, S08) | 1 pcs | 2.2 kW, 1-phase 220 V in, 3-phase 220 V out, 0-600 Hz, RS-485 Modbus-RTU stated | [product](https://www.aliexpress.com/item/32253760001.html) | Included in S08 | 0.00 | D-78. Huanyang HY: Modbus over RS-485 via LinuxCNC hy_vfd / Mesa RS-485 (D-32, D-58). Previous ZEST VFD £88.94 no longer needed |
 | S03 | 1 | 80 mm spindle clamp (included in S08) | 1 pcs | 80 mm | [product](https://www.aliexpress.com/item/32253760001.html) | Included in S08 | 0.00 | D-78 |
 | S04 | 1 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + 3 motors) | 4 × 5 m |  | [product](https://www.aliexpress.com/item/32971008305.html) | £19.03 each inc VAT, free shipping (AliExpress) | 76.12 | D-84: premium accepted. Covers E20. 16 AWG ≈ 1.3 mm² |
-| S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | Kit 220 V pump (S08) in a sealed reservoir; 240 mm radiator G1/4; 2 × 120 mm 12 V fans (wire in series on 24 V); 2 × 8 mm × 1/4 barbs; 60 hose clamps; flow switch with contacts (TO PRICE, non-eBay); 8 mm ID tube (TO PRICE) | [product](https://www.aliexpress.com/item/1005007038307491.html) | Radiator £13.35 + basket: fans £8.70, barbs £2.38, clamps £17.89 (AliExpress) | 42.32 | D-84. Fans, barbs, clamps already in your basket. Remove the 6 mm ID tube from the basket (does not fit 8 mm barbs). Flow switch and 8 mm ID tube still to price |
+| S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | Kit 220 V pump (S08) in a sealed reservoir; 240 mm radiator G1/4; 2 × 120 mm 12 V fans (in series on 24 V); 2 × 8 mm × 1/4 barbs; 60 hose clamps; brass flow switch G1/4 NO 1.5-3 L/min; 5 m 8 mm ID braided PVC hose | [product](https://www.aliexpress.com/item/1005007038307491.html) | Radiator £13.35 + basket fans £8.70, barbs £2.38, clamps £17.89 + flow switch £12.51 (AliExpress) + 8 mm ID hose £8.99 (B&Q marketplace, free delivery) | 63.82 | D-85. Flow switch: https://www.aliexpress.com/item/1005010428362103.html (contact rating not stated: check before wiring to a 7i76EU input). Hose: https://www.diy.com/departments/clear-pvc-braided-hose-food-grade-oil-water-fuel-reinforced-pipe-tube-8mm-internal-12mm-external-5m-/5060449706401_BQ.prd . Remove the 6 mm ID tube from the AliExpress basket |
 | S06 | 2 | ISO20 ER16 holders with pull studs | 8 pcs | ISO20-ER16. Pull studs must match the spindle drawbar | [product](https://www.aliexpress.com/item/4000141590118.html) | £6.05 inc VAT each, free shipping (AliExpress; list £22.37) | 48.40 | ISO20-ER16-35L, 0.003 mm. £6.05 may be a new-shopper deal: at list price 8 × £22.37 = £178.96. PULL STUD NOT STATED: must match Jianken. Jianken own holders £37.52-75.03 on the S01 page. DamenCNC Teknomotor €123.50 each |
 | S07 | 2 | ER16 collet set | 1 set | Precision (AA grade or better) 1-10 mm | [product](https://www.aliexpress.com/item/1005005626185405.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | AA ER16 10-piece set. Sizes not listed. AAA set £68.39 |
 | A01 | 3 | ISO20 tool forks (3D printed) | 8 pcs | 3D-printed ISO20 forks from a friend's model | [product]() | Owner sourcing (3D printed) | 0.00 | D-58. Print in PETG/ASA/PA for stiffness and heat. Check grip force and holder fit before Stage 2 |
 | A03 | 3 | Small closed-loop stepper + driver (48 V) | 1 set | Drives the rack slide | [product](https://www.omc-stepperonline.com/1-axis-closed-loop-stepper-cnc-kit-80ncm-113-29oz-in-nema-17-motor-driver-1-cl42t-s08-v41) | £39.43 (VAT?) + £8.34 DE warehouse (StepperOnline) | 47.77 | 1-CL42T-S08-V41: NEMA 17 0.8 Nm + CL42T 24-48 V. 5 mm shaft |
 | A05 | 3 | Tool length setter (wired switch) | 1 pcs | On the rack carrier | [product](https://www.aliexpress.com/item/1005012101891449.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | N96R, 24 V, NC |
 | A06 | 3 | ATC wheel discs + bracket | 1 lot | Aluminium: 2 × Ø200 × 8 discs + leg bracket (v2 ferris wheel) | [product](https://www.aluminiumwarehouse.co.uk/products/8-mm-6082-aluminium-plate) | 2 × 200 × 200 × 8 (£15.55 each) + 150 × 120 × 10 (£15.00) ex VAT (Aluminium Warehouse) | 55.32 | Squares: cut the discs yourself. Add to the M11/M12 order. Inc VAT calculated |
-| A07 | 3 | ATC wheel shaft + 2 bearings | 1 set | Ø20 shaft, 2 × pillow-block or flanged bearings | [product](https://www.ebay.co.uk/itm/284132754238) | Shaft £15.99 + 2 × UCFL204 £6.75 (VAT?), free delivery (eBay UK) | 29.49 | Bearings: https://www.ebay.co.uk/itm/383440913919 |
+| A07 | 3 | ATC wheel shaft + 2 bearings | 1 set | Ø20 × 150 chrome steel shaft + 2 × KFL004 20 mm flange bearings | [product](https://www.aliexpress.com/item/1005007995333691.html) | Shaft £11.99 + £2.25 shipping; bearings £7.50 for 2 (AliExpress, logged in) | 21.74 | Bearings: https://www.aliexpress.com/item/1005007098430647.html (under £8: shipping fee only shown in basket). Turn the shaft end to 18 mm for the 60T pulley (A08) |
 | A08 | 3 | ATC wheel drive reduction | 1 set | GT2 belt + pulleys about 3:1 (or a small worm gearbox) for the NEMA 17 | [product](https://www.aliexpress.com/item/32650791423.html) | 20T £0.99 + 60T £3.99 + £3.35 shipping + belt 222 mm £0.99 (AliExpress) | 9.32 | 60T has an 18 mm bore with keyway: turn the shaft end to 18 mm. 20T and belt are 1-per-shopper deals (normal £4.72, £2.74). 222 mm belt gives about 70 mm centres |
-| A09 | 3 | ATC wheel index sensor | 1 set | Inductive sensor M8/M12 PNP + home flag | [product](https://www.ebay.co.uk/itm/125499684863) | £4.99 (VAT?), free delivery (eBay UK) | 4.99 | LJ12A3-4-Z/BY PNP NO |
+| A09 | 3 | ATC wheel index sensor | 1 set | Inductive sensor M8/M12 PNP + home flag | [product](https://www.aliexpress.com/item/1005010648075147.html) | Added to E10 order: £1.54 + £0.88 extra shipping | 2.42 | Bought with E10 (5 sensors) |
 | P01 | 2 | Filter / regulator / dryer | 1 pcs |  | [product](https://www.aliexpress.com/item/1005002589702135.html) | £6.50 inc VAT (AliExpress) | 6.50 | AW2000-02 filter-regulator. No dryer |
 | P02 | 2 | 24 V solenoid valves | 4 pcs | Tool release / taper clean / air blast | [product](https://www.aliexpress.com/item/1005012294513653.html) | £9.49 inc VAT each, free shipping (AliExpress) | 37.96 | 3V1-06 24 V 3/2 NC. Qty 4 (3 + 1 for mist unit) |
 | P03 | 2 | Air pressure switch | 1 pcs | About 5.5 bar trip point | [product](https://www.aliexpress.com/item/1005013285557375.html) | £5.17 (VAT?) + £3.79 shipping (AliExpress) | 8.96 | QPM11-NO-02. NO contact |
 | P04 | 2 | Mist coolant system with 24 V solenoid | 1 set |  | [product](https://www.aliexpress.com/item/1005012241646016.html) | £17.59 inc VAT (AliExpress) | 17.59 | BPV-3000 mist unit, no solenoid (uses 4th P02 valve) |
 | P05 | 2 | Push-fit tubing and fittings 6/8 mm | 1 lot |  | [product](https://www.aliexpress.com/item/1005006780298909.html) | £4.31 + £7.56 inc VAT (AliExpress) | 11.87 | 10 m 6 × 4 + 10 m 8 × 5 PU. Fittings NOT priced |
-| P06 | 2 | Push-in fittings | 12 pcs | 8 × 6 mm-1/8 BSP + 4 × 8 mm-1/4 BSP (PROVISIONAL quantities) | [product](https://www.ebay.co.uk/itm/156691426151) | £2.77 each (6 mm) + £2.99 each (8 mm), free delivery (eBay UK) | 34.12 | 8 mm: https://www.ebay.co.uk/itm/110811089560 . Quantities to confirm from the pneumatic layout |
+| P06 | 2 | Push-in fittings | 12 pcs | 10 × RS PRO 6 mm × R1/8 push-in (2 packs) + 5 × John Guest PM010812E 8 mm × G1/4 | [product](https://uk.rs-online.com/web/p/pneumatic-fittings/2993932) | £8.03 inc per 5 (6 mm) × 2 + £11.28 inc per 5 (8 mm) (RS) | 27.34 | 8 mm: https://uk.rs-online.com/web/p/pneumatic-fittings/7042758 . Add to the RS order (free delivery over £60) |
 | E01 | 1 | Mesa 7i76EU | 1 pcs |  | [product](https://store.mesanet.com/index.php?route=product/product&product_id=399) | €309.31 = £257.74 (owner-confirmed) | 257.74 | Owner-confirmed GBP charge. Import VAT already applied |
 | E02 | 1 | Mini-PC (owner already has) | 1 pcs |  | [product]() | Owner sourced | 0.00 | D-58. Onboard Intel NIC goes to the Mesa board. No 2nd NIC: machine stays offline |
 | E03 | 1 | Monitor + keyboard + mouse (owner already has) | 1 set |  | [product]() | Owner sourced | 0.00 | D-58 |
@@ -119,7 +119,7 @@ Lines still TO PRICE: see the list above.
 | E07 | 1 | Contactor with 24 V coil | 1 pcs |  | [product](https://www.aliexpress.com/item/1005005356561757.html) | £26.29 inc VAT, free shipping (AliExpress, logged in) | 26.29 | Schneider LC1D09BDC 24 V DC coil. Genuine not verified |
 | E08 | 1 | E-stop buttons 2 NC (×5) | 1 set | XB2-BS544 22 mm, 2 NC, twist release (2 NC for the dual-channel relay) | [product](https://www.aliexpress.com/item/1005008293871583.html) | £12.39 inc VAT for 5, free shipping (AliExpress, option BS544-2NC) | 12.39 | D-84: 2 NC needed for dual-channel E06 |
 | E09 | 1 | MCBs / main isolator / EMC filter for VFD | 1 set |  | [product](https://www.aliexpress.com/item/1005010519550019.html) | £10.39 inc VAT, free shipping (AliExpress) | 10.39 | CW4L2-20A-S. MCBs and isolator NOT priced |
-| E10 | 1 | Inductive proximity switches 24 V | 4 pcs | Homing X / Y / Z / rack | [product](https://www.aliexpress.com/item/1005010648075147.html) | £1.54 each + £6.04 shipping (AliExpress, logged in) | 12.20 | LJ12A3-4-Z/BY PNP NO |
+| E10 | 1 | Inductive proximity switches 24 V | 5 pcs | LJ12A3-4-Z/BY M12 PNP NO 4 mm (4 homing + 1 for the ATC wheel index, A09) | [product](https://www.aliexpress.com/item/1005010648075147.html) | £1.54 each + £6.92 shipping for 5 (AliExpress, logged in) | 12.20 | Includes the A09 sensor (its extra £2.42 is counted on A09, Phase 3) |
 | E12 | 1 | Electrical cabinet RS PRO 600 × 400 × 200 IP66 | 1 set | RS PRO steel wall box IP66 600 × 400 × 200, chassis plate, gland plate | [product](https://uk.rs-online.com/web/p/wall-boxes/7755817) | £90.87 ex / £109.04 inc VAT (RS 775-5817) | 109.04 | Owner decision 8 Nov: keep 600 × 400 (premium accepted) |
 | E13 | 1 | DIN rail, terminals, end stops, ferrules + crimper, wire | 1 lot | 2 × 500 mm DIN rail, HSC8 6-4 crimper + 300 ferrules, BVR 1.5 mm² 10 m (mains), UL1007 18 AWG 10 m (24 V only); RS 30 × 2.5 mm² terminals + 5 end stops | [product](https://www.aliexpress.com/item/4000151397971.html) | AliExpress: rail 2 × £5.51, crimper kit £7.83, 1.5 mm² £16.69, 18 AWG £3.65. RS: terminals £10.56, end stops £2.51 | 52.26 | Crimper kit https://www.aliexpress.com/item/1005012223962740.html ; 1.5 mm² https://www.aliexpress.com/item/1005011853538687.html ; 18 AWG https://www.aliexpress.com/item/1005011594190524.html ; RS terminals https://uk.rs-online.com/web/p/din-rail-terminal-blocks/8787503 . Covers E19 |
 | E14 | 1 | Cable chain and shielded motor cables | 1 lot |  | [product](https://www.aliexpress.com/item/1005012723966521.html) | £15.79 inc VAT, free shipping (AliExpress) | 15.79 | 1 m only: length TBD. Shielded motor cable NOT priced |
@@ -130,7 +130,7 @@ Lines still TO PRICE: see the list above.
 | E20 | 1 | (covered by S04) | 15 m | CY 4-core 1.0 mm² | [product]() | Included in S04 | 0.00 |  |
 | E21 | 1 | Reset button 22 mm green (in your basket) | 1 pcs | 22 mm green, 2 NO, momentary, 24 V LED | [product](https://www.aliexpress.com/item/1005006872683640.html) | £4.25 inc VAT (AliExpress basket, Sweideer) | 4.25 | Already in your AliExpress basket |
 | N01 | 2 | Enclosure box: 12 mm MDF | 2 sheets | 12 × 1220 × 2440 MDF, box about 760 W × 780 D × 700 H | [product](https://www.wickes.co.uk/General-Purpose-MDF-Sheet---12-x-1220-x-2440mm/p/110034) | £26 per sheet (Wickes), click and collect | 52.00 | D-79: 2 sheets of 12 mm MDF are enough for a 950 × 850 × 700 box (cut plan in price-check reply 7). Seal inside against coolant |
-| N02 | 2 | Enclosure window: 4 mm polycarbonate | 1 pcs | 4 mm clear polycarbonate 600 × 600 | [product](https://www.ebay.co.uk/itm/127568551200) | £31.93 (VAT?), free delivery (eBay UK) | 31.93 | Extrusion + full polycarbonate route would be about £563 |
+| N02 | 2 | Enclosure window: 4 mm twinwall polycarbonate | 1 pcs | FlexiShield 4 mm clear twinwall polycarbonate, 610 × 610 | [product](https://www.diy.com/departments/flexishield-4mm-clear-twinwall-polycarbonate-sheets-uv-resistant-greenhouse-panels-and-roofing-610x610mm/7865948895766_BQ.prd) | £23.99 inc VAT, free delivery (B&Q marketplace, TG Crafters) | 23.99 | Owner decision: twinwall accepted (ribbed, not optically clear). Solid 4 mm was £119.99+ |
 | N03 | 2 | LED light | 1 pcs |  | [product](https://www.aliexpress.com/item/1005013221981188.html) | £2.74 inc VAT (AliExpress) | 2.74 | 24-36 V 5 W |
 | T01 | 1 | Bench (owner-built timber) | 1 lot | Owner-built timber bench, top 785 mm above the floor, carries about 150 kg + enclosure | [product]() | Owner build | 0.00 | D-71 |
 | T02 | 1 | Anti-vibration feet | 4 pcs | 4 × RS PRO levelling foot M10 × 45, 50 mm polyamide base, 470 kg | [product](https://uk.rs-online.com/web/p/adjustable-feet/0285757) | £10.16 ex / £12.19 inc VAT (RS 028-5757) | 12.19 | Polyamide base, not rubber: add rubber pads if needed for vibration |

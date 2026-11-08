@@ -1,17 +1,17 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,015.83** (budget £4,000). Not yet priced: F08 M12 threaded rod 2 × 1 m + nuts, plus the flow switch and 8 mm ID tube inside S05.
+**Phase 1 priced total: £3,066.41** (budget £4,000). Every line priced. No eBay.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £608.04 |
+| Frame | £637.12 |
 | Motion | £1,004.77 |
-| Spindle | £467.64 |
+| Spindle | £489.14 |
 | Electronics | £802.55 |
 | Stand | £12.19 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,015.83** |
+| **Total** | **£3,066.41** |
 
 ## Frame
 
@@ -23,7 +23,7 @@
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
 | F07 | Steel flat bar 40 x 10 mm | 1 3 m bar | £36.00 |
-| F08 | M12 threaded rod 2 × 1 m + nuts | 1 lot | to price |
+| F08 | M12 threaded rod 2 × 1 m + nuts | 1 lot | £29.08 |
 | F09 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 |
 | F10 | MDF sheets for moulds (floors + walls) | 1 sheet | £28.00 |
 | F11 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | £23.82 |
@@ -63,7 +63,7 @@
 | S02 | VFD (included in the G-Penny kit, S08) | 1 pcs | £0.00 |
 | S03 | 80 mm spindle clamp (included in S08) | 1 pcs | £0.00 |
 | S04 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + 3 motors) | 4 × 5 m | £76.12 |
-| S05 | Spindle cooling loop (DIY) | 1 pcs | £42.32 |
+| S05 | Spindle cooling loop (DIY) | 1 pcs | £63.82 |
 
 ## Electronics
 
@@ -79,7 +79,7 @@
 | E07 | Contactor with 24 V coil | 1 pcs | £26.29 |
 | E08 | E-stop buttons 2 NC (×5) | 1 set | £12.39 |
 | E09 | MCBs / main isolator / EMC filter for VFD | 1 set | £10.39 |
-| E10 | Inductive proximity switches 24 V | 4 pcs | £12.20 |
+| E10 | Inductive proximity switches 24 V | 5 pcs | £12.20 |
 | E12 | Electrical cabinet RS PRO 600 × 400 × 200 IP66 | 1 set | £109.04 |
 | E13 | DIN rail, terminals, end stops, ferrules + crimper, wire | 1 lot | £52.26 |
 | E14 | Cable chain and shielded motor cables | 1 lot | £15.79 |
