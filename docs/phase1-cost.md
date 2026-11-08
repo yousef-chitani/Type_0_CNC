@@ -1,69 +1,69 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,065.46** (budget £4,000, D-68). Every line priced. Work area 400 × 250 (D-79).
+**Phase 1 priced total: £3,015.83** (budget £4,000). Not yet priced: F08 M12 threaded rod 2 × 1 m + nuts, plus the flow switch and 8 mm ID tube inside S05.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £729.48 |
-| Motion | £963.68 |
-| Spindle | £444.05 |
-| Electronics | £751.82 |
-| Stand | £21.95 |
-| Metrology | £85.70 |
-| Fixings | £68.78 |
-| **Total** | **£3,065.46** |
+| Frame | £608.04 |
+| Motion | £1,004.77 |
+| Spindle | £467.64 |
+| Electronics | £802.55 |
+| Stand | £12.19 |
+| Metrology | £50.17 |
+| Fixings | £70.47 |
+| **Total** | **£3,015.83** |
 
 ## Frame
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| F01 | Epoxy for main frame mix | 3 4.66 kg packs | £312.59 |
+| F01 | Main EG epoxy: GlassCast 50 PLUS 15 kg | 1 kit | £255.00 |
 | F02 | Epoxy for leveling pour / grout / samples | 5 kg | £91.75 |
 | F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
 | F07 | Steel flat bar 40 x 10 mm | 1 3 m bar | £36.00 |
-| F08 | M12 threaded rod + nuts (lifting points and joint) | 1 lot | £28.74 |
+| F08 | M12 threaded rod 2 × 1 m + nuts | 1 lot | to price |
 | F09 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 |
 | F10 | MDF sheets for moulds (floors + walls) | 1 sheet | £28.00 |
 | F11 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | £23.82 |
-| F12 | Release agent: PVA + wax | 1 set | £31.68 |
-| F13 | Plasticine for corner fillets | 1 set | £19.04 |
+| F12 | Release agents (Easy Composites) | 1 set | £14.90 |
+| F13 | Plasticine fillets (dropped: use silicone fillets) | 1 set | £0.00 |
 | F14 | Vibration table (owner DIY: tyres + board + unbalanced motor) | 2 pcs | £0.00 |
 | F15 | Vibration table mounts (replaced by tyres) | 8 pcs | £0.00 |
 | F16 | Temperature logging (owner DIY) | 1 set | £0.00 |
 | F17 | Mixer | 1 pcs | £69.99 |
-| F18 | Packing tape + silicone | 1 set | £16.98 |
+| F18 | Silicone (Screwfix) + packing tape (AliExpress) | 1 set | £17.69 |
 
 ## Motion
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| M01 | HGR20 rail 650 mm | 2 pcs | £61.64 |
-| M02 | HGR20 rail 450 mm | 2 pcs | £79.04 |
-| M03 | HGR20 rail 300 mm | 2 pcs | £57.34 |
-| M04 | HGH20CA carriage Z1 preload | 12 pcs | £0.00 |
-| M05 | SFU1605 ballscrew + DFU1605 preloaded nut | 3 pcs | £198.65 |
-| M06 | BK12 + BF12 end supports | 3 sets | £0.00 |
-| M07 | Nut housing DSG16H | 3 pcs | £0.00 |
-| M08 | Disc or bellows coupling 10 mm to 10 mm | 3 pcs | £13.09 |
+| M01 | HGR20 rail kit Y: 2 × 500 mm + 4 blocks | 2 pcs | £64.79 |
+| M02 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | 2 pcs | £81.99 |
+| M03 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | 2 pcs | £60.59 |
+| M04 | HGH20CA carriages (in the rail kits) | 12 pcs | £0.00 |
+| M05 | DFU1605 ballscrew kits X 750 / Y 450 / Z 350 | 3 pcs | £214.81 |
+| M06 | BK12 + BF12 end supports (in the screw kits) | 3 sets | £0.00 |
+| M07 | Nut housings (in the screw kits) | 3 pcs | £0.00 |
+| M08 | Disc or bellows coupling 10 mm to 10 mm | 3 pcs | £14.10 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | £112.71 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
-| M11 | Aluminium tooling plate 330 x 330 x 30 mm | 1 pcs | £221.33 |
-| M12 | Aluminium plate for X saddle and Z spindle plate | 1 lot | £85.85 |
-| M13 | Motor and bearing mounts | 1 lot | £40.59 |
+| M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
+| M12 | Saddle + Z plates 6082 20 mm | 1 lot | £85.85 |
+| M13 | Motor and bearing mounts | 1 lot | £55.16 |
 
 ## Spindle
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
 | S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 1 pcs | £318.16 |
-| S09 | ER20 collet set | 1 set | £34.49 |
+| S09 | ER20 collet set | 1 set | £31.04 |
 | S02 | VFD (included in the G-Penny kit, S08) | 1 pcs | £0.00 |
 | S03 | 80 mm spindle clamp (included in S08) | 1 pcs | £0.00 |
-| S04 | Shielded 4-core spindle cable | 5 m | £18.22 |
-| S05 | Spindle cooling loop (DIY) | 1 pcs | £73.18 |
+| S04 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + 3 motors) | 4 × 5 m | £76.12 |
+| S05 | Spindle cooling loop (DIY) | 1 pcs | £42.32 |
 
 ## Electronics
 
@@ -72,40 +72,40 @@
 | E01 | Mesa 7i76EU | 1 pcs | £257.74 |
 | E02 | Mini-PC (owner already has) | 1 pcs | £0.00 |
 | E03 | Monitor + keyboard + mouse (owner already has) | 1 set | £0.00 |
-| E04 | 48 V DC PSU, DIN rail (Mean Well NDR-480-48) | 1 pcs | £138.60 |
+| E04 | 48 V PSU Mean Well SDR-480-48 (DIN) | 1 pcs | £136.06 |
 | E05 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | £27.62 |
-| E22 | 5 V DC PSU, DIN rail (Mean Well MDR-10-5) | 1 pcs | £15.00 |
-| E06 | E-stop safety relay (used Pilz PNOZ X2.1) | 1 pcs | £30.68 |
-| E07 | Contactor with 24 V coil | 1 pcs | £26.19 |
-| E08 | E-stop mushroom buttons + reset button | 1 set | £8.15 |
+| E22 | 5 V DC PSU, DIN rail (Mean Well MDR-10-5) | 1 pcs | £15.65 |
+| E06 | E-stop safety relay Schneider Preventa XPSAC5121 | 1 pcs | £84.39 |
+| E07 | Contactor with 24 V coil | 1 pcs | £26.29 |
+| E08 | E-stop buttons 2 NC (×5) | 1 set | £12.39 |
 | E09 | MCBs / main isolator / EMC filter for VFD | 1 set | £10.39 |
-| E10 | Inductive proximity switches 24 V | 4 pcs | £9.57 |
-| E12 | Electrical cabinet 600 x 400 x 200 | 1 set | £65.95 |
-| E13 | DIN rail / terminals / wiring / ferrules | 1 lot | £33.79 |
-| E14 | Cable chain and shielded motor cables | 1 lot | £15.69 |
-| E17 | Main isolator + MCBs | 1 set | £24.49 |
-| E18 | Cabinet fan + filters | 1 set | £17.46 |
-| E19 | DIN rail + ferrules + wire | 1 set | £28.06 |
-| E20 | Shielded motor/encoder cable | 15 m | £36.05 |
-| E21 | Reset push button | 1 pcs | £6.39 |
+| E10 | Inductive proximity switches 24 V | 4 pcs | £12.20 |
+| E12 | Electrical cabinet RS PRO 600 × 400 × 200 IP66 | 1 set | £109.04 |
+| E13 | DIN rail, terminals, end stops, ferrules + crimper, wire | 1 lot | £52.26 |
+| E14 | Cable chain and shielded motor cables | 1 lot | £15.79 |
+| E17 | Isolator + MCBs | 1 set | £16.15 |
+| E18 | Cabinet filter fan + exhaust grille (9803 series) | 1 set | £22.33 |
+| E19 | (covered by E13) | 1 set | £0.00 |
+| E20 | (covered by S04) | 15 m | £0.00 |
+| E21 | Reset button 22 mm green (in your basket) | 1 pcs | £4.25 |
 
 ## Stand
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
 | T01 | Bench (owner-built timber) | 1 lot | £0.00 |
-| T02 | Anti-vibration feet | 4 pcs | £21.95 |
+| T02 | Anti-vibration feet | 4 pcs | £12.19 |
 
 ## Metrology
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| X01 | Dial test indicator + magnetic base | 1 set | £17.20 |
-| X02 | Precision level 0.05 mm/m | 1 pcs | £68.50 |
+| X01 | Dial test indicator + magnetic base | 1 set | £17.23 |
+| X02 | Precision level 200 mm (AliExpress) | 1 pcs | £32.94 |
 
 ## Fixings
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| X03 | Socket cap screw assortment M5-M12 | 1 lot | £40.99 |
-| X04 | M5 and M12 socket caps | 1 set | £27.79 |
+| X03 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | £70.47 |
+| X04 | (covered by X03) | 1 set | £0.00 |
