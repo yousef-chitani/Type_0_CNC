@@ -8,13 +8,13 @@ import pathlib
 OUT = pathlib.Path(__file__).parent / "out"; OUT.mkdir(exist_ok=True)
 EG = 2300  # kg/m3
 
-P = dict(travel_x_work=200, travel_y=200, travel_z=150,
-         table_x=280, table_y=280, table_t=25, block_h=30,
-         y_rail_spacing=180,
+P = dict(travel_x_work=400, travel_y=250, travel_z=150,   # D-79
+         table_x=460, table_y=330, table_t=25, block_h=30,
+         y_rail_spacing=280,   # D-80
          wheel_pockets=8, pocket_pitch=70, wheel_gap=20, wheel_t=60,   # ferris wheel beside +X leg, turns in the Y-Z plane (D-73)
          leg_clear=20, saddle_w=180,
          h=110,                                              # spine/foot height
-         spine_w=260, upright_w=70, portal_d=130, beam_h=130,
+         spine_w=320, upright_w=70, portal_d=130, beam_h=130,
          beam_front=110, foot_d=220, foot_back_bar=60)
 
 def derive(p):
@@ -69,13 +69,13 @@ def T(x, y, s, a="middle", sz=11, c="#222", b=False):
 S = 0.6
 def top():
     p, d = P, D
-    W, H = 900, 640; ox, oy = 380, 330
+    W, H = 1000, 700; ox, oy = 400, 360
     X = lambda x: ox + x*S; Y = lambda y: oy - y*S
     b = ""
     b += R(X(d["portal_x0"]), Y(d["foot_y1"]), X(d["leg_r_x1"]), Y(d["foot_y0"]), COL["spine"])
     b += R(X(-p["spine_w"]/2), Y(d["foot_y0"]), X(p["spine_w"]/2), Y(d["spine_y0"]), COL["spine"])
     for s_ in (-1, 1):
-        b += R(X(s_*p["y_rail_spacing"]/2-10), Y(200), X(s_*p["y_rail_spacing"]/2+10), Y(-200), COL["rail"])
+        b += R(X(s_*p["y_rail_spacing"]/2-10), Y(d["spine_y1"]-30), X(s_*p["y_rail_spacing"]/2+10), Y(d["spine_y0"]+60), COL["rail"])
     b += R(X(d["table_x0"]), Y(p["table_y"]/2), X(d["table_x1"]), Y(-p["table_y"]/2), COL["table"], 0.85)
     b += R(X(d["portal_x0"]), Y(d["portal_y1"]), X(d["portal_x1"]), Y(d["portal_y0"]), COL["portal"], 0.75)
     b += R(X(d["pickup_x"]-p["wheel_t"]/2), Y(d["wheel_d"]/2), X(d["pickup_x"]+p["wheel_t"]/2), Y(-d["wheel_d"]/2), COL["rack"], 0.9)
@@ -85,13 +85,13 @@ def top():
     b += T(X(d["portal_x1"])+6, Y(d["portal_y1"])+12, f'PORTAL ≈{d["kg"]["portal"]:.0f} kg ({d["portal_cored"]:.0f} kg cored)', "start", 11, "#222", True)
     b += T(X(d["pickup_x"]+p["wheel_t"]/2+6), Y(-d["wheel_d"]/2)+12, "ferris-wheel ATC, turns in Y-Z", "start", 10, "#9a7514")
     b += T(X(0), Y(d["spine_y0"])+34, "FRONT (Y motor)", "middle", 10)
-    b += T(W/2, H-40, f'Top view. Frame ≈{d["kg"]["total"]:.0f} kg EG in 2 castings (base + portal). Only joint: portal legs to base (dowels + bolts).', "middle", 11, "#555")
-    b += T(W/2, H-24, f'X travel {d["travel_x_total"]:.0f} (200 work + reach to wheel), X rails {d["x_rail_len"]:.0f}, Y {p["travel_y"]}, Z {p["travel_z"]}. Legs span the table only (opening {d["open_x1"]-d["open_x0"]:.0f}).', "middle", 11, "#555")
-    svg("sketch_top.svg", W, H, "Type 0 v2: 2-piece cast frame (concept, rev C)", b)
+    b += T(W/2, H-40, f'Top view. Frame ≈{d["kg"]["spine"]+d["kg"]["foot"]+d["portal_cored"]:.0f} kg EG in 2 castings (portal cored) (base + portal). Only joint: portal legs to base (dowels + bolts).', "middle", 11, "#555")
+    b += T(W/2, H-24, f'X travel {d["travel_x_total"]:.0f} (400 work + reach to wheel), X rails {d["x_rail_len"]:.0f}, Y {p["travel_y"]}, Z {p["travel_z"]}. Legs span the table only (opening {d["open_x1"]-d["open_x0"]:.0f}).', "middle", 11, "#555")
+    svg("sketch_top.svg", W, H, "Type 0 v2: 2-piece cast frame (concept, rev D: 400 × 250)", b)
 
 def front():
     p, d = P, D
-    W, H = 900, 470; ox, oy = 380, 360
+    W, H = 1000, 470; ox, oy = 400, 360
     X = lambda x: ox + x*S; Z = lambda z: oy - z*S
     b = R(X(d["portal_x0"]), Z(0), X(d["leg_r_x1"]), Z(-p["h"]), COL["spine"])
     b += R(X(d["portal_x0"]), Z(d["open_h"]), X(d["open_x0"]), Z(0), COL["portal"])
@@ -111,7 +111,7 @@ def front():
     b += T(X((d["open_x0"]+d["open_x1"])/2), Z(d["open_h"])+14, f'opening {d["open_x1"]-d["open_x0"]:.0f} × {d["open_h"]:.0f}', "middle", 11, "#c0392b")
     b += T(X((d["portal_x0"]+d["portal_x1"])/2), Z(d["portal_h"])-8, f'portal {d["portal_w"]:.0f} W × {d["portal_h"]:.0f} H × {p["portal_d"]} D, beam overhang {d["portal_x1"]-d["leg_r_x1"]:.0f}', "middle", 11, "#c0392b")
     b += T(X(0), Z(-p["h"])+16, "base: one casting (spine + rear cross-piece). Dashed line in beam: capped PVC cores", "middle", 10)
-    svg("sketch_front.svg", W, H, "Type 0 v2: front view (concept, rev C)", b)
+    svg("sketch_front.svg", W, H, "Type 0 v2: front view (concept, rev D: 400 × 250)", b)
 
 if __name__ == "__main__":
     top(); front()
