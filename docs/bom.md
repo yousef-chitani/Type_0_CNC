@@ -12,19 +12,19 @@ Full list: [bom.csv](bom.csv). **82 line items, 82 priced.** Prices were read fr
 | Tool changer | 7 | 7 | £154.46 |
 | Pneumatics | 6 | 6 | £110.22 |
 | Electronics | 20 | 20 | £810.62 |
-| Enclosure | 3 | 3 | £84.61 |
+| Enclosure | 3 | 3 | £78.61 |
 | Stand | 2 | 2 | £12.19 |
 | Metrology | 2 | 2 | £50.17 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **82** | **82** | **£4,480.63** |
+| **All** | **82** | **82** | **£4,474.63** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,480.63**. Not priced yet: .
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,474.63**. Not priced yet: .
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
 | 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,066.41 |
-| 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,414.22 |
+| 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,408.22 |
 
 Lines still TO PRICE: see the list above.
 
@@ -128,7 +128,7 @@ Lines still TO PRICE: see the list above.
 | E19 | 1 | (covered by E13) | 1 set | 1 m DIN, ferrule kit + crimper, 0.75 and 1.5 mm² wire 10 m each | [product]() | Included in E13 | 0.00 |  |
 | E20 | 1 | (covered by S04) | 15 m | CY 4-core 1.0 mm² | [product]() | Included in S04 | 0.00 |  |
 | E21 | 1 | Reset button 22 mm green (in your basket) | 1 pcs | 22 mm green, 2 NO, momentary, 24 V LED | [product](https://www.aliexpress.com/item/1005006872683640.html) | £4.25 inc VAT (AliExpress basket, Sweideer) | 4.25 | Already in your AliExpress basket |
-| N01 | 2 | Enclosure box: 12 mm MDF | 2 sheets | 12 mm MDF, 2 sheets: box internal 880 × 930 × 742 (cut list: cad/v2/out/enclosure_cutlist.md) | [product](https://www.wickes.co.uk/General-Purpose-MDF-Sheet---12-x-1220-x-2440mm/p/110034) | £26 per sheet (Wickes), click and collect | 52.00 | D-87. 2 sheets confirmed by the cut list. Hinge, gas struts, handle, catch, brush strip not yet priced. Seal the inside |
+| N01 | 2 | Enclosure box: 12 mm MDF (B&Q) | 2 sheets | 12 mm MDF, 2 sheets: box internal 880 × 930 × 742 (cut list: cad/v2/out/enclosure_cutlist.md) | [product](https://www.diy.com/departments/mdf-board-l-2-44m-w-1-22m-t-12mm-22130g/1696260_BQ.prd) | £23 each inc VAT (B&Q, sold and shipped by B&Q) | 46.00 | D-89: moved from Wickes (£26 each). 2 sheets (cut list: cad/v2/out/enclosure_cutlist.md). Check Swansea stock for click and collect. Seal the inside |
 | N02 | 2 | Enclosure window: 4 mm solid clear polycarbonate | 1 pcs | Solid clear polycarbonate 4 mm, cut to 600 × 420 (covers the 560 × 380 door cut-out with 20 mm overlap) | [product](https://www.plasticsheets.com/clear-polycarbonate/) | £24.92 + £4.95 delivery (plasticsheets.com, owner-confirmed; VAT basis not stated) | 29.87 | D-88: replaces the ribbed twinwall (£23.99) for a clear view. 3 mm option was £18.55 + £4.95 |
 | N03 | 2 | LED light | 1 pcs |  | [product](https://www.aliexpress.com/item/1005013221981188.html) | £2.74 inc VAT (AliExpress) | 2.74 | 24-36 V 5 W |
 | T01 | 1 | Bench (owner-built timber) | 1 lot | Owner-built timber bench, top 785 mm above the floor, carries about 150 kg + enclosure | [product]() | Owner build | 0.00 | D-71 |
