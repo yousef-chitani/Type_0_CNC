@@ -23,4 +23,5 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [Supplier messages](docs/supplier-messages.md): drafts ready to send
 - [Timber bench](cad/v2/out/bench_cutlist.md): cut list, drawings, assembly
 - [3D-printed parts](docs/printed-parts.md): what's printed on the P1S printers, files and settings
+- [Full CAD assembly](docs/assembly.md): STEP for Fusion, cast-in features, design changes
 - [**Handover**](docs/HANDOVER.md): start here

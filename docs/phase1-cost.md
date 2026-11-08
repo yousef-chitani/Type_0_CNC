@@ -1,19 +1,19 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,313.52** (budget £4,000). Every line priced. No eBay.
+**Phase 1 priced total: £3,306.82** (budget £4,000). Not priced yet: M15, M16, M17. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
 | Frame | £637.12 |
-| Motion | £1,004.77 |
+| Motion | £998.07 |
 | Spindle | £489.14 |
 | Electronics | £818.49 |
 | Stand | £243.36 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,313.52** |
+| **Total** | **£3,306.82** |
 
 ## Frame
 
@@ -24,7 +24,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
-| F07 | Steel flat bar 40 x 10 mm | 1 3 m bar | £36.00 |
+| F07 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 3 m bar | £36.00 |
 | F08 | M12 threaded rod 2 × 1 m + nuts | 1 lot | £29.08 |
 | F09 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 |
 | F10 | MDF sheets for moulds (floors + walls) | 1 sheet | £28.00 |
@@ -46,16 +46,19 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M02 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | 2 pcs | £81.99 |
 | M03 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | 2 pcs | £60.59 |
 | M04 | HGH20CA carriages (in the rail kits) | 12 pcs | £0.00 |
-| M05 | DFU1605 ballscrew kits X 750 / Y 450 / Z 350 | 3 pcs | £214.81 |
+| M05 | DFU1605 ballscrew kits X 800-850 / Y 600 / Z 350 | 3 pcs | £214.81 |
 | M06 | BK12 + BF12 end supports (in the screw kits) | 3 sets | £0.00 |
 | M07 | Nut housings (in the screw kits) | 3 pcs | £0.00 |
-| M08 | Disc or bellows coupling 10 mm to 10 mm | 3 pcs | £14.10 |
+| M08 | Disc coupling 10 mm to 10 mm (Z only) | 1 pcs | £7.40 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | £112.71 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
+| M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore | 4 pcs | to price |
+| M16 | HTD-5M timing belts 15 mm wide | 2 pcs | to price |
+| M17 | Ø10 flange bearing (X screw outboard support) | 1 pcs | to price |
 | M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
-| M12 | Saddle + Z plates 6082 20 mm | 1 lot | £85.85 |
-| M13 | Motor and bearing mounts | 1 lot | £55.16 |
+| M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | £85.85 |
+| M13 | Z motor mount (NEMA 24 to BK12) | 1 lot | £55.16 |
 
 ## Spindle
 

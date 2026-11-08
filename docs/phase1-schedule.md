@@ -10,7 +10,7 @@ Castings are planned for April–May: GlassCast 50 PLUS needs **17–23 °C, ide
 |---|---|---|---|
 | 1–2 | 04 Jan – 17 Jan | Order wave 1. Install LinuxCNC on the mini-PC, latency test, connect the Mesa 7i76EU | 10 |
 | 3–6 | 18 Jan – 14 Feb | Electrical cabinet: DIN layout, PSUs, isolator/MCBs, e-stop safety chain, contactor, drivers. Bench-test all 3 motors from LinuxCNC on the bench (docs/linuxcnc.md section 6, parts A–D) | 20 |
-| before 1 | Nov – Dec 2026 | **Full CAD assembly (task 4, D-102)**: detailed parametric STEP from the session, refined in your CAD, then mould drawings (task 5) from it | (owner review) |
+| before 1 | Nov – Dec 2026 | **Full CAD assembly (task 4, D-102)**: first version done (`docs/assembly.md`); refine in Fusion and send back, then mould drawings (task 5) | (owner review) |
 | 7–8 | 15 Feb – 28 Feb | Order wave 2 (now includes the motion parts, D-103). Build the timber bench (top 785 mm, D-97: cad/v2/out/bench_cutlist.md, about 6–8 h) | 10 |
 | (on arrival, about week 9–10) | early March | Spindle kit (ordered in wave 1, about 8–9 weeks shipping): bench-test the VFD, spindle and cooling loop from LinuxCNC (docs/linuxcnc.md section 6, part E). About 2 h, fits beside the mould work | (2) |
 | 9–11 | 01 Mar – 21 Mar | Order wave 3. **Measure the received rails, screws, BK/BF supports and nut housings against the assembly; correct the mould drawings if needed.** Build the base and portal moulds (MDF, CLS, insert bars on jig bolts, Y-screw channel, PVC cores, sleeves). Build the tyre vibration table | 15 |

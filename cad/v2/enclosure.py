@@ -9,14 +9,25 @@ import cadquery as cq
 import type0_v2 as m
 
 P, D, OUT = m.P, m.D, m.OUT
-E = dict(t=12, gap_side=40, gap_back=80, gap_front=40, gap_top=50,
+E = dict(t=12, gap_side=25, gap_back=30, gap_front=25, gap_top=40,     # gaps reduced with the full assembly (D-109)
          y_motor_len=150,            # Y motor + coupling + BK12 in front of the spine
          spindle_total=282,          # G-Penny 230 body + 52 nose
          fixed_front_strip=120,      # fixed panel below the door
          window_w=560, window_h=380, # from the 610 x 610 twinwall sheet
          sheet=(2440, 1220))
 
+ASM = pathlib.Path(__file__).parent / "out" / "assembly" / "assembly_data.json"
+
 def extents():
+    """Box around the machine plus gaps. Uses the full assembly's extents (assembly.py, D-102) when available."""
+    if ASM.exists():
+        import json
+        e = json.loads(ASM.read_text())["extents"]
+        x0 = min(e["x0"], D["portal_x0"]) - E["gap_side"]
+        x1 = max(e["x1"], D["pickup_x"] + P["wheel_t"]/2) + E["gap_side"]
+        y0, y1 = e["y0"] - E["gap_front"], e["y1"] + E["gap_back"]
+        z0, z1 = -P["h"], e["z1"] + E["gap_top"]
+        return dict(x0=x0, x1=x1, y0=y0, y1=y1, z0=z0, z1=z1, W=x1-x0, Dp=y1-y0, H=z1-z0)
     zp_top = D["nose_top"] + 30 + D["rail_z"]                 # Z plate top at Z-top
     sp_top = D["nose_top"] + E["spindle_total"]
     x0 = D["portal_x0"] - E["gap_side"]

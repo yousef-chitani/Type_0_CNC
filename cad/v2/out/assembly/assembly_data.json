@@ -1,0 +1,198 @@
+{
+ "L": {
+  "seat_recess": 3.0,
+  "chan_depth": 15.0,
+  "x_spacer": 25.0,
+  "x_chan_depth": 45.0,
+  "x_pad": 5.0,
+  "y_chan_w": 70.0,
+  "x_chan_w": 64.0,
+  "y_rail_x": 140.0,
+  "ty_min": -190.0,
+  "ty_max": 60.0,
+  "y_rail_y0": -311.75,
+  "y_rail_len": 500.0,
+  "y_screw_z": 10,
+  "y_bk_y0": -395.5,
+  "y_bk_y1": -370.5,
+  "y_bf_y0": 110.0,
+  "beam_zc": 300.0,
+  "x_rail_z": [
+   250.0,
+   350.0
+  ],
+  "x_bar_shift": 3.0,
+  "x_screw_y": 125.0,
+  "xs_min": -200.0,
+  "xs_max": 370.0,
+  "x_bk_x0": 420.0,
+  "x_bf_x1": -250.0,
+  "x_rail_len": 800.0,
+  "saddle_t": 20.0,
+  "saddle_h": 400.0,
+  "saddle_y1": 80,
+  "saddle_y0": 60.0,
+  "z_riser": 15.0,
+  "zp_t": 20.0,
+  "zp_h": 200.0,
+  "zp_y1": 15.0,
+  "zp_y0": -5.0,
+  "z_screw_y": 35.0,
+  "spindle_y": -65.0,
+  "nose_top": 235,
+  "nose_bot": 85,
+  "y_screw_len": 577.0,
+  "x_screw_len": 807.0
+ },
+ "kg": {
+  "base_casting": 78.1634086362887,
+  "portal_casting": 34.84939847347987
+ },
+ "extents": {
+  "x0": -320.0,
+  "x1": 527.0,
+  "y0": -437.0,
+  "y1": 320.0,
+  "z0": -110.0,
+  "z1": 736.5
+ },
+ "features": [
+  [
+   "base",
+   "Y rail insert bar L",
+   "40 x 10 x 500 flat bar, tapped M5 at 60 (rail holes)",
+   "centre X -140, Y -312 to 188, top 3 below datum"
+  ],
+  [
+   "base",
+   "Y rail insert bar R",
+   "40 x 10 x 500 flat bar, tapped M5 at 60 (rail holes)",
+   "centre X +140, Y -312 to 188, top 3 below datum"
+  ],
+  [
+   "base",
+   "Rail-seat recesses",
+   "2 x 30 wide x 3 deep + 20 wide cross-link",
+   "filled by the levelling pour"
+  ],
+  [
+   "base",
+   "Y screw channel",
+   "70 wide x 15 deep",
+   "Y -406 to 145; floor = BK12/BF12 seat (screw axis Z 10)"
+  ],
+  [
+   "base",
+   "Y BK12 insert plate",
+   "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern)",
+   "under the channel floor at Y -383"
+  ],
+  [
+   "base",
+   "Y BF12 insert plate",
+   "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern)",
+   "under the channel floor at Y 120"
+  ],
+  [
+   "base",
+   "Y motor bracket inserts",
+   "2 x M8 nut-on-rod",
+   "right spine face X 170, Z -45, Y -380 and -340"
+  ],
+  [
+   "base",
+   "Portal joint, L leg",
+   "40 x 10 bar tapped 2 x M12 (30 below the top) + \u00d812 dowel sleeve (ream \u00d810 after grouting)",
+   "X -285, Y 140 / 210, dowel Y 175"
+  ],
+  [
+   "base",
+   "Portal joint, R leg",
+   "40 x 10 bar tapped 2 x M12 (30 below the top) + \u00d812 dowel sleeve (ream \u00d810 after grouting)",
+   "X +285, Y 140 / 210, dowel Y 175"
+  ],
+  [
+   "base",
+   "Lifting points",
+   "4 x M12 nut-on-rod, horizontal",
+   "spine sides at Z -55, Y -285 and 50"
+  ],
+  [
+   "portal",
+   "X rail insert bar bottom",
+   "25 x 10 x 780 flat bar, tapped M5 at 60 (rail holes); bar centre 3 mm outboard of the rail line",
+   "rail Z 250, bar Z 247, 3 behind the front face"
+  ],
+  [
+   "portal",
+   "X rail insert bar top",
+   "25 x 10 x 780 flat bar, tapped M5 at 60 (rail holes); bar centre 3 mm outboard of the rail line",
+   "rail Z 350, bar Z 353, 3 behind the front face"
+  ],
+  [
+   "portal",
+   "Rail-seat recesses (front face)",
+   "2 x 30 wide x 3 deep + cross-link",
+   "levelling pour; cast with the front face down"
+  ],
+  [
+   "portal",
+   "X screw channel",
+   "64 high x 45 deep, with 5 mm seat pads for BK12/BF12",
+   "X -280 to 481, centred Z 300; screw axis 15 behind the face (D-108)"
+  ],
+  [
+   "portal",
+   "X BK12 insert plate",
+   "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY)",
+   "behind the channel floor at X 432"
+  ],
+  [
+   "portal",
+   "X BF12 insert plate",
+   "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY)",
+   "behind the channel floor at X -260"
+  ],
+  [
+   "portal",
+   "PVC cores",
+   "2 x \u00d850 capped pipe",
+   "Y 190, Z 270 / 330, X -245 to 245 (between the legs)"
+  ],
+  [
+   "portal",
+   "Joint sleeves, L leg",
+   "2 x \u00d816 tube through the full height (M12 rod to the base bar) + \u00d812 dowel sleeve 30 deep at the foot",
+   "X -285, Y 140 / 210"
+  ],
+  [
+   "portal",
+   "Joint sleeves, R leg",
+   "2 x \u00d816 tube through the full height (M12 rod to the base bar) + \u00d812 dowel sleeve 30 deep at the foot",
+   "X +285, Y 140 / 210"
+  ],
+  [
+   "portal",
+   "ATC wheel bracket insert (Phase 2)",
+   "25 x 10 x 140 bar, 2 x M8 tapped",
+   "right leg outer face X 320, Z 60 to 200"
+  ],
+  [
+   "portal",
+   "X motor bracket inserts",
+   "2 x M8 nut-on-rod",
+   "beam top Z 375, X 330 / 430, Y 195"
+  ],
+  [
+   "portal",
+   "Lifting points",
+   "2 x M12 nut-on-rod, vertical",
+   "beam top, X -200 / 320"
+  ]
+ ],
+ "clashes": {
+  "centre": [],
+  "front-left-down": [],
+  "back-right-up": []
+ }
+}

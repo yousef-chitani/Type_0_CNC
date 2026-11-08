@@ -12,11 +12,12 @@ P = dict(
     travel_x_work=400, travel_y=250, travel_z=150, vise=100, nose_clear=180,   # D-79: work area 400 x 250
     table_x=460, table_y=330, table_t=25,
     rail_w=20, rail_h=17.5, block_h=30, block_l=77.5,          # HGR20/HGH20CA VERIFY
-    y_rail_spacing=280, y_block_pitch=150, x_rail_spacing=80, x_block_pitch=100,   # D-80
-    z_rail_spacing=80, z_block_pitch=90, saddle_w=180,
+    y_rail_spacing=280, y_block_pitch=150, x_rail_spacing=100, x_block_pitch=100,  # D-80; X 100 apart (D-104)
+    z_rail_spacing=100, z_block_pitch=90, saddle_w=180,                       # Z 100 apart (D-104)
     nut_len=90, ends_len=45, screw_margin=20,                  # DFU1605 + BK/BF12 VERIFY
     spindle_d=80, spindle_len=213,                             # ER20 80x213 (ATC about 300)
-    h=110, spine_w=320, upright_w=70, portal_d=130, beam_h=130, beam_front=110,
+    h=110, spine_w=340, upright_w=70, portal_d=130, beam_h=150, beam_front=110,  # spine 340 (D-105), beam 150 (D-104)
+    spindle_stack=175,                                         # beam face to spindle axis (assembly.py, D-106)
     leg_clear=20, foot_back_bar=60, opening_h=225,
     wheel_pockets=8, pocket_pitch=70, wheel_gap=20, wheel_t=60,
     bench_top_to_table=None, table_top_above_floor=950,
@@ -43,7 +44,8 @@ def derive(p):
     d["rail_y"] = p["travel_y"] + p["y_block_pitch"] + p["block_l"]
     d["rail_z"] = p["travel_z"] + p["z_block_pitch"] + p["block_l"]
     d["screw_x"], d["screw_y"], d["screw_z"] = d["travel_x"] + ext, p["travel_y"] + ext, p["travel_z"] + ext
-    d["spine_y0"] = -p["travel_y"]/2 - p["table_y"]/2 - 50
+    d["spindle_y"] = p["beam_front"] - p["spindle_stack"]          # spindle axis Y (D-106)
+    d["spine_y0"] = d["spindle_y"] - p["travel_y"]/2 - p["table_y"]/2 - 50
     d["portal_y0"], d["portal_y1"] = p["beam_front"], p["beam_front"] + p["portal_d"]
     d["spine_y1"] = d["portal_y1"] + 20
     d["foot_y0"], d["foot_y1"] = d["portal_y0"] - 20, d["spine_y1"] + p["foot_back_bar"]
@@ -82,7 +84,8 @@ def build(t=0.0, x=0.0, znose=None):
     for s in (-1, 1):
         cx = s * p["y_rail_spacing"]/2
         parts[f"y_rail{s}"] = box(cx-10, cx+10, -d["rail_y"]/2, d["rail_y"]/2, 0, p["rail_h"])
-    parts["table"] = box(-p["table_x"]/2, p["table_x"]/2, t-p["table_y"]/2, t+p["table_y"]/2, p["block_h"], d["table_top_z"])
+    ty = d["spindle_y"] + t
+    parts["table"] = box(-p["table_x"]/2, p["table_x"]/2, ty-p["table_y"]/2, ty+p["table_y"]/2, p["block_h"], d["table_top_z"])
     zc = (d["beam_bottom"] + d["beam_top"]) / 2; fy = d["portal_y0"]
     for s in (-1, 1):
         z = zc + s * p["x_rail_spacing"]/2
@@ -92,8 +95,8 @@ def build(t=0.0, x=0.0, znose=None):
     parts["saddle"] = box(x-p["saddle_w"]/2, x+p["saddle_w"]/2, sy1-20, sy1, zc-80, zc+80)
     zp1 = sy1 - 20 - p["block_h"]
     parts["z_plate"] = box(x-70, x+70, zp1-20, zp1, znose+30, znose+30+d["rail_z"])
-    parts["spindle"] = cq.Workplane("XY").circle(p["spindle_d"]/2).extrude(p["spindle_len"]).translate((x, 0, znose))
-    wheel = cq.Workplane("YZ").circle(d["wheel_d"]/2).extrude(p["wheel_t"]).translate((d["pickup_x"]-p["wheel_t"]/2, 0, d["fork_z"]-d["wheel_d"]/2))
+    parts["spindle"] = cq.Workplane("XY").circle(p["spindle_d"]/2).extrude(p["spindle_len"]).translate((x, d["spindle_y"], znose))
+    wheel = cq.Workplane("YZ").circle(d["wheel_d"]/2).extrude(p["wheel_t"]).translate((d["pickup_x"]-p["wheel_t"]/2, d["spindle_y"], d["fork_z"]-d["wheel_d"]/2))
     parts["atc_wheel"] = wheel
     return parts
 
@@ -111,10 +114,11 @@ def report():
          f"| Gantry portal ({p['pvc_cores']} x {p['pvc_core_d']} mm PVC cores) | {r(d['portal_w'])} W x {r(d['beam_top'])} H x {p['portal_d']} D | {d['kg']['portal']:.1f} kg |",
          f"| **Total** | | **{d['kg_total']:.1f} kg** |",
          f"| Epoxy at 11% / aggregate at 89% | | {d['epoxy_kg_11pct']:.1f} / {d['aggregate_kg']:.1f} kg |", "",
-         "## Rails and screws (minimum)", "| Axis | Rail | Screw |", "|---|---|---|",
-         f"| X | 2 x {r(d['rail_x'])} | {r(d['screw_x'])} |",
-         f"| Y | 2 x {r(d['rail_y'])} | {r(d['screw_y'])} |",
-         f"| Z | 2 x {r(d['rail_z'])} | {r(d['screw_z'])} |", "",
+         "Masses here are rough (solid blocks). **Exact masses, screw lengths and every cast-in feature come from the full assembly:** `out/assembly/` (`assembly.py`, D-102), e.g. `cast_in_features.md`.", "",
+         "## Rails (minimum for the travel)", "| Axis | Rail |", "|---|---|",
+         f"| X | 2 x {r(d['rail_x'])} (buying 800) |",
+         f"| Y | 2 x {r(d['rail_y'])} (buying 500) |",
+         f"| Z | 2 x {r(d['rail_z'])} (buying 350) |", "",
          "## Bench", f"Bench top {r(d['bench_top_above_floor'])} mm above the floor (table top at {p['table_top_above_floor']}). Machine footprint about {r(d['footprint'][0])} x {r(d['footprint'][1])} mm."]
     (OUT/"dimensions_v2.md").write_text("\n".join(L)+"\n")
     (OUT/"dimensions_v2.json").write_text(json.dumps(d, indent=1, default=str))

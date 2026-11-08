@@ -11,7 +11,7 @@
  "portal_x1": 480.0,
  "portal_w": 800.0,
  "beam_bottom": 225,
- "beam_top": 355,
+ "beam_top": 375,
  "fork_z": 95,
  "x_min": -200.0,
  "x_max": 370.0,
@@ -22,7 +22,8 @@
  "screw_x": 725.0,
  "screw_y": 405,
  "screw_z": 305,
- "spine_y0": -340.0,
+ "spindle_y": -65,
+ "spine_y0": -405.0,
  "portal_y0": 110,
  "portal_y1": 240,
  "spine_y1": 260,
@@ -30,15 +31,15 @@
  "foot_y1": 320,
  "foot_w": 640.0,
  "kg": {
-  "base": 72.0544,
-  "portal": 34.37268636223196
+  "base": 79.8215,
+  "portal": 39.15668636223196
  },
- "kg_total": 106.42708636223196,
- "epoxy_kg_11pct": 11.706979499845517,
- "aggregate_kg": 94.72010686238644,
+ "kg_total": 118.97818636223195,
+ "epoxy_kg_11pct": 13.087600499845514,
+ "aggregate_kg": 105.89058586238644,
  "bench_top_above_floor": 785,
  "footprint": [
   840.0,
-  780.0
+  845.0
  ]
 }

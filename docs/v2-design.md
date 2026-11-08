@@ -1,5 +1,7 @@
 # Type 0 v2: flat-sized design notes
 
+> **Superseded in detail by the full assembly (D-102 … D-110):** [`docs/assembly.md`](assembly.md). Beam now 150 high, spine 340, spindle line Y −65, X/Y belt-folded. The notes below are the earlier concept.
+
 Model: [`cad/v2/type0_v2.py`](../cad/v2/type0_v2.py) → `cad/v2/out/type0_v2.step`. Numbers: [dimensions_v2.md](../cad/v2/out/dimensions_v2.md). Concept sketches: `cad/v2/out/sketch_top.png`, `sketch_front.png`.
 
 ## Brief (D-71, D-73)

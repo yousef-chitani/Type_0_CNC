@@ -20,7 +20,7 @@ B = dict(
     leg=(76, 89),                        # 2 x 38 x 89 CLS glued: 76 (x) x 89 (y)
     apron=(38, 89), rail=(38, 63),       # CLS 38 x 89 aprons, 38 x 63 lower rails
     shelf_top=120, sheet_t=18, panel_t=12,
-    joist_x=(260, 580),                  # under the edges of the base spine (D-80, spine 320 wide)
+    joist_x=None,                        # set below from the machine position (spine edges)
     cab=(600, 200, 400),                 # RS PRO 600 W x 200 D x 400 H (E12)
     cab_x0=116, cab_y0=30, cab_stand=89, # cabinet on two 38 x 89 stands on the shelf
     slot=(850, 930, 700, 860),           # printed cable grommet 80 x 160 flange (T15, D-100), hole 70 x 150, right of the base,
@@ -28,6 +28,12 @@ B = dict(
     timber_len=2400, kerf=4,
     sheet=(2440, 1220),
 )
+def _joists():
+    """Joists under the base spine edges (spine 340, D-105), in bench coordinates."""
+    import type0_v2 as m, enclosure as en
+    dx = B["top"] / 2 - (en.X["x0"] + en.X["x1"]) / 2
+    return (round(dx - m.P["spine_w"] / 2), round(dx + m.P["spine_w"] / 2))
+B["joist_x"] = _joists()
 t = B["top"]; i0 = B["inset"]; i1 = t - i0
 lw, ld = B["leg"]; aw, ah = B["apron"]; rw, rh = B["rail"]
 frame_top = B["top_z"] - B["top_t"]                  # 749: top of legs and aprons
@@ -278,15 +284,14 @@ def views(machine=None):
 # Machine placement (from type0_v2.py and enclosure.py, without needing CadQuery for the numbers)
 # ---------------------------------------------------------------------------
 def machine_on_bench():
-    import type0_v2 as m
+    import type0_v2 as m, enclosure as en
     P, D = m.P, m.D
-    gs, gb, gf = 40, 80, 40; y_motor = 150; tE = 12
-    ex0 = D["portal_x0"] - gs - tE; ex1 = max(D["portal_x1"], D["pickup_x"] + P["wheel_t"]/2) + gs + tE
-    ey0 = D["spine_y0"] - y_motor - gf - tE; ey1 = D["foot_y1"] + gb + tE
+    tE = en.E["t"]
+    ex0, ex1, ey0, ey1 = en.X["x0"] - tE, en.X["x1"] + tE, en.X["y0"] - tE, en.X["y1"] + tE
     dx = B["top"]/2 - (ex0 + ex1)/2; dy = B["top"]/2 - (ey0 + ey1)/2       # centre the enclosure
     dz = B["top_z"] + P["h"]                                                # machine Z 0 = casting top
     bx = lambda x: x + dx; by = lambda y: y + dy; bz = lambda z: z + dz
-    zp_top = D["nose_top"] + 30 + D["rail_z"]; ez1 = max(zp_top, D["nose_top"] + 282, D["beam_top"]) + 50 + tE
+    ez1 = en.X["z1"] + tE
     plan = [("base spine", bx(-P["spine_w"]/2), bx(P["spine_w"]/2), by(D["spine_y0"]), by(D["spine_y1"]), "#c9c9c4", 0.6),
             ("base rear foot", bx(D["portal_x0"]), bx(D["leg_r_x1"]), by(D["foot_y0"]), by(D["foot_y1"]), "#c9c9c4", 0.6),
             ("enclosure", bx(ex0), bx(ex1), by(ey0), by(ey1), "none", 1.0)]
