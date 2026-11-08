@@ -6,8 +6,9 @@
 1. Only record prices you can **see on a live product page**. Never estimate or convert.
 2. Record the price exactly as listed, ex or inc VAT (RS shows both), pack size, and stock / click & collect at the **Swansea** Screwfix or B&Q stores.
 3. The product must match the spec. Say so if it only partly matches. Prefer **RS PRO** or Mean Well / Schneider / Pilz where RS has them.
-4. Do not sign in, add to basket, buy or contact sellers. `NOT FOUND` with the reason if no live price.
-5. If a page asks for a human check, stop and ask the person.
+4. **AliExpress login:** before the first AliExpress page, stop and ask the person to **log in to AliExpress themselves** in the browser pane (UK address, GBP). Wait until they confirm. **Never type, read or store their password or codes.** Read every AliExpress price while logged in. For other sites, do not sign in.
+5. Do not add to basket, check out, buy or contact sellers. `NOT FOUND` with the reason if no live price.
+6. If a page asks for a human check, stop and ask the person.
 
 ## RS Components (uk.rs-online.com)
 
@@ -39,7 +40,31 @@
 | F18 | Silicone | Neutral-cure silicone (clear), 310 ml × 2 | £16.98 (F18 tape + silicone together) |
 | F17 | Mixer | 1,400–1,600 W paddle mixer (current: Erbauer EPM1600 £69.99) | £69.99 |
 
-## AliExpress (owner choice for these, D-83)
+## AliExpress: re-check every Phase 1 line while logged in
+
+The current prices came from logged-out pages. Many were new-shopper or "max 1 per shopper" deals. Logged in, record for each line: the **price your account sees**, whether the **deal applies** to this account, **shipping to the account's UK address**, and any **coupon** shown on the page (do not apply it).
+
+| ID | Item | Current (all-in) | Listing |
+|---|---|---|---|
+| M01 | HGR20 rail kit Y: 2 × 500 mm + 4 blocks | £61.64 | https://www.aliexpress.com/item/1005010242098397.html |
+| M02 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | £79.04 | https://www.aliexpress.com/item/1005010242098397.html |
+| M03 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | £57.34 | https://www.aliexpress.com/item/1005010242098397.html |
+| M05 | DFU1605 ballscrew kits X 750 / Y 450 / Z 350 | £198.65 | https://www.aliexpress.com/item/1005010046279521.html |
+| M08 | Disc or bellows coupling 10 mm to 10 mm | £13.09 | https://www.aliexpress.com/item/1005009879991986.html |
+| M13 | Motor and bearing mounts | £40.59 | https://www.aliexpress.com/item/1005006232398099.html |
+| S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | £318.16 | https://www.aliexpress.com/item/32253760001.html |
+| S09 | ER20 collet set | £34.49 | https://www.aliexpress.com/item/1005010595086817.html |
+| S04 | Shielded 4-core spindle cable | £18.22 | https://www.aliexpress.com/item/32971008305.html |
+| S05 | Spindle cooling loop (DIY) | £73.18 | https://www.aliexpress.com/item/1005004896354890.html |
+| E07 | Contactor with 24 V coil | £26.19 | https://www.aliexpress.com/item/1005005356561757.html |
+| E08 | E-stop mushroom buttons + reset button | £8.15 | https://www.aliexpress.com/item/1005008293871583.html |
+| E09 | MCBs / main isolator / EMC filter for VFD | £10.39 | https://www.aliexpress.com/item/1005010519550019.html |
+| E10 | Inductive proximity switches 24 V | £9.57 | https://www.aliexpress.com/item/1005010648075147.html |
+| E13 | DIN rail / terminals / wiring / ferrules | £33.79 | https://www.aliexpress.com/item/1690060053.html |
+| E14 | Cable chain and shielded motor cables | £15.69 | https://www.aliexpress.com/item/1005012723966521.html |
+| X01 | Dial test indicator + magnetic base | £17.20 | https://www.aliexpress.com/item/1005013036061506.html |
+
+## AliExpress: new lines (owner choice for these, D-83)
 
 | ID | Item | Spec | Current (all-in, inc VAT) |
 |---|---|---|---|
@@ -71,6 +96,6 @@ For **every** line, compare the new **all-in** price (item + its share of shippi
 ## Reply block
 
 ```
-ID | vendor | price as listed (currency, VAT basis) | quantity it covers | stock / collect / delivery | product URL | all-in £ | current £ | delta £ (OK / PREMIUM / SAVING) | notes
+ID | vendor | price as listed (currency, VAT basis; AliExpress: logged-in price, deal applies Y/N) | quantity it covers | stock / collect / delivery | product URL | all-in £ | current £ | delta £ (OK / PREMIUM / SAVING) | notes
 ```
 Finish with: the **vendor list** with a subtotal per vendor, the **total delta** against current, and a list of every **PREMIUM** line.
