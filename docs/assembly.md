@@ -60,7 +60,7 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 ## Fusion 360 workflow
 
 1. **File → Open → `type0_assembly.step`.** Each part comes in as its own component with its name (e.g. `X_BK12`, `base_casting`, `portal_insert_X_rail_T`).
-2. Replace the envelopes with vendor models where you can download them (most need a free login):
+2. Vendor models: your local session downloads them with `docs/cad-download-task.md` into `cad/vendor/`, and the session swaps them into the assembly (so the next STEP already has them). Sources, for reference:
    - HGR20 rail and HGH20CA carriage: HIWIN (hiwin.de, CAD download) or TraceParts
    - BK12/BF12, DFU1605, DSG16H: TraceParts / Misumi (Misumi has BK12 and HTD pulleys)
    - Motors: StepperOnline product pages (STEP under "Download")

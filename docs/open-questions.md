@@ -26,8 +26,8 @@ Resolved items are in decisions.md (D-01 … D-110). **Phase 1 £3,306.82 is pro
     Who: owner, when the S08 kit arrives (its pump size).
 9. **Ballscrew "Guide Length"** (before wave 2, D-103): overall or thread length? The assembly needs **overall X 807, Y 577, Z ≈ 350** (D-110): decides X 800 or 850. A wrong answer means unusable screws.
    Who: owner, message to the seller. Draft in `supplier-messages.md` (section 1).
-10. **Vendor STEP files for the CAD assembly (task 4):** the supplier sites block this session (StepperOnline, HIWIN), apart from one motor drawing. Download them in Fusion's review: list and sources in `docs/assembly.md` (Fusion workflow, step 2). CAD program: Fusion 360 (answered).
-    Who: owner.
+10. **Vendor STEP files for the CAD assembly (task 4):** the supplier sites block this session. The owner's local session downloads them with `docs/cad-download-task.md` and commits them to `cad/vendor/`; the cloud session then swaps them into `assembly.py`. CAD program: Fusion 360 (answered).
+    Who: owner's local session, then this session.
 
 ## Before wave 3 and the moulds (1 Mar 2027)
 
