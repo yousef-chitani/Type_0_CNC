@@ -10,7 +10,7 @@ Castings are planned for April–May: GlassCast 50 PLUS needs **17–23 °C, ide
 |---|---|---|---|
 | 1–2 | 04 Jan – 17 Jan | Order wave 1. Install LinuxCNC on the mini-PC, latency test, connect the Mesa 7i76EU | 10 |
 | 3–6 | 18 Jan – 14 Feb | Electrical cabinet: DIN layout, PSUs, isolator/MCBs, e-stop safety chain, contactor, drivers. Bench-test all 3 motors from LinuxCNC on the bench (docs/linuxcnc.md section 6, parts A–D) | 20 |
-| 7–8 | 15 Feb – 28 Feb | Order wave 2. Build the timber bench (top 785 mm). Mould design check against the model | 10 |
+| 7–8 | 15 Feb – 28 Feb | Order wave 2. Build the timber bench (top 785 mm, D-97: cad/v2/out/bench_cutlist.md, about 6–8 h). Mould design check against the model | 10 |
 | (on arrival, about week 9–10) | early March | Spindle kit (ordered in wave 1, about 8–9 weeks shipping): bench-test the VFD, spindle and cooling loop from LinuxCNC (docs/linuxcnc.md section 6, part E). About 2 h, fits beside the mould work | (2) |
 | 9–11 | 01 Mar – 21 Mar | Order wave 3. Build the base and portal moulds (MDF, CLS, insert bars on jig bolts, Y-screw channel, PVC cores, sleeves). Build the tyre vibration table | 15 |
 | 12–13 | 22 Mar – 04 Apr | Test bricks: 2–3 mixes (GlassCast + quartz/sand/whiting), cure indoors, break and inspect. Fix the mix. Order wave 4 | 10 |
@@ -28,15 +28,15 @@ Castings are planned for April–May: GlassCast 50 PLUS needs **17–23 °C, ide
 
 | Wave | Order in week | Date | What | £ |
 |---|---|---|---|---|
-| 1 | 1 | 04 Jan 2027 | Electrical, motors, **spindle kit and cooling loop** (bench-test indoors): E01, E04, E05, E06, E07, E08, E09, E10, E12, E13, E14, E17, E18, E21, **E23, E24, E25** (to price), S04, **S08, S05**, M09, M10, M14 | £1,451.15 + E23/E24/E25 |
-| 2 | 7 | 15 Feb 2027 | Bench, moulds and local items (B&Q, Screwfix): F10, F11, F17, F18, F08, F09, X03, T02 | £253.53 |
+| 1 | 1 | 04 Jan 2027 | Electrical, motors, **spindle kit and cooling loop** (bench-test indoors): E01, E04, E05, E06, E07, E08, E09, E10, E12, E13, E14, E17, E18, E21, **E23, E24, E25, T14** (to price), S04, **S08, S05**, M09, M10, M14 | £1,451.15 + E23/E24/E25 |
+| 2 | 7 | 15 Feb 2027 | Bench, moulds and local items (B&Q, Screwfix): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T13, T15** (bench, to price: price-check-task-11.md) | £253.53 + bench |
 | 3 | 9 | 01 Mar 2027 | Casting materials and measuring tools: F01, F02, F12, F03, F04, F06, F07, X01, X02 | £516.42 |
 | 4 | 13 | 29 Mar 2027 | Motion parts, plates, ER20 collets: M01, M02, M03, M05, M08, M13, M11, M12, S09 | £829.66 |
 | | | | **Total** | **£3,050.76** + E23/E24/E25 |
 
 Wave 5 is gone (D-94): the spindle kit and cooling loop moved to wave 1 so the VFD can be bench-tested early, and the collets (S09) joined wave 4. E22 (5 V PSU) is shelved (D-91) and no longer ordered.
 
-Owner-built or DIY (no cost): timber bench, vibration table, temperature logging, PC, monitor.
+Owner-built or DIY (no cost apart from materials): timber bench (materials T03–T15), vibration table, temperature logging, PC, monitor.
 
 ## Watch points
 - **Mesa 7i76EU:** £257.74 including import VAT, ordered in wave 1 (week 1). Needed first for the LinuxCNC bench tests.

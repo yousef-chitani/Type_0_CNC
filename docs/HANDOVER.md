@@ -11,7 +11,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 - **Motion:** HGR20 rails (X 2 × 800, Y 2 × 500 on 280 spacing, Z 2 × 350), DFU1605 screws (X 750, Y 450, Z 350), direct drive, StepperOnline closed-loop NEMA 24 (Z with brake), CL57T drivers.
 - **Phase 1 spindle:** G-Penny 2.2 kW ER20 water-cooled kit (Huanyang VFD, Modbus RS-485). DIY cooling loop.
 - **Enclosure (Phase 2):** 12 mm MDF box on the bench, top-hinged door, 600 × 420 × 4 mm polycarbonate window.
-- **Stand:** owner-built timber bench, top 785 mm.
+- **Stand:** owner-built knock-down timber bench, top 1000 × 1000 at 785 mm, cabinet and cooling loop inside (D-97).
 - Model and drawings: `cad/v2/type0_v2.py` (parametric CadQuery → STEP + dimensions), `cad/v2/sketch_3piece.py` (concept sketches), `cad/v2/enclosure.py` (enclosure + cut list). Outputs in `cad/v2/out/`. The v1 (large, garage) model is in `cad/` for history only.
 
 ## 3. Money and phases (D-66, D-86, D-68)
@@ -36,7 +36,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 ## 6. Next tasks (agreed order)
 1. ~~Electrical design~~: done, `docs/electrical.md` (D-91). Has CHECK items.
 2. ~~LinuxCNC starter config~~: done, `linuxcnc/type0/` + `docs/linuxcnc.md` (D-92). VFD moved to USB-RS485 + hy_vfd. Simulator test 23/23. Has CHECK items for the bench test.
-3. **Timber bench design:** cut list, top 785 mm, about 150 kg + enclosure, cabinet space; adds B&Q items to wave 2.
+3. ~~Timber bench design~~: done, `cad/v2/bench.py` → `cad/v2/out/bench_cutlist.md` + drawings + STEP (D-97). Materials T03–T15 to price (`price-check-task-11.md`).
 4. **Mould drawings** for the base and portal from the v2 model (panels, jig-bolt hole pattern for insert bars, Y-screw channel 70 × 25, PVC cores, M12 sleeves, dowels, lifting points, vibration-table deck).
 5. **EG mix design + test-brick plan:** GlassCast 50 PLUS with GCL quartz 2–5, H&B 0–1 sand, whiting (≤ 8–10%), 2–3 epoxy ratios; mixing order, vibration, curing heat checks.
 Then: rail-seat levelling and assembly procedures, Phase 2 detailing.
@@ -48,13 +48,14 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-96 |
+| `docs/decisions.md` | Decision log D-01 … D-97 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |
 | `docs/curing-heat.md`, `tools/cure_heat.py` | GlassCast 50 PLUS limits, curing-heat estimate, heater tent (D-96) |
 | `tools/portal_overhang.py` | Portal beam overhang check (D-95) |
 | `docs/supplier-messages.md` | Drafts for the ballscrew seller, GCL, Hancock & Brown |
+| `cad/v2/bench.py`, `cad/v2/out/bench_*` | Timber bench: model, drawings, cut list, assembly, load check (D-97) |
 | `docs/price-check-task-10.md` | Price check for E23, E24, E25 |
 | `docs/bom.csv` / `bom.md` / `phase1-bom.xlsx` / `phase1-cost.md` | Parts list and costs |
 | `docs/phase1-schedule.md` | Timeline and order waves |

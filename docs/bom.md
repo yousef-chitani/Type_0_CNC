@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **85 line items, 82 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **98 line items, 82 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -13,12 +13,12 @@ Full list: [bom.csv](bom.csv). **85 line items, 82 priced.** Prices were read fr
 | Pneumatics | 6 | 6 | £110.22 |
 | Electronics | 23 | 20 | £810.62 |
 | Enclosure | 3 | 3 | £78.61 |
-| Stand | 2 | 2 | £12.19 |
+| Stand | 15 | 2 | £12.19 |
 | Metrology | 2 | 2 | £50.17 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **85** | **82** | **£4,474.63** |
+| **All** | **98** | **82** | **£4,474.63** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,474.63**. Not priced yet: E23, E24, E25.
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,474.63**. Not priced yet: E23, E24, E25, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
@@ -134,8 +134,21 @@ Lines still TO PRICE: see the list above.
 | N01 | 2 | Enclosure box: 12 mm MDF (B&Q) | 2 sheets | 12 mm MDF, 2 sheets: box internal 880 × 930 × 742 (cut list: cad/v2/out/enclosure_cutlist.md) | [product](https://www.diy.com/departments/mdf-board-l-2-44m-w-1-22m-t-12mm-22130g/1696260_BQ.prd) | £23 each inc VAT (B&Q, sold and shipped by B&Q) | 46.00 | D-89: moved from Wickes (£26 each). 2 sheets (cut list: cad/v2/out/enclosure_cutlist.md). Check Swansea stock for click and collect. Seal the inside |
 | N02 | 2 | Enclosure window: 4 mm solid clear polycarbonate | 1 pcs | Solid clear polycarbonate 4 mm, cut to 600 × 420 (covers the 560 × 380 door cut-out with 20 mm overlap) | [product](https://www.plasticsheets.com/clear-polycarbonate/) | £24.92 + £4.95 delivery (plasticsheets.com, owner-confirmed; VAT basis not stated) | 29.87 | D-88: replaces the ribbed twinwall (£23.99) for a clear view. 3 mm option was £18.55 + £4.95 |
 | N03 | 2 | LED light | 1 pcs |  | [product](https://www.aliexpress.com/item/1005013221981188.html) | £2.74 inc VAT (AliExpress) | 2.74 | 24-36 V 5 W |
-| T01 | 1 | Bench (owner-built timber) | 1 lot | Owner-built timber bench, top 785 mm above the floor, carries about 150 kg + enclosure | [product]() | Owner build | 0.00 | D-71 |
+| T01 | 1 | Bench (owner-built timber) | 1 lot | Owner-built timber bench (D-97): materials in T03-T15, design in cad/v2/out/bench_cutlist.md | [product]() | Owner build | 0.00 | D-71 |
 | T02 | 1 | Anti-vibration feet | 4 pcs | 4 × RS PRO levelling foot M10 × 45, 50 mm polyamide base, 470 kg | [product](https://uk.rs-online.com/web/p/adjustable-feet/0285757) | £10.16 ex / £12.19 inc VAT (RS 028-5757) | 12.19 | Polyamide base, not rubber: add rubber pads if needed for vibration |
+| T03 | 1 | CLS timber 38 x 89 x 2.4 m (bench frame) | 6 lengths | Planed C16 whitewood CLS 38 x 89 x 2.4 m: legs (2 glued), aprons, joists, cabinet stands | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T04 | 1 | CLS timber 38 x 63 x 2.4 m (bench rails) | 2 lengths | Planed C16 CLS 38 x 63 x 2.4 m: lower rails, radiator battens | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T05 | 1 | Plywood 18 mm 2440 x 1220 (bench top, shelf, back) | 2 sheets | Structural or hardwood-faced ply, 18 mm: 2 x 1000 x 1000 top layers, shelf 960 x 808, back panel 960 x 719 | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T06 | 1 | Plywood 12 mm 2440 x 1220 (bench side panels) | 1 sheet | 12 mm ply: 2 side panels 960 x 719 | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T07 | 1 | M8 x 130 bolts + washers + M8 cross-dowel nuts | 12 sets | Knock-down joints: front/back aprons (2 per end) and rails (1 per end) into the legs | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T08 | 1 | Joist hangers 75 mm | 4 pcs | For the doubled 38 x 89 joists (76 wide), with hanger screws | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T09 | 1 | M10 threaded inserts for wood | 4 pcs | In the leg bottoms for the T02 levelling feet | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T10 | 1 | Steel corner braces + angle brackets | 10 pcs | 8 corner braces (top to aprons) + 2 angle brackets (cabinet top to front apron) | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T11 | 1 | Wood screws 5 x 70, 4 x 30, 4 x 40 | 3 boxes | Leg lamination, side frames, top lamination, panels | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T12 | 1 | PVA wood glue D3/D4, 1 L | 1 pcs | Leg and joist lamination, side frames, top layers | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T13 | 1 | Yacht varnish 750 ml | 1 pcs | Seal the top and shelf (coolant, shed damp): 3 coats | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T14 | 1 | 120 mm fan finger guards | 2 pcs | For the 2 radiator fan holes in the right side panel | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 (T14: wave 1 AliExpress basket) |
+| T15 | 1 | Brush strip / grommet plate for the bench-top cable slot | 1 pcs | Covers the 140 x 50 cable + hose slot through the top | [product]() | TO PRICE |  | Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
 | X01 | 1 | Dial test indicator + magnetic base | 1 set | For rail alignment and squaring the gantry | [product](https://www.aliexpress.com/item/1005013036061506.html) | £17.23 inc VAT, free shipping (AliExpress) | 17.23 | Lever DTI 0.01 mm + flexible base |
 | X02 | 1 | Precision level 200 mm (AliExpress) | 1 pcs | 200 mm bar level, title "0.02 mm" (per-metre not stated) | [product](https://www.aliexpress.com/item/32814850915.html) | £15.69 + £17.25 shipping (AliExpress) | 32.94 | D-84: owner choice. Sensitivity unit not confirmed |
 | X03 | 1 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | M5 × 16 (100) + M6 × 20 (50) A2 [Screwfix]; M10 × 30 12.9 (20) [AliExpress]; M8 × 25 (50) + M12 × 120 (10) [RS] | [product](https://www.screwfix.com/) | Screwfix 2 × £5.79 + £7.59; AliExpress 10 × £1.52; RS £11.96 + £24.14 | 70.47 | Screwfix 4366T, 5209T; AliExpress https://www.aliexpress.com/item/4000784829771.html ; RS 052-9725, 124-7302. Covers X04 |

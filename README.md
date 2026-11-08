@@ -21,4 +21,5 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [LinuxCNC config](docs/linuxcnc.md): config files, simulator, PC set-up and bench tests
 - [Curing heat](docs/curing-heat.md): resin limits, heat estimate, keeping the shed warm
 - [Supplier messages](docs/supplier-messages.md): drafts ready to send
+- [Timber bench](cad/v2/out/bench_cutlist.md): cut list, drawings, assembly
 - [**Handover**](docs/HANDOVER.md): start here
