@@ -22,4 +22,5 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [Curing heat](docs/curing-heat.md): resin limits, heat estimate, keeping the shed warm
 - [Supplier messages](docs/supplier-messages.md): drafts ready to send
 - [Timber bench](cad/v2/out/bench_cutlist.md): cut list, drawings, assembly
+- [3D-printed parts](docs/printed-parts.md): what's printed on the P1S printers, files and settings
 - [**Handover**](docs/HANDOVER.md): start here

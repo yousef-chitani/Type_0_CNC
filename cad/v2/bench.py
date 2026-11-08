@@ -23,7 +23,7 @@ B = dict(
     joist_x=(260, 580),                  # under the edges of the base spine (D-80, spine 320 wide)
     cab=(600, 200, 400),                 # RS PRO 600 W x 200 D x 400 H (E12)
     cab_x0=116, cab_y0=30, cab_stand=89, # cabinet on two 38 x 89 stands on the shelf
-    slot=(850, 930, 700, 860),           # cable grommet 80 x 160 (T15) through the top, right of the base,
+    slot=(850, 930, 700, 860),           # printed cable grommet 80 x 160 flange (T15, D-100), hole 70 x 150, right of the base,
                                          # behind the ATC wheel, inside the enclosure; cut-out size CHECK
     timber_len=2400, kerf=4,
     sheet=(2440, 1220),
@@ -318,8 +318,8 @@ def write_cutlist(mach):
          "- Right-hand bay: radiator with its 2 fans on the inside of the right side panel, blowing out through 2 holes. Reservoir and pump on the shelf below it, at the back.",
          "- PC on the shelf at the back, centre. Tool tray on the shelf behind the cabinet.",
          "- Back panel (18 mm) and both side panels (12 mm) screwed on: they stop the frame racking. The front stays open.",
-         f"- Cable and hose grommet through the top (T15, {B['slot'][1]-B['slot'][0]} × {B['slot'][3]-B['slot'][2]} mm outside, with lid and brush), {B['slot'][0]}–{B['slot'][1]} mm from the left edge and {B['slot'][2]}–{B['slot'][3]} mm from the front: inside the enclosure, right of the base and behind the tool-wheel position. It drops into the right-hand bay above the reservoir, so any coolant drip lands there, not on the cabinet. Cut the hole to the grommet's own cut-out size (CHECK).",
-         "- Front e-stop (D-91) on the front apron, right-hand end.",
+         f"- Cable and hose grommet through the top (T15, printed: {B['slot'][1]-B['slot'][0]} × {B['slot'][3]-B['slot'][2]} mm flange, TPU slit membrane, cut a **70 × 150 mm** hole, held by 4 × 4 × 30 screws), {B['slot'][0]}–{B['slot'][1]} mm from the left edge and {B['slot'][2]}–{B['slot'][3]} mm from the front: inside the enclosure, right of the base and behind the tool-wheel position. It drops into the right-hand bay above the reservoir, so any coolant drip lands there, not on the cabinet. ",
+         "- Front e-stop (D-91) on the front apron, right-hand end, in a printed yellow box (E26, cad/v2/out/print/).",
          f"- Machine position: base casting {mach['base'][0]:.0f}–{mach['base'][1]:.0f} mm from the left edge, {mach['base'][2]:.0f}–{mach['base'][3]:.0f} mm from the front. Enclosure {mach['enc'][0]:.0f}–{mach['enc'][1]:.0f} × {mach['enc'][2]:.0f}–{mach['enc'][3]:.0f} (centred on the top). The two joists sit under the edges of the base spine.",
          "", "## Knock-down for the move (all pieces under 40 kg)", "",
          "| Piece | About kg |", "|---|---|"]
@@ -384,7 +384,7 @@ def write_cutlist(mach):
           "8. **Shelf:** drop it in on the front and back rails, screw down with 4 screws (removable).",
           "9. **Top:** glue and screw the 2 ply layers together (4 × 30 screws from below on a 150 mm grid, glue spread all over). Cut the grommet hole. Seal all faces and edges with 3 coats of yacht varnish (coolant and shed damp). Lay the top on the frame and fix it from below with 8 corner braces into the aprons.",
           "10. **Level:** put the bench in place, level the top both ways with the feet (the 200 mm level, X02), lock the foot nuts.",
-          "11. **Fit-out:** cabinet stands + cabinet + top brackets, radiator battens + radiator, reservoir, PC, cable grommet in the top, e-stop on the front apron.",
+          "11. **Fit-out:** cabinet stands + cabinet + top brackets, radiator battens + radiator, reservoir, PC, printed cable grommet in the top, printed e-stop box (E26) on the front apron, right-hand end (2 × 4 × 40 screws through its back).",
           "", "## CHECK items", "",
           "- T02 foot height (sets the leg length).",
           "- RS PRO cabinet mounting: it stands on the 2 stands; confirm its lugs/brackets for the 2 angle brackets at the top.",
@@ -392,7 +392,6 @@ def write_cutlist(mach):
           "- Radiator and fan sizes from the S05 parts when they arrive: fan hole positions.",
           "- Bolt length: CLS is 38 × 89 planed; check the legs are 76 thick after gluing; adjust the cross-dowel position to the bolt length.",
           "- Barrel nuts (AliExpress, M8 × 15): confirm 10 mm diameter before drilling.",
-          "- Grommet cut-out size (T15) before cutting the hole in the top.",
           ]
     (OUT / "bench_cutlist.md").write_text("\n".join(L) + "\n")
     return bars, sheets, lc
@@ -408,8 +407,8 @@ HARDWARE = [   # price check 11 (2026-11-08), D-99
     ("T11", "Goldscrew 5 × 70 (100), 4 × 30 (200); Silverscrew 4 × 40 (200)", "3 boxes", "Screwfix, £10.47"),
     ("T12", "D4 PVA wood glue 1 L", "1", "B&Q marketplace (delivered), £11.99"),
     ("T13", "Yacht varnish 750 ml", "1", "Screwfix, £11.99"),
-    ("T14", "120 mm fan grills", "2", "AliExpress (wave 1), £6.81"),
-    ("T15", "Metal desk cable grommet 80 × 160 with lid and brush", "1", "B&Q marketplace (delivered), £11.04"),
+    ("T14", "120 mm fan grills", "2", "3D printed (D-100): cad/v2/out/print/T14_fan_grill_120.stl, ASA/PETG"),
+    ("T15", "Cable grommet: frame + TPU membrane + clamp ring, held by 4 of the T11 4 × 30 screws", "1", "3D printed (D-100): cad/v2/out/print/T15_*.stl"),
 ]
 
 def build_step(mach):
@@ -422,10 +421,10 @@ def build_step(mach):
         shp = box(*c)
         if n.startswith("Top layer 2"):
             sx0, sx1, sy0, sy1 = B["slot"]
-            shp = shp.cut(box(sx0, sx1, sy0, sy1, frame_top - 1, B["top_z"] + 1))
+            shp = shp.cut(box(sx0 + 5, sx1 - 5, sy0 + 5, sy1 - 5, frame_top - 1, B["top_z"] + 1))
         if n.startswith("Top layer 1"):
             sx0, sx1, sy0, sy1 = B["slot"]
-            shp = shp.cut(box(sx0, sx1, sy0, sy1, frame_top - 1, B["top_z"] + 1))
+            shp = shp.cut(box(sx0 + 5, sx1 - 5, sy0 + 5, sy1 - 5, frame_top - 1, B["top_z"] + 1))
         bench.add(shp, name=n.replace(" ", "_").replace("(", "").replace(")", ""), color=ply if g.startswith("sheet") else wood)
     for n, c, *cc in equipment():
         bench.add(box(*cc), name="equip_" + n.split(" ")[0], color=cq.Color(0.5, 0.55, 0.6, 0.6))

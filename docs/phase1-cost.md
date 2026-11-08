@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,331.37** (budget £4,000). Every line priced. No eBay.
+**Phase 1 priced total: £3,313.52** (budget £4,000). Every line priced. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -10,10 +10,10 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | Motion | £1,004.77 |
 | Spindle | £489.14 |
 | Electronics | £818.49 |
-| Stand | £261.21 |
+| Stand | £243.36 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,331.37** |
+| **Total** | **£3,313.52** |
 
 ## Frame
 
@@ -36,6 +36,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F16 | Temperature logging (owner DIY) | 1 set | £0.00 |
 | F17 | Mixer | 1 pcs | £69.99 |
 | F18 | Silicone (Screwfix) + packing tape (AliExpress) | 1 set | £17.69 |
+| F19 | Mould helpers (3D printed, design pending) | 1 set | £0.00 |
 
 ## Motion
 
@@ -79,6 +80,8 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | E23 | Coolant pump relay (DIN interface relay, 24 V DC coil) | 1 pcs | £15.43 |
 | E24 | USB-RS485 adapter for the VFD link | 1 pcs | £13.59 |
 | E25 | TVS diode for the Z brake coil | 10 pcs (1 pack) | £2.57 |
+| E26 | Bench-front e-stop box (3D printed) | 1 pcs | £0.00 |
+| E27 | Homing sensor brackets + trigger flags (3D printed, design pending) | 4 sets | £0.00 |
 | E06 | E-stop safety relay Schneider Preventa XPSAC5121 | 1 pcs | £84.39 |
 | E07 | Contactor with 24 V coil | 1 pcs | £26.29 |
 | E08 | E-stop buttons 2 NC (×5) | 1 set | £12.39 |
@@ -110,8 +113,9 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | T11 | Wood screws 5 x 70, 4 x 30, 4 x 40 | 3 boxes | £10.47 |
 | T12 | PVA wood glue D3/D4, 1 L | 1 pcs | £11.99 |
 | T13 | Yacht varnish 750 ml | 1 pcs | £11.99 |
-| T14 | 120 mm fan finger guards | 2 pcs | £6.81 |
-| T15 | Desk cable grommet 80 x 160 with lid and brush (bench top) | 1 pcs | £11.04 |
+| T14 | 120 mm fan grills (3D printed) | 2 pcs | £0.00 |
+| T15 | Cable grommet for the bench top (3D printed) | 1 pcs | £0.00 |
+| T16 | Bench fit-out parts (3D printed, design pending) | 1 set | £0.00 |
 
 ## Metrology
 

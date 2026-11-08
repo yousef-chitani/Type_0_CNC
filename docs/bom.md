@@ -1,29 +1,29 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **98 line items, 98 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **103 line items, 103 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
-| Frame | 17 | 17 | £637.12 |
+| Frame | 18 | 18 | £637.12 |
 | Motion | 14 | 14 | £1,004.77 |
 | Spindle | 9 | 9 | £1,546.00 |
 | Tool changer | 7 | 7 | £154.46 |
 | Pneumatics | 6 | 6 | £110.22 |
-| Electronics | 23 | 23 | £842.21 |
-| Enclosure | 3 | 3 | £78.61 |
-| Stand | 15 | 15 | £261.21 |
+| Electronics | 25 | 25 | £842.21 |
+| Enclosure | 4 | 4 | £78.61 |
+| Stand | 16 | 16 | £243.36 |
 | Metrology | 2 | 2 | £50.17 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **98** | **98** | **£4,755.24** |
+| **All** | **103** | **103** | **£4,737.39** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,755.24**. Not priced yet: .
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,737.39**. Not priced yet: .
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,331.37 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,313.52 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -72,6 +72,7 @@ Lines still TO PRICE: see the list above.
 | F16 | 1 | Temperature logging (owner DIY) | 1 set | Thermocouples or DS18B20 probes cast in | [product]() | Owner DIY | 0.00 | D-65. DS18B20 probes on a microcontroller |
 | F17 | 1 | Mixer | 1 pcs | Paddle mixer or small forced-action mixer | [product](https://www.screwfix.com/p/erbauer-epm1600-1600w-electric-paddle-mixer-220-240v/981kj) | £69.99 inc VAT (Screwfix) | 69.99 | Erbauer EPM1600 |
 | F18 | 1 | Silicone (Screwfix) + packing tape (AliExpress) | 1 set | 2 × No Nonsense 291 neutral-cure silicone 310 ml; 2 × 48 mm × 110 m tape | [product](https://www.screwfix.com/p/no-nonsense-291-builders-silicone-clear-310ml/83710) | Silicone £5.49 each (Screwfix 83710) + tape £6.71 (AliExpress) | 17.69 | Tape: https://www.aliexpress.com/item/1005006967362821.html |
+| F19 | 1 | Mould helpers (3D printed, design pending) | 1 set | Sleeve and dowel locators, insert-bar jig spacers, lifting-point formers, corner fillets, test-brick mould | [product]() | 3D printed, owner filament | 0.00 | D-100. Designed in task 4 (mould drawings) |
 | M01 | 1 | HGR20 rail kit Y: 2 × 500 mm + 4 blocks | 2 pcs | Y: 2 × 500 mm HGR20 + 4 × HGH20CA (min 478, D-80) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £64.79 inc VAT, free shipping (AliExpress, logged in; no per-shopper limit) | 64.79 | Y 2 × 400 mm. Deal price per size: if refused, normal £126.79. Kaiyade fallback £21.29 + £79.28 shipping PER ITEM (not per order) |
 | M02 | 1 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | 2 pcs | X: 2 × 800 mm HGR20 + 4 × HGH20CA (min 748, D-79) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £81.99 inc VAT, free shipping (AliExpress, logged in) | 81.99 | Deal price: if refused, normal £163.88. Kaiyade alt £28.29 + £79.28 shipping |
 | M03 | 1 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | 2 pcs | Z: 2 × 350 mm HGR20 + 4 × HGH20CA (v2, min 318) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £60.59 inc VAT, free shipping (AliExpress, logged in) | 60.59 | Switched from Kaiyade: its shipping is per item, not per order (task 6). Deal price: if refused, normal £120.47 |
@@ -117,6 +118,8 @@ Lines still TO PRICE: see the list above.
 | E23 | 1 | Coolant pump relay (DIN interface relay, 24 V DC coil) | 1 pcs | DIN-rail interface relay, 24 V DC coil, 1 CO, about 10 A 250 V AC contact, with LED (e.g. Finder 38/39 series) | [product](https://uk.rs-online.com/web/p/interface-relays/3588301) | £12.86 ex / £15.43 inc VAT (RS 358-8301, Phoenix Contact PLC-RSC-24DC/21, relay + DIN base) | 15.43 | D-98: full match (24 V DC coil, 1 CO, 6 A 250 V AC, LED). On the RS order (free delivery). Switches the 220 V kit pump from Mesa OUT2 |
 | E24 | 1 | USB-RS485 adapter for the VFD link | 1 pcs | USB to RS-485 converter (2-wire A/B + GND), CH340 or FTDI chip, works with the Linux ftdi_sio/ch341 driver | [product](https://www.aliexpress.com/item/1005008217229755.html) | £13.59 inc VAT, free shipping (AliExpress, logged in; Waveshare industrial USB TO RS485, option FT232RL version) | 13.59 | D-98: FT232RL (Linux ftdi_sio). Not isolated. CHECK the photos show A+/B-/GND screw terminals before ordering. For hy_vfd (D-92) |
 | E25 | 1 | TVS diode for the Z brake coil | 10 pcs (1 pack) | Bidirectional TVS, 600 W, about 33 V (P6KE33CA or similar), across the brake coil | [product](https://uk.rs-online.com/web/p/tvs-diodes/4864656) | £2.14 ex / £2.57 inc VAT per pack of 10 (RS 486-4656, ST P6KE33CA) | 2.57 | D-98: full match (bidirectional, 600 W, DO-15). Smallest RS pack is 10 (1 used + spares). Across the Z brake coil (D-93) |
+| E26 | 1 | Bench-front e-stop box (3D printed) | 1 pcs | Yellow ASA box for one XB2-BS544 (E08): 76 x 76 x 78, 22.5 mm hole with anti-turn notch, M20 gland hole, 2 wood-screw holes; 4 x T11 4 x 30 screws for the lid (cad/v2/out/print/E26_*.stl). Inside depth 75: CHECK against the button | [product]() | 3D printed, owner filament | 0.00 | D-100. Fills a gap: E08 are bare operators. About 130 g ASA |
+| E27 | 1 | Homing sensor brackets + trigger flags (3D printed, design pending) | 4 sets | ASA clamps for the LJ12A3 M12 sensors (E10) and their flags, from the model once the axes are detailed | [product]() | 3D printed, owner filament | 0.00 | D-100. Designed with the axis detailing |
 | E06 | 1 | E-stop safety relay Schneider Preventa XPSAC5121 | 1 pcs | 24 V AC/DC, e-stop monitoring, 1 or 2 channel, manual reset | [product](https://www.aliexpress.com/item/1005012583131933.html) | £84.39 inc VAT, free shipping (AliExpress, 107 sold) | 84.39 | D-84: premium accepted (no eBay). Genuine part not verified. Wire each e-stop's 2 NC contacts as two channels; reset button to the reset input; safety outputs to the E07 coil |
 | E07 | 1 | Contactor with 24 V coil | 1 pcs |  | [product](https://www.aliexpress.com/item/1005005356561757.html) | £26.29 inc VAT, free shipping (AliExpress, logged in) | 26.29 | Schneider LC1D09BDC 24 V DC coil. Genuine not verified |
 | E08 | 1 | E-stop buttons 2 NC (×5) | 1 set | XB2-BS544 22 mm, 2 NC, twist release (2 NC for the dual-channel relay) | [product](https://www.aliexpress.com/item/1005008293871583.html) | £12.39 inc VAT for 5, free shipping (AliExpress, option BS544-2NC) | 12.39 | D-84: 2 NC needed for dual-channel E06 |
@@ -134,6 +137,7 @@ Lines still TO PRICE: see the list above.
 | N01 | 2 | Enclosure box: 12 mm MDF (B&Q) | 2 sheets | 12 mm MDF, 2 sheets: box internal 880 × 930 × 742 (cut list: cad/v2/out/enclosure_cutlist.md) | [product](https://www.diy.com/departments/mdf-board-l-2-44m-w-1-22m-t-12mm-22130g/1696260_BQ.prd) | £23 each inc VAT (B&Q, sold and shipped by B&Q) | 46.00 | D-89: moved from Wickes (£26 each). 2 sheets (cut list: cad/v2/out/enclosure_cutlist.md). Check Swansea stock for click and collect. Seal the inside |
 | N02 | 2 | Enclosure window: 4 mm solid clear polycarbonate | 1 pcs | Solid clear polycarbonate 4 mm, cut to 600 × 420 (covers the 560 × 380 door cut-out with 20 mm overlap) | [product](https://www.plasticsheets.com/clear-polycarbonate/) | £24.92 + £4.95 delivery (plasticsheets.com, owner-confirmed; VAT basis not stated) | 29.87 | D-88: replaces the ribbed twinwall (£23.99) for a clear view. 3 mm option was £18.55 + £4.95 |
 | N03 | 2 | LED light | 1 pcs |  | [product](https://www.aliexpress.com/item/1005013221981188.html) | £2.74 inc VAT (AliExpress) | 2.74 | 24-36 V 5 W |
+| N04 | 2 | Enclosure fit-out parts (3D printed, design pending) | 1 set | Door handle, LED mount, gas-strut brackets, window clamp strips | [product]() | 3D printed, owner filament | 0.00 | D-100. Phase 2 |
 | T01 | 1 | Bench (owner-built timber) | 1 lot | Owner-built timber bench (D-97): materials in T03-T15, design in cad/v2/out/bench_cutlist.md | [product]() | Owner build | 0.00 | D-71 |
 | T02 | 1 | Anti-vibration feet | 4 pcs | 4 × RS PRO levelling foot M10 × 45, 50 mm polyamide base, 470 kg | [product](https://uk.rs-online.com/web/p/adjustable-feet/0285757) | £10.16 ex / £12.19 inc VAT (RS 028-5757) | 12.19 | Polyamide base, not rubber: add rubber pads if needed for vibration |
 | T03 | 1 | CLS timber 38 x 89 x 2.4 m (bench frame) | 6 lengths | Planed C16 whitewood CLS 38 x 89 x 2.4 m: legs (2 glued), aprons, joists, cabinet stands | [product](https://www.diy.com/departments/planed-c16-whitewood-spruce-cls-timber-l-2-4m-w-89mm-t-38mm/1798297_BQ.prd) | £6.65 each inc VAT (B&Q Swansea, 238 in store, aisle 109) | 39.90 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
@@ -147,8 +151,9 @@ Lines still TO PRICE: see the list above.
 | T11 | 1 | Wood screws 5 x 70, 4 x 30, 4 x 40 | 3 boxes | Leg lamination, side frames, top lamination, panels | [product](https://www.screwfix.com/p/goldscrew-pz-double-countersunk-thread-cutting-multipurpose-screws-5mm-x-70mm-100-pack/16221) | Goldscrew 5 x 70 (100) £4.29 + 4 x 30 (200) £2.89 + Silverscrew 4 x 40 (200) £3.29 inc VAT (Screwfix; Swansea stock 2026-11-08: all 3 stores, 4 x 40 only 2-3 per store) | 10.47 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
 | T12 | 1 | PVA wood glue D3/D4, 1 L | 1 pcs | Leg and joist lamination, side frames, top layers | [product](https://www.diy.com/departments/bond-it-premium-water-resistant-d4-wood-adhesive-glue-internal-external-fast-drying-white-1l/5056437400864_BQ.prd) | £11.99 inc VAT, free delivery (B&Q marketplace, Bond It D4 1 L) | 11.99 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
 | T13 | 1 | Yacht varnish 750 ml | 1 pcs | Seal the top and shelf (coolant, shed damp): 3 coats | [product](https://www.screwfix.com/p/fortress-trade-750ml-clear-gloss-solvent-based-exterior-yacht-varnish/326pc) | £11.99 inc VAT, sale (Screwfix, Fortress Trade yacht varnish 750 ml; Swansea stock 2026-11-08: 1 at Parc Tawe, 1 at Cwmdu Parc) | 11.99 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
-| T14 | 1 | 120 mm fan finger guards | 2 pcs | For the 2 radiator fan holes in the right side panel | [product](https://www.aliexpress.com/item/1005002406653644.html) | £6.81 per 2 inc VAT, free shipping (AliExpress, logged in); screws not stated | 6.81 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 (T14: wave 1 AliExpress basket) |
-| T15 | 1 | Desk cable grommet 80 x 160 with lid and brush (bench top) | 1 pcs | Metal rectangular desk grommet 80 x 160 mm, lid + dust brush. Through the top at x 850-930, y 700-860 (D-99) | [product](https://www.diy.com/departments/metal-desk-cable-grommet-80x160-mm-black-rectangular/5056369505101_BQ.prd) | £11.04 inc VAT, free delivery (B&Q marketplace) | 11.04 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
+| T14 | 1 | 120 mm fan grills (3D printed) | 2 pcs | Printed 120 mm grill, 105 mm hole pitch, 3 mm, ASA or PETG (cad/v2/out/print/T14_fan_grill_120.stl) | [product]() | 3D printed, owner filament (was £6.81 AliExpress) | 0.00 | D-100. About 45 g for 2. Screws through the grill and the side panel into the fan |
+| T15 | 1 | Cable grommet for the bench top (3D printed) | 1 pcs | Printed: ASA frame (80 x 160 flange, fits a 70 x 150 hole) + TPU 95A slit membrane + ASA clamp ring, 4 x T11 4 x 30 screws (cad/v2/out/print/T15_*.stl) | [product]() | 3D printed, owner filament (was £11.04 B&Q marketplace) | 0.00 | D-100. About 100 g ASA + 12 g TPU |
+| T16 | 1 | Bench fit-out parts (3D printed, design pending) | 1 set | Radiator brackets, PC and reservoir holders, collet/tool rack, cable clips | [product]() | 3D printed, owner filament | 0.00 | D-100. Designed when the radiator, PC and reservoir are in hand |
 | X01 | 1 | Dial test indicator + magnetic base | 1 set | For rail alignment and squaring the gantry | [product](https://www.aliexpress.com/item/1005013036061506.html) | £17.23 inc VAT, free shipping (AliExpress) | 17.23 | Lever DTI 0.01 mm + flexible base |
 | X02 | 1 | Precision level 200 mm (AliExpress) | 1 pcs | 200 mm bar level, title "0.02 mm" (per-metre not stated) | [product](https://www.aliexpress.com/item/32814850915.html) | £15.69 + £17.25 shipping (AliExpress) | 32.94 | D-84: owner choice. Sensitivity unit not confirmed |
 | X03 | 1 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | M5 × 16 (100) + M6 × 20 (50) A2 [Screwfix]; M10 × 30 12.9 (20) [AliExpress]; M8 × 25 (50) + M12 × 120 (10) [RS] | [product](https://www.screwfix.com/) | Screwfix 2 × £5.79 + £7.59; AliExpress 10 × £1.52; RS £11.96 + £24.14 | 70.47 | Screwfix 4366T, 5209T; AliExpress https://www.aliexpress.com/item/4000784829771.html ; RS 052-9725, 124-7302. Covers X04 |

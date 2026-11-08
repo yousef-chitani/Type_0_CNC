@@ -17,7 +17,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 ## 3. Money and phases (D-66, D-86, D-68)
 | Phase | Scope | Priced | Budget |
 |---|---|---|---|
-| 1 | Working mill, manual ER20 tool changes | **£3,331.37**, every line priced (incl. bench, D-99) | £4,000 |
+| 1 | Working mill, manual ER20 tool changes | **£3,313.52**, every line priced (incl. bench, D-99; printed parts D-100) | £4,000 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel | £1,408.22 | not set |
 - Source of truth: **`docs/bom.csv`**. Generated from it: `docs/bom.md` (`python tools/gen_bom_md.py`), `docs/phase1-bom.xlsx` (`python tools/gen_phase1_xlsx.py`), `docs/phase1-cost.md` (`python tools/gen_phase1_cost.py`), `tools/open_links.py` (`python tools/build_open_links.py`).
 - Phase 1 vendors (12): AliExpress, Screwfix, StepperOnline, RS, Easy Composites, Aluminium Warehouse, GCL, Hancock & Brown, Valentine Clays, The Metal Store, B&Q, Mesa.
@@ -32,6 +32,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 - Most supplier sites block this cloud session. Prices are gathered by the owner's **local browser session** using `docs/price-check-task-N.md` files (task 9 was the last). The owner logs in to AliExpress themselves; the session never handles credentials.
 - **Cast, not welded** (weld stress). Keep the frame in carriable pieces.
 - Write plainly; record every decision in `docs/decisions.md` with a D-number.
+- The owner has 3 × Bambu P1S printers: design small, low-load parts for printing (ASA) rather than buying them (D-100). Task 4 includes printed mould helpers.
 
 ## 6. Next tasks (agreed order)
 1. ~~Electrical design~~: done, `docs/electrical.md` (D-91). Has CHECK items.
@@ -48,7 +49,7 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-99 |
+| `docs/decisions.md` | Decision log D-01 … D-100 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |
@@ -56,6 +57,7 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | `tools/portal_overhang.py` | Portal beam overhang check (D-95) |
 | `docs/supplier-messages.md` | Drafts for the ballscrew seller, GCL, Hancock & Brown |
 | `cad/v2/bench.py`, `cad/v2/out/bench_*` | Timber bench: model, drawings, cut list, assembly, load check (D-97) |
+| `docs/printed-parts.md`, `cad/v2/printed_parts.py`, `cad/v2/out/print/` | 3D-printed parts for the owner's P1S printers (D-100) |
 | `docs/price-check-task-10.md` | Price check for E23, E24, E25 (applied, D-98) |
 | `docs/bom.csv` / `bom.md` / `phase1-bom.xlsx` / `phase1-cost.md` | Parts list and costs |
 | `docs/phase1-schedule.md` | Timeline and order waves |
