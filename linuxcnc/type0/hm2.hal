@@ -76,8 +76,9 @@ net home-x           <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-00
 net home-y           <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-01
 net home-z           <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-02
 net machine-power-ok <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-03
-# CHECK the CL57T ALM polarity on the bench: with the drive healthy, the input LED
-# should be OFF. If it is ON when healthy, change "input-0N" to "input-0N-not" here.
+# ALM wiring: ALM+ to +24 V, ALM- to the Mesa input (open-collector, 20 mA max at 5-24 V).
+# CHECK the ALM polarity on the bench: with the drive healthy, the input LED should be OFF.
+# If it is ON when healthy, change "input-0N" to "input-0N-not" here.
 net alarm-x          <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-04
 net alarm-y          <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-05
 net alarm-z          <= hm2_[HOSTMOT2]BOARD.0.7i76.0.0.input-06
@@ -89,14 +90,21 @@ net board-fault      <= hm2_[HOSTMOT2]BOARD.0.watchdog.has_bit
 
 # ---------------------------------------------------------------------------
 # Field outputs (TB6). Each load returns to 0 V.
-# CHECK in the 7I76EU manual how outputs are set to sourcing mode (electrical.md section 4).
+# 7I76EU manual: each output is OFF unless its bit is set in the "source" or "sink" mask.
+# All 16 outputs sourcing (+24 V when on): source = 0xFFFF (65535), sink = 0.
+# CHECK on first start that these parameters exist with these names:
+#   halcmd show param hm2_7i76e.0.7i76.0.0
 # ---------------------------------------------------------------------------
-# OUT0: drive enable, CL57T ENA on all 3 drives in parallel.
-# CHECK the CL57T ENA logic. Many CL57T drives are ENABLED when ENA is NOT energised;
-# if so, set the invert below to 1 (then 24 V on ENA = disabled).
+setp hm2_[HOSTMOT2]BOARD.0.7i76.0.0.source 65535
+setp hm2_[HOSTMOT2]BOARD.0.7i76.0.0.sink   0
+
+# OUT0: drive enable, CL57T ENA on all 3 drives in parallel (ENA+ to OUT0, ENA- to 0 V).
+# CL57T manual (V3.0): ENA accepts 4.5-24 V; "left unconnected = enabled"; for PNP
+# (sourcing) wiring the logic is reversed, i.e. 24 V on ENA = DISABLED. If the bench test
+# confirms this, set the invert below to 1. CHECK on the V4.1 drive (bench test step 8).
 net drive-enable-out => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-00
 setp hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-00-invert 0
-# OUT1: Z brake coil (energised = released)
+# OUT1: Z brake coil (energised = released), through safety relay output 23-24 (D-93)
 net z-brake-release  => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-01
 # OUT2: coolant pump interface relay (E23)
 net pump-on          => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-02

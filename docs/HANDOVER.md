@@ -17,13 +17,13 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 ## 3. Money and phases (D-66, D-86, D-68)
 | Phase | Scope | Priced | Budget |
 |---|---|---|---|
-| 1 | Working mill, manual ER20 tool changes | **£3,066.41** (+ E23 relay, E24 USB-RS485 adapter to price) | £4,000 |
+| 1 | Working mill, manual ER20 tool changes | **£3,050.76** (+ E23 relay, E24 USB-RS485 adapter, E25 TVS diode to price) | £4,000 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel | £1,408.22 | not set |
 - Source of truth: **`docs/bom.csv`**. Generated from it: `docs/bom.md` (`python tools/gen_bom_md.py`), `docs/phase1-bom.xlsx` (`python tools/gen_phase1_xlsx.py`), `docs/phase1-cost.md`, `tools/open_links.py` (`python tools/build_open_links.py`).
 - Phase 1 vendors (12): AliExpress, Screwfix, StepperOnline, RS, Easy Composites, Aluminium Warehouse, GCL, Hancock & Brown, Valentine Clays, The Metal Store, B&Q, Mesa.
 
 ## 4. Schedule (D-90, `docs/phase1-schedule.md`)
-4 Jan 2027 → 22 Jul 2027, about 5 h/week. Done = machine jogs under LinuxCNC. Electronics first (indoors), moulds Feb–Mar, test bricks late March, castings April–May (≥ 18 °C cure), assembly June, wiring + config July. 5 order waves; the spindle kit must be ordered by 5 April, motion parts by 29 March.
+4 Jan 2027 → 22 Jul 2027, about 5 h/week. Done = machine jogs under LinuxCNC. Electronics first (indoors), moulds Feb–Mar, test bricks late March, castings April–May (≥ 18 °C cure), assembly June, wiring + config July. 4 order waves (D-94): electrical, motors **and the spindle kit + cooling loop** in wave 1 (4 Jan); motion parts by 29 March.
 
 ## 5. Owner's rules for working on this project
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume.
@@ -42,16 +42,20 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 Then: rail-seat levelling and assembly procedures, Phase 2 detailing.
 
 ## 7. Open questions
-See `docs/open-questions.md` (updated at handover).
+See `docs/open-questions.md`: in priority order, with who answers each and how (2026-11-08).
 
 ## 8. Key files
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-92 |
+| `docs/decisions.md` | Decision log D-01 … D-96 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |
+| `docs/curing-heat.md`, `tools/cure_heat.py` | GlassCast 50 PLUS limits, curing-heat estimate, heater tent (D-96) |
+| `tools/portal_overhang.py` | Portal beam overhang check (D-95) |
+| `docs/supplier-messages.md` | Drafts for the ballscrew seller, GCL, Hancock & Brown |
+| `docs/price-check-task-10.md` | Price check for E23, E24, E25 |
 | `docs/bom.csv` / `bom.md` / `phase1-bom.xlsx` / `phase1-cost.md` | Parts list and costs |
 | `docs/phase1-schedule.md` | Timeline and order waves |
 | `docs/eg-moulds.md`, `aggregates.md`, `epoxy-options.md` | Casting notes (partly v1 sizes: check against v2) |

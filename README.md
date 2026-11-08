@@ -19,4 +19,6 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [Phase 1 schedule](docs/phase1-schedule.md): weeks, order waves
 - [Electrical design](docs/electrical.md): power, safety chain, 7I76EU pin map, VFD settings
 - [LinuxCNC config](docs/linuxcnc.md): config files, simulator, PC set-up and bench tests
+- [Curing heat](docs/curing-heat.md): resin limits, heat estimate, keeping the shed warm
+- [Supplier messages](docs/supplier-messages.md): drafts ready to send
 - [**Handover**](docs/HANDOVER.md): start here

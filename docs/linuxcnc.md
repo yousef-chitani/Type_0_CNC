@@ -47,7 +47,7 @@ The hardwired chain (2 e-stops → XPSAC5121 → contactor) does the actual stop
 
 All timings are in the `[TYPE0]` section of `type0.ini`.
 
-**Known limit (open question 14):** the Z brake is powered from the always-on 24 V through Mesa OUT1. When an e-stop button is pressed, the drives lose 48 V at once, but the brake only engages when LinuxCNC sees IN3 drop (one servo cycle, about 1 ms, plus the brake's own response). If the PC has crashed, the Mesa watchdog does it after 5 ms. For a fully hardwired brake, feed the brake's +24 V through a spare NO contact of the contactor as well.
+**Z brake is hardwired (D-93):** the brake coil is fed from Mesa OUT1 through safety relay output 23-24. Pressing an e-stop drops the brake at the same moment as the drives, in hardware, whatever the PC is doing. LinuxCNC's own sequencing (above) still handles normal machine on/off.
 
 ## 4. Simulator test (done 2026-11-08)
 
@@ -91,12 +91,12 @@ Do every step with the motors **unloaded** (couplings off), Z motor lying on the
 7. Flow switch IN7: blow through it or run the pump: on with flow, off without (CHECK contact rating first, open question 3).
 
 **C. Outputs and enable**
-8. Reset e-stop and turn the machine on in AXIS. OUT0 on: check the CL57T enable logic: the motors should hold (stiff shaft). If they go *free* when the machine is on, set `output-00-invert 1` in `hm2.hal` (CHECK).
-9. OUT1: the Z brake clicks free about 0.3 s after machine on, and grips at once at machine off.
+8. First start only: run `halcmd show param hm2_7i76e.0.7i76.0.0` and confirm the `source` and `sink` parameters exist (they set the outputs to sourcing; without them the outputs stay off). Reset e-stop and turn the machine on in AXIS. OUT0 on: check the CL57T enable logic: the motors should hold (stiff shaft). If they go *free* when the machine is on, set `output-00-invert 1` in `hm2.hal`. The V3.0 manual suggests this will be needed (24 V on ENA with sourcing wiring = disabled).
+9. OUT1: the Z brake clicks free about 0.3 s after machine on, and grips at once at machine off. With the brake released, press an e-stop: it must grip at once (safety output 23-24, D-93).
 10. OUT2/OUT3: the pump relay and radiator fans run while the machine is on.
 
 **D. Motion (couplings off)**
-11. Set every CL57T to 1,600 pulses/rev (DIP switches, CHECK the table in its manual).
+11. Check every CL57T is at 1,600 pulses/rev: the V3.0 manual's factory DIP setting SW1–SW4 = on, off, on, on is 1,600. SW7 off = step/dir mode. CHECK the table in the V4.1 manual that comes with the drives.
 12. Jog each axis slowly. Mark the shaft: a 5 mm jog must be exactly 1 turn. Note the direction; fix with a negative `SCALE` in `type0.ini` if wrong.
 13. Run each axis at 2 m/min (G1 F2000 back and forth) for a few minutes: no drive alarms, no lost position (the closed-loop drives alarm if the error grows).
 14. Homing: trigger each home sensor by hand while the axis searches. The search direction must be toward +X, +Y, Z up.

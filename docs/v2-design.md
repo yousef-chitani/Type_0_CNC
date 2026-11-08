@@ -22,7 +22,7 @@ Model: [`cad/v2/type0_v2.py`](../cad/v2/type0_v2.py) → `cad/v2/out/type0_v2.st
 ## Things to check next
 - Y screw nut housing under the table (DSG16H: centre 20 mm below its face, 40 mm tall). The table underside is at Z 30 → cast a 70 × 25 mm channel along the spine (as D-56).
 - Z assembly height: Z plate top at about Z 585 at Z-top. The enclosure needs about 650 mm internal height above the castings.
-- The portal beam overhang (160 mm) with the saddle at the pickup: check deflection when the gantry is detailed.
+- The portal beam overhang (160 mm) with the saddle at the pickup: checked (D-95). Under 1 µm bending and about 1 µm twist at the tool tip with an 18 kg moving load (`tools/portal_overhang.py`).
 
 ## Enclosure (D-87)
 See `cad/v2/out/enclosure_cutlist.md` and `enclosure_front.png` / `enclosure_side.png`. 12 mm MDF box, internal 880 × 930 × 742, sits on the bench (not on the castings), top-hinged front door with a low twinwall window, cable/hose slot in the back. Model: `cad/v2/enclosure.py` → `type0_v2_with_enclosure.step`.

@@ -1,17 +1,17 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,066.41** (budget £4,000). Every line priced except E23 (pump relay) and E24 (USB-RS485 adapter, D-92): both to price. No eBay.
+**Phase 1 priced total: £3,050.76** (budget £4,000). Every line priced except E23 (pump relay) and E24 (USB-RS485 adapter, D-92): both to price. No eBay.
 
 | Subsystem | £ |
 |---|---|
 | Frame | £637.12 |
 | Motion | £1,004.77 |
 | Spindle | £489.14 |
-| Electronics | £802.55 |
+| Electronics | £786.90 |
 | Stand | £12.19 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,066.41** |
+| **Total** | **£3,050.76** |
 
 ## Frame
 
@@ -74,7 +74,6 @@
 | E03 | Monitor + keyboard + mouse (owner already has) | 1 set | £0.00 |
 | E04 | 48 V PSU Mean Well SDR-480-48 (DIN) | 1 pcs | £136.06 |
 | E05 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | £27.62 |
-| E22 | 5 V DC PSU, DIN rail (Mean Well MDR-10-5) | 1 pcs | £15.65 |
 | E06 | E-stop safety relay Schneider Preventa XPSAC5121 | 1 pcs | £84.39 |
 | E07 | Contactor with 24 V coil | 1 pcs | £26.29 |
 | E08 | E-stop buttons 2 NC (×5) | 1 set | £12.39 |

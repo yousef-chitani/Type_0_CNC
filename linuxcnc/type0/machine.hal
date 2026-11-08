@@ -44,7 +44,8 @@ net estop-ok         estop-latch.0.ok-out => iocontrol.0.emc-enable-in
 # Drive enable and Z brake.
 # On:  drives enable, then the brake releases after BRAKE_RELEASE_DELAY.
 # Off: the brake engages at once, the drives stay enabled for DRIVE_OFF_DELAY so Z
-#      doesn't drop while the brake grips. (A hardware e-stop cuts both at once.)
+#      doesn't drop while the brake grips. An e-stop button cuts both at once in hardware:
+#      the contactor drops the drives and safety output 23-24 drops the brake (D-93).
 # ---------------------------------------------------------------------------
 # x-enable is joint.0.amp-enable-out (all joints enable together)
 net x-enable         => brake-delay.in drive-off-delay.in

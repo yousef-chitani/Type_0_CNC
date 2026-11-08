@@ -73,7 +73,7 @@ The owner asked for real examples before choosing cores. What I found:
 
 1. Mould on the vibration table, checked level and flat. Inserts bolted on. Temperature probes in place (see Thermal management).
 2. Mix in small batches. Wet the aggregate with resin first, then vibrate while pouring in layers about 50 mm deep.
-3. Cure **48–72 h at 18 °C or above** before demoulding. Allow about 7 days for full cure, or warm it to about 40 °C to speed it up.
+3. Cure **at least 7 days at 20 °C** (9 days at 17 °C) before demoulding: GlassCast 50 PLUS datasheet, see curing-heat.md. Do not heat above 23 °C during this cure. An optional post-cure (16 h at 50 °C) afterwards raises the softening point from 39 to 47 °C (task 5 decides).
 4. **Remove the jig bolts through the floor first.** They hold the casting to the floor.
 5. Remove the hold-down batten, then unscrew the walls. For the gantry, pull the centre wedge first, then the plug halves.
 6. Lift the casting from the open-face lifting points and turn it over on a padded surface. The floor comes off last.
