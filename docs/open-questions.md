@@ -1,11 +1,11 @@
 # Open questions (updated 2026-11-08, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-97). Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-98). Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
 
 ## Before wave 1 (4 Jan 2027)
 
-1. **Price E23 (pump relay), E24 (USB-RS485 adapter), E25 (TVS diode for the Z brake)**, and T14 (fan guards, AliExpress).
-   Who: owner, local price check. How: run `price-check-task-10.md` (and T14 from `price-check-task-11.md`), then the session updates `bom.csv` and the totals.
+1. **Price T14 (120 mm fan guards, AliExpress)** for the wave 1 basket. (E23, E24, E25 priced: D-98.)
+   Who: owner, from `price-check-task-11.md`. Also check the Waveshare USB-RS485 (E24) photos show A+/B-/GND screw terminals before ordering.
 2. **AliExpress basket clean-up**: remove the 6 mm ID tube; check the 12 ferrule packs, the HSC8 16-6 crimper, the 20/14 AWG wire. Add S08 + S05 to the wave 1 basket (D-94) and re-check the S08 price.
    Who: owner, logged in to AliExpress.
 3. **Safety relay terminal names** (S11/S12, S21/S22, S33/S34, 13-14, 23-24, 33-34). The product datasheet confirms 3 NO safety outputs but doesn't show the terminals.

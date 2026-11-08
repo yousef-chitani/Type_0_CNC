@@ -17,7 +17,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 ## 3. Money and phases (D-66, D-86, D-68)
 | Phase | Scope | Priced | Budget |
 |---|---|---|---|
-| 1 | Working mill, manual ER20 tool changes | **£3,050.76** (+ E23 relay, E24 USB-RS485 adapter, E25 TVS diode to price) | £4,000 |
+| 1 | Working mill, manual ER20 tool changes | **£3,082.35** (+ bench materials T03–T15 to price) | £4,000 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel | £1,408.22 | not set |
 - Source of truth: **`docs/bom.csv`**. Generated from it: `docs/bom.md` (`python tools/gen_bom_md.py`), `docs/phase1-bom.xlsx` (`python tools/gen_phase1_xlsx.py`), `docs/phase1-cost.md`, `tools/open_links.py` (`python tools/build_open_links.py`).
 - Phase 1 vendors (12): AliExpress, Screwfix, StepperOnline, RS, Easy Composites, Aluminium Warehouse, GCL, Hancock & Brown, Valentine Clays, The Metal Store, B&Q, Mesa.
@@ -48,7 +48,7 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-97 |
+| `docs/decisions.md` | Decision log D-01 … D-98 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |
@@ -56,7 +56,7 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | `tools/portal_overhang.py` | Portal beam overhang check (D-95) |
 | `docs/supplier-messages.md` | Drafts for the ballscrew seller, GCL, Hancock & Brown |
 | `cad/v2/bench.py`, `cad/v2/out/bench_*` | Timber bench: model, drawings, cut list, assembly, load check (D-97) |
-| `docs/price-check-task-10.md` | Price check for E23, E24, E25 |
+| `docs/price-check-task-10.md` | Price check for E23, E24, E25 (applied, D-98) |
 | `docs/bom.csv` / `bom.md` / `phase1-bom.xlsx` / `phase1-cost.md` | Parts list and costs |
 | `docs/phase1-schedule.md` | Timeline and order waves |
 | `docs/eg-moulds.md`, `aggregates.md`, `epoxy-options.md` | Casting notes (partly v1 sizes: check against v2) |

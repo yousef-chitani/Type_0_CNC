@@ -1,17 +1,17 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,050.76** (budget £4,000). Every line priced except E23 (pump relay) and E24 (USB-RS485 adapter, D-92): both to price. No eBay.
+**Phase 1 priced total: £3,082.35** (budget £4,000). Every line priced except the bench materials T03–T15 (D-97, price-check-task-11.md). No eBay.
 
 | Subsystem | £ |
 |---|---|
 | Frame | £637.12 |
 | Motion | £1,004.77 |
 | Spindle | £489.14 |
-| Electronics | £786.90 |
+| Electronics | £818.49 |
 | Stand | £12.19 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,050.76** |
+| **Total** | **£3,082.35** |
 
 ## Frame
 
@@ -87,6 +87,9 @@
 | E19 | (covered by E13) | 1 set | £0.00 |
 | E20 | (covered by S04) | 15 m | £0.00 |
 | E21 | Reset button 22 mm green (in your basket) | 1 pcs | £4.25 |
+| E23 | Coolant pump relay (Phoenix PLC-RSC, RS) | 1 pcs | £15.43 |
+| E24 | USB-RS485 adapter (Waveshare FT232RL, AliExpress) | 1 pcs | £13.59 |
+| E25 | TVS diode P6KE33CA (RS, pack of 10) | 1 pack | £2.57 |
 
 ## Stand
 

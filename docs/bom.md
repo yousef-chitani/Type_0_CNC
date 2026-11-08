@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **98 line items, 82 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **98 line items, 85 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -11,19 +11,19 @@ Full list: [bom.csv](bom.csv). **98 line items, 82 priced.** Prices were read fr
 | Spindle | 9 | 9 | £1,546.00 |
 | Tool changer | 7 | 7 | £154.46 |
 | Pneumatics | 6 | 6 | £110.22 |
-| Electronics | 23 | 20 | £810.62 |
+| Electronics | 23 | 23 | £842.21 |
 | Enclosure | 3 | 3 | £78.61 |
 | Stand | 15 | 2 | £12.19 |
 | Metrology | 2 | 2 | £50.17 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **98** | **82** | **£4,474.63** |
+| **All** | **98** | **85** | **£4,506.22** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,474.63**. Not priced yet: E23, E24, E25, T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15.
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,506.22**. Not priced yet: T03, T04, T05, T06, T07, T08, T09, T10, T11, T12, T13, T14, T15.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,050.76 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,082.35 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -114,9 +114,9 @@ Lines still TO PRICE: see the list above.
 | E04 | 1 | 48 V PSU Mean Well SDR-480-48 (DIN) | 1 pcs | Mean Well SDR-480-48, 48 V 10 A 480 W, DIN rail | [product](https://uk.rs-online.com/web/p/switching-power-supplies/0424868) | £113.38 ex / £136.06 inc VAT (RS 042-4868) | 136.06 | D-84. RS free delivery over £60 |
 | E05 | 1 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | Mean Well HDR-150-24, DIN rail | [product](https://www.omc-stepperonline.com/hdr-150-24-mean-well-24vdc-5-31a-127-4w-115vac-6-25a-150w-230vac-ultra-slim-step-shape-din-rail-power-supply-hdr-150-24) | £27.62 (VAT?), pre-order (StepperOnline, read 2026-11-05) | 27.62 | D-84: kept at StepperOnline (already a vendor, genuine). Was pre-order: check stock |
 | E22 | 2 | 5 V DC PSU (shelved: not needed for Phase 1) | 1 pcs | Mean Well MDR-10-5, 5 V 2 A, DIN rail | [product](https://uk.rs-online.com/web/p/din-rail-power-supplies/7127402) | £13.04 ex / £15.65 inc VAT (RS 712-7402) | 15.65 | D-91: the 7I76EU runs from 24 V. Kept for later use (owner) |
-| E23 | 1 | Coolant pump relay (DIN interface relay, 24 V DC coil) | 1 pcs | DIN-rail interface relay, 24 V DC coil, 1 CO, about 10 A 250 V AC contact, with LED (e.g. Finder 38/39 series) | [product](https://uk.rs-online.com/) | TO PRICE (RS) |  | Switches the 220 V kit pump from Mesa OUT2 |
-| E24 | 1 | USB-RS485 adapter for the VFD link | 1 pcs | USB to RS-485 converter (2-wire A/B + GND), CH340 or FTDI chip, works with the Linux ftdi_sio/ch341 driver | [product](https://uk.rs-online.com/) | TO PRICE |  | For hy_vfd: the Huanyang protocol is not standard Modbus, so the Mesa RS-485 port cannot drive it (D-92). Reverses the no-adapter part of D-58 |
-| E25 | 1 | TVS diode for the Z brake coil | 2 pcs | Bidirectional TVS, 600 W, about 33 V (P6KE33CA or similar), across the brake coil | [product](https://uk.rs-online.com/) | TO PRICE |  | The brake is now switched through safety relay output 23-24 (D-93); the TVS absorbs the coil spike when that contact opens. Qty 2 = 1 spare |
+| E23 | 1 | Coolant pump relay (DIN interface relay, 24 V DC coil) | 1 pcs | DIN-rail interface relay, 24 V DC coil, 1 CO, about 10 A 250 V AC contact, with LED (e.g. Finder 38/39 series) | [product](https://uk.rs-online.com/web/p/interface-relays/3588301) | £12.86 ex / £15.43 inc VAT (RS 358-8301, Phoenix Contact PLC-RSC-24DC/21, relay + DIN base) | 15.43 | D-98: full match (24 V DC coil, 1 CO, 6 A 250 V AC, LED). On the RS order (free delivery). Switches the 220 V kit pump from Mesa OUT2 |
+| E24 | 1 | USB-RS485 adapter for the VFD link | 1 pcs | USB to RS-485 converter (2-wire A/B + GND), CH340 or FTDI chip, works with the Linux ftdi_sio/ch341 driver | [product](https://www.aliexpress.com/item/1005008217229755.html) | £13.59 inc VAT, free shipping (AliExpress, logged in; Waveshare industrial USB TO RS485, option FT232RL version) | 13.59 | D-98: FT232RL (Linux ftdi_sio). Not isolated. CHECK the photos show A+/B-/GND screw terminals before ordering. For hy_vfd (D-92) |
+| E25 | 1 | TVS diode for the Z brake coil | 10 pcs (1 pack) | Bidirectional TVS, 600 W, about 33 V (P6KE33CA or similar), across the brake coil | [product](https://uk.rs-online.com/web/p/tvs-diodes/4864656) | £2.14 ex / £2.57 inc VAT per pack of 10 (RS 486-4656, ST P6KE33CA) | 2.57 | D-98: full match (bidirectional, 600 W, DO-15). Smallest RS pack is 10 (1 used + spares). Across the Z brake coil (D-93) |
 | E06 | 1 | E-stop safety relay Schneider Preventa XPSAC5121 | 1 pcs | 24 V AC/DC, e-stop monitoring, 1 or 2 channel, manual reset | [product](https://www.aliexpress.com/item/1005012583131933.html) | £84.39 inc VAT, free shipping (AliExpress, 107 sold) | 84.39 | D-84: premium accepted (no eBay). Genuine part not verified. Wire each e-stop's 2 NC contacts as two channels; reset button to the reset input; safety outputs to the E07 coil |
 | E07 | 1 | Contactor with 24 V coil | 1 pcs |  | [product](https://www.aliexpress.com/item/1005005356561757.html) | £26.29 inc VAT, free shipping (AliExpress, logged in) | 26.29 | Schneider LC1D09BDC 24 V DC coil. Genuine not verified |
 | E08 | 1 | E-stop buttons 2 NC (×5) | 1 set | XB2-BS544 22 mm, 2 NC, twist release (2 NC for the dual-channel relay) | [product](https://www.aliexpress.com/item/1005008293871583.html) | £12.39 inc VAT for 5, free shipping (AliExpress, option BS544-2NC) | 12.39 | D-84: 2 NC needed for dual-channel E06 |
