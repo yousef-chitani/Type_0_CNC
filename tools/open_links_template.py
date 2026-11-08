@@ -2,7 +2,7 @@
 """Shop the Type 0 CNC parts list one vendor at a time (standalone: the links are built in).
 
     py open_links.py               # Phase 1, vendor by vendor
-    py open_links.py --phase 2     # or 3, 1,2 or all
+    py open_links.py --phase 2     # or 1,2 or all
     py open_links.py --with-alts   # also open alternative-supplier links
     py open_links.py --list        # print the shopping list, open nothing
 

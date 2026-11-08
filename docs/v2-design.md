@@ -12,7 +12,7 @@ Model: [`cad/v2/type0_v2.py`](../cad/v2/type0_v2.py) → `cad/v2/out/type0_v2.st
 
 **Portal → base (the only frame joint).** Each leg sits on the base's rear cross-piece. First assembly: shim the portal square to the Y rails, grout, cure, then ream for the dowels. 2 × M12 bolts per leg through cast sleeves into tapped insert bars in the base, plus 1 × Ø10 dowel per leg.
 
-## ATC wheel (Phase 3, D-73)
+## ATC wheel (Phase 2, D-73/D-86)
 - Ferris wheel, about Ø178, 8 ISO20 pockets (3D-printed forks, D-58), turning about an X axis in the Y–Z plane beside the right leg, under the beam overhang.
 - Mount: a steel/aluminium bracket bolted to the leg's outer face (cast-in insert bar, 2 × M8) carrying a Ø20 shaft on 2 bearings.
 - Drive: small closed-loop NEMA 17 (A03) through a belt reduction (about 3:1) or worm. Index: inductive sensor on the wheel hub plus a home flag. LinuxCNC drives it as a rotary joint.
