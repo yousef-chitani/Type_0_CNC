@@ -37,8 +37,8 @@ The castings are about 11% epoxy by mass, so about 23% by volume; the rest is st
 - Put the heater low and away from the mould (not blowing on it). Thermostat probe at mould height. Set 20 °C.
 - Log the air in the tent and the probe in the casting for the whole cure (the DIY logging is already planned, F16).
 - Leave the heater on for the full 7 days before demoulding, and keep the casting above 17 °C for a further week if possible.
-- Heater and thermostat are not in the BOM yet. They will be added and priced with task 5 (EG mix and test-brick plan).
+- Heater and thermostat are not in the BOM yet. They will be added and priced with task 6 (EG mix and test-brick plan).
 
 ## New question: low softening point (Tg 39 °C)
 
-A room-temperature-cured GlassCast 50 PLUS casting softens at about 39 °C. A shed in summer sun, or a spindle and motor warming one spot, can get close to that, and epoxy creeps near its Tg. A **post-cure** of 16 h at 50 °C raises it to 47 °C: that could be done inside the same insulated tent with a larger heater, after the 7-day cure and before the rail-seat pour. To be decided in task 5 (it matters more for dimensional stability than for strength).
+A room-temperature-cured GlassCast 50 PLUS casting softens at about 39 °C. A shed in summer sun, or a spindle and motor warming one spot, can get close to that, and epoxy creeps near its Tg. A **post-cure** of 16 h at 50 °C raises it to 47 °C: that could be done inside the same insulated tent with a larger heater, after the 7-day cure and before the rail-seat pour. To be decided in task 6 (it matters more for dimensional stability than for strength).

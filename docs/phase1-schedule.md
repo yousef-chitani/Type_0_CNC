@@ -10,9 +10,10 @@ Castings are planned for April–May: GlassCast 50 PLUS needs **17–23 °C, ide
 |---|---|---|---|
 | 1–2 | 04 Jan – 17 Jan | Order wave 1. Install LinuxCNC on the mini-PC, latency test, connect the Mesa 7i76EU | 10 |
 | 3–6 | 18 Jan – 14 Feb | Electrical cabinet: DIN layout, PSUs, isolator/MCBs, e-stop safety chain, contactor, drivers. Bench-test all 3 motors from LinuxCNC on the bench (docs/linuxcnc.md section 6, parts A–D) | 20 |
-| 7–8 | 15 Feb – 28 Feb | Order wave 2. Build the timber bench (top 785 mm, D-97: cad/v2/out/bench_cutlist.md, about 6–8 h). Mould design check against the model | 10 |
+| before 1 | Nov – Dec 2026 | **Full CAD assembly (task 4, D-102)**: detailed parametric STEP from the session, refined in your CAD, then mould drawings (task 5) from it | (owner review) |
+| 7–8 | 15 Feb – 28 Feb | Order wave 2 (now includes the motion parts, D-103). Build the timber bench (top 785 mm, D-97: cad/v2/out/bench_cutlist.md, about 6–8 h) | 10 |
 | (on arrival, about week 9–10) | early March | Spindle kit (ordered in wave 1, about 8–9 weeks shipping): bench-test the VFD, spindle and cooling loop from LinuxCNC (docs/linuxcnc.md section 6, part E). About 2 h, fits beside the mould work | (2) |
-| 9–11 | 01 Mar – 21 Mar | Order wave 3. Build the base and portal moulds (MDF, CLS, insert bars on jig bolts, Y-screw channel, PVC cores, sleeves). Build the tyre vibration table | 15 |
+| 9–11 | 01 Mar – 21 Mar | Order wave 3. **Measure the received rails, screws, BK/BF supports and nut housings against the assembly; correct the mould drawings if needed.** Build the base and portal moulds (MDF, CLS, insert bars on jig bolts, Y-screw channel, PVC cores, sleeves). Build the tyre vibration table | 15 |
 | 12–13 | 22 Mar – 04 Apr | Test bricks: 2–3 mixes (GlassCast + quartz/sand/whiting), cure indoors, break and inspect. Fix the mix. Order wave 4 | 10 |
 | 14 | 05 Apr – 11 Apr | Final mould prep, release wax + PVA | 5 |
 | 15–16 | 12 Apr – 25 Apr | Cast the BASE (insulated tent + thermostat heater at 20 °C), 7-day cure, demould | 8 |
@@ -29,9 +30,9 @@ Castings are planned for April–May: GlassCast 50 PLUS needs **17–23 °C, ide
 | Wave | Order in week | Date | What | £ |
 |---|---|---|---|---|
 | 1 | 1 | 04 Jan 2027 | Electrical, motors, **spindle kit and cooling loop** (bench-test indoors): E01, E04, E05, E06, E07, E08, E09, E10, E12, E13, E14, E17, E18, E21, **E23, E24, E25**, S04, **S08, S05**, M09, M10, M14 | £1,482.74 |
-| 2 | 7 | 15 Feb 2027 | Bench, moulds and local items (B&Q, Screwfix): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T07, T09–T13** (bench, D-99: B&Q Swansea with in-store ply cutting, Screwfix, B&Q marketplace, AliExpress) | £484.70 |
+| 2 | 7 | 15 Feb 2027 | Bench, moulds, local items **and motion parts** (D-103): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T07, T09–T13** (bench, D-99: B&Q Swansea with in-store ply cutting, Screwfix, B&Q marketplace, AliExpress), **M01, M02, M03, M05, M08, M13** (rails, ballscrews, couplings, motor mounts) | £976.14 |
 | 3 | 9 | 01 Mar 2027 | Casting materials and measuring tools: F01, F02, F12, F03, F04, F06, F07, X01, X02 | £516.42 |
-| 4 | 13 | 29 Mar 2027 | Motion parts, plates, ER20 collets: M01, M02, M03, M05, M08, M13, M11, M12, S09 | £829.66 |
+| 4 | 13 | 29 Mar 2027 | Aluminium plates and ER20 collets: M11, M12, S09 | £338.22 |
 | | | | **Total** | **£3,313.52** |
 
 3D-printed parts (D-100, docs/printed-parts.md): fan grills, cable grommet and e-stop box can be printed any time before the bench is fitted out (week 8).
@@ -43,6 +44,6 @@ Owner-built or DIY (no cost apart from materials): timber bench (materials T03�
 ## Watch points
 - **Mesa 7i76EU:** £257.74 including import VAT, ordered in wave 1 (week 1). Needed first for the LinuxCNC bench tests.
 - **Spindle kit:** ordered in wave 1 (D-94). Shipping was quoted at about 8–9 weeks, so it should arrive in early March, well before it is mounted in week 23. Check the price is still £217.39 + shipping when ordering.
-- **AliExpress motion parts:** order by week 13 to arrive by week 21 (2–6 weeks).
+- **AliExpress motion parts:** ordered in wave 2 (15 Feb, D-103) so they arrive (2–6 weeks) in time to be measured before the moulds are finished in week 11. If they're late, finish the moulds from the datasheet sizes and check the parts against the moulds before casting (week 14).
 - **Cold:** cure inside an insulated tent with a 150–300 W thermostat heater set to 20 °C, and log with the temperature probes (curing-heat.md).
 - **Slack:** about 1 week of buffer, inside weeks 27–28.

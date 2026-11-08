@@ -32,14 +32,15 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 - Most supplier sites block this cloud session. Prices are gathered by the owner's **local browser session** using `docs/price-check-task-N.md` files (task 9 was the last). The owner logs in to AliExpress themselves; the session never handles credentials.
 - **Cast, not welded** (weld stress). Keep the frame in carriable pieces.
 - Write plainly; record every decision in `docs/decisions.md` with a D-number.
-- The owner has 3 × Bambu P1S printers: design small, low-load parts for printing (PETG, D-101) rather than buying them (D-100). Task 4 includes printed mould helpers.
+- The owner has 3 × Bambu P1S printers: design small, low-load parts for printing (PETG, D-101) rather than buying them (D-100). Task 5 (moulds) includes printed mould helpers.
 
 ## 6. Next tasks (agreed order)
 1. ~~Electrical design~~: done, `docs/electrical.md` (D-91). Has CHECK items.
 2. ~~LinuxCNC starter config~~: done, `linuxcnc/type0/` + `docs/linuxcnc.md` (D-92). VFD moved to USB-RS485 + hy_vfd. Simulator test 23/23. Has CHECK items for the bench test.
 3. ~~Timber bench design~~: done, `cad/v2/bench.py` → `cad/v2/out/bench_cutlist.md` + drawings + STEP (D-97, D-99). Materials priced: £249.02.
-4. **Mould drawings** for the base and portal from the v2 model (panels, jig-bolt hole pattern for insert bars, Y-screw channel 70 × 25, PVC cores, M12 sleeves, dowels, lifting points, vibration-table deck).
-5. **EG mix design + test-brick plan:** GlassCast 50 PLUS with GCL quartz 2–5, H&B 0–1 sand, whiting (≤ 8–10%), 2–3 epoxy ratios; mixing order, vibration, curing heat checks.
+4. **Full CAD assembly (D-102).** The mould drawings can't start until it exists. Extend `cad/v2` into a detailed parametric assembly: both castings with every insert bar, M12 sleeve, dowel, Y-screw channel, PVC core and lifting point; HGR20 rails + HGH20CA blocks, DFU1605 screws, BK12/BF12 supports, DSG16H nut housings, NEMA 24 motors (Z with brake), couplings, motor mounts, table, saddle, Z plate, spindle + clamp, home sensors and flags, ATC wheel envelope. Use real vendor STEP files where downloadable (HIWIN, StepperOnline, etc.), accurate envelopes otherwise. Model from datasheets now; check key sizes on the real parts when wave 2 arrives. The owner imports the STEP into their own CAD, refines it, and sends back the final STEP.
+5. **Mould drawings** from the final assembly (panels, jig-bolt hole pattern for insert bars, Y-screw channel, PVC cores, M12 sleeves, dowels, lifting points, vibration-table deck, printed mould helpers F19).
+6. **EG mix design + test-brick plan:** GlassCast 50 PLUS with GCL quartz 2–5, H&B 0–1 sand, whiting (≤ 8–10%), 2–3 epoxy ratios; mixing order, vibration, curing heat checks.
 Then: rail-seat levelling and assembly procedures, Phase 2 detailing.
 
 ## 7. Open questions
@@ -49,7 +50,7 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-101 |
+| `docs/decisions.md` | Decision log D-01 … D-103 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |

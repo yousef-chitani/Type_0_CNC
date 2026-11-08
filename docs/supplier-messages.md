@@ -2,7 +2,7 @@
 
 Ready to send. Copy, check, send yourself. Quantities are from `bom.csv` (F03, F04: v2 sizes; `aggregates.md` still shows the larger v1 quantities). Record the answers in `open-questions.md` and the decision log.
 
-## 1. METALWORK ballscrew seller (AliExpress chat): open question 1. Before wave 4 (29 Mar 2027)
+## 1. METALWORK ballscrew seller (AliExpress chat): before wave 2 (15 Feb 2027, D-103) and needed for the CAD assembly
 
 Listing: https://www.aliexpress.com/item/1005010046279521.html
 
