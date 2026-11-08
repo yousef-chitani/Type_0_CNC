@@ -1,4 +1,4 @@
-# Full CAD assembly (task 4, D-102 … D-110)
+# Full CAD assembly (task 4, D-102 … D-111)
 
 The detailed assembly the mould drawings (task 5) will come from. Built in CadQuery by the session; you refine it in **Fusion 360** and send back the final STEP (D-102).
 
@@ -21,6 +21,7 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 - **Drives:** X and Y folded with 1:1 HTD-5M belts; Z direct with a coupling.
 - **Plates:** table 460 × 330 × 25; saddle 180 × 400 × 20; Z plate 140 × 200 × 20; Z rail risers; X nut-housing spacer; motor plates and brackets.
 - **Spindle** with its 80 mm clamp, **home sensors** for X/Y/Z, and the **ATC wheel envelope** (Phase 2).
+- **Vendor models (D-111):** HIWIN HGH20CA carriages, BK12/BF12, DFU1605 nuts, HTD-5M pulleys, KFL000 bearing, M12 sensors and both StepperOnline motors are the manufacturers' STEP files (`cad/vendor/`), placed automatically. Motor cables are trimmed off: leave room for the cable exits. Run with `--envelopes` to use the simple shapes instead.
 - **Clash check:** none at the centre, front-left-bottom and back-right-top positions.
 
 ## Design changes found by the assembly (your decisions)
@@ -39,7 +40,7 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 
 | BOM | Was | Now |
 |---|---|---|
-| M05 ballscrews | X 750 / Y 450 / Z 350 | **X 800–850 / Y 600 / Z 350**. Needed lengths: X 807, Y 577 overall. The "Guide Length" question decides X 800 or 850 |
+| M05 ballscrews | X 750 / Y 450 / Z 350 | **X 850 / Y 600 / Z 350**. Needed: X 823, Y 582 overall (with the vendor parts, D-111) |
 | F07 flat bar | 40 × 10, 3 m | **40 × 10 about 2 m** (Y bars, portal joint bars, support plates) + **25 × 10 about 2 m** (X bars, ATC bar) |
 | M12 plates | saddle 180 × 160 × 20, Z plate 140 × 320 × 20 | **saddle 180 × 400 × 20, Z plate 140 × 200 × 20**, + X spacer 52 × 52 × 25, Z risers 2 × 25 × 15 × 350, motor plates and brackets (about 10 mm plate) |
 | M08 couplings | 3 | **1** (Z only) |
@@ -48,19 +49,19 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 
 ## Things to check (VERIFY in the script)
 
-- **NEMA 24 holes are 50 mm apart, not 47.1** (StepperOnline 24HS40-5004D-E1000 drawing). Any bought motor mount must match.
-- Z motor (24HS34-5004D-E1000-B280) length with brake: drawing not reachable (assumed 85 + 38 + 25).
-- HGH20CA height from the rail base to the carriage underside (H1, assumed 4.6).
-- BK12/BF12: centre height (assumed 25) and bolt spacing (assumed 46). DSG16H housing width and length (assumed 52 × 52; centre 20 below the face is from its drawing).
-- DFU1605 nut length (assumed 90) and flange flats (40).
+Answered by the vendor files (D-111): carriage H1 (4.6), BK12/BF12 centre height (25) and bolt spacing (46), DFU1605 nut length (100), pulley size, Z motor length (146) and pilot (Ø36), DSG16H face (52 × 40). Still open:
+- **NEMA 24 holes are 50 mm apart, not 47.1** on both motors. Any bought motor mount must match.
+- **DFU1605 flange flats:** the vendor model has a full Ø48 flange, but the nut-housing face is only 20 mm from the screw axis. The assembly assumes flats at 40 mm (normal on most DFU1605 nuts). Check the nuts that arrive: without flats, the Y nut flange would touch the table.
+- **BK12 end machining** on the screws you buy: the X screw needs a Ø10 stub about 35 mm long (pulley + outboard bearing).
 - 80 mm clamp: spindle axis 60 from its mounting face (assumed; from the kit).
-- HTD-5M 20T pulley size (assumed Ø31 × 21 + 8 hub).
-- Home sensor positions are placeholders (envelopes only); the printed brackets (E27) get designed from these.
+- Y pulley flange top is 2 mm under the table: check with the real pulley.
+- Home sensor positions are placeholders (real sensor model, placement to finalise); the printed brackets (E27) get designed from these.
+- Motor cable exits (cables trimmed off in the model): the Y motor sits under the table, so its cable must exit downward or sideways.
 
 ## Fusion 360 workflow
 
 1. **File → Open → `type0_assembly.step`.** Each part comes in as its own component with its name (e.g. `X_BK12`, `base_casting`, `portal_insert_X_rail_T`).
-2. Vendor models: your local session downloads them with `docs/cad-download-task.md` into `cad/vendor/`, and the session swaps them into the assembly (so the next STEP already has them). Sources, for reference:
+2. Vendor models are already in (D-111). Still envelopes, if you want to swap them: rails (profile + holes are exact), DSG16H housing, D26 coupling, motor mounts, spindle and clamp. Sources, for reference:
    - HGR20 rail and HGH20CA carriage: HIWIN (hiwin.de, CAD download) or TraceParts
    - BK12/BF12, DFU1605, DSG16H: TraceParts / Misumi (Misumi has BK12 and HTD pulleys)
    - Motors: StepperOnline product pages (STEP under "Download")

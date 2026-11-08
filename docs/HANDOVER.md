@@ -39,7 +39,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 1. ~~Electrical design~~: done, `docs/electrical.md` (D-91). Has CHECK items.
 2. ~~LinuxCNC starter config~~: done, `linuxcnc/type0/` + `docs/linuxcnc.md` (D-92). VFD moved to USB-RS485 + hy_vfd. Simulator test 23/23. Has CHECK items for the bench test.
 3. ~~Timber bench design~~: done, `cad/v2/bench.py` → `cad/v2/out/bench_cutlist.md` + drawings + STEP (D-97, D-99). Materials priced: £249.02.
-4. **Full CAD assembly:** first version done (D-102 … D-110): `cad/v2/assembly.py` → `cad/v2/out/assembly/` (`type0_assembly.step`, castings, `cast_in_features.md`), guide `docs/assembly.md`. **Waiting for:** the owner's Fusion 360 refinement (vendor STEP swaps, bracket detail) and the returned STEP; price check 12 for the changed parts.
+4. **Full CAD assembly:** first version done (D-102 … D-110): `cad/v2/assembly.py` → `cad/v2/out/assembly/` (`type0_assembly.step` with vendor models, castings, `cast_in_features.md`), guide `docs/assembly.md` (D-111). **Waiting for:** the owner's Fusion 360 refinement (vendor STEP swaps, bracket detail) and the returned STEP; price check 12 for the changed parts.
 5. **Mould drawings** from the final assembly (panels, jig-bolt hole pattern for insert bars, Y-screw channel, PVC cores, M12 sleeves, dowels, lifting points, vibration-table deck, printed mould helpers F19).
 6. **EG mix design + test-brick plan:** GlassCast 50 PLUS with GCL quartz 2–5, H&B 0–1 sand, whiting (≤ 8–10%), 2–3 epoxy ratios; mixing order, vibration, curing heat checks.
 Then: rail-seat levelling and assembly procedures, Phase 2 detailing.
@@ -51,7 +51,7 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-110 |
+| `docs/decisions.md` | Decision log D-01 … D-111 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |

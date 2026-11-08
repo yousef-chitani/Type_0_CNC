@@ -13,9 +13,9 @@
   "y_rail_y0": -311.75,
   "y_rail_len": 500.0,
   "y_screw_z": 10,
-  "y_bk_y0": -395.5,
-  "y_bk_y1": -370.5,
-  "y_bf_y0": 110.0,
+  "y_bk_y0": -391.0,
+  "y_bk_y1": -366.0,
+  "y_bf_y0": 115.0,
   "beam_zc": 300.0,
   "x_rail_z": [
    250.0,
@@ -25,8 +25,8 @@
   "x_screw_y": 125.0,
   "xs_min": -200.0,
   "xs_max": 370.0,
-  "x_bk_x0": 420.0,
-  "x_bf_x1": -250.0,
+  "x_bk_x0": 425.0,
+  "x_bf_x1": -255.0,
   "x_rail_len": 800.0,
   "saddle_t": 20.0,
   "saddle_h": 400.0,
@@ -41,20 +41,20 @@
   "spindle_y": -65.0,
   "nose_top": 235,
   "nose_bot": 85,
-  "y_screw_len": 577.0,
-  "x_screw_len": 807.0
+  "y_screw_len": 582.0,
+  "x_screw_len": 823.2
  },
  "kg": {
-  "base_casting": 78.1634086362887,
-  "portal_casting": 34.84939847347987
+  "base_casting": 78.15133363628867,
+  "portal_casting": 34.82944307115219
  },
  "extents": {
   "x0": -320.0,
-  "x1": 527.0,
+  "x1": 538.2,
   "y0": -437.0,
   "y1": 320.0,
   "z0": -110.0,
-  "z1": 736.5
+  "z1": 736.4
  },
  "features": [
   [
@@ -79,25 +79,25 @@
    "base",
    "Y screw channel",
    "70 wide x 15 deep",
-   "Y -406 to 145; floor = BK12/BF12 seat (screw axis Z 10)"
+   "Y -406 to 150; floor = BK12/BF12 seat (screw axis Z 10)"
   ],
   [
    "base",
    "Y BK12 insert plate",
    "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern)",
-   "under the channel floor at Y -383"
+   "under the channel floor at Y -378"
   ],
   [
    "base",
    "Y BF12 insert plate",
    "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern)",
-   "under the channel floor at Y 120"
+   "under the channel floor at Y 125"
   ],
   [
    "base",
    "Y motor bracket inserts",
    "2 x M8 nut-on-rod",
-   "right spine face X 170, Z -45, Y -380 and -340"
+   "right spine face X 170, Z -45, Y -376 and -336"
   ],
   [
    "base",
@@ -139,19 +139,19 @@
    "portal",
    "X screw channel",
    "64 high x 45 deep, with 5 mm seat pads for BK12/BF12",
-   "X -280 to 481, centred Z 300; screw axis 15 behind the face (D-108)"
+   "X -285 to 481, centred Z 300; screw axis 15 behind the face (D-108)"
   ],
   [
    "portal",
    "X BK12 insert plate",
    "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY)",
-   "behind the channel floor at X 432"
+   "behind the channel floor at X 438"
   ],
   [
    "portal",
    "X BF12 insert plate",
    "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY)",
-   "behind the channel floor at X -260"
+   "behind the channel floor at X -265"
   ],
   [
    "portal",
