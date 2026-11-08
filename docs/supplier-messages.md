@@ -6,7 +6,7 @@ Ready to send. Copy, check, send yourself. Quantities are from `bom.csv` (F03, F
 
 Listing: https://www.aliexpress.com/item/1005010046279521.html
 
-> Hello. I would like to order 3 × DFU1605 ballscrew kits (C7) with BK12/BF12 supports and nut housing, in lengths **X 800 mm (or 850), Y 600 mm and Z 350 mm**. I need these **overall** lengths at least: X 807 mm, Y 577 mm, Z 350 mm.
+> Hello. I would like to order 3 × DFU1605 ballscrew kits (C7) with BK12/BF12 supports and nut housing, in lengths **X 850 mm, Y 600 mm and Z 350 mm**. I need these **overall** lengths at least: X 823 mm, Y 582 mm, Z 350 mm.
 >
 > 1. Is the "Guide Length" the **overall length** of the screw (end to end, including the machined ends), or the **threaded length** only?
 > 2. Please send the drawing of the end machining for BK12/BF12 (journal diameters and lengths), so I can work out the threaded length for each size.
@@ -15,7 +15,7 @@ Listing: https://www.aliexpress.com/item/1005010046279521.html
 >
 > Thank you.
 
-What we need (full assembly, D-110): overall length at least **X 807 / Y 577 / Z about 350 mm**. If "Guide Length" is the overall length, order X 850 to be safe unless the seller confirms 800 covers 807; if it's the thread length, X 800 / Y 600 / Z 350 are enough. If "Guide Length" is the thread length, the overall screw is longer than planned: check it still fits the castings (Y channel, X beam) before ordering.
+What we need (full assembly with vendor models, D-111): overall length at least **X 823 / Y 582 / Z about 350 mm**. X 850 / Y 600 / Z 350 cover this whichever way "Guide Length" is measured, as long as the BK12 end is machined to the standard (Ø10 stub at least 35 mm long for the X pulley and outboard bearing). If "Guide Length" is the thread length, the overall screw is longer than planned: check it still fits the castings (Y channel, X beam) before ordering.
 
 ## 2. GCL (aggregates): open question 4. Before wave 3 (1 Mar 2027)
 

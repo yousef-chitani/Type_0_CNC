@@ -36,7 +36,7 @@ Lines still TO PRICE: see the list above.
 | E01 | Mesa 7i76EU | 257.74 |
 | F01 | Main EG epoxy: GlassCast 50 PLUS 15 kg | 255.00 |
 | M11 | Table plate 6082 460 × 330 × 25 | 221.33 |
-| M05 | DFU1605 ballscrew kits X 800-850 / Y 600 / Z 350 | 214.81 |
+| M05 | DFU1605 ballscrew kits X 850 / Y 600 / Z 350 | 214.81 |
 | E04 | 48 V PSU Mean Well SDR-480-48 (DIN) | 136.06 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 112.71 |
 | E12 | Electrical cabinet RS PRO 600 × 400 × 200 IP66 | 109.04 |
@@ -77,7 +77,7 @@ Lines still TO PRICE: see the list above.
 | M02 | 1 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | 2 pcs | X: 2 × 800 mm HGR20 + 4 × HGH20CA (min 748, D-79) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £81.99 inc VAT, free shipping (AliExpress, logged in) | 81.99 | Deal price: if refused, normal £163.88. Kaiyade alt £28.29 + £79.28 shipping |
 | M03 | 1 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | 2 pcs | Z: 2 × 350 mm HGR20 + 4 × HGH20CA (v2, min 318) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £60.59 inc VAT, free shipping (AliExpress, logged in) | 60.59 | Switched from Kaiyade: its shipping is per item, not per order (task 6). Deal price: if refused, normal £120.47 |
 | M04 | 1 | HGH20CA carriages (in the rail kits) | 12 pcs | 4 per axis | [product]() | Included in M01-M03 | 0 | 4 HGH20CA per Kaiyade kit. Preload not stated |
-| M05 | 1 | DFU1605 ballscrew kits X 800-850 / Y 600 / Z 350 | 3 pcs | DFU1605 kits with BK12/BF12 + nut housing: X 800 (850 if "Guide Length" is thread length), Y 600, Z 350. Needed overall: X 807, Y 577 (assembly.py, D-110) | [product](https://www.aliexpress.com/item/1005010046279521.html) | £77.19 + £59.19 + £54.79 inc VAT + 3 × £7.88 (AliExpress, logged in) | 214.81 | D-110: LENGTHS CHANGED (was X 750 / Y 450): re-price in price check 12. Price shown is the old 750/450/350 price. "Guide Length" = overall or thread? ask the seller |
+| M05 | 1 | DFU1605 ballscrew kits X 850 / Y 600 / Z 350 | 3 pcs | DFU1605 kits with BK12/BF12 + nut housing: X 850, Y 600, Z 350. Needed overall: X 823, Y 582 (assembly.py with vendor models, D-111) | [product](https://www.aliexpress.com/item/1005010046279521.html) | £77.19 + £59.19 + £54.79 inc VAT + 3 × £7.88 (AliExpress, logged in) | 214.81 | D-110: LENGTHS CHANGED (was X 750 / Y 450): re-price in price check 12. Price shown is the old 750/450/350 price. X must be 850 (800 is too short either way); "Guide Length" = overall or thread? ask the seller |
 | M06 | 1 | BK12 + BF12 end supports (in the screw kits) | 3 sets |  | [product](https://www.aliexpress.com/item/1005010046279521.html) | Included in M05 | 0 |  |
 | M07 | 1 | Nut housings (in the screw kits) | 3 pcs |  | [product](https://www.aliexpress.com/item/1005010046279521.html) | Included in M05 | 0 |  |
 | M08 | 1 | Disc coupling 10 mm to 10 mm (Z only) | 1 pcs | Listings give a 10 mm shaft on the 4 Nm NEMA 24 (24HS40-5004D-E1000). Verify. BK12 end is 10 mm | [product](https://www.aliexpress.com/item/1005009879991986.html) | £3.35 + £4.05 shipping (AliExpress, logged in) | 7.40 | D-110: X and Y are belt-driven now (D-107), only Z needs a coupling. D26 L35 double diaphragm, 10 x 10 bore |

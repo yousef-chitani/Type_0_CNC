@@ -14,7 +14,7 @@
 
 | ID | Item | Spec | Current |
 |---|---|---|---|
-| M05 | DFU1605 ballscrew kits, same METALWORK listing (1005010046279521) | Lengths **X 800 and X 850** (give both), **Y 600**, Z 350; kit with BK12/BF12 and nut housing. Note the shipping (per kit or per order) | £214.81 for X 750 / Y 450 / Z 350 |
+| M05 | DFU1605 ballscrew kits, same METALWORK listing (1005010046279521) | Lengths **X 850**, **Y 600**, Z 350 (the assembly needs X 823 and Y 582 overall); kit with BK12/BF12 and nut housing. Note the shipping (per kit or per order) | £214.81 for X 750 / Y 450 / Z 350 |
 | F07a | Steel flat bar 40 × 10 | Bright or black mild steel, **2 m** (or 2 × 1 m). The Metal Store first | £36.00 for 3 m |
 | F07b | Steel flat bar 25 × 10 | Bright or black mild steel, **2 m**. Same vendor as F07a | none |
 | M12 | 6082 aluminium plate, Aluminium Warehouse custom cut | 20 mm: **180 × 400** and **140 × 200**. 25 mm: **52 × 52**. 15 mm: **2 × 25 × 350**. 10 mm: **2 × 150 × 120** (motor plates/brackets). Same order as M11 (check free delivery over £150 ex VAT) | £85.85 for 180 × 160 + 320 × 140 (20 mm) |

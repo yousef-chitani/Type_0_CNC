@@ -46,7 +46,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M02 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | 2 pcs | £81.99 |
 | M03 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | 2 pcs | £60.59 |
 | M04 | HGH20CA carriages (in the rail kits) | 12 pcs | £0.00 |
-| M05 | DFU1605 ballscrew kits X 800-850 / Y 600 / Z 350 | 3 pcs | £214.81 |
+| M05 | DFU1605 ballscrew kits X 850 / Y 600 / Z 350 | 3 pcs | £214.81 |
 | M06 | BK12 + BF12 end supports (in the screw kits) | 3 sets | £0.00 |
 | M07 | Nut housings (in the screw kits) | 3 pcs | £0.00 |
 | M08 | Disc coupling 10 mm to 10 mm (Z only) | 1 pcs | £7.40 |
