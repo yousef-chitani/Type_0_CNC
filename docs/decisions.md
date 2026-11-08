@@ -83,3 +83,4 @@
 | D-79 | Work area **400 × 250**, Z 150 (fits 75% keyboards with room for fixtures). Table 460 × 330 × 25. Travel X 570 (incl. ATC reach) / Y 250 / Z 150 | Owner: wider range of work |
 | D-80 | Y rails 280 mm apart on a 320 mm-wide spine (block pitch 150). Base about 72 kg, portal about 34 kg, frame about 106 kg | Table overhang about 90 mm per side instead of 140 |
 | D-81 | Base mass accepted for now. Owner will run FEA later to find where material can be removed (ribs, cores) | Owner |
+| D-82 | **Vendor policy:** no eBay. Use as few vendors as possible. Prefer B&Q and Screwfix (local), then RS Components. Target vendors: RS (all electrical, fixings, small metal, measuring tools), Screwfix + B&Q (building and casting consumables), Easy Composites (all epoxy + release), AliExpress (rails, screws, spindle kit, couplings, collets), StepperOnline (motors), Mesa, Aluminium Warehouse, aggregates | Owner: fewer baskets, local collection |
