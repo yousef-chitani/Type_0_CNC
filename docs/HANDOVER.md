@@ -1,6 +1,6 @@
 # Type 0 CNC: handover (2026-11-09)
 
-**Branch:** `claude/trusting-shannon-uwrpm9` on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed. Earlier work: `claude/ecstatic-ramanujan-mhh3xe`.
+**Branch:** `claude/charming-cori-349jm7` on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed. Earlier work: `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
 ## 1. What the project is
 A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite (EG) frame**, **LinuxCNC + Mesa 7I76EU**, closed-loop NEMA 24 steppers, and (Phase 2) a **Jianken ISO20 ATC spindle** with an 8-pocket ferris-wheel tool changer. Inspiration: Bootstrap Bill. The owner is in **Swansea, UK**, builds in a **shed**, and must later move it into an **upstairs flat**: pieces ≤ about 40 kg (the base is a 2-person lift).
@@ -77,7 +77,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 
 **In progress / proposals:**
 - **Base PVC cores (not adopted yet):** 5 × Ø50 at Z −65, saving about 9.6 kg; sketch in `cad/v2/out/base_cores_plan.png`, `base_cores_sections.png` (`cad/v2/base_cores_sketch.py`). Suspension: an M8 rod through each capped core, fixed in the mould walls at core height, plus mid-span wire hold-downs from a batten; the rods stay in. Owner to decide (maybe after the FEA, D-81).
-- **Design review by a research agent:** brief in `docs/review-task-eg-design.md` → report `docs/review-eg-design-report.md` (not run yet). It compares the EG plan with documented hobby builds. It flags known concerns such as **10 mm of thread for the M12 joint bolts**, a gap-graded mix and a 110 mm base depth.
+- **EG design review: done** (`docs/review-eg-design-report.md`). High-severity findings: portal core webs too thin, soft resin (Tg 39 °C), rail-seat recesses narrower than the insert bars. The decisions it needs are in `docs/open-questions.md` item 11 (with CAD-checked numbers and one correction to the report).
 
 Then: rail-seat levelling and assembly procedures, Phase 2 detailing (ATC wheel, enclosure fittings).
 
@@ -107,7 +107,7 @@ Then: rail-seat levelling and assembly procedures, Phase 2 detailing (ATC wheel,
 | `docs/bom.csv` + generated `bom.md`, `phase1-bom.xlsx`, `phase1-cost.md` | Parts and costs |
 | `docs/phase1-schedule.md` | Timeline and order waves |
 | `docs/price-check-task-*.md`, `docs/cad-download-task.md`, `docs/supplier-messages.md` | Task files for the owner's local session, message drafts |
-| `docs/review-task-eg-design.md` | Brief for the EG design review agent |
+| `docs/review-task-eg-design.md`, `docs/review-eg-design-report.md` | EG design review: brief and report |
 
 ## 9. Working notes for the next session
 - **CadQuery** isn't preinstalled in the cloud container: `pip install cadquery` (about 1 minute). `python cad/v2/assembly.py` takes about 2–3 minutes (vendor STEP import + clash check at 3 positions); `--envelopes` skips the vendor models.

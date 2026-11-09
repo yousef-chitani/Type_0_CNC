@@ -31,8 +31,13 @@ Resolved items are in decisions.md (D-01 … D-113). **Phase 1 £3,306.82 is pro
 
 10. **Owner FEA on the base (80.7 kg)** to remove material (D-81), and **adopt the proposed base PVC cores or not** (5 × Ø50, about −9.6 kg: `cad/v2/out/base_cores_plan.png`). Either changes the base mould.
    Who: owner. The base STEP is `cad/v2/out/assembly/base_casting.step`.
-11. **EG design review** against documented hobby builds (`docs/review-task-eg-design.md` → `docs/review-eg-design-report.md`): mix, section sizes, inserts (10 mm of thread for M12), cores, curing, joints.
-   Who: a research agent (this session or the owner's local session).
+11. **EG design review: done** (`docs/review-eg-design-report.md`, 2026-11-09). Decisions it needs before the moulds, most severe first:
+   - **Portal cores:** 10 mm webs (core to core, core to the X channel floor) are too thin for 2–5 mm stone. Options, with masses from the current assembly (36.4 kg now): 2 × Ø40 at Z 265 / 335, Y 200 (all walls ≥ 20 mm, **38.0 kg**); 1 × Ø40 at Z 300 (**39.4 kg**); no cores (**40.8 kg**, over the 40 kg limit: the report's 39.2 kg came from the older `dimensions_v2.json`).
+   - **Resin:** GlassCast 50 PLUS is soft (Tg 39 °C, 2.1 GPa). Make the post-cure mandatory and/or test a laminating epoxy brick beside it.
+   - **Rail-seat recesses:** narrower than the insert bars (EG lips 5 × 3 mm on the base, 0.5 mm on the portal). Widen to about 50 / 31 mm and deepen to 4–5 mm; maybe split the bars.
+   - **Smaller items:** 20 mm joint bar for the M12 rods, vent holes in flat inserts, levelling pads under the base, one release method in the text, speed control on the vibration table, RH logging.
+   - **Report error to ignore:** finding 12 says the base cores are 5 mm under the BK/BF plates. The CAD has the plates at Z −25 … −15 and the core top at Z −40, so the gap is **15 mm** as drawn. The M8 rods inside the cores still don't reinforce anything.
+   Who: owner decides; the session then updates `assembly.py`, `eg-moulds.md` and the BOM.
 12. **GCL delivery cost to SA2** for 2 × 25 kg quartz, and **Hancock & Brown** collection of 3 × 20 kg sand.
    Who: owner. Drafts in `supplier-messages.md` (sections 2 and 3).
 13. **Curing heat: confirm with a full-thickness test brick**, and decide on a **post-cure** (16 h at 50 °C raises the softening point from 39 to 47 °C). Heater + thermostat to add to the BOM.
