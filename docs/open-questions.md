@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-08, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-112). **Phase 1 £3,306.82 is provisional until price check 12 (D-110).** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-113). **Phase 1 £3,306.82 is provisional until price check 12 (D-110).** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
 
 ## Before wave 1 (4 Jan 2027)
 

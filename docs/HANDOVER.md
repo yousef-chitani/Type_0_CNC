@@ -6,7 +6,7 @@
 A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite (EG) frame**, **LinuxCNC + Mesa 7I76EU**, closed-loop NEMA 24 steppers, and (Phase 2) a **Jianken ISO20 ATC spindle** with an 8-pocket ferris-wheel tool changer. Inspiration: Bootstrap Bill. The owner is in **Swansea, UK**. It will be built and used in a **shed**, but must later move into an **upstairs flat**: every piece must be carriable (≤ about 40 kg, base about 72 kg is a 2-person lift).
 
 ## 2. Current design (v2, D-71 … D-80)
-- **Full assembly (D-104 … D-110):** beam 150 high with X rails 100 apart, spine 340, spindle axis 175 in front of the beam, X/Y motors belt-folded, Z direct on a tall saddle. Base 80.7 kg, portal 39.0 kg (tapers, D-112). Details: `docs/assembly.md`.
+- **Full assembly (D-104 … D-113):** beam 150 high with X rails 100 apart, spine 340, spindle axis 175 in front of the beam, X/Y motors belt-folded, Z direct on a tall saddle. Base 80.7 kg, portal 39.0 kg (tapers, D-112). Details: `docs/assembly.md`.
 - **Work area 400 × 250, Z 150.** Travel X 570 (incl. reach to the ATC wheel) / Y 250 / Z 150. Table 460 × 330 × 25 (6082).
 - **2 solid EG castings:** T-shaped **base** (spine 320 wide, 110 high) about 72 kg; **gantry portal** 800 W × 355 H × 130 D, legs span the table only, beam overhangs 160 mm to the right for the ATC wheel; PVC cores in the beam; about 34 kg. Only frame joint: portal → base (grout once, then dowels + bolts).
 - **Motion:** HGR20 rails (X 2 × 800, Y 2 × 500 on 280 spacing, Z 2 × 350), DFU1605 screws (X 750, Y 450, Z 350), direct drive, StepperOnline closed-loop NEMA 24 (Z with brake), CL57T drivers.
@@ -39,7 +39,7 @@ A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite
 1. ~~Electrical design~~: done, `docs/electrical.md` (D-91). Has CHECK items.
 2. ~~LinuxCNC starter config~~: done, `linuxcnc/type0/` + `docs/linuxcnc.md` (D-92). VFD moved to USB-RS485 + hy_vfd. Simulator test 23/23. Has CHECK items for the bench test.
 3. ~~Timber bench design~~: done, `cad/v2/bench.py` → `cad/v2/out/bench_cutlist.md` + drawings + STEP (D-97, D-99). Materials priced: £249.02.
-4. **Full CAD assembly:** first version done (D-102 … D-110): `cad/v2/assembly.py` → `cad/v2/out/assembly/` (`type0_assembly.step` with vendor models, castings, `cast_in_features.md`), guide `docs/assembly.md` (D-111). **Waiting for:** the owner's Fusion 360 refinement (vendor STEP swaps, bracket detail) and the returned STEP; price check 12 for the changed parts.
+4. **Full CAD assembly:** first version done (D-102 … D-113): `cad/v2/assembly.py` → `cad/v2/out/assembly/` (`type0_assembly.step` with vendor models, castings, `cast_in_features.md`), guide `docs/assembly.md` (D-111). **Waiting for:** the owner's Fusion 360 refinement (vendor STEP swaps, bracket detail) and the returned STEP; price check 12 for the changed parts.
 5. **Mould drawings** from the final assembly (panels, jig-bolt hole pattern for insert bars, Y-screw channel, PVC cores, M12 sleeves, dowels, lifting points, vibration-table deck, printed mould helpers F19).
 6. **EG mix design + test-brick plan:** GlassCast 50 PLUS with GCL quartz 2–5, H&B 0–1 sand, whiting (≤ 8–10%), 2–3 epoxy ratios; mixing order, vibration, curing heat checks.
 Then: rail-seat levelling and assembly procedures, Phase 2 detailing.
@@ -51,7 +51,7 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-112 |
+| `docs/decisions.md` | Decision log D-01 … D-113 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |

@@ -1,4 +1,4 @@
-# Full CAD assembly (task 4, D-102 … D-112)
+# Full CAD assembly (task 4, D-102 … D-113)
 
 The detailed assembly the mould drawings (task 5) will come from. Built in CadQuery by the session; you refine it in **Fusion 360** and send back the final STEP (D-102).
 
@@ -16,7 +16,7 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 
 ## What's in it
 
-- **Castings:** base (T-shape, spine 340 × 725, 110 high, 45° tapers at the T-junction, **80.7 kg**) and portal (800 wide, beam 150 high, 45° haunches at the leg corners, legs flared to a 200 foot, **39.0 kg**), with every cast-in feature: rail insert bars and levelling recesses, screw channels with support seats and insert plates, PVC cores, joint sleeves, dowel sleeves, motor and ATC bracket inserts, lifting points.
+- **Castings:** base (T-shape, spine 340 × 725, 110 high, 45° tapers at the T-junction, **80.7 kg**) and portal (800 wide, beam 150 high, 45° haunches at the leg corners, **36.4 kg**), with every cast-in feature: rail insert bars and levelling recesses, screw channels with support seats and insert plates, PVC cores, joint sleeves, dowel sleeves, motor and ATC bracket inserts, lifting points.
 - **Motion:** HGR20 rails with HGH20CA carriages on all axes; DFU1605 screws with BK12/BF12 supports and nut housings; NEMA 24 motors (Z with brake).
 - **Drives:** X and Y folded with 1:1 HTD-5M belts; Z direct with a coupling.
 - **Plates:** table 460 × 330 × 25; saddle 180 × 400 × 20; Z plate 140 × 200 × 20; Z rail risers; X nut-housing spacer; motor plates and brackets.
@@ -35,6 +35,7 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 | D-108 | X nut housing on a **25 mm spacer**; X channel **45 deep** with 5 mm seat pads | Otherwise the X supports hit the carriages near the ends of travel |
 | D-109 | Z: **direct drive on top**, tall saddle (400) carries the Z rails on 15 mm risers, short Z plate (200) moves. Enclosure now **921 × 836 × 898 outside** (was 904 × 954 × 754) | Your choice; the brake holds Z directly. Fits the 1000 × 1000 bench |
 | D-110 | Purchases change (see below): price check 12 | Follows from the above |
+| D-112/113 | **Tapers instead of square inside corners**: 60 × 60 haunches under the beam, 100 × 100 tapers at the base's T-junction. No leg flare (the portal's back is the open pour face) | Your call: stress concentration, air traps, stiffness; mouldability |
 
 ## Purchases that change (price check 12)
 
