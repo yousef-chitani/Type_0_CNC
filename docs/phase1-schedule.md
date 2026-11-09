@@ -14,7 +14,7 @@ Castings are planned for April–May: the epoxy needs about **20 °C** to cure, 
 | 7–8 | 15 Feb – 28 Feb | Order wave 2 (now includes the motion parts, D-103). Build the timber bench (top 785 mm, D-97: cad/v2/out/bench_cutlist.md, about 6–8 h) | 10 |
 | (on arrival, about week 9–10) | early March | Spindle kit (ordered in wave 1, about 8–9 weeks shipping): bench-test the VFD, spindle and cooling loop from LinuxCNC (docs/linuxcnc.md section 6, part E). About 2 h, fits beside the mould work | (2) |
 | 9–11 | 01 Mar – 21 Mar | Order wave 3. **Measure the received rails, screws, BK/BF supports and nut housings against the assembly; correct the mould drawings if needed.** Build the base and portal moulds (MDF, CLS, insert bars on jig bolts, Y-screw channel, PVC cores, sleeves). Build the tyre vibration table | 15 |
-| 12–13 | 22 Mar – 04 Apr | Test bricks: 2–3 mixes (laminating epoxy, D-117, + quartz/sand/whiting), release test, vibration frequency sweep, cure indoors, break and inspect. Fix the mix. Order wave 4 | 10 |
+| 12–13 | 22 Mar – 04 Apr | Test bricks: 2–3 mixes (Ampreg 30, D-122, + quartz/sand/whiting), hand-tamped in layers (D-123), release test, cure indoors, break and inspect. Fix the mix. Order wave 4 | 10 |
 | 14 | 05 Apr – 11 Apr | Final mould prep, release as tested (D-120) | 5 |
 | 15–16 | 12 Apr – 25 Apr | Cast the BASE (insulated tent + thermostat heater at 20 °C), 7-day cure, demould | 8 |
 | 17–18 | 26 Apr – 09 May | Cast the PORTAL, 7-day cure, demould. Inspect both castings | 8 |

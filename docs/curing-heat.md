@@ -1,5 +1,7 @@
 # Curing heat and the cold shed (open question 9)
 
+> **2026-11-09 (D-122): the resin is Ampreg 30 + 3X Slow.** Working numbers until this page is rewritten: cure at **18 °C or more** (never below), at least **48 h** before any handling, then **post-cure 16 h at 50 °C**, ramping about 10 °C/hour up and down, and demould only when back at room temperature. Tg is 57 °C room-cured and 74 °C post-cured. Pot life is about 4 h at 25 °C for a small mass, much shorter in a full bucket.
+>
 > **2026-11-09 (D-117):** the resin is changing from GlassCast 50 PLUS to a laminating epoxy (EL2 or Ampreg 30, price check 13). The datasheet table and the Tg section below are for GlassCast and will be replaced from the new datasheet. What stays true: the stone soaks up most of the curing heat, cold is the main risk, the tent and logging are needed, and the full-thickness test brick must confirm. What changes: a laminating epoxy cures faster and hotter than GlassCast (expect a pot life near 1–2 h and a larger temperature rise: the test brick matters more), and the **post-cure is now part of the process**, so the tent heater must reach the post-cure temperature (likely 50 °C or more: about 500 W with 25 mm polystyrene, to size from the datasheet).
 
 Sources: [GlassCast 50 PLUS technical datasheet](https://media.easycomposites.co.uk/datasheets/EC-TDS-GlassCast-50-PLUS.pdf) (read 2026-11-08), estimate in `tools/cure_heat.py`. Test bricks must confirm (task 5).

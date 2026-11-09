@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-09, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-121). **Phase 1 £2,960.07 priced is provisional until price checks 12 and 13 (D-110, D-117): the epoxy is not priced.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-123). **Phase 1 £3,327.57 is provisional until price check 12 (D-110) and the Ampreg 30 delivery cost.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
 
 ## Before wave 1 (4 Jan 2027)
 
@@ -31,22 +31,20 @@ Resolved items are in decisions.md (D-01 … D-121). **Phase 1 £2,960.07 priced
 
 10. **Owner FEA on the base (80.2 kg)** to remove material (D-81), and **adopt the proposed base PVC cores or not** (5 × Ø50, about −9.6 kg: `cad/v2/out/base_cores_plan.png`). Either changes the base mould.
    Who: owner. The base STEP is `cad/v2/out/assembly/base_casting.step`.
-11. **Price check 13** (`docs/price-check-task-13.md`): EL2 vs Ampreg 30 prices and datasheet numbers, the 40 × 20 joint bar (F20), a motor speed controller (F21). Then **choose the epoxy** (D-117).
-   Who: owner, local price check; then owner + session choose.
-11a. **Vibration-table motor (F14): none yet.** A single-phase 40 W, 25 kg-force motor is too weak (about 0.2 g on the 120 kg base mould; 2 g wanted) and can't be speed-controlled. Wanted: a 3-phase 2-pole motor, 230 V delta, 200–300 kg force, run from the spindle kit's VFD. Priced in price check 13; turn the weights down to half or less above 50 Hz.
-   Who: owner, after price check 13.
+11. **Ampreg 30 delivery cost to SA2** (EC Fibreglass shows it only at checkout), and the Easy Composites delivery charge now that only the release agents (F12) come from there.
+   Who: owner, in the basket (stop before payment).
 11c. **Review items left for the test bricks (task 6):** the tests in section 4 of `docs/review-eg-design-report.md`. Also whether to split the long insert bars if the 500 mm test strip shows too much bow.
    Who: session writes the plan; owner casts.
 12. **GCL delivery cost to SA2** for 2 × 25 kg quartz, and **Hancock & Brown** collection of 3 × 20 kg sand.
    Who: owner. Drafts in `supplier-messages.md` (sections 2 and 3).
-13. **Curing heat: confirm with a full-thickness test brick** with the new laminating epoxy (it cures faster and hotter than GlassCast). Post-cure schedule from its datasheet (D-117). Heater + thermostat to add to the BOM, sized for the post-cure temperature.
+13. **Curing heat: confirm with a full-thickness test brick** with Ampreg 30 (it cures faster and hotter than GlassCast). Post-cure 16 h at 50 °C (D-122). Heater + thermostat to add to the BOM, sized for the post-cure temperature.
    Who: session writes the plan (handover task 6); owner casts and logs the brick. See `curing-heat.md` (D-96).
 
 ## Before wave 4 (29 Mar 2027)
 
 14. **Aluminium Warehouse: free delivery to SA2** (order ≥ £150 ex VAT)?
    Who: owner. Put M11, M12 and A06 in the basket and read the delivery line at checkout.
-15. **Epoxy confirmed by test bricks** (the laminating epoxy from price check 13, D-117), weeks 12–13.
+15. **Epoxy confirmed by test bricks** (Ampreg 30 + 3X Slow, D-122), weeks 12–13.
    Who: owner, with the bricks; the session writes the mix and test plan first (task 6).
 
 ## Electrical bench tests (weeks 3–6, and when the spindle kit arrives)
@@ -77,8 +75,9 @@ Resolved items are in decisions.md (D-01 … D-121). **Phase 1 £2,960.07 priced
     Who: owner, B&Q website stock checker.
 
 ## Closed since the last list
+- Price check 13: Ampreg 30 + 3X Slow chosen (D-122); F20 priced; hand tamping first, no vibration motor or speed controller (D-123).
 - Base pads lift the machine 10 mm: accepted, enclosure unchanged, top gap 30 mm (D-121).
-- EG design review: done, decisions D-114 … D-120 (portal cores, rail-seat recesses, joint bars, resin, inserts, base pads, vibration speed control).
+- EG design review: done, decisions D-114 … D-120 (portal cores, rail-seat recesses, joint bars, resin, inserts, base pads).
 - Portal beam overhang deflection: negligible (D-95).
 - Z brake hardwiring: done (D-93).
 - VFD driver: USB-RS485 + hy_vfd (D-92).

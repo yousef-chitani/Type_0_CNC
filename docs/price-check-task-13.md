@@ -1,3 +1,5 @@
+> **Done 9 Nov 2026.** Result: Ampreg 30 + 3X Slow chosen (D-122), F20 £13.50, F21 and the vibration motor dropped (D-123). Still open: resin delivery to SA2.
+
 # Price check task 13: laminating epoxy and parts changed by the EG design review (D-114 … D-120)
 
 **Project:** Type 0 CNC. Buyer in **Swansea, SA2**. **Vendor policy (D-82/D-84):** no eBay. Use the vendors already in the order where possible: **Easy Composites, The Metal Store, Screwfix, RS, AliExpress**. EC Fibreglass Supplies is allowed for the Ampreg 30 line only. These go in **order wave 3 (1 Mar 2027)**, except F20 (wave 2, with the other flat bar). Background: `docs/review-eg-design-report.md` and `docs/decisions.md` D-114 … D-120.

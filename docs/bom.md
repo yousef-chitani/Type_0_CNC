@@ -1,12 +1,12 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **109 line items, 102 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **109 line items, 106 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
-| Frame | 20 | 16 | £290.37 |
+| Frame | 20 | 20 | £657.87 |
 | Motion | 17 | 14 | £998.07 |
 | Spindle | 9 | 9 | £1,546.00 |
 | Tool changer | 7 | 7 | £154.46 |
@@ -16,14 +16,14 @@ Full list: [bom.csv](bom.csv). **109 line items, 102 priced.** Prices were read 
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 2 | 2 | £50.17 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **109** | **102** | **£4,383.94** |
+| **All** | **109** | **106** | **£4,751.44** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,383.94**. Not priced yet: F01, F02, F20, F21, M15, M16, M17.
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,751.44**. Not priced yet: M15, M16, M17.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £2,960.07 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,327.57 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -32,6 +32,7 @@ Lines still TO PRICE: see the list above.
 | ID | Item | £ |
 |---|---|---|
 | S01 | Jianken JGL-80/2.2R24-20 ATC spindle | 990.57 |
+| F01 | Main EG epoxy: Ampreg 30 + slow hardener, 22.68 kg | 354.00 |
 | S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 318.16 |
 | E01 | Mesa 7i76EU | 257.74 |
 | M11 | Table plate 6082 460 × 330 × 25 | 221.33 |
@@ -40,7 +41,6 @@ Lines still TO PRICE: see the list above.
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 112.71 |
 | E12 | Electrical cabinet RS PRO 600 × 400 × 200 IP66 | 109.04 |
 | M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 85.85 |
-| E06 | E-stop safety relay Schneider Preventa XPSAC5121 | 84.39 |
 
 ## Warnings
 - **Not in the total yet:** spindle import VAT (if not collected at checkout), GCL pallet delivery, vibration table top sheet.
@@ -55,8 +55,8 @@ Lines still TO PRICE: see the list above.
 
 | ID | Stage | Item | Qty | Spec | Link | Listed price | Line £ | Notes |
 |---|---|---|---|---|---|---|---|---|
-| F01 | 1 | Main EG epoxy: laminating epoxy, slow hardener, about 15 kg | 1 lot | Low-viscosity laminating epoxy with a slow hardener, no reactive diluent, post-curable: Easy Composites EL2 (slow) or Gurit Ampreg 30 (slow). Needs: mixed viscosity about 600 mPa·s or less, pot life 1 h or more at 20 °C, Tg 60 °C or more after post-cure. About 13 kg for the castings at 11% + 2 kg for test bricks | [product]() | TO PRICE |  | D-117: replaces GlassCast 50 PLUS (was £255.00 for 15 kg, Easy Composites, 2026-11-08) after the EG design review. Product chosen from price check 13 |
-| F02 | 1 | Epoxy for the rail-seat pour / grout / samples (same resin as F01) | 5 kg | About 5 kg more of the F01 resin (3 kg rail seats, 1 kg grout, 1 kg samples), or one larger kit covering F01 + F02 (about 20 kg in all) | [product]() | TO PRICE |  | D-117: was GlassCast 50 PLUS 5 kg (£91.75, 2026-11-08). The 500 mm test strip must show the laminating epoxy levels in a 5 mm seat |
+| F01 | 1 | Main EG epoxy: Ampreg 30 + slow hardener, 22.68 kg | 1 kit | Gurit Ampreg 30 resin + 3X Slow hardener, 22.68 kg pack (100:26 by weight; 250-450 cP at 25 °C; pot life about 4 h at 25 °C; minimum cure 18 °C; Tg 57 °C room-cured, 74 °C after 16 h at 50 °C; flexural modulus 3.2-3.6 GPa). Covers castings (about 13 kg at 11%), rail seats, grout and test bricks (about 20 kg) | [product](https://www.ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow) | £295.00 ex VAT / £354.00 inc VAT (EC Fibreglass Supplies), delivery shown at checkout only | 354.00 | D-122 (price check 13): replaces GlassCast 50 PLUS 15 + 5 kg (£346.75). New vendor. DELIVERY TO SA2 NOT KNOWN: read it in the basket before ordering |
+| F02 | 1 | Epoxy for the rail-seat pour / grout / samples (in F01) | 5 kg | From the F01 Ampreg 30 kit (about 5 kg of the 22.68 kg) | [product]() | Included in F01 | 0.00 | D-122: one kit covers everything. The 500 mm test strip must show it levels in a 5 mm seat (neat-resin linear shrinkage 1.64 %) |
 | F03 | 1 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | Washed, kiln-dried angular quartz 2-5 mm (resin-bound grade) | [product](https://www.gclproducts.co.uk/p/resin-bound-gravel/winter-quartz-2-5mm-gravel) | £12.10 ex VAT / £14.52 inc VAT per 25 kg (GCL PermaBound Winter Quartz) | 29.04 | v2 resize: about 32 kg coarse needed. GCL pallet delivery cost to confirm |
 | F04 | 1 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | Kiln Dried KDIS Pavior Sand 0-1 mm | [product](https://hancockandbrown.com/kiln-dried-block-paving-sand-20kg-bag) | £6.38 inc VAT per 20 kg (Hancock & Brown, Swansea) | 19.14 | D-79 resize: about 43 kg medium + fine. Hancock & Brown £6.38 each |
 | F06 | 1 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | Pottery-grade whiting, dry powder (< 0.1 mm) | [product](https://valentineclays.co.uk/products/whiting) | £20.42 inc VAT per 25 kg (Valentine Clays) | 20.42 | D-64. Delivery cost not shown: check in the basket. Alternatives: Potterycrafts silica flour £36.05 ex VAT (£43.26 inc), Womersleys Trucarb whiting from £11.55 ex VAT (construction chalk, dryness not stated). Keep the bag sealed and dry |
@@ -65,16 +65,16 @@ Lines still TO PRICE: see the list above.
 | F09 | 1 | Steel or PVC tube for M12 bolt sleeves | 2 m | About 14-16 mm bore | [product](https://www.screwfix.com/p/deta-tte-round-upvc-white-conduit-20mm-x-3m/256vt) | £2.29 inc VAT (Screwfix, 20 mm uPVC conduit 3 m) | 2.29 | D-84: back to Screwfix (cheaper than the AliExpress hose, same shopping trip) |
 | F10 | 1 | MDF sheets for moulds (floors + walls) | 1 sheet | 18 mm MDF 2440 × 1220: base floor (about 700 × 1,010) + gantry floor (about 700 × 520) in one piece each | [product]() | £28 each (B&Q, owner-confirmed), collect | 28.00 | v2: 3 small moulds fit in one sheet (about 1.5 m²) |
 | F11 | 1 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | Essentials smooth planed C16 whitewood CLS 38 x 63 x 2.4 m | [product](https://www.diy.com/departments/essentials-smooth-planed-c16-whitewood-spruce-cls-timber-l-2-4m-w-63mm-t-38mm/1798294_BQ.prd) | £3.97 each (B&Q, owner-confirmed), collect | 23.82 | v2: smaller moulds. B&Q £3.97 each |
-| F12 | 1 | Release agents (Easy Composites) | 1 set | PVA release agent 200 ml + Miracle Gloss release wax 100 g | [product](https://www.easycomposites.co.uk/pva-mould-release-agent) | PVA £3.47 + wax £8.95 ex VAT | 14.90 | Wax: https://www.easycomposites.co.uk/number-8-mould-release-wax . Supplier advises against PVA over wax; composites practice uses both. D-120: test wax alone, wax + PVA, and tape + wax on the test-brick moulds, then use one. No silicone sprays |
+| F12 | 1 | Release agents (Easy Composites) | 1 set | PVA release agent 200 ml + Miracle Gloss release wax 100 g | [product](https://www.easycomposites.co.uk/pva-mould-release-agent) | PVA £3.47 + wax £8.95 ex VAT | 14.90 | Wax: https://www.easycomposites.co.uk/number-8-mould-release-wax . Supplier advises against PVA over wax; composites practice uses both. D-120: test wax alone, wax + PVA, and tape + wax on the test-brick moulds, then use one. No silicone sprays. D-122: this is now the only Easy Composites line: check its delivery charge, or buy a carnauba mould wax elsewhere |
 | F13 | 1 | Plasticine fillets (dropped: use silicone fillets) | 1 set |  | [product]() | Not needed | 0.00 | D-84: silicone (F18) does the corner fillets |
-| F14 | 1 | Vibration table (owner DIY: tyres + board + unbalanced motor) | 2 pcs | 1-2 old tyres as springs, stiff board on top, motor with an eccentric weight | [product]() | Owner DIY | 0.00 | D-77. D-119: needs a speed control (F21) |
+| F14 | 1 | Vibration table (only if the test bricks need it) | 2 pcs | Tyres as springs + stiff deck + a 3-phase 2-pole vibration motor, 230 V delta, 200-300 kg force, run from the spindle kit VFD (S08). Not priced | [product]() | Owner DIY | 0.00 | D-123: compaction is by hand tamping in layers. A 1-phase 40 W / 25 kg-force motor is too weak (about 0.2 g on the base mould) and fixed-speed |
 | F15 | 1 | Vibration table mounts (replaced by tyres) | 8 pcs | M6 stud, 20 mm dia × 20 mm high rubber feet | [product]() | Not needed | 0.00 | D-77: tyres replace the rubber feet |
 | F16 | 1 | Temperature logging (owner DIY) | 1 set | Thermocouples or DS18B20 probes cast in | [product]() | Owner DIY | 0.00 | D-65. DS18B20 probes on a microcontroller |
 | F17 | 1 | Mixer | 1 pcs | Paddle mixer or small forced-action mixer | [product](https://www.screwfix.com/p/erbauer-epm1600-1600w-electric-paddle-mixer-220-240v/981kj) | £69.99 inc VAT (Screwfix) | 69.99 | Erbauer EPM1600 |
 | F18 | 1 | Silicone (Screwfix) + packing tape (AliExpress) | 1 set | 2 × No Nonsense 291 neutral-cure silicone 310 ml; 2 × 48 mm × 110 m tape | [product](https://www.screwfix.com/p/no-nonsense-291-builders-silicone-clear-310ml/83710) | Silicone £5.49 each (Screwfix 83710) + tape £6.71 (AliExpress) | 17.69 | Tape: https://www.aliexpress.com/item/1005006967362821.html |
 | F19 | 1 | Mould helpers (3D printed, design pending) | 1 set | Sleeve and dowel locators, insert-bar jig spacers, lifting-point formers, corner fillets, test-brick mould | [product]() | 3D printed, owner filament | 0.00 | D-100. Designed in task 5 (mould drawings) |
-| F20 | 1 | Steel flat bar 40 x 20 (portal joint bars) | 1 pcs | 40 x 20 mild steel, 250 mm or more: 2 bars 40 x 20 x 120, each tapped 2 x M12 through (20 mm of thread = 1.67 x d) with 2 x Ø8 vent holes. Fallback at no cost: two 40 x 10 pieces from F07 screwed together and tapped as a stack | [product]() | TO PRICE |  | D-116: was 2 x 120 of the 40 x 10 bar (10 mm of thread). Price check 13, The Metal Store first |
-| F21 | 1 | Speed control for the vibration-table motor | 1 pcs | Depends on the owner's motor (F14). 3-phase motor: use the spindle kit's Huanyang VFD (S08, wave 1), no purchase. Brushed (universal) motor: plug-in variable speed controller rated above the motor current. A single-phase induction motor cannot be speed-controlled this way | [product]() | TO PRICE |  | D-119: the mix only flows at a tuned frequency (EG makers use 68-72 Hz). Owner to say which motor (open questions) |
+| F20 | 1 | Steel flat bar 40 x 20 (portal joint bars) | 1 pcs | 40 x 20 mild steel, 250 mm or more: 2 bars 40 x 20 x 120, each tapped 2 x M12 through (20 mm of thread = 1.67 x d) with 2 x Ø8 vent holes. Fallback at no cost: two 40 x 10 pieces from F07 screwed together and tapped as a stack | [product](https://www.themetalstore.co.uk/products/3-metre-lengths-20mm-flat-bar) | £11.25 ex VAT / £13.50 inc VAT, 40 x 20 x 500 custom cut (The Metal Store) | 13.50 | D-116 (price check 13). Order with F07 (delivery counted there; on its own + £13.75 ex VAT). Page does not say bright or black: either is fine |
+| F21 | 1 | Speed control for the vibration-table motor (dropped) | 1 pcs | Depends on the owner's motor (F14). 3-phase motor: use the spindle kit's Huanyang VFD (S08, wave 1), no purchase. Brushed (universal) motor: plug-in variable speed controller rated above the motor current. A single-phase induction motor cannot be speed-controlled this way | [product]() | Not needed | 0.00 | D-123: hand tamping first; no motor or controller bought unless the test bricks show voids |
 | M01 | 1 | HGR20 rail kit Y: 2 × 500 mm + 4 blocks | 2 pcs | Y: 2 × 500 mm HGR20 + 4 × HGH20CA (min 478, D-80) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £64.79 inc VAT, free shipping (AliExpress, logged in; no per-shopper limit) | 64.79 | Y 2 × 400 mm. Deal price per size: if refused, normal £126.79. Kaiyade fallback £21.29 + £79.28 shipping PER ITEM (not per order) |
 | M02 | 1 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | 2 pcs | X: 2 × 800 mm HGR20 + 4 × HGH20CA (min 748, D-79) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £81.99 inc VAT, free shipping (AliExpress, logged in) | 81.99 | Deal price: if refused, normal £163.88. Kaiyade alt £28.29 + £79.28 shipping |
 | M03 | 1 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | 2 pcs | Z: 2 × 350 mm HGR20 + 4 × HGH20CA (v2, min 318) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £60.59 inc VAT, free shipping (AliExpress, logged in) | 60.59 | Switched from Kaiyade: its shipping is per item, not per order (task 6). Deal price: if refused, normal £120.47 |

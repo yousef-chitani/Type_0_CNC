@@ -14,7 +14,8 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
   - **Portal:** 800 wide, beam **150** × 130, legs 70 × 130, 375 tall, 45° haunches 60 × 60 at the leg/beam corners, 2 × Ø40 PVC cores in the beam with every wall ≥ 20 mm (D-114). **37.6 kg**. Cast lying on its front (rail) face; the back is the open pour face (so no leg flare, D-113).
   - Joint: 2 × M12 rod per leg through cast tubes into **40 × 20** tapped bars in the base (D-116), grouted, dowel reamed after.
   - Inserts: steel flat bar under the rails (40 × 10 for Y, 25 × 10 for X), tapped M5, 5 mm under a levelling-pour recess that is open to the casting edges (D-115).
-  - **Resin (D-117):** a laminating epoxy with a slow hardener (EL2 or Ampreg 30, from price check 13) for castings, rail seats and grout, with a post-cure. GlassCast 50 PLUS is dropped.
+  - **Resin (D-117, D-122):** Gurit Ampreg 30 + 3X Slow, one 22.68 kg kit, for castings, rail seats and grout; cure at 18 °C or more, post-cure 16 h at 50 °C (Tg 74 °C). GlassCast 50 PLUS is dropped.
+  - **Compaction (D-123):** hand tamping in layers; a vibration motor only if the test bricks show voids.
 - **Motion:**
   - HGR20 rails: X 2 × 800, **100 apart** on the beam face; Y 2 × 500, 280 apart; Z 2 × 350, 100 apart on 15 mm risers on a tall saddle.
   - Ballscrews DFU1605: needed overall X 823 / Y 582, so buy **X 850 / Y 600 / Z 350**.
@@ -30,7 +31,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 ## 3. Money and phases
 | Phase | Scope | Priced | Budget |
 |---|---|---|---|
-| 1 | Working mill, manual ER20 tool changes | **£2,960.07 priced, provisional**: the epoxy (F01, F02; was £346.75), F20, F21 and M15–M17 are not priced, and M05, F07, M12, M13 changed size: **price checks 12 and 13** pending (`docs/price-check-task-12.md`, `-13.md`) | £4,000 |
+| 1 | Working mill, manual ER20 tool changes | **£3,327.57, provisional**: M15–M17 are not priced, M05, F07, M12, M13 changed size (**price check 12** pending, `docs/price-check-task-12.md`), and the Ampreg 30 delivery cost is not known | £4,000 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel | about £1,400 (not re-checked) | not set |
 
 - Source of truth: **`docs/bom.csv`**. After editing it, regenerate everything: `python tools/gen_bom_md.py`, `python tools/gen_phase1_xlsx.py`, `python tools/gen_phase1_cost.py`, `python tools/build_open_links.py`.
@@ -52,7 +53,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-121**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-123**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
@@ -62,7 +63,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 3. ~~Timber bench~~: done and priced (`cad/v2/out/bench_cutlist.md`, D-97, D-99).
 4. **Full CAD assembly: first version done** (D-102 … D-116, vendor models in, no clashes at 3 positions; review changes D-114 … D-116 applied). **Waiting for:**
    - the owner's Fusion pass (brackets, plates, sensor mounts, VERIFY list in `docs/assembly.md`) and the returned STEP. Put it in the repo, e.g. `cad/v2/in/`, and feed changes back into `assembly.py`;
-   - price checks 12 and 13.
+   - price check 12.
 5. **Mould drawings** (blocked by 4): from the final assembly and `cast_in_features.md`. Cover:
    - panels and the jig-bolt pattern for the insert bars;
    - channels, sleeves, cores and their suspension;
@@ -71,21 +72,21 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
    - the vibration-table deck;
    - printed mould helpers (F19).
 6. **EG mix design + test-brick plan:**
-   - the laminating epoxy chosen from price check 13 (D-117), GCL quartz 2–5, H&B sand 0–1, whiting; epoxy at 10 / 11 / 12 / 13%;
-   - the review's tests (`review-eg-design-report.md` section 4): cut test beam section with the real cores, vibration frequency sweep, 3 release methods, packing test with and without GCL 1–3 mm, joint-bar pull test, 500 mm rail-seat test strip, creep and stiffness prisms;
+   - Ampreg 30 + 3X Slow (D-122), hand-tamped in layers (D-123), GCL quartz 2–5, H&B sand 0–1, whiting; epoxy at 10 / 11 / 12 / 13%;
+   - the review's tests (`review-eg-design-report.md` section 4): cut test beam section with the real cores, 3 release methods, packing test with and without GCL 1–3 mm, joint-bar pull test, 500 mm rail-seat test strip, creep and stiffness prisms;
    - a full-thickness heat brick with a centre probe;
-   - the post-cure schedule from the chosen datasheet, and curing-heat.md rewritten for that resin;
+   - curing-heat.md rewritten for Ampreg 30 (18 °C minimum, post-cure 16 h at 50 °C);
    - add a heater and thermostat to the BOM.
 
 **In progress / proposals:**
 - **Base PVC cores (not adopted yet):** 5 × Ø50 at Z −65, saving about 9.6 kg; sketch in `cad/v2/out/base_cores_plan.png`, `base_cores_sections.png` (`cad/v2/base_cores_sketch.py`). Suspension: an M8 rod through each capped core, fixed in the mould walls at core height, plus mid-span wire hold-downs from a batten; the rods are cut flush and sealed afterwards (they don't reinforce, D-120). The review found the layout sound (15 mm under the BK/BF plates). Owner to decide (maybe after the FEA, D-81).
-- **EG design review: done** (`docs/review-eg-design-report.md`). The owner's decisions on it are D-114 … D-120 (smaller cores, open 5 mm rail-seat recesses, 20 mm joint bars, laminating epoxy with post-cure, insert preparation, 3-point base support, vibration speed control, doc fixes). Not acted on yet: the review's tests (they go in task 6) and its lower-severity notes (gap grading fallback GCL 1–3 mm, mould deck).
+- **EG design review: done** (`docs/review-eg-design-report.md`). The owner's decisions on it are D-114 … D-123 (smaller cores, open 5 mm rail-seat recesses, 20 mm joint bars, Ampreg 30 with post-cure, insert preparation, 3-point base support, hand tamping first, doc fixes). Not acted on yet: the review's tests (they go in task 6) and its lower-severity notes (gap grading fallback GCL 1–3 mm, mould deck).
 
 Then: rail-seat levelling and assembly procedures, Phase 2 detailing (ATC wheel, enclosure fittings).
 
 ## 7. Open questions
 `docs/open-questions.md`, in priority order with who answers each. The most urgent:
-1. Price checks 12 and 13 (13 also picks the epoxy).
+1. Price check 12, and the Ampreg 30 delivery cost.
 2. Ballscrew "Guide Length" and end machining (message drafted in `docs/supplier-messages.md`).
 3. Owner's Fusion pass.
 4. Safety relay terminal names.
@@ -103,7 +104,7 @@ Then: rail-seat levelling and assembly procedures, Phase 2 detailing (ATC wheel,
 | `cad/v2/bench.py`, `cad/v2/out/bench_*` | Timber bench: drawings, cut list, assembly |
 | `cad/v2/enclosure.py`, `cad/v2/out/enclosure_*` | Enclosure (sized from the assembly) |
 | `docs/printed-parts.md`, `cad/v2/printed_parts.py`, `cad/v2/out/print/` | Printed parts (PETG) |
-| `docs/curing-heat.md`, `tools/cure_heat.py` | Resin limits (still GlassCast: to redo, D-117), heat estimate, heater tent |
+| `docs/curing-heat.md`, `tools/cure_heat.py` | Resin limits (still GlassCast below the top notes: to redo for Ampreg 30, D-122), heat estimate, heater tent |
 | `tools/portal_overhang.py` | Beam overhang check (D-95; beam is now 150 high, still fine) |
 | `docs/eg-moulds.md`, `aggregates.md`, `epoxy-options.md` | Casting notes (partly v1 sizes: use the assembly for sizes) |
 | `docs/bom.csv` + generated `bom.md`, `phase1-bom.xlsx`, `phase1-cost.md` | Parts and costs |

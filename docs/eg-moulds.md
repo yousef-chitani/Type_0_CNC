@@ -6,13 +6,13 @@
 
 The review (`review-eg-design-report.md`) compared this plan with real builds. What changed:
 
-- **Resin:** a laminating epoxy with a slow hardener replaces GlassCast 50 PLUS everywhere (D-117). A post-cure is part of the process. Cure times and temperatures below come from the chosen product's datasheet (price check 13).
+- **Resin:** Ampreg 30 + 3X Slow replaces GlassCast 50 PLUS everywhere (D-117, D-122). Cure at 18 °C or more for at least 48 h, then post-cure 16 h at 50 °C (see epoxy-options.md).
 - **Portal cores:** 2 × Ø40 PVC with every wall 20 mm or more (D-114). Hold each core down from a batten over the open face (wire or thin rod to a strap round the core): about 1.4 kg of lift each.
 - **Rail seats:** recesses 5 mm deep and open to the casting edges, so no thin EG lips or rims (D-115, sketch `cad/v2/out/rail_seat_options.png`). The floor strips that form them are 55 wide (base, running out to the spine side wall) and 43 wide (portal, from the beam edge to the channel former). For the levelling pour, tape a dam strip along each open side.
 - **Rail-seat accuracy:** expect the long cast-in bars to bow 0.1–0.3 mm as the casting shrinks. A free pour levels to about 0.1 mm, not 0.01–0.02 mm. Plan to measure with a straightedge and a dial indicator, then shim or scrape. Do a 500 mm test strip first. Remove the meniscus at the dam edges.
 - **Inserts:** abrade and degrease every insert; plug threaded holes from the back; short screws as anchors, no welding; vent holes through the joint bars (Ø8) and BK/BF plates (Ø6); tamp a resin-rich fine mix under and against each insert first (D-118).
 - **Joint bars:** 40 × 20, for 20 mm of M12 thread (D-116).
-- **Mix behaviour:** at about 11% epoxy the mix is like damp sand, not a liquid. It only flows at the right vibration frequency: fit a speed control, find the frequency on the test bricks, and tamp in layers if it won't flow (D-119). The buoyancy figures below are a safe upper limit.
+- **Mix behaviour and compaction (D-123):** at about 11% epoxy the mix is like damp sand, not a liquid. **Compact by hand: tamp each 30–50 mm layer** with a flat-ended rod or block, working along the walls, corners and inserts first. No vibration motor is bought unless the test bricks and the cut test beam show voids that tamping can't remove. The buoyancy figures below are a safe upper limit; hold the cores down all the same.
 - **Mould floor:** on a stiff, continuous deck, not battens alone. Check it with a straightedge before the pour (aim under 0.5 mm). Bolt the inserts down hard so vibration can't move them. Seal all MDF edges with resin or varnish, not tape alone.
 - **Release:** test 3 ways on the test-brick moulds, then use one (D-120). No silicone sprays.
 - **Second pours** (rail seats, grout): wash the surface with water, abrade and clean first. Log humidity with temperature.
@@ -117,7 +117,7 @@ Solid sections up to 180–200 mm thick concentrate the curing heat. Starting po
 - **Even cooling.** Leave the walls and insulation on until the peak has passed, so the surface and core cool together. This avoids stresses locked in by uneven cooling. Post-cure warm (e.g. 40 °C) only after the first cure.
 - **Let it settle before the leveling pour.** Wait for full cure (about 7 days or more) before the rail-seat leveling pour, so the casting has finished shrinking.
 
-## DIY vibration table (D-77)
+## DIY vibration table (D-77; only if tamping fails, D-123)
 - **Springs:** 1–2 old tyres lying flat. Two tyres side by side give a steadier platform for the base mould (about 700 × 500 mm).
 - **Deck:** stiff board (18 mm ply or MDF on CLS battens) slightly bigger than the largest mould. Screw blocks to the deck so the mould can't walk off.
 - **Exciter:** a motor bolted under or on the deck edge, with an eccentric weight on its shaft (e.g. a drilled disc or bolt with a nut stack). Fit a **speed control** (F21, D-119) and sweep roughly 40–75 Hz (2,400–4,500 rpm) on each test brick: note the speed where the mix slumps and flows (EG makers tune between 68 and 72 Hz), and use it for every pour. Aim for 2 g or more at the deck (a phone accelerometer app shows it). Add weight until the surface of a test pour ripples and air bubbles rise steadily.

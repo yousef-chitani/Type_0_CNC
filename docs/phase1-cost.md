@@ -1,26 +1,26 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £2,960.07** (budget £4,000). Not priced yet: F01, F02, F20, F21, M15, M16, M17. No eBay.
+**Phase 1 priced total: £3,327.57** (budget £4,000). Not priced yet: M15, M16, M17. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £290.37 |
+| Frame | £657.87 |
 | Motion | £998.07 |
 | Spindle | £489.14 |
 | Electronics | £818.49 |
 | Stand | £243.36 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£2,960.07** |
+| **Total** | **£3,327.57** |
 
 ## Frame
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| F01 | Main EG epoxy: laminating epoxy, slow hardener, about 15 kg | 1 lot | to price |
-| F02 | Epoxy for the rail-seat pour / grout / samples (same resin as F01) | 5 kg | to price |
+| F01 | Main EG epoxy: Ampreg 30 + slow hardener, 22.68 kg | 1 kit | £354.00 |
+| F02 | Epoxy for the rail-seat pour / grout / samples (in F01) | 5 kg | £0.00 |
 | F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
@@ -31,14 +31,14 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F11 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | £23.82 |
 | F12 | Release agents (Easy Composites) | 1 set | £14.90 |
 | F13 | Plasticine fillets (dropped: use silicone fillets) | 1 set | £0.00 |
-| F14 | Vibration table (owner DIY: tyres + board + unbalanced motor) | 2 pcs | £0.00 |
+| F14 | Vibration table (only if the test bricks need it) | 2 pcs | £0.00 |
 | F15 | Vibration table mounts (replaced by tyres) | 8 pcs | £0.00 |
 | F16 | Temperature logging (owner DIY) | 1 set | £0.00 |
 | F17 | Mixer | 1 pcs | £69.99 |
 | F18 | Silicone (Screwfix) + packing tape (AliExpress) | 1 set | £17.69 |
 | F19 | Mould helpers (3D printed, design pending) | 1 set | £0.00 |
-| F20 | Steel flat bar 40 x 20 (portal joint bars) | 1 pcs | to price |
-| F21 | Speed control for the vibration-table motor | 1 pcs | to price |
+| F20 | Steel flat bar 40 x 20 (portal joint bars) | 1 pcs | £13.50 |
+| F21 | Speed control for the vibration-table motor (dropped) | 1 pcs | £0.00 |
 
 ## Motion
 
