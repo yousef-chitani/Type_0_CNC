@@ -17,7 +17,8 @@
 | F01a | **EL2 epoxy laminating resin**, Easy Composites, with the **SLOW** hardener | Kit sizes that give **about 20 kg** in total (F01 15 kg + F02 5 kg). Give the price of each kit size near 5, 15 and 20 kg | £346.75 for GlassCast 50 PLUS 15 kg + 5 kg |
 | F01b | **Ampreg 30** (Gurit) with the **slow** hardener, EC Fibreglass Supplies | The 22.68 kg kit, and the next smaller kit. **Say whether the price includes VAT**, and the delivery cost to SA2. Listed £295 on 4 Nov 2026 (VAT basis unknown) | same |
 | F20 | Steel flat bar **40 × 20** | Bright or black mild steel, **250 mm or more** (shortest length sold; 0.5 m or 1 m is fine). The Metal Store first, same order as F07 | none |
-| F21 | Variable speed controller for a brushed (universal) motor | Plug-in or boxed, 230 V, **2,000 W or more**, with a dial. Screwfix or RS first, then AliExpress. Only needed if the vibration-table motor is a brushed motor: price it anyway | none |
+| F14 | **3-phase vibration motor** for the vibration table | **3-phase, 2-pole (3,000 rpm at 50 Hz), 230 V delta** (230/400 V), rated centrifugal force **about 200–300 kg (2–3 kN)**, adjustable eccentric weights, about 0.1–0.25 kW. It runs from the spindle kit's Huanyang VFD. RS and AliExpress first; say if only another vendor (e.g. Amazon) has it. Not single-phase | none (owner looked at a 1-phase 40 W, 25 kg-force unit at £23.60 + £5 on Amazon: too weak, fixed speed) |
+| F21 | Variable speed controller for a brushed (universal) motor | Plug-in or boxed, 230 V, **2,000 W or more**, with a dial. Screwfix or RS first, then AliExpress. Not needed if the 3-phase motor (F14) is bought: price it anyway as the fallback | none |
 
 ## Datasheet facts to copy (F01a and F01b)
 

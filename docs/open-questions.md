@@ -33,8 +33,8 @@ Resolved items are in decisions.md (D-01 … D-121). **Phase 1 £2,960.07 priced
    Who: owner. The base STEP is `cad/v2/out/assembly/base_casting.step`.
 11. **Price check 13** (`docs/price-check-task-13.md`): EL2 vs Ampreg 30 prices and datasheet numbers, the 40 × 20 joint bar (F20), a motor speed controller (F21). Then **choose the epoxy** (D-117).
    Who: owner, local price check; then owner + session choose.
-11a. **Vibration-table motor (F14): which type?** A 3-phase motor can run from the spindle kit's Huanyang VFD (no purchase). A brushed motor needs a plug-in speed controller (F21). A single-phase induction motor can't be speed-controlled this way.
-   Who: owner.
+11a. **Vibration-table motor (F14): none yet.** A single-phase 40 W, 25 kg-force motor is too weak (about 0.2 g on the 120 kg base mould; 2 g wanted) and can't be speed-controlled. Wanted: a 3-phase 2-pole motor, 230 V delta, 200–300 kg force, run from the spindle kit's VFD. Priced in price check 13; turn the weights down to half or less above 50 Hz.
+   Who: owner, after price check 13.
 11c. **Review items left for the test bricks (task 6):** the tests in section 4 of `docs/review-eg-design-report.md`. Also whether to split the long insert bars if the 500 mm test strip shows too much bow.
    Who: session writes the plan; owner casts.
 12. **GCL delivery cost to SA2** for 2 × 25 kg quartz, and **Hancock & Brown** collection of 3 × 20 kg sand.
