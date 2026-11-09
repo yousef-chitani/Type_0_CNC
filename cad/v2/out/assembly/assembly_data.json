@@ -2,7 +2,7 @@
  "L": {
   "seat_recess": 3.0,
   "haunch": 60.0,
-  "leg_foot_d": 200.0,
+  "leg_foot_d": 130,
   "base_taper": 100.0,
   "chan_depth": 15.0,
   "x_spacer": 25.0,
@@ -49,7 +49,7 @@
  },
  "kg": {
   "base_casting": 80.68133363628873,
-  "portal_casting": 38.97979307115215
+  "portal_casting": 36.444043071152166
  },
  "extents": {
   "x0": -320.0,
@@ -131,12 +131,6 @@
    "Leg-to-beam haunches",
    "3 x 45\u00b0, 60 x 60, full beam depth",
    "inner corners X \u00b1250 and under the right overhang X 320, at Z 225 (D-112)"
-  ],
-  [
-   "portal",
-   "Leg flare",
-   "legs 130 deep at the beam to 200 at the foot, flared backwards only",
-   "foot Y 110 to 310; front face flat (D-112)"
   ],
   [
    "portal",

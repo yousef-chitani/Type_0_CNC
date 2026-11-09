@@ -54,7 +54,7 @@ L = {}
 h, sw = P["h"], P["spine_w"]
 L["seat_recess"] = 3.0                       # levelling-pour recess over each insert bar (eg-moulds.md)
 L["haunch"] = 60.0                           # leg-to-beam haunches, 45° (D-112)
-L["leg_foot_d"] = 200.0                      # legs flare backwards to a 200 deep foot; front face stays flat (D-112)
+L["leg_foot_d"] = P["portal_d"]               # no leg flare: the back is the open pour face (D-113)
 L["base_taper"] = 100.0                      # 45° tapers at the spine / rear-foot junction (D-112)
 L["chan_depth"] = 15.0                       # Y screw channel: nut housing clearance, floor = BK/BF seat
 L["x_spacer"] = 25.0                         # spacer behind the X nut housing so BK/BF pass under the X blocks (D-108)
@@ -329,7 +329,6 @@ def portal_casting():
         hz = cq.Workplane("XZ").workplane(offset=-y0).polyline([(cx, bb), (cx + sgn * hn, bb), (cx, bb - hn)]).close().extrude(-(y1 - y0))
         p = p.union(hz)
     FEATURES.append(("portal", "Leg-to-beam haunches", f"3 x 45°, {hn:.0f} x {hn:.0f}, full beam depth", f"inner corners X ±{D['open_x1']:.0f} and under the right overhang X {D['leg_r_x1']:.0f}, at Z {bb:.0f} (D-112)"))
-    FEATURES.append(("portal", "Leg flare", f"legs {P['portal_d']:.0f} deep at the beam to {L['leg_foot_d']:.0f} at the foot, flared backwards only", f"foot Y {y0:.0f} to {fy1:.0f}; front face flat (D-112)"))
     bw, bt = FLATBAR_X
     rx0 = x0 + (D["portal_w"] - L["x_rail_len"]) / 2
     for k, zr in enumerate(L["x_rail_z"]):
