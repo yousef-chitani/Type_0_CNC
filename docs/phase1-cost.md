@@ -1,26 +1,26 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,306.82** (budget £4,000). Not priced yet: M15, M16, M17. No eBay.
+**Phase 1 priced total: £2,960.07** (budget £4,000). Not priced yet: F01, F02, F20, F21, M15, M16, M17. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £637.12 |
+| Frame | £290.37 |
 | Motion | £998.07 |
 | Spindle | £489.14 |
 | Electronics | £818.49 |
 | Stand | £243.36 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,306.82** |
+| **Total** | **£2,960.07** |
 
 ## Frame
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| F01 | Main EG epoxy: GlassCast 50 PLUS 15 kg | 1 kit | £255.00 |
-| F02 | Epoxy for leveling pour / grout / samples | 5 kg | £91.75 |
+| F01 | Main EG epoxy: laminating epoxy, slow hardener, about 15 kg | 1 lot | to price |
+| F02 | Epoxy for the rail-seat pour / grout / samples (same resin as F01) | 5 kg | to price |
 | F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
@@ -37,6 +37,8 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F17 | Mixer | 1 pcs | £69.99 |
 | F18 | Silicone (Screwfix) + packing tape (AliExpress) | 1 set | £17.69 |
 | F19 | Mould helpers (3D printed, design pending) | 1 set | £0.00 |
+| F20 | Steel flat bar 40 x 20 (portal joint bars) | 1 pcs | to price |
+| F21 | Speed control for the vibration-table motor | 1 pcs | to price |
 
 ## Motion
 
@@ -119,6 +121,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | T14 | 120 mm fan grills (3D printed) | 2 pcs | £0.00 |
 | T15 | Cable grommet for the bench top (3D printed) | 1 pcs | £0.00 |
 | T16 | Bench fit-out parts (3D printed, design pending) | 1 set | £0.00 |
+| T17 | Base support pads (3-point) | 3 pcs | £0.00 |
 
 ## Metrology
 

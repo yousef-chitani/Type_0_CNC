@@ -1,5 +1,7 @@
 # Epoxy options (UK)
 
+> **2026-11-09 (D-117):** decided after the EG design review: **one laminating epoxy with a slow hardener for everything** (castings, rail-seat pour, grout). GlassCast 50 PLUS is dropped (Tg 39 °C, 2.1 GPa: too soft). Candidates: **Easy Composites EL2 (slow)** and **Gurit Ampreg 30 (slow)**; `price-check-task-13.md` collects prices and datasheet numbers for both. About 20 kg in total for the v2 castings (the 41 kg below was for the larger v1 frame). The table and plan below are the earlier notes.
+
 We need about **41 kg** in total (see [eg-moulds.md](eg-moulds.md)). There are two separate jobs:
 
 1. **Bulk EG binder** (about 37 kg). Low viscosity, so it wets fine filler well. Curing heat matters less here, because the aggregate (about 89% of the mass) soaks up the heat. Clear, UV-stable resin isn't needed.

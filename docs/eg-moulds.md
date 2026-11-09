@@ -2,6 +2,22 @@
 
 > **Status:** draft for review. All dimensions are placeholders to make the drawings concrete. They will be fixed when we do the full layout.
 
+## Changes from the EG design review (2026-11-09, D-114 … D-120)
+
+The review (`review-eg-design-report.md`) compared this plan with real builds. What changed:
+
+- **Resin:** a laminating epoxy with a slow hardener replaces GlassCast 50 PLUS everywhere (D-117). A post-cure is part of the process. Cure times and temperatures below come from the chosen product's datasheet (price check 13).
+- **Portal cores:** 2 × Ø40 PVC with every wall 20 mm or more (D-114). Hold each core down from a batten over the open face (wire or thin rod to a strap round the core): about 1.4 kg of lift each.
+- **Rail seats:** recesses 5 mm deep and open to the casting edges, so no thin EG lips or rims (D-115, sketch `cad/v2/out/rail_seat_options.png`). The floor strips that form them are 55 wide (base, running out to the spine side wall) and 43 wide (portal, from the beam edge to the channel former). For the levelling pour, tape a dam strip along each open side.
+- **Rail-seat accuracy:** expect the long cast-in bars to bow 0.1–0.3 mm as the casting shrinks. A free pour levels to about 0.1 mm, not 0.01–0.02 mm. Plan to measure with a straightedge and a dial indicator, then shim or scrape. Do a 500 mm test strip first. Remove the meniscus at the dam edges.
+- **Inserts:** abrade and degrease every insert; plug threaded holes from the back; short screws as anchors, no welding; vent holes through the joint bars (Ø8) and BK/BF plates (Ø6); tamp a resin-rich fine mix under and against each insert first (D-118).
+- **Joint bars:** 40 × 20, for 20 mm of M12 thread (D-116).
+- **Mix behaviour:** at about 11% epoxy the mix is like damp sand, not a liquid. It only flows at the right vibration frequency: fit a speed control, find the frequency on the test bricks, and tamp in layers if it won't flow (D-119). The buoyancy figures below are a safe upper limit.
+- **Mould floor:** on a stiff, continuous deck, not battens alone. Check it with a straightedge before the pour (aim under 0.5 mm). Bolt the inserts down hard so vibration can't move them. Seal all MDF edges with resin or varnish, not tape alone.
+- **Release:** test 3 ways on the test-brick moulds, then use one (D-120). No silicone sprays.
+- **Second pours** (rail seats, grout): wash the surface with water, abrade and clean first. Log humidity with temperature.
+- **Bench:** the base sits on 3 steel pads (D-119).
+
 ![Base mould](img/base-mould.svg)
 
 ![Gantry mould](img/gantry-mould.svg)
@@ -62,9 +78,9 @@ The owner asked for real examples before choosing cores. What I found:
 
 - **Material (D-61):** floors from one 18 mm MDF sheet, sealed and coated. Walls from white gloss 18 mm furniture panel. The floor sits on 40 × 40 mm battens every 300 mm or so, so it stays flat on the vibration table.
 - **Joints:** screws only, **no glue**, so every wall comes off. Seal inside corners with a small fillet of silicone or plasticine, which also gives the casting rounded edges that resist chipping.
-- **Release:** packing tape on cut edges, 3 coats of release wax, then PVA film. Test it on the sample moulds first.
+- **Release (D-120):** seal the MDF first. Then test on the sample moulds: (a) 3–5 coats of mould wax, buffed; (b) the same wax + 1 coat of PVA; (c) packing tape on all faces + wax in the seams. Use the one that releases best. Use mould wax, not furniture wax. No silicone sprays: later pours will not bond.
 - **Bracing:** batten the walls every 200 mm. Vibration makes unbraced walls bulge.
-- **Inserts:** steel insert bars (40 × 10 mm, tapped M5 at the 60 mm rail-bolt pitch) with short welded studs or screws on the back to anchor them. Coat the jig bolts in wax.
+- **Inserts (D-118):** steel insert bars (40 × 10 and 25 × 10 mm, tapped M5 at the 60 mm rail-bolt pitch) with short screws in tapped holes on the back to anchor them (no welding). Abrade and degrease the bars; plug the threads from the back. Coat the jig bolts in wax.
 - **Gantry joint:** waxed steel or PVC tubes form the M12 bolt holes through each upright. The upright feet are cast against a mould end wall, so they come out flat.
 - **Gantry opening:** a **three-piece wedge plug** (two halves and a tapered centre wedge with 2° draft). The beam and uprights shrink onto it on three sides, so a one-piece block would be very hard to get out.
 - **Lifting points:** cast M12 nuts on threaded rod into the open face, two or four per casting, for an engine crane.
@@ -73,7 +89,7 @@ The owner asked for real examples before choosing cores. What I found:
 
 1. Mould on the vibration table, checked level and flat. Inserts bolted on. Temperature probes in place (see Thermal management).
 2. Mix in small batches. Wet the aggregate with resin first, then vibrate while pouring in layers about 50 mm deep.
-3. Cure **at least 7 days at 20 °C** (9 days at 17 °C) before demoulding: GlassCast 50 PLUS datasheet, see curing-heat.md. Do not heat above 23 °C during this cure. An optional post-cure (16 h at 50 °C) afterwards raises the softening point from 39 to 47 °C (task 5 decides).
+3. Cure at room temperature for the time the chosen resin's datasheet gives (D-117; see curing-heat.md). No extra heat during this first cure: early heat can warp the casting. Then **post-cure** in the tent to the datasheet schedule, let the casting cool to room temperature, and only then demould.
 4. **Remove the jig bolts through the floor first.** They hold the casting to the floor.
 5. Remove the hold-down batten, then unscrew the walls. For the gantry, pull the centre wedge first, then the plug halves.
 6. Lift the casting from the open-face lifting points and turn it over on a padded surface. The floor comes off last.
@@ -85,7 +101,7 @@ The owner asked for real examples before choosing cores. What I found:
 |---|---|
 | Mould bulges | Battens every 200 mm. Run the vibration test with sand first |
 | Resin leaks at corners | Silicone fillets and taped edges |
-| Casting sticks to the mould | Wax + PVA. Test on samples. Screw-only joints |
+| Casting sticks to the mould | Release tested on samples (D-120). Screw-only joints |
 | Opening plug jams | Three-piece wedge plug with draft |
 | Warping or cracking from curing heat | See Thermal management |
 
@@ -104,7 +120,7 @@ Solid sections up to 180–200 mm thick concentrate the curing heat. Starting po
 ## DIY vibration table (D-77)
 - **Springs:** 1–2 old tyres lying flat. Two tyres side by side give a steadier platform for the base mould (about 700 × 500 mm).
 - **Deck:** stiff board (18 mm ply or MDF on CLS battens) slightly bigger than the largest mould. Screw blocks to the deck so the mould can't walk off.
-- **Exciter:** a motor bolted under or on the deck edge, with an eccentric weight on its shaft (e.g. a drilled disc or bolt with a nut stack). Aim for roughly 3,000 rpm (50 Hz), the usual range for compacting concrete. Add weight until the surface of a test pour ripples and air bubbles rise steadily.
+- **Exciter:** a motor bolted under or on the deck edge, with an eccentric weight on its shaft (e.g. a drilled disc or bolt with a nut stack). Fit a **speed control** (F21, D-119) and sweep roughly 40–75 Hz (2,400–4,500 rpm) on each test brick: note the speed where the mix slumps and flows (EG makers tune between 68 and 72 Hz), and use it for every pour. Aim for 2 g or more at the deck (a phone accelerometer app shows it). Add weight until the surface of a test pour ripples and air bubbles rise steadily.
 - **Safety:** guard the spinning weight. Clamp the motor so it can't shake loose. Use an RCD-protected socket.
 - **Test first:** run it with a sand-filled mould. Check the deck doesn't flex or walk, and the mould joints don't leak.
 - **Tip:** vibrate each layer for a short time as you pour, not one long run at the end. Over-vibrating can let the coarse grit settle to the bottom.

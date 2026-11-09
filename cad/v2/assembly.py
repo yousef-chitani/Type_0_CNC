@@ -52,7 +52,9 @@ def cyl(axis, d, l, c):
 # ---------------------------------------------------------------------------
 L = {}
 h, sw = P["h"], P["spine_w"]
-L["seat_recess"] = 3.0                       # levelling-pour recess over each insert bar (eg-moulds.md)
+L["seat_recess"] = 5.0                       # levelling-pour recess over each insert bar, open to the casting edges (D-115)
+L["core_d"], L["core_dz"], L["core_y"] = 40.0, 35.0, 200.0   # portal PVC cores: every wall >= 20 mm (D-114)
+L["joint_bar_t"] = 20.0                      # portal joint bars: 1.67 x d of M12 thread (D-116)
 L["haunch"] = 60.0                           # leg-to-beam haunches, 45° (D-112)
 L["leg_foot_d"] = P["portal_d"]               # no leg flare: the back is the open pour face (D-113)
 L["base_taper"] = 100.0                      # 45° tapers at the spine / rear-foot junction (D-112)
@@ -280,13 +282,15 @@ def base_casting():
     bw, bt = FLATBAR_Y
     y0, y1 = L["y_rail_y0"], L["y_rail_y0"] + L["y_rail_len"]
     for k, x in enumerate((-L["y_rail_x"], L["y_rail_x"])):
+        sgn = 1 if x > 0 else -1
         # levelling recess over the bar (rail seat poured later), insert bar under it
-        b = b.cut(box(x - 15, x + 15, y0 - 5, y1 + 5, -L["seat_recess"], 0.1))
+        xi, xo = x - sgn * (bw / 2 + 5), sgn * (sw / 2 + 0.1)       # 5 past the bar inboard, open to the spine side face (D-115)
+        b = b.cut(box(min(xi, xo), max(xi, xo), y0 - 5, y1 + 5, -L["seat_recess"], 0.1))
         bar = box(x - bw / 2, x + bw / 2, y0, y1, -L["seat_recess"] - bt, -L["seat_recess"])
         INSERTS[f"base_insert_Y_rail_{'LR'[k]}"] = bar
         FEATURES.append(("base", f"Y rail insert bar {'LR'[k]}", f"{bw} x {bt} x {y1-y0:.0f} flat bar, tapped M5 at {RAIL['pitch']} (rail holes)", f"centre X {x:+.0f}, Y {y0:.0f} to {y1:.0f}, top {L['seat_recess']:.0f} below datum"))
     b = b.cut(box(-L["y_rail_x"], L["y_rail_x"], y0 + 20, y0 + 40, -L["seat_recess"], 0.1))   # cross-link so both seats level together
-    FEATURES.append(("base", "Rail-seat recesses", f"2 x 30 wide x {L['seat_recess']:.0f} deep + 20 wide cross-link", "filled by the levelling pour"))
+    FEATURES.append(("base", "Rail-seat recesses", f"2 x {sw/2 - L['y_rail_x'] + bw/2 + 5:.0f} wide x {L['seat_recess']:.0f} deep, open to the spine side faces, + 20 wide cross-link", "filled by the levelling pour; taped dam strips on the spine sides (D-115)"))
     # Y screw channel and BK/BF seats (channel floor = seat)
     cy0, cy1 = D["spine_y0"] - 1, L["y_bf_y0"] + BF["l"] + 15
     b = b.cut(box(-L["y_chan_w"] / 2, L["y_chan_w"] / 2, cy0, cy1, -L["chan_depth"], 0.1))
@@ -294,7 +298,7 @@ def base_casting():
     for nm, yy in (("BK12", L["y_bk_y0"] + BK["l"] / 2), ("BF12", L["y_bf_y0"] + BF["l"] / 2)):
         bar = box(-30, 30, yy - 15, yy + 15, -L["chan_depth"] - 10, -L["chan_depth"])
         INSERTS[f"base_insert_Y_{nm}"] = bar
-        FEATURES.append(("base", f"Y {nm} insert plate", "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern)", f"under the channel floor at Y {yy:.0f}"))
+        FEATURES.append(("base", f"Y {nm} insert plate", "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern), Ø6 vent hole", f"under the channel floor at Y {yy:.0f}"))
     # Y motor bracket inserts on the right side face of the spine (motor folded alongside, D-107)
     for yy in (L["y_bk_y0"] + 15, L["y_bk_y0"] + 55):
         ins = cyl("x", 20, 30, (sw / 2 - 30, yy, -45))
@@ -303,12 +307,12 @@ def base_casting():
     # portal joint: per leg 2 x M12 into a tapped insert bar + 1 dowel sleeve
     for side, xc in (("L", D["portal_x0"] + P["upright_w"] / 2), ("R", D["leg_r_x1"] - P["upright_w"] / 2)):
         ys = (D["portal_y0"] + 30, D["portal_y1"] - 30)
-        bar = box(xc - 20, xc + 20, ys[0] - 25, ys[1] + 25, -40, -30)
+        bar = box(xc - 20, xc + 20, ys[0] - 25, ys[1] + 25, -30 - L["joint_bar_t"], -30)
         INSERTS[f"base_insert_portal_{side}"] = bar
         for yy in ys:
             b = b.cut(cyl("z", 13, 30, (xc, yy, -30)))
         b = b.cut(cyl("z", 12, 30, (xc, (ys[0] + ys[1]) / 2, -30)))
-        FEATURES.append(("base", f"Portal joint, {side} leg", "40 x 10 bar tapped 2 x M12 (30 below the top) + Ø12 dowel sleeve (ream Ø10 after grouting)", f"X {xc:+.0f}, Y {ys[0]:.0f} / {ys[1]:.0f}, dowel Y {(ys[0]+ys[1])/2:.0f}"))
+        FEATURES.append(("base", f"Portal joint, {side} leg", f"40 x {L['joint_bar_t']:.0f} x 120 bar tapped 2 x M12 (30 below the top), 2 x Ø8 vent holes, + Ø12 dowel sleeve (ream Ø10 after grouting)", f"X {xc:+.0f}, Y {ys[0]:.0f} / {ys[1]:.0f}, dowel Y {(ys[0]+ys[1])/2:.0f}"))
     # lifting points: 4 x M12 into the spine side faces (base is cast upside down; sides are free)
     for sx in (-1, 1):
         for yy in (s0 + 120, D["foot_y0"] - L["base_taper"] - 40):
@@ -333,12 +337,14 @@ def portal_casting():
     rx0 = x0 + (D["portal_w"] - L["x_rail_len"]) / 2
     for k, zr in enumerate(L["x_rail_z"]):
         zb = zr + (L["x_bar_shift"] if zr > L["beam_zc"] else -L["x_bar_shift"])
-        p = p.cut(box(rx0 - 1, rx0 + L["x_rail_len"] + 1, y0 - 0.1, y0 + L["seat_recess"], zr - 15, zr + 15))
+        # recess spans the whole ledge between the beam edge and the X channel: no thin EG rims (D-115)
+        rz = (L["beam_zc"] + L["x_chan_w"] / 2, pz + 0.1) if zr > L["beam_zc"] else (bb - 0.1, L["beam_zc"] - L["x_chan_w"] / 2)
+        p = p.cut(box(rx0 - 1, rx0 + L["x_rail_len"] + 1, y0 - 0.1, y0 + L["seat_recess"], rz[0], rz[1]))
         bar = box(rx0 + 10, rx0 + L["x_rail_len"] - 10, y0 + L["seat_recess"], y0 + L["seat_recess"] + bt, zb - bw / 2, zb + bw / 2)
         INSERTS[f"portal_insert_X_rail_{'BT'[k]}"] = bar
         FEATURES.append(("portal", f"X rail insert bar {'bottom top'.split()[k]}", f"{bw} x {bt} x {L['x_rail_len']-20:.0f} flat bar, tapped M5 at 60 (rail holes); bar centre {L['x_bar_shift']:.0f} mm outboard of the rail line", f"rail Z {zr:.0f}, bar Z {zb:.0f}, {L['seat_recess']:.0f} behind the front face"))
     p = p.cut(box(rx0 + 20, rx0 + 40, y0 - 0.1, y0 + L["seat_recess"], L["x_rail_z"][0], L["x_rail_z"][1]))
-    FEATURES.append(("portal", "Rail-seat recesses (front face)", f"2 x 30 wide x {L['seat_recess']:.0f} deep + cross-link", "levelling pour; cast with the front face down"))
+    FEATURES.append(("portal", "Rail-seat recesses (front face)", f"2 x {(pz - bb - L['x_chan_w']) / 2:.0f} wide x {L['seat_recess']:.0f} deep (beam edge to the X channel) + cross-link", "levelling pour; taped dam strips on the beam edges and in the channel (D-115); cast with the front face down"))
     # X screw channel
     cx0, cx1 = L["x_bf_x1"] - BF["l"] - 10, x1 + 1              # open at the right end for the drive stub
     p = p.cut(box(cx0, cx1, y0 - 0.1, y0 + L["x_chan_depth"], L["beam_zc"] - L["x_chan_w"] / 2, L["beam_zc"] + L["x_chan_w"] / 2))
@@ -348,11 +354,11 @@ def portal_casting():
         p = p.union(box(xa - 5, xb + 5, seat, y0 + L["x_chan_depth"] + 0.1, L["beam_zc"] - 32, L["beam_zc"] + 32))
         xx = (xa + xb) / 2
         INSERTS[f"portal_insert_X_{nm}"] = box(xx - 15, xx + 15, seat + 1, seat + 11, L["beam_zc"] - 30, L["beam_zc"] + 30)
-        FEATURES.append(("portal", f"X {nm} insert plate", "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY)", f"behind the channel floor at X {xx:.0f}"))
+        FEATURES.append(("portal", f"X {nm} insert plate", "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY), Ø6 vent hole", f"behind the channel floor at X {xx:.0f}"))
     # PVC cores between the legs only (sleeves pass through the legs)
-    for zc in (L["beam_zc"] - 30, L["beam_zc"] + 30):
-        p = p.cut(cyl("x", P["pvc_core_d"], (D["open_x1"] - 5) - (D["open_x0"] + 5), (D["open_x0"] + 5, 190, zc)))
-    FEATURES.append(("portal", "PVC cores", f"2 x Ø{P['pvc_core_d']} capped pipe", f"Y 190, Z {L['beam_zc']-30:.0f} / {L['beam_zc']+30:.0f}, X {D['open_x0']+5:.0f} to {D['open_x1']-5:.0f} (between the legs)"))
+    for zc in (L["beam_zc"] - L["core_dz"], L["beam_zc"] + L["core_dz"]):
+        p = p.cut(cyl("x", L["core_d"], (D["open_x1"] - 5) - (D["open_x0"] + 5), (D["open_x0"] + 5, L["core_y"], zc)))
+    FEATURES.append(("portal", "PVC cores", f"2 x Ø{L['core_d']:.0f} capped pipe, held down from a batten over the open (back) face", f"Y {L['core_y']:.0f}, Z {L['beam_zc']-L['core_dz']:.0f} / {L['beam_zc']+L['core_dz']:.0f}, X {D['open_x0']+5:.0f} to {D['open_x1']-5:.0f} (between the legs); walls: {2*L['core_dz']-L['core_d']:.0f} between the cores, {L['core_y']-L['core_d']/2-(y0+L['x_chan_depth']):.0f} to the X channel, {y1-L['core_y']-L['core_d']/2:.0f} back skin, {pz-L['beam_zc']-L['core_dz']-L['core_d']/2:.0f} top and bottom (D-114)"))
     # joint sleeves: per leg 2 x Ø16 through the full height (M12 rod), dowel at the leg foot
     for side, xc in (("L", x0 + P["upright_w"] / 2), ("R", D["leg_r_x1"] - P["upright_w"] / 2)):
         for yy in (y0 + 30, y1 - 30):

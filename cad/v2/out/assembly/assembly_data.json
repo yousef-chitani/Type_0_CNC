@@ -1,6 +1,10 @@
 {
  "L": {
-  "seat_recess": 3.0,
+  "seat_recess": 5.0,
+  "core_d": 40.0,
+  "core_dz": 35.0,
+  "core_y": 200.0,
+  "joint_bar_t": 20.0,
   "haunch": 60.0,
   "leg_foot_d": 130,
   "base_taper": 100.0,
@@ -48,8 +52,8 @@
   "x_screw_len": 823.2
  },
  "kg": {
-  "base_casting": 80.68133363628873,
-  "portal_casting": 36.444043071152166
+  "base_casting": 80.23489627628871,
+  "portal_casting": 37.57334595792025
  },
  "extents": {
   "x0": -320.0,
@@ -70,19 +74,19 @@
    "base",
    "Y rail insert bar L",
    "40 x 10 x 500 flat bar, tapped M5 at 60 (rail holes)",
-   "centre X -140, Y -312 to 188, top 3 below datum"
+   "centre X -140, Y -312 to 188, top 5 below datum"
   ],
   [
    "base",
    "Y rail insert bar R",
    "40 x 10 x 500 flat bar, tapped M5 at 60 (rail holes)",
-   "centre X +140, Y -312 to 188, top 3 below datum"
+   "centre X +140, Y -312 to 188, top 5 below datum"
   ],
   [
    "base",
    "Rail-seat recesses",
-   "2 x 30 wide x 3 deep + 20 wide cross-link",
-   "filled by the levelling pour"
+   "2 x 55 wide x 5 deep, open to the spine side faces, + 20 wide cross-link",
+   "filled by the levelling pour; taped dam strips on the spine sides (D-115)"
   ],
   [
    "base",
@@ -93,13 +97,13 @@
   [
    "base",
    "Y BK12 insert plate",
-   "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern)",
+   "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern), \u00d86 vent hole",
    "under the channel floor at Y -378"
   ],
   [
    "base",
    "Y BF12 insert plate",
-   "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern)",
+   "60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern), \u00d86 vent hole",
    "under the channel floor at Y 125"
   ],
   [
@@ -111,13 +115,13 @@
   [
    "base",
    "Portal joint, L leg",
-   "40 x 10 bar tapped 2 x M12 (30 below the top) + \u00d812 dowel sleeve (ream \u00d810 after grouting)",
+   "40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x \u00d88 vent holes, + \u00d812 dowel sleeve (ream \u00d810 after grouting)",
    "X -285, Y 140 / 210, dowel Y 175"
   ],
   [
    "base",
    "Portal joint, R leg",
-   "40 x 10 bar tapped 2 x M12 (30 below the top) + \u00d812 dowel sleeve (ream \u00d810 after grouting)",
+   "40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x \u00d88 vent holes, + \u00d812 dowel sleeve (ream \u00d810 after grouting)",
    "X +285, Y 140 / 210, dowel Y 175"
   ],
   [
@@ -136,19 +140,19 @@
    "portal",
    "X rail insert bar bottom",
    "25 x 10 x 780 flat bar, tapped M5 at 60 (rail holes); bar centre 3 mm outboard of the rail line",
-   "rail Z 250, bar Z 247, 3 behind the front face"
+   "rail Z 250, bar Z 247, 5 behind the front face"
   ],
   [
    "portal",
    "X rail insert bar top",
    "25 x 10 x 780 flat bar, tapped M5 at 60 (rail holes); bar centre 3 mm outboard of the rail line",
-   "rail Z 350, bar Z 353, 3 behind the front face"
+   "rail Z 350, bar Z 353, 5 behind the front face"
   ],
   [
    "portal",
    "Rail-seat recesses (front face)",
-   "2 x 30 wide x 3 deep + cross-link",
-   "levelling pour; cast with the front face down"
+   "2 x 43 wide x 5 deep (beam edge to the X channel) + cross-link",
+   "levelling pour; taped dam strips on the beam edges and in the channel (D-115); cast with the front face down"
   ],
   [
    "portal",
@@ -159,20 +163,20 @@
   [
    "portal",
    "X BK12 insert plate",
-   "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY)",
+   "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY), \u00d86 vent hole",
    "behind the channel floor at X 438"
   ],
   [
    "portal",
    "X BF12 insert plate",
-   "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY)",
+   "30 x 60 x 10 steel, 2 x M5 tapped (VERIFY), \u00d86 vent hole",
    "behind the channel floor at X -265"
   ],
   [
    "portal",
    "PVC cores",
-   "2 x \u00d850 capped pipe",
-   "Y 190, Z 270 / 330, X -245 to 245 (between the legs)"
+   "2 x \u00d840 capped pipe, held down from a batten over the open (back) face",
+   "Y 200, Z 265 / 335, X -245 to 245 (between the legs); walls: 30 between the cores, 25 to the X channel, 20 back skin, 20 top and bottom (D-114)"
   ],
   [
    "portal",

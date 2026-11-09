@@ -2,7 +2,7 @@
 
 **4 January 2027 → 22 July 2027** (28 weeks, about 5 h/week ≈ 140 h). **Done = the machine moves under LinuxCNC.** Built and run in the shed for now (the flat limits apply when moving out).
 
-Castings are planned for April–May: GlassCast 50 PLUS needs **17–23 °C, ideally 20 °C**, for its 7-day cure (9 days at 17 °C). See curing-heat.md. Use a heater and an insulated cover in the shed if it is colder. Test bricks can cure indoors.
+Castings are planned for April–May: the epoxy needs about **20 °C** to cure, then a post-cure in the tent (D-117; times from the chosen resin's datasheet, see curing-heat.md). Use a heater and an insulated cover in the shed if it is colder. Test bricks can cure indoors.
 
 ## Plan
 
@@ -14,8 +14,8 @@ Castings are planned for April–May: GlassCast 50 PLUS needs **17–23 °C, ide
 | 7–8 | 15 Feb – 28 Feb | Order wave 2 (now includes the motion parts, D-103). Build the timber bench (top 785 mm, D-97: cad/v2/out/bench_cutlist.md, about 6–8 h) | 10 |
 | (on arrival, about week 9–10) | early March | Spindle kit (ordered in wave 1, about 8–9 weeks shipping): bench-test the VFD, spindle and cooling loop from LinuxCNC (docs/linuxcnc.md section 6, part E). About 2 h, fits beside the mould work | (2) |
 | 9–11 | 01 Mar – 21 Mar | Order wave 3. **Measure the received rails, screws, BK/BF supports and nut housings against the assembly; correct the mould drawings if needed.** Build the base and portal moulds (MDF, CLS, insert bars on jig bolts, Y-screw channel, PVC cores, sleeves). Build the tyre vibration table | 15 |
-| 12–13 | 22 Mar – 04 Apr | Test bricks: 2–3 mixes (GlassCast + quartz/sand/whiting), cure indoors, break and inspect. Fix the mix. Order wave 4 | 10 |
-| 14 | 05 Apr – 11 Apr | Final mould prep, release wax + PVA | 5 |
+| 12–13 | 22 Mar – 04 Apr | Test bricks: 2–3 mixes (laminating epoxy, D-117, + quartz/sand/whiting), release test, vibration frequency sweep, cure indoors, break and inspect. Fix the mix. Order wave 4 | 10 |
+| 14 | 05 Apr – 11 Apr | Final mould prep, release as tested (D-120) | 5 |
 | 15–16 | 12 Apr – 25 Apr | Cast the BASE (insulated tent + thermostat heater at 20 °C), 7-day cure, demould | 8 |
 | 17–18 | 26 Apr – 09 May | Cast the PORTAL, 7-day cure, demould. Inspect both castings | 8 |
 | 19–20 | 10 May – 23 May | Rail-seat levelling pours (base Y seats, portal X seats), 7-day cure | 8 |

@@ -1,4 +1,4 @@
-# Full CAD assembly (task 4, D-102 … D-113)
+# Full CAD assembly (task 4, D-102 … D-116)
 
 The detailed assembly the mould drawings (task 5) will come from. Built in CadQuery by the session; you refine it in **Fusion 360** and send back the final STEP (D-102).
 
@@ -16,7 +16,7 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 
 ## What's in it
 
-- **Castings:** base (T-shape, spine 340 × 725, 110 high, 45° tapers at the T-junction, **80.7 kg**) and portal (800 wide, beam 150 high, 45° haunches at the leg corners, **36.4 kg**), with every cast-in feature: rail insert bars and levelling recesses, screw channels with support seats and insert plates, PVC cores, joint sleeves, dowel sleeves, motor and ATC bracket inserts, lifting points.
+- **Castings:** base (T-shape, spine 340 × 725, 110 high, 45° tapers at the T-junction, **80.2 kg**) and portal (800 wide, beam 150 high, 45° haunches at the leg corners, 2 × Ø40 cores, **37.6 kg**), with every cast-in feature: rail insert bars and levelling recesses, screw channels with support seats and insert plates, PVC cores, joint sleeves, dowel sleeves, motor and ATC bracket inserts, lifting points.
 - **Motion:** HGR20 rails with HGH20CA carriages on all axes; DFU1605 screws with BK12/BF12 supports and nut housings; NEMA 24 motors (Z with brake).
 - **Drives:** X and Y folded with 1:1 HTD-5M belts; Z direct with a coupling.
 - **Plates:** table 460 × 330 × 25; saddle 180 × 400 × 20; Z plate 140 × 200 × 20; Z rail risers; X nut-housing spacer; motor plates and brackets.
@@ -35,6 +35,9 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 | D-108 | X nut housing on a **25 mm spacer**; X channel **45 deep** with 5 mm seat pads | Otherwise the X supports hit the carriages near the ends of travel |
 | D-109 | Z: **direct drive on top**, tall saddle (400) carries the Z rails on 15 mm risers, short Z plate (200) moves. Enclosure now **921 × 836 × 898 outside** (was 904 × 954 × 754) | Your choice; the brake holds Z directly. Fits the 1000 × 1000 bench |
 | D-110 | Purchases change (see below): price check 12 | Follows from the above |
+| D-114 | Portal cores **2 × Ø40** at Z 265 / 335, Y 200: every wall 20 mm or more | EG design review: the 10 mm webs around the Ø50 cores would not fill |
+| D-115 | Rail-seat recesses **5 deep, open to the casting edges** (base 55 wide to the spine sides, portal 43 wide from the beam edge to the X channel) | Review: the recesses were narrower than the insert bars; closed wider recesses would leave thin EG rims (`cad/v2/out/rail_seat_options.png`) |
+| D-116 | Portal joint bars **40 × 20** (20 mm of M12 thread), vent holes in the joint bars and BK/BF plates | Review: 10 mm of thread is too little for M12 |
 | D-112/113 | **Tapers instead of square inside corners**: 60 × 60 haunches under the beam, 100 × 100 tapers at the base's T-junction. No leg flare (the portal's back is the open pour face) | Your call: stress concentration, air traps, stiffness; mouldability |
 
 ## Purchases that change (price check 12)
@@ -42,7 +45,7 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 | BOM | Was | Now |
 |---|---|---|
 | M05 ballscrews | X 750 / Y 450 / Z 350 | **X 850 / Y 600 / Z 350**. Needed: X 823, Y 582 overall (with the vendor parts, D-111) |
-| F07 flat bar | 40 × 10, 3 m | **40 × 10 about 2 m** (Y bars, portal joint bars, support plates) + **25 × 10 about 2 m** (X bars, ATC bar) |
+| F07 flat bar | 40 × 10, 3 m | **40 × 10 about 2 m** (Y bars, support plates, base pads) + **25 × 10 about 2 m** (X bars, ATC bar). Portal joint bars: **40 × 20**, new line F20 (D-116, price check 13) |
 | M12 plates | saddle 180 × 160 × 20, Z plate 140 × 320 × 20 | **saddle 180 × 400 × 20, Z plate 140 × 200 × 20**, + X spacer 52 × 52 × 25, Z risers 2 × 25 × 15 × 350, motor plates and brackets (about 10 mm plate) |
 | M08 couplings | 3 | **1** (Z only) |
 | M13 motor mounts | 3 bought brackets | Z: 1 NEMA 24 mount (check the 50 mm hole spacing, below). X/Y: belt motor plates (from the M12 plate order) |
