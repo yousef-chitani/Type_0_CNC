@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-09, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-120). **Phase 1 £2,960.07 priced is provisional until price checks 12 and 13 (D-110, D-117): the epoxy is not priced.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-121). **Phase 1 £2,960.07 priced is provisional until price checks 12 and 13 (D-110, D-117): the epoxy is not priced.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
 
 ## Before wave 1 (4 Jan 2027)
 
@@ -34,8 +34,6 @@ Resolved items are in decisions.md (D-01 … D-120). **Phase 1 £2,960.07 priced
 11. **Price check 13** (`docs/price-check-task-13.md`): EL2 vs Ampreg 30 prices and datasheet numbers, the 40 × 20 joint bar (F20), a motor speed controller (F21). Then **choose the epoxy** (D-117).
    Who: owner, local price check; then owner + session choose.
 11a. **Vibration-table motor (F14): which type?** A 3-phase motor can run from the spindle kit's Huanyang VFD (no purchase). A brushed motor needs a plug-in speed controller (F21). A single-phase induction motor can't be speed-controlled this way.
-   Who: owner.
-11b. **Base on 3 pads lifts the machine 10 mm** (D-119): the enclosure top gap goes from 40 to 30 mm. Accept, or make the enclosure 10 mm taller?
    Who: owner.
 11c. **Review items left for the test bricks (task 6):** the tests in section 4 of `docs/review-eg-design-report.md`. Also whether to split the long insert bars if the 500 mm test strip shows too much bow.
    Who: session writes the plan; owner casts.
@@ -79,6 +77,7 @@ Resolved items are in decisions.md (D-01 … D-120). **Phase 1 £2,960.07 priced
     Who: owner, B&Q website stock checker.
 
 ## Closed since the last list
+- Base pads lift the machine 10 mm: accepted, enclosure unchanged, top gap 30 mm (D-121).
 - EG design review: done, decisions D-114 … D-120 (portal cores, rail-seat recesses, joint bars, resin, inserts, base pads, vibration speed control).
 - Portal beam overhang deflection: negligible (D-95).
 - Z brake hardwiring: done (D-93).

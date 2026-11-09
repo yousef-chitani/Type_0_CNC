@@ -52,7 +52,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-120**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-121**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
