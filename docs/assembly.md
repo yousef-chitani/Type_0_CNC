@@ -1,4 +1,4 @@
-# Full CAD assembly (task 4, D-102 … D-111)
+# Full CAD assembly (task 4, D-102 … D-112)
 
 The detailed assembly the mould drawings (task 5) will come from. Built in CadQuery by the session; you refine it in **Fusion 360** and send back the final STEP (D-102).
 
@@ -16,7 +16,7 @@ Regenerate: `python cad/v2/assembly.py` (about 2 minutes; checks clashes at 3 ax
 
 ## What's in it
 
-- **Castings:** base (T-shape, spine 340 × 725, 110 high, **78.2 kg**) and portal (800 wide, beam 150 high, **34.8 kg**), with every cast-in feature: rail insert bars and levelling recesses, screw channels with support seats and insert plates, PVC cores, joint sleeves, dowel sleeves, motor and ATC bracket inserts, lifting points.
+- **Castings:** base (T-shape, spine 340 × 725, 110 high, 45° tapers at the T-junction, **80.7 kg**) and portal (800 wide, beam 150 high, 45° haunches at the leg corners, legs flared to a 200 foot, **39.0 kg**), with every cast-in feature: rail insert bars and levelling recesses, screw channels with support seats and insert plates, PVC cores, joint sleeves, dowel sleeves, motor and ATC bracket inserts, lifting points.
 - **Motion:** HGR20 rails with HGH20CA carriages on all axes; DFU1605 screws with BK12/BF12 supports and nut housings; NEMA 24 motors (Z with brake).
 - **Drives:** X and Y folded with 1:1 HTD-5M belts; Z direct with a coupling.
 - **Plates:** table 460 × 330 × 25; saddle 180 × 400 × 20; Z plate 140 × 200 × 20; Z rail risers; X nut-housing spacer; motor plates and brackets.

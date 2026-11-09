@@ -1,6 +1,9 @@
 {
  "L": {
   "seat_recess": 3.0,
+  "haunch": 60.0,
+  "leg_foot_d": 200.0,
+  "base_taper": 100.0,
   "chan_depth": 15.0,
   "x_spacer": 25.0,
   "x_chan_depth": 45.0,
@@ -45,8 +48,8 @@
   "x_screw_len": 823.2
  },
  "kg": {
-  "base_casting": 78.15133363628867,
-  "portal_casting": 34.82944307115219
+  "base_casting": 80.68133363628873,
+  "portal_casting": 38.97979307115215
  },
  "extents": {
   "x0": -320.0,
@@ -57,6 +60,12 @@
   "z1": 736.4
  },
  "features": [
+  [
+   "base",
+   "Spine / rear-foot tapers",
+   "2 x 45\u00b0, 100 x 100, full height",
+   "corners X \u00b1170, Y 90 (D-112)"
+  ],
   [
    "base",
    "Y rail insert bar L",
@@ -115,7 +124,19 @@
    "base",
    "Lifting points",
    "4 x M12 nut-on-rod, horizontal",
-   "spine sides at Z -55, Y -285 and 50"
+   "spine sides at Z -55, Y -285 and -50"
+  ],
+  [
+   "portal",
+   "Leg-to-beam haunches",
+   "3 x 45\u00b0, 60 x 60, full beam depth",
+   "inner corners X \u00b1250 and under the right overhang X 320, at Z 225 (D-112)"
+  ],
+  [
+   "portal",
+   "Leg flare",
+   "legs 130 deep at the beam to 200 at the foot, flared backwards only",
+   "foot Y 110 to 310; front face flat (D-112)"
   ],
   [
    "portal",
@@ -175,7 +196,7 @@
    "portal",
    "ATC wheel bracket insert (Phase 2)",
    "25 x 10 x 140 bar, 2 x M8 tapped",
-   "right leg outer face X 320, Z 60 to 200"
+   "right leg outer face X 320, Z 20 to 160 (below the overhang haunch)"
   ],
   [
    "portal",

@@ -6,7 +6,7 @@
 A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite (EG) frame**, **LinuxCNC + Mesa 7I76EU**, closed-loop NEMA 24 steppers, and (Phase 2) a **Jianken ISO20 ATC spindle** with an 8-pocket ferris-wheel tool changer. Inspiration: Bootstrap Bill. The owner is in **Swansea, UK**. It will be built and used in a **shed**, but must later move into an **upstairs flat**: every piece must be carriable (≤ about 40 kg, base about 72 kg is a 2-person lift).
 
 ## 2. Current design (v2, D-71 … D-80)
-- **Full assembly (D-104 … D-110):** beam 150 high with X rails 100 apart, spine 340, spindle axis 175 in front of the beam, X/Y motors belt-folded, Z direct on a tall saddle. Base 78.2 kg, portal 34.8 kg. Details: `docs/assembly.md`.
+- **Full assembly (D-104 … D-110):** beam 150 high with X rails 100 apart, spine 340, spindle axis 175 in front of the beam, X/Y motors belt-folded, Z direct on a tall saddle. Base 80.7 kg, portal 39.0 kg (tapers, D-112). Details: `docs/assembly.md`.
 - **Work area 400 × 250, Z 150.** Travel X 570 (incl. reach to the ATC wheel) / Y 250 / Z 150. Table 460 × 330 × 25 (6082).
 - **2 solid EG castings:** T-shaped **base** (spine 320 wide, 110 high) about 72 kg; **gantry portal** 800 W × 355 H × 130 D, legs span the table only, beam overhangs 160 mm to the right for the ATC wheel; PVC cores in the beam; about 34 kg. Only frame joint: portal → base (grout once, then dowels + bolts).
 - **Motion:** HGR20 rails (X 2 × 800, Y 2 × 500 on 280 spacing, Z 2 × 350), DFU1605 screws (X 750, Y 450, Z 350), direct drive, StepperOnline closed-loop NEMA 24 (Z with brake), CL57T drivers.
@@ -51,7 +51,7 @@ See `docs/open-questions.md`: in priority order, with who answers each and how (
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
-| `docs/decisions.md` | Decision log D-01 … D-111 |
+| `docs/decisions.md` | Decision log D-01 … D-112 |
 | `docs/v2-design.md` | v2 design notes (joints, ATC wheel, enclosure) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, latency and bench-test procedure |

@@ -53,6 +53,9 @@ def cyl(axis, d, l, c):
 L = {}
 h, sw = P["h"], P["spine_w"]
 L["seat_recess"] = 3.0                       # levelling-pour recess over each insert bar (eg-moulds.md)
+L["haunch"] = 60.0                           # leg-to-beam haunches, 45° (D-112)
+L["leg_foot_d"] = 200.0                      # legs flare backwards to a 200 deep foot; front face stays flat (D-112)
+L["base_taper"] = 100.0                      # 45° tapers at the spine / rear-foot junction (D-112)
 L["chan_depth"] = 15.0                       # Y screw channel: nut housing clearance, floor = BK/BF seat
 L["x_spacer"] = 25.0                         # spacer behind the X nut housing so BK/BF pass under the X blocks (D-108)
 L["x_chan_depth"], L["x_pad"] = 45.0, 5.0     # X channel depth; BK/BF seat pads 5 proud of its floor
@@ -269,6 +272,11 @@ INSERTS = {}           # name -> shape (steel, cast in)
 def base_casting():
     s0, s1 = D["spine_y0"], D["foot_y1"]
     b = box(-sw / 2, sw / 2, s0, s1, -h, 0).union(box(D["portal_x0"], D["leg_r_x1"], D["foot_y0"], D["foot_y1"], -h, 0))
+    tp, fy = L["base_taper"], D["foot_y0"]
+    for sx in (-1, 1):                     # 45° tapers from the spine sides out to the rear foot (D-112)
+        pts = [(sx * sw / 2, fy), (sx * (sw / 2 + tp), fy), (sx * sw / 2, fy - tp)]
+        b = b.union(cq.Workplane("XY").workplane(offset=-h).polyline(pts).close().extrude(h))
+    FEATURES.append(("base", "Spine / rear-foot tapers", f"2 x 45°, {tp:.0f} x {tp:.0f}, full height", f"corners X ±{sw/2:.0f}, Y {fy:.0f} (D-112)"))
     bw, bt = FLATBAR_Y
     y0, y1 = L["y_rail_y0"], L["y_rail_y0"] + L["y_rail_len"]
     for k, x in enumerate((-L["y_rail_x"], L["y_rail_x"])):
@@ -303,17 +311,25 @@ def base_casting():
         FEATURES.append(("base", f"Portal joint, {side} leg", "40 x 10 bar tapped 2 x M12 (30 below the top) + Ø12 dowel sleeve (ream Ø10 after grouting)", f"X {xc:+.0f}, Y {ys[0]:.0f} / {ys[1]:.0f}, dowel Y {(ys[0]+ys[1])/2:.0f}"))
     # lifting points: 4 x M12 into the spine side faces (base is cast upside down; sides are free)
     for sx in (-1, 1):
-        for yy in (s0 + 120, D["foot_y0"] - 40):
+        for yy in (s0 + 120, D["foot_y0"] - L["base_taper"] - 40):
             b = b.cut(cyl("x", 12, 40, (sx * sw / 2 - (40 if sx > 0 else 0), yy, -55)))
-    FEATURES.append(("base", "Lifting points", "4 x M12 nut-on-rod, horizontal", f"spine sides at Z -55, Y {s0+120:.0f} and {D['foot_y0']-40:.0f}"))
+    FEATURES.append(("base", "Lifting points", "4 x M12 nut-on-rod, horizontal", f"spine sides at Z -55, Y {s0+120:.0f} and {D['foot_y0']-L['base_taper']-40:.0f}"))
     return b
 
 def portal_casting():
     x0, x1, y0, y1 = D["portal_x0"], D["portal_x1"], D["portal_y0"], D["portal_y1"]
     pz = D["beam_top"]
-    p = box(x0, x1, y0, y1, 0, pz)
-    p = p.cut(box(D["open_x0"], D["open_x1"], y0 - 1, y1 + 1, -1, D["beam_bottom"]))
-    p = p.cut(box(D["leg_r_x1"], x1 + 1, y0 - 1, y1 + 1, -1, D["beam_bottom"]))
+    bb, hn = D["beam_bottom"], L["haunch"]
+    p = box(x0, x1, y0, y1, bb, pz)                                         # beam
+    fy1 = y0 + L["leg_foot_d"]                                              # legs flare backwards only (front face flat, D-112)
+    for lx0, lx1 in ((x0, D["open_x0"]), (D["open_x1"], D["leg_r_x1"])):
+        leg = cq.Workplane("YZ").workplane(offset=lx0).polyline([(y0, 0), (fy1, 0), (y1, bb), (y0, bb)]).close().extrude(lx1 - lx0)
+        p = p.union(leg)
+    for cx, sgn in ((D["open_x0"], 1), (D["open_x1"], -1), (D["leg_r_x1"], 1)):   # 45° haunches under the beam
+        hz = cq.Workplane("XZ").workplane(offset=-y0).polyline([(cx, bb), (cx + sgn * hn, bb), (cx, bb - hn)]).close().extrude(-(y1 - y0))
+        p = p.union(hz)
+    FEATURES.append(("portal", "Leg-to-beam haunches", f"3 x 45°, {hn:.0f} x {hn:.0f}, full beam depth", f"inner corners X ±{D['open_x1']:.0f} and under the right overhang X {D['leg_r_x1']:.0f}, at Z {bb:.0f} (D-112)"))
+    FEATURES.append(("portal", "Leg flare", f"legs {P['portal_d']:.0f} deep at the beam to {L['leg_foot_d']:.0f} at the foot, flared backwards only", f"foot Y {y0:.0f} to {fy1:.0f}; front face flat (D-112)"))
     bw, bt = FLATBAR_X
     rx0 = x0 + (D["portal_w"] - L["x_rail_len"]) / 2
     for k, zr in enumerate(L["x_rail_z"]):
@@ -345,8 +361,8 @@ def portal_casting():
         p = p.cut(cyl("z", 12, 30, (xc, (y0 + y1) / 2, -1)))
         FEATURES.append(("portal", f"Joint sleeves, {side} leg", "2 x Ø16 tube through the full height (M12 rod to the base bar) + Ø12 dowel sleeve 30 deep at the foot", f"X {xc:+.0f}, Y {y0+30:.0f} / {y1-30:.0f}"))
     # ATC bracket insert on the right leg outer face (Phase 2), X motor bracket inserts on the beam top
-    INSERTS["portal_insert_ATC"] = box(D["leg_r_x1"] - 10, D["leg_r_x1"], (y0 + y1) / 2 - 12.5, (y0 + y1) / 2 + 12.5, 60, 200)
-    FEATURES.append(("portal", "ATC wheel bracket insert (Phase 2)", "25 x 10 x 140 bar, 2 x M8 tapped", f"right leg outer face X {D['leg_r_x1']:.0f}, Z 60 to 200"))
+    INSERTS["portal_insert_ATC"] = box(D["leg_r_x1"] - 10, D["leg_r_x1"], (y0 + y1) / 2 - 12.5, (y0 + y1) / 2 + 12.5, 20, 160)
+    FEATURES.append(("portal", "ATC wheel bracket insert (Phase 2)", "25 x 10 x 140 bar, 2 x M8 tapped", f"right leg outer face X {D['leg_r_x1']:.0f}, Z 20 to 160 (below the overhang haunch)"))
     for xx in (330, 430):
         INSERTS[f"portal_insert_Xmotor_{xx}"] = cyl("z", 20, 30, (xx, (y0 + y1) / 2 + 20, pz - 30))
     FEATURES.append(("portal", "X motor bracket inserts", "2 x M8 nut-on-rod", f"beam top Z {pz:.0f}, X 330 / 430, Y {(y0+y1)/2+20:.0f}"))
