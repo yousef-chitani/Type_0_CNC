@@ -1,48 +1,57 @@
-# Curing heat and the cold shed (open question 9)
+# Curing, heat and the post-cure (Ampreg 30 + 3X Slow, D-122)
 
-> **2026-11-09 (D-122): the resin is Ampreg 30 + 3X Slow.** Working numbers until this page is rewritten: cure at **18 °C or more** (never below), at least **48 h** before any handling, then **post-cure 16 h at 50 °C**, ramping about 10 °C/hour up and down, and demould only when back at room temperature. Tg is 57 °C room-cured and 74 °C post-cured. Pot life is about 4 h at 25 °C for a small mass, much shorter in a full bucket.
->
-> **2026-11-09 (D-117):** the resin is changing from GlassCast 50 PLUS to a laminating epoxy (EL2 or Ampreg 30, price check 13). The datasheet table and the Tg section below are for GlassCast and will be replaced from the new datasheet. What stays true: the stone soaks up most of the curing heat, cold is the main risk, the tent and logging are needed, and the full-thickness test brick must confirm. What changes: a laminating epoxy cures faster and hotter than GlassCast (expect a pot life near 1–2 h and a larger temperature rise: the test brick matters more), and the **post-cure is now part of the process**, so the tent heater must reach the post-cure temperature (likely 50 °C or more: about 500 W with 25 mm polystyrene, to size from the datasheet).
+Rewritten 14 Nov 2026 for the new resin. Sources: Ampreg 30 datasheet numbers copied in price check 13 (`epoxy-options.md`), estimate in `tools/cure_heat.py` (its material values are ASSUMED). **The heat brick in `eg-mix-test-plan.md` must confirm the numbers here.** The earlier GlassCast version of this page is in the git history.
 
-Sources: [GlassCast 50 PLUS technical datasheet](https://media.easycomposites.co.uk/datasheets/EC-TDS-GlassCast-50-PLUS.pdf) (read 2026-11-08), estimate in `tools/cure_heat.py`. Test bricks must confirm (task 5).
+## What the datasheet says
 
-## What the datasheet says (pure resin)
+| | Ampreg 30 + 3X Slow |
+|---|---|
+| Mix ratio by weight | 100 : 26 |
+| Pot life | about 4 h at 25 °C, for 150 g kept cool in water. A full bucket is far shorter |
+| Minimum cure temperature | **18 °C** |
+| Before demoulding | at least **48 h at 18 °C** (16 h at 25 °C) |
+| Tg after a room cure | 57 °C (28 days at 21 °C) |
+| Tg after post-cure | **74 °C after 16 h at 50 °C**; 81 °C after 5 h at 70 °C |
+| Post-cure ramp | about 10 °C per hour |
 
-| Ambient | 17 °C (min) | 20 °C (recommended) | 23 °C (max) |
+## The process
+
+1. **Before the pour:** resin, hardener and all aggregate indoors for 48 h, at 18–22 °C. Mould and shed at 18 °C or more.
+2. **Pour:** mix in 10–12 kg batches and get each one onto the stone and into the mould straight away. Mixed resin left in a bucket heats up and runs away.
+3. **First cure, 48 h or more, never below 18 °C.** Thermostat at 20 °C. No extra heat: early heat can warp the casting. Log the centre probe, the tent air and the humidity.
+4. **Post-cure in the tent, casting still in its mould:** raise the thermostat 10 °C each hour to 50 °C, hold 16 h, switch off and let it cool in the closed tent overnight.
+5. **Demould only when the casting is back at room temperature.**
+6. **Rail seats and grout** get the same treatment: 48 h at 18 °C or more, then 16 h at 50 °C. Wash, abrade and clean the cured surface before each of these pours.
+
+## How hot will the castings get on their own?
+
+Hotter than the old GlassCast plan. GlassCast released its heat over days; Ampreg releases it over hours.
+
+| Piece | If the heat comes out over 6 h | over 12 h | over 24 h |
 |---|---|---|---|
-| Pot life | 4 h | 2 h | 1 h |
-| Max pour depth, thin-walled mould | 100 mm | 80 mm | 75 mm |
-| Max pour depth, wood or insulating mould (our MDF) | 70 mm | 50 mm | 35 mm |
-| Initial cure | 9 days | 7 days | 5 days |
+| Base (80 kg, 110 mm) | about +28 °C | +17 °C | +9 °C |
+| Portal (38 kg, 130 mm) | +23 °C | +13 °C | +7 °C |
+| Heat brick, sides insulated | +33 °C | +22 °C | +12 °C |
+| Limit with no heat loss at all | +58 °C | | |
 
-- Work at **17–23 °C, aim for 20 °C**. Never above 23 °C. Avoid local heat sources (heater blowing on the mould, sun).
-- Allow **at least 7 days at 20 °C before demoulding**. (`eg-moulds.md` said 48–72 h; that was for a faster resin. Corrected below.)
-- Humidity under 70% RH during the cure.
-- **Tg (softening point) is only 39 °C after a room-temperature cure, 47 °C after 16 h at 50 °C.** See the new question at the end.
+- **Expect the centre to peak somewhere between 30 and 50 °C** if the pour starts at 20 °C. The reaction speeds up as it warms, so the faster column is the safer guess.
+- That is not harmful to the epoxy. The risks are side effects: a shorter working time for the last batches, a mould that moves as it warms, and stress locked in if one face cools much faster than the other.
+- **A closed insulated tent keeps the heat in** and pushes the peak towards the +58 °C limit. For the first 24 h, open the tent lid or a side if the centre probe passes about 40 °C, and close it again as it falls back.
+- Keep the PVC cores in mind: PVC softens at about 75–80 °C. The estimate stays below that, and the post-cure is held at 50 °C.
+- **The heat brick settles it.** Its sides are wrapped in 50 mm insulation so it reads a little hotter than the real base. If its centre passes 60 °C, start the real pours cooler (materials at 18 °C) and leave the tent open for the first day.
 
-## Is the curing heat a risk for our castings? Probably not.
+## The tent and heater
 
-The castings are about 11% epoxy by mass, so about 23% by volume; the rest is stone, which conducts heat about 7× better than resin and soaks up heat.
+- **Tent:** about 1.5 × 1.0 × 0.8 m around the mould. Use **50 mm foil-faced PIR board**, taped at the joints, not polystyrene: polystyrene softens near 80 °C and burns easily, and this tent now runs at 50 °C.
+- **Heater:** holding 50 °C takes about 150–200 W; ramping the 80 kg base at 10 °C per hour takes about 300 W more. So **a 500 W heater is enough; up to 1 kW is fine.** A low-surface-temperature type (tubular or oil-filled) with its own over-heat cut-out.
+- **Thermostat:** a plug-in controller with a remote probe that can be set to 50 °C. Probe at mould height, away from the heater.
+- Heater low down, not touching the board, not blowing on the mould. RCD-protected socket. Smoke alarm in the shed for the 16 h hold. Run the tent empty at 50 °C once before trusting it with a casting.
+- These are not on the parts list yet: PIR board, heater, thermostat controller. They go in the next small price check.
 
-| Casting | Smallest thickness | Expected temperature rise vs a safe 50 mm pure-resin pour |
-|---|---|---|
-| Portal beam | 130 mm | about 0.2× |
-| Base | 110 mm | about 0.15× |
-| Rail-seat levelling pour | a few mm of pure resin | far below the limit |
+## Cold shed
 
-- Even with no heat loss at all, the mix could only rise about 58 K (pure resin: about 300 K). With the 7-day cure, most of the heat leaks away, so expect a rise of a few degrees.
-- **Conclusion:** curing heat is not the problem; **cold is**. A cold shed slows the cure (9+ days at 17 °C) and below 17 °C the resin may not cure properly.
-- **Confirm with the test bricks:** cast one brick at full thickness (about 130 × 130 × 200 mm in an MDF box) with a temperature probe in the middle and one in the air beside it. Log both for the first 3 days. If the centre rises more than about 10 K above the air, use a fan over the open top (the datasheet's advice for pours over 4 kg and 40 mm).
+April–May nights in the shed will be below 18 °C, so the tent and thermostat are needed from the moment the pour ends. Below 18 °C the cure stalls and the surface can blush (a waxy film). If the shed is below about 10 °C on the day, postpone: the mould and stone will be too cold even if the air in the tent is warm.
 
-## Keeping the mould warm (April–May in the shed)
+## What to log
 
-- Build a tent of insulation around the mould on its vibration-table board: rigid foam or foil-faced insulation sheets, or old duvets over a timber frame. About 1.5 × 1.0 × 0.8 m.
-- Heat loss is about 140 W at 15 K above the outside temperature with 25 mm polystyrene (7 m² × 1.3 W/m²K × 15 K). So a **150–300 W heater on a thermostat** is enough: a tubular greenhouse heater with a separate plug-in thermostat is ideal (low surface temperature, no hot spot).
-- Put the heater low and away from the mould (not blowing on it). Thermostat probe at mould height. Set 20 °C.
-- Log the air in the tent and the probe in the casting for the whole cure (the DIY logging is already planned, F16).
-- Leave the heater on for the full 7 days before demoulding, and keep the casting above 17 °C for a further week if possible.
-- Heater and thermostat are not in the BOM yet. They will be added and priced with task 6 (EG mix and test-brick plan).
-
-## New question: low softening point (Tg 39 °C)
-
-A room-temperature-cured GlassCast 50 PLUS casting softens at about 39 °C. A shed in summer sun, or a spindle and motor warming one spot, can get close to that, and epoxy creeps near its Tg. A **post-cure** of 16 h at 50 °C raises it to 47 °C: that could be done inside the same insulated tent with a larger heater, after the 7-day cure and before the rail-seat pour. To be decided in task 6 (it matters more for dimensional stability than for strength).
+Centre probe, a probe near a mould wall, tent air, shed air and humidity, every few minutes from the first batch until the casting is back at room temperature after the post-cure. Note the time of each batch.

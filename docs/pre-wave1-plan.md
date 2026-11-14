@@ -13,10 +13,10 @@ The order matters for two reasons. Your Fusion pass blocks the mould drawings, s
 - Start the **Fusion pass**: open `cad/v2/out/assembly/type0_assembly.step` (it has the new cores, recesses and joint bars).
 
 **Session**
-- **Task 6, first draft:** mix design and test-brick plan for Ampreg 30, hand-tamped, with the review's tests (cut test beam with the real cores, 3 release methods, packing test with and without GCL 1–3 mm, joint-bar pull test, 500 mm rail-seat strip, creep and stiffness prisms).
-- Rewrite `curing-heat.md` for Ampreg 30 (18 °C minimum, post-cure 16 h at 50 °C) and size the tent heater for 50 °C.
-- Re-render the assembly PNG views (stale since D-114 … D-116).
-- Bring `phase1-schedule.md` up to date: wave totals and item lists (epoxy vendor, F20 in wave 2, F21 dropped).
+- ~~**Task 6, first draft**~~ done 14 Nov (`eg-mix-test-plan.md`): mix design and test-brick plan for Ampreg 30, hand-tamped, with the review's tests (cut test beam with the real cores, 3 release methods, packing test with and without GCL 1–3 mm, joint-bar pull test, 500 mm rail-seat strip, creep and stiffness prisms).
+- ~~Rewrite `curing-heat.md` for Ampreg 30~~ done 14 Nov (D-124): (18 °C minimum, post-cure 16 h at 50 °C) and size the tent heater for 50 °C.
+- ~~Re-render the assembly PNG views~~ done 14 Nov (`cad/v2/render_views.py`).
+- ~~Bring `phase1-schedule.md` up to date~~ done 14 Nov: wave totals and item lists (epoxy vendor, F20 in wave 2, F21 dropped).
 
 ## Week 2: 21 – 27 Nov. Prices settled, casting materials known
 

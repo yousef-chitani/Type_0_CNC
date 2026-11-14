@@ -14,11 +14,11 @@ Castings are planned for April–May: the epoxy needs about **20 °C** to cure, 
 | 7–8 | 15 Feb – 28 Feb | Order wave 2 (now includes the motion parts, D-103). Build the timber bench (top 785 mm, D-97: cad/v2/out/bench_cutlist.md, about 6–8 h) | 10 |
 | (on arrival, about week 9–10) | early March | Spindle kit (ordered in wave 1, about 8–9 weeks shipping): bench-test the VFD, spindle and cooling loop from LinuxCNC (docs/linuxcnc.md section 6, part E). About 2 h, fits beside the mould work | (2) |
 | 9–11 | 01 Mar – 21 Mar | Order wave 3. **Measure the received rails, screws, BK/BF supports and nut housings against the assembly; correct the mould drawings if needed.** Build the base and portal moulds (MDF, CLS, insert bars on jig bolts, Y-screw channel, PVC cores, sleeves). Build the tyre vibration table | 15 |
-| 12–13 | 22 Mar – 04 Apr | Test bricks: 2–3 mixes (Ampreg 30, D-122, + quartz/sand/whiting), hand-tamped in layers (D-123), release test, cure indoors, break and inspect. Fix the mix. Order wave 4 | 10 |
+| 12–13 | 22 Mar – 04 Apr | Test pieces (`eg-mix-test-plan.md`): packing test, mix bricks at 10–13 % epoxy (Ampreg 30, hand-tamped), release test, heat brick, beam section, rail-seat strip, prisms. Post-cure them in the tent (its trial run). Fix the mix. Order wave 4 | 10 |
 | 14 | 05 Apr – 11 Apr | Final mould prep, release as tested (D-120) | 5 |
-| 15–16 | 12 Apr – 25 Apr | Cast the BASE (insulated tent + thermostat heater at 20 °C), 7-day cure, demould | 8 |
-| 17–18 | 26 Apr – 09 May | Cast the PORTAL, 7-day cure, demould. Inspect both castings | 8 |
-| 19–20 | 10 May – 23 May | Rail-seat levelling pours (base Y seats, portal X seats), 7-day cure | 8 |
+| 15–16 | 12 Apr – 25 Apr | Cast the BASE (tent + thermostat at 20 °C), 48 h or more at ≥ 18 °C, post-cure 16 h at 50 °C, cool, demould (curing-heat.md) | 8 |
+| 17–18 | 26 Apr – 09 May | Cast the PORTAL, same cure and post-cure, demould. Inspect both castings | 8 |
+| 19–20 | 10 May – 23 May | Rail-seat levelling pours (base Y seats, portal X seats), cure, post-cure, measure, shim or scrape | 8 |
 | 21–22 | 24 May – 06 Jun | Y axis: rails, screw, motor, table. Portal onto the base: shim square to Y, grout, cure, ream dowels | 10 |
 | 23–24 | 07 Jun – 20 Jun | X and Z axes: rails, screws, saddle, Z plate, brake motor, spindle clamp + spindle | 10 |
 | 25–26 | 21 Jun – 04 Jul | Machine wiring to the cabinet: motor cables, homing sensors, e-stops, spindle + cooling loop, flow switch | 10 |
@@ -30,10 +30,10 @@ Castings are planned for April–May: the epoxy needs about **20 °C** to cure, 
 | Wave | Order in week | Date | What | £ |
 |---|---|---|---|---|
 | 1 | 1 | 04 Jan 2027 | Electrical, motors, **spindle kit and cooling loop** (bench-test indoors): E01, E04, E05, E06, E07, E08, E09, E10, E12, E13, E14, E17, E18, E21, **E23, E24, E25**, S04, **S08, S05**, M09, M10, M14 | £1,482.74 |
-| 2 | 7 | 15 Feb 2027 | Bench, moulds, local items **and motion parts** (D-103): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T07, T09–T13** (bench, D-99: B&Q Swansea with in-store ply cutting, Screwfix, B&Q marketplace, AliExpress), **M01, M02, M03, M05, M08, M13** (rails, ballscrews, couplings, motor mounts) | £976.14 |
-| 3 | 9 | 01 Mar 2027 | Casting materials and measuring tools: F01, F02, F12, F03, F04, F06, F07, X01, X02 | £516.42 |
+| 2 | 7 | 15 Feb 2027 | Bench, moulds, local items **and motion parts** (D-103): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T07, T09–T13** (bench, D-99: B&Q Swansea with in-store ply cutting, Screwfix, B&Q marketplace, AliExpress), **M01, M02, M03, M05, M08, M13** (rails, ballscrews, couplings, motor mounts), **F20** (40 × 20 joint bar, D-116, with the F07 order) and **M15–M17** (pulleys, belts, outboard bearing: not priced yet) | £982.94 |
+| 3 | 9 | 01 Mar 2027 | Casting materials and measuring tools: F01, F02, F12, F03, F04, F06, F07, X01, X02 | £523.67 |
 | 4 | 13 | 29 Mar 2027 | Aluminium plates and ER20 collets: M11, M12, S09 | £338.22 |
-| | | | **Total** | **£3,313.52** |
+| | | | **Total** | **£3,327.57** |
 
 3D-printed parts (D-100, docs/printed-parts.md): fan grills, cable grommet and e-stop box can be printed any time before the bench is fitted out (week 8).
 
@@ -45,5 +45,5 @@ Owner-built or DIY (no cost apart from materials): timber bench (materials T03�
 - **Mesa 7i76EU:** £257.74 including import VAT, ordered in wave 1 (week 1). Needed first for the LinuxCNC bench tests.
 - **Spindle kit:** ordered in wave 1 (D-94). Shipping was quoted at about 8–9 weeks, so it should arrive in early March, well before it is mounted in week 23. Check the price is still £217.39 + shipping when ordering.
 - **AliExpress motion parts:** ordered in wave 2 (15 Feb, D-103) so they arrive (2–6 weeks) in time to be measured before the moulds are finished in week 11. If they're late, finish the moulds from the datasheet sizes and check the parts against the moulds before casting (week 14).
-- **Cold:** cure inside an insulated tent with a 150–300 W thermostat heater set to 20 °C, and log with the temperature probes (curing-heat.md).
+- **Cold and post-cure:** cure inside a 50 mm PIR-board tent with a 500 W–1 kW thermostat heater: 20 °C for the first 48 h, then 50 °C for 16 h. Log with the temperature probes (curing-heat.md).
 - **Slack:** about 1 week of buffer, inside weeks 27–28.

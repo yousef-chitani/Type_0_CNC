@@ -53,7 +53,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-123**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-124**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
@@ -71,7 +71,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
    - haunch and taper blocks, lifting points;
    - the vibration-table deck;
    - printed mould helpers (F19).
-6. **EG mix design + test-brick plan:**
+6. **EG mix design + test-brick plan: first draft done** (`docs/eg-mix-test-plan.md`, `docs/curing-heat.md` rewritten for Ampreg 30, D-124). Owner to review the pass marks, quantities and kit list. Covers:
    - Ampreg 30 + 3X Slow (D-122), hand-tamped in layers (D-123), GCL quartz 2–5, H&B sand 0–1, whiting; epoxy at 10 / 11 / 12 / 13%;
    - the review's tests (`review-eg-design-report.md` section 4): cut test beam section with the real cores, 3 release methods, packing test with and without GCL 1–3 mm, joint-bar pull test, 500 mm rail-seat test strip, creep and stiffness prisms;
    - a full-thickness heat brick with a centre probe;
@@ -105,8 +105,9 @@ Then: rail-seat levelling and assembly procedures, Phase 2 detailing (ATC wheel,
 | `cad/v2/bench.py`, `cad/v2/out/bench_*` | Timber bench: drawings, cut list, assembly |
 | `cad/v2/enclosure.py`, `cad/v2/out/enclosure_*` | Enclosure (sized from the assembly) |
 | `docs/printed-parts.md`, `cad/v2/printed_parts.py`, `cad/v2/out/print/` | Printed parts (PETG) |
-| `docs/curing-heat.md`, `tools/cure_heat.py` | Resin limits (still GlassCast below the top notes: to redo for Ampreg 30, D-122), heat estimate, heater tent |
+| `docs/curing-heat.md`, `tools/cure_heat.py` | Cure process, self-heating estimate, post-cure, tent and heater (Ampreg 30, D-124), heat estimate, heater tent |
 | `tools/portal_overhang.py` | Beam overhang check (D-95; beam is now 150 high, still fine) |
+| `docs/eg-mix-test-plan.md` | **Mix design and test pieces** (task 6 draft): recipes, tests, pass marks, quantities, kit |
 | `docs/eg-moulds.md`, `aggregates.md`, `epoxy-options.md` | Casting notes (partly v1 sizes: use the assembly for sizes) |
 | `docs/bom.csv` + generated `bom.md`, `phase1-bom.xlsx`, `phase1-cost.md` | Parts and costs |
 | `docs/phase1-schedule.md` | Timeline and order waves |
@@ -116,7 +117,7 @@ Then: rail-seat levelling and assembly procedures, Phase 2 detailing (ATC wheel,
 ## 9. Working notes for the next session
 - **CadQuery** isn't preinstalled in the cloud container: `pip install cadquery` (about 1 minute). `python cad/v2/assembly.py` takes about 2–3 minutes (vendor STEP import + clash check at 3 positions); `--envelopes` skips the vendor models.
 - After changing the assembly, also run `cad/v2/enclosure.py`, `cad/v2/bench.py` and `cad/v2/base_cores_sketch.py` (they read `cad/v2/out/assembly/assembly_data.json` or the assembly numbers), and regenerate `cast_in_features.md` from the `features` list in `assembly_data.json` (one table per casting; no script in the repo).
-- **The PNG views in `cad/v2/out/assembly/` were not re-rendered after D-114 … D-116** (the render script isn't in the repo). The STEP files, `cast_in_features.md` and `assembly_data.json` are current.
+- **Views:** `python cad/v2/render_views.py` re-renders the PNG views in `cad/v2/out/assembly/` (about 3 minutes; run it after `assembly.py`).
 - **Rendering:** the CadQuery SVG exporter gives rotated views; use the matplotlib tessellation render instead. To view SVG drawings, screenshot them with Playwright (preinstalled).
 - `docs/bom.csv` uses **CRLF** line endings and CSV-escaped quotes (`""`): keep both when editing.
 - LinuxCNC can be tested in a Debian 12 Docker container (2.9.10 from linuxcnc.org); see `docs/linuxcnc.md` section 4.

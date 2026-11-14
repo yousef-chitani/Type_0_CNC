@@ -1,30 +1,40 @@
 #!/usr/bin/env python3
-"""Curing heat estimate for the epoxy-granite castings (open question 9).
+"""Curing heat estimate for the epoxy-granite castings with Ampreg 30 + 3X Slow (D-122).
 
-Compares each casting with a pure GlassCast 50 PLUS pour that the datasheet calls safe
-(50 mm into an insulating mould at 20 C). For a slow-curing slab losing heat by conduction,
-the centre temperature rise scales with (heat per volume) x thickness^2 / conductivity.
-Material values are typical handbook figures, marked ASSUMED: the test bricks must confirm.
+Model: the casting is one lump at a single temperature (heat spreads through 110-130 mm of EG
+in well under an hour), releasing its curing heat evenly over a period and losing heat through
+the mould faces. Peak rise = (power / loss) x (1 - exp(-period / time constant)).
+Material and surface values are typical handbook figures, marked ASSUMED: the heat brick must confirm.
 Run: python tools/cure_heat.py
 """
-epoxy_mass_frac = 0.11              # D-26 / dimensions_v2.md
-rho_epoxy, rho_stone = 1.1, 2.65    # g/cm3 (stone = quartz) ASSUMED
+import math
+epoxy_mass_frac = 0.11
 H_epoxy = 450.0                     # J per g of mixed resin + hardener, ASSUMED (typical amine epoxy)
 c_epoxy, c_stone = 1.5, 0.78        # J/gK ASSUMED
-k_epoxy, k_eg = 0.2, 1.5            # W/mK ASSUMED (epoxy granite 1.2-2 typical)
+U_open, U_mdf = 8.0, 4.0            # W/m2K: open face in still air; face behind 18 mm MDF. ASSUMED
+U_ins = 0.6                         # W/m2K: face behind 50 mm insulation. ASSUMED
 
-v_epoxy = (epoxy_mass_frac / rho_epoxy) / (epoxy_mass_frac / rho_epoxy + (1 - epoxy_mass_frac) / rho_stone)
-c_mix = epoxy_mass_frac * c_epoxy + (1 - epoxy_mass_frac) * c_stone
-dT_adiabatic_eg = epoxy_mass_frac * H_epoxy / c_mix
-dT_adiabatic_resin = H_epoxy / c_epoxy
-print(f"Epoxy volume fraction in the mix: {v_epoxy:.0%}")
-print(f"Upper limit with no heat loss at all: pure resin {dT_adiabatic_resin:.0f} K, EG mix {dT_adiabatic_eg:.0f} K")
+c_mix = epoxy_mass_frac * c_epoxy + (1 - epoxy_mass_frac) * c_stone          # J/gK
+dT_max = epoxy_mass_frac * H_epoxy / c_mix
+print(f"Upper limit with no heat loss at all: {dT_max:.0f} K")
 
-ref_t = 50.0   # mm, datasheet maximum into an insulating mould at 20 C
-for name, t in [("Portal beam, 130 mm section", 130.0), ("Base, 110 mm high", 110.0),
-                ("Rail-seat levelling pour (pure resin, a few mm)", None)]:
-    if t is None:
-        print(f"{name}: pure resin well under the 50 mm limit")
-        continue
-    ratio = v_epoxy * (t / ref_t) ** 2 * (k_epoxy / k_eg)
-    print(f"{name}: about {ratio:.2f} x the temperature rise of the safe 50 mm pure-resin pour")
+# name, mass kg, open-face area m2, MDF-face area m2, insulated-face area m2
+cases = [("Base, 80 kg, 110 thick, in its MDF mould", 80.2, 0.317, 0.317 + 0.39, 0.0),
+         ("Portal, 38 kg, 130 thick, in its MDF mould", 37.6, 0.126, 0.126 + 0.45, 0.0),
+         ("Heat brick 130 x 130 x 200, bare MDF mould", 7.8, 0.026, 0.026 + 0.104, 0.0),
+         ("Heat brick, sides wrapped in 50 mm insulation", 7.8, 0.026, 0.026, 0.104)]
+print(f"{'':48s}  loss W/K  time const h   rise if the heat comes out over 6 h / 12 h / 24 h")
+for name, kg, a_open, a_mdf, a_ins in cases:
+    UA = a_open * U_open + a_mdf * U_mdf + a_ins * U_ins
+    C = kg * 1000 * c_mix
+    tau = C / UA
+    Q = kg * 1000 * epoxy_mass_frac * H_epoxy
+    rises = [min(dT_max, Q / (h * 3600) / UA * (1 - math.exp(-h * 3600 / tau))) for h in (6, 12, 24)]
+    print(f"{name:48s}  {UA:7.1f}  {tau/3600:10.1f}     " + " / ".join(f"{r:.0f} K" for r in rises))
+
+# post-cure heater: tent 1.5 x 1.0 x 0.8 m, 50 mm foil-faced PIR (U about 0.45 W/m2K), plus 30 % for leaks
+area, U_tent = 2 * (1.5 * 1.0 + 1.5 * 0.8 + 1.0 * 0.8), 0.45
+for shed in (5, 10, 15):
+    hold = area * U_tent * 1.3 * (50 - shed)
+    ramp = (80.2 + 30) * 1000 * 1.0 * 10 / 3600      # casting + mould, about 1 J/gK, 10 K per hour
+    print(f"Post-cure at 50 C, shed at {shed} C: hold {hold:.0f} W, plus {ramp:.0f} W while ramping 10 K/h")

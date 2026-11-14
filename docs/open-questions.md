@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-09, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-123). **Phase 1 £3,327.57 is provisional until price check 12 (D-110) and the Ampreg 30 delivery cost.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-124). **Phase 1 £3,327.57 is provisional until price check 12 (D-110) and the Ampreg 30 delivery cost.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
 
 ## Before wave 1 (4 Jan 2027)
 
@@ -33,12 +33,16 @@ Resolved items are in decisions.md (D-01 … D-123). **Phase 1 £3,327.57 is pro
    Who: owner. The base STEP is `cad/v2/out/assembly/base_casting.step`.
 11. **Ampreg 30 delivery cost to SA2** (EC Fibreglass shows it only at checkout), and the Easy Composites delivery charge now that only the release agents (F12) come from there.
    Who: owner, in the basket (stop before payment).
-11c. **Review items left for the test bricks (task 6):** the tests in section 4 of `docs/review-eg-design-report.md`. Also whether to split the long insert bars if the 500 mm test strip shows too much bow.
-   Who: session writes the plan; owner casts.
+11c. **Review the test plan** (`docs/eg-mix-test-plan.md`): pass marks, number of pieces, and:
+   - **A third bag of quartz 2–5 mm** (F03 2 → 3): two bags don't cover the castings at 50 % coarse, let alone the tests.
+   - Test blend P4 with a bag of GCL 1–3 mm, or only P1–P3?
+   - Which kit you already own (scales, 500 mm straightedge + feeler gauges, torque wrench 20–50 N·m, angle grinder + diamond disc, PPE). The rest, plus the PIR board, heater and thermostat (D-124), go into a small price check.
+   - Epoxy margin: one kit covers up to 12 %; at 13 % a small top-up pack is needed.
+   Who: owner.
 12. **GCL delivery cost to SA2** for 2 × 25 kg quartz, and **Hancock & Brown** collection of 3 × 20 kg sand.
    Who: owner. Drafts in `supplier-messages.md` (sections 2 and 3).
-13. **Curing heat: confirm with a full-thickness test brick** with Ampreg 30 (it cures faster and hotter than GlassCast). Post-cure 16 h at 50 °C (D-122). Heater + thermostat to add to the BOM, sized for the post-cure temperature.
-   Who: session writes the plan (handover task 6); owner casts and logs the brick. See `curing-heat.md` (D-96).
+13. **Curing heat: confirm with the heat brick** (`eg-mix-test-plan.md`, piece C). Estimate: centre 30–50 °C (D-124).
+   Who: owner casts and logs the brick in weeks 12–13.
 
 ## Before wave 4 (29 Mar 2027)
 
