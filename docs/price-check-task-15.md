@@ -37,3 +37,13 @@ Paste the results in the reply block below.
 ```
 ID | vendor | price as listed (currency, VAT basis) | quantity it covers | stock / shipping | product URL | all-in £ | notes (spec match)
 ```
+
+## Owner's reply (15 Nov 2026)
+
+| ID | Result |
+|---|---|
+| X10 | AliExpress, £18.19 ([page](https://www.aliexpress.com/item/1005006022298533.html)). Wins over MQS £74.40 |
+| X11 | Owner messaged a seller; expected under £25. Price not final |
+| X03 | Screwfix wins: A2 1941T M5 × 20, 2 × 50 at £5.89 = £11.78 (A2, not 12.9: D-134 fallback) |
+| X05 | Owner suggests KS Tools 300.0638 precision straight edge 500 mm, Amazon ([page](https://www.amazon.co.uk/gp/product/B007XUELEQ)). Price and DIN 874 grade not given yet |
+| — | Owner plans to buy the rails, ballscrews and their accessories from one AliExpress seller: `motion-parts-one-seller.txt` |

@@ -1,0 +1,78 @@
+TYPE 0 CNC - MOTION PARTS FOR ONE ALIEXPRESS SELLER (15 Nov 2026)
+
+What the machine needs, for asking people who know and for a quote from
+one seller. Machine: small fixed-gantry mill, epoxy-granite frame,
+moving table. Travel X 570, Y 250, Z 150 mm. Aluminium cutting.
+
+
+--- 1. LINEAR RAILS: HGR20 with HGH20CA blocks (square, no flange) ---
+
+   Axis   Rails            Blocks
+   X      2 x 800 mm       4 x HGH20CA (2 per rail)
+   Y      2 x 500 mm       4 x HGH20CA
+   Z      2 x 350 mm       4 x HGH20CA
+   Total: 6 rails, 12 blocks.
+
+   Minimum lengths the design needs: X 748, Y 478, Z 318 mm.
+   Rail bolts: M5, from the top (standard HGR20 holes, 60 mm pitch).
+
+
+--- 2. BALLSCREWS: DFU1605 (16 mm, 5 mm lead), with end supports ---
+
+   Axis   Overall length (end to end)   Must be at least
+   X      850 mm                        823 mm
+   Y      600 mm                        582 mm
+   Z      350 mm                        about 350 mm
+
+   Each with:
+   - BK12 (fixed end) + BF12 (floating end) supports
+   - Ends machined to standard BK12 / BF12
+   - X screw: drive end (BK12 side) needs a 10 mm stub about 35 mm
+     long (it carries a belt pulley and an extra outboard bearing).
+   - Nut housing for DFU1605 (DSG16H type, 52 x 40 face)
+
+
+--- 3. DRIVE ACCESSORIES (if the same seller has them) ---
+
+   - 4 x HTD-5M pulleys, 20 teeth, 15 mm belt, 10 mm bore
+     (X and Y are belt-driven 1:1)
+   - HTD-5M 15 mm closed belts: 1 x about 375 mm, 1 x about 525 mm
+   - 1 x KFL000 flange bearing, 10 mm bore (X screw outboard support)
+   - 1 x coupling 10 mm to 10 mm, about D26 x L35 (Z axis only,
+     motor straight onto the screw)
+   - 1 x motor mount NEMA 24 to BK12 (Z axis). Motor has 4 holes on a
+     50 mm square and a 36 mm pilot. Not the 47.1 mm NEMA 23 pattern.
+
+
+--- WHAT IT COSTS NOW, SPLIT OVER SEVERAL SELLERS (inc VAT, Nov 2026) ---
+
+   Rails X+Y+Z (one seller)        GBP 207.37
+   Ballscrew kits (another)        GBP 229.01
+   Pulleys + belts + bearing       GBP  34.00
+   Z coupling                      GBP   7.40
+   Z motor mount                   GBP  20.63
+   Total                           GBP 498.41
+   A single seller should beat this, or come close with better quality.
+
+
+--- QUESTIONS TO ASK THE KNOWLEDGEABLE PEOPLE ---
+
+   1. Rails: which accuracy class (normal C / high H) and block preload
+      (light preload Z0 or ZA) for a small aluminium-cutting mill?
+   2. Should the two rails on each axis be a matched pair?
+   3. Ballscrews: is C7 rolled good enough, or is C5 ground worth it?
+      DFU (double nut, preloaded) vs SFU (single nut)?
+   4. Any seller known for straight rails and properly machined ends?
+      (The ends must fit BK12/BF12 bearings without slop.)
+   5. Is it worth getting blocks with seals / grease nipples fitted?
+
+
+--- QUESTIONS TO ASK THE SELLER ---
+
+   1. Is your "length" the overall screw length (end to end, ends
+      included) or only the threaded length?
+   2. Please send the end-machining drawing for BK12 / BF12.
+   3. Is the DFU nut preloaded, and what is the backlash?
+   4. Rail accuracy class and block preload?
+   5. Are the rail ends cut square and deburred?
+   6. One shipment for everything? Shipping cost to UK, SA2?
