@@ -83,4 +83,6 @@ For you: the delivery cost is the last unpriced part of F01. Shelf life must cov
 > Thanks,
 > [name]
 
+**Sent 15 Nov 2026.** Answer: (waiting)
+
 For you: the all-in DDP price must beat **£464.41** (price check 16). Need the rail accuracy class and a clear yes on the HM12-60 fitting the 50 mm / Ø36 motor face (or drilled to fit). If it won't fit, task 14 makes the mount from the 10 mm plate.

@@ -33,7 +33,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [10](10-mould-drawing.md) | Mould drawing: portal (cast first) | main session | 09 | open |
 | [11](11-mould-drawing.md) | Mould drawing: base | main session | 10 | open |
 | [12](12-printed-mould-helpers.md) | Printed mould helpers | Opus 5.5 is fine | 10 | open |
-| [13](13-supplier-messages.md) | Supplier messages | owner sends; Opus 5.5 can update the drafts | none | drafts ready (5); owner sends |
+| [13](13-supplier-messages.md) | Supplier messages | owner sends; Opus 5.5 can update the drafts | none | 6 (LiMo) sent 15 Nov; 5 to send |
 | [14](14-z-motor-mount.md) | Z motor mount | main session | 13 (seller's drawing) | open |
 | [15](15-wave-1-order-sheet.md) | Wave 1 order sheet | Opus 5.5 is fine | none | done: `docs/wave1-order-sheet.md` |
 | [16](16-wave-1-price-re-check.md) | Wave 1 price re-check | Opus 5.5 writes and applies; owner runs it | 15 | open |
