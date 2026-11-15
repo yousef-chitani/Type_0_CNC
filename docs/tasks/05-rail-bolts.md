@@ -16,3 +16,8 @@
 
 ## Done when
 The parts list has M5 × 20 with a dated price; totals agree in all files.
+
+## State (15 Nov 2026)
+- Step 1 done: the line is in `docs/price-check-task-15.md` (AliExpress list), owner's choice **grade 12.9 from AliExpress** (D-134).
+- Screwfix has M5 × 20 only in A2 stainless: 1941T, 50 pack, £5.89 inc VAT (seen 15 Nov 2026). That's the fallback.
+- Step 2 waits for the owner's AliExpress reply.

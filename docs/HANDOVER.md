@@ -1,4 +1,4 @@
-# Type 0 CNC: handover (2026-11-15, evening)
+# Type 0 CNC: handover (2026-11-15, late evening)
 
 **Branch:** `claude/charming-cori-349jm7` on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed. Earlier work: `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
@@ -18,9 +18,13 @@
 - `assembly-steps.md`, `open-questions.md`, `phase1-schedule.md` and `assembly.md` updated to match.
 - **`docs/price-check-task-15.md`** (engineer's square X10, shim stock X11), partly done with curl. Square found: Mitutoyo 916-227, grade 1, £62.00 ex VAT (£74.40 inc) at MQS, delivery unknown. Shims: only dear ones so far (Cromwell pack £224 ex VAT, RS roll £97.80 ex VAT).
 
+**Later the same evening (D-134)**
+- Price check 15 finished by curl: square Mitutoyo 916-227 grade 1 £74.40 inc (MQS); shims Cromwell T&A steel pack 12 × 6 × 12 in, 0.025–0.38 mm, £58.19 inc. The owner finds the UK precision tools too dear and checks **AliExpress** first: the list is at the end of `price-check-task-15.md` (square, shims, **M5 × 20 grade 12.9** rail bolts, optional graded straightedge).
+- Task 05: owner chose 12.9 bolts (D-134). Fallback Screwfix A2 1941T, 50 pack £5.89 inc. Not in `bom.csv` yet.
+
 **Open, in order**
-1. **Finish price check 15**, mainly the shims: AliExpress (the owner logs in), Arc Euro Trade, Tracy Tools, Chronos, Amazon UK; and a cheaper grade 2 square. Then add X10 and X11 to `bom.csv` and re-run the 4 BOM scripts.
-2. Tasks 05 (rail bolts M5 × 20), 13 (supplier messages), 15 (wave 1 order sheet).
+1. **Owner's AliExpress reply** → add X10, X11 and the new X03 (and X05 if swapped) to `bom.csv`, re-run the 4 BOM scripts, update the wave total in `phase1-schedule.md`. That finishes task 05.
+2. Tasks 13 (supplier messages), 15 (wave 1 order sheet).
 3. Task 09 (owner's Fusion pass), then 10, 11 (mould drawings).
 
 **Warnings for the next session**
@@ -83,7 +87,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-132**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-134**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 

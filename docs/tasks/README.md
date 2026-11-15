@@ -4,7 +4,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/charming-cori-349jm7`. Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-133).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-134).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). After editing it run: `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`.
 - **Castings: keep them simple.** Do not add cast-in features. Phase 1 budget £4,200; priced total £3,917.85.
@@ -25,7 +25,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [02](02-price-check.md) | Price check: granite surface plate (only if option B is wanted) | owner's local browser session; any model writes the task file | 01 (B or undecided) | not needed (D-131) |
 | [03](03-strip-the-castings-in-the-cad-option-a.md) | Strip the castings in the CAD (option A) | main session (design judgement) | 01 = A | on hold (D-131) |
 | [04](04-portal-joint.md) | Portal joint: how it comes apart and goes back | main session | 01; 03 if option A | done (D-128, D-132, D-133) |
-| [05](05-rail-bolts.md) | Rail bolts: M5 × 20 instead of M5 × 16 | any model (Opus 5.5 is fine) | none | open |
+| [05](05-rail-bolts.md) | Rail bolts: M5 × 20 instead of M5 × 16 | any model (Opus 5.5 is fine) | none | waiting: owner's AliExpress check (D-134) |
 | [06](06-trim-the-test-plan-to-the-pours-it-prote.md) | Trim the test plan to the pours it protects | main session | 01 = A (and the post-cure answer) | on hold (D-131) |
 | [07](07-curing.md) | Curing: settle the post-cure and the tent | main session | 01 | decided: post-cure and tent stay (D-129) |
 | [08](08-schedule.md) | Schedule: portal first | any model (Opus 5.5 is fine) | 01 = A | on hold (D-131) |
@@ -43,7 +43,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [20](20-housekeeping-after-each-task.md) | Housekeeping after each task | any model | every task | open |
 
 ## Order
-1. Now: finish **price check 15** (`docs/price-check-task-15.md`: square and shims). Needing no decision: **05, 13, 15**.
+1. Now: the owner checks AliExpress (`docs/price-check-task-15.md`, list at the end: square, shims, M5 × 20 12.9, optional straightedge); then add X10, X11 and the new X03 to `bom.csv` (finishes 05). Needing no decision: **13, 15**.
 2. After 01: **03, 04, 06, 07, 08** (and **02** only for option B).
 3. After the Fusion pass (**09**): **10, 11, 12**, then **18**.
 4. Late December: **16**. Any time: **14, 17**. After the bench tests: **19**.

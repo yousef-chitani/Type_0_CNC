@@ -16,8 +16,21 @@ Same as price check 14: only prices seen on a live page, with the option selecte
 
 | ID | Item | Spec | Qty | Found so far (15 Nov 2026) |
 |---|---|---|---|---|
-| X10 | Engineer's square | **300 mm** long blade, hardened steel, **DIN 875 grade 1 or 2** (or BS 939 grade A/B) stated on the page. Ungraded "precision" squares don't count | 1 | **Mitutoyo 916-227, DIN 875 grade 1, 300 × 200, £62.00 ex VAT (£74.40 inc), MQS** ([page](https://mqs.co.uk/products/try-square-din-875-300x200mm-grade-1-steel-916-227)); delivery not shown; MQS minimum order £25 ex VAT. Still to check: a grade 2 square for less (Moore & Wright, RS PRO, Verum BS 939 B at B&Q: price not readable by curl) |
-| X11 | Steel shim stock | Steel or stainless sheet, **0.05, 0.1 and 0.2 mm** (0.02/0.03 and 0.5 mm welcome), about **150 × 150 mm or larger** per thickness: it's cut into 70 × 130 pieces for the portal feet and 40 × 60 for the 3 base pads. An assorted pack is fine | 1 set | **Too dear so far:** Cromwell Precision Brand stainless pack 0.05–0.50 mm, 150 × 300, 8 pieces, £224.00 ex VAT ([page](https://www.cromwell.co.uk/shop/materials-maintenance-and-standard-parts/packing-shim/stainless-shim-pack-0-05mm-0-50mm-150mmx300mm-8pc/p/PCN4153200L)); RS PRO steel shim 2.5 m roll, £97.80 ex VAT. **Still to check:** AliExpress steel/65Mn shim sheet sets (log in first), Arc Euro Trade, Tracy Tools, Chronos, Amazon UK |
+| X10 | Engineer's square | **300 mm** long blade, hardened steel, **DIN 875 grade 1 or 2** (or BS 939 grade A/B) stated on the page. Ungraded "precision" squares don't count | 1 | **Mitutoyo 916-227, DIN 875 grade 1, 300 × 200, £62.00 ex VAT (£74.40 inc), MQS** ([page](https://mqs.co.uk/products/try-square-din-875-300x200mm-grade-1-steel-916-227)); delivery at checkout only; MQS minimum order £25 ex VAT. Dearer: Moore & Wright 400/12 grade B, £117.00 ex VAT, Cromwell M&W3421011B |
+| X11 | Steel shim stock | Steel or stainless sheet, **0.05, 0.1 and 0.2 mm** (0.02/0.03 and 0.5 mm welcome), about **150 × 150 mm or larger** per thickness: it's cut into 70 × 130 pieces for the portal feet and 40 × 60 for the 3 base pads. An assorted pack is fine | 1 set | **Best UK so far: Cromwell T&A Precision steel pack, 12 sheets 6 × 12 in, 0.001–0.015 in (0.025–0.38 mm), £48.49 ex VAT (£58.19 inc), in stock** ([page](https://www.cromwell.co.uk/shop/materials-maintenance-and-standard-parts/packing-shim/packing-shim-steel-6inw-x-12inl-x-0-001-0-015in-thickness-12-pieces/p/TPN4150001Y)); delivery at checkout only. Dearer: Cromwell stainless pack 0.05–0.50 mm, 150 × 300, 8 pieces, £224.00 ex VAT ([page](https://www.cromwell.co.uk/shop/materials-maintenance-and-standard-parts/packing-shim/stainless-shim-pack-0-05mm-0-50mm-150mmx300mm-8pc/p/PCN4153200L)); RS PRO steel shim 2.5 m roll, £97.80 ex VAT. Arc Euro Trade is closing down; Tracy Tools has no shim; Chronos search needs a browser |
+
+## For the owner: AliExpress check (owner, 15 Nov: the UK prices are too much)
+
+Log in, set delivery to the UK, and for each line note the price with the option selected, the shipping and the delivery date. Search terms in quotes.
+
+| ID | Search | Must say on the page | Beat |
+|---|---|---|---|
+| X10 | "engineer square 300mm DIN875" or "90 degree square 300x200 grade 1" | 300 mm long blade, hardened steel, **DIN 875 grade 0, 1 or 2** (or "00 / 0 / 1 grade"). A plain "precision square" with no grade doesn't count | £74.40 |
+| X11 | "steel shim sheet 0.05mm" (and 0.1, 0.2), or "feeler gauge sheet set" / "shim stock assortment" | Steel or stainless, thicknesses **0.05, 0.1 and 0.2 mm** at least, sheets about **150 × 150 mm or larger** (pieces are cut to 70 × 130). Brass or plastic don't count | £58.19 |
+| X03 (task 05) | "M5x20 socket head cap screw 12.9" | **M5 × 20**, socket cap (DIN 912 / ISO 4762), **grade 12.9**, black or zinc, **100 pieces** (or packs that add up to 100). Fallback if nothing good: Screwfix A2 1941T, 2 × 50 at £5.89 | £11.78 |
+| X05 (optional) | "steel straight edge 500mm DIN874" or "knife edge straightedge 500mm" | 500 mm, steel, **DIN 874 grade 0, 1 or 2** stated. Already on the list at £115.07 (RS); swap only if graded | £115.07 |
+
+Paste the results in the reply block below.
 
 ## Reply block
 
