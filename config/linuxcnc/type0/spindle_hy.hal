@@ -1,0 +1,29 @@
+# Type 0 CNC: spindle on the Huanyang VFD via a USB-RS485 adapter and hy_vfd (D-92).
+# VFD settings (electrical.md section 6): PD001 = 2, PD002 = 2, PD163 = 1, PD164 = 1 (9,600), PD165 = 3 (8N1 RTU).
+# Run "man hy_vfd" on the PC and CHECK the pin names below with: halcmd show pin vfd
+
+loadusr -Wn vfd hy_vfd -n vfd -d [VFD]DEVICE -r [VFD]BAUD -p none -s 1 -t [VFD]ADDRESS
+
+loadrt scale names=rpm2rps
+loadrt abs names=abs-spindle
+addf abs-spindle servo-thread
+addf rpm2rps     servo-thread
+setp rpm2rps.gain 0.0166667
+
+setp vfd.enable 1
+
+# Speed command: LinuxCNC rpm -> VFD. abs() because the VFD takes direction on separate pins.
+net spindle-rpm-cmd  spindle.0.speed-out => abs-spindle.in
+net spindle-rpm-abs  abs-spindle.out     => vfd.speed-command
+net spindle-fwd      spindle.0.forward   => vfd.spindle-forward
+net spindle-rev      spindle.0.reverse   => vfd.spindle-reverse
+
+# Run only while LinuxCNC asks for it AND coolant flow is proven (D-33).
+net spindle-cmd-on                        => and-spindle.in0
+net flow-ok                               => and-spindle.in1
+net spindle-run      and-spindle.out     => vfd.spindle-on
+
+# Feedback: actual speed (rpm -> rps for LinuxCNC) and at-speed (G-code waits for it before cutting).
+net spindle-rpm-fb   vfd.spindle-speed-fb => rpm2rps.in
+net spindle-rps-fb   rpm2rps.out          => spindle.0.speed-in
+net spindle-at-speed vfd.spindle-at-speed => spindle.0.at-speed

@@ -1,5 +1,7 @@
 # EG moulds: fabrication and demoulding
 
+> **v2 (current):** the mould drawings, sizes and parts for the v2 base and portal are in [moulds.md](moulds.md). Sizes on this page are from v1. The method below (floor as the jig, release, pour and demould sequence, thermal notes, vibration table) still applies.
+
 > **Status:** draft for review. All dimensions are placeholders to make the drawings concrete. They will be fixed when we do the full layout.
 
 ![Base mould](img/base-mould.svg)

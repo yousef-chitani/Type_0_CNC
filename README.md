@@ -18,4 +18,8 @@ The project is in planning. Decisions are made one round of questions at a time.
 - [v2 design notes](docs/v2-design.md): flat-sized 3-casting machine, joints, ATC wheel
 - [Phase 1 schedule](docs/phase1-schedule.md): weeks, order waves
 - [Electrical design](docs/electrical.md): power, safety chain, 7I76EU pin map, VFD settings
+- [LinuxCNC config](docs/linuxcnc.md): starter config, latency test, bench-test procedure (`config/linuxcnc/type0/`)
+- [Timber bench](docs/bench.md): knock-down bench, cut list, drawings
+- [Moulds (v2)](docs/moulds.md): base and portal mould drawings, insert bars, parts
+- [EG mix and test bricks](docs/eg-mix.md): void test, 3 test bricks, mixing, curing heat checks
 - [**Handover**](docs/HANDOVER.md): start here

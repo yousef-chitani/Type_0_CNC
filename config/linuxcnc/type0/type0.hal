@@ -1,0 +1,170 @@
+# Type 0 CNC: main HAL file (task 2, D-92). Pin map: docs/electrical.md section 4.
+# [HMOT](BOARD) and [HMOT](FIELD) come from type0.ini. CHECK the names with: halcmd show pin hm2
+
+loadrt [KINS]KINEMATICS
+loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS
+loadrt hostmot2
+loadrt hm2_eth board_ip=[HMOT]BOARD_IP config="num_encoders=0 num_pwmgens=0 num_stepgens=5 sserial_port_0=0XXXXX"
+setp hm2_[HMOT](BOARD).0.watchdog.timeout_ns [HMOT]WATCHDOG_NS
+
+loadrt pid names=pid.x,pid.y,pid.z
+loadrt not names=not-flow,not-cool-fault
+loadrt and2 names=and-spindle,and-flowloss,and-estop
+loadrt timedelay names=td-brake,td-drive,td-flowloss
+
+addf hm2_[HMOT](BOARD).0.read      servo-thread
+addf motion-command-handler        servo-thread
+addf motion-controller             servo-thread
+addf pid.x.do-pid-calcs            servo-thread
+addf pid.y.do-pid-calcs            servo-thread
+addf pid.z.do-pid-calcs            servo-thread
+addf not-flow                      servo-thread
+addf not-cool-fault                servo-thread
+addf and-spindle                   servo-thread
+addf and-flowloss                  servo-thread
+addf and-estop                     servo-thread
+addf td-brake                      servo-thread
+addf td-drive                      servo-thread
+addf td-flowloss                   servo-thread
+addf hm2_[HMOT](BOARD).0.write     servo-thread
+
+# ---------------------------------------------------------------- X (joint 0, stepgen 00, TB2 ch 0)
+setp pid.x.Pgain     [JOINT_0]P
+setp pid.x.Igain     [JOINT_0]I
+setp pid.x.Dgain     [JOINT_0]D
+setp pid.x.bias      [JOINT_0]BIAS
+setp pid.x.FF0       [JOINT_0]FF0
+setp pid.x.FF1       [JOINT_0]FF1
+setp pid.x.FF2       [JOINT_0]FF2
+setp pid.x.deadband  [JOINT_0]DEADBAND
+setp pid.x.maxoutput [JOINT_0]MAX_OUTPUT
+setp pid.x.error-previous-target true
+
+setp hm2_[HMOT](BOARD).0.stepgen.00.dirsetup        [JOINT_0]DIRSETUP
+setp hm2_[HMOT](BOARD).0.stepgen.00.dirhold         [JOINT_0]DIRHOLD
+setp hm2_[HMOT](BOARD).0.stepgen.00.steplen         [JOINT_0]STEPLEN
+setp hm2_[HMOT](BOARD).0.stepgen.00.stepspace       [JOINT_0]STEPSPACE
+setp hm2_[HMOT](BOARD).0.stepgen.00.position-scale  [JOINT_0]SCALE
+setp hm2_[HMOT](BOARD).0.stepgen.00.step_type       0
+setp hm2_[HMOT](BOARD).0.stepgen.00.control-type    1
+setp hm2_[HMOT](BOARD).0.stepgen.00.maxaccel        [JOINT_0]STEPGEN_MAXACCEL
+setp hm2_[HMOT](BOARD).0.stepgen.00.maxvel          [JOINT_0]STEPGEN_MAXVEL
+
+net x-pos-cmd    joint.0.motor-pos-cmd => pid.x.command
+net x-vel-cmd    joint.0.vel-cmd       => pid.x.command-deriv
+net x-pos-fb     hm2_[HMOT](BOARD).0.stepgen.00.position-fb => pid.x.feedback joint.0.motor-pos-fb
+net x-output     pid.x.output => hm2_[HMOT](BOARD).0.stepgen.00.velocity-cmd
+net x-enable     joint.0.amp-enable-out => hm2_[HMOT](BOARD).0.stepgen.00.enable pid.x.enable
+
+# ---------------------------------------------------------------- Y (joint 1, stepgen 01, TB2 ch 1)
+setp pid.y.Pgain     [JOINT_1]P
+setp pid.y.Igain     [JOINT_1]I
+setp pid.y.Dgain     [JOINT_1]D
+setp pid.y.bias      [JOINT_1]BIAS
+setp pid.y.FF0       [JOINT_1]FF0
+setp pid.y.FF1       [JOINT_1]FF1
+setp pid.y.FF2       [JOINT_1]FF2
+setp pid.y.deadband  [JOINT_1]DEADBAND
+setp pid.y.maxoutput [JOINT_1]MAX_OUTPUT
+setp pid.y.error-previous-target true
+
+setp hm2_[HMOT](BOARD).0.stepgen.01.dirsetup        [JOINT_1]DIRSETUP
+setp hm2_[HMOT](BOARD).0.stepgen.01.dirhold         [JOINT_1]DIRHOLD
+setp hm2_[HMOT](BOARD).0.stepgen.01.steplen         [JOINT_1]STEPLEN
+setp hm2_[HMOT](BOARD).0.stepgen.01.stepspace       [JOINT_1]STEPSPACE
+setp hm2_[HMOT](BOARD).0.stepgen.01.position-scale  [JOINT_1]SCALE
+setp hm2_[HMOT](BOARD).0.stepgen.01.step_type       0
+setp hm2_[HMOT](BOARD).0.stepgen.01.control-type    1
+setp hm2_[HMOT](BOARD).0.stepgen.01.maxaccel        [JOINT_1]STEPGEN_MAXACCEL
+setp hm2_[HMOT](BOARD).0.stepgen.01.maxvel          [JOINT_1]STEPGEN_MAXVEL
+
+net y-pos-cmd    joint.1.motor-pos-cmd => pid.y.command
+net y-vel-cmd    joint.1.vel-cmd       => pid.y.command-deriv
+net y-pos-fb     hm2_[HMOT](BOARD).0.stepgen.01.position-fb => pid.y.feedback joint.1.motor-pos-fb
+net y-output     pid.y.output => hm2_[HMOT](BOARD).0.stepgen.01.velocity-cmd
+net y-enable     joint.1.amp-enable-out => hm2_[HMOT](BOARD).0.stepgen.01.enable pid.y.enable
+
+# ---------------------------------------------------------------- Z (joint 2, stepgen 02, TB2 ch 2, brake motor)
+setp pid.z.Pgain     [JOINT_2]P
+setp pid.z.Igain     [JOINT_2]I
+setp pid.z.Dgain     [JOINT_2]D
+setp pid.z.bias      [JOINT_2]BIAS
+setp pid.z.FF0       [JOINT_2]FF0
+setp pid.z.FF1       [JOINT_2]FF1
+setp pid.z.FF2       [JOINT_2]FF2
+setp pid.z.deadband  [JOINT_2]DEADBAND
+setp pid.z.maxoutput [JOINT_2]MAX_OUTPUT
+setp pid.z.error-previous-target true
+
+setp hm2_[HMOT](BOARD).0.stepgen.02.dirsetup        [JOINT_2]DIRSETUP
+setp hm2_[HMOT](BOARD).0.stepgen.02.dirhold         [JOINT_2]DIRHOLD
+setp hm2_[HMOT](BOARD).0.stepgen.02.steplen         [JOINT_2]STEPLEN
+setp hm2_[HMOT](BOARD).0.stepgen.02.stepspace       [JOINT_2]STEPSPACE
+setp hm2_[HMOT](BOARD).0.stepgen.02.position-scale  [JOINT_2]SCALE
+setp hm2_[HMOT](BOARD).0.stepgen.02.step_type       0
+setp hm2_[HMOT](BOARD).0.stepgen.02.control-type    1
+setp hm2_[HMOT](BOARD).0.stepgen.02.maxaccel        [JOINT_2]STEPGEN_MAXACCEL
+setp hm2_[HMOT](BOARD).0.stepgen.02.maxvel          [JOINT_2]STEPGEN_MAXVEL
+
+net z-pos-cmd    joint.2.motor-pos-cmd => pid.z.command
+net z-vel-cmd    joint.2.vel-cmd       => pid.z.command-deriv
+net z-pos-fb     hm2_[HMOT](BOARD).0.stepgen.02.position-fb => pid.z.feedback joint.2.motor-pos-fb
+net z-output     pid.z.output => hm2_[HMOT](BOARD).0.stepgen.02.velocity-cmd
+net z-enable     joint.2.amp-enable-out => hm2_[HMOT](BOARD).0.stepgen.02.enable pid.z.enable
+
+# Stepgens 03 (Phase 2 ATC wheel) and 04 (spare) are loaded but not used.
+
+# ---------------------------------------------------------------- Home switches (TB6 IN0-IN2, PNP NO)
+# Inputs read true when the sensor sees the flag. Use input-0N-not if the flag is the other way round.
+net x-home  hm2_[HMOT](BOARD).0.[HMOT](FIELD).input-00 => joint.0.home-sw-in
+net y-home  hm2_[HMOT](BOARD).0.[HMOT](FIELD).input-01 => joint.1.home-sw-in
+net z-home  hm2_[HMOT](BOARD).0.[HMOT](FIELD).input-02 => joint.2.home-sw-in
+# No hard limits (D-91): soft limits only, set in the INI.
+
+# ---------------------------------------------------------------- Drive alarms (TB6 IN4-IN6) -> amp fault
+# CHECK CL57T ALM polarity. As written, input HIGH = alarm. If a healthy drive reads high, use input-0N-not.
+net x-alarm hm2_[HMOT](BOARD).0.[HMOT](FIELD).input-04 => joint.0.amp-fault-in
+net y-alarm hm2_[HMOT](BOARD).0.[HMOT](FIELD).input-05 => joint.1.amp-fault-in
+net z-alarm hm2_[HMOT](BOARD).0.[HMOT](FIELD).input-06 => joint.2.amp-fault-in
+
+# ---------------------------------------------------------------- Drive enable + Z brake (TB6 OUT0, OUT1)
+# All three drives share one enable output (D-91). joint.0.amp-enable-out goes true/false with "machine on".
+# Drives:  on at once, off DRIVE_OFF_DELAY after the brake drops (Z doesn't sag while the brake bites).
+# Brake:   released RELEASE_DELAY after the drives come on, engaged at once on machine off.
+net x-enable => td-drive.in td-brake.in
+setp td-drive.on-delay  0
+setp td-drive.off-delay [BRAKE]DRIVE_OFF_DELAY
+setp td-brake.on-delay  [BRAKE]RELEASE_DELAY
+setp td-brake.off-delay 0
+net drives-enable  td-drive.out => hm2_[HMOT](BOARD).0.[HMOT](FIELD).output-00
+net z-brake-release td-brake.out => hm2_[HMOT](BOARD).0.[HMOT](FIELD).output-01
+# CHECK CL57T ENA logic: if the drives are ENABLED when ENA is unpowered, invert the output:
+# setp hm2_[HMOT](BOARD).0.[HMOT](FIELD).output-00-invert 1
+
+# ---------------------------------------------------------------- Coolant pump + radiator fans (OUT2, OUT3)
+# The pump and fans run whenever the machine is on, so flow is proven before the spindle may start.
+net machine-is-on halui.machine.is-on => hm2_[HMOT](BOARD).0.[HMOT](FIELD).output-02 hm2_[HMOT](BOARD).0.[HMOT](FIELD).output-03
+
+# ---------------------------------------------------------------- Coolant flow interlock (IN7)
+# flow-ok gates the spindle (spindle_hy.hal). Lost flow while the spindle is commanded on for FLOW_LOSS_DELAY -> e-stop.
+net flow-ok hm2_[HMOT](BOARD).0.[HMOT](FIELD).input-07 => not-flow.in
+net flow-bad not-flow.out => and-flowloss.in0
+net spindle-cmd-on spindle.0.on => and-flowloss.in1
+net flowloss-raw and-flowloss.out => td-flowloss.in
+setp td-flowloss.on-delay  [VFD]FLOW_LOSS_DELAY
+setp td-flowloss.off-delay 0
+net cool-fault td-flowloss.out => not-cool-fault.in
+net cool-ok    not-cool-fault.out => and-estop.in1
+
+# ---------------------------------------------------------------- E-stop chain (IN3)
+# The hardwired chain (XPSAC5121 + contactor, D-35) does the real stopping. LinuxCNC follows it:
+# IN3 = contactor aux contact "machine power OK". Both must be true to leave e-stop.
+net power-ok hm2_[HMOT](BOARD).0.[HMOT](FIELD).input-03 => and-estop.in0
+net estop-ok and-estop.out => iocontrol.0.emc-enable-in
+
+# ---------------------------------------------------------------- Tool change (Phase 1: manual ER20)
+loadusr -W hal_manualtoolchange
+net tool-change      iocontrol.0.tool-change      => hal_manualtoolchange.change
+net tool-changed     iocontrol.0.tool-changed     <= hal_manualtoolchange.changed
+net tool-number      iocontrol.0.tool-prep-number => hal_manualtoolchange.number
+net tool-prepare     iocontrol.0.tool-prepare     => iocontrol.0.tool-prepared

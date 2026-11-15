@@ -11,7 +11,7 @@
  "portal_x1": 480.0,
  "portal_w": 800.0,
  "beam_bottom": 225,
- "beam_top": 355,
+ "beam_top": 375,
  "fork_z": 95,
  "x_min": -200.0,
  "x_max": 370.0,
@@ -31,11 +31,11 @@
  "foot_w": 640.0,
  "kg": {
   "base": 72.0544,
-  "portal": 34.37268636223196
+  "portal": 39.61855074779211
  },
- "kg_total": 106.42708636223196,
- "epoxy_kg_11pct": 11.706979499845517,
- "aggregate_kg": 94.72010686238644,
+ "kg_total": 111.67295074779211,
+ "epoxy_kg_11pct": 12.284024582257132,
+ "aggregate_kg": 99.38892616553498,
  "bench_top_above_floor": 785,
  "footprint": [
   840.0,

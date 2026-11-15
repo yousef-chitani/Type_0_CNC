@@ -1,17 +1,17 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,066.41** (budget £4,000). Every line priced. No eBay.
+**Phase 1 priced total: £3,065.28** (budget £4,000). **11 lines still to price:** F19, F20, F21, F22, E23, E24, T03, T04, T05, T06, T07 (see price-check-task-10.md). No eBay.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £637.12 |
+| Frame | £651.64 |
 | Motion | £1,004.77 |
 | Spindle | £489.14 |
-| Electronics | £802.55 |
+| Electronics | £786.90 |
 | Stand | £12.19 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,066.41** |
+| **Total** | **£3,065.28** |
 
 ## Frame
 
@@ -19,7 +19,7 @@
 |---|---|---|---|
 | F01 | Main EG epoxy: GlassCast 50 PLUS 15 kg | 1 kit | £255.00 |
 | F02 | Epoxy for leveling pour / grout / samples | 5 kg | £91.75 |
-| F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
+| F03 | Coarse aggregate: quartz 2-5 mm | 3 25 kg bags | £43.56 |
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
 | F07 | Steel flat bar 40 x 10 mm | 1 3 m bar | £36.00 |
@@ -34,6 +34,10 @@
 | F16 | Temperature logging (owner DIY) | 1 set | £0.00 |
 | F17 | Mixer | 1 pcs | £69.99 |
 | F18 | Silicone (Screwfix) + packing tape (AliExpress) | 1 set | £17.69 |
+| F19 | Hardboard 4 mm (mould strips) | 1 sheet | TO PRICE |
+| F20 | 68 mm round downpipe (portal core) | 1 length | TO PRICE |
+| F21 | Coupling nuts M12 × 8 + M10 × 4 | 1 lot | TO PRICE |
+| F22 | M5 × 30 bolts (mould jig bolts) | 50 pcs | TO PRICE |
 
 ## Motion
 
@@ -74,7 +78,8 @@
 | E03 | Monitor + keyboard + mouse (owner already has) | 1 set | £0.00 |
 | E04 | 48 V PSU Mean Well SDR-480-48 (DIN) | 1 pcs | £136.06 |
 | E05 | 24 V DC PSU, DIN rail (Mean Well HDR-150-24) | 1 pcs | £27.62 |
-| E22 | 5 V DC PSU, DIN rail (Mean Well MDR-10-5) | 1 pcs | £15.65 |
+| E23 | Coolant pump relay (DIN interface relay, 24 V DC coil) | 1 pcs | TO PRICE |
+| E24 | USB-RS485 adapter (VFD link) | 1 pcs | TO PRICE |
 | E06 | E-stop safety relay Schneider Preventa XPSAC5121 | 1 pcs | £84.39 |
 | E07 | Contactor with 24 V coil | 1 pcs | £26.29 |
 | E08 | E-stop buttons 2 NC (×5) | 1 set | £12.39 |
@@ -95,6 +100,11 @@
 |---|---|---|---|
 | T01 | Bench (owner-built timber) | 1 lot | £0.00 |
 | T02 | Anti-vibration feet | 4 pcs | £12.19 |
+| T03 | CLS timber 38 × 89 × 2400 (bench) | 10 lengths | TO PRICE |
+| T04 | Plywood 18 mm 2440 × 1220 (bench top) | 1 sheet | TO PRICE |
+| T05 | Plywood 12 mm 2440 × 1220 (shelf + back) | 1 sheet | TO PRICE |
+| T06 | M10 rod 5 × 1 m + 50 nuts + 50 penny washers | 1 lot | TO PRICE |
+| T07 | Wood screws, PVA glue, varnish | 1 lot | TO PRICE |
 
 ## Metrology
 

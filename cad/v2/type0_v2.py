@@ -12,15 +12,15 @@ P = dict(
     travel_x_work=400, travel_y=250, travel_z=150, vise=100, nose_clear=180,   # D-79: work area 400 x 250
     table_x=460, table_y=330, table_t=25,
     rail_w=20, rail_h=17.5, block_h=30, block_l=77.5,          # HGR20/HGH20CA VERIFY
-    y_rail_spacing=280, y_block_pitch=150, x_rail_spacing=80, x_block_pitch=100,   # D-80
+    y_rail_spacing=280, y_block_pitch=150, x_rail_spacing=100, x_block_pitch=100,   # D-80, D-94 (X 100 apart)
     z_rail_spacing=80, z_block_pitch=90, saddle_w=180,
     nut_len=90, ends_len=45, screw_margin=20,                  # DFU1605 + BK/BF12 VERIFY
     spindle_d=80, spindle_len=213,                             # ER20 80x213 (ATC about 300)
-    h=110, spine_w=320, upright_w=70, portal_d=130, beam_h=130, beam_front=110,
+    h=110, spine_w=320, upright_w=70, portal_d=130, beam_h=150, beam_front=110,   # D-94: beam 150
     leg_clear=20, foot_back_bar=60, opening_h=225,
     wheel_pockets=8, pocket_pitch=70, wheel_gap=20, wheel_t=60,
     bench_top_to_table=None, table_top_above_floor=950,
-    eg_density=2300, pvc_core_d=50, pvc_cores=2,
+    eg_density=2300, pvc_core_d=68, pvc_cores=1,   # D-95: one 68 mm round downpipe (was 2 x 50, D-74)
 )
 
 def derive(p):
@@ -108,7 +108,7 @@ def report():
          f"| ATC wheel | dia {r(d['wheel_d'])}, {p['wheel_pockets']} pockets, pickup at X {r(d['pickup_x'])}, fork plane Z {r(d['fork_z'])} |", "",
          "## Castings", "| Casting | Size (mm) | Mass |", "|---|---|---|",
          f"| Base (T-shape: spine {p['spine_w']} wide x {r(d['foot_y1']-d['spine_y0'])} long, rear cross-piece {r(d['foot_w'])} x {r(d['foot_y1']-d['foot_y0'])}), {p['h']} high | one piece, 2-person lift | {d['kg']['base']:.1f} kg |",
-         f"| Gantry portal ({p['pvc_cores']} x {p['pvc_core_d']} mm PVC cores) | {r(d['portal_w'])} W x {r(d['beam_top'])} H x {p['portal_d']} D | {d['kg']['portal']:.1f} kg |",
+         f"| Gantry portal ({p['pvc_cores']} x {p['pvc_core_d']} mm PVC core) | {r(d['portal_w'])} W x {r(d['beam_top'])} H x {p['portal_d']} D | {d['kg']['portal']:.1f} kg |",
          f"| **Total** | | **{d['kg_total']:.1f} kg** |",
          f"| Epoxy at 11% / aggregate at 89% | | {d['epoxy_kg_11pct']:.1f} / {d['aggregate_kg']:.1f} kg |", "",
          "## Rails and screws (minimum)", "| Axis | Rail | Screw |", "|---|---|---|",
