@@ -18,7 +18,7 @@ Full list: [bom.csv](bom.csv). **117 line items, 117 priced.** Prices were read 
 | Fixings | 2 | 2 | £70.47 |
 | **All** | **117** | **117** | **£5,341.72** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£5,341.72**. Not priced yet: .
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,341.72**. Not priced yet: .
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |

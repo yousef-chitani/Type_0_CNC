@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-09, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-126). **Phase 1 is £3,917.85, every line priced (D-126); the Ampreg and GCL delivery costs are not in it.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-127). **Phase 1 is £3,917.85, every line priced (D-126); the Ampreg and GCL delivery costs are not in it.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
 
 ## Before wave 1 (4 Jan 2027)
 
@@ -17,8 +17,6 @@ Resolved items are in decisions.md (D-01 … D-126). **Phase 1 is £3,917.85, ev
    Who: owner (Fusion 360).
 5. **Z motor mount (M13):** ask the AliExpress seller for the HM12-60 drawing (`supplier-messages.md` section 4). It must have 4 holes on a 50 mm square and a Ø36 pilot. If not, the session designs a mount from the 10 mm plate.
    Who: owner sends the message.
-5a. **Budget:** Phase 1 is **£3,917.85** of £4,000 before the Ampreg and GCL delivery charges. Decide whether to raise the budget or cut something (largest new lines: straightedge £115.07, PIR board £135.00, plates +£100).
-   Who: owner.
 5b. **Glove size** for the nitrile gloves (X09), and check the torque wrench stock (none in the Swansea stores on 15 Nov; collect next day).
    Who: owner, at order time.
 
@@ -81,6 +79,7 @@ Resolved items are in decisions.md (D-01 … D-126). **Phase 1 is £3,917.85, ev
     Who: owner, B&Q website stock checker.
 
 ## Closed since the last list
+- Budget raised to £4,200 (D-127).
 - Price checks 12 and 14 applied (D-126).
 - Price check 13: Ampreg 30 + 3X Slow chosen (D-122); F20 priced; hand tamping first, no vibration motor or speed controller (D-123).
 - Base pads lift the machine 10 mm: accepted, enclosure unchanged, top gap 30 mm (D-121).

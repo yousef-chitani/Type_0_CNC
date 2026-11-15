@@ -11,7 +11,7 @@ price = lambda r: float(r["price_gbp"] or 0)
 unpriced = [r["id"] for r in rows if not r["price_gbp"].strip()]
 total = sum(price(r) for r in rows)
 L = ["# Phase 1 cost (generated from bom.csv)", "",
-     f"**Phase 1 priced total: £{total:,.2f}** (budget £4,000). "
+     f"**Phase 1 priced total: £{total:,.2f}** (budget £4,200, D-127). "
      + ("Every line priced." if not unpriced else f"Not priced yet: {', '.join(unpriced)}.") + " No eBay.", "",
      "Regenerate with `python tools/gen_phase1_cost.py`.", "",
      "| Subsystem | £ |", "|---|---|"]

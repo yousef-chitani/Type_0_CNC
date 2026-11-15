@@ -24,7 +24,7 @@ Full list: [bom.csv](bom.csv). **{len(rows)} line items, {sum(pc.values())} pric
 """ + "\n".join(f"| {k} | {cnt[k]} | {pc[k]} | £{tot[k]:,.2f} |" for k in cnt) + f"""
 | **All** | **{len(rows)}** | **{sum(pc.values())}** | **£{grand:,.2f}** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£{grand:,.2f}**. Not priced yet: {', '.join(r['id'] for r in unpriced)}.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£{grand:,.2f}**. Not priced yet: {', '.join(r['id'] for r in unpriced)}.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |

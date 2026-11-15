@@ -15,4 +15,4 @@
 | Enclosure | Full enclosure | Also keeps chips out of the rack |
 | Air | Existing compressor | ATC tool release needs about 6 bar or more |
 | Site | Garage, on a heavy stand built by the owner | Frame mass budget about 200–350 kg |
-| Budget | **Phase 1 ≤ £4,000** (frame, motion, electronics, ER20 spindle). Phases 2 (ATC spindle, air, enclosure) and 3 (tool rack) budgeted later | D-66, D-68 |
+| Budget | **Phase 1 ≤ £4,200** (D-127) (frame, motion, electronics, ER20 spindle). Phases 2 (ATC spindle, air, enclosure) and 3 (tool rack) budgeted later | D-66, D-68 |

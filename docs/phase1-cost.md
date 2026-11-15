@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,917.85** (budget £4,000). Every line priced. No eBay.
+**Phase 1 priced total: £3,917.85** (budget £4,200, D-127). Every line priced. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 

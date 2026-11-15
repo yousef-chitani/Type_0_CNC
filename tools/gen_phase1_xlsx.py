@@ -40,7 +40,7 @@ end=start+len(rows)-1; tr=end+2
 def put(r,c,v,bold=False,fmt='£#,##0.00',col=None):
     cell=ws.cell(row=r,column=c,value=v); cell.font=F(bold=bold,color=col) if col else F(bold=bold); cell.number_format=fmt
 put(tr,7,"Phase 1 total",True); put(tr,8,f"=SUM(H{start}:H{end})",True); put(tr,15,f"=SUM(O{start}:O{end})",True)
-put(tr+1,7,"Budget (D-68)"); put(tr+1,8,4000,col="0000FF")
+put(tr+1,7,"Budget (D-127)"); put(tr+1,8,4200,col="0000FF")
 put(tr+2,7,"Remaining",True); put(tr+2,8,f"=H{tr+1}-H{tr}",True,'£#,##0.00;(£#,##0.00)')
 put(tr+3,7,"Bought so far (lines marked Y)"); put(tr+3,8,f'=SUMIF(N{start}:N{end},"Y",H{start}:H{end})')
 for i,w in enumerate([6,12,30,6,10,40,34,11,16,16,16,40,11,10,12],1): ws.column_dimensions[get_column_letter(i)].width=w
