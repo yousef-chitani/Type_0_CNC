@@ -77,3 +77,9 @@ Put the results here, compare the all-in total with £498.41, and ask the owner 
 > Questions: What is the total shipping cost to the UK for all of this in one shipment, and how long? Is your "length" the overall length or the threaded length? Please send the end-machining drawing. Rail accuracy class (C or H) and block preload (Z0 or ZA)? Are rail ends cut square and deburred? Thank you.
 
 **Next:** owner decides. Nothing in `bom.csv` changed. If the owner wants the rails from HL Motion: send the message first, then record a decision (D-136) and update `bom.csv` lines M01–M03.
+
+---
+
+## Limo Bearing (limobearing.com), 15 Nov 2026: blocked
+
+The owner asked for limobearing.com by curl, no browser. **Every URL returns 403** with a JavaScript bot check ("Checking your browser before accessing"): `/`, `/products.json`, `/wp-json/wc/store/products`, `/sitemap.xml`, `/robots.txt`. The site runs on Hostinger Website Builder (`server: hcdn`). Curl cannot pass the check without defeating it, so **no prices**. Options: the owner opens the site and copies the prices for the lines above, or asks the seller by email using the HL Motion draft (same questions).
