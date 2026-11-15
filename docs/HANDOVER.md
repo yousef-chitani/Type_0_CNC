@@ -2,6 +2,8 @@
 
 **Branch:** `claude/charming-cori-349jm7` on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed. Earlier work: `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
+> **Start with `docs/tasks/README.md`.** The work is split into 20 small tasks, one per session, each listing the only files to read. This handover is background.
+
 ## 1. What the project is
 A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite (EG) frame**, **LinuxCNC + Mesa 7I76EU**, closed-loop NEMA 24 steppers, and (Phase 2) a **Jianken ISO20 ATC spindle** with an 8-pocket ferris-wheel tool changer. Inspiration: Bootstrap Bill. The owner is in **Swansea, UK**, builds in a **shed**, and must later move it into an **upstairs flat**: pieces ≤ about 40 kg (the base is a 2-person lift).
 

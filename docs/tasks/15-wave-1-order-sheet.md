@@ -1,0 +1,17 @@
+# Task 15: Wave 1 order sheet
+
+**Start:** branch `claude/charming-cori-349jm7`. Read `docs/tasks/README.md` (rules, 1 page), then only the files listed below. Do not read the whole repo.
+
+**Who:** Opus 5.5 is fine
+**Depends on:** none
+
+## Read
+- docs/bom.csv
+- docs/phase1-schedule.md (wave table)
+- docs/open-questions.md (section "Before wave 1")
+
+## Do
+1. Write `docs/wave1-order-sheet.md`: one table per vendor with ID, item, quantity, option to select, last price and date, link, a tick column. List the open checks beside the lines they affect.
+
+## Done when
+Every wave 1 ID appears once; the sheet total equals the wave 1 total.

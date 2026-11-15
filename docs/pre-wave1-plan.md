@@ -1,5 +1,7 @@
 # Things to iron out before wave 1 (14 Nov 2026 → 4 Jan 2027)
 
+> **15 Nov:** the work is now tracked as individual tasks in [`docs/tasks/`](tasks/README.md). This week plan is kept for the dates only.
+
 Written 9 Nov 2026. Seven weeks, each starting on a Saturday. **You** = owner; **Session** = Claude. Nothing here needs money before 4 January. Sources: `open-questions.md`, `HANDOVER.md` section 6, `review-eg-design-report.md` section 4.
 
 The order matters for two reasons. Your Fusion pass blocks the mould drawings, so it starts early. Wave 1 is electrics, motors, the spindle kit and the cooling loop, so everything on that order must be settled by the last week.

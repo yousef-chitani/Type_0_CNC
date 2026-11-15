@@ -1,0 +1,17 @@
+# Task 09: Owner's Fusion pass and feeding it back
+
+**Start:** branch `claude/charming-cori-349jm7`. Read `docs/tasks/README.md` (rules, 1 page), then only the files listed below. Do not read the whole repo.
+
+**Who:** owner, then main session
+**Depends on:** 03
+
+## Read
+- docs/assembly.md (VERIFY list)
+- cad/v2/out/assembly/type0_assembly.step
+
+## Do
+1. Owner: open the STEP in Fusion, detail brackets, plates and sensor mounts, work through the VERIFY list, save the STEP to `cad/v2/in/`.
+2. Session: put the changes into `assembly.py`, re-run everything as in task 03.
+
+## Done when
+The assembly matches the owner's file with no clashes.
