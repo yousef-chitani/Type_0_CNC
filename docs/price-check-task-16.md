@@ -102,3 +102,30 @@ The owner saved the product page from a browser ("DFU1605 2005 2505 2510 Double 
 **All-in, inc 20 % VAT on goods + shipping:** **£200.77** if it falls in the 2.5–5 kg band, **£237.07** if 5–10 kg, against **£229.01** now (AliExpress). So it is about the same money, for a stated C7 grade, a stated lead error, zero axial play by default and light preload available. Before ordering: ask the shipping weight and the UK DDP price, whether the X stub costs extra, and ask for P2.
 
 Related products on the same page (not checked against the spec): integrated stepper motor mount $18.86, flexible coupling $2.86, nut housing $3.69, EK/EF supports $9.43. No pulleys, belts or KFL000 seen. **Nothing in `bom.csv` changed.**
+
+### LiMo: rails, Z mount, coupling, housing (owner's saved pages, 15 Nov 2026)
+
+Prices from each page's variant data (USD, ex VAT, all `is_available: true`).
+
+| ID | LiMo product, option | price | notes |
+|---|---|---|---|
+| M01 | Linear Guide Set HGH15 20 25 30: **HGH20CA, 800 mm** (2 rails + 4 blocks) | $49.38 | preload **ZA (medium) by default**, Z0 / ZB on request; accuracy class **not stated**; holes symmetric to both ends; plugs included; custom length by remark |
+| M02 | same, HGH20CA, 500 mm | $40.30 | |
+| M03 | same, HGH20CA, 350 mm | $35.76 | |
+| M13 | Stepper motor integrated mount bracket **HM12-60, C7** (BK12 built in, C45 steel, deep-groove bearings; C5 = angular contact, $24.86) | $19.14 | the motor hole pattern is **not on the page**: confirm 4 holes on a 50 mm square, Ø36 pilot. Also confirm the coupling fits inside it |
+| M08 | Flexible shaft coupling **D25L35**, aluminium, polyurethane spider | $3.21 | bores by remark (D25L35: 4–14 mm), ask 10 × 10 |
+| | Aluminium nut housing DSG1605 | $7.38 | already in the DFU kits, not needed |
+
+**Whole LiMo order** (3 DFU1605 kits $152.19 + rails $125.44 + HM12-60 $19.14 + coupling $3.21) = **$299.98**, **$284.98 after the 5 % code `5OFF`** ($200+). Goods alone: **£258.67 inc VAT**.
+
+The rails make it heavy, and no page gives the weight, so the shipping band is not known (page table, DDP to USA, "similar" for Europe):
+
+| shipping | band | all-in £ (inc 20 % VAT on goods + shipping) |
+|---|---|---|
+| sea, 15–25 workdays | 10–22 kg $99 | **£348.53** |
+| air, 8–14 workdays | 10–15 kg $169 | £412.06 |
+| air | 15–20 kg $229 | £466.52 |
+
+**Against now:** the same lines (M01–M03, M05–M07, M08, M13) cost **£464.41** from several sellers. LiMo by sea saves about **£116**; by air it is about the same to £2 dearer. Pulleys, belts and the KFL000 (M15–M17, £34.00) still come from elsewhere: LiMo does not sell them.
+
+**Ask LiMo before ordering:** shipping weight and the UK DDP price (sea and air); rail accuracy class (C / H) and whether rails are matched pairs; Z0 instead of ZA is not needed (ZA is fine); HM12-60 motor face (50 mm square, Ø36 pilot?) and coupling fit inside it; X stub extra cost; P2 preload on the screws. `bom.csv` unchanged.
