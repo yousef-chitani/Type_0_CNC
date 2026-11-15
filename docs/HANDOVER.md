@@ -1,30 +1,39 @@
-# Type 0 CNC: handover (2026-11-15)
+# Type 0 CNC: handover (2026-11-15, evening)
 
 **Branch:** `claude/charming-cori-349jm7` on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed. Earlier work: `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
-> **15 Nov, later:** the owner answered the waiting questions (D-128 … D-131). The castings stay as they are; the owner's concern was picturing the assembly, now answered by **`docs/assembly-steps.md`** (pictures from `cad/v2/render_steps.py`). Section 0 below is older where it disagrees.
->
-> **Start with `docs/tasks/README.md`.** The work is split into 20 small tasks, one per session, each listing the only files to read. This handover is background.
+> **Start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
-## 0. Where the session of 9–15 Nov stopped
+## 0. Where the session of 15 Nov (evening) stopped
+
+**The owner's answers (D-128 … D-132)**
+- **D-131, task 01:** neither option A (strip the castings) nor B (granite plate). The castings keep their features. The owner said *"the cast-in features aren't the issue"*: the assembly, squaring and levelling had become hard to follow because the steps couldn't be pictured. Rule: **KIS.**
+- **D-132 (replaces the grout bed in D-128):** the portal is **bolted dry** on its 4 M12 rods. Steel shims go under a leg foot wherever a 0.04 mm feeler finds a gap. No grout, no packing tape, no stops, no dowels. The owner's rule: *a joint is either bolted or bonded for good*, so a released grout bed is out. Moves have at least 3 adults.
+- **D-128:** re-square X to Y after every move.
+- **D-129:** keep the 16 h post-cure at 50 °C and the PIR tent.
+- **D-130:** nothing from the Opus branch carries over.
 
 **Done and pushed**
-- EG design review applied: D-114 … D-127 (smaller portal cores, open 5 mm rail-seat recesses, 40 × 20 joint bars, Ampreg 30 + 3X Slow, insert preparation, 3 base pads, hand tamping, cure process, budget £4,200).
-- Price checks 12, 13 and 14 applied. **Phase 1 £3,917.85, every line priced.** Not in it: delivery for the Ampreg kit and the GCL quartz.
-- Written: `eg-mix-test-plan.md`, `curing-heat.md` (Ampreg), `portal-relocation.md`, `simplification-options.md`, `cad/v2/render_views.py`, the task files.
+- **`docs/assembly-steps.md`:** the build in 14 steps, with a picture of each made from the CAD (`python cad/v2/render_steps.py`, about 45 s, writes `cad/v2/out/assembly/steps/`). Orange = fitted in that step, grey = already fitted. Each step says what to fit, how to line it up and what to check. The point it makes: there are only three alignment jobs (flat rail seats, straight and parallel rails, square axes).
+- Task list updated: 01 answered; 02 not needed; 03, 06, 08 on hold; 07 decided.
 
-**Waiting for the owner (nothing else should move the castings until these are answered)**
-1. **Task 01: how to simplify Phase 1.** Option A (two stripped castings, portal cast first) or option B (granite plate base, about 95 kg). Recommendation: A. Also: keep the 50 °C post-cure or not.
-2. **Portal joint** (task 04): stops, dowels or re-square. Recommendation: released grout bed + two stops.
-3. Confirm that none of the four Opus-session choices carries over (68 mm core, couplers in the leg feet, 1,100 bench, bricks at 10 / 12 / 14 %). Assessment: none should.
-
-**Can start without a decision:** tasks 05 (rail bolts M5 × 20), 13 (supplier messages), 15 (wave 1 order sheet).
+**Open, in order**
+1. **The owner reads `assembly-steps.md`** and says which steps are still unclear or too fiddly. Simplify the assembly only after that, and only what the owner points at.
+2. **How to measure square in step 8:** buy an engineer's square, a diagonal test cut (needs a long caliper), or the flip method. None of these is on the parts list.
+3. **Task 04 clean-up:**
+   - remove the dowel sleeves from `assembly.py`, then re-run the dependent scripts (handover section 9);
+   - rewrite `portal-relocation.md` to the bolted-dry method only;
+   - drop the released-grout piece (F) from `eg-mix-test-plan.md`.
+4. **Shim stock** (steel, for the portal feet and the 3 base pads) is not on the parts list. It needs a price check before it's added.
+5. Still open from before: tasks 05 (rail bolts M5 × 20), 13 (supplier messages), 15 (wave 1 order sheet).
 
 **Warnings for the next session**
-- The owner asked for **simplification**: do not add cast-in features, tests or documents. Keep answers and files short.
-- **Do not merge `claude/awesome-ramanujan-by9kds`**: it forked from the 8 Nov state and its D-92 … D-98 clash with this branch.
-- The CAD still has the 2 × Ø40 cores, the ATC insert and the dowel sleeves; task 03 removes them if option A is chosen.
-- Sections 2–9 below are background and partly older than section 0; where they disagree, section 0 and the task files win.
+- **Ask before deciding** (Q&A tool). The owner corrects proposals that add steps: keep answers, documents and procedures short. No grout, glue or other half-measures in joints: either bolted or bonded.
+- **Do not merge `claude/awesome-ramanujan-by9kds`** (old design, clashing D-numbers).
+- The CAD still has the 2 × Ø40 portal cores, the ATC insert and the dowel sleeves. Only the dowel sleeves are agreed to go (D-128, D-132).
+- **Git on the owner's PC has no identity set.** Commit with `git -c user.name=Claude -c user.email=noreply@anthropic.com commit ...`; do not change their git config.
+- Section 0 of the previous handover (9–15 Nov) is replaced by this one. Sections 1–9 are background and partly older; where they disagree, section 0, `decisions.md` and the task files win. In particular, ignore the grout and dowel text in sections 2 and 6.
+- On the owner's PC (Windows), Python 3.14 + CadQuery 2.8 are installed: `cad/v2/assembly.py` and the render scripts run locally.
 
 ## 1. What the project is
 A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite (EG) frame**, **LinuxCNC + Mesa 7I76EU**, closed-loop NEMA 24 steppers, and (Phase 2) a **Jianken ISO20 ATC spindle** with an 8-pocket ferris-wheel tool changer. Inspiration: Bootstrap Bill. The owner is in **Swansea, UK**, builds in a **shed**, and must later move it into an **upstairs flat**: pieces ≤ about 40 kg (the base is a 2-person lift).
@@ -77,7 +86,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-127**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-132**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
