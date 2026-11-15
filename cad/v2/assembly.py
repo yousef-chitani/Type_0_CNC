@@ -304,15 +304,14 @@ def base_casting():
         ins = cyl("x", 20, 30, (sw / 2 - 30, yy, -45))
         INSERTS[f"base_insert_Ymotor_{yy:.0f}"] = ins
     FEATURES.append(("base", "Y motor bracket inserts", "2 x M8 nut-on-rod", f"right spine face X {sw/2:.0f}, Z -45, Y {L['y_bk_y0']+15:.0f} and {L['y_bk_y0']+55:.0f}"))
-    # portal joint: per leg 2 x M12 into a tapped insert bar + 1 dowel sleeve
+    # portal joint: per leg 2 x M12 into a tapped insert bar, bolted dry on shims (D-132)
     for side, xc in (("L", D["portal_x0"] + P["upright_w"] / 2), ("R", D["leg_r_x1"] - P["upright_w"] / 2)):
         ys = (D["portal_y0"] + 30, D["portal_y1"] - 30)
         bar = box(xc - 20, xc + 20, ys[0] - 25, ys[1] + 25, -30 - L["joint_bar_t"], -30)
         INSERTS[f"base_insert_portal_{side}"] = bar
         for yy in ys:
             b = b.cut(cyl("z", 13, 30, (xc, yy, -30)))
-        b = b.cut(cyl("z", 12, 30, (xc, (ys[0] + ys[1]) / 2, -30)))
-        FEATURES.append(("base", f"Portal joint, {side} leg", f"40 x {L['joint_bar_t']:.0f} x 120 bar tapped 2 x M12 (30 below the top), 2 x Ø8 vent holes, + Ø12 dowel sleeve (ream Ø10 after grouting)", f"X {xc:+.0f}, Y {ys[0]:.0f} / {ys[1]:.0f}, dowel Y {(ys[0]+ys[1])/2:.0f}"))
+        FEATURES.append(("base", f"Portal joint, {side} leg", f"40 x {L['joint_bar_t']:.0f} x 120 bar tapped 2 x M12 (30 below the top), 2 x Ø8 vent holes; bolted dry, steel shims under the leg foot (D-132)", f"X {xc:+.0f}, Y {ys[0]:.0f} / {ys[1]:.0f}"))
     # lifting points: 4 x M12 into the spine side faces (base is cast upside down; sides are free)
     for sx in (-1, 1):
         for yy in (s0 + 120, D["foot_y0"] - L["base_taper"] - 40):
@@ -359,12 +358,11 @@ def portal_casting():
     for zc in (L["beam_zc"] - L["core_dz"], L["beam_zc"] + L["core_dz"]):
         p = p.cut(cyl("x", L["core_d"], (D["open_x1"] - 5) - (D["open_x0"] + 5), (D["open_x0"] + 5, L["core_y"], zc)))
     FEATURES.append(("portal", "PVC cores", f"2 x Ø{L['core_d']:.0f} capped pipe, held down from a batten over the open (back) face", f"Y {L['core_y']:.0f}, Z {L['beam_zc']-L['core_dz']:.0f} / {L['beam_zc']+L['core_dz']:.0f}, X {D['open_x0']+5:.0f} to {D['open_x1']-5:.0f} (between the legs); walls: {2*L['core_dz']-L['core_d']:.0f} between the cores, {L['core_y']-L['core_d']/2-(y0+L['x_chan_depth']):.0f} to the X channel, {y1-L['core_y']-L['core_d']/2:.0f} back skin, {pz-L['beam_zc']-L['core_dz']-L['core_d']/2:.0f} top and bottom (D-114)"))
-    # joint sleeves: per leg 2 x Ø16 through the full height (M12 rod), dowel at the leg foot
+    # joint sleeves: per leg 2 x Ø16 through the full height (M12 rod); no dowel (D-132)
     for side, xc in (("L", x0 + P["upright_w"] / 2), ("R", D["leg_r_x1"] - P["upright_w"] / 2)):
         for yy in (y0 + 30, y1 - 30):
             p = p.cut(cyl("z", 16, pz + 2, (xc, yy, -1)))
-        p = p.cut(cyl("z", 12, 30, (xc, (y0 + y1) / 2, -1)))
-        FEATURES.append(("portal", f"Joint sleeves, {side} leg", "2 x Ø16 tube through the full height (M12 rod to the base bar) + Ø12 dowel sleeve 30 deep at the foot", f"X {xc:+.0f}, Y {y0+30:.0f} / {y1-30:.0f}"))
+        FEATURES.append(("portal", f"Joint sleeves, {side} leg", "2 x Ø16 tube through the full height (M12 rod to the base bar)", f"X {xc:+.0f}, Y {y0+30:.0f} / {y1-30:.0f}"))
     # ATC bracket insert on the right leg outer face (Phase 2), X motor bracket inserts on the beam top
     INSERTS["portal_insert_ATC"] = box(D["leg_r_x1"] - 10, D["leg_r_x1"], (y0 + y1) / 2 - 12.5, (y0 + y1) / 2 + 12.5, 20, 160)
     FEATURES.append(("portal", "ATC wheel bracket insert (Phase 2)", "25 x 10 x 140 bar, 2 x M8 tapped", f"right leg outer face X {D['leg_r_x1']:.0f}, Z 20 to 160 (below the overhang haunch)"))

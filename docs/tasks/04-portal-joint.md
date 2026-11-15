@@ -1,3 +1,5 @@
+> **Done 15 Nov 2026** (D-128, D-132, D-133): dowel sleeves removed from the CAD, `portal-relocation.md` rewritten to the bolted-dry method, grout piece F dropped from the test plan.
+
 # Task 04: Portal joint: how it comes apart and goes back
 
 **Start:** branch `claude/charming-cori-349jm7`. Read `docs/tasks/README.md` (rules, 1 page), then only the files listed below. Do not read the whole repo.

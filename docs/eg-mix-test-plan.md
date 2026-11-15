@@ -75,7 +75,6 @@ All use the chosen blend. Moulds are sealed MDF or melamine offcuts, screwed, wi
 | C heat brick | 130 × 130 × 200 | 7.8 kg | 2 temperature probes; one 40 × 20 × 120 bar with an M12 rod, 30 mm under the face (as in the base) |
 | D beam section | 150 × 130 × 300 | 9.7 kg | The portal beam's cross-section: 2 × Ø40 cores, the X channel former, one 25 × 10 bar and its 43 mm recess strip |
 | E rail-seat strip | 90 × 60 × 500 | 5.5 kg | One 40 × 10 × 500 bar on jig bolts, with the 55 mm recess strip running out to one side |
-| F released grout | two sawn halves of an A brick | – | One face taped, grouted together with thickened Ampreg (about 50 g): `portal-relocation.md` |
 | | **Total** | **about 34 kg** | about 4.1 kg of binder, 30 kg of aggregate |
 
 **Release test (question 3):** A1 = 4 coats of mould wax, buffed. A2 = the same wax + 1 coat of PVA. A3 = packing tape on every face + wax in the seams. A4 and the rest = whichever of the three you expect to use. Note how each one comes apart.
@@ -131,7 +130,6 @@ Sessions 1–6 fit in weeks 12–13. The strip's long test runs alongside the ca
 - Bolt a rail on at its normal torque for 2 weeks, remove it, and look for dents.
 - Pass: flat within about 0.1 mm over 500 mm with no cracks or dents. That is good enough to finish by shimming or scraping; it will not reach 0.01–0.02 mm on its own.
 
-**F released grout.** Pass: the halves part by hand, the grout stays on the untaped half, and they re-seat with no rock and no gap for the 0.04 mm feeler.
 
 **B prisms (stiffness).** Rest the prism flat (25 mm tall) on two steel rods 280 mm apart. Dial indicator under the centre. Hang 25 kg, read; hang 50 kg, read.
 - Stiffness in GPa = 2.15 ÷ (extra deflection in mm between 25 and 50 kg).
@@ -141,7 +139,7 @@ Sessions 1–6 fit in weeks 12–13. The strip's long test runs alongside the ca
 
 ## 9. Quantities against what is on the parts list
 
-| | Castings | Tests | Seats + grout | Total | Bought | Margin |
+| | Castings | Tests | Rail seats | Total | Bought | Margin |
 |---|---|---|---|---|---|---|
 | Binder at 11 % | 13.0 kg | 4.3 kg | 2.5 kg | 19.8 kg | 22.68 kg | 2.9 kg |
 | Binder at 13 % | 15.3 kg | 4.7 kg | 2.5 kg | 22.5 kg | 22.68 kg | **0.2 kg: none in practice** |

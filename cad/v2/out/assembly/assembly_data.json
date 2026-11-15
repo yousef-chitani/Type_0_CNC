@@ -52,8 +52,8 @@
   "x_screw_len": 823.2
  },
  "kg": {
-  "base_casting": 80.23489627628871,
-  "portal_casting": 37.57334595792025
+  "base_casting": 80.25050370859172,
+  "portal_casting": 37.58843314247984
  },
  "extents": {
   "x0": -320.0,
@@ -115,14 +115,14 @@
   [
    "base",
    "Portal joint, L leg",
-   "40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x \u00d88 vent holes, + \u00d812 dowel sleeve (ream \u00d810 after grouting)",
-   "X -285, Y 140 / 210, dowel Y 175"
+   "40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x \u00d88 vent holes; bolted dry, steel shims under the leg foot (D-132)",
+   "X -285, Y 140 / 210"
   ],
   [
    "base",
    "Portal joint, R leg",
-   "40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x \u00d88 vent holes, + \u00d812 dowel sleeve (ream \u00d810 after grouting)",
-   "X +285, Y 140 / 210, dowel Y 175"
+   "40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x \u00d88 vent holes; bolted dry, steel shims under the leg foot (D-132)",
+   "X +285, Y 140 / 210"
   ],
   [
    "base",
@@ -181,13 +181,13 @@
   [
    "portal",
    "Joint sleeves, L leg",
-   "2 x \u00d816 tube through the full height (M12 rod to the base bar) + \u00d812 dowel sleeve 30 deep at the foot",
+   "2 x \u00d816 tube through the full height (M12 rod to the base bar)",
    "X -285, Y 140 / 210"
   ],
   [
    "portal",
    "Joint sleeves, R leg",
-   "2 x \u00d816 tube through the full height (M12 rod to the base bar) + \u00d812 dowel sleeve 30 deep at the foot",
+   "2 x \u00d816 tube through the full height (M12 rod to the base bar)",
    "X +285, Y 140 / 210"
   ],
   [

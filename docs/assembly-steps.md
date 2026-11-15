@@ -65,7 +65,7 @@ Screws, motors and belts only have to line up with the carriages they drive. Tur
 ![Step 8](../cad/v2/out/assembly/steps/step_08.png)
 - **Fit:** 4 carriages and the saddle.
 - **Line up, the squaring:** this is where X is made square to Y. Slacken the 4 portal nuts slightly, turn the portal a little on the base, and tighten again. Repeat until it is square.
-- **Check:** how to measure square is **not decided yet** (see the note below).
+- **Check:** engineer's square and DTI (see the note at the end).
 
 ## Step 9: X ballscrew
 ![Step 9](../cad/v2/out/assembly/steps/step_09.png)
@@ -104,10 +104,5 @@ Screws, motors and belts only have to line up with the carriages they drive. Tur
 ## After a move (D-128, D-132)
 The portal comes off, is carried up, and goes back on its 4 rods and the same shims (mark which foot each shim came from). Then **step 8 again** (square X to Y) and **step 13** (check the tram). Nothing else needs re-doing: the rails stay bolted to their castings.
 
-## Not decided yet: how to measure square (step 8)
-There is no precision square on the parts list. Ways to do it:
-- **Buy an engineer's square** (about 300 mm, grade 0 or 1). Put it on the table, set one edge parallel to Y with the dial, then read the other edge while X moves.
-- **Test cut:** drill 4 holes at the corners of a rectangle on a plate, measure both diagonals. Equal diagonals mean square. This needs a caliper long enough for the diagonals.
-- **Flip method:** mill one edge of a plate along X and one along Y, turn the plate over and read the difference. No extra tool, but slower.
-
-The owner picks one; it goes on the parts list if it needs a tool.
+## How to measure square (step 8, D-133)
+With an **engineer's square** (X10) and the dial test indicator (X01): stand the square on the table, set its long blade parallel to Y with the DTI (run Y, tap the square until the reading stays still), then run X along the short blade. The change in the reading is how far X is out of square. Details: `portal-relocation.md`.

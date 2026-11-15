@@ -89,7 +89,7 @@ def plan():
     b += text(X(sw/2) + 6, Y(L["y_bk_y0"] + 35), "Y motor inserts", "start", "#6c3483", 9)
     b += text(X(-sw/2) - 6, Y(D["spine_y0"] + 120) + 4, "lifting point", "end", "#6c3483", 9)
     b += text(X(-sw/2) - 6, Y(D["foot_y0"] - L["base_taper"] - 40) + 4, "lifting point", "end", "#6c3483", 9)
-    b += text(X(D["portal_x0"] + 35), Y(D["portal_y0"]) + 16, "joint bar + M12 + dowel", sz=9, c="#444")
+    b += text(X(D["portal_x0"] + 35), Y(D["portal_y0"]) + 16, "joint bar + 2 x M12", sz=9, c="#444")
     b += text(X(-sw/2 - 50), Y(fy - 20), "45° taper", "end", sz=9, c="#555")
     for xc in SPINE_CORES_X:
         b += f'<line x1="{X(xc)}" y1="{Y(SPINE_Y[0]) + 34}" x2="{X(xc)}" y2="{Y(SPINE_Y[0]) + 24}" stroke="{NOTE}"/>' + text(X(xc), Y(SPINE_Y[0]) + 46, f"X {xc:+.0f}", sz=9, c=NOTE)

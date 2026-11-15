@@ -4,36 +4,33 @@
 
 > **Start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
-## 0. Where the session of 15 Nov (evening) stopped
+## 0. Where the session of 15 Nov (late evening) stopped
 
-**The owner's answers (D-128 … D-132)**
-- **D-131, task 01:** neither option A (strip the castings) nor B (granite plate). The castings keep their features. The owner said *"the cast-in features aren't the issue"*: the assembly, squaring and levelling had become hard to follow because the steps couldn't be pictured. Rule: **KIS.**
-- **D-132 (replaces the grout bed in D-128):** the portal is **bolted dry** on its 4 M12 rods. Steel shims go under a leg foot wherever a 0.04 mm feeler finds a gap. No grout, no packing tape, no stops, no dowels. The owner's rule: *a joint is either bolted or bonded for good*, so a released grout bed is out. Moves have at least 3 adults.
-- **D-128:** re-square X to Y after every move.
-- **D-129:** keep the 16 h post-cure at 50 °C and the PIR tent.
-- **D-130:** nothing from the Opus branch carries over.
+**The owner's answers (D-133)**
+- `assembly-steps.md` is clear to the owner as written. No simplification of the assembly for now.
+- Measuring square (step 8): "choose the one that makes sense". Chosen: an **engineer's square** (300 mm, DIN 875 grade 1 or 2) with the DTI. It's quick and needs no cutting, which matters because it's done after every move.
+- Earlier the same day (still current): D-128 re-square after each move; D-129 post-cure and tent stay; D-130 nothing from the Opus branch; D-131 castings keep their features; D-132 portal bolted dry on shims, no grout, no dowels.
 
 **Done and pushed**
-- **`docs/assembly-steps.md`:** the build in 14 steps, with a picture of each made from the CAD (`python cad/v2/render_steps.py`, about 45 s, writes `cad/v2/out/assembly/steps/`). Orange = fitted in that step, grey = already fitted. Each step says what to fit, how to line it up and what to check. The point it makes: there are only three alignment jobs (flat rail seats, straight and parallel rails, square axes).
-- Task list updated: 01 answered; 02 not needed; 03, 06, 08 on hold; 07 decided.
+- **Task 04 done.** Dowel sleeves removed from `assembly.py` (base 80.3 kg, portal 37.6 kg, no clashes). Re-run: `assembly.py`, `enclosure.py`, `bench.py`, `base_cores_sketch.py`; `cast_in_features.md` regenerated. `render_views.py` and `render_steps.py` were **not** re-run (the holes were under the leg feet, so the pictures don't show them).
+- `portal-relocation.md` rewritten to the bolted-dry method, one page. The old grout sketch (`relocation_sketch.py`, `portal_relocation.png`) is deleted.
+- Grout piece F dropped from `eg-mix-test-plan.md`.
+- `assembly-steps.md`, `open-questions.md`, `phase1-schedule.md` and `assembly.md` updated to match.
+- **`docs/price-check-task-15.md`** (engineer's square X10, shim stock X11), partly done with curl. Square found: Mitutoyo 916-227, grade 1, £62.00 ex VAT (£74.40 inc) at MQS, delivery unknown. Shims: only dear ones so far (Cromwell pack £224 ex VAT, RS roll £97.80 ex VAT).
 
 **Open, in order**
-1. **The owner reads `assembly-steps.md`** and says which steps are still unclear or too fiddly. Simplify the assembly only after that, and only what the owner points at.
-2. **How to measure square in step 8:** buy an engineer's square, a diagonal test cut (needs a long caliper), or the flip method. None of these is on the parts list.
-3. **Task 04 clean-up:**
-   - remove the dowel sleeves from `assembly.py`, then re-run the dependent scripts (handover section 9);
-   - rewrite `portal-relocation.md` to the bolted-dry method only;
-   - drop the released-grout piece (F) from `eg-mix-test-plan.md`.
-4. **Shim stock** (steel, for the portal feet and the 3 base pads) is not on the parts list. It needs a price check before it's added.
-5. Still open from before: tasks 05 (rail bolts M5 × 20), 13 (supplier messages), 15 (wave 1 order sheet).
+1. **Finish price check 15**, mainly the shims: AliExpress (the owner logs in), Arc Euro Trade, Tracy Tools, Chronos, Amazon UK; and a cheaper grade 2 square. Then add X10 and X11 to `bom.csv` and re-run the 4 BOM scripts.
+2. Tasks 05 (rail bolts M5 × 20), 13 (supplier messages), 15 (wave 1 order sheet).
+3. Task 09 (owner's Fusion pass), then 10, 11 (mould drawings).
 
 **Warnings for the next session**
-- **Ask before deciding** (Q&A tool). The owner corrects proposals that add steps: keep answers, documents and procedures short. No grout, glue or other half-measures in joints: either bolted or bonded.
+- **Ask before deciding** (Q&A tool). Keep answers, documents and procedures short. No grout, glue or other half-measures in joints: either bolted or bonded.
+- **Price checks: curl first** (the owner asked: the browser uses many tokens). The notes in `price-check-task-15.md` say which sites curl can read. Do not spoof browser headers to get past a bot block (RS, Amazon): use the browser with one small `get_page_text` instead.
+- **Python on Windows:** set `PYTHONUTF8=1` before running the CAD scripts, or `enclosure.py` stops with a `UnicodeEncodeError`.
 - **Do not merge `claude/awesome-ramanujan-by9kds`** (old design, clashing D-numbers).
-- The CAD still has the 2 × Ø40 portal cores, the ATC insert and the dowel sleeves. Only the dowel sleeves are agreed to go (D-128, D-132).
+- The CAD still has the 2 × Ø40 portal cores and the ATC insert (both agreed to stay for now, D-131).
 - **Git on the owner's PC has no identity set.** Commit with `git -c user.name=Claude -c user.email=noreply@anthropic.com commit ...`; do not change their git config.
-- Section 0 of the previous handover (9–15 Nov) is replaced by this one. Sections 1–9 are background and partly older; where they disagree, section 0, `decisions.md` and the task files win. In particular, ignore the grout and dowel text in sections 2 and 6.
-- On the owner's PC (Windows), Python 3.14 + CadQuery 2.8 are installed: `cad/v2/assembly.py` and the render scripts run locally.
+- Sections 1–9 are background and partly older; where they disagree, section 0, `decisions.md` and the task files win. Ignore the grout and dowel text in sections 2 and 6.
 
 ## 1. What the project is
 A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite (EG) frame**, **LinuxCNC + Mesa 7I76EU**, closed-loop NEMA 24 steppers, and (Phase 2) a **Jianken ISO20 ATC spindle** with an 8-pocket ferris-wheel tool changer. Inspiration: Bootstrap Bill. The owner is in **Swansea, UK**, builds in a **shed**, and must later move it into an **upstairs flat**: pieces ≤ about 40 kg (the base is a 2-person lift).
@@ -113,7 +110,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 
 **In progress / proposals:**
 - **Phase 1 simplification (owner request, 15 Nov):** castings and layout as simple and low-risk as possible. Two options in `docs/simplification-options.md`; waiting for the owner. Do not add features to the castings.
-- **Portal relocation** (`docs/portal-relocation.md`, sketch `cad/v2/out/portal_relocation.png`): recommendation waiting for the owner. Released grout bed + two adjustable stops behind the legs, instead of a bonded grout and blind dowels.
+- **Portal relocation** (`docs/portal-relocation.md`): decided, bolted dry on shims (D-132, D-133).
 - **Opus branch `claude/awesome-ramanujan-by9kds`: do not merge.** It forked from the 8 Nov state and redid tasks 2–5 on the old design with clashing D-numbers. This branch is the truth (owner, 15 Nov). Useful there: `cad/v2/moulds.py` as a starting point for the mould drawings.
 - **Rail bolts must be M5 × 20**, not M5 × 16, because of the 5 mm resin seat (open question 4b).
 - **Base PVC cores (not adopted yet):** 5 × Ø50 at Z −65, saving about 9.6 kg; sketch in `cad/v2/out/base_cores_plan.png`, `base_cores_sections.png` (`cad/v2/base_cores_sketch.py`). Suspension: an M8 rod through each capped core, fixed in the mould walls at core height, plus mid-span wire hold-downs from a batten; the rods are cut flush and sealed afterwards (they don't reinforce, D-120). The review found the layout sound (15 mm under the BK/BF plates). Owner to decide (maybe after the FEA, D-81).

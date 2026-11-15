@@ -2,7 +2,7 @@
 
 Everything the mould drawings (task 5) must form or hold in place. Coordinates: X right, Y back, Z up; Z 0 = base top datum; spindle axis at Y -65. Positions use the vendor models (D-111); tapers and haunches D-112/D-113; cores, recesses, joint bars and vents D-114 … D-118.
 
-Masses (epoxy granite 2,300 kg/m³): base **80.2 kg**, portal **37.6 kg**.
+Masses (epoxy granite 2,300 kg/m³): base **80.3 kg**, portal **37.6 kg**.
 
 ## Base
 
@@ -16,8 +16,8 @@ Masses (epoxy granite 2,300 kg/m³): base **80.2 kg**, portal **37.6 kg**.
 | Y BK12 insert plate | 60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern), Ø6 vent hole | under the channel floor at Y -378 |
 | Y BF12 insert plate | 60 x 30 x 10 steel, 2 x M5 tapped (VERIFY BK bolt pattern), Ø6 vent hole | under the channel floor at Y 125 |
 | Y motor bracket inserts | 2 x M8 nut-on-rod | right spine face X 170, Z -45, Y -376 and -336 |
-| Portal joint, L leg | 40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x Ø8 vent holes, + Ø12 dowel sleeve (ream Ø10 after grouting) | X -285, Y 140 / 210, dowel Y 175 |
-| Portal joint, R leg | 40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x Ø8 vent holes, + Ø12 dowel sleeve (ream Ø10 after grouting) | X +285, Y 140 / 210, dowel Y 175 |
+| Portal joint, L leg | 40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x Ø8 vent holes; bolted dry, steel shims under the leg foot (D-132) | X -285, Y 140 / 210 |
+| Portal joint, R leg | 40 x 20 x 120 bar tapped 2 x M12 (30 below the top), 2 x Ø8 vent holes; bolted dry, steel shims under the leg foot (D-132) | X +285, Y 140 / 210 |
 | Lifting points | 4 x M12 nut-on-rod, horizontal | spine sides at Z -55, Y -285 and -50 |
 
 ## Portal
@@ -32,8 +32,8 @@ Masses (epoxy granite 2,300 kg/m³): base **80.2 kg**, portal **37.6 kg**.
 | X BK12 insert plate | 30 x 60 x 10 steel, 2 x M5 tapped (VERIFY), Ø6 vent hole | behind the channel floor at X 438 |
 | X BF12 insert plate | 30 x 60 x 10 steel, 2 x M5 tapped (VERIFY), Ø6 vent hole | behind the channel floor at X -265 |
 | PVC cores | 2 x Ø40 capped pipe, held down from a batten over the open (back) face | Y 200, Z 265 / 335, X -245 to 245 (between the legs); walls: 30 between the cores, 25 to the X channel, 20 back skin, 20 top and bottom (D-114) |
-| Joint sleeves, L leg | 2 x Ø16 tube through the full height (M12 rod to the base bar) + Ø12 dowel sleeve 30 deep at the foot | X -285, Y 140 / 210 |
-| Joint sleeves, R leg | 2 x Ø16 tube through the full height (M12 rod to the base bar) + Ø12 dowel sleeve 30 deep at the foot | X +285, Y 140 / 210 |
+| Joint sleeves, L leg | 2 x Ø16 tube through the full height (M12 rod to the base bar) | X -285, Y 140 / 210 |
+| Joint sleeves, R leg | 2 x Ø16 tube through the full height (M12 rod to the base bar) | X +285, Y 140 / 210 |
 | ATC wheel bracket insert (Phase 2) | 25 x 10 x 140 bar, 2 x M8 tapped | right leg outer face X 320, Z 20 to 160 (below the overhang haunch) |
 | X motor bracket inserts | 2 x M8 nut-on-rod | beam top Z 375, X 330 / 430, Y 195 |
 | Lifting points | 2 x M12 nut-on-rod, vertical | beam top, X -200 / 320 |

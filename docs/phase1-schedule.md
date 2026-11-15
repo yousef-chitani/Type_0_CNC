@@ -19,7 +19,7 @@ Castings are planned for April–May: the epoxy needs about **20 °C** to cure, 
 | 15–16 | 12 Apr – 25 Apr | Cast the BASE (tent + thermostat at 20 °C), 48 h or more at ≥ 18 °C, post-cure 16 h at 50 °C, cool, demould (curing-heat.md) | 8 |
 | 17–18 | 26 Apr – 09 May | Cast the PORTAL, same cure and post-cure, demould. Inspect both castings | 8 |
 | 19–20 | 10 May – 23 May | Rail-seat levelling pours (base Y seats, portal X seats), cure, post-cure, measure, shim or scrape | 8 |
-| 21–22 | 24 May – 06 Jun | Y axis: rails, screw, motor, table. Portal onto the base: shim square to Y, grout, cure, ream dowels | 10 |
+| 21–22 | 24 May – 06 Jun | Y axis: rails, screw, motor, table. Portal onto the base: bolt on dry, shim the feet, square X to Y (D-132, D-133) | 10 |
 | 23–24 | 07 Jun – 20 Jun | X and Z axes: rails, screws, saddle, Z plate, brake motor, spindle clamp + spindle | 10 |
 | 25–26 | 21 Jun – 04 Jul | Machine wiring to the cabinet: motor cables, homing sensors, e-stops, spindle + cooling loop, flow switch | 10 |
 | 27–28 | 05 Jul – 18 Jul | LinuxCNC on the machine (config already written, D-92): directions, steps, homing, soft limits, spindle. Jog all axes. **Done 22 July** | 10 |
