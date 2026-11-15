@@ -8,7 +8,7 @@ Full list: [bom.csv](bom.csv). **117 line items, 117 priced.** Prices were read 
 |---|---|---|---|
 | Frame | 23 | 23 | £885.46 |
 | Motion | 17 | 17 | £1,112.15 |
-| Spindle | 9 | 9 | £1,546.00 |
+| Spindle | 9 | 9 | £1,533.95 |
 | Tool changer | 7 | 7 | £154.46 |
 | Pneumatics | 6 | 6 | £110.22 |
 | Electronics | 25 | 25 | £842.21 |
@@ -16,14 +16,14 @@ Full list: [bom.csv](bom.csv). **117 line items, 117 priced.** Prices were read 
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 7 | 7 | £298.78 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **117** | **117** | **£5,341.72** |
+| **All** | **117** | **117** | **£5,329.67** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,341.72**. Not priced yet: .
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,329.67**. Not priced yet: .
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,917.85 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,905.80 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -101,7 +101,7 @@ Lines still TO PRICE: see the list above.
 | S02 | 1 | VFD (included in the G-Penny kit, S08) | 1 pcs | 2.2 kW, 1-phase 220 V in, 3-phase 220 V out, 0-600 Hz, RS-485 Modbus-RTU stated | [product](https://www.aliexpress.com/item/32253760001.html) | Included in S08 | 0.00 | D-78. Huanyang HY: Modbus over RS-485 via LinuxCNC hy_vfd / Mesa RS-485 (D-32, D-58). Previous ZEST VFD £88.94 no longer needed |
 | S03 | 1 | 80 mm spindle clamp (included in S08) | 1 pcs | 80 mm | [product](https://www.aliexpress.com/item/32253760001.html) | Included in S08 | 0.00 | D-78 |
 | S04 | 1 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + 3 motors) | 4 × 5 m |  | [product](https://www.aliexpress.com/item/32971008305.html) | £19.03 each inc VAT, free shipping (AliExpress) | 76.12 | D-84: premium accepted. Covers E20. 16 AWG ≈ 1.3 mm² |
-| S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | Kit 220 V pump (S08) in a sealed reservoir; 240 mm radiator G1/4; 2 × 120 mm 12 V fans (in series on 24 V); 2 × 8 mm × 1/4 barbs; 60 hose clamps; brass flow switch G1/4 NO 1.5-3 L/min; 5 m 8 mm ID braided PVC hose | [product](https://www.aliexpress.com/item/1005007038307491.html) | Radiator £13.35 + basket fans £8.70, barbs £2.38, clamps £17.89 + flow switch £12.51 (AliExpress) + 8 mm ID hose £8.99 (B&Q marketplace, free delivery) | 63.82 | D-85. Flow switch: https://www.aliexpress.com/item/1005010428362103.html (contact rating not stated: check before wiring to a 7i76EU input). Hose: https://www.diy.com/departments/clear-pvc-braided-hose-food-grade-oil-water-fuel-reinforced-pipe-tube-8mm-internal-12mm-external-5m-/5060449706401_BQ.prd . Remove the 6 mm ID tube from the AliExpress basket |
+| S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | Kit 220 V pump (S08) in a 20 L lidded bucket reservoir; no radiator or fans (D-135); 2 × 8 mm × 1/4 barbs; 60 hose clamps; brass flow switch G1/4 NO 1.5-3 L/min; 5 m 8 mm ID braided PVC hose | [product](https://www.amazon.co.uk/gp/product/B07NY2GQ1P) | 20 L bucket £10.00 (owner, Amazon, 15 Nov 2026) + barbs £2.38, clamps £17.89 + flow switch £12.51 (AliExpress) + 8 mm ID hose £8.99 (B&Q marketplace, free delivery) | 51.77 | D-85. D-135: radiator and fans dropped (were £22.05). Flow switch: https://www.aliexpress.com/item/1005010428362103.html (contact rating not stated: check before wiring to a 7i76EU input). Hose: https://www.diy.com/departments/clear-pvc-braided-hose-food-grade-oil-water-fuel-reinforced-pipe-tube-8mm-internal-12mm-external-5m-/5060449706401_BQ.prd . Remove the 6 mm ID tube from the AliExpress basket |
 | S06 | 2 | ISO20 ER16 holders with pull studs | 8 pcs | ISO20-ER16. Pull studs must match the spindle drawbar | [product](https://www.aliexpress.com/item/4000141590118.html) | £6.05 inc VAT each, free shipping (AliExpress; list £22.37) | 48.40 | ISO20-ER16-35L, 0.003 mm. £6.05 may be a new-shopper deal: at list price 8 × £22.37 = £178.96. PULL STUD NOT STATED: must match Jianken. Jianken own holders £37.52-75.03 on the S01 page. DamenCNC Teknomotor €123.50 each |
 | S07 | 2 | ER16 collet set | 1 set | Precision (AA grade or better) 1-10 mm | [product](https://www.aliexpress.com/item/1005005626185405.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | AA ER16 10-piece set. Sizes not listed. AAA set £68.39 |
 | A01 | 2 | ISO20 tool forks (3D printed) | 8 pcs | 3D-printed ISO20 forks from a friend's model | [product]() | Owner sourcing (3D printed) | 0.00 | D-58. Print in PETG/ASA/PA for stiffness and heat. Check grip force and holder fit before Stage 2 |
@@ -159,9 +159,9 @@ Lines still TO PRICE: see the list above.
 | T11 | 1 | Wood screws 5 x 70, 4 x 30, 4 x 40 | 3 boxes | Leg lamination, side frames, top lamination, panels | [product](https://www.screwfix.com/p/goldscrew-pz-double-countersunk-thread-cutting-multipurpose-screws-5mm-x-70mm-100-pack/16221) | Goldscrew 5 x 70 (100) £4.29 + 4 x 30 (200) £2.89 + Silverscrew 4 x 40 (200) £3.29 inc VAT (Screwfix; Swansea stock 2026-11-08: all 3 stores, 4 x 40 only 2-3 per store) | 10.47 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
 | T12 | 1 | PVA wood glue D3/D4, 1 L | 1 pcs | Leg and joist lamination, side frames, top layers | [product](https://www.diy.com/departments/bond-it-premium-water-resistant-d4-wood-adhesive-glue-internal-external-fast-drying-white-1l/5056437400864_BQ.prd) | £11.99 inc VAT, free delivery (B&Q marketplace, Bond It D4 1 L) | 11.99 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
 | T13 | 1 | Yacht varnish 750 ml | 1 pcs | Seal the top and shelf (coolant, shed damp): 3 coats | [product](https://www.screwfix.com/p/fortress-trade-750ml-clear-gloss-solvent-based-exterior-yacht-varnish/326pc) | £11.99 inc VAT, sale (Screwfix, Fortress Trade yacht varnish 750 ml; Swansea stock 2026-11-08: 1 at Parc Tawe, 1 at Cwmdu Parc) | 11.99 | D-99. Task 3 bench (cad/v2/out/bench_cutlist.md). Order wave 2 |
-| T14 | 1 | 120 mm fan grills (3D printed) | 2 pcs | Printed 120 mm grill, 105 mm hole pitch, 3 mm, PETG (cad/v2/out/print/T14_fan_grill_120.stl) | [product]() | 3D printed, owner filament (was £6.81 AliExpress) | 0.00 | D-100. About 45 g for 2. Screws through the grill and the side panel into the fan |
+| T14 | 1 | 120 mm fan grills (dropped with the radiator fans: D-135) | 2 pcs | Printed 120 mm grill, 105 mm hole pitch, 3 mm, PETG (cad/v2/out/print/T14_fan_grill_120.stl) | [product]() | 3D printed, owner filament (was £6.81 AliExpress) | 0.00 | D-100. About 45 g for 2. Screws through the grill and the side panel into the fan |
 | T15 | 1 | Cable grommet for the bench top (3D printed) | 1 pcs | Printed: PETG frame (80 x 160 flange, fits a 70 x 150 hole) + TPU 95A slit membrane + PETG clamp ring, 4 x T11 4 x 30 screws (cad/v2/out/print/T15_*.stl) | [product]() | 3D printed, owner filament (was £11.04 B&Q marketplace) | 0.00 | D-100. About 100 g PETG + 12 g TPU |
-| T16 | 1 | Bench fit-out parts (3D printed, design pending) | 1 set | Radiator brackets, PC and reservoir holders, collet/tool rack, cable clips | [product]() | 3D printed, owner filament | 0.00 | D-100. Designed when the radiator, PC and reservoir are in hand |
+| T16 | 1 | Bench fit-out parts (3D printed, design pending) | 1 set | PC holder, collet/tool rack, cable clips | [product]() | 3D printed, owner filament | 0.00 | D-100. Designed when the radiator, PC and reservoir are in hand |
 | T17 | 1 | Base support pads (3-point) | 3 pcs | 3 x 40 x 60 x 10 steel pads cut from the F07 40 x 10 bar, on the bench top under the base: 2 under the rear cross-piece above the joists, 1 under the spine front on the centre line. Shim to level once | [product]() | From F07, no purchase | 0.00 | D-119: 3 points, so the timber bench cannot twist the base. Lifts the machine 10 mm: enclosure top gap 30, accepted (D-121) |
 | X01 | 1 | Dial test indicator + magnetic base | 1 set | For rail alignment and squaring the gantry | [product](https://www.aliexpress.com/item/1005013036061506.html) | £17.23 inc VAT, free shipping (AliExpress) | 17.23 | Lever DTI 0.01 mm + flexible base |
 | X02 | 1 | Precision level 200 mm (AliExpress) | 1 pcs | 200 mm bar level, title "0.02 mm" (per-metre not stated) | [product](https://www.aliexpress.com/item/32814850915.html) | £15.69 + £17.25 shipping (AliExpress) | 32.94 | D-84: owner choice. Sensitivity unit not confirmed |

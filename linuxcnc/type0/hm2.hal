@@ -9,7 +9,7 @@
 #   coolant-flow-ok                 (TB6 IN7, flow switch, true = flowing)
 #   board-fault                     (Mesa watchdog bit)
 # Signals used from machine.hal:
-#   drive-enable-out -> OUT0, z-brake-release -> OUT1, pump-on -> OUT2 and OUT3 (fans)
+#   drive-enable-out -> OUT0, z-brake-release -> OUT1, pump-on -> OUT2 (OUT3 spare)
 
 loadrt [KINS]KINEMATICS
 loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JOINTS num_spindles=1
@@ -108,5 +108,4 @@ setp hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-00-invert 0
 net z-brake-release  => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-01
 # OUT2: coolant pump interface relay (E23)
 net pump-on          => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-02
-# OUT3: radiator fans (run with the pump)
-net pump-on          => hm2_[HOSTMOT2]BOARD.0.7i76.0.0.output-03
+# OUT3: spare (radiator fans dropped, D-135)

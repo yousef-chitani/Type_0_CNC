@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-15, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,917.85, every line priced (D-126); the Ampreg and GCL delivery costs, the square and shims (X10, X11) and the M5 × 20 bolts are not in it yet.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell). The owner's short list is `owner-todo.txt`.
+Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,905.80, every line priced (D-126); the Ampreg and GCL delivery costs, the square and shims (X10, X11) and the M5 × 20 bolts are not in it yet.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell). The owner's short list is `owner-todo.txt`.
 
 ## Before wave 1 (4 Jan 2027)
 
@@ -29,8 +29,8 @@ Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,917.85, ev
     Who: owner, at order time.
 7. **T02 foot height** sets the leg length (bench_cutlist.md assumes 30 mm from the floor to the leg bottom). T02 is in wave 2, so cut the legs after the feet arrive.
     Who: owner, measure the feet.
-8. **Reservoir size** for the cooling loop (not chosen yet): the bench leaves about 160 wide × 300 deep × 200 high at the back right of the shelf.
-    Who: owner, when the S08 kit arrives (its pump size).
+8. **Reservoir:** 20 L bucket, no radiator (D-135). Measure it when it arrives (bench drawing assumes 300 × 300 × 370 high) and check the kit pump sits in it.
+    Who: owner.
 9. **Ballscrew "Guide Length"** (before wave 2, D-103): overall or thread length? The assembly needs **overall X 823, Y 582, Z ≈ 350** (D-111): buy X 850 / Y 600 / Z 350; still confirm the end machining. A wrong answer means unusable screws.
    Who: owner, message to the seller. Draft in `supplier-messages.md` (section 1).
 

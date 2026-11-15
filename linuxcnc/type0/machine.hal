@@ -57,7 +57,7 @@ net z-brake-release  brake-delay.out
 net drive-enable-out drive-off-delay.out
 
 # ---------------------------------------------------------------------------
-# Coolant: pump and radiator fans (both on signal pump-on) run whenever the machine is
+# Coolant: the pump (signal pump-on) runs whenever the machine is
 # on, or the spindle is on.
 # ---------------------------------------------------------------------------
 net machine-is-on    motion.motion-enabled => pump-or.in0

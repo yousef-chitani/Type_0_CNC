@@ -40,7 +40,7 @@ The hardwired chain (2 e-stops → XPSAC5121 → contactor) does the actual stop
 - **Can't enable** unless IN3 "machine power OK" (contactor aux) is on.
 - **E-stop (latched until you press e-stop reset in AXIS)** on any of: X/Y/Z drive alarm, Mesa watchdog, coolant fault, VFD link fault.
 - **Drive enable (OUT0)** follows the machine-on state. **Z brake (OUT1)** releases 0.3 s after the drives enable (so the drive is holding first). On disable, the brake engages at once and the drives stay on 0.15 s more so Z can't drop.
-- **Pump (OUT2) and radiator fans (OUT3)** run while the machine is on (or the spindle is on).
+- **Pump (OUT2)** runs while the machine is on (or the spindle is on). OUT3 is spare (no radiator, D-135).
 - **Coolant interlock:** the flow switch must be on for 2 s before the VFD is allowed to run. If the spindle is on and flow is lost: the VFD is told to stop and the feed is held at once; if it lasts 5 s → e-stop. If you start the spindle within 2 s of machine-on, it simply waits for flow.
 - **VFD link:** if the spindle is on and the VFD stops answering for 2 s → e-stop. With the spindle off, a lost link is only shown on the panel.
 - **Mesa watchdog:** if the PC stops talking to the board for 5 ms, all outputs switch off (drives disabled, brake engaged, pump relay off).
@@ -93,7 +93,7 @@ Do every step with the motors **unloaded** (couplings off), Z motor lying on the
 **C. Outputs and enable**
 8. First start only: run `halcmd show param hm2_7i76e.0.7i76.0.0` and confirm the `source` and `sink` parameters exist (they set the outputs to sourcing; without them the outputs stay off). Reset e-stop and turn the machine on in AXIS. OUT0 on: check the CL57T enable logic: the motors should hold (stiff shaft). If they go *free* when the machine is on, set `output-00-invert 1` in `hm2.hal`. The V3.0 manual suggests this will be needed (24 V on ENA with sourcing wiring = disabled).
 9. OUT1: the Z brake clicks free about 0.3 s after machine on, and grips at once at machine off. With the brake released, press an e-stop: it must grip at once (safety output 23-24, D-93).
-10. OUT2/OUT3: the pump relay and radiator fans run while the machine is on.
+10. OUT2: the pump relay runs while the machine is on.
 
 **D. Motion (couplings off)**
 11. Check every CL57T is at 1,600 pulses/rev: the V3.0 manual's factory DIP setting SW1–SW4 = on, off, on, on is 1,600. SW7 off = step/dir mode. CHECK the table in the V4.1 manual that comes with the drives.

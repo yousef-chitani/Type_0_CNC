@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,917.85** (budget £4,200, D-127). Every line priced. No eBay.
+**Phase 1 priced total: £3,905.80** (budget £4,200, D-127). Every line priced. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -8,12 +8,12 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 |---|---|
 | Frame | £885.46 |
 | Motion | £1,112.15 |
-| Spindle | £489.14 |
+| Spindle | £477.09 |
 | Electronics | £818.49 |
 | Stand | £243.36 |
 | Metrology | £298.78 |
 | Fixings | £70.47 |
-| **Total** | **£3,917.85** |
+| **Total** | **£3,905.80** |
 
 ## Frame
 
@@ -74,7 +74,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | S02 | VFD (included in the G-Penny kit, S08) | 1 pcs | £0.00 |
 | S03 | 80 mm spindle clamp (included in S08) | 1 pcs | £0.00 |
 | S04 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + 3 motors) | 4 × 5 m | £76.12 |
-| S05 | Spindle cooling loop (DIY) | 1 pcs | £63.82 |
+| S05 | Spindle cooling loop (DIY) | 1 pcs | £51.77 |
 
 ## Electronics
 
@@ -121,7 +121,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | T11 | Wood screws 5 x 70, 4 x 30, 4 x 40 | 3 boxes | £10.47 |
 | T12 | PVA wood glue D3/D4, 1 L | 1 pcs | £11.99 |
 | T13 | Yacht varnish 750 ml | 1 pcs | £11.99 |
-| T14 | 120 mm fan grills (3D printed) | 2 pcs | £0.00 |
+| T14 | 120 mm fan grills (dropped with the radiator fans: D-135) | 2 pcs | £0.00 |
 | T15 | Cable grommet for the bench top (3D printed) | 1 pcs | £0.00 |
 | T16 | Bench fit-out parts (3D printed, design pending) | 1 set | £0.00 |
 | T17 | Base support pads (3-point) | 3 pcs | £0.00 |

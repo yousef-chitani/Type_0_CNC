@@ -28,7 +28,7 @@ The order matters for two reasons. Your Fusion pass blocks the mould drawings, s
 - Decide the **base PVC cores** (5 × Ø50, about −9.6 kg) or leave the base solid. Your FEA can wait, but the decision changes the base mould.
 
 **Session**
-- ~~Apply **price check 12**~~ done 15 Nov, with price check 14 (kit and tent). Phase 1 £3,917.85.
+- ~~Apply **price check 12**~~ done 15 Nov, with price check 14 (kit and tent). Phase 1 £3,905.80.
 - ~~Tent heater, thermostat, PIR board and test kit priced and added~~ done 15 Nov (price check 14).
 - Review task 6 with you: epoxy percentages, number of bricks, what counts as a pass.
 

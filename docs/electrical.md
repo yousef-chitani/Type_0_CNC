@@ -14,7 +14,7 @@ Source for all Mesa details: **7I76EU manual** (owner-supplied PDF). Items marke
 PC + monitor: own plug (or the third C6 MCB).
 ```
 
-- **24 V rail (always on):** 7I76EU field + logic power, safety relay, contactor coil, sensors, Z brake, pump relay coil, radiator fans, flow switch.
+- **24 V rail (always on):** 7I76EU field + logic power, safety relay, contactor coil, sensors, Z brake, pump relay coil, flow switch.
 - **The 7I76EU field power (VFIELD) must come straight from the PSU.** A fuse is OK. A switch, relay or contactor is not (manual: VFIELD ramp < 10 V/ms).
 - **13 A plug note:** a single-phase VFD draws more input current than the spindle's output power suggests. Normal cuts are fine. If sustained full-power cutting blows the plug fuse, move to a 16 A circuit (D-91).
 - 24 V budget (Phase 1): Mesa about 0.1 A, sensors 4 × 15 mA, contactor coil about 0.1 A, Z brake 0.19 A (4.5 W), fans about 0.2 A, relay coil about 20 mA, safety relay about 0.1 A ⇒ **under 1 A** of the 6.25 A available. Phase 2 solenoids add about 0.6 A.
@@ -103,7 +103,7 @@ Inputs are **sinking** (they read a positive voltage). The PNP sensors connect d
 | 17 | OUT0 | Drive enable (X, Y, Z ENA in parallel) | CL57T ENA (CHECK input voltage and logic) |
 | 18 | OUT1 | Z brake release | via safety relay 23-24 (D-93) to the brake coil 24 V, 0.19 A |
 | 19 | OUT2 | Coolant pump | interface relay coil (E23) |
-| 20 | OUT3 | Radiator fans | 2 × 12 V fans in series on 24 V |
+| 20 | OUT3 | spare | was the radiator fans: dropped (D-135) |
 | 21 | OUT4 | Tool release solenoid | *Phase 2 (P02)* |
 | 22 | OUT5 | Cone-clean air | *Phase 2 (P02)* |
 | 23 | OUT6 | Mist | *Phase 2 (P04)* |

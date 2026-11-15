@@ -26,7 +26,7 @@ Generated from `docs/bom.csv` by `tools/gen_wave1_sheet.py`: edit the BOM, not t
 | ☐ | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 (VAT?) (StepperOnline) | 59.22 | 2026-11-05 | [page](https://www.omc-stepperonline.com/s-series-nema-24-closed-loop-stepper-motor-3-0nm-424-92oz-in-with-2-8nm-396-51oz-in-electromagnetic-brake-24hs34-5004d-e1000-b280) | Was backorder from the China warehouse; VAT basis and shipping not shown |
 | ☐ | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £28.75 (VAT?) + £5.47 DE warehouse (StepperOnline) | 34.22 | 2026-11-05 | [page](https://www.omc-stepperonline.com/closed-loop-stepper-driver-v4-1-0-8-0a-24-48vdc-for-nema-17-23-24-stepper-motor-cl57t-v41) | No UK stock (DE warehouse); VAT basis unclear |
 
-## AliExpress (log in, UK delivery): £728.13
+## AliExpress (log in, UK delivery): £664.31
 
 | ✓ | ID | Item | Qty | Price as listed (option) | £ | Seen | Link | Check |
 |---|---|---|---|---|---|---|---|---|
@@ -43,6 +43,11 @@ Generated from `docs/bom.csv` by `tools/gen_wave1_sheet.py`: edit the BOM, not t
 | ☐ | E24 | USB-RS485 adapter for the VFD link | 1 pcs | £13.59 inc VAT, free shipping (AliExpress, logged in; Waveshare industrial USB TO RS485, option FT232RL version) | 13.59 | 2026-11-08 | [page](https://www.aliexpress.com/item/1005008217229755.html) | Photos must show A+/B-/GND screw terminals (open question 1) |
 | ☐ | S04 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + 3 motors) | 4 × 5 m | £19.03 each inc VAT, free shipping (AliExpress) | 76.12 | 2026-11-08 | [page](https://www.aliexpress.com/item/32971008305.html) |  |
 | ☐ | S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 1 pcs | £217.39 + £100.77 shipping (owner, AliExpress), delivery 8 Jan | 318.16 | 2026-11-07 | [page](https://www.aliexpress.com/item/32253760001.html) | Re-check the price (£217.39 + shipping); add to the basket (open question 2) |
-| ☐ | S05 | Spindle cooling loop (DIY) | 1 pcs | Radiator £13.35 + basket fans £8.70, barbs £2.38, clamps £17.89 + flow switch £12.51 (AliExpress) + 8 mm ID hose £8.99 (B&Q marketplace, free delivery) | 63.82 | 2026-11-08 | [page](https://www.aliexpress.com/item/1005007038307491.html) | Remove the 6 mm ID tube from the basket (open question 2). Flow switch contact rating not stated. Hose is from another shop (link in bom.csv notes) |
 
-**Wave 1 total: £1,482.74** (23 lines; phase1-schedule.md says £1,482.74)
+## Other: £51.77
+
+| ✓ | ID | Item | Qty | Price as listed (option) | £ | Seen | Link | Check |
+|---|---|---|---|---|---|---|---|---|
+| ☐ | S05 | Spindle cooling loop (DIY) | 1 pcs | 20 L bucket £10.00 (owner, Amazon, 15 Nov 2026) + barbs £2.38, clamps £17.89 + flow switch £12.51 (AliExpress) + 8 mm ID hose £8.99 (B&Q marketplace, free delivery) | 51.77 | 2026-11-15 | [page](https://www.amazon.co.uk/gp/product/B07NY2GQ1P) | Remove the 6 mm ID tube from the basket (open question 2). Flow switch contact rating not stated. Hose is from another shop (link in bom.csv notes) |
+
+**Wave 1 total: £1,470.69** (23 lines; phase1-schedule.md says £1,470.69)

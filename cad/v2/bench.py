@@ -65,7 +65,7 @@ def boxes():
     add("Top layer 2", "sheet18", 0, t, 0, t, frame_top + 18, B["top_z"])
     add("Back panel", "sheet18", i0, i1, i1, i1 + B["panel_t"] + 6, B["foot_h"], frame_top)
     add("Side panel L", "sheet12", i0 - B["panel_t"], i0, i0, i1, B["foot_h"], frame_top)
-    add("Side panel R (fan holes)", "sheet12", i1, i1 + B["panel_t"], i0, i1, B["foot_h"], frame_top)
+    add("Side panel R", "sheet12", i1, i1 + B["panel_t"], i0, i1, B["foot_h"], frame_top)
     cx0, cy0 = B["cab_x0"], B["cab_y0"]
     for s, (xa, xb) in enumerate(((cx0, cx0 + aw), (cx0 + cw - aw, cx0 + cw))):
         add(f"Cabinet stand {s+1}", "stand", xa, xb, cy0, cy0 + cd, B["shelf_top"], cab_z0)
@@ -76,9 +76,8 @@ def equipment():
     cx0, cy0 = B["cab_x0"], B["cab_y0"]
     return [
         ("Electrical cabinet 600x400x200 (E12)", "#8a96a3", cx0, cx0 + cw, cy0, cy0 + cd, cab_z0, cab_z0 + chh),
-        ("Radiator + 2 fans (S05), fans blow out", "#6f8fa8", i1 - 52, i1, 300, 540, 380, 500),
-        ("Reservoir + pump (S05/S08), size CHECK", "#7fb3d5", 740, 900, 600, 900, B["shelf_top"], B["shelf_top"] + 200),
-        ("Mini-PC (E02)", "#555555", 420, 620, 680, 880, B["shelf_top"], B["shelf_top"] + 50),
+        ("Reservoir: 20 L bucket + pump (S05/S08, D-135), size CHECK", "#7fb3d5", 600, 900, 600, 900, B["shelf_top"], B["shelf_top"] + 370),
+        ("Mini-PC (E02)", "#555555", 400, 580, 360, 560, B["shelf_top"], B["shelf_top"] + 50),
         ("Tool tray", "#b9a37a", 116, 380, 330, 900, B["shelf_top"], B["shelf_top"] + 80),
     ]
 
@@ -96,8 +95,7 @@ def cut_items():
               ("CLS 38 x 89", "Joist laminations (2 glued per joist)", L("Joist 1a"), 4),
               ("CLS 38 x 89", "Cabinet stands (on edge)", cd, 2),
               ("CLS 38 x 63", "Side rails", L("Side rail L"), 2),
-              ("CLS 38 x 63", "Front + back rails", L("Front rail"), 2),
-              ("CLS 38 x 63", "Radiator mounting battens", 300, 2)]
+              ("CLS 38 x 63", "Front + back rails", L("Front rail"), 2)]
     return items
 
 def nest_timber(items):
@@ -123,7 +121,7 @@ def sheet_parts():
             ("18 mm plywood", "Shelf", *wh("Shelf")),
             ("18 mm plywood", "Back panel", B["top"] - 2 * i0, leg_len),
             ("12 mm plywood", "Side panel L", B["top"] - 2 * i0, leg_len),
-            ("12 mm plywood", "Side panel R (2 fan holes)", B["top"] - 2 * i0, leg_len)]
+            ("12 mm plywood", "Side panel R", B["top"] - 2 * i0, leg_len)]
 
 def nest_sheets(parts):
     """Simple shelf (strip) packing on 2440 x 1220 sheets, parts may rotate."""
@@ -215,10 +213,8 @@ def views(machine=None):
             b += rect(X(x0), Z(z1), X(x1), Z(z0), c, op, dash="5 3" if "enclosure" in n else "")
     b += text(X(B["cab_x0"] + cw/2), Z(cab_z0 + chh/2), "CABINET 600 x 400 x 200", c="#fff", sz=12)
     b += text(X(B["cab_x0"] + cw/2), Z(cab_z0 + chh/2) + 15, "door to the front", c="#fff", sz=10)
-    b += text(X(i1 - 26), Z(560), "radiator", c="#1b4f72", sz=10)
-    b += text(X(i1 - 26), Z(548) + 14, "fans out", c="#1b4f72", sz=10)
-    b += text(X(820), Z(B["shelf_top"] + 120), "reservoir", c="#1b4f72", sz=10)
-    b += text(X(520), Z(B["shelf_top"] + 70), "PC", sz=10)
+    b += text(X(750), Z(B["shelf_top"] + 200), "20 L reservoir", c="#1b4f72", sz=10)
+    b += text(X(490), Z(B["shelf_top"] + 70), "PC", sz=10)
     b += text(X(248), Z(B["shelf_top"]) - 4, "tools (behind)", sz=9)
     b += text(X(850), Z(apron_z0 + 45), "e-stop", c="#c0392b", sz=10)
     b += rect(X(835), Z(apron_z0 + 75), X(865), Z(apron_z0 + 55), "#c0392b", 0.9)
@@ -320,8 +316,8 @@ def write_cutlist(mach):
          f"- Feet: the 4 T02 levelling feet (M10) under the legs, in M10 threaded inserts. Leg length assumes **{B['foot_h']} mm** from the floor to the leg bottom with the feet screwed in part way: **CHECK when the feet arrive** and cut the legs to {B['top_z']} − 36 − (foot height).",
          f"- Lower shelf: 18 mm plywood, top at **{B['shelf_top']} mm**, on the front and back rails. Full depth, {B['top'] - 2*i0 - 2*lw} mm wide between the legs.",
          f"- Cabinet (E12, 600 × 400 × 200) front-left, standing on two 38 × 89 stands on the shelf: bottom at **{cab_z0:.0f} mm**, top at {cab_z0+chh:.0f} mm, door flush with the front. Held at the top by 2 steel angle brackets to the front apron.",
-         "- Right-hand bay: radiator with its 2 fans on the inside of the right side panel, blowing out through 2 holes. Reservoir and pump on the shelf below it, at the back.",
-         "- PC on the shelf at the back, centre. Tool tray on the shelf behind the cabinet.",
+         "- Right-hand bay, at the back: 20 L bucket reservoir with the kit pump in it (no radiator, D-135), under the cable grommet.",
+         "- PC on the shelf behind the cabinet, centre. Tool tray on the shelf behind the cabinet, left.",
          "- Back panel (18 mm) and both side panels (12 mm) screwed on: they stop the frame racking. The front stays open.",
          f"- Cable and hose grommet through the top (T15, printed: {B['slot'][1]-B['slot'][0]} × {B['slot'][3]-B['slot'][2]} mm flange, TPU slit membrane, cut a **70 × 150 mm** hole, held by 4 × 4 × 30 screws), {B['slot'][0]}–{B['slot'][1]} mm from the left edge and {B['slot'][2]}–{B['slot'][3]} mm from the front: inside the enclosure, right of the base and behind the tool-wheel position. It drops into the right-hand bay above the reservoir, so any coolant drip lands there, not on the cabinet. ",
          "- Front e-stop (D-91) on the front apron, right-hand end, in a printed yellow box (E26, cad/v2/out/print/).",
@@ -385,16 +381,15 @@ def write_cutlist(mach):
           "4. **Bolt holes:** for each front/back apron and rail: drill an 8.5 mm hole through the leg, into the end of the apron or rail (2 per apron end, 1 per rail end), and a 10 mm hole from the inside face of the apron/rail for the cross-dowel nut, about 30 mm from its end (the M8 × 120 bolt passes 76 mm of leg, so about 40 mm reaches into the apron: mark the nut position from the actual bolt). Washer under each bolt head. Check the barrel nuts are 10 mm diameter before drilling.",
           "5. **Stand the frame:** bolt the front and back aprons and rails between the two side frames. Check the diagonals on the top (equal within 2 mm) before tightening.",
           "6. **Joists:** glue and screw each joist pair. Fit them between the front and back aprons, tops flush with the apron tops, and bolt each end through the apron with 2 M8 × 120 bolts (one into each lamination) and cross-dowel nuts about 65 mm from the joist end (bolt through 38 mm of apron, about 80 mm into the joist). 8 bolts in all. Each joist end carries about 0.75 kN; two M8 bolts in C16 hold several times that.",
-          "7. **Panels:** screw the back panel (18 mm) to the back legs, apron and rail. Cut the 2 fan holes (Ø 110, centres in `bench_front.svg` / radiator position) in the right side panel, fit the finger guards, screw both side panels on. Screws every 150 mm: the panels are what stops racking.",
+          "7. **Panels:** screw the back panel (18 mm) to the back legs, apron and rail. Screw both side panels on. Screws every 150 mm: the panels are what stops racking.",
           "8. **Shelf:** drop it in on the front and back rails, screw down with 4 screws (removable).",
           "9. **Top:** glue and screw the 2 ply layers together (4 × 30 screws from below on a 150 mm grid, glue spread all over). Cut the grommet hole. Seal all faces and edges with 3 coats of yacht varnish (coolant and shed damp). Lay the top on the frame and fix it from below with 8 corner braces into the aprons.",
           "10. **Level:** put the bench in place, level the top both ways with the feet (the 200 mm level, X02), lock the foot nuts.",
-          "11. **Fit-out:** cabinet stands + cabinet + top brackets, radiator battens + radiator, reservoir, PC, printed cable grommet in the top, printed e-stop box (E26) on the front apron, right-hand end (2 × 4 × 40 screws through its back).",
+          "11. **Fit-out:** cabinet stands + cabinet + top brackets, reservoir bucket, PC, printed cable grommet in the top, printed e-stop box (E26) on the front apron, right-hand end (2 × 4 × 40 screws through its back).",
           "", "## CHECK items", "",
           "- T02 foot height (sets the leg length).",
           "- RS PRO cabinet mounting: it stands on the 2 stands; confirm its lugs/brackets for the 2 angle brackets at the top.",
-          "- Reservoir size (not yet chosen) fits the right-hand bay at the back: about 160 wide × 300 deep × 200 high drawn.",
-          "- Radiator and fan sizes from the S05 parts when they arrive: fan hole positions.",
+          "- Reservoir bucket drawn 300 × 300 × 370 high at the back right (shelf to apron: 540 clear): measure the bucket when it arrives.",
           "- Bolt length: CLS is 38 × 89 planed; check the legs are 76 thick after gluing; adjust the cross-dowel position to the bolt length.",
           "- Barrel nuts (AliExpress, M8 × 15): confirm 10 mm diameter before drilling.",
           ]
@@ -412,7 +407,6 @@ HARDWARE = [   # price check 11 (2026-11-08), D-99
     ("T11", "Goldscrew 5 × 70 (100), 4 × 30 (200); Silverscrew 4 × 40 (200)", "3 boxes", "Screwfix, £10.47"),
     ("T12", "D4 PVA wood glue 1 L", "1", "B&Q marketplace (delivered), £11.99"),
     ("T13", "Yacht varnish 750 ml", "1", "Screwfix, £11.99"),
-    ("T14", "120 mm fan grills", "2", "3D printed (D-100): cad/v2/out/print/T14_fan_grill_120.stl, PETG"),
     ("T15", "Cable grommet: frame + TPU membrane + clamp ring, held by 4 of the T11 4 × 30 screws", "1", "3D printed (D-100): cad/v2/out/print/T15_*.stl"),
 ]
 

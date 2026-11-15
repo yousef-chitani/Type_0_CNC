@@ -8,12 +8,12 @@ Every BOM line was checked (2026-11-08). Printed where the part carries little l
 
 | BOM | Part | Status | Replaces |
 |---|---|---|---|
-| T14 | 120 mm fan grills × 2 | **Ready to print** | £6.81 AliExpress |
+| T14 | 120 mm fan grills × 2 | **Dropped** (no radiator fans, D-135) | £6.81 AliExpress |
 | T15 | Bench-top cable grommet (frame + TPU membrane + clamp ring) | **Ready to print** | £11.04 B&Q marketplace |
 | E26 | Bench-front e-stop box (yellow) | **Ready to print** | nothing: was missing from the BOM |
 | E27 | Homing sensor brackets + flags × 4 | Design with the axis detailing | nothing: was missing |
 | F19 | Mould helpers (sleeve/dowel locators, jig spacers, lifting-point formers, fillets, test-brick mould) | Design in task 5 (moulds) | nothing: was missing |
-| T16 | Bench fit-out (radiator brackets, PC/reservoir holders, tool rack, cable clips) | Design when those parts arrive | nothing: was missing |
+| T16 | Bench fit-out (PC holder, tool rack, cable clips) | Design when those parts arrive | nothing: was missing |
 | N04 | Enclosure fit-out (door handle, LED mount, strut brackets, window clamps), Phase 2 | Later | nothing: was missing |
 | A01 | ISO20 tool forks, Phase 2 | Already planned as printed (D-58) | |
 
