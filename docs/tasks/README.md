@@ -29,7 +29,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [06](06-trim-the-test-plan-to-the-pours-it-prote.md) | Trim the test plan to the pours it protects | main session | 01 = A (and the post-cure answer) | open |
 | [07](07-curing.md) | Curing: settle the post-cure and the tent | main session | 01 | open |
 | [08](08-schedule.md) | Schedule: portal first | any model (Opus 5.5 is fine) | 01 = A | open |
-| [09](09-owner's-fusion-pass-and-feeding-it-back.md) | Owner's Fusion pass and feeding it back | owner, then main session | 03 | open |
+| [09](09-fusion-pass.md) | Owner's Fusion pass and feeding it back | owner, then main session | 03 | open |
 | [10](10-mould-drawing.md) | Mould drawing: portal (cast first) | main session | 03, 04, 09 | open |
 | [11](11-mould-drawing.md) | Mould drawing: base | main session | 10 | open |
 | [12](12-printed-mould-helpers.md) | Printed mould helpers | Opus 5.5 is fine | 10 | open |
