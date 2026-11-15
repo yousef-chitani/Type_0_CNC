@@ -1,6 +1,6 @@
 # Tasks to hand off to Opus 5.5
 
-Written 15 Nov 2026. These are the jobs on the project that are well defined, have a clear "done", and need care more than design judgement. Each brief below is written to be pasted into a fresh session on this repository (branch `claude/charming-cori-349jm7`). Every session should read `docs/HANDOVER.md` first, section 5 (the owner's rules) above all.
+Written 15 Nov 2026. These are the jobs on the project that are well defined, have a clear "done", and need care more than design judgement. Each brief below is written to be pasted into a fresh session on this repository. **The session must start from branch `claude/charming-cori-349jm7`** and check that `docs/HANDOVER.md` names that branch on its second line: a session started from an older branch will redo finished work on the old design (this happened on 15 Nov). Every session should read `docs/HANDOVER.md` first, section 5 (the owner's rules) above all.
 
 **Rules that apply to every task here**
 - Only prices seen on a live page or given by the owner, with the date. Never estimate.

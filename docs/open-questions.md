@@ -15,6 +15,13 @@ Resolved items are in decisions.md (D-01 … D-127). **Phase 1 is £3,917.85, ev
 
 4. **Fusion review of the assembly (task 4):** open `cad/v2/out/assembly/type0_assembly.step` (vendor models already in, D-111), detail the brackets, plates and sensor mounts, check the VERIFY list in `docs/assembly.md`, and send back the STEP. The moulds (task 5) start from it.
    Who: owner (Fusion 360).
+4a. **Portal relocation** (`docs/portal-relocation.md`): the current plan (bonded grout + a dowel reamed after grouting) can't be taken apart or reamed. Recommended: grout released from the base with packing tape, and two adjustable stops behind the legs. Decide before the mould drawings: it adds 4 × M8 inserts to the base and removes the dowel sleeves.
+   Who: owner decides; session then updates `assembly.py`.
+4b. **Rail bolts are too short.** With the 5 mm resin seat (D-115), an M5 × 16 bolt reaches only about 2 mm into the insert bar. They must be **M5 × 20** (about 6 mm of thread in the steel). X03 lists 100 × M5 × 16 in A2 stainless: change it and price M5 × 20 in grade 8.8 or 12.9. VERIFY against the rail's counterbore when the rails arrive.
+   Who: session writes the price check; owner confirms.
+4c. **Opus branch** (`claude/awesome-ramanujan-by9kds`): started from the 8 Nov state, so its LinuxCNC config, bench, moulds and mix plan are for the old design and its D-92 … D-98 clash with this branch. Not merged. Its mould-drawing script (`cad/v2/moulds.py` there) is a starting point for task 5, to be re-driven from `assembly.py`.
+   Who: session, with the mould drawings.
+
 5. **Z motor mount (M13):** ask the AliExpress seller for the HM12-60 drawing (`supplier-messages.md` section 4). It must have 4 holes on a 50 mm square and a Ø36 pilot. If not, the session designs a mount from the 10 mm plate.
    Who: owner sends the message.
 5b. **Glove size** for the nitrile gloves (X09), and check the torque wrench stock (none in the Swansea stores on 15 Nov; collect next day).

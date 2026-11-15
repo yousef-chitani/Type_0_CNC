@@ -79,6 +79,9 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
    - add a heater and thermostat to the BOM.
 
 **In progress / proposals:**
+- **Portal relocation** (`docs/portal-relocation.md`, sketch `cad/v2/out/portal_relocation.png`): recommendation waiting for the owner. Released grout bed + two adjustable stops behind the legs, instead of a bonded grout and blind dowels.
+- **Opus branch `claude/awesome-ramanujan-by9kds`: do not merge.** It forked from the 8 Nov state and redid tasks 2–5 on the old design with clashing D-numbers. This branch is the truth (owner, 15 Nov). Useful there: `cad/v2/moulds.py` as a starting point for the mould drawings.
+- **Rail bolts must be M5 × 20**, not M5 × 16, because of the 5 mm resin seat (open question 4b).
 - **Base PVC cores (not adopted yet):** 5 × Ø50 at Z −65, saving about 9.6 kg; sketch in `cad/v2/out/base_cores_plan.png`, `base_cores_sections.png` (`cad/v2/base_cores_sketch.py`). Suspension: an M8 rod through each capped core, fixed in the mould walls at core height, plus mid-span wire hold-downs from a batten; the rods are cut flush and sealed afterwards (they don't reinforce, D-120). The review found the layout sound (15 mm under the BK/BF plates). Owner to decide (maybe after the FEA, D-81).
 - **EG design review: done** (`docs/review-eg-design-report.md`). The owner's decisions on it are D-114 … D-123 (smaller cores, open 5 mm rail-seat recesses, 20 mm joint bars, Ampreg 30 with post-cure, insert preparation, 3-point base support, hand tamping first, doc fixes). Not acted on yet: the review's tests (they go in task 6) and its lower-severity notes (gap grading fallback GCL 1–3 mm, mould deck).
 
@@ -99,6 +102,7 @@ Then: rail-seat levelling and assembly procedures, Phase 2 detailing (ATC wheel,
 | `cad/vendor/` | Manufacturer STEP files (and the Z motor PDF) used by the assembly |
 | `docs/decisions.md` | Decision log D-01 … D-113 |
 | `docs/open-questions.md` | What's still open, in priority order |
+| `docs/portal-relocation.md` | Assessment: how the portal goes back in the same place after a move |
 | `docs/handoff-opus-tasks.md` | Routine tasks with ready-to-paste briefs for a session on Opus 5.5 |
 | `docs/pre-wave1-plan.md` | Week-by-week list of what to settle between 14 Nov 2026 and wave 1 (4 Jan 2027) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
