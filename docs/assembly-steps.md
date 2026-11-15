@@ -50,9 +50,9 @@ Screws, motors and belts only have to line up with the carriages they drive. Tur
 
 ## Step 6: Portal on the base
 ![Step 6](../cad/v2/out/assembly/steps/step_06.png)
-- **Fit:** packing tape on the base where the legs stand, then lower the portal over the 4 M12 rods. Grout (Ampreg thickened with whiting) between the leg feet and the base. Nuts only snug.
-- **Line up:** roughly square by eye for now. The grout bed is only there to give each foot a full, flat seat. The tape lets it come off the base later.
-- **Check:** after the cure and post-cure, torque the nuts in a cross pattern.
+- **Fit:** lower the portal over the 4 M12 rods straight onto the base (no grout, D-132). Nuts only snug.
+- **Line up:** roughly square by eye for now. Go round each leg foot with a 0.04 mm feeler. Wherever it goes in, slide a steel shim under that foot until the foot can't rock.
+- **Check:** torque the nuts in a cross pattern, then the feeler again: no gap under either foot.
 - **Before step 7:** the X rail-seat pour on the beam face, as in step 1.
 
 ## Step 7: X rails on the beam
@@ -64,7 +64,7 @@ Screws, motors and belts only have to line up with the carriages they drive. Tur
 ## Step 8: X carriages and saddle, then square X to Y
 ![Step 8](../cad/v2/out/assembly/steps/step_08.png)
 - **Fit:** 4 carriages and the saddle.
-- **Line up, the squaring:** this is where X is made square to Y. Slacken the 4 portal nuts slightly, turn the portal a little on the grout bed, and tighten again. Repeat until it is square.
+- **Line up, the squaring:** this is where X is made square to Y. Slacken the 4 portal nuts slightly, turn the portal a little on the base, and tighten again. Repeat until it is square.
 - **Check:** how to measure square is **not decided yet** (see the note below).
 
 ## Step 9: X ballscrew
@@ -101,8 +101,8 @@ Screws, motors and belts only have to line up with the carriages they drive. Tur
 
 ---
 
-## After a move (D-128)
-The portal comes off, is carried up, and goes back on its 4 rods and its grout bed. Then **step 8 again** (square X to Y) and **step 13** (check the tram). Nothing else needs re-doing: the rails stay bolted to their castings.
+## After a move (D-128, D-132)
+The portal comes off, is carried up, and goes back on its 4 rods and the same shims (mark which foot each shim came from). Then **step 8 again** (square X to Y) and **step 13** (check the tram). Nothing else needs re-doing: the rails stay bolted to their castings.
 
 ## Not decided yet: how to measure square (step 8)
 There is no precision square on the parts list. Ways to do it:

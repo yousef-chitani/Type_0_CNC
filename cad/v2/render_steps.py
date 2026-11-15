@@ -31,7 +31,7 @@ STEPS = [
     ("Y motor and belt", ["Y_pulley", "Y_motor", "Y_belt"], (15, -40),
      [("Y_motor", "slide the motor plate to tension the belt")]),
     ("Portal on the base", ["portal_casting", "portal_insert_X", "portal_insert_Xmotor"], (22, -58),
-     [("portal_casting", "lower over 4 M12 rods; grout bed under the feet")]),
+     [("portal_casting", "lower over 4 M12 rods, bolt dry; shim any rocking foot")]),
     ("X rails on the beam", ["X_rail_"], (22, -58),
      [("X_rail_T", "reference rail: straight to the straightedge"), ("X_rail_B", "second rail: parallel, dial on a block")]),
     ("X carriages and saddle", ["X_block_", "saddle"], (22, -58),
