@@ -46,8 +46,8 @@ C) Tidy the AliExpress basket:
    - Remove the 6 mm tube.
    - Check the ferrules (12 packs), the HSC8 16-6 crimper and the
      20 and 14 AWG wire are still there.
-   - Add the cooling kit (S08) and the flow switch (S05), and note the
-     S08 price.
+   - Add the spindle kit (S08) and the flow switch (S05), and note the
+     S08 price. No radiator or fans now (a 20 L bucket instead).
 
 DON'T BUY ANYTHING YET. Wave 1 orders go out on 4 Jan 2027.
 
@@ -77,8 +77,8 @@ The mould drawings can't start until this is done.
 
    - When the safety relay arrives: photo of its terminal labels.
    - When the bench feet (T02) arrive: measure their height.
-   - When the cooling kit (S08) arrives: tell a session the pump size,
-     so the reservoir can be picked.
+   - When the 20 L bucket arrives: measure it (width, height) and check
+     the kit pump fits inside it.
    - Around 26 Dec - 3 Jan: re-check the wave 1 prices. A session will
      write the list for you beforehand.
 
