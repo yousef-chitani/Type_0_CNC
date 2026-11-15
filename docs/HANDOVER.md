@@ -27,7 +27,7 @@
 - AliExpress reply in `price-check-task-15.md`: square £18.19, shims under £25 (waiting), bolts Screwfix, straightedge KS Tools (price/grade missing). Not in `bom.csv` yet.
 - Owner wants rails, ballscrews and accessories from one seller: `docs/motion-parts-one-seller.txt`.
 
-**Next session: task 21.** Curl https://hlmotion.com/ for every motion part (`docs/price-check-task-16.md`, spec in `docs/motion-parts-one-seller.txt`); total to beat £498.41. Ask the owner before changing `bom.csv`.
+**Task 21 done (15 Nov 2026):** HL Motion has no DFU1605 (SFU sold out), no pulleys, belts or KFL000; rails £108.83 inc VAT + unknown shipping vs £207.37. Results and draft message in `docs/price-check-task-16.md`. Owner decides; `bom.csv` unchanged.
 
 **Open, in order**
 1. **Owner's AliExpress reply** → add X10, X11 and the new X03 (and X05 if swapped) to `bom.csv`, re-run the 4 BOM scripts, update the wave total in `phase1-schedule.md`. That finishes task 05.
