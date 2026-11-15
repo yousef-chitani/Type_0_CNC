@@ -40,9 +40,11 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [17](17-tidy-the-old-casting-notes.md) | Tidy the old casting notes | Opus 5.5 is fine | none (03, 06 on hold) | open |
 | [18](18-rail-seat-and-assembly-procedure.md) | Rail-seat and assembly procedure | main session | 10, 11 | open |
 | [19](19-linuxcnc-config-after-the-bench-tests.md) | LinuxCNC config after the bench tests | Opus 5.5 is fine | owner's bench results (build weeks 3–6) | open |
+| [21](21-hl-motion-check.md) | HL Motion check: all motion parts from one seller (curl) | Opus 5.5 is fine | none | **next** |
 | [20](20-housekeeping-after-each-task.md) | Housekeeping after each task | any model | every task | open |
 
 ## Order
+0. **Next session: task 21** (curl hlmotion.com for the motion parts, `price-check-task-16.md`).
 1. Now: the owner checks AliExpress (`docs/price-check-task-15.md`, list at the end: square, shims, M5 × 20 12.9, optional straightedge); then add X10, X11 and the new X03 to `bom.csv` (finishes 05). Owner: send the 5 drafts in `docs/supplier-messages.md` (task 13).
 2. After 01: **03, 04, 06, 07, 08** (and **02** only for option B).
 3. After the Fusion pass (**09**): **10, 11, 12**, then **18**.
