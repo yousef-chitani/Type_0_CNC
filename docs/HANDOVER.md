@@ -1,13 +1,33 @@
-# Type 0 CNC: handover (2026-11-09)
+# Type 0 CNC: handover (2026-11-15)
 
 **Branch:** `claude/charming-cori-349jm7` on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed. Earlier work: `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
 > **Start with `docs/tasks/README.md`.** The work is split into 20 small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 0. Where the session of 9–15 Nov stopped
+
+**Done and pushed**
+- EG design review applied: D-114 … D-127 (smaller portal cores, open 5 mm rail-seat recesses, 40 × 20 joint bars, Ampreg 30 + 3X Slow, insert preparation, 3 base pads, hand tamping, cure process, budget £4,200).
+- Price checks 12, 13 and 14 applied. **Phase 1 £3,917.85, every line priced.** Not in it: delivery for the Ampreg kit and the GCL quartz.
+- Written: `eg-mix-test-plan.md`, `curing-heat.md` (Ampreg), `portal-relocation.md`, `simplification-options.md`, `cad/v2/render_views.py`, the task files.
+
+**Waiting for the owner (nothing else should move the castings until these are answered)**
+1. **Task 01: how to simplify Phase 1.** Option A (two stripped castings, portal cast first) or option B (granite plate base, about 95 kg). Recommendation: A. Also: keep the 50 °C post-cure or not.
+2. **Portal joint** (task 04): stops, dowels or re-square. Recommendation: released grout bed + two stops.
+3. Confirm that none of the four Opus-session choices carries over (68 mm core, couplers in the leg feet, 1,100 bench, bricks at 10 / 12 / 14 %). Assessment: none should.
+
+**Can start without a decision:** tasks 05 (rail bolts M5 × 20), 13 (supplier messages), 15 (wave 1 order sheet).
+
+**Warnings for the next session**
+- The owner asked for **simplification**: do not add cast-in features, tests or documents. Keep answers and files short.
+- **Do not merge `claude/awesome-ramanujan-by9kds`**: it forked from the 8 Nov state and its D-92 … D-98 clash with this branch.
+- The CAD still has the 2 × Ø40 cores, the ATC insert and the dowel sleeves; task 03 removes them if option A is chosen.
+- Sections 2–9 below are background and partly older than section 0; where they disagree, section 0 and the task files win.
+
 ## 1. What the project is
 A DIY 3-axis **fixed-gantry, moving-table** CNC mill with a **cast epoxy-granite (EG) frame**, **LinuxCNC + Mesa 7I76EU**, closed-loop NEMA 24 steppers, and (Phase 2) a **Jianken ISO20 ATC spindle** with an 8-pocket ferris-wheel tool changer. Inspiration: Bootstrap Bill. The owner is in **Swansea, UK**, builds in a **shed**, and must later move it into an **upstairs flat**: pieces ≤ about 40 kg (the base is a 2-person lift).
 
-## 2. Current design (full assembly, D-102 … D-120)
+## 2. Current design (full assembly, D-102 … D-127)
 The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, vendor STEP models swapped in) → `cad/v2/out/assembly/`. Read **`docs/assembly.md`** first; `cad/v2/out/assembly/cast_in_features.md` lists every cast-in feature.
 
 - **Work area 400 × 250, Z 150.** Travel X 570 (incl. reach to the ATC wheel) / Y 250 / Z 150. Table 460 × 330 × 25 (6082). Spindle axis at Y −65 (175 mm in front of the beam face).
