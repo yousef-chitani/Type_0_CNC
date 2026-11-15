@@ -1,6 +1,6 @@
-# Open questions (updated 2026-11-09, in priority order)
+# Open questions (updated 2026-11-15, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-127). **Phase 1 is £3,917.85, every line priced (D-126); the Ampreg and GCL delivery costs are not in it.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,917.85, every line priced (D-126); the Ampreg and GCL delivery costs, the square and shims (X10, X11) and the M5 × 20 bolts are not in it yet.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell). The owner's short list is `owner-todo.txt`.
 
 ## Before wave 1 (4 Jan 2027)
 
@@ -13,15 +13,11 @@ Resolved items are in decisions.md (D-01 … D-127). **Phase 1 is £3,917.85, ev
 
 ## Before wave 2 (15 Feb 2027)
 
-4. **Fusion review of the assembly (task 4):** open `cad/v2/out/assembly/type0_assembly.step` (vendor models already in, D-111), detail the brackets, plates and sensor mounts, check the VERIFY list in `docs/assembly.md`, and send back the STEP. The moulds (task 5) start from it.
+4. **Fusion review of the assembly (task 09):** open `cad/v2/out/assembly/type0_assembly.step` (vendor models already in, D-111), detail the brackets, plates and sensor mounts, check the VERIFY list in `docs/assembly.md`, and save the STEP to `cad/v2/in/`. The mould drawings (tasks 10–12) start from it.
    Who: owner (Fusion 360).
-4. (first) **Simplify Phase 1** (`docs/simplification-options.md`): option A (two stripped castings, portal cast first) or option B (granite surface plate base, about 95 kg, cast portal only). The answer changes items 4a, 10 and the mould drawings.
-   Who: owner.
-4a. **Portal relocation:** decided (D-128, D-132, D-133): bolted dry on shims, re-squared with an engineer's square after each move. See `docs/portal-relocation.md`.
-   Who: owner decides; session then updates `assembly.py`.
-4b. **Rail bolts are too short.** With the 5 mm resin seat (D-115), an M5 × 16 bolt reaches only about 2 mm into the insert bar. They must be **M5 × 20** (about 6 mm of thread in the steel). X03 lists 100 × M5 × 16 in A2 stainless: change it and price M5 × 20 in grade 8.8 or 12.9. VERIFY against the rail's counterbore when the rails arrive.
-   Who: session writes the price check; owner confirms.
-4c. **Opus branch** (`claude/awesome-ramanujan-by9kds`): started from the 8 Nov state, so its LinuxCNC config, bench, moulds and mix plan are for the old design and its D-92 … D-98 clash with this branch. Not merged. Its mould-drawing script (`cad/v2/moulds.py` there) is a starting point for task 5, to be re-driven from `assembly.py`.
+4a. **Rail bolts M5 × 20, square and shims (task 05, D-133, D-134):** M5 × 16 is too short with the 5 mm resin seat; X03 becomes 100 × M5 × 20 grade 12.9. Add the engineer's square (X10) and shim stock (X11) to the parts list. UK prices are in `price-check-task-15.md`; the owner checks AliExpress first. VERIFY the bolt length against the rail's counterbore when the rails arrive.
+   Who: owner (AliExpress reply), then session updates `bom.csv`.
+4b. **Opus branch** (`claude/awesome-ramanujan-by9kds`): started from the 8 Nov state, so its LinuxCNC config, bench, moulds and mix plan are for the old design and its D-92 … D-98 clash with this branch. Not merged. Its mould-drawing script (`cad/v2/moulds.py` there) is a starting point for task 10, to be re-driven from `assembly.py`.
    Who: session, with the mould drawings.
 
 5. **Z motor mount (M13):** ask the AliExpress seller for the HM12-60 drawing (`supplier-messages.md` section 4). It must have 4 holes on a 50 mm square and a Ø36 pilot. If not, the session designs a mount from the 10 mm plate.
@@ -42,8 +38,8 @@ Resolved items are in decisions.md (D-01 … D-127). **Phase 1 is £3,917.85, ev
 
 10. **Owner FEA on the base (80.2 kg)** to remove material (D-81), and **adopt the proposed base PVC cores or not** (5 × Ø50, about −9.6 kg: `cad/v2/out/base_cores_plan.png`). Either changes the base mould.
    Who: owner. The base STEP is `cad/v2/out/assembly/base_casting.step`.
-11. **Ampreg 30 delivery cost to SA2** (EC Fibreglass shows it only at checkout), and the Easy Composites delivery charge now that only the release agents (F12) come from there.
-   Who: owner, in the basket (stop before payment).
+11. **Ampreg 30 delivery cost to SA2 and shelf life** (EC Fibreglass), and the Easy Composites delivery charge now that only the release agents (F12) come from there.
+   Who: owner. Draft in `supplier-messages.md` (section 5).
 11c. **Review the test plan** (`docs/eg-mix-test-plan.md`): pass marks, number of pieces, and:
    - Kit and tent parts are priced (price check 14, D-126).
    - Epoxy margin: one kit covers up to 12 %; at 13 % a small top-up pack is needed.
@@ -88,6 +84,10 @@ Resolved items are in decisions.md (D-01 … D-127). **Phase 1 is £3,917.85, ev
     Who: owner, B&Q website stock checker.
 
 ## Closed since the last list
+- Phase 1 simplification: no stripping, no granite plate; castings keep their features (D-131). Assembly in pictures: `assembly-steps.md`, clear to the owner (D-133).
+- Portal joint: bolted dry on shims, no grout, no dowels; re-squared with an engineer's square after each move (D-128, D-132, D-133). Dowel sleeves removed from the CAD (task 04).
+- Post-cure and tent stay (D-129). Nothing taken from the Opus branch (D-130).
+- Wave 1 order sheet: `wave1-order-sheet.md` (task 15).
 - Budget raised to £4,200 (D-127).
 - Price checks 12 and 14 applied (D-126).
 - Price check 13: Ampreg 30 + 3X Slow chosen (D-122); F20 priced; hand tamping first, no vibration motor or speed controller (D-123).

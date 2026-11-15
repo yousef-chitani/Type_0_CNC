@@ -1,0 +1,91 @@
+TYPE 0 CNC - WHAT I NEED YOU TO DO (15 Nov 2026)
+
+Do these in any order. When you have results, open a new session and paste
+them in. Everything mentioned is in the docs folder of the repo.
+
+
+=== JOB 1: ONE ALIEXPRESS SESSION (do this first) ===
+
+Log in to AliExpress, set delivery to UK.
+
+A) Look up these 4 items. For each, write down: price with the option
+   selected, shipping cost, delivery date, and the link.
+
+   1. Engineer's square, 300 mm blade.
+      Search: "engineer square 300mm DIN875"
+      The page MUST say DIN 875 grade 0, 1 or 2. If no grade is stated,
+      skip it.
+      UK price to beat: GBP 74.40
+
+   2. Steel shim sheets.
+      Search: "steel shim sheet 0.05mm" (then 0.1mm and 0.2mm)
+      Must be steel or stainless (not brass, not plastic), with at least
+      0.05, 0.1 and 0.2 mm thick sheets, each about 150 x 150 mm or bigger.
+      UK price to beat: GBP 58.19
+
+   3. Bolts: 100 x M5 x 20 socket cap screws, grade 12.9.
+      Search: "M5x20 socket head cap screw 12.9"
+      Price to beat: GBP 11.78 (Screwfix stainless, 2 packs of 50)
+
+   4. (Optional) Straightedge, 500 mm steel.
+      Search: "steel straight edge 500mm DIN874"
+      Must say DIN 874 grade 0, 1 or 2.
+      Price to beat: GBP 115.07
+
+B) Send 2 chat messages to sellers. The exact text is in
+   supplier-messages.md - copy and paste it.
+   - Section 1: the ballscrew seller (asks what "Guide Length" means).
+     This one matters most: a wrong answer means screws you can't use.
+   - Section 4: the Z motor mount seller (asks for the drawing).
+   Write the date you sent each one under the message in that file,
+   or just tell the next session.
+
+C) Tidy the AliExpress basket:
+   - Check the Waveshare USB-RS485 adapter photos show screw terminals
+     marked A+, B- and GND.
+   - Remove the 6 mm tube.
+   - Check the ferrules (12 packs), the HSC8 16-6 crimper and the
+     20 and 14 AWG wire are still there.
+   - Add the cooling kit (S08) and the flow switch (S05), and note the
+     S08 price.
+
+DON'T BUY ANYTHING YET. Wave 1 orders go out on 4 Jan 2027.
+
+
+=== JOB 2: THREE MORE MESSAGES (before 1 March 2027) ===
+
+Text for all three is in supplier-messages.md.
+   - Section 2: GCL, email (quartz delivery to SA2).
+   - Section 3: Hancock & Brown, phone 01792 462346 (sand collection).
+     It's a phone script: read out the 4 questions.
+   - Section 5: EC Fibreglass, email or contact form (resin delivery
+     and shelf life).
+Paste the replies into a session when they come in.
+
+
+=== JOB 3: FUSION 360 (before 15 Feb 2027) ===
+
+   - Open cad/v2/out/assembly/type0_assembly.step in Fusion.
+   - Draw the brackets, plates and sensor mounts in detail.
+   - Go through the VERIFY list in assembly.md.
+   - Export the result as STEP and save it in cad/v2/in/
+   - Tell a session "the Fusion STEP is in cad/v2/in/".
+The mould drawings can't start until this is done.
+
+
+=== LATER (no rush) ===
+
+   - When the safety relay arrives: photo of its terminal labels.
+   - When the bench feet (T02) arrive: measure their height.
+   - When the cooling kit (S08) arrives: tell a session the pump size,
+     so the reservoir can be picked.
+   - Around 26 Dec - 3 Jan: re-check the wave 1 prices. A session will
+     write the list for you beforehand.
+
+
+=== WHAT TO PASTE INTO THE NEXT SESSION ===
+
+   - Your AliExpress results from Job 1A (item, price, shipping, date,
+     link). Rough notes are fine.
+   - Any seller replies.
+   - "Fusion STEP is in cad/v2/in/" when Job 3 is done.

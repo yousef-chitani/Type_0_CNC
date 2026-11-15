@@ -3,7 +3,7 @@
 **Start:** branch `claude/charming-cori-349jm7`. Read `docs/tasks/README.md` (rules, 1 page), then only the files listed below. Do not read the whole repo.
 
 **Who:** owner, then main session
-**Depends on:** 03
+**Depends on:** none (03 is on hold, D-131)
 
 ## Read
 - docs/assembly.md (VERIFY list)
@@ -11,7 +11,7 @@
 
 ## Do
 1. Owner: open the STEP in Fusion, detail brackets, plates and sensor mounts, work through the VERIFY list, save the STEP to `cad/v2/in/`.
-2. Session: put the changes into `assembly.py`, re-run everything as in task 03.
+2. Session: put the changes into `assembly.py`, re-run `assembly.py`, `enclosure.py`, `bench.py`, `base_cores_sketch.py`, `render_views.py`, and regenerate `cast_in_features.md`.
 
 ## Done when
 The assembly matches the owner's file with no clashes.

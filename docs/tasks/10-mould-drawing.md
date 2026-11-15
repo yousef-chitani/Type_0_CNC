@@ -3,7 +3,7 @@
 **Start:** branch `claude/charming-cori-349jm7`. Read `docs/tasks/README.md` (rules, 1 page), then only the files listed below. Do not read the whole repo.
 
 **Who:** main session
-**Depends on:** 03, 04, 09
+**Depends on:** 09 (04 done; 03 on hold, D-131)
 
 ## Read
 - cad/v2/out/assembly/cast_in_features.md

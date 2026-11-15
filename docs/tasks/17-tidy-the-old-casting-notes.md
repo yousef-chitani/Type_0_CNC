@@ -3,7 +3,7 @@
 **Start:** branch `claude/charming-cori-349jm7`. Read `docs/tasks/README.md` (rules, 1 page), then only the files listed below. Do not read the whole repo.
 
 **Who:** Opus 5.5 is fine
-**Depends on:** 03, 06, 07
+**Depends on:** none (03 and 06 on hold, D-131; 07 decided, D-129)
 
 ## Read
 - docs/eg-moulds.md

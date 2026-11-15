@@ -6,7 +6,7 @@
 **Depends on:** none
 
 ## Read
-- docs/open-questions.md item 4b
+- docs/open-questions.md item 4a
 - docs/bom.csv lines X03 and X04
 - docs/price-check-task-14.md (format)
 

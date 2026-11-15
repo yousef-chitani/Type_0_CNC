@@ -29,16 +29,16 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [06](06-trim-the-test-plan-to-the-pours-it-prote.md) | Trim the test plan to the pours it protects | main session | 01 = A (and the post-cure answer) | on hold (D-131) |
 | [07](07-curing.md) | Curing: settle the post-cure and the tent | main session | 01 | decided: post-cure and tent stay (D-129) |
 | [08](08-schedule.md) | Schedule: portal first | any model (Opus 5.5 is fine) | 01 = A | on hold (D-131) |
-| [09](09-fusion-pass.md) | Owner's Fusion pass and feeding it back | owner, then main session | 03 | open |
-| [10](10-mould-drawing.md) | Mould drawing: portal (cast first) | main session | 03, 04, 09 | open |
+| [09](09-fusion-pass.md) | Owner's Fusion pass and feeding it back | owner, then main session | none (03 on hold) | open: owner |
+| [10](10-mould-drawing.md) | Mould drawing: portal (cast first) | main session | 09 | open |
 | [11](11-mould-drawing.md) | Mould drawing: base | main session | 10 | open |
 | [12](12-printed-mould-helpers.md) | Printed mould helpers | Opus 5.5 is fine | 10 | open |
 | [13](13-supplier-messages.md) | Supplier messages | owner sends; Opus 5.5 can update the drafts | none | drafts ready (5); owner sends |
 | [14](14-z-motor-mount.md) | Z motor mount | main session | 13 (seller's drawing) | open |
 | [15](15-wave-1-order-sheet.md) | Wave 1 order sheet | Opus 5.5 is fine | none | done: `docs/wave1-order-sheet.md` |
 | [16](16-wave-1-price-re-check.md) | Wave 1 price re-check | Opus 5.5 writes and applies; owner runs it | 15 | open |
-| [17](17-tidy-the-old-casting-notes.md) | Tidy the old casting notes | Opus 5.5 is fine | 03, 06, 07 | open |
-| [18](18-rail-seat-and-assembly-procedure.md) | Rail-seat and assembly procedure | main session | 06, 10, 11 | open |
+| [17](17-tidy-the-old-casting-notes.md) | Tidy the old casting notes | Opus 5.5 is fine | none (03, 06 on hold) | open |
+| [18](18-rail-seat-and-assembly-procedure.md) | Rail-seat and assembly procedure | main session | 10, 11 | open |
 | [19](19-linuxcnc-config-after-the-bench-tests.md) | LinuxCNC config after the bench tests | Opus 5.5 is fine | owner's bench results (build weeks 3–6) | open |
 | [20](20-housekeeping-after-each-task.md) | Housekeeping after each task | any model | every task | open |
 
