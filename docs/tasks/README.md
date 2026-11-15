@@ -33,7 +33,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [10](10-mould-drawing.md) | Mould drawing: portal (cast first) | main session | 03, 04, 09 | open |
 | [11](11-mould-drawing.md) | Mould drawing: base | main session | 10 | open |
 | [12](12-printed-mould-helpers.md) | Printed mould helpers | Opus 5.5 is fine | 10 | open |
-| [13](13-supplier-messages.md) | Supplier messages | owner sends; Opus 5.5 can update the drafts | none | open |
+| [13](13-supplier-messages.md) | Supplier messages | owner sends; Opus 5.5 can update the drafts | none | drafts ready (5); owner sends |
 | [14](14-z-motor-mount.md) | Z motor mount | main session | 13 (seller's drawing) | open |
 | [15](15-wave-1-order-sheet.md) | Wave 1 order sheet | Opus 5.5 is fine | none | done: `docs/wave1-order-sheet.md` |
 | [16](16-wave-1-price-re-check.md) | Wave 1 price re-check | Opus 5.5 writes and applies; owner runs it | 15 | open |
@@ -43,7 +43,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [20](20-housekeeping-after-each-task.md) | Housekeeping after each task | any model | every task | open |
 
 ## Order
-1. Now: the owner checks AliExpress (`docs/price-check-task-15.md`, list at the end: square, shims, M5 × 20 12.9, optional straightedge); then add X10, X11 and the new X03 to `bom.csv` (finishes 05). Needing no decision: **13**.
+1. Now: the owner checks AliExpress (`docs/price-check-task-15.md`, list at the end: square, shims, M5 × 20 12.9, optional straightedge); then add X10, X11 and the new X03 to `bom.csv` (finishes 05). Owner: send the 5 drafts in `docs/supplier-messages.md` (task 13).
 2. After 01: **03, 04, 06, 07, 08** (and **02** only for option B).
 3. After the Fusion pass (**09**): **10, 11, 12**, then **18**.
 4. Late December: **16**. Any time: **14, 17**. After the bench tests: **19**.

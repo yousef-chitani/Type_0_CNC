@@ -51,3 +51,18 @@ Listing: https://www.aliexpress.com/item/1005006232398099.html (HM12-60 bracket)
 > My motor has 4 holes on a **50 mm** square and a **36 mm** pilot. Thank you.
 
 What we need: 4 × holes on a 50 ± 0.2 mm square, pilot bore Ø36 or larger, room for a D26 × L35 coupling. If the answer is 47.14 mm holes or a Ø38.1 pilot only, don't buy it: the session designs a mount from the 10 mm plate.
+
+## 5. EC Fibreglass Supplies (email or contact form): open question 1. Before wave 3 (1 Mar 2027)
+
+Product: https://www.ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow (bom.csv F01)
+
+> Hello. I would like to order **one 22.68 kg kit of Ampreg 30 with 3X Slow hardener** for delivery to **Swansea, SA2** (postcode to follow), in early March 2027.
+>
+> 1. What is the delivery charge to SA2, and how long does it take?
+> 2. Is it sent as one parcel, and does someone need to be in to sign for it?
+> 3. What is the shelf life of the resin and the hardener from the date you ship? I will use it from March to May 2027.
+> 4. Do you send the technical and safety data sheets with the kit?
+>
+> Thank you.
+
+What we need: the delivery cost (it is the last unpriced part of F01, open question 1) and a shelf life that covers March to May 2027.

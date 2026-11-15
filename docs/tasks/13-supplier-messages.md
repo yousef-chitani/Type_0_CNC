@@ -15,3 +15,7 @@
 
 ## Done when
 Every message has an answer or a date sent.
+
+## State (15 Nov 2026)
+- Step 2 done: EC Fibreglass draft is section 5 of `docs/supplier-messages.md`.
+- Steps 1 and 3 wait for the owner: 5 messages to send (1 and 4 are AliExpress chats, easy to send during the AliExpress check). Write the date sent under each message.
