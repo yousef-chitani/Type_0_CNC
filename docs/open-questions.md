@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-15, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,905.80, every line priced (D-126); the Ampreg and GCL delivery costs, the square and shims (X10, X11) and the M5 × 20 bolts are not in it yet.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell). The owner's short list is `owner-todo.txt`.
+Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,915.58, every line priced (D-126); the Ampreg and GCL delivery costs, the square and shims (X10, X11) and the M5 × 20 bolts are not in it yet.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell). The owner's short list is `owner-todo.txt`.
 
 ## Before wave 1 (4 Jan 2027)
 

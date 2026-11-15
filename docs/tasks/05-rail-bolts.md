@@ -20,4 +20,4 @@ The parts list has M5 × 20 with a dated price; totals agree in all files.
 ## State (15 Nov 2026)
 - Step 1 done: the line is in `docs/price-check-task-15.md` (AliExpress list), owner's choice **grade 12.9 from AliExpress** (D-134).
 - Screwfix has M5 × 20 only in A2 stainless: 1941T, 50 pack, £5.89 inc VAT (seen 15 Nov 2026). That's the fallback.
-- Step 2 waits for the owner's AliExpress reply.
+- **Done 15 Nov 2026:** owner found nothing cheaper on AliExpress, so X03 is Screwfix A2 1941T M5 × 20, 2 × £5.89 (X03 £70.47 → £70.67). Regenerated; wave 2 £1,051.71; Phase 1 £3,915.58.

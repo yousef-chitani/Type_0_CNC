@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,905.80** (budget £4,200, D-127). Every line priced. No eBay.
+**Phase 1 priced total: £3,915.58** (budget £4,200, D-127). Every line priced. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -11,9 +11,9 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | Spindle | £477.09 |
 | Electronics | £818.49 |
 | Stand | £243.36 |
-| Metrology | £298.78 |
-| Fixings | £70.47 |
-| **Total** | **£3,905.80** |
+| Metrology | £308.36 |
+| Fixings | £70.67 |
+| **Total** | **£3,915.58** |
 
 ## Frame
 
@@ -133,6 +133,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X01 | Dial test indicator + magnetic base | 1 set | £17.23 |
 | X02 | Precision level 200 mm (AliExpress) | 1 pcs | £32.94 |
 | X05 | Steel straightedge 500 mm | 1 pcs | £115.07 |
+| X10 | Engineer's square 300 mm | 1 pcs | £9.58 |
 | X06 | Feeler gauge set | 1 pcs | £5.19 |
 | X07 | Torque wrench 3/8" + 19 mm socket | 1 set | £43.71 |
 | X08 | Angle grinder 115 mm + turbo diamond disc | 1 set | £45.97 |
@@ -142,5 +143,5 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| X03 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | £70.47 |
+| X03 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | £70.67 |
 | X04 | (covered by X03) | 1 set | £0.00 |

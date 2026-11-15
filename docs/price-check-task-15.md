@@ -46,4 +46,7 @@ ID | vendor | price as listed (currency, VAT basis) | quantity it covers | stock
 | X11 | Owner messaged a seller; expected under £25. Price not final |
 | X03 | Screwfix wins: A2 1941T M5 × 20, 2 × 50 at £5.89 = £11.78 (A2, not 12.9: D-134 fallback) |
 | X05 | Owner suggests KS Tools 300.0638 precision straight edge 500 mm, Amazon ([page](https://www.amazon.co.uk/gp/product/B007XUELEQ)). Price and DIN 874 grade not given yet |
+| X10 (update) | **Silverline 245025, 300 mm, DIN 875/1, £9.58, Amazon** ([page](https://www.amazon.co.uk/dp/B000LFTX1G); DIN 875/1 confirmed on the page by curl, 15 Nov). Beats the AliExpress £18.19. **Applied to bom.csv** |
+| X03 (update) | Screwfix still cheapest. **Applied to bom.csv** (£70.47 → £70.67) |
+| X05 (update) | Owner found a knife-edge straightedge, grade 0 (0级), carbon steel per the listing, 57.5 × 11 mm, sizes 500/600/800/1000 mm: **£65.99 + £50.00 delivery = £115.99**. Length, seller and link not given. RS PRO 500 mm DIN 874/2 on the list at £115.07 with free delivery. Waiting for the owner |
 | — | Owner plans to buy the rails, ballscrews and their accessories from one AliExpress seller: `motion-parts-one-seller.txt` |

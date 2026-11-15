@@ -7,7 +7,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 - **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-135).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). After editing it run: `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
-- **Castings: keep them simple.** Do not add cast-in features. Phase 1 budget £4,200; priced total £3,905.80.
+- **Castings: keep them simple.** Do not add cast-in features. Phase 1 budget £4,200; priced total £3,915.58.
 - Write plainly and briefly. Do not merge branch `claude/awesome-ramanujan-by9kds` (old design).
 
 ## State in five lines
@@ -25,7 +25,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [02](02-price-check.md) | Price check: granite surface plate (only if option B is wanted) | owner's local browser session; any model writes the task file | 01 (B or undecided) | not needed (D-131) |
 | [03](03-strip-the-castings-in-the-cad-option-a.md) | Strip the castings in the CAD (option A) | main session (design judgement) | 01 = A | on hold (D-131) |
 | [04](04-portal-joint.md) | Portal joint: how it comes apart and goes back | main session | 01; 03 if option A | done (D-128, D-132, D-133) |
-| [05](05-rail-bolts.md) | Rail bolts: M5 × 20 instead of M5 × 16 | any model (Opus 5.5 is fine) | none | waiting: owner's AliExpress check (D-134) |
+| [05](05-rail-bolts.md) | Rail bolts: M5 × 20 instead of M5 × 16 | any model (Opus 5.5 is fine) | none | done: Screwfix A2 M5 × 20 (D-134 fallback) |
 | [06](06-trim-the-test-plan-to-the-pours-it-prote.md) | Trim the test plan to the pours it protects | main session | 01 = A (and the post-cure answer) | on hold (D-131) |
 | [07](07-curing.md) | Curing: settle the post-cure and the tent | main session | 01 | decided: post-cure and tent stay (D-129) |
 | [08](08-schedule.md) | Schedule: portal first | any model (Opus 5.5 is fine) | 01 = A | on hold (D-131) |
@@ -45,7 +45,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Order
 0. Task 21 done (`price-check-task-16.md`): HL Motion cannot supply everything; rails only are cheaper but UK shipping unknown. Owner decides, may send the draft there.
-1. Now: the owner checks AliExpress (`docs/price-check-task-15.md`, list at the end: square, shims, M5 × 20 12.9, optional straightedge); then add X10, X11 and the new X03 to `bom.csv` (finishes 05). Owner: send the 5 drafts in `docs/supplier-messages.md` (task 13).
+1. Now: X03 (M5 × 20) and X10 (Silverline square, £9.58) are in `bom.csv`; 05 done. Still open from the AliExpress check: **X11 shims** (owner waiting for a seller) and **X05 straightedge** (owner to choose: grade-0 knife edge £115.99 or RS DIN 874/2 £115.07). Owner: send the 5 drafts in `docs/supplier-messages.md` (task 13).
 2. After 01: **03, 04, 06, 07, 08** (and **02** only for option B).
 3. After the Fusion pass (**09**): **10, 11, 12**, then **18**.
 4. Late December: **16**. Any time: **14, 17**. After the bench tests: **19**.
