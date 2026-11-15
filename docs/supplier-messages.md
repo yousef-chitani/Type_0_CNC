@@ -66,3 +66,20 @@ Product: https://www.ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-re
 > Thank you.
 
 What we need: the delivery cost (it is the last unpriced part of F01, open question 1) and a shelf life that covers March to May 2027.
+
+## 6. LiMo Bearing (info@limobearing.com or "Request a Quote" on limobearing.com): quote for the motion parts (price check 16)
+
+> Hello. Please quote this order, shipped **DDP to the UK (Swansea, SA2)**, by **sea and by air**:
+>
+> 1. **DFU1605 & Nut House & Support BKBF12**, C7, standard BK12/BF12 end machining, overall lengths:
+>    - 1 × **850 mm** (X). The BK12 drive end needs an extra **Ø10 mm stub about 35 mm long** for a belt pulley and an outboard bearing. I can send a drawing.
+>    - 1 × **600 mm** (Y).
+>    - 1 × **350 mm** (Z).
+>    Can you supply them with **light preload (P2)**? Is there an extra charge for the X stub?
+> 2. **Linear Guide Set HGH20CA** (2 rails + 4 blocks), ZA preload: 1 × **800 mm**, 1 × **500 mm**, 1 × **350 mm**. What is the rail accuracy class (C or H)? Are the two rails in each set a matched pair?
+> 3. 1 × **HM12-60 integrated motor mount, C7**, for a **NEMA 24** closed-loop stepper (StepperOnline 24HS34). My motor has **4 holes on a 50 mm square** and a **Ø36 mm pilot**. Your listing shows **49.5 mm** hole spacing. Will the HM12-60 fit this motor? If not, can you machine the 4 holes on a 50 mm square? What is the pilot bore diameter, and how large is the inside space for the coupling?
+> 4. 1 × **flexible coupling D25L35**, bores **10 mm × 10 mm**. Does it fit inside the HM12-60?
+>
+> Please tell me the **total shipping weight**, the shipping cost and delivery time for sea and air, and whether the DDP price includes UK VAT. Thank you.
+
+What we need: an all-in DDP price to beat **£464.41** (current price of these lines, price check 16), the rail accuracy class, and a clear yes on the HM12-60 fitting the 50 mm / Ø36 motor face (or machined to fit). If the mount will not fit, task 14 makes it from the 10 mm plate.
