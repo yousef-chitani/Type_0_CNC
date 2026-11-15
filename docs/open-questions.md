@@ -15,6 +15,8 @@ Resolved items are in decisions.md (D-01 … D-127). **Phase 1 is £3,917.85, ev
 
 4. **Fusion review of the assembly (task 4):** open `cad/v2/out/assembly/type0_assembly.step` (vendor models already in, D-111), detail the brackets, plates and sensor mounts, check the VERIFY list in `docs/assembly.md`, and send back the STEP. The moulds (task 5) start from it.
    Who: owner (Fusion 360).
+4. (first) **Simplify Phase 1** (`docs/simplification-options.md`): option A (two stripped castings, portal cast first) or option B (granite surface plate base, about 95 kg, cast portal only). The answer changes items 4a, 10 and the mould drawings.
+   Who: owner.
 4a. **Portal relocation** (`docs/portal-relocation.md`): the current plan (bonded grout + a dowel reamed after grouting) can't be taken apart or reamed. Recommended: grout released from the base with packing tape, and two adjustable stops behind the legs. Decide before the mould drawings: it adds 4 × M8 inserts to the base and removes the dowel sleeves.
    Who: owner decides; session then updates `assembly.py`.
 4b. **Rail bolts are too short.** With the 5 mm resin seat (D-115), an M5 × 16 bolt reaches only about 2 mm into the insert bar. They must be **M5 × 20** (about 6 mm of thread in the steel). X03 lists 100 × M5 × 16 in A2 stainless: change it and price M5 × 20 in grade 8.8 or 12.9. VERIFY against the rail's counterbore when the rails arrive.

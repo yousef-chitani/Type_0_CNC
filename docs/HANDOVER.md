@@ -79,6 +79,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
    - add a heater and thermostat to the BOM.
 
 **In progress / proposals:**
+- **Phase 1 simplification (owner request, 15 Nov):** castings and layout as simple and low-risk as possible. Two options in `docs/simplification-options.md`; waiting for the owner. Do not add features to the castings.
 - **Portal relocation** (`docs/portal-relocation.md`, sketch `cad/v2/out/portal_relocation.png`): recommendation waiting for the owner. Released grout bed + two adjustable stops behind the legs, instead of a bonded grout and blind dowels.
 - **Opus branch `claude/awesome-ramanujan-by9kds`: do not merge.** It forked from the 8 Nov state and redid tasks 2–5 on the old design with clashing D-numbers. This branch is the truth (owner, 15 Nov). Useful there: `cad/v2/moulds.py` as a starting point for the mould drawings.
 - **Rail bolts must be M5 × 20**, not M5 × 16, because of the 5 mm resin seat (open question 4b).
