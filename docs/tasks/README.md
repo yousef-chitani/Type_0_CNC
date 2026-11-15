@@ -37,7 +37,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [14](14-z-motor-mount.md) | Z motor mount | main session | 13 (seller's drawing) | open |
 | [15](15-wave-1-order-sheet.md) | Wave 1 order sheet | Opus 5.5 is fine | none | done: `docs/wave1-order-sheet.md` |
 | [16](16-wave-1-price-re-check.md) | Wave 1 price re-check | Opus 5.5 writes and applies; owner runs it | 15 | open |
-| [17](17-tidy-the-old-casting-notes.md) | Tidy the old casting notes | Opus 5.5 is fine | none (03, 06 on hold) | open |
+| [17](17-tidy-the-old-casting-notes.md) | Tidy the old casting notes | Opus 5.5 is fine | none (03, 06 on hold) | done: 4 disagreements listed in the task file |
 | [18](18-rail-seat-and-assembly-procedure.md) | Rail-seat and assembly procedure | main session | 10, 11 | open |
 | [19](19-linuxcnc-config-after-the-bench-tests.md) | LinuxCNC config after the bench tests | Opus 5.5 is fine | owner's bench results (build weeks 3–6) | open |
 | [21](21-hl-motion-check.md) | HL Motion check: all motion parts from one seller (curl) | Opus 5.5 is fine | none | done: no single seller; owner decides (rails only?) |

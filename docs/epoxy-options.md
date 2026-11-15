@@ -1,12 +1,12 @@
-# Epoxy options (UK)
+# Epoxy (UK)
 
-> **2026-11-09 (D-117):** decided after the EG design review: **one laminating epoxy with a slow hardener for everything** (castings, rail-seat pour, grout). GlassCast 50 PLUS is dropped (Tg 39 °C, 2.1 GPa: too soft). Candidates: **Easy Composites EL2 (slow)** and **Gurit Ampreg 30 (slow)**; `price-check-task-13.md` collects prices and datasheet numbers for both. About 20 kg in total for the v2 castings (the 41 kg below was for the larger v1 frame). The table and plan below are the earlier notes.
+**One laminating epoxy with a slow hardener for everything:** castings, rail-seat pour, grout and test bricks (D-117). About 20 kg in total: about 13 kg for the castings at 11%, the rest for the rail seats, grout and test bricks.
 
 ## Chosen: Ampreg 30 + 3X Slow (D-122, price check 13, 9 Nov 2026)
 
-One 22.68 kg kit, **£354.00 inc VAT** (£295.00 ex) from EC Fibreglass Supplies, delivery shown at checkout only. Numbers copied from the datasheets by the owner's local session:
+One 22.68 kg kit, **£354.00 inc VAT** (£295.00 ex) from EC Fibreglass Supplies (bom.csv F01); delivery to SA2 not known yet (supplier message 5). Numbers copied from the datasheets by the owner's local session:
 
-| Fact | Ampreg 30 + 3X Slow (chosen) | EL2 + AT30 Slow |
+| Fact | Ampreg 30 + 3X Slow (chosen) | EL2 + AT30 Slow (runner-up) |
 |---|---|---|
 | Price for about 20 kg, inc VAT | £354.00 (22.68 kg) | £391.20 (4 × 5 kg) |
 | Mix ratio by weight | 100:26 | 100:30 |
@@ -22,36 +22,22 @@ One 22.68 kg kit, **£354.00 inc VAT** (£295.00 ex) from EC Fibreglass Supplies
 
 Datasheets: [Ampreg 30 TDS](https://www.ecfibreglasssupplies.co.uk/user/TechnicalDataSheet/100153.pdf), [Ampreg 30 SDS](https://www.ecfibreglasssupplies.co.uk/user/SafetyDataSheet/100153.pdf), [EL2 TDS](https://media.easycomposites.co.uk/datasheets/EC-TDS-EL2-Epoxy-Laminating-Resin.pdf).
 
-Never leave mixed resin standing in the bucket: the datasheet warns the reaction runs away in a confined mass. Mix a batch, get it onto the stone straight away. The Ampreg datasheet's release advice: 5–6 coats of carnauba wax, PVA for rougher or complex surfaces.
+## Handling
 
-We need about **41 kg** in total (see [eg-moulds.md](eg-moulds.md)). There are two separate jobs:
+- Never leave mixed resin standing in the bucket: the datasheet warns the reaction runs away in a confined mass. Mix a batch, get it onto the stone straight away.
+- The datasheet's release advice: 5–6 coats of carnauba wax, PVA for rougher or complex surfaces (the release test is in `eg-moulds.md`, D-120).
+- Cure and post-cure: `curing-heat.md`.
 
-1. **Bulk EG binder** (about 37 kg). Low viscosity, so it wets fine filler well. Curing heat matters less here, because the aggregate (about 89% of the mass) soaks up the heat. Clear, UV-stable resin isn't needed.
-2. **Rail-seat leveling pour** (about 3 kg). Very low viscosity and a slow cure, so it has time to settle flat. Low shrinkage. Poured only 3–5 mm deep.
+## The two jobs
 
-| Product | Supplier | Kit | Price | £/kg | Notes |
-|---|---|---|---|---|---|
-| Ampreg 30 + slow hardener | EC Fibreglass Supplies (Gurit) | 22.68 kg | £295 (page doesn't say whether VAT is included) | about £13 | Structural laminating epoxy with low viscosity. Several hardener speeds. **Cheapest per kg for the bulk EG.** |
-| GlassCast 50 PLUS | Easy Composites | 5 / 15 / 30 kg | from £76.46 + VAT (5 kg) | about £15 + VAT | Viscosity about 300 mPa·s, slow cure (about 7 days to initial cure at 20 °C), deep pours up to 50–80 mm. **Good choice for the leveling pour.** |
-| PureCast Slow | CFS Fibreglass | 21.75 kg | £348 (page doesn't say whether VAT is included) | about £16 | 2:1 mix, 17 h pot life, 10–50 mm pours. Viscosity not listed |
-| West System 105 + 209 extra slow | Several | — | not confirmed | not confirmed | The usual UK forum pick for leveling pours and EG. Proven, but costly |
+1. **Bulk EG binder.** Low viscosity, so it wets the fine filler well. Curing heat matters less, because the aggregate (about 89% of the mass) soaks it up.
+2. **Rail-seat levelling pour.** Low viscosity and a slow cure, so it has time to settle flat; poured only 5 mm deep. Ampreg's neat-resin shrinkage is 1.64 %, so the 500 mm test strip must show it levels in a 5 mm seat (F02).
 
-## Suggested plan (to confirm)
+## Other resins looked at (4 Nov 2026)
 
-- **Bulk EG:** Ampreg 30 with the slow hardener, about 37 kg (two 22.68 kg kits). **2 × £295 listed = £590**, VAT basis to confirm.
-- **Leveling, grout and samples:** GlassCast 50 PLUS, 5 kg. **£76.46 + VAT listed = £91.75 inc. VAT.**
-- **Total: £681.75 from listed prices**, plus VAT on the Ampreg if the listed price excludes it.
+| Product | Supplier | Notes |
+|---|---|---|
+| PureCast Slow | CFS Fibreglass | 21.75 kg £348, 2:1 mix, 17 h pot life, 10–50 mm pours. Viscosity not listed |
+| West System 105 + 209 extra slow | Several | The usual UK forum pick for levelling pours and EG. Proven, but costly |
 
-Before committing, make 3–4 test bricks (about 150 × 150 × 100 mm) at 10%, 11% and 12% epoxy. Check for voids, surface finish and how they break.
-
-## Pricing rule
-
-Only prices read from a live supplier page are listed, with the date checked. Anything unconfirmed is marked *not confirmed*.
-
-## Still to check
-
-- Get the technical data sheets: mixed viscosity, pot life at 20 °C, and shrinkage.
-- Ask suppliers whether the resin is suitable for **highly filled mineral casting**.
-- Prices and VAT status were read from supplier pages on 2026-11-04 and may change.
-
-Sources: [EC Fibreglass, Ampreg 30](https://ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow), [Easy Composites, GlassCast 50 PLUS](https://www.easycomposites.co.uk/glasscast-50-plus-clear-epoxy-casting-resin), [CFS, PureCast Slow](https://www.cfsnet.co.uk/pl-14867/purecast-slow-epoxy-kits/), [MyCNCUK, self-leveling epoxy thread](https://www.mycncuk.com/threads/3878-Self-levelling-epoxy-resin?p=121678).
+Sources: [EC Fibreglass, Ampreg 30](https://ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow), [CFS, PureCast Slow](https://www.cfsnet.co.uk/pl-14867/purecast-slow-epoxy-kits/), [MyCNCUK, self-levelling epoxy thread](https://www.mycncuk.com/threads/3878-Self-levelling-epoxy-resin?p=121678).
