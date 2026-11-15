@@ -83,3 +83,22 @@ Put the results here, compare the all-in total with £498.41, and ask the owner 
 ## Limo Bearing (limobearing.com), 15 Nov 2026: blocked
 
 The owner asked for limobearing.com by curl, no browser. **Every URL returns 403** with a JavaScript bot check ("Checking your browser before accessing"): `/`, `/products.json`, `/wp-json/wc/store/products`, `/sitemap.xml`, `/robots.txt`. The site runs on Hostinger Website Builder (`server: hcdn`). Curl cannot pass the check without defeating it, so **no prices**. Options: the owner opens the site and copies the prices for the lines above, or asks the seller by email using the HL Motion draft (same questions).
+
+### LiMo DFU1605 ballscrews (owner's saved page, 15 Nov 2026)
+
+The owner saved the product page from a browser ("DFU1605 2005 2505 2510 Double nut ball screw | LiMo", `https://limobearing.com/dfu1605-2005-2505-double-nut-ball-screw`). Prices were taken from the page's own variant data (USD, all `is_available: true`); the price shown on the page, $42.36, matches the 800 mm screw.
+
+**Spec on the page:** 52100 bearing steel, **C7 cold rolled, lead error 50 µm / 300 mm**. Preload: **P1 (no preload, no axial play) by default**; P0 and **P2 (light preload) on request**. Length is **overall length**; custom 10–4,000 mm (pick the nearest standard length, put the exact length in the remark). Standard end machining fits **BK12 + BF12** by default; other machining (the X drive-end stub) by remark plus a drawing emailed with the order number. CAD drawings on the page.
+
+| ID | option | price (USD, ex VAT) | notes |
+|---|---|---|---|
+| M05 X | DFU1605 & Nut House & Support BKBF12, 900 mm | $54.31 | remark: cut to 850 overall, X drive-end stub Ø10 × about 35 mm (send a drawing; any extra charge not shown) |
+| M06 Y | same, 600 mm | $51.74 | standard length |
+| M07 Z | same, 400 mm | $46.14 | remark: 350 overall (300 mm is the same price) |
+| | **3 kits** | **$152.19 = £115.12 ex VAT, £138.14 inc VAT** | at 1 USD = £0.756391 |
+
+**Shipping (page table, DDP air to the USA; the page says Europe is "similar"):** 2.5–5 kg $39→$69, 5–10 kg $109, 8–14 workdays. The weight of 3 kits is not on the page. For the UK write **"DDP"** in the checkout remark, otherwise it ships DAP and the buyer pays import VAT and the courier fee. Discount codes start at $200 (5 %), so this order does not qualify.
+
+**All-in, inc 20 % VAT on goods + shipping:** **£200.77** if it falls in the 2.5–5 kg band, **£237.07** if 5–10 kg, against **£229.01** now (AliExpress). So it is about the same money, for a stated C7 grade, a stated lead error, zero axial play by default and light preload available. Before ordering: ask the shipping weight and the UK DDP price, whether the X stub costs extra, and ask for P2.
+
+Related products on the same page (not checked against the spec): integrated stepper motor mount $18.86, flexible coupling $2.86, nut housing $3.69, EK/EF supports $9.43. No pulleys, belts or KFL000 seen. **Nothing in `bom.csv` changed.**
