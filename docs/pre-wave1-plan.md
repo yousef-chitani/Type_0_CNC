@@ -7,7 +7,7 @@ The order matters for two reasons. Your Fusion pass blocks the mould drawings, s
 ## Week 1: 14 – 20 Nov. Close the loose ends from the review
 
 **You**
-- Run **price check 12** (`price-check-task-12.md`): screws, flat bar, plates, Z motor mount, pulleys, belts, outboard bearing.
+- ~~Run **price check 12**~~ done, applied 15 Nov (D-126): (`price-check-task-12.md`): screws, flat bar, plates, Z motor mount, pulleys, belts, outboard bearing.
 - Send the **ballscrew seller message** (`supplier-messages.md` section 1): is "Guide Length" overall or thread length, and the end machining.
 - Put the **Ampreg 30 kit** in a basket with postcode SA2 and read the delivery charge (stop before payment). Do the same for the Easy Composites release agents (F12), now the only line from there.
 - Start the **Fusion pass**: open `cad/v2/out/assembly/type0_assembly.step` (it has the new cores, recesses and joint bars).
@@ -26,8 +26,8 @@ The order matters for two reasons. Your Fusion pass blocks the mould drawings, s
 - Decide the **base PVC cores** (5 × Ø50, about −9.6 kg) or leave the base solid. Your FEA can wait, but the decision changes the base mould.
 
 **Session**
-- Apply **price check 12** to the parts list; Phase 1 total stops being provisional.
-- Add the **tent heater and thermostat** to the parts list and write a small price-check task for them and anything task 6 adds (test-brick moulds, probes, a dial indicator if missing).
+- ~~Apply **price check 12**~~ done 15 Nov, with price check 14 (kit and tent). Phase 1 £3,917.85.
+- ~~Tent heater, thermostat, PIR board and test kit priced and added~~ done 15 Nov (price check 14).
 - Review task 6 with you: epoxy percentages, number of bricks, what counts as a pass.
 
 ## Week 3: 28 Nov – 4 Dec. Fusion pass finished
@@ -35,7 +35,7 @@ The order matters for two reasons. Your Fusion pass blocks the mould drawings, s
 **You**
 - Finish the Fusion pass and work through the **VERIFY list** in `assembly.md` (50 mm motor hole spacing, nut flange flats, BK12 end machining, clamp offset, Y pulley clearance, sensor positions, motor cable exits).
 - Send back the STEP (into `cad/v2/in/`).
-- Run the small price check from week 2.
+- Send the **Z motor mount seller message** (`supplier-messages.md` section 4).
 
 **Session**
 - Ballscrew answer in: confirm X 850 / Y 600 / Z 350 or change the lengths.

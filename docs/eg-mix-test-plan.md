@@ -115,7 +115,7 @@ Sessions 1–6 fit in weeks 12–13. The strip's long test runs alongside the ca
 - Record the peak and when it happens. The estimate in `curing-heat.md` is a rise of about 20–35 °C for this wrapped brick.
 - If the centre goes above about 60 °C, the real pours need cooler materials, no tent for the first day, or a fan.
 
-**C pull test.** Bridge the brick with a steel bar resting on its two ends (100 mm or more clear of the cast-in bar). Put the M12 rod through it and tighten a nut with a torque wrench in steps: 20, 30, 40, 50 N·m. 50 N·m is about 2 tonnes of pull, above the working preload.
+**C pull test.** Bridge the brick with a steel bar resting on its two ends (100 mm or more clear of the cast-in bar). Put the M12 rod through it and tighten a nut with a torque wrench in steps: 25, 30, 40, 50 N·m (the wrench starts at 21). 50 N·m is about 2 tonnes of pull, above the working preload.
 - Pass: no cracks, the rod end doesn't creep up (dial indicator on it), and the thread still runs freely afterwards.
 
 **D beam section.** Saw across at one-third and two-thirds of the length.
@@ -151,7 +151,7 @@ Sessions 1–6 fit in weeks 12–13. The strip's long test runs alongside the ca
 
 ## 10. Kit the tests need
 
-Not on the parts list yet. Tell the session which you already have; the rest go into a small price check.
+On the parts list since price check 14 (X05–X09, F22–F24); the owner already has scales.
 
 - Kitchen or parcel **scales**: 0–5 kg reading to 1 g (binder), and 0–30 kg (aggregate).
 - **Steel straightedge**, 500 mm or longer, and feeler gauges.

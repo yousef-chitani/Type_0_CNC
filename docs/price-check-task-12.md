@@ -1,3 +1,5 @@
+> **Done.** Applied 15 Nov 2026 (D-126). M13 is still provisional.
+
 # Price check task 12: parts changed by the full CAD assembly (D-104 … D-110)
 
 **Project:** Type 0 CNC. Buyer in **Swansea, SA2**. **Vendor policy (D-82/D-84):** no eBay. Use the vendors already in the order: **AliExpress, Aluminium Warehouse, The Metal Store, RS, Screwfix, B&Q**. These go in **order wave 2 (15 Feb 2027)**, except M12 (wave 4). Background: `docs/assembly.md`.

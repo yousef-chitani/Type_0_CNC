@@ -1,19 +1,19 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,342.09** (budget £4,000). Not priced yet: M15, M16, M17. No eBay.
+**Phase 1 priced total: £3,917.85** (budget £4,000). Every line priced. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £672.39 |
-| Motion | £998.07 |
+| Frame | £885.46 |
+| Motion | £1,112.15 |
 | Spindle | £489.14 |
 | Electronics | £818.49 |
 | Stand | £243.36 |
-| Metrology | £50.17 |
+| Metrology | £298.78 |
 | Fixings | £70.47 |
-| **Total** | **£3,342.09** |
+| **Total** | **£3,917.85** |
 
 ## Frame
 
@@ -24,7 +24,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F03 | Coarse aggregate: quartz 2-5 mm | 3 25 kg bags | £43.56 |
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
-| F07 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 3 m bar | £36.00 |
+| F07 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 lot | £54.90 |
 | F08 | M12 threaded rod 2 × 1 m + nuts | 1 lot | £29.08 |
 | F09 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 |
 | F10 | MDF sheets for moulds (floors + walls) | 1 sheet | £28.00 |
@@ -39,6 +39,9 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F19 | Mould helpers (3D printed, design pending) | 1 set | £0.00 |
 | F20 | Steel flat bar 40 x 20 (portal joint bars) | 1 pcs | £13.50 |
 | F21 | Speed control for the vibration-table motor (dropped) | 1 pcs | £0.00 |
+| F22 | Curing tent: 50 mm foil-faced PIR board + foil tape | 3 sheets | £139.99 |
+| F23 | Tent heater: 500 W oil-filled radiator | 1 pcs | £20.99 |
+| F24 | Thermostat controller with remote probe | 1 pcs | £33.19 |
 
 ## Motion
 
@@ -48,19 +51,19 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M02 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | 2 pcs | £81.99 |
 | M03 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | 2 pcs | £60.59 |
 | M04 | HGH20CA carriages (in the rail kits) | 12 pcs | £0.00 |
-| M05 | DFU1605 ballscrew kits X 850 / Y 600 / Z 350 | 3 pcs | £214.81 |
+| M05 | DFU1605 ballscrew kits X 850 / Y 600 / Z 350 | 3 pcs | £229.01 |
 | M06 | BK12 + BF12 end supports (in the screw kits) | 3 sets | £0.00 |
 | M07 | Nut housings (in the screw kits) | 3 pcs | £0.00 |
 | M08 | Disc coupling 10 mm to 10 mm (Z only) | 1 pcs | £7.40 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | £112.71 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
-| M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore | 4 pcs | to price |
-| M16 | HTD-5M timing belts 15 mm wide | 2 pcs | to price |
-| M17 | Ø10 flange bearing (X screw outboard support) | 1 pcs | to price |
+| M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore | 4 pcs | £15.68 |
+| M16 | HTD-5M timing belts 15 mm wide | 4 pcs | £14.27 |
+| M17 | Ø10 flange bearing (X screw outboard support) | 1 pcs | £4.05 |
 | M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
-| M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | £85.85 |
-| M13 | Z motor mount (NEMA 24 to BK12) | 1 lot | £55.16 |
+| M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | £186.26 |
+| M13 | Z motor mount (NEMA 24 to BK12) | 1 pcs | £20.63 |
 
 ## Spindle
 
@@ -129,6 +132,11 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 |---|---|---|---|
 | X01 | Dial test indicator + magnetic base | 1 set | £17.23 |
 | X02 | Precision level 200 mm (AliExpress) | 1 pcs | £32.94 |
+| X05 | Steel straightedge 500 mm | 1 pcs | £115.07 |
+| X06 | Feeler gauge set | 1 pcs | £5.19 |
+| X07 | Torque wrench 3/8" + 19 mm socket | 1 set | £43.71 |
+| X08 | Angle grinder 115 mm + turbo diamond disc | 1 set | £45.97 |
+| X09 | PPE: nitrile gloves, safety glasses, FFP3 masks | 1 set | £38.67 |
 
 ## Fixings
 

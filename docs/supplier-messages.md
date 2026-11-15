@@ -37,3 +37,17 @@ Phone script:
 > 2. Price per bag, and can I pay on collection?
 > 3. Is it kiln-dried and bagged (it's for epoxy resin, so it must be dry)?
 > 4. Opening hours for collection, and is there parking for loading a car?
+
+## 4. Z motor mount seller (AliExpress chat): before wave 2 (15 Feb 2027, D-126)
+
+Listing: https://www.aliexpress.com/item/1005006232398099.html (HM12-60 bracket)
+
+> Hello. I am looking at your HM12-60 motor bracket. Please send the dimension drawing.
+>
+> 1. What is the **motor mounting hole spacing** (square pattern, centre to centre) and the hole or thread size?
+> 2. What is the **pilot (centring) bore diameter** on the motor side?
+> 3. What is the distance from the motor face to the bearing seat, and which bearing block does it fit (BK12)?
+>
+> My motor has 4 holes on a **50 mm** square and a **36 mm** pilot. Thank you.
+
+What we need: 4 × holes on a 50 ± 0.2 mm square, pilot bore Ø36 or larger, room for a D26 × L35 coupling. If the answer is 47.14 mm holes or a Ø38.1 pilot only, don't buy it: the session designs a mount from the 10 mm plate.

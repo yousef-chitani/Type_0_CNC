@@ -1,3 +1,5 @@
+> **Done.** Applied 15 Nov 2026 (D-126). Open: GCL delivery cost, glove size.
+
 # Price check task 14: test kit and curing tent (D-124, `eg-mix-test-plan.md`)
 
 **Project:** Type 0 CNC. Buyer in **Swansea, SA2**. **Vendor policy (D-82/D-84):** no eBay. **Screwfix and B&Q first** (collect in Swansea), then RS, then AliExpress. Needed by **order wave 3 (1 Mar 2027)**; the tests are in weeks 12–13. The owner has scales only.

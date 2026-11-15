@@ -20,7 +20,7 @@ Written 15 Nov 2026. These are the jobs on the project that are well defined, ha
 ## Tasks to hand off
 
 ### 1. Apply a price-check reply to the parts list
-**When:** each time the owner uploads a reply (12 and 14 are pending).
+**When:** each time the owner uploads a reply (12, 13 and 14 are applied; the wave 1 re-check is next).
 **Brief:** "Apply the attached price-check reply to `docs/bom.csv`: price, VAT basis, date checked, link and notes for each line; add new lines where the task file defines new IDs. Regenerate the derived files. Update the wave totals in `docs/phase1-schedule.md` so they sum to the Phase 1 total in `docs/phase1-cost.md`. Mark the task file as done at the top. List every PREMIUM line for the owner and anything in the reply that doesn't match the spec. Don't choose between alternatives: ask."
 **Done when:** the totals agree in all files and no line in the reply is left unapplied or unexplained.
 

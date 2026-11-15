@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-09, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-125). **Phase 1 £3,342.09 is provisional until price check 12 (D-110) and the Ampreg 30 delivery cost.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
+Resolved items are in decisions.md (D-01 … D-126). **Phase 1 is £3,917.85, every line priced (D-126); the Ampreg and GCL delivery costs are not in it.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell).
 
 ## Before wave 1 (4 Jan 2027)
 
@@ -15,8 +15,12 @@ Resolved items are in decisions.md (D-01 … D-125). **Phase 1 £3,342.09 is pro
 
 4. **Fusion review of the assembly (task 4):** open `cad/v2/out/assembly/type0_assembly.step` (vendor models already in, D-111), detail the brackets, plates and sensor mounts, check the VERIFY list in `docs/assembly.md`, and send back the STEP. The moulds (task 5) start from it.
    Who: owner (Fusion 360).
-5. **Price check 12** (`docs/price-check-task-12.md`): new screw lengths, flat bars, plates, Z motor mount (50 mm hole spacing), HTD pulleys and belts, outboard bearing.
-   Who: owner, local price check.
+5. **Z motor mount (M13):** ask the AliExpress seller for the HM12-60 drawing (`supplier-messages.md` section 4). It must have 4 holes on a 50 mm square and a Ø36 pilot. If not, the session designs a mount from the 10 mm plate.
+   Who: owner sends the message.
+5a. **Budget:** Phase 1 is **£3,917.85** of £4,000 before the Ampreg and GCL delivery charges. Decide whether to raise the budget or cut something (largest new lines: straightedge £115.07, PIR board £135.00, plates +£100).
+   Who: owner.
+5b. **Glove size** for the nitrile gloves (X09), and check the torque wrench stock (none in the Swansea stores on 15 Nov; collect next day).
+   Who: owner, at order time.
 
 6. **Screwfix Swansea stock is thin** for T13 varnish (1 each at Parc Tawe and Cwmdu Parc) and the 4 × 40 screws (2–3 per store) on 8 Nov. Re-check before 15 Feb, or order for delivery.
     Who: owner, at order time.
@@ -34,7 +38,7 @@ Resolved items are in decisions.md (D-01 … D-125). **Phase 1 £3,342.09 is pro
 11. **Ampreg 30 delivery cost to SA2** (EC Fibreglass shows it only at checkout), and the Easy Composites delivery charge now that only the release agents (F12) come from there.
    Who: owner, in the basket (stop before payment).
 11c. **Review the test plan** (`docs/eg-mix-test-plan.md`): pass marks, number of pieces, and:
-   - Kit: the owner has scales only. The rest (straightedge, feeler gauges, torque wrench, angle grinder + disc, PPE) and the tent parts (PIR board, heater, thermostat, D-124) are in **price check 14** (`docs/price-check-task-14.md`): run it.
+   - Kit and tent parts are priced (price check 14, D-126).
    - Epoxy margin: one kit covers up to 12 %; at 13 % a small top-up pack is needed.
    Who: owner.
 12. **GCL delivery cost to SA2** for 3 × 25 kg quartz, and **Hancock & Brown** collection of 3 × 20 kg sand.
@@ -77,6 +81,7 @@ Resolved items are in decisions.md (D-01 … D-125). **Phase 1 £3,342.09 is pro
     Who: owner, B&Q website stock checker.
 
 ## Closed since the last list
+- Price checks 12 and 14 applied (D-126).
 - Price check 13: Ampreg 30 + 3X Slow chosen (D-122); F20 priced; hand tamping first, no vibration motor or speed controller (D-123).
 - Base pads lift the machine 10 mm: accepted, enclosure unchanged, top gap 30 mm (D-121).
 - EG design review: done, decisions D-114 … D-120 (portal cores, rail-seat recesses, joint bars, resin, inserts, base pads).
