@@ -44,7 +44,7 @@ Written 15 Nov 2026. These are the jobs on the project that are well defined, ha
 
 ### 6. Printed mould helpers (simple parts)
 **When:** after the test plan is agreed.
-**Brief:** "In `cad/v2/printed_parts.py` (PETG, Bambu P1S, see `docs/printed-parts.md`), add: a split test-brick mould 100 × 100 × 100 is NOT wanted (moulds are MDF); instead model the small helpers: core hold-down straps for Ø40 pipe, end caps for Ø40 pipe, sleeve locators for Ø16 and Ø12 tubes on an 18 mm MDF floor, and jig spacers that set an insert bar 5 mm above the floor. Export STL to `cad/v2/out/print/` and add them to `docs/printed-parts.md`. Take every dimension from `cast_in_features.md`; where a dimension depends on a bought part, mark it VERIFY."
+**Brief:** "In `cad/v2/printed_parts.py` (PETG, Bambu P1S, see `docs/printed-parts.md`), add the small mould helpers (the moulds themselves are MDF, not printed): core hold-down straps for Ø40 pipe, end caps for Ø40 pipe, sleeve locators for Ø16 and Ø12 tubes on an 18 mm MDF floor, and jig spacers that set an insert bar 5 mm above the floor. Export STL to `cad/v2/out/print/` and add them to `docs/printed-parts.md`. Take every dimension from `cast_in_features.md`; where a dimension depends on a bought part, mark it VERIFY."
 **Done when:** each part exports, has a print orientation and material noted, and nothing is sized from a guess.
 
 ### 7. LinuxCNC config upkeep
