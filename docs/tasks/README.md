@@ -4,7 +4,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/charming-cori-349jm7`. Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-127).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-131).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). After editing it run: `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`.
 - **Castings: keep them simple.** Do not add cast-in features. Phase 1 budget £4,200; priced total £3,917.85.
@@ -13,7 +13,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 ## State in five lines
 - Fixed-gantry mill, 2 epoxy-granite castings (base 80.2 kg, portal 37.6 kg), Ampreg 30 resin, hand-tamped.
 - Full CAD assembly in `cad/v2/assembly.py`; every Phase 1 part is priced.
-- **Waiting for the owner: task 01** (how far to simplify). It blocks tasks 03, 04, 06, 07, 08.
+- **Task 01 answered (D-131):** no stripping, no granite plate. The owner's issue was picturing the assembly: see `docs/assembly-steps.md`. **Waiting for the owner's read of it.** Post-cure kept (D-129); portal re-squared after each move (D-128).
 - Wave 1 order: 4 Jan 2027. Castings: April–May 2027.
 - Background, only if a task needs it: `docs/HANDOVER.md`.
 
@@ -21,14 +21,14 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 | # | Task | Who | Depends on | State |
 |---|---|---|---|---|
-| [01](01-choose-how-to-simplify-phase-1.md) | Choose how to simplify Phase 1 | owner | none | open |
-| [02](02-price-check.md) | Price check: granite surface plate (only if option B is wanted) | owner's local browser session; any model writes the task file | 01 (B or undecided) | open |
-| [03](03-strip-the-castings-in-the-cad-option-a.md) | Strip the castings in the CAD (option A) | main session (design judgement) | 01 = A | open |
-| [04](04-portal-joint.md) | Portal joint: how it comes apart and goes back | main session | 01; 03 if option A | open |
+| [01](01-choose-how-to-simplify-phase-1.md) | Choose how to simplify Phase 1 | owner | none | answered (D-131); owner reviews `assembly-steps.md` |
+| [02](02-price-check.md) | Price check: granite surface plate (only if option B is wanted) | owner's local browser session; any model writes the task file | 01 (B or undecided) | not needed (D-131) |
+| [03](03-strip-the-castings-in-the-cad-option-a.md) | Strip the castings in the CAD (option A) | main session (design judgement) | 01 = A | on hold (D-131) |
+| [04](04-portal-joint.md) | Portal joint: how it comes apart and goes back | main session | 01; 03 if option A | decided (D-128); to do: remove the dowel sleeves from `assembly.py` |
 | [05](05-rail-bolts.md) | Rail bolts: M5 × 20 instead of M5 × 16 | any model (Opus 5.5 is fine) | none | open |
-| [06](06-trim-the-test-plan-to-the-pours-it-prote.md) | Trim the test plan to the pours it protects | main session | 01 = A (and the post-cure answer) | open |
-| [07](07-curing.md) | Curing: settle the post-cure and the tent | main session | 01 | open |
-| [08](08-schedule.md) | Schedule: portal first | any model (Opus 5.5 is fine) | 01 = A | open |
+| [06](06-trim-the-test-plan-to-the-pours-it-prote.md) | Trim the test plan to the pours it protects | main session | 01 = A (and the post-cure answer) | on hold (D-131) |
+| [07](07-curing.md) | Curing: settle the post-cure and the tent | main session | 01 | decided: post-cure and tent stay (D-129) |
+| [08](08-schedule.md) | Schedule: portal first | any model (Opus 5.5 is fine) | 01 = A | on hold (D-131) |
 | [09](09-fusion-pass.md) | Owner's Fusion pass and feeding it back | owner, then main session | 03 | open |
 | [10](10-mould-drawing.md) | Mould drawing: portal (cast first) | main session | 03, 04, 09 | open |
 | [11](11-mould-drawing.md) | Mould drawing: base | main session | 10 | open |

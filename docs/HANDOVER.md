@@ -2,6 +2,8 @@
 
 **Branch:** `claude/charming-cori-349jm7` on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed. Earlier work: `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
+> **15 Nov, later:** the owner answered the waiting questions (D-128 … D-131). The castings stay as they are; the owner's concern was picturing the assembly, now answered by **`docs/assembly-steps.md`** (pictures from `cad/v2/render_steps.py`). Section 0 below is older where it disagrees.
+>
 > **Start with `docs/tasks/README.md`.** The work is split into 20 small tasks, one per session, each listing the only files to read. This handover is background.
 
 ## 0. Where the session of 9–15 Nov stopped
