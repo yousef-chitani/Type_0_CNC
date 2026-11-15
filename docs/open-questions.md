@@ -36,7 +36,7 @@ Resolved items are in decisions.md (D-01 … D-124). **Phase 1 £3,327.57 is pro
 11c. **Review the test plan** (`docs/eg-mix-test-plan.md`): pass marks, number of pieces, and:
    - **A third bag of quartz 2–5 mm** (F03 2 → 3): two bags don't cover the castings at 50 % coarse, let alone the tests.
    - Test blend P4 with a bag of GCL 1–3 mm, or only P1–P3?
-   - Which kit you already own (scales, 500 mm straightedge + feeler gauges, torque wrench 20–50 N·m, angle grinder + diamond disc, PPE). The rest, plus the PIR board, heater and thermostat (D-124), go into a small price check.
+   - Kit: the owner has scales only. The rest (straightedge, feeler gauges, torque wrench, angle grinder + disc, PPE) and the tent parts (PIR board, heater, thermostat, D-124) are in **price check 14** (`docs/price-check-task-14.md`): run it.
    - Epoxy margin: one kit covers up to 12 %; at 13 % a small top-up pack is needed.
    Who: owner.
 12. **GCL delivery cost to SA2** for 2 × 25 kg quartz, and **Hancock & Brown** collection of 3 × 20 kg sand.

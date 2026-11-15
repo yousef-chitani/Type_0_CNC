@@ -99,6 +99,7 @@ Then: rail-seat levelling and assembly procedures, Phase 2 detailing (ATC wheel,
 | `cad/vendor/` | Manufacturer STEP files (and the Z motor PDF) used by the assembly |
 | `docs/decisions.md` | Decision log D-01 … D-113 |
 | `docs/open-questions.md` | What's still open, in priority order |
+| `docs/handoff-opus-tasks.md` | Routine tasks with ready-to-paste briefs for a session on Opus 5.5 |
 | `docs/pre-wave1-plan.md` | Week-by-week list of what to settle between 14 Nov 2026 and wave 1 (4 Jan 2027) |
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `linuxcnc/type0/` | LinuxCNC config, simulator, PC set-up, bench tests |
