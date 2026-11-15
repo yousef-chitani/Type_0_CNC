@@ -1,85 +1,86 @@
-# Supplier messages (drafts, 2026-11-08)
+# Supplier messages (drafts, rewritten 15 Nov 2026)
 
-Ready to send. Copy, check, send yourself. Quantities are from `bom.csv` (F03, F04: v2 sizes; `aggregates.md` still shows the larger v1 quantities). Record the answers in `open-questions.md` and the decision log.
+Copy only the quoted text. The "For you" lines are notes for the owner, not for the supplier. Quantities are from `bom.csv`. Record the answers here and in `open-questions.md`.
 
-## 1. METALWORK ballscrew seller (AliExpress chat): before wave 2 (15 Feb 2027, D-103) and needed for the CAD assembly
+## 1. Ballscrew seller (AliExpress chat)
 
-Listing: https://www.aliexpress.com/item/1005010046279521.html
+Before wave 2 (15 Feb 2027, D-103); also needed for the CAD assembly. Listing: https://www.aliexpress.com/item/1005010046279521.html
 
-> Hello. I would like to order 3 × DFU1605 ballscrew kits (C7) with BK12/BF12 supports and nut housing, in lengths **X 850 mm, Y 600 mm and Z 350 mm**. I need these **overall** lengths at least: X 823 mm, Y 582 mm, Z 350 mm.
+> Hi, I'd like 3 of the DFU1605 C7 kits (BK12/BF12 + nut housing) in 850, 600 and 350 mm.
 >
-> 1. Is the "Guide Length" the **overall length** of the screw (end to end, including the machined ends), or the **threaded length** only?
-> 2. Please send the drawing of the end machining for BK12/BF12 (journal diameters and lengths), so I can work out the threaded length for each size.
-> 3. Is the nut **preloaded** (DFU double nut) and what is the axial backlash?
-> 4. Are the 3 kits shipped together, and is the shipping charge per kit or per order?
+> Is the length the total length of the screw, including the machined ends, or just the thread? And could you send me a drawing of the end machining?
 >
-> Thank you.
-
-What we need (full assembly with vendor models, D-111): overall length at least **X 823 / Y 582 / Z about 350 mm**. X 850 / Y 600 / Z 350 cover this whichever way "Guide Length" is measured, as long as the BK12 end is machined to the standard (Ø10 stub at least 35 mm long for the X pulley and outboard bearing). If "Guide Length" is the thread length, the overall screw is longer than planned: check it still fits the castings (Y channel, X beam) before ordering.
-
-## 2. GCL (aggregates): open question 4. Before wave 3 (1 Mar 2027)
-
-> Hello. I would like to order **3 × 25 kg bags of your washed, kiln-dried Winter Quartz 2–5 mm** for delivery to **Swansea, SA2** (postcode to follow), in early March 2027.
+> Is the nut preloaded? Can you ship all 3 together, and what's the shipping?
 >
-> 1. What is the delivery charge to SA2 for 3 bags (75 kg)? Is it a pallet or parcel delivery, and can the driver leave it at the kerb or does someone need to be in?
-> 2. If I add 2 × 25 kg of the 1–3 mm grade, does the delivery charge change?
-> 3. Is the quartz still **kiln-dried and bagged dry** (I'm using it with epoxy resin, so it must be dry and dust-free)?
-> 4. Lead time from order to delivery?
+> Thanks
+
+For you: overall length must be at least X 823 / Y 582 / Z about 350 mm, with a standard BK12 end (Ø10 stub at least 35 mm long for the X pulley and outboard bearing). If the length is thread only, the screws are longer than planned: check they still fit the castings (Y channel, X beam) before ordering.
+
+## 2. GCL (email): open question 4
+
+Before wave 3 (1 Mar 2027).
+
+> Hi,
 >
-> Thank you.
-
-## 3. Hancock & Brown, Swansea (phone 01792 462346): open question 4. Before wave 3 (1 Mar 2027)
-
-Phone script:
-
-> I'd like to collect **3 × 20 kg bags of kiln-dried pavior sand, 0–1 mm**, in early March 2027.
-> 1. Do you have it in stock, and will you have it in March?
-> 2. Price per bag, and can I pay on collection?
-> 3. Is it kiln-dried and bagged (it's for epoxy resin, so it must be dry)?
-> 4. Opening hours for collection, and is there parking for loading a car?
-
-## 4. Z motor mount seller (AliExpress chat): before wave 2 (15 Feb 2027, D-126)
-
-Listing: https://www.aliexpress.com/item/1005006232398099.html (HM12-60 bracket)
-
-> Hello. I am looking at your HM12-60 motor bracket. Please send the dimension drawing.
+> Could you give me a delivered price for 3 × 25 kg bags of the kiln-dried Winter Quartz 2–5 mm to Swansea, SA2? And what would it be if I added 2 × 25 kg of the 1–3 mm?
 >
-> 1. What is the **motor mounting hole spacing** (square pattern, centre to centre) and the hole or thread size?
-> 2. What is the **pilot (centring) bore diameter** on the motor side?
-> 3. What is the distance from the motor face to the bearing seat, and which bearing block does it fit (BK12)?
+> How long does delivery usually take, and does someone need to be in? I'm looking to order in early March.
 >
-> My motor has 4 holes on a **50 mm** square and a **36 mm** pilot. Thank you.
+> Thanks,
+> [name]
 
-What we need: 4 × holes on a 50 ± 0.2 mm square, pilot bore Ø36 or larger, room for a D26 × L35 coupling. If the answer is 47.14 mm holes or a Ø38.1 pilot only, don't buy it: the session designs a mount from the 10 mm plate.
+For you: it must be dry (it goes in epoxy). If the reply doesn't say kiln-dried, ask.
 
-## 5. EC Fibreglass Supplies (email or contact form): open question 1. Before wave 3 (1 Mar 2027)
+## 3. Hancock & Brown, Swansea (phone 01792 462346): open question 4
 
-Product: https://www.ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow (bom.csv F01)
+Before wave 3 (1 Mar 2027). Call notes:
 
-> Hello. I would like to order **one 22.68 kg kit of Ampreg 30 with 3X Slow hardener** for delivery to **Swansea, SA2** (postcode to follow), in early March 2027.
+- "Hi, do you sell kiln-dried sand in 20 kg bags, the fine 0–1 mm stuff? I'd want 3 bags, collecting early March."
+- Price per bag?
+- Will you have it in March?
+- Opening hours?
+
+## 4. Z motor mount seller (AliExpress chat)
+
+Before wave 2 (15 Feb 2027, D-126). Listing: https://www.aliexpress.com/item/1005006232398099.html (HM12-60)
+
+> Hi, could you send me the drawing for the HM12-60?
 >
-> 1. What is the delivery charge to SA2, and how long does it take?
-> 2. Is it sent as one parcel, and does someone need to be in to sign for it?
-> 3. What is the shelf life of the resin and the hardener from the date you ship? I will use it from March to May 2027.
-> 4. Do you send the technical and safety data sheets with the kit?
+> My motor has 4 holes on a 50 mm square and a 36 mm pilot. Will it fit?
 >
-> Thank you.
+> Thanks
 
-What we need: the delivery cost (it is the last unpriced part of F01, open question 1) and a shelf life that covers March to May 2027.
+For you: needs 4 holes on a 50 ± 0.2 mm square, pilot bore Ø36 or larger, room for a D26 × L35 coupling. If it's 47.14 mm holes or a Ø38.1 pilot only, don't buy it: the session designs a mount from the 10 mm plate.
 
-## 6. LiMo Bearing (info@limobearing.com or "Request a Quote" on limobearing.com): quote for the motion parts (price check 16)
+## 5. EC Fibreglass Supplies (email or contact form): open question 1
 
-> Hello. Please quote this order, shipped **DDP to the UK (Swansea, SA2)**, by **sea and by air**:
+Before wave 3 (1 Mar 2027). Product: https://www.ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow (bom.csv F01)
+
+> Hi,
 >
-> 1. **DFU1605 & Nut House & Support BKBF12**, C7, standard BK12/BF12 end machining, overall lengths:
->    - 1 × **850 mm** (X). The BK12 drive end needs an extra **Ø10 mm stub about 35 mm long** for a belt pulley and an outboard bearing. I can send a drawing.
->    - 1 × **600 mm** (Y).
->    - 1 × **350 mm** (Z).
->    Can you supply them with **light preload (P2)**? Is there an extra charge for the X stub?
-> 2. **Linear Guide Set HGH20CA** (2 rails + 4 blocks), ZA preload: 1 × **800 mm**, 1 × **500 mm**, 1 × **350 mm**. What is the rail accuracy class (C or H)? Are the two rails in each set a matched pair?
-> 3. 1 × **HM12-60 integrated motor mount, C7**, for a **NEMA 24** closed-loop stepper (StepperOnline 24HS34). My motor has **4 holes on a 50 mm square** and a **Ø36 mm pilot**. Your listing shows **49.5 mm** hole spacing. Will the HM12-60 fit this motor? If not, can you machine the 4 holes on a 50 mm square? What is the pilot bore diameter, and how large is the inside space for the coupling?
-> 4. 1 × **flexible coupling D25L35**, bores **10 mm × 10 mm**. Does it fit inside the HM12-60?
+> I'd like to order a 22.68 kg kit of Ampreg 30 with the 3X Slow hardener, delivered to Swansea, SA2. What would delivery cost and how long does it take?
 >
-> Please tell me the **total shipping weight**, the shipping cost and delivery time for sea and air, and whether the DDP price includes UK VAT. Thank you.
+> Also, roughly how much shelf life is left on it when it ships? I'd be ordering in early March and using it up by the end of May.
+>
+> Thanks,
+> [name]
 
-What we need: an all-in DDP price to beat **£464.41** (current price of these lines, price check 16), the rail accuracy class, and a clear yes on the HM12-60 fitting the 50 mm / Ø36 motor face (or machined to fit). If the mount will not fit, task 14 makes it from the 10 mm plate.
+For you: the delivery cost is the last unpriced part of F01. Shelf life must cover March to May 2027.
+
+## 6. LiMo Bearing (info@limobearing.com or "Request a Quote" on limobearing.com): price check 16
+
+> Hi,
+>
+> Could you quote the following, DDP to Swansea, UK (SA2), by sea and by air?
+>
+> - DFU1605 ballscrew with nut housing and BK12/BF12 supports, C7, standard end machining: one each at 850, 600 and 350 mm. On the 850 mm one I need an extra Ø10 mm stub, about 35 mm long, on the BK12 end (I can send a drawing). Can you do them with light preload?
+> - HGH20CA linear guide sets (2 rails, 4 blocks), ZA preload: one each at 800, 500 and 350 mm. What accuracy class are the rails?
+> - 1 × HM12-60 motor mount. My motor (NEMA 24) has 4 holes on a 50 mm square and a 36 mm pilot, but your page shows 49.5 mm. Will it fit, or can you drill it for 50 mm?
+> - 1 × D25L35 coupling, 10 mm to 10 mm. Will it fit inside the HM12-60?
+>
+> Please include the shipping weight, and let me know if the DDP price includes VAT.
+>
+> Thanks,
+> [name]
+
+For you: the all-in DDP price must beat **£464.41** (price check 16). Need the rail accuracy class and a clear yes on the HM12-60 fitting the 50 mm / Ø36 motor face (or drilled to fit). If it won't fit, task 14 makes the mount from the 10 mm plate.
