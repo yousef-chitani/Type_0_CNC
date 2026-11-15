@@ -34,7 +34,7 @@ The plan says "grout, then a Ø10 dowel per leg, reamed after grouting". Two pro
 ## Why option 1
 
 - **It separates the jobs.** Grouting day is only about the seat. The squareness is set later, with the machine running, by turning two screws and cutting a test square. Options 2 and 3 fix the squareness for ever on grouting day, blind.
-- **It can be corrected.** If a test cut shows the axes 0.03 mm out of square, a sixth of a turn on one M8 screw (pitch 1.25 mm) moves that leg 0.2 mm; fine adjustment is easy.
+- **It can be corrected.** If a test cut shows the axes 0.03 mm out of square, that is 0.07 mm at one stop, or about 20° of turn on an M8 screw (pitch 1.25 mm). A fine-pitch M8 × 1.0 screw would make it a little easier.
 - **The numbers are comfortable.** The stops are 570 mm apart and Y travel is 250 mm. An error of 0.01 mm at one stop is 0.004 mm across the whole Y travel, well inside the ±0.02 mm target.
 - **It needs almost nothing in the moulds:** 4 × M8 inserts in the base top (2 behind each leg) and no dowel sleeves.
 
