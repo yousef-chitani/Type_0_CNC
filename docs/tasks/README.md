@@ -45,7 +45,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Order
 0. Task 21 done (`price-check-task-16.md`): HL Motion cannot supply everything; rails only are cheaper but UK shipping unknown. Owner decides, may send the draft there.
-1. Now: X03 (M5 × 20) and X10 (Silverline square, £9.58) are in `bom.csv`; 05 done. Still open from the AliExpress check: **X11 shims** (owner waiting for a seller) and **X05 straightedge** (owner to choose: grade-0 knife edge £115.99 or RS DIN 874/2 £115.07). Owner: send the 5 drafts in `docs/supplier-messages.md` (task 13).
+1. Now: X03 (M5 × 20) and X10 (Silverline square, £9.58) are in `bom.csv`; 05 done. Still open from the AliExpress check: **X11 shims** (owner waiting for a seller). X05 stays the RS PRO straightedge (owner, 15 Nov). Owner: send the 5 drafts in `docs/supplier-messages.md` (task 13).
 2. After 01: **03, 04, 06, 07, 08** (and **02** only for option B).
 3. After the Fusion pass (**09**): **10, 11, 12**, then **18**.
 4. Late December: **16**. Any time: **14, 17**. After the bench tests: **19**.
