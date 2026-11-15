@@ -6,7 +6,7 @@ Full list: [bom.csv](bom.csv). **109 line items, 106 priced.** Prices were read 
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
-| Frame | 20 | 20 | £657.87 |
+| Frame | 20 | 20 | £672.39 |
 | Motion | 17 | 14 | £998.07 |
 | Spindle | 9 | 9 | £1,546.00 |
 | Tool changer | 7 | 7 | £154.46 |
@@ -16,14 +16,14 @@ Full list: [bom.csv](bom.csv). **109 line items, 106 priced.** Prices were read 
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 2 | 2 | £50.17 |
 | Fixings | 2 | 2 | £70.47 |
-| **All** | **109** | **106** | **£4,751.44** |
+| **All** | **109** | **106** | **£4,765.96** |
 
-**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,751.44**. Not priced yet: M15, M16, M17.
+**Budget (D-68): Phase 1 ≤ £4,000. Phases 2 and 3 later.** Priced total: **£4,765.96**. Not priced yet: M15, M16, M17.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,327.57 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,342.09 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -57,7 +57,7 @@ Lines still TO PRICE: see the list above.
 |---|---|---|---|---|---|---|---|---|
 | F01 | 1 | Main EG epoxy: Ampreg 30 + slow hardener, 22.68 kg | 1 kit | Gurit Ampreg 30 resin + 3X Slow hardener, 22.68 kg pack (100:26 by weight; 250-450 cP at 25 °C; pot life about 4 h at 25 °C; minimum cure 18 °C; Tg 57 °C room-cured, 74 °C after 16 h at 50 °C; flexural modulus 3.2-3.6 GPa). Covers castings (about 13 kg at 11%), rail seats, grout and test bricks (about 20 kg) | [product](https://www.ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow) | £295.00 ex VAT / £354.00 inc VAT (EC Fibreglass Supplies), delivery shown at checkout only | 354.00 | D-122 (price check 13): replaces GlassCast 50 PLUS 15 + 5 kg (£346.75). New vendor. DELIVERY TO SA2 NOT KNOWN: read it in the basket before ordering |
 | F02 | 1 | Epoxy for the rail-seat pour / grout / samples (in F01) | 5 kg | From the F01 Ampreg 30 kit (about 5 kg of the 22.68 kg) | [product]() | Included in F01 | 0.00 | D-122: one kit covers everything. The 500 mm test strip must show it levels in a 5 mm seat (neat-resin linear shrinkage 1.64 %) |
-| F03 | 1 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | Washed, kiln-dried angular quartz 2-5 mm (resin-bound grade) | [product](https://www.gclproducts.co.uk/p/resin-bound-gravel/winter-quartz-2-5mm-gravel) | £12.10 ex VAT / £14.52 inc VAT per 25 kg (GCL PermaBound Winter Quartz) | 29.04 | v2 resize: about 32 kg coarse needed. GCL pallet delivery cost to confirm |
+| F03 | 1 | Coarse aggregate: quartz 2-5 mm | 3 25 kg bags | Washed, kiln-dried angular quartz 2-5 mm (resin-bound grade) | [product](https://www.gclproducts.co.uk/p/resin-bound-gravel/winter-quartz-2-5mm-gravel) | £12.10 ex VAT / £14.52 inc VAT per 25 kg (GCL PermaBound Winter Quartz) | 43.56 | D-125: 3 bags (castings about 52 kg + tests about 15 kg at 50 % coarse). Price per bag seen 2026-11-06; re-check in price check 14. GCL pallet delivery cost to confirm |
 | F04 | 1 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | Kiln Dried KDIS Pavior Sand 0-1 mm | [product](https://hancockandbrown.com/kiln-dried-block-paving-sand-20kg-bag) | £6.38 inc VAT per 20 kg (Hancock & Brown, Swansea) | 19.14 | D-79 resize: about 43 kg medium + fine. Hancock & Brown £6.38 each |
 | F06 | 1 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | Pottery-grade whiting, dry powder (< 0.1 mm) | [product](https://valentineclays.co.uk/products/whiting) | £20.42 inc VAT per 25 kg (Valentine Clays) | 20.42 | D-64. Delivery cost not shown: check in the basket. Alternatives: Potterycrafts silica flour £36.05 ex VAT (£43.26 inc), Womersleys Trucarb whiting from £11.55 ex VAT (construction chalk, dryness not stated). Keep the bag sealed and dry |
 | F07 | 1 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 3 m bar | 40 x 10 x 2 m: Y rail bars 2 x 500, support plates, 3 base pads 40 x 60 (T17). 25 x 10 x 2 m: X rail bars 2 x 780, ATC bar 140 (D-104, D-105). Portal joint bars are now F20 | [product](https://www.themetalstore.co.uk/products/3-metre-lengths-10mm-flat-bar) | £30.00 ex VAT / £36.00 inc VAT per 3 m bar (The Metal Store) | 36.00 | D-110: SPEC CHANGED (was 40 x 10 x 3 m): re-price in price check 12. Price shown is the old 3 m bar |

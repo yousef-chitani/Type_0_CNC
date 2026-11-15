@@ -31,7 +31,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 ## 3. Money and phases
 | Phase | Scope | Priced | Budget |
 |---|---|---|---|
-| 1 | Working mill, manual ER20 tool changes | **£3,327.57, provisional**: M15–M17 are not priced, M05, F07, M12, M13 changed size (**price check 12** pending, `docs/price-check-task-12.md`), and the Ampreg 30 delivery cost is not known | £4,000 |
+| 1 | Working mill, manual ER20 tool changes | **£3,342.09, provisional**: M15–M17 are not priced, M05, F07, M12, M13 changed size (**price check 12** pending, `docs/price-check-task-12.md`), and the Ampreg 30 delivery cost is not known | £4,000 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel | about £1,400 (not re-checked) | not set |
 
 - Source of truth: **`docs/bom.csv`**. After editing it, regenerate everything: `python tools/gen_bom_md.py`, `python tools/gen_phase1_xlsx.py`, `python tools/gen_phase1_cost.py`, `python tools/build_open_links.py`.
@@ -53,7 +53,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-124**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-125**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 

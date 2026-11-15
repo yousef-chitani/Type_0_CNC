@@ -1,19 +1,19 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,327.57** (budget £4,000). Not priced yet: M15, M16, M17. No eBay.
+**Phase 1 priced total: £3,342.09** (budget £4,000). Not priced yet: M15, M16, M17. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £657.87 |
+| Frame | £672.39 |
 | Motion | £998.07 |
 | Spindle | £489.14 |
 | Electronics | £818.49 |
 | Stand | £243.36 |
 | Metrology | £50.17 |
 | Fixings | £70.47 |
-| **Total** | **£3,327.57** |
+| **Total** | **£3,342.09** |
 
 ## Frame
 
@@ -21,7 +21,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 |---|---|---|---|
 | F01 | Main EG epoxy: Ampreg 30 + slow hardener, 22.68 kg | 1 kit | £354.00 |
 | F02 | Epoxy for the rail-seat pour / grout / samples (in F01) | 5 kg | £0.00 |
-| F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
+| F03 | Coarse aggregate: quartz 2-5 mm | 3 25 kg bags | £43.56 |
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
 | F07 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 3 m bar | £36.00 |

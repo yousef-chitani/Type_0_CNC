@@ -19,9 +19,9 @@ What we need (full assembly with vendor models, D-111): overall length at least 
 
 ## 2. GCL (aggregates): open question 4. Before wave 3 (1 Mar 2027)
 
-> Hello. I would like to order **2 × 25 kg bags of your washed, kiln-dried Winter Quartz 2–5 mm** for delivery to **Swansea, SA2** (postcode to follow), in early March 2027.
+> Hello. I would like to order **3 × 25 kg bags of your washed, kiln-dried Winter Quartz 2–5 mm** for delivery to **Swansea, SA2** (postcode to follow), in early March 2027.
 >
-> 1. What is the delivery charge to SA2 for 2 bags (50 kg)? Is it a pallet or parcel delivery, and can the driver leave it at the kerb or does someone need to be in?
+> 1. What is the delivery charge to SA2 for 3 bags (75 kg)? Is it a pallet or parcel delivery, and can the driver leave it at the kerb or does someone need to be in?
 > 2. If I add 2 × 25 kg of the 1–3 mm grade, does the delivery charge change?
 > 3. Is the quartz still **kiln-dried and bagged dry** (I'm using it with epoxy resin, so it must be dry and dust-free)?
 > 4. Lead time from order to delivery?

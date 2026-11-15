@@ -38,9 +38,8 @@ Blends are by mass of the dry aggregate. The whiting stays at 10 % or less (its 
 | P1 (baseline) | 50 % | – | 40 % | 10 % |
 | P2 (coarser) | 55 % | – | 35 % | 10 % |
 | P3 (finer) | 45 % | – | 45 % | 10 % |
-| P4 (gap filled) | 35 % | 20 % | 35 % | 10 % |
 
-P4 needs a bag of GCL 1–3 mm. Only buy it if you want to test it; otherwise run P1–P3.
+Only P1–P3 are tested (D-125). A blend with GCL 1–3 mm quartz (about 35 / 20 / 35 / 10) is the fallback if none of them reaches 2.02 kg/L.
 
 What each epoxy level means. The packed stone must leave no more empty space than the epoxy can fill:
 
@@ -59,7 +58,7 @@ For 1 kg of mix at 11 %: 110 g binder (87.3 g resin + 22.7 g hardener) and 890 g
 2. Weigh out 2.5 kg of blend P1 and mix it dry in a bucket.
 3. Fill the dry tub in 3 layers, tamping each layer 25 times with a flat-ended rod. Strike off level and weigh.
 4. Dry tamped density = stone mass ÷ tub volume. Do it twice and average.
-5. Repeat for P2, P3 (and P4).
+5. Repeat for P2 and P3.
 
 **Use the densest blend.** Read off the table above which epoxy level it can reach. If no blend reaches 2.02 kg/L, expect 13 % and tell the session: the epoxy quantity is then tight (section 9).
 
@@ -143,11 +142,11 @@ Sessions 1–6 fit in weeks 12–13. The strip's long test runs alongside the ca
 |---|---|---|---|---|---|---|
 | Binder at 11 % | 13.0 kg | 4.3 kg | 2.5 kg | 19.8 kg | 22.68 kg | 2.9 kg |
 | Binder at 13 % | 15.3 kg | 4.7 kg | 2.5 kg | 22.5 kg | 22.68 kg | **0.2 kg: none in practice** |
-| Quartz 2–5 (P1, 50 %) | 52 kg | 15 kg | – | 67 kg | 50 kg | **short by 1 bag** |
+| Quartz 2–5 (P1, 50 %) | 52 kg | 15 kg | – | 67 kg | 75 kg (3 bags, D-125) | 8 kg |
 | Sand (P1, 40 %) | 42 kg | 12 kg | – | 54 kg | 60 kg | 6 kg |
 | Whiting (10 %) | 10.5 kg | 3 kg | – | 13.5 kg | 25 kg | 11.5 kg |
 
-- **Quartz:** two bags are not enough even for the castings alone at 50 % coarse. A third 25 kg bag is needed (F03: 2 → 3).
+- **Quartz:** three bags (D-125). If blend P2 (55 % coarse) wins, the need is about 74 kg: just enough, with no waste allowance.
 - **Epoxy:** one kit is enough up to 12 %. If the bricks choose 13 %, add a small Ampreg pack (1.26 kg and 4.66 kg packs exist) before casting the portal.
 
 ## 10. Kit the tests need
