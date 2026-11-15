@@ -44,14 +44,40 @@ Done:
 
 Next:
 1. **Price check 10** (`docs/price-check-task-10.md`) in the owner's local browser session: E23, E24, T03–T07, F19–F22.
-2. **Portal relocation feature**: independent assessment the owner asked for (options in moulds.md, open question 14). Needed by week 9.
+2. **Portal relocation feature: Fable's assessment.** Full brief in section 7 below. Needed by week 9 (1 Mar 2027).
 3. **Enclosure widening** for the X motor (open question 15), Phase 2.
 4. Rail-seat levelling and assembly procedures (levelling pour, squaring the portal, grouting), then Phase 2 detailing.
 
-## 7. Open questions
+## 7. Brief for Fable: portal relocation assessment
+The owner asked for an independent assessment of how the portal goes back onto the base in the same place, **explained to them in plain words**. The previous session listed options but deliberately did not choose. Treat the options as a starting point, not a shortlist: a better method is welcome.
+
+**Why it matters.** The machine is built in the shed, then taken apart and carried upstairs to a flat (pieces ≤ about 40 kg). The portal (39.6 kg) is the only frame joint. After each move it must sit square to the Y rails again. The part accuracy target is ±0.02 mm (D-03).
+
+**What is fixed already (D-94, D-96, `cad/v2/moulds.py`):**
+- Base cast **upside down**: its top face, where the legs stand, is formed by the MDF mould floor. Anything on that face (pockets, bushes, inserts) is set on or through the floor.
+- Portal cast **lying on its front face**: the leg feet (z = 0) are formed by an MDF mould **wall**.
+- Leg footprints: 70 (x) × 130 (y), at x ±250…320, y 110…240 (machine coordinates, Y = 0 on the spindle line).
+- Joint: 2 × M12 studs per leg at x ±285, y 145 and 205. Studs screw into M12 coupling nuts cast in the leg feet (torque 25–30 Nm until a test brick proves more), drop through 20 mm conduit sleeves in the base, nutted underneath. About 3 mm epoxy grout under each leg, poured once after shimming the portal square.
+- The area under each leg is **reserved** (pink on `mould_base.png`) for the relocation feature.
+- Studs, sleeves, couplers and the Y rail bars must not be moved without a new decision.
+
+**Options on file** (detail in `docs/moulds.md`, section "Open: portal relocation"): A. grout keys (cones in base pockets, base side released); B. dowels set in epoxy in cast sleeves/bushes; C. bolts and grout only, re-square with the dial indicator each time; D. the studs themselves as locators in close-fitting bushes.
+
+**Questions the assessment should answer:**
+1. How repeatable is each option (rough µm or mm), and how much re-alignment work does each leave after a move?
+2. Is there real-world evidence (DIY EG machines, machine-tool practice, epoxy replication/grout keys)? Give sources; say plainly where none was found.
+3. What has to go into the moulds, and does it fit the reserved area without clashing with the studs and sleeves?
+4. What does it cost? Only prices read from a live page or given by the owner, with the date (rule in section 5). No eBay.
+5. Can it be tried on a test brick in weeks 12–13 (`docs/eg-mix.md`) before the base is cast in week 15?
+
+**Deliverable.** A plain explanation for the owner with a recommendation. Ask the owner with the Q&A tool before deciding. Then: record the decision as **D-99** in `docs/decisions.md`; update `docs/moulds.md` (replace the open section), `cad/v2/moulds.py` (draw the feature in the reserved area, re-run), `docs/open-questions.md` (item 14), the BOM if parts are added (regenerate with the tools in section 3), and this handover.
+
+**Deadline.** Decided by **week 9 (1 Mar 2027)**, when the base mould floor is marked out and drilled.
+
+## 8. Open questions
 See `docs/open-questions.md` (updated at handover).
 
-## 8. Key files
+## 9. Key files
 | File | What |
 |---|---|
 | `docs/requirements.md` | Requirements |
@@ -60,7 +86,7 @@ See `docs/open-questions.md` (updated at handover).
 | `docs/electrical.md` | Power, safety chain, 7I76EU pin map, VFD settings |
 | `docs/linuxcnc.md`, `config/linuxcnc/type0/` | LinuxCNC config, latency test, bench test |
 | `docs/bench.md` | Timber bench |
-| `docs/moulds.md` | v2 mould drawings and parts (relocation options) |
+| `docs/moulds.md` | v2 mould drawings and parts (relocation options: section 7 brief) |
 | `docs/eg-mix.md` | Void test, test bricks, mixing, curing heat |
 | `docs/bom.csv` / `bom.md` / `phase1-bom.xlsx` / `phase1-cost.md` | Parts list and costs |
 | `docs/phase1-schedule.md` | Timeline and order waves |
