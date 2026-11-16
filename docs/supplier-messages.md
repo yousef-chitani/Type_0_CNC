@@ -107,6 +107,8 @@ Owner (16 Nov): screw lengths stay **X 850 / Y 600**, Z standard ends; **no draw
 > Thanks,
 > [name]
 
-For you: before sending, open the DFU1605 page and copy the **C5** price for the 900, 600 and 400 mm kits (C7 was $152.19 for the three), so the session can compare. At checkout (don't pay) note the shipping to SA2 for sea and air and the dates. That replaces the shipping-weight question.
+**Sent 16 Nov 2026** (owner dropped question 4, the stub cost). Answer: (waiting)
+
+For you: open the DFU1605 page and copy the **C5** price for the 900, 600 and 400 mm kits (C7 was $152.19 for the three), so the session can compare. At checkout (don't pay) note the shipping to SA2 for sea and air and the dates. That replaces the shipping-weight question.
 
 For you: the all-in DDP price must beat **£464.41** (price check 16). Need the rail accuracy class and a clear yes on the HM12-60 fitting the 50 mm / Ø36 motor face (or drilled to fit). If it won't fit, task 14 makes the mount from the 10 mm plate.
