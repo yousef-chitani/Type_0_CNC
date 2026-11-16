@@ -83,6 +83,30 @@ For you: the delivery cost is the last unpriced part of F01. Shelf life must cov
 > Thanks,
 > [name]
 
-**Sent 15 Nov 2026.** Answer: (waiting)
+**Sent 15 Nov 2026.** Answer 16 Nov 2026 (Amy Jiang, LiMo):
+
+> LiMo provides custom machining for ball screws. Can you please provide the drawings? Light preload performs much better on C5-ground ball screws. Please get prices from the LiMo online store. The shipping costs and delivery dates are on the checkout page.
+
+What it answers: custom end machining yes (they want drawings); light preload yes, but they advise **C5 ground**; prices come from the store, shipping and dates from the checkout page (no quote by email).
+Not answered: rail accuracy class; HM12-60 drilled for 50 mm; coupling fit inside the HM12-60; extra cost of the X stub; shipping weight; whether DDP includes VAT.
+
+Owner (16 Nov): screw lengths stay **X 850 / Y 600**, Z standard ends; **no drawings until LiMo answers the rest**; C5 or C7 decided after the C5 price is known.
+
+### 6a. Reply to LiMo (draft, owner sends)
+
+> Hi Amy,
+>
+> Thanks. I'll send the ballscrew drawings with the order. Before that, could you answer these?
+>
+> 1. What accuracy class are the HGH20CA rails (C, H or P)?
+> 2. The HM12-60 shows 49.5 mm holes. My motor has 50 mm. Can you drill it for a 50 mm square, and what is the extra cost?
+> 3. Does the D25L35 coupling fit inside the HM12-60?
+> 4. Is there an extra cost for a longer Ø10 drive end on the screws?
+> 5. Does the DDP price at checkout include UK VAT?
+>
+> Thanks,
+> [name]
+
+For you: before sending, open the DFU1605 page and copy the **C5** price for the 900, 600 and 400 mm kits (C7 was $152.19 for the three), so the session can compare. At checkout (don't pay) note the shipping to SA2 for sea and air and the dates. That replaces the shipping-weight question.
 
 For you: the all-in DDP price must beat **£464.41** (price check 16). Need the rail accuracy class and a clear yes on the HM12-60 fitting the 50 mm / Ø36 motor face (or drilled to fit). If it won't fit, task 14 makes the mount from the 10 mm plate.

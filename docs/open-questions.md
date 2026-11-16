@@ -31,7 +31,7 @@ Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,915.58, ev
     Who: owner, measure the feet.
 8. **Reservoir:** 20 L bucket, no radiator (D-135). Measure it when it arrives (bench drawing assumes 300 × 300 × 370 high) and check the kit pump sits in it.
     Who: owner.
-9. **Ballscrew "Guide Length"** (before wave 2, D-103): overall or thread length? The assembly needs **overall X 823, Y 582, Z ≈ 350** (D-111): buy X 850 / Y 600 / Z 350; still confirm the end machining. A wrong answer means unusable screws.
+9. **Ballscrew "Guide Length"** (before wave 2, D-103): overall or thread length? The assembly needs **overall X 823, Y 582, Z ≈ 350** (D-111): buy X 850 / Y 600 / Z 350; still confirm the end machining. A wrong answer means unusable screws. **LiMo (16 Nov):** length is overall; custom end machining from our drawings; they advise C5 ground with light preload. Waiting on reply 6a (rail class, HM12-60 at 50 mm, coupling fit, stub cost, VAT) and the owner's C5 price. Drawings after that.
    Who: owner, message to the seller. Draft in `supplier-messages.md` (section 1).
 
 ## Before wave 3 and the moulds (1 Mar 2027)
