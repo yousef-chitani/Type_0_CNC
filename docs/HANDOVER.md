@@ -1,8 +1,24 @@
-# Type 0 CNC: handover (2026-11-15, late evening)
+# Type 0 CNC: handover (2026-11-16)
 
-**Branch:** `claude/charming-cori-349jm7` on `yousef-chitani/Type_0_CNC`. Everything below is committed and pushed. Earlier work: `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
+**Branch:** `claude/hopeful-sagan-28twty` on `yousef-chitani/Type_0_CNC` (holds everything from `claude/charming-cori-349jm7` plus the 16 Nov LiMo session). Everything below is committed and pushed. Earlier work: `claude/charming-cori-349jm7`, `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
+
+## 00. Session of 16 Nov 2026 (LiMo reply)
+
+**Done**
+- LiMo answered message 6 (Amy Jiang): custom end machining from our drawings; light preload, but they advise **C5 ground**; prices from the online store, shipping and dates at checkout. Recorded in `supplier-messages.md` section 6 and `open-questions.md` item 9.
+- Reply **6a sent 16 Nov** (rail accuracy class, HM12-60 drilled to 50 mm and cost, D25L35 coupling inside the HM12-60, VAT in the DDP price). Waiting.
+- End machining agreed in principle (task 13 notes): LiMo's standard drawing (BK12: Ø10 × 15, M12×1 × 14, Ø12 × 25; BF12: Ø10 × 11 with circlip groove), changing only the **X and Y drive stubs**: longer, Ø10 0/−0.015, one flat 1 mm deep for the pulley and KFL000 grub screws. Z fully standard.
+- Owner: lengths stay **X 850 / Y 600** for now; C5 or C7 decided after the C5 price; **no drawings until LiMo answers**.
+- **The owner is redoing the CAD himself** (task 09): the stub and overall lengths come from the new CAD, not the old numbers (X stub about 74, Y about 32 from the thread end; spare 27 / 18 mm goes on the drive stub with 850 / 600).
+
+**Left**
+1. Owner: copy the **C5** prices for the 900 / 600 / 400 mm DFU1605 kits (C7: $152.19) and the checkout shipping to SA2 (sea and air), then decide C5 or C7 (next D-number: D-136).
+2. LiMo's answer to 6a: record it under 6a and in `open-questions.md`.
+3. After that and the new CAD: make the X and Y screw drawings (still ask the owner: exact lengths or 850 / 600).
+
+**Exact next step:** wait for the owner's C5 price or LiMo's answer to 6a; record it, compare the all-in total with £464.41 (`price-check-task-16.md`), ask the owner before changing `bom.csv`.
 
 ## 0. Where the session of 15 Nov (late evening) stopped
 
