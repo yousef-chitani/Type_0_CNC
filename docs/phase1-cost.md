@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,016.22** (budget £4,200, D-127). Not priced yet: G01, G02, G03, G04. No eBay.
+**Phase 1 priced total: £3,972.51** (budget £4,200, D-127). Not priced yet: G01, G02, G03, G04. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -12,9 +12,9 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
-| Metrology | £308.36 |
+| Metrology | £264.65 |
 | Fixings | £70.67 |
-| **Total** | **£4,016.22** |
+| **Total** | **£3,972.51** |
 
 ## Frame
 
@@ -145,7 +145,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X05 | Steel straightedge 500 mm | 1 pcs | £115.07 |
 | X10 | Engineer's square 300 mm | 1 pcs | £9.58 |
 | X06 | Feeler gauge set | 1 pcs | £5.19 |
-| X07 | Torque wrench 3/8" + 19 mm socket | 1 set | £43.71 |
+| X07 | Torque wrench 3/8" + 19 mm socket (dropped: D-161) | 1 set | £0.00 |
 | X08 | Angle grinder 115 mm + turbo diamond disc | 1 set | £45.97 |
 | X09 | PPE: nitrile gloves, safety glasses, FFP3 masks | 1 set | £38.67 |
 

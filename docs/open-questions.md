@@ -22,7 +22,7 @@ Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,969.54 pri
 
 5. **Z motor mount (M13):** ask the AliExpress seller for the HM12-60 drawing (`supplier-messages.md` section 4). It must have 4 holes on a 50 mm square and a Ø36 pilot. If not, the session designs a mount from the 10 mm plate.
    Who: owner sends the message.
-5b. **Glove size** for the nitrile gloves (X09), and check the torque wrench stock (none in the Swansea stores on 15 Nov; collect next day).
+5b. **Glove size** for the nitrile gloves (X09). (Torque wrench dropped, D-161.)
    Who: owner, at order time.
 
 6. **Screwfix Swansea stock is thin** for T13 varnish (1 each at Parc Tawe and Cwmdu Parc) and the 4 × 40 screws (2–3 per store) on 8 Nov. Re-check before 15 Feb, or order for delivery.

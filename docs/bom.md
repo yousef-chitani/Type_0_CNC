@@ -15,16 +15,16 @@ Full list: [bom.csv](bom.csv). **122 line items, 118 priced.** Prices were read 
 | Electronics | 25 | 25 | £843.75 |
 | Enclosure | 4 | 4 | £78.61 |
 | Stand | 17 | 17 | £243.36 |
-| Metrology | 8 | 8 | £308.36 |
+| Metrology | 8 | 8 | £264.65 |
 | Fixings | 2 | 2 | £70.67 |
-| **All** | **122** | **118** | **£5,440.09** |
+| **All** | **122** | **118** | **£5,396.38** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,440.09**. Not priced yet: G01, G02, G03, G04.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,396.38**. Not priced yet: G01, G02, G03, G04.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £4,016.22 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,972.51 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -175,6 +175,6 @@ Lines still TO PRICE: see the list above.
 | X05 | 1 | Steel straightedge 500 mm | 1 pcs | RS PRO 500 mm steel straight edge, 30 mm wide, DIN 874/2 | [product](https://uk.rs-online.com/web/p/rulers/8771785) | £95.89 ex VAT / £115.07 inc VAT (RS 877-1785), free delivery | 115.07 | Price check 14. Owner chose it over the Maun 1000 mm (£71.99, no stated accuracy) |
 | X10 | 1 | Engineer's square 300 mm | 1 pcs | Silverline 245025, 300 mm hardened steel, DIN 875/1 | [product](https://www.amazon.co.uk/dp/B000LFTX1G) | £9.58 inc VAT (Amazon, owner 15 Nov 2026; page says free delivery on a first order, otherwise Amazon's usual delivery) | 9.58 | Price check 15. Beat AliExpress £18.19 and Mitutoyo £74.40 (MQS). For squaring the gantry (was the portal, D-133; D-137) |
 | X06 | 1 | Feeler gauge set | 1 pcs | Hilka Pro-Craft 32-blade, 0.04–0.88 mm | [product](https://www.screwfix.com/p/hilka-pro-craft-12700132-32-blade-feeler-gauge/4406r) | £5.19 inc VAT (Screwfix 4406R) | 5.19 | Price check 14 |
-| X07 | 1 | Torque wrench 3/8" + 19 mm socket | 1 set | Magnusson 3/8" × 14", 21–112 N·m + 19 mm 3/8" drive socket (M12 nuts) | [product](https://www.screwfix.com/p/magnusson-torque-wrench-3-8-x-14-/952xx) | Wrench £34.99 (Screwfix 952XX) + socket £8.72 delivered (B&Q marketplace, LoopsDirect) | 43.71 | Price check 14. Starts at 21 N·m: the pull test starts at 25. Socket: https://www.diy.com/departments/19mm-chrome-vanadium-forged-steel-drive-socket-3-8-square-drive/5056581906946_BQ.prd |
+| X07 | 1 | Torque wrench 3/8" + 19 mm socket (dropped: D-161) | 1 set | Magnusson 3/8" × 14", 21–112 N·m + 19 mm 3/8" drive socket (M12 nuts) | [product](https://www.screwfix.com/p/magnusson-torque-wrench-3-8-x-14-/952xx) | Not needed | 0.00 | D-161: no M12 nuts and no pull test left (D-159, D-160). Was £43.71. Price check 14. Starts at 21 N·m: the pull test starts at 25. Socket: https://www.diy.com/departments/19mm-chrome-vanadium-forged-steel-drive-socket-3-8-square-drive/5056581906946_BQ.prd |
 | X08 | 1 | Angle grinder 115 mm + turbo diamond disc | 1 set | Erbauer ERB977GRD 750 W 115 mm 240 V + Erbauer masonry turbo diamond blade 115 × 22.2 | [product](https://www.screwfix.com/p/erbauer-erb977grd-750w-4-1-2-electric-angle-grinder-240v/147rx) | Grinder £35.99 (147RX) + disc £9.98 (7365V) inc VAT | 45.97 | Price check 14. For sawing the test pieces. Disc: https://www.screwfix.com/p/erbauer-masonry-turbo-diamond-blade-115mm-x-22-2mm/7365v |
 | X09 | 1 | PPE: nitrile gloves, safety glasses, FFP3 masks | 1 set | Site SDG102 nitrile gloves 100 pack (size to choose) + Site SEY228R glasses + JSP FFP3 valved masks 10 pack | [product](https://www.screwfix.com/p/site-sdg102-nitrile-powder-free-disposable-gloves-blue-large-100-pack/694vm) | £14.99 + £2.69 + £20.99 inc VAT (Screwfix 694VM, 332YW, 337CE) | 38.67 | Price check 14. Gloves priced in Large; all sizes £14.99 |

@@ -2,7 +2,7 @@
 
 One picture per step, made from the CAD (`python cad/v2/render_steps.py`, about 1 minute). **Orange** = what you fit in that step, **grey** = already fitted. Left: whole machine. Right: close-up.
 
-Each step says what you **fit**, how you **line it up**, and what you **check**. Tools are the ones already on the parts list: dial test indicator + magnetic base (X01), 200 mm level (X02), 500 mm straightedge (X05), feeler gauges (X06), torque wrench (X07).
+Each step says what you **fit**, how you **line it up**, and what you **check**. Tools are the ones already on the parts list: dial test indicator + magnetic base (X01), 200 mm level (X02), 500 mm straightedge (X05), feeler gauges (X06). (Torque wrench X07 dropped, D-161.)
 
 This is an overview. The full procedure with the values to record is task 18 (`docs/tasks/18-rail-seat-and-assembly-procedure.md`).
 
