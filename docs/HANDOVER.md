@@ -4,6 +4,15 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 00000. 17 Nov 2026: task 22 sketch agreed in part
+
+- Sketch: `docs/moving-gantry-sketch.md`, PNG `cad/v2/out/gantry_sketch.png`, script `cad/v2/gantry_sketch.py`. Tub 890 × 630 × 185, 128 kg solid, inside 610, walls 140 wide and 100 above the table, floor 60. Al box beam 150 × 130 × 10, 890 long, EI 0.90 MNm²; about 50 kg moving in Y.
+- Owner answers: D-139 (tub: no back wall, solid, walls 100 up, linked seat pour by a temporary MDF trough), D-140 (Y screws outboard on the wall tops), D-141 (Y travel 350 for the ATC: Y rails and screws 600), D-142 (Y motors direct at the back).
+- **Open (D-143): how the beam is made.** Owner: "next task will assess this" (bolted 4-plate box, stock tube, or EG-filled; JLC's maximum part size by curl).
+- Not done: step 3 (LiMo basket: Y rails 2 × 600, Y screws 2 × 600, X rails 2 × 600, X screw 700, Z 350; `bom.csv` change list; electrical). `bom.csv` and the LiMo order are unchanged.
+
+**Exact next step:** task 22, the beam assessment (D-143), then step 3.
+
 ## 0000. 17 Nov 2026 (late): layout change
 
 - **D-137: moving gantry, fixed table in one cast EG tub** (like Moxer), replacing D-01. Portal casting and joint go. Two Y screws and motors. Tub in one piece, owner accepts about 115–160 kg. Gantry in aluminium, maybe JLC: **sketch first**.

@@ -27,3 +27,8 @@
 
 ## Done when
 The owner has agreed the sketch, the new LiMo basket list is ready before 4 Jan 2027, and `bom.csv` is updated (or the open items are listed in the handover).
+
+## State (17 Nov 2026)
+- Steps 1–2 done: sketch `docs/moving-gantry-sketch.md` (`cad/v2/gantry_sketch.py`). Owner answers D-139 … D-142: no back wall, solid, walls 100 above the table, Y screws outboard on the wall tops, Y travel 350 for the ATC, Y motors direct at the back.
+- **Open: the beam (D-143).** The owner wants the next task to assess how it is made (bolted 4-plate box, stock tube, EG-filled) and JLC's maximum part size, before step 3.
+- Sketch lengths for step 3: Y rails 2 × 600, Y screws 2 × 600, X rails 2 × 600, X screw 700, Z 350 (all under the 950 limit). Not ordered; `bom.csv` unchanged.

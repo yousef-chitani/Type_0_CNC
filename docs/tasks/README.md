@@ -4,7 +4,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/hopeful-sagan-28twty` (continues `claude/charming-cori-349jm7`). Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-138).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-143).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). After editing it run: `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
 - **Castings: keep them simple.** Do not add cast-in features. Phase 1 budget £4,200; priced total £3,908.22 (D-136).
@@ -41,7 +41,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [18](18-rail-seat-and-assembly-procedure.md) | Rail-seat and assembly procedure | main session | 10, 11 | open |
 | [19](19-linuxcnc-config-after-the-bench-tests.md) | LinuxCNC config after the bench tests | Opus 5.5 is fine | owner's bench results (build weeks 3–6) | open |
 | [21](21-hl-motion-check.md) | HL Motion check: all motion parts from one seller (curl) | Opus 5.5 is fine | none | done: no single seller; owner decides (rails only?) |
-| [22](22-moving-gantry-redesign.md) | **Moving-gantry redesign (D-137, D-138): sketch first** | main session | none | **open: next.** LiMo order on hold until this sets the lengths |
+| [22](22-moving-gantry-redesign.md) | **Moving-gantry redesign (D-137, D-138): sketch first** | main session | none | **steps 1–2 done (D-139 … D-143, `docs/moving-gantry-sketch.md`).** Next: the beam (D-143: how it is made, JLC max part size), then step 3 (lengths, LiMo basket, `bom.csv` list). Sketch lengths: Y rails 2 × 600, Y screws 2 × 600, X rails 2 × 600, X screw 700, Z 350. LiMo order still on hold |
 | [20](20-housekeeping-after-each-task.md) | Housekeeping after each task | any model | every task | open |
 
 ## Order

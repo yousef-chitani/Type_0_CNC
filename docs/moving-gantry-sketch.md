@@ -85,4 +85,4 @@ All under LiMo's 950 mm DDP sea limit. Also new: a 4th motor + driver (M09), 2 Y
 
 ## Open choices (asked 17 Nov 2026)
 
-Y screw placement; back wall; cores; beam section; ATC reach (extra Y travel); wall height. Answers: `docs/decisions.md` D-139 onwards.
+Y screw placement; back wall; cores; beam section; ATC reach (extra Y travel); wall height. Answers (owner, 17 Nov 2026): outboard on the wall tops (D-140); no back wall, solid, walls 100 above the table (D-139); ATC reach added, Y travel 350 (D-141); Y motors direct at the back (D-142). **Beam: the next task assesses how it is made (D-143).**
