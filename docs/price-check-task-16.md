@@ -240,3 +240,11 @@ DDP means the duty is paid by the carrier; the page doesn't say in so many words
 - Fixed: 600 screw × 2; the HGH20CA 500 set is gone. **DDP sea stays $89 with 2 × 600 sets** (unlike checkout 3, $129).
 - Still wrong: (1) rails are **HGH15CA** 600 × 2: need **HGH20CA** 600 × 2 (D-11, HGR20 rails; the CAD and blocks are size 20); (2) D25L35 × 1: needs × 3 (+$6.42).
 - Still not known: HGH20CA 600 price.
+
+
+**Seventh checkout (`Checkout7.htm`, 17 Nov 2026): rails fixed, shipping up to $129.**
+- Seen: C5 600 × 2 $283.14, 350 $111.57, 700 $153.57, HGH20CA 350 $35.76, **HGH20CA 600 × 2 $86.66 ($43.33 a set)**, D25L35 × 1 $3.21, HM12-60 C7 $19.14. Goods $693.05, `10OFF` −$69.33, **DDP sea $129** (DAP air $239, DDP air $269). Total **$752.72 = £569.35**.
+- Fixed: rails are HGH20CA 600 × 2 (D-11).
+- **Shipping rose $40** (DDP sea $89 → $129; DDP air $209 → $269). The only change from Checkout6 was HGH15 → HGH20 rails; consistent with a weight band (as checkout 3), cause not confirmed.
+- Still wrong: D25L35 × 1, needs × 3 (+$6.42 before the code). Corrected order about $758.50 (goods $699.47, code about −$69.95, the page does not round to exactly 10 %; + $129 if the 2 couplings do not change the band) = about £573.7.
+- `bom.csv`: M01, M02 £29.50 each; M05 £470.82 (carries the $129). Phase 1 priced £4,058.80 (budget £4,200, £141.20 left before the JLC gantry G01–G04); wave 1 £2,097.33.

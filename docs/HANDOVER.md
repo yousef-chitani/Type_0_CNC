@@ -4,6 +4,15 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 000000000000. 17 Nov 2026: LiMo Checkout7
+
+- Rails fixed: HGH20CA 600 × 2, **$43.33 a set** (M01, M02 £29.50 each). Total as saved **$752.72 = £569.35**.
+- **DDP sea rose to $129** (was $89; DDP air $269). Only change from Checkout6 was HGH15 → HGH20 rails: looks like a weight band, not confirmed. M05 £470.82.
+- Still wrong: D25L35 × 1 (needs 3, +$6.42). Corrected order about $758.50 = about £573.7.
+- Phase 1 priced **£4,058.80** (budget £4,200, £141.20 left), excluding G01–G04 (JLC gantry). Wave 1 £2,097.33. Details: `price-check-task-16.md`, last section.
+
+**Exact next step:** owner sets the coupling to 3 (at order time is fine; check DDP sea stays $129); owner decides F08/F20; then task 22 step 4 (STEP for the JLC quote; the gantry has to fit in £141.20 or the budget moves).
+
 ## 00000000000. 17 Nov 2026: LiMo Checkout6
 
 - 600 screw × 2 and the 500 rail removed: fixed. DDP sea stays **$89** with 2 × 600 sets, so M05 £440.56 stands.

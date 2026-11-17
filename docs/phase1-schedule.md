@@ -29,11 +29,11 @@ Castings are planned for April–May: the epoxy needs about **20 °C** to cure, 
 
 | Wave | Order in week | Date | What | £ |
 |---|---|---|---|---|
-| 1 | 1 | 04 Jan 2027 | Electrical, motors, **spindle kit and cooling loop** (bench-test indoors): E01, E04, E05, E06, E07, E08, E09, E10, E12, E13, E14, E17, E18, E21, **E23, E24, E25**, S04, **S08, S05**, M09, M10, M14, **M01, M02, M03, M05, M08, M13** (LiMo motion parts, C5, DDP sea, D-136) | £2,008.07 (M01, M02 not priced; M05 shipping to re-see, Checkout5) |
+| 1 | 1 | 04 Jan 2027 | Electrical, motors, **spindle kit and cooling loop** (bench-test indoors): E01, E04, E05, E06, E07, E08, E09, E10, E12, E13, E14, E17, E18, E21, **E23, E24, E25**, S04, **S08, S05**, M09, M10, M14, **M01, M02, M03, M05, M08, M13** (LiMo motion parts, C5, DDP sea, D-136) | £2,097.33 (Checkout7: HGH20CA 600 $43.33, DDP sea $129) |
 | 2 | 7 | 15 Feb 2027 | Bench, moulds, local items (motion parts moved to wave 1, D-136): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T07, T09–T13** (bench, D-99: B&Q Swansea with in-store ply cutting, Screwfix, B&Q marketplace, AliExpress), **F07 + F20** (flat bars, one Metal Store order) and **M15–M17** (pulleys, belts, outboard bearing) | £568.29 |
 | 3 | 9 | 01 Mar 2027 | Casting materials, test kit, curing tent and measuring tools: F01, F02, F12, F03, F04, F06, X01, X02, **X05–X10** (straightedge, feeler gauges, torque wrench, grinder, PPE, engineer's square), **F22–F24** (PIR board, heater, thermostat) | £954.55 |
 | 4 | 13 | 29 Mar 2027 | Aluminium plates and ER20 collets: M11, M12, S09 | £438.63 |
-| | | | **Total** | **£3,969.54** (excluding 6 lines not priced: M01, M02 (LiMo HGH20CA 600) and G01–G04 (JLC gantry, not in a wave yet)) |
+| | | | **Total** | **£4,058.80** (excluding 4 lines not priced: G01–G04, JLC gantry, not in a wave yet) |
 
 3D-printed parts (D-100, docs/printed-parts.md): fan grills, cable grommet and e-stop box can be printed any time before the bench is fitted out (week 8).
 
