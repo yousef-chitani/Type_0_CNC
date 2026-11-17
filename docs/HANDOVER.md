@@ -4,6 +4,13 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 00000000. 17 Nov 2026: task 22 step 3 draft (waiting on the owner)
+
+- Draft: `docs/task22-step3.md` (lengths, revised LiMo basket in `limo-basket.txt`, `bom.csv` change list, 10 questions). Nothing decided; `bom.csv` unchanged.
+- LiMo and StepperOnline still block curl: C5 set 700 and HGH20CA set 600 unpriced (owner to save the pages, question 2).
+
+**Exact next step:** the owner answers the 10 questions in `docs/task22-step3.md` section 4; then record the D-numbers (next D-150) and, if question 10 is yes, edit `bom.csv` and re-run the 5 generators.
+
 ## 0000000. 17 Nov 2026: beam assessment, beam chosen
 
 **Done**
