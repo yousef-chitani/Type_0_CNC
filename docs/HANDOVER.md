@@ -4,6 +4,14 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 0000000000000000000. 17 Nov 2026: D-163, Vallder price corrected
+
+- The £229.56 was JLC's shipping, not Vallder's. Owner's Vallder checkout (UK): €121.93 + DHL €25.94 = €147.87, no EU VAT. With 20% UK import VAT (paid to DHL): **G01 £148.08** (was £331.31).
+- **Phase 1 £4,120.59: £79.41 left** for G03 (feet, unpriced). Not counted: DHL clearance fee; duty assumed 0% (EU origin).
+- Note: `bom.csv` has LF line endings, not CRLF as `tasks/README.md` says.
+
+**Exact next step:** unchanged from D-162 below, except the budget question: G03 feet (and end plates) must fit in £79.41. The owner answers rail seats, X screw supports and end plates; then redraw G03 for 235 × 125 in `cad/v2/gantry_parts.py` and get the JLC price.
+
 ## 000000000000000000. 17 Nov 2026: D-162, Vallder heavy beam
 
 - Owner chose Vallder (shipping estimate £229.56). Heavy 235 × 125 assumed (200 × 96 ruled out). `bom.csv`: G01 = Vallder £331.31, G02 and G04 dropped, G03 feet stay unpriced. Generators run.

@@ -8,7 +8,7 @@ Full list: [bom.csv](bom.csv). **120 line items, 119 priced.** Prices were read 
 |---|---|---|---|
 | Frame | 23 | 23 | £840.59 |
 | Motion | 17 | 17 | £1,256.12 |
-| Gantry | 2 | 1 | £331.31 |
+| Gantry | 2 | 1 | £148.08 |
 | Spindle | 9 | 9 | £1,533.95 |
 | Tool changer | 7 | 7 | £154.46 |
 | Pneumatics | 6 | 6 | £110.22 |
@@ -17,14 +17,14 @@ Full list: [bom.csv](bom.csv). **120 line items, 119 priced.** Prices were read 
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
 | Fixings | 2 | 2 | £70.67 |
-| **All** | **120** | **119** | **£5,727.69** |
+| **All** | **120** | **119** | **£5,544.46** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,727.69**. Not priced yet: G03.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,544.46**. Not priced yet: G03.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £4,303.82 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £4,120.59 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -35,12 +35,12 @@ Lines still TO PRICE: see the list above.
 | S01 | Jianken JGL-80/2.2R24-20 ATC spindle | 990.57 |
 | M05 | DFU1605 C5 ballscrew sets X 700 / Y 600 × 2 / Z 350 | 470.82 |
 | F01 | Main EG epoxy: Ampreg 30 + slow hardener, 22.68 kg | 354.00 |
-| G01 | Gantry beam: Vallder CNC X-axis heavy profile 235 × 125, 6063 anodised, 890 long | 331.31 |
 | S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 318.16 |
 | E01 | Mesa 7i76EU | 257.74 |
 | M11 | Table plate 6082 460 × 330 × 25 | 221.33 |
 | M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 186.26 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 164.05 |
+| G01 | Gantry beam: Vallder CNC X-axis heavy profile 235 × 125, 6063 anodised, 890 long | 148.08 |
 | F22 | Curing tent: 50 mm foil-faced PIR board + foil tape | 139.99 |
 
 ## Warnings
@@ -96,7 +96,7 @@ Lines still TO PRICE: see the list above.
 | M11 | 1 | Table plate 6082 460 × 330 × 25 | 1 pcs | 6082 aluminium 460 × 330 × 25 mm (D-79) | [product](https://www.aluminiumwarehouse.co.uk/products/25-mm-6082-aluminium-plate) | £184.44 ex VAT, 6082 460 × 330 × 25 custom cut (Aluminium Warehouse) | 221.33 | D-79. Inc VAT calculated. Order with M12 + A06 (free delivery over £150 ex VAT unless SA2 is excluded). Cast tooling plate £251.04 ex VAT |
 | M12 | 1 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | 6082: saddle 180 x 400 x 20, Z plate 140 x 200 x 20, X nut-housing spacer 52 x 52 x 25, Z rail risers 2 x 25 x 15 x 350, X motor plate + bracket, 2 Y motor brackets (D-151) and Z BK12 bracket about 10 mm plate (assembly.py, D-109) | [product](https://www.aluminiumwarehouse.co.uk/products/20-mm-6082-aluminium-plate) | 20 mm 400 × 180 £69.98 + 20 mm 200 × 140 £27.22 + 25 mm 100 × 100 £15.00 + 15 mm 350 × 100 £25.52 + 10 mm 300 × 120 £17.50 = £155.22 ex VAT (Aluminium Warehouse) | 186.26 | Open (D-151): Y motor plates out, 2 Y brackets in: re-check the cut list; price unchanged until then. Price check 12, D-126: the 10 mm plate is one 300 × 120 piece, cut in two at home. Smallest cut is 100 × 100: the 52 × 52 spacer and the 2 × 25 × 350 risers are cut from larger pieces at home. Free delivery over £150 ex VAT if SA2 qualifies (order with M11) |
 | M13 | 1 | Z motor mount (NEMA 24 to BK12) | 1 pcs | NEMA 24 mount for the Z motor above the Z BK12. HOLE SPACING 50 mm (StepperOnline drawing), not 47.1 | [product](https://limobearing.com/) | $19.14 less 10 % (LiMo HM12-60 C7, owner basket) | 13.03 | PROVISIONAL (D-126, D-136): LiMo HM12-60 has 49.5 mm hole spacing (owner, 15 Nov), the motor 50 mm: asked LiMo to drill to 50 (reply 6a). If not, make the mount from the 10 mm M12 plate (task 14). Old: AliExpress £20.63 |
-| G01 | 1 | Gantry beam: Vallder CNC X-axis heavy profile 235 × 125, 6063 anodised, 890 long | 1 pcs | Vallder heavy X-axis extrusion cut to 890. Closed multi-cell section, rail grooves 154 apart (cad/vendor/vallder_heavy_235x125.dxf, docs/beam-extrusion-check.md). Rail seats as extruded (question 4 open) | [product]() | €137.00 per m × 0.89 = €121.93 (£101.75) + shipping £229.56 (owner's checkout estimate) | 331.31 | Replaces the JLC U channel (D-147 superseded). Metal: owner's saved page 17 Nov 2026, EUR 1 = £0.8345 (ECB 16 Nov). Shipping: owner, 17 Nov 2026. Import VAT/duty not known. JLC STEP G01 kept in cad/v2/out/jlc for reference only |
+| G01 | 1 | Gantry beam: Vallder CNC X-axis heavy profile 235 × 125, 6063 anodised, 890 long | 1 pcs | Vallder heavy X-axis extrusion cut to 890. Closed multi-cell section, rail grooves 154 apart (cad/vendor/vallder_heavy_235x125.dxf, docs/beam-extrusion-check.md). Rail seats as extruded (question 4 open) | [product](https://vallder.com/product/cnc-x-axis-heavy-alu-profile-235x125/) | €121.93 (890 × €137.00/m) + DHL €25.94 = €147.87 (owner checkout to UK, no EU VAT) + UK import VAT 20% €29.57 = €177.44 (£148.08) | 148.08 | Replaces the JLC U channel (D-147 superseded). Owner checkout 17 Nov 2026: SKU 1117400, 13.172 kg, DHL up to 3000 mm uninsured (insured €37.19). EUR 1 = £0.8345 (ECB 16 Nov). Import VAT paid to DHL on delivery; DHL clearance fee not included; duty assumed 0% (EU origin, UK-EU TCA). The earlier £229.56 shipping was JLC's, not Vallder's. JLC STEP G01 kept in cad/v2/out/jlc for reference only |
 | G03 | 1 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed | 2 pcs | Each on 2 Y HGH20CA blocks at 150 pitch; 15 mm step for the Y nut housing (D-140) | [product](https://jlccnc.com/cnc-machining) | Not priced: STEP quote (task 22 step 4) |  |  |
 | S01 | 2 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | 2.2 kW / 24000 rpm / 400 Hz / 220 V / about 0.87 Nm / ISO20 / water-cooled / 80 mm body. Order the clamp/unclamp sensor variant (PNP) | [product](https://www.alibaba.com/product-detail/Jianken-JGL-80-2-2KW-24000RPM_1601249825246.html) | £937.79 (VAT?) + £52.78 shipping (Alibaba, 1-4 pcs) | 990.57 | Owner is contacting Jianken and ordering. Drawing confirms JGL-80/2.2R24, 220 V, 400 Hz, ISO20-ER16, water-cooled. Sensors: clamped/released + temperature, PNP 24 V. VFD not included. Pull stud not shown. KEY ATTRIBUTES SAY 0.7 Nm (other listings 0.87 Nm): confirm with Jianken. Import VAT likely on top. Delivery 18 Nov-19 Dec. Alt AliExpress with 2.2 kW VFD £1402.79 inc VAT + £140.15: https://www.aliexpress.com/item/1005010706946690.html |
 | S08 | 1 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 1 pcs | BST2.2C-80-24K: 2.2 kW, 220 V, 400 Hz, 24,000 rpm, 0.88 Nm, ER20, Ø80 × 230 (+52 nose), 5.5 kg, runout 0.005 mm, bearings 2 × 7005C + 2 × 7002C P4 DT. Kit: Huanyang 2.2 kW VFD (220 V 1-ph in, 0-400 Hz), 80 mm clamp, 75 W 220 V pump + 5 m hose, ER20 collets 4/6/8/10/12 mm + 1/8, 1/4, 1/2 in | [product](https://www.aliexpress.com/item/32253760001.html) | £217.39 + £100.77 shipping (owner, AliExpress), delivery 8 Jan | 318.16 | D-78. Known maker with stated runout and P4 bearings. Shipping is heavy (about 9 kg kit): a UK/EU-stock seller may be cheaper or faster |
