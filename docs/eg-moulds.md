@@ -57,7 +57,7 @@ Only the portal beam is cored: 2 × Ø40 capped PVC pipe (D-114). Large foam cor
 - **Inserts (D-118):** steel insert bars (40 × 10 for Y, 25 × 10 for X, tapped M5 at the 60 mm rail-bolt pitch) with short screws in tapped holes on the back to anchor them (no welding). Abrade and degrease the bars; plug the threads from the back. Coat the jig bolts in wax.
 - **Portal joint:** Ø16 tubes through the full leg height form the M12 rod holes (`cast_in_features.md`). The leg feet are cast against a mould end wall, so they come out flat.
 - **Portal opening:** a **three-piece wedge plug** between the legs (two halves and a tapered centre wedge with 2° draft). The beam and legs shrink onto it on three sides, so a one-piece block would be very hard to get out.
-- **Lifting points:** M12 nut-on-rod: 4 on the base spine sides, 2 on the portal beam top (`cast_in_features.md`).
+- **Lifting:** no cast-in lifting points (D-159). Lift and turn the castings with a hydraulic hoist and straps.
 
 ## Pour and demould sequence
 
@@ -66,7 +66,7 @@ Only the portal beam is cored: 2 × Ø40 capped PVC pipe (D-114). Large foam cor
 3. First cure and post-cure as in `curing-heat.md` (48 h or more at 18 °C or more, then 16 h at 50 °C in the tent, casting still in its mould). Let it cool to room temperature, and only then demould.
 4. **Remove the jig bolts through the floor first.** They hold the casting to the floor.
 5. Remove the hold-down batten, then unscrew the walls. For the portal, pull the centre wedge first, then the plug halves.
-6. Lift the casting from its lifting points and turn it over on a padded surface. The floor comes off last.
+6. Lift the casting with the hydraulic hoist and straps (D-159) and turn it over on a padded surface. The floor comes off last.
 7. Inspect: tap the surface to find hollow-sounding voids, and check the inserts with a rail bolt.
 
 ## Risks

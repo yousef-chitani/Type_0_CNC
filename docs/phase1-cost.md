@@ -1,12 +1,12 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,058.80** (budget £4,200, D-127). Not priced yet: G01, G02, G03, G04. No eBay.
+**Phase 1 priced total: £4,016.22** (budget £4,200, D-127). Not priced yet: G01, G02, G03, G04. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £883.17 |
+| Frame | £840.59 |
 | Motion | £1,256.12 |
 | Gantry | £0.00 |
 | Spindle | £477.09 |
@@ -14,7 +14,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | Stand | £243.36 |
 | Metrology | £308.36 |
 | Fixings | £70.67 |
-| **Total** | **£4,058.80** |
+| **Total** | **£4,016.22** |
 
 ## Frame
 
@@ -26,7 +26,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
 | F07 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 lot | £54.90 |
-| F08 | M12 threaded rod 2 × 1 m + nuts | 1 lot | £29.08 |
+| F08 | M12 threaded rod 2 × 1 m + nuts (dropped: D-159) | 1 lot | £0.00 |
 | F09 | Steel or PVC tube for M12 bolt sleeves (dropped with the portal joint: D-154) | 2 m | £0.00 |
 | F10 | MDF sheets for moulds (floors + walls) | 1 sheet | £28.00 |
 | F11 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | £23.82 |
@@ -38,7 +38,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F17 | Mixer | 1 pcs | £69.99 |
 | F18 | Silicone (Screwfix) + packing tape (AliExpress) | 1 set | £17.69 |
 | F19 | Mould helpers (3D printed, design pending) | 1 set | £0.00 |
-| F20 | Steel flat bar 40 x 20 (portal joint bars) | 1 pcs | £13.50 |
+| F20 | Steel flat bar 40 x 20 (portal joint bars) (dropped: D-159) | 1 pcs | £0.00 |
 | F21 | Speed control for the vibration-table motor (dropped) | 1 pcs | £0.00 |
 | F22 | Curing tent: 50 mm foil-faced PIR board + foil tape | 3 sheets | £139.99 |
 | F23 | Tent heater: 500 W oil-filled radiator | 1 pcs | £20.99 |

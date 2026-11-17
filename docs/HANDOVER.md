@@ -4,6 +4,15 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 0000000000000. 17 Nov 2026: D-159, F08 and F20 dropped
+
+- Owner set the LiMo coupling to 3 (no new checkout saved: DDP sea at $129 not re-seen).
+- **D-159:** F08 (M12 rod + nuts) and F20 (40 × 20 bar) dropped, −£42.58. No cast-in lifting points: the castings are lifted with a hydraulic hoist and straps. Test brick C keeps its heat probes; its bar is now a 40 × 10 × 120 F07 offcut tapped M5, pull test with an M5 rail bolt. **Open:** M5 torque steps (the owner's wrench starts at 21 N·m).
+- Phase 1 priced **£4,016.22** (budget £4,200, **£183.78 left**), excluding G01–G04. Wave 2 £525.71.
+- Not changed yet: `cad/v2/assembly.py` and `base_cores_sketch.py` still draw the lifting points (old fixed-gantry CAD; remove them when the tub CAD is redone).
+
+**Exact next step:** task 22 step 4 (STEP for the JLC quote; the gantry G01–G04 has to fit in £183.78 or the budget moves).
+
 ## 000000000000. 17 Nov 2026: LiMo Checkout7
 
 - Rails fixed: HGH20CA 600 × 2, **$43.33 a set** (M01, M02 £29.50 each). Total as saved **$752.72 = £569.35**.

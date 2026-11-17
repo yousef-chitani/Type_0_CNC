@@ -12,7 +12,7 @@
 | 2 | How much epoxy does it need when tamped by hand? | Mix bricks at 10 / 11 / 12 / 13 % |
 | 3 | Which release method works? | The mix-brick moulds, 3 methods |
 | 4 | How hot does a full-thickness section get? | Heat brick with probes |
-| 5 | Does 20 mm of M12 thread in a cast-in bar hold? | Pull test on the bar in the heat brick |
+| 5 | Does a cast-in 40 × 10 bar hold an M5 rail bolt? (D-159) | Pull test on the bar in the heat brick |
 | 6 | Do the portal's 20–30 mm walls fill around the cores? | Test beam section, sawn |
 | 7 | How much do cast-in bars bow, and does neat Ampreg level in a 5 mm seat? | Rail-seat test strip |
 | 8 | How stiff is the cured mix, and does the post-cure matter? | Two prisms in bending |
@@ -73,7 +73,7 @@ All use the chosen blend. Moulds are sealed MDF or melamine offcuts, screwed, wi
 |---|---|---|---|
 | A1–A4 mix bricks | 100 × 100 × 100 | 4 × 2.3 kg | Epoxy at 10, 11, 12, 13 %; black pigment in A2 and A4 to set the amount (D-146) |
 | B1, B2 prisms | 25 × 40 × 300 | 2 × 0.7 kg | Chosen epoxy level |
-| C heat brick | 130 × 130 × 200 | 7.8 kg | 2 temperature probes; one 40 × 20 × 120 bar with an M12 rod, 30 mm under the face (as in the base) |
+| C heat brick | 130 × 130 × 200 | 7.8 kg | 2 temperature probes; one 40 × 10 × 120 bar (F07 offcut), tapped M5 at the 60 mm rail-bolt pitch, 30 mm under the face (D-159) |
 | D beam section | 150 × 130 × 300 | 9.7 kg | The portal beam's cross-section: 2 × Ø40 cores, the X channel former, one 25 × 10 bar and its 43 mm recess strip |
 | E rail-seat strip | 90 × 60 × 500 | 5.5 kg | One 40 × 10 × 500 bar on jig bolts, with the 55 mm recess strip running out to one side |
 | | **Total** | **about 34 kg** | about 4.1 kg of binder, 30 kg of aggregate |
@@ -116,7 +116,7 @@ Sessions 1–6 fit in weeks 12–13. The strip's long test runs alongside the ca
 - Record the peak and when it happens. The estimate in `curing-heat.md` is a rise of about 20–35 °C for this wrapped brick.
 - If the centre goes above about 60 °C, the real pours need cooler materials, no tent for the first day, or a fan.
 
-**C pull test.** Bridge the brick with a steel bar resting on its two ends (100 mm or more clear of the cast-in bar). Put the M12 rod through it and tighten a nut with a torque wrench in steps: 25, 30, 40, 50 N·m (the wrench starts at 21). 50 N·m is about 2 tonnes of pull, above the working preload.
+**C pull test.** Bridge the brick with a steel bar resting on its two ends (100 mm or more clear of the cast-in bar). Put an M5 rail bolt through it into the cast-in bar and tighten it in steps (D-159). **Torque steps open:** the owner's torque wrench starts at 21 N·m, too high for M5; a small wrench or another load method is needed (owner to say).
 - Pass: no cracks, the rod end doesn't creep up (dial indicator on it), and the thread still runs freely afterwards.
 
 **D beam section.** Saw across at one-third and two-thirds of the length.

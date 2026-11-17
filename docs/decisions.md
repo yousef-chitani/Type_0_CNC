@@ -160,3 +160,4 @@
 | D-156 | **Y2 home switch: a 6th LJ12A3 (E10).** Each Y motor homes on its own switch to square the gantry | Owner, 17 Nov 2026 (question 8) |
 | D-157 | **Y drive: standard BK12 end (Ø10 × 15) straight into the D25L35 coupling.** Only X needs a stub drawing (X is belt-folded, D-107) | Owner, 17 Nov 2026 (question 9) |
 | D-158 | **48 V supply (E04, 480 W) kept for Phase 1** (4 drivers: X, Y1, Y2, Z, as D-36 sized); re-check when the Phase 2 wheel driver (5th) is added | Owner, 17 Nov 2026 (question 10) |
+| D-159 | **F08 (M12 rod + nuts) and F20 (40 × 20 bar) dropped** (closes D-154). **No cast-in lifting points:** the castings are lifted and turned with a hydraulic hoist and straps. Test brick C keeps its heat probes; its bar becomes a 40 × 10 × 120 offcut from F07, tapped M5 like the rail bars, and the pull test uses an M5 rail bolt | Owner, 17 Nov 2026. Saves £42.58. The pull test now checks the real fixing (M5 in a cast-in 40 × 10 bar, D-28) |

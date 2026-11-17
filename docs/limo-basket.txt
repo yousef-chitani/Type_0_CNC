@@ -71,3 +71,4 @@ BASKET C (moving gantry, D-150; 17 Nov 2026, after Checkout5)
     After Checkout7 (17 Nov): lines 1-6 correct. ONLY line 7 left: coupling D25L35
     qty 1, must be 3. DDP sea is now $129 (was $89). Total as saved $752.72;
     with 3 couplings about $758.50 (check DDP sea is still $129).
+    Owner, 17 Nov: coupling set to 3 (no new checkout saved).

@@ -10,7 +10,7 @@
 - cad/v2/moulds.py (from task 10)
 
 ## Do
-1. Add the base: floor plan with the Y bar jig bolts, 55 mm recess strips, Y channel former, joint bars, taper blocks, lifting points, walls, MDF sheet layout for both moulds.
+1. Add the base: floor plan with the Y bar jig bolts, 55 mm recess strips, Y channel former, joint bars, taper blocks, walls (no lifting points, D-159), MDF sheet layout for both moulds.
 
 ## Done when
 As task 10, for the base.
