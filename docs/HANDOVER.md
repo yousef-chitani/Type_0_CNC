@@ -4,6 +4,15 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 0000000000000000. 17 Nov 2026: Vallder beam check measured
+
+- Owner sent Vallder's DXF and STEP files. Sections in `cad/vendor/vallder_*.dxf`; `cad/v2/vallder_profiles.py` computes them with the `beam_options.py` load model.
+- **Heavy 235 × 125: EI Y 0.51, Z 2.15, twist about 13 µm, 13.1 kg.** JLC step-4 beam on the same routine: **EI Y 0.92, Z 1.33, twist about 4 µm**. 200 × 96: EI Y 0.17, out.
+- Heavy layout fits (rails 155 apart, DSG16H 7.6 clear), but BK12/BF12 would sit on a 4 mm floor over a hollow cell (needs a steel strip slid in, or end plates and a 952 screw).
+- `docs/beam-extrusion-check.md` rewritten. My pick: keep the JLC channel (D-147); heavy as fallback if the JLC quote is high.
+
+**Exact next step:** the owner picks the beam (`beam-extrusion-check.md` question 1) and answers the 7 questions in `task22-step4.md`; then write `cad/v2/gantry_parts.py`.
+
 ## 000000000000000. 17 Nov 2026: task 22 step 4 proposal
 
 - `docs/task22-step4.md` + `cad/v2/out/gantry_parts_sketch.png`: X screw channel in a 30 mm front wall (D-108 spacer out), BK/BF outside the X block travel (X screw needs 696 of 700), solid beam end blocks bolted down into the feet (feet fitted first). Beam 17.8 kg, moving mass about 56 kg.

@@ -1,51 +1,44 @@
-# Beam: Vallder CNC extrusion instead of the JLC U channel? (17 Nov 2026)
+# Beam: Vallder CNC extrusion instead of the JLC U channel? (17 Nov 2026, measured)
 
-**For the owner to choose. Nothing decided; D-147 stands until then.** Source: the owner's saved Vallder pages (17 Nov 2026). Rate 1 EUR = £0.8345 (ECB via frankfurter.app, 16 Nov 2026, curl).
+**For the owner to choose. Nothing decided; D-147 stands until then.** First pass (estimates) earlier on 17 Nov; this pass uses the owner's Vallder downloads (question 2 answered): the two section DXFs are now `cad/vendor/vallder_200x96.dxf` and `cad/vendor/vallder_heavy_235x125.dxf`. The two STEP models (95 MB and 47 MB) are not in git; the heavy STEP was used only to check the rail and screw positions.
 
-## The two profiles (from the saved pages)
+![Sections](../cad/v2/out/vallder_profiles.png)
 
-| | 200 × 96 | Heavy 235 × 125 | JLC U channel (step 4 proposal) |
+Script: `PYTHONUTF8=1 python cad/v2/vallder_profiles.py` (numbers in `cad/v2/out/vallder_profiles.json`). Same load model as `beam_options.py`: span 690, 200 N at mid-span, tool 245 below the beam centre. The JLC step-4 beam (30 mm front wall, 80 × 20 channel, back plate bonded) goes through the same routine.
+
+## Measured
+
+| | 200 × 96 | Heavy 235 × 125 | JLC step 4 |
 |---|---|---|---|
-| Alloy | 6063, anodised | 6063, anodised | 6061, machined |
-| Mass per m | 8.20 kg | 14.80 kg | |
-| Beam 890 long | **7.3 kg** | **13.2 kg** | 17.8 kg (with plate) |
-| Price | €94.00 per m, cut 200–6000 | €137.00 per m | not priced (STEP quote) |
-| 890 long | €83.66 = **£69.82** | €121.93 = **£101.75** | |
-| Shipping to the UK, import costs | **not known** (the site says "EU warehouse, shipping across Europe") | not known | |
-| Made for | HGR20 + SFU16 + FK12/FF12 | HGR20 + SFU20/25 | |
-| Rail pads | 2 × 20 wide, about **126 apart** (measured off the drawing), rails held by M6 T-nuts | not in the saved files | 100 apart (D-104), M5 tapped |
-| Screw channel | 66 wide, between the rails | yes (picture) | 80 × 20, machined |
+| Mass per m (DXF; Vallder states) | 8.53 (8.20) | 14.77 (14.80) | 16.74 |
+| Beam 890 long | 7.6 kg | **13.1 kg** | 14.9 kg mid-section, **17.8 kg** with the solid ends |
+| **EI, force in Y** (cutting) | **0.17** | **0.51** | **0.92** |
+| EI, force in Z (plunge) | 0.94 | 2.15 | 1.33 |
+| Y deflection, 200 N | 8.1 µm | **2.7 µm** | **1.5 µm** |
+| Twist at the tool (estimate, Bredt, walls read off the DXF) | about 68 µm | **about 13 µm** | **about 4 µm** |
+| Metal price, 890 long | £69.82 | £101.75 | not priced (STEP quote) |
 
-## Stiffness (my estimate, not from Vallder)
+- **The first pass over-stated both profiles.** Its pick was the heavy profile "if its drawing confirms EI near 1". **It measures 0.51, so that condition fails.** In Y it sits between stock tube B2 (0.35, `beam-assessment.md`) and the JLC beam.
+- **Twist is the bigger gap.** Most of the metal is in the open front (T-slots, screw channel). The closed cells behind have walls only 2–4.5 mm thick, against the JLC beam's closed 10 mm box. The estimate ignores the internal webs, so it is rough, but the ratio (about 3×) is clear.
+- **The 200 × 96 is out:** 5× softer in Y than the JLC beam and about 17× worse in twist.
+- **EG fill (D-147, not now):** filling the heavy profile's cells adds **29 kg** (moving mass about 80 kg), as box C did. No help.
 
-Thin-wall model from the mass per metre only. It puts all the metal on the outside, so it **over-states** both profiles. The saved files give no inertia figures, and there's no drawing for the heavy profile.
+## Heavy profile: how our parts would sit (DXF and Vallder's STEP)
 
-| EI (MNm²) | 200 × 96 | 235 × 125 | JLC U channel |
-|---|---|---|---|
-| Force in Y (cut along Y) | **≤ 0.38** | **≤ 1.1** | 0.90 |
-| Force in Z (plunge) | ≤ 1.2 | ≤ 2.9 | 1.13 |
-| Y deflection, 200 N at mid-span, span 690, simply supported | ≥ 3.5 µm | ≥ 1.2 µm | 1.5 µm |
+- **Rails** sit in 3 mm deep grooves, about 21 wide: **155 apart** (not 100, D-104). The groove side gives a datum edge, so no machined shoulder is needed. The seats are as-extruded anodised faces (question 4).
+- **Saddle:** the block outer edges come to 199 across. The saddle is 400 tall (`assembly.py`), so it fits.
+- **Saddle face:** the rails are sunk, so the block tops stand only **4 mm proud of the profile's front lips** (30 mm on the JLC beam). From the saddle back to the beam centroid: **63 mm**, against 90 on the JLC beam. That shortens the spindle overhang (D-106) by about 27 mm, partly offsetting the weaker twist. The feet would be redrawn: the profile is 235 tall × 125 deep (JLC: 150 × 130).
+- **X nut housing (DSG16H)** straight on the saddle: screw axis 16 mm behind the lips, housing back **7.6 mm clear** of the channel floor. The channel is 76 wide. It fits.
+- **BK12 / BF12 in the channel** (keeps the 700 screw, step 4): the channel floor is 43.6 mm behind the lips, so the supports need a **2.6 mm pad**. **But the floor is only 4 mm thick, over a hollow cell.** M6 tapped into 4 mm of 6063 gives about 4 threads, which is too weak. The way to make it work is a tapped steel strip slid into the cell from the profile end (the supports sit about 120 mm in from each end), bolted through the floor. Otherwise the supports go on end plates as Vallder does: screw 952, over the 950 DDP limit, and a re-buy of the 700 screw.
+- **Beam to feet:** end plates bolted into the profile's end holes (Vallder's way). Not drawn yet.
 
-Both are closed multi-cell sections, so they twist much less than an open channel.
+## My pick
 
-## What it fixes
-
-- **It solves both step 4 problems.** The X screw channel is built in. The beam-to-foot joint can use end plates, bolted into the Ø8.5 holes tapped M10 at the profile ends (as Vallder's own design does).
-- **It's lighter** (13.2 kg vs 17.8 kg) and has a known metal price.
-- **It's well proven.** Vallder sells these for DIY router gantries, so others have built on them. What's new here is the EG tub underneath.
-- **It can still be filled later** (D-147): the cells are open at the ends.
-
-## The risks
-
-- **The rail seats are not machined.** They're as-extruded anodised faces. The page states no flatness or straightness, only "very minimal tolerances". On a mill this is the main risk. Fixes: epoxy-replicate the seats, or have a local shop skim the pads. JLC machines only its own stock, so it can't skim them.
-- **6063 is softer than 6061.** Threads are weaker, which is why Vallder uses T-nuts.
-- **The rails are about 126 apart**, not 100 (D-104). The 180 saddle still fits: the blocks' outer edges come to ±85.
-- **X screw length:** Vallder puts the FK/FF on end plates, so the screw is the profile length + 62. On an 890 beam that's 952: over the 950 DDP limit and not the 700 bought. Keeping BK12/BF12 inside the channel, just outside the X block travel (step 4), keeps the 700.
-- **UK shipping may not be offered**, and import VAT and duty are unknown.
+**Keep the JLC channel (D-147).** It is 1.8× stiffer in Y and about 3× stiffer in twist, its rail faces are machined, and the X screw and rail bolts go into solid metal. The heavy profile is 4.7 kg lighter and has a known price. It stays the **fallback if the JLC quote is far above about £100 plus shipping**. It would also need answers to questions 3 and 4 below and a steel strip for the BK12/BF12.
 
 ## Questions for the owner
 
-1. **Which beam:** the heavy 235 × 125, the 200 × 96, or keep the JLC channel? My pick: **the heavy 235 × 125**, if its drawing confirms EI near 1.
-2. **Please download Vallder's 2D/3D files** for both profiles (the page has a "Downloads 3D / 2D" link). I need them to work out the real stiffness and rail positions.
-3. **Shipping:** does Vallder ship to the UK, and at what cost? Please check at their checkout. Curl can't do a checkout.
-4. **Rail seats:** epoxy replication, a local skim, or bolt the rails straight on as extruded?
+1. **Which beam:** keep the JLC channel (my pick, then step 4 goes ahead with the 7 questions in `task22-step4.md`), or the heavy 235 × 125?
+2. ~~Vallder's 2D/3D files~~: done, thank you (this page).
+3. Only if the heavy profile is chosen: **shipping**. Does Vallder ship to the UK, and at what cost? Please check at their checkout; curl can't do a checkout.
+4. Only if the heavy profile is chosen: **rail seats**. Epoxy replication, a local skim, or rails bolted straight onto the as-extruded faces?

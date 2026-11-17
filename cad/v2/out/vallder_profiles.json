@@ -1,0 +1,68 @@
+{
+ "Vallder 200 x 96": {
+  "outer_mm": [
+   200.0,
+   96.0
+  ],
+  "area_mm2": 3159,
+  "kg_per_m": 8.53,
+  "stated_kg_per_m": 8.2,
+  "beam_890_kg": 7.6,
+  "EI_Y": 0.17,
+  "EI_Z": 0.942,
+  "defl_Y_um": 8.1,
+  "defl_Z_um": 1.5,
+  "twist_um_est": 68.2,
+  "centroid_from_rail_face_mm": 49.5,
+  "cells_mm2": 8405,
+  "eg_fill_kg": 17.2
+ },
+ "Vallder heavy 235 x 125": {
+  "outer_mm": [
+   235.0,
+   125.0
+  ],
+  "area_mm2": 5471,
+  "kg_per_m": 14.77,
+  "stated_kg_per_m": 14.8,
+  "beam_890_kg": 13.1,
+  "EI_Y": 0.506,
+  "EI_Z": 2.151,
+  "defl_Y_um": 2.7,
+  "defl_Z_um": 0.6,
+  "twist_um_est": 13.1,
+  "centroid_from_rail_face_mm": 58.6,
+  "cells_mm2": 14284,
+  "eg_fill_kg": 29.2
+ },
+ "JLC step 4 (150 x 130, 30 front wall, 80 x 20 channel)": {
+  "outer_mm": [
+   150.0,
+   130.0
+  ],
+  "area_mm2": 6200,
+  "kg_per_m": 16.74,
+  "beam_890_kg": 14.9,
+  "note_mass": "mid-section only; with the 40 mm solid ends 17.8 kg",
+  "EI_Y": 0.922,
+  "EI_Z": 1.327,
+  "defl_Y_um": 1.5,
+  "defl_Z_um": 1.0,
+  "twist_um_est": 4.1,
+  "centroid_from_rail_face_mm": 60.3
+ },
+ "heavy_layout": {
+  "rails_apart_mm": 155,
+  "block_outer_edges_mm": 199,
+  "saddle_height_mm": 400,
+  "block_top_proud_of_lips_mm": 4.0,
+  "screw_axis_behind_lips_mm": 16.0,
+  "channel_floor_behind_lips_mm": 43.6,
+  "housing_back_clear_of_floor_mm": 7.6,
+  "bk12_base_vs_floor_mm": 2.6,
+  "channel_floor_thickness_mm": 4.0,
+  "channel_opening_mm": 76,
+  "saddle_back_to_centroid_mm": 62.6,
+  "jlc_saddle_back_to_centroid_mm": 90.3
+ }
+}

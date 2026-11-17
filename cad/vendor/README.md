@@ -14,5 +14,7 @@ Manufacturer STEP files (and PDF drawings) for the bought parts, downloaded by t
 | `htd5m_20t_15.step` | HTD-5M 20T pulley, 15 mm belt | TraceParts, Mädler 17232000 (`17232000.stp`) | Teeth Ø30.7, flanges Ø36, 20.7 wide + hub Ø23 × 5.5 (26.2 overall). **Pilot bore in the model**, not Ø10 |
 | `kfl000_bearing.step` | KFL000 2-bolt flange bearing, Ø10 | TraceParts, AMI Bearings KFL000 (`kfl000.stp`) | a 60, b 36, bolt spacing e **45**, M6, s 7, Z 15.5, Bi 14 |
 | `lj12a3_sensor.step` | M12 inductive sensor (stand-in for LJ12A3-4-Z/BY) | TraceParts, Omron E2E-X8MD12 via RS 2883243 (`2883243.step`) | M12 × 1, 57.1 long |
+| `vallder_200x96.dxf` | Vallder CNC X-axis profile 200 × 96 (section only) | Owner's download, Vallder (`CNC-X-Axis-alu-profil-dxf.dxf`) | 8.53 kg/m from the DXF (Vallder: 8.20). Rail grooves 126.5 apart. `cad/v2/vallder_profiles.py` |
+| `vallder_heavy_235x125.dxf` | Vallder CNC X-axis heavy profile 235 × 125 (section only) | Owner's download, Vallder (`X-Axis Heavy mod3.dxf`) | 14.77 kg/m (Vallder: 14.80). Rail grooves 155 apart, 3 deep, seat 26 behind the lips. Vallder's STEP models (95 MB, 47 MB) are not in git |
 
 Not available as CAD: HGR20R rail alone (use the rail stub or the values above), DSG16H housing (52 × 40 face, 40 high, centre 20 below the face, 4 × M5 at 40 × 24, from the AliExpress drawing), D26 L35 coupling, NEMA 24 mount with 50 mm holes.
