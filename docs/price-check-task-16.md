@@ -173,7 +173,7 @@ With the HM12-60 in C5 ($24.86), add about £4.70. **Against:** £464.41 now (se
 | M07 Z | same, **350 mm** | $111.57 |
 | | **3 sets** | **$424.71 = £385.50 inc 20 % VAT** (C7 kits: $152.19 = £138.14) |
 
-The set's housing is steel; the C7 kit's housing was the DSG16H shape, so check that the steel house's bolt pattern fits the saddle and table before ordering. The Z set's BK12 isn't needed if the HM12-60 is used, because the HM12-60 has the BK12 built in.
+The set's housing is steel, and its size isn't on the page. The CAD uses the aluminium DSG16H, so check the steel housing's size and bolt pattern before ordering. The Z set's BK12 isn't needed if the HM12-60 is used, because the HM12-60 has the BK12 built in.
 
 **Whole LiMo order with C5 sets** (sets $424.71, rails $125.44, HM12-60 C7 $19.14, coupling $3.21 = $572.50; 10 % code `10OFF` → $515.25), at 1 USD = £0.756391 (15 Nov 2026):
 
