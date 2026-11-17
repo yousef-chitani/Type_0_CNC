@@ -16,6 +16,7 @@
 | 6 | Do the portal's 20–30 mm walls fill around the cores? | Test beam section, sawn |
 | 7 | How much do cast-in bars bow, and does neat Ampreg level in a 5 mm seat? | Rail-seat test strip |
 | 8 | How stiff is the cured mix, and does the post-cure matter? | Two prisms in bending |
+| 9 | How much does the cured mix expand per °C? (D-149) | Prism B2 against a steel bar, cold and hot |
 
 ## 2. Materials
 
@@ -136,6 +137,11 @@ Sessions 1–6 fit in weeks 12–13. The strip's long test runs alongside the ca
 - Commercial EG is 28–35 GPa; a poor hobby mix is about 14 GPa. **Pass: 25 GPa or more** (0.086 mm or less).
 - Compare B1 (room-cured) with B2 (post-cured).
 - Optional creep check: leave B2 loaded with 25 kg for a week somewhere warm (30–35 °C) and note any extra deflection. With a post-cured Tg of 74 °C this matters much less than it did with GlassCast.
+
+**Prism B2, expansion (D-149).** After the bending test. Lay B2 and a steel bar of the same length side by side on the bench, ends touching a fixed stop; a dial indicator reads each far end. Zero both at room temperature, put the whole set in the post-cure tent at 40–50 °C for 4 h or more, read both again hot.
+- Expansion of the mix = 12 × 10⁻⁶ (steel) + (B2 reading − steel reading) ÷ (length × temperature rise).
+- Example: 320 mm, 25 °C rise, B2 reads 0.032 mm more than the steel → 16 × 10⁻⁶ per °C.
+- No pass mark: the number goes into the rail-seat bow estimate (`beam-assessment.md`).
 
 ## 9. Quantities against what is on the parts list
 

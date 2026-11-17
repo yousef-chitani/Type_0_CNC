@@ -90,6 +90,18 @@ out.append(row("Box 150x130x10 filled with EG (bonded)", E_AL * iy + E_EG * fill
 out.append(row("Box 150x130x10 + EG strip 30 thick on the inside bottom", E_AL * iy, E_AL * iz,
                box_mass + 30 * 110 * LEN * RHO_EG, None, "damping only; stiffness gain ignored"))
 
+# 6. Machined from solid (D-147): solid bar, and U channel open at the back (no back plate)
+out.append(row("Solid bar 150x130 (6061)", E_AL * rect_I(130, 150), E_AL * rect_I(150, 130),
+               150 * 130 * LEN * RHO_AL, None, "no joints, heavy"))
+parts = [(10, 150, 5), (120, 10, 70), (120, 10, 70)]   # (width in Y, height in Z, centroid y)
+a_c = sum(w * h for w, h, _ in parts)
+yc = sum(w * h * c for w, h, c in parts) / a_c
+iz_c = sum(h * w**3 / 12 + w * h * (c - yc) ** 2 for w, h, c in parts)
+iy_c = rect_I(150, 10) + 2 * (rect_I(10, 120) + 120 * 10 * 70**2)
+j_open = (150 * 10**3 + 2 * 120 * 10**3) / 3
+out.append(row("U channel 150x130x10, open back, no plate", E_AL * iz_c, E_AL * iy_c, a_c * LEN * RHO_AL,
+               G_AL * j_open, "with the back plate bonded and bolted it is row 1 (D-147)"))
+
 # Epoxy for the fill, at the tub mix (11-12 %) and the video's 80/20 sand mix (2.0 kg/L ASSUMED)
 fill_L = 110 * 130 * LEN / 1e6
 epoxy = dict(fill_litres=round(fill_L, 2), fill_kg_tub_mix=round(fill_mass, 1),

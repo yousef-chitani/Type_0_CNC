@@ -87,6 +87,28 @@
    "twist_um": null,
    "mass_kg": 19.3,
    "note": "damping only; stiffness gain ignored"
+  },
+  {
+   "option": "Solid bar 150x130 (6061)",
+   "EI_Y_MNm2": 1.895,
+   "EI_Z_MNm2": 2.523,
+   "defl_Y_um_ss": 0.72,
+   "defl_Y_um_fixed": 0.18,
+   "defl_Z_um_ss": 0.54,
+   "twist_um": null,
+   "mass_kg": 46.9,
+   "note": "no joints, heavy"
+  },
+  {
+   "option": "U channel 150x130x10, open back, no plate",
+   "EI_Y_MNm2": 0.469,
+   "EI_Z_MNm2": 1.007,
+   "defl_Y_um_ss": 2.92,
+   "defl_Y_um_fixed": 0.73,
+   "defl_Z_um_ss": 1.36,
+   "twist_um": 612.7,
+   "mass_kg": 9.4,
+   "note": "with the back plate bonded and bolted it is row 1 (D-147)"
   }
  ],
  "epoxy": {

@@ -96,3 +96,13 @@ My pick, if asked: **B3 with the C2 strip, and no skeleton in the tub.**
 - **B3:** stiffest per kg here, a live material price, and it fits JLC's 1100 limit for machining the faces.
 - **C2:** gives some damping at +7 kg.
 - **No skeleton:** it moves the levelling problem rather than removing it, and adds a cast-in feature.
+
+## Owner answers (17 Nov 2026)
+
+1. **Beam (D-147):** JLC machines only its own stock, so the bought tubes (B3) are out. Machined from solid 6061: a **one-piece U channel 150 × 130 × 10, back plate bonded and bolted**. About EI 0.90, 12.5 kg, like A with two joints instead of four.
+   - Open channel without the plate: EI in Y 0.47, twist about 610 µm at the tool.
+   - Solid bar 150 × 130: EI 1.89, 46.9 kg.
+2. **Fill (D-147):** not now. It can be filled later: fill ports in the back plate.
+3. **Skeleton (D-148):** no. D-115 stays.
+4. Not asked (3 is no).
+5. **Expansion test (D-149):** yes, test 9 in `eg-mix-test-plan.md`.
