@@ -136,7 +136,7 @@ The rails make it heavy, and no page gives the weight, so the shipping band is n
 
 Page: "DFU1605 2005 2505 2510 Double-nut Ball Screw C5 Gound" (`limobearing.com/dfu-double-ball-screw-nut`), prices from its variant data (USD, all available). Spec: 52100 steel, **C5 ground**, **light preload P2 by default** (P1, P3 on request), overall length, custom 10–4,000 mm by remark, standard end machining for BK12 + BF12 unless a note or drawing says otherwise. The page also says LiMo ships **DDP** (duties and taxes paid upfront); below, 20 % VAT is still added as before, so the C5 and C7 figures compare like for like.
 
-**The C5 price is for the screw and nut only.** The C7 price ($152.19) was a kit with the BK12/BF12 supports and the DSG16H nut housing. This page lists no kit and no support price.
+**The C5 price is for the screw and nut only.** The C7 price ($152.19) was a kit with the BK12/BF12 supports and the DSG16H nut housing. This page lists no kit. Its related products show "Ball screw bearing support units BK BF" **from $7.71**: that is the cheapest variant on that page, not the BK12/BF12 price, so the supports are still unpriced.
 
 | ID | option | C5 (screw + nut) | C7 kit (screw + supports + housing) |
 |---|---|---|---|
@@ -152,11 +152,11 @@ So C5 costs about **£219 more than C7** (inc VAT), before the supports.
 
 | shipping (page table) | all-in £ |
 |---|---|
-| sea 10–22 kg $99 | **£531.85** + supports |
-| air 10–15 kg $169 | £595.39 + supports |
+| sea 10–22 kg $99 | **£531.85** + supports (£443.21 if the DDP price already includes VAT) |
+| air 10–15 kg $169 | £595.39 + supports (£496.15 without added VAT) |
 | air 15–20 kg $229 | £649.85 + supports |
 
-With the HM12-60 in C5 ($24.86), add about £4.70. **Against:** £464.41 now (several sellers) and £348.53 for LiMo with C7 by sea. So C5 by sea costs about **£67 more than now** and **£183 more than LiMo C7**, plus the supports. Phase 1 has £284 headroom (£4,200 − £3,915.58).
+With the HM12-60 in C5 ($24.86), add about £4.70. **Against:** £464.41 now (several sellers) and £348.53 for LiMo with C7 by sea. So C5 by sea costs about **£67 more than now** and **£183 more than LiMo C7**, plus the supports. **If LiMo's DDP price already includes UK VAT** (asked in 6a), C5 by sea is £443.21 + supports, about £21 under now before the supports, and LiMo C7 by sea £290.44. Either way C5 costs about £150–185 more than C7, plus the supports. Rate 1 USD = £0.756391 (15 Nov 2026). Phase 1 has £284 headroom (£4,200 − £3,915.58).
 
 **The end drawing on the page** is the same standard machining as task 13's notes: BK12 end Ø10 × 15, M12×1 × 14, Ø12 to 39 from the thread start (so Ø12 × 25); BF12 end Ø10 × 11 with a Ø9.6 circlip groove 1.15 wide at 9.15. Nothing changes there.
 

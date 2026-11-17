@@ -14,11 +14,11 @@
 - **The owner is redoing the CAD** (task 09): the stub and overall lengths come from the new CAD, not the old numbers (X stub about 74, Y about 32 from the thread end; spare 27 / 18 mm goes on the drive stub with 850 / 600).
 
 **Left**
-1. Owner: copy the **C5** prices for the 900 / 600 / 400 mm DFU1605 kits (C7: $152.19) and the checkout shipping to SA2 (sea and air), then decide C5 or C7 (next D-number: D-136).
+1. **C5 price recorded (17 Nov, `price-check-task-16.md`):** screw + nut only, $393.27 with 3 housings vs the $152.19 C7 kit (supports included). Whole LiMo order with C5 by sea: £531.85 + supports (£443.21 if DDP includes VAT) vs £464.41 now. Owner: save the LiMo BK/BF supports page and note the checkout shipping to SA2 (sea and air), then decide C5 or C7 (next D-number: D-136).
 2. LiMo's answer to 6a: record it under 6a and in `open-questions.md`.
 3. After that and the new CAD: make the X and Y screw drawings (still ask the owner: exact lengths or 850 / 600).
 
-**Exact next step:** wait for the owner's C5 price or LiMo's answer to 6a; record it, compare the all-in total with £464.41 (`price-check-task-16.md`), ask the owner before changing `bom.csv`.
+**Exact next step:** wait for the supports page, the checkout shipping or LiMo's answer to 6a (VAT in DDP?); record it, compare the all-in total with £464.41 (`price-check-task-16.md`), ask the owner before changing `bom.csv`.
 
 ## 0. Where the session of 15 Nov (late evening) stopped
 
