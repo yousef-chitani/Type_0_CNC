@@ -1,20 +1,20 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,528.98** (budget £4,200, D-127). Not priced yet: M01, M02, M05, G01, G02, G03, G04. No eBay.
+**Phase 1 priced total: £3,969.54** (budget £4,200, D-127). Not priced yet: M01, M02, G01, G02, G03, G04. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
 | Frame | £883.17 |
-| Motion | £726.30 |
+| Motion | £1,166.86 |
 | Gantry | £0.00 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £308.36 |
 | Fixings | £70.67 |
-| **Total** | **£3,528.98** |
+| **Total** | **£3,969.54** |
 
 ## Frame
 
@@ -52,7 +52,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M02 | HGR20 rail set X: 2 × 600 mm + 4 blocks | 2 pcs | to price |
 | M03 | HGR20 rail set Z: 2 × 350 mm + 4 blocks | 2 pcs | £24.34 |
 | M04 | HGH20CA carriages (in the rail kits) | 12 pcs | £0.00 |
-| M05 | DFU1605 C5 ballscrew sets X 700 / Y 600 × 2 / Z 350 | 4 pcs | to price |
+| M05 | DFU1605 C5 ballscrew sets X 700 / Y 600 × 2 / Z 350 | 4 pcs | £440.56 |
 | M06 | BK12 + BF12 end supports, C5 (in the screw sets) | 4 sets | £0.00 |
 | M07 | Steel nut housings (in the screw sets) | 4 pcs | £0.00 |
 | M08 | Flexible coupling D25L35, 10 mm to 10 mm (Z, Y1, Y2) | 3 pcs | £6.57 |

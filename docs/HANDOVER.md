@@ -4,6 +4,13 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 0000000000. 17 Nov 2026: LiMo Checkout5
+
+- `Checkout5.htm`: C5 set 700 **$153.57** (M05 now £440.56 with the $89 DDP sea seen; £470.82 if it becomes $129). Phase 1 priced **£3,969.54**, wave 1 £2,008.07, excluding 6 lines not priced: M01, M02 (LiMo HGH20CA 600) and G01–G04 (JLC gantry, not in a wave yet).
+- Basket wrong in 4 places: 600 screw × 1 (needs 2), HGH20CA 500 (needs 600), HGH15CA 600 (wrong size, needs HGH20CA 600 × 2), D25L35 × 1 (needs 3). Corrected list: `limo-basket.txt` basket C. Details: `price-check-task-16.md`, last section.
+
+**Exact next step:** owner fixes the basket (basket C) and saves a new checkout (HGH20CA 600 price, DDP sea shipping); owner decides F08/F20; then task 22 step 4.
+
 ## 000000000. 17 Nov 2026: task 22 step 3 done
 
 - Owner took all picks: **D-150 … D-158** (X rails 2 × 600, X screw 700; Y motor brackets from the 6082 plate; 3 × M09; X rail bars out; F09 out; back plate bonded with Ampreg 30 thickened with whiting; 6th home switch for Y2; Y drive standard BK12 end; 48 V supply kept for Phase 1).

@@ -1,13 +1,13 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **122 line items, 115 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **122 line items, 116 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
 | Frame | 23 | 23 | £883.17 |
-| Motion | 17 | 14 | £726.30 |
+| Motion | 17 | 15 | £1,166.86 |
 | Gantry | 4 | 0 | £0.00 |
 | Spindle | 9 | 9 | £1,533.95 |
 | Tool changer | 7 | 7 | £154.46 |
@@ -17,14 +17,14 @@ Full list: [bom.csv](bom.csv). **122 line items, 115 priced.** Prices were read 
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £308.36 |
 | Fixings | 2 | 2 | £70.67 |
-| **All** | **122** | **115** | **£4,952.85** |
+| **All** | **122** | **116** | **£5,393.41** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£4,952.85**. Not priced yet: M01, M02, M05, G01, G02, G03, G04.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,393.41**. Not priced yet: M01, M02, G01, G02, G03, G04.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,528.98 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,969.54 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -33,6 +33,7 @@ Lines still TO PRICE: see the list above.
 | ID | Item | £ |
 |---|---|---|
 | S01 | Jianken JGL-80/2.2R24-20 ATC spindle | 990.57 |
+| M05 | DFU1605 C5 ballscrew sets X 700 / Y 600 × 2 / Z 350 | 440.56 |
 | F01 | Main EG epoxy: Ampreg 30 + slow hardener, 22.68 kg | 354.00 |
 | S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 318.16 |
 | E01 | Mesa 7i76EU | 257.74 |
@@ -41,7 +42,6 @@ Lines still TO PRICE: see the list above.
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 164.05 |
 | F22 | Curing tent: 50 mm foil-faced PIR board + foil tape | 139.99 |
 | E04 | 48 V PSU Mean Well SDR-480-48 (DIN) | 136.06 |
-| X05 | Steel straightedge 500 mm | 115.07 |
 
 ## Warnings
 - **Not in the total yet:** spindle import VAT (if not collected at checkout), GCL pallet delivery, vibration table top sheet.
@@ -83,7 +83,7 @@ Lines still TO PRICE: see the list above.
 | M02 | 1 | HGR20 rail set X: 2 × 600 mm + 4 blocks | 2 pcs | X: LiMo Linear Guide Set HGH20CA 600 mm (2 rails + 4 blocks) on the beam face, preload ZA (min 597.5, D-150) | [product](https://limobearing.com/) | 600 set not priced (LiMo blocks curl: owner to save the page) |  | D-150: was 800 ($49.38 less 10 %, £33.62). D-136. Old: AliExpress £81.99 |
 | M03 | 1 | HGR20 rail set Z: 2 × 350 mm + 4 blocks | 2 pcs | Z: LiMo Linear Guide Set HGH20CA 350 mm (2 rails + 4 blocks), preload ZA (v2, min 318) | [product](https://limobearing.com/) | $35.76 less 10 % (LiMo, owner basket) | 24.34 | D-136. Old: AliExpress £60.59 |
 | M04 | 1 | HGH20CA carriages (in the rail kits) | 12 pcs | 4 per axis | [product]() | Included in M01-M03 | 0 | 4 HGH20CA per LiMo set, preload ZA |
-| M05 | 1 | DFU1605 C5 ballscrew sets X 700 / Y 600 × 2 / Z 350 | 4 pcs | LiMo DFU1605 Double-nut Ball Screw Set C5 ground, steel nut housing, C5 BK12/BF12, light preload P2: X 700, Y1 600, Y2 600, Z 350 (50 mm steps). Needed overall: X 653 (D-150), Y 572 (D-141). X drive stub to our drawing (task 13); Y and Z standard BK12 end (D-157) | [product](https://limobearing.com/) | 700 not priced; 600 $141.57 × 2 + 350 $111.57 less 10 % (owner pages, 17 Nov); shipping to re-check at a new checkout (the $89 DDP sea was for the old basket) |  | D-137, D-150: basket changed, total and shipping open (owner to save the 700 page and do a new checkout). This line still carries the whole LiMo shipping. Old: D-136: C5, ordered in wave 1. This line carries the whole LiMo shipping ($89 = £67.32). LiMo checkout 17 Nov 2026 (updated basket): DDP sea $89 to SA2 (30–45 workdays), duty included; whole LiMo order $515.25 after 10OFF + $89 = $604.25 = £457.05 at $1 = £0.756391 (15 Nov). VAT in the DDP price: confirm (reply 6a). Steel housing size not known (CAD uses DSG16H): check. Checkout 4 (17 Nov): basket correct, total $604.24 (1 cent rounding) |
+| M05 | 1 | DFU1605 C5 ballscrew sets X 700 / Y 600 × 2 / Z 350 | 4 pcs | LiMo DFU1605 Double-nut Ball Screw Set C5 ground, steel nut housing, C5 BK12/BF12, light preload P2: X 700, Y1 600, Y2 600, Z 350 (50 mm steps). Needed overall: X 653 (D-150), Y 572 (D-141). X drive stub to our drawing (task 13); Y and Z standard BK12 end (D-157) | [product](https://limobearing.com/) | $153.57 (700) + $141.57 × 2 (600) + $111.57 (350) less 10 % + DDP sea $89 as seen at Checkout5 (wrong basket: shipping to re-see, may be $129) | 440.56 | Checkout5 (17 Nov 2026): 700 set $153.57. £ at 1 USD = £0.756391 (15 Nov), as the other LiMo lines. This line still carries the whole LiMo shipping; with $129 it would be £470.82. D-137, D-150: basket changed, total and shipping open (owner to save the 700 page and do a new checkout). This line still carries the whole LiMo shipping. Old: D-136: C5, ordered in wave 1. This line carries the whole LiMo shipping ($89 = £67.32). LiMo checkout 17 Nov 2026 (updated basket): DDP sea $89 to SA2 (30–45 workdays), duty included; whole LiMo order $515.25 after 10OFF + $89 = $604.25 = £457.05 at $1 = £0.756391 (15 Nov). VAT in the DDP price: confirm (reply 6a). Steel housing size not known (CAD uses DSG16H): check. Checkout 4 (17 Nov): basket correct, total $604.24 (1 cent rounding) |
 | M06 | 1 | BK12 + BF12 end supports, C5 (in the screw sets) | 4 sets |  | [product](https://limobearing.com/) | Included in M05 | 0 |  |
 | M07 | 1 | Steel nut housings (in the screw sets) | 4 pcs |  | [product](https://limobearing.com/) | Included in M05 | 0 | Size and bolt pattern not known; CAD uses DSG16H |
 | M08 | 1 | Flexible coupling D25L35, 10 mm to 10 mm (Z, Y1, Y2) | 3 pcs | LiMo flexible shaft coupling D25L35, aluminium + PU spider, bores 10 × 10 by remark | [product](https://limobearing.com/) | $3.21 each less 10 % (LiMo, owner basket) | 6.57 | D-137: × 3 (Y motors direct, D-142; motor shaft and BK12 end both Ø10). D-136. Fit inside the HM12-60 asked in reply 6a. Old: AliExpress disc coupling £7.40 |

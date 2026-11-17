@@ -34,7 +34,7 @@ CHECKS = {
     "M09": "VAT basis unclear",
     "M10": "Was backorder from the China warehouse; VAT basis and shipping not shown",
     "M14": "No UK stock (DE warehouse); VAT basis unclear",
-    "M05": "X stub drawing by email (Y, Z standard, D-157); 700 set price and a new checkout; LiMo 6a answers; steel housing size; code 10OFF",
+    "M05": "X stub drawing by email (Y, Z standard, D-157); HGH20CA 600 price and a corrected checkout (Checkout5 had 600 × 1, HGH20 500, HGH15 600, D25L35 × 1); LiMo 6a answers; steel housing size; code 10OFF",
     "M13": "Basket had HM10-60: must be HM12-60. Holes 49.5 mm: LiMo to drill to 50 (6a)",
     "M01": "Rail accuracy class (6a)",
 }

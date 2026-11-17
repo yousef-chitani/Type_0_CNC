@@ -226,3 +226,10 @@ DDP means the duty is paid by the carrier; the page doesn't say in so many words
 - Rate 1 USD = £0.756391 (15 Nov 2026). Owner: set the 600 mm set back to 1, then check that DDP sea shows $89 again.
 
 **Fourth checkout (`Checkout4.htm`, 17 Nov 2026): basket correct.** 1 × each set and rail, HM12-60 C7, D25L35; goods $572.50, `10OFF` −$57.26, DDP sea **$89** (DAP air $239, DDP air $269). **Total $604.24 = £457.04** at 1 USD = £0.756391 (15 Nov 2026), 1 cent under `bom.csv` (rounding of the discount). Ready to order on 4 Jan; X and Y stub drawings still to send with the order number.
+
+
+**Fifth checkout (`Checkout5.htm`, 17 Nov 2026, moving gantry, D-150): basket wrong in 4 places.**
+- Seen: C5 set 700 **$153.57** (new price), 600 × 1 $141.57, 350 $111.57, HGH20CA 500 $40.30, HGH20CA 350 $35.76, **HGH15CA 600 $39.28**, D25L35 × 1 $3.21, HM12-60 C7 $19.14. Goods $544.40, `10OFF` −$54.45, DDP sea **$89** (DDP air $209, DAP air $239). Total $578.95.
+- Wrong: (1) C5 600 set × 1, needs × 2 (Y1, Y2); (2) HGH20CA **500** set, needs 600; (3) **HGH15CA** 600 is the wrong size (HGH15, not HGH20): needs HGH20CA 600 × 2 (X and Y); (4) D25L35 × 1, needs × 3.
+- Still not known: **HGH20CA 600** price.
+- Corrected, known so far: goods $612.81 + 2 × HGH20CA 600, less 10 %. Shipping must be re-seen: checkout 3 went from $89 to $129 when a 2nd 600 set was added.

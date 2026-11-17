@@ -51,3 +51,16 @@ AT CHECKOUT, WRITE DOWN
 
 Then paste the numbers in a session. To beat: GBP 464.41 (what the same
 parts cost now from several sellers).
+
+
+BASKET C (moving gantry, D-150; 17 Nov 2026, after Checkout5)
+ 1. DFU1605 & Steel House & C5 BKBF12, 700mm, qty 1               $153.57
+ 2. same, 600mm, qty 2                                            $283.14
+ 3. same, 350mm, qty 1                                            $111.57
+ 4. Linear Guide Set HGH20CA (HGH20, NOT HGH15), 600mm, qty 2       price?
+ 5. Linear Guide Set HGH20CA, 350mm, qty 1                         $35.76
+ 6. Stepper motor integrated mount bracket HM12-60, C7, qty 1      $19.14
+ 7. Flexible shaft coupling D25L35, qty 3                           $9.63
+    REMOVE: HGH20CA 500mm, HGH15CA 600mm
+                                         goods without line 4: $612.81
+    Discount code: 10OFF. Write down DDP sea shipping (was $89; may be $129).
