@@ -4,6 +4,15 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 000000000000000000. 17 Nov 2026: D-162, Vallder heavy beam
+
+- Owner chose Vallder (shipping estimate £229.56). Heavy 235 × 125 assumed (200 × 96 ruled out). `bom.csv`: G01 = Vallder £331.31, G02 and G04 dropped, G03 feet stay unpriced. Generators run.
+- **Phase 1 £4,303.82: £103.82 over the £4,200 budget**, before the feet. The owner must decide what to cut or accept.
+- The JLC STEP files (`cad/v2/out/jlc/`) are now only for G03 (feet) and reference; G01/G02 no longer needed.
+- Open before the feet model: rail seats (q4 in `beam-extrusion-check.md`), X screw supports (BK12/BF12 don't fit the channel), beam-to-foot end plates, import VAT/duty on the Vallder order.
+
+**Exact next step:** owner answers the budget overrun and the 3 open points above; then redraw G03 feet and end plates for the 235 × 125 profile in `cad/v2/gantry_parts.py` and get the JLC price for the feet.
+
 ## 00000000000000000. 17 Nov 2026: basic JLC STEP for pricing
 
 - Owner asked for a very basic model to get the JLC price now. `cad/v2/gantry_parts.py` → `cad/v2/out/jlc/G01_beam.step` (13.6 kg), `G02_back_plate.step` (3.55 kg), `G03_foot_block.step` (3.48 kg, qty 2). Each re-imports as one solid at the right size.

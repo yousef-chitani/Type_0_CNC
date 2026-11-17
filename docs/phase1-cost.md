@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,972.51** (budget £4,200, D-127). Not priced yet: G01, G02, G03, G04. No eBay.
+**Phase 1 priced total: £4,303.82** (budget £4,200, D-127). Not priced yet: G03. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -8,13 +8,13 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 |---|---|
 | Frame | £840.59 |
 | Motion | £1,256.12 |
-| Gantry | £0.00 |
+| Gantry | £331.31 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
 | Fixings | £70.67 |
-| **Total** | **£3,972.51** |
+| **Total** | **£4,303.82** |
 
 ## Frame
 
@@ -70,10 +70,8 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| G01 | Gantry beam: 6061 U channel 150 × 130 × 10, 890 long | 1 pcs | to price |
-| G02 | Beam back plate 6061, with fill ports | 1 pcs | to price |
+| G01 | Gantry beam: Vallder CNC X-axis heavy profile 235 × 125, 6063 anodised, 890 long | 1 pcs | £331.31 |
 | G03 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed | 2 pcs | to price |
-| G04 | Back plate bolts | 1 lot | to price |
 
 ## Spindle
 
