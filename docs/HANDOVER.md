@@ -4,6 +4,17 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 00000000000000000000. 17 Nov 2026: steel box-section beam proposed (not decided)
+
+- Owner proposes a **PrintNC-style steel beam**: rails on the top and bottom faces, X screw on top. The saddle may be RHS too. **D-162/D-163 (Vallder) still stand until the owner decides**; the Vallder beam is not ordered.
+- Stiffness (MNm², 890 long, S355). Vallder heavy: 13.1 kg, EI Y 0.51, Z 2.15. **SHS 150 × 150 × 8: 31.7 kg, EI Y 3.22, Z 3.22, GJ 1.83.** RHS 150 × 100 × 8: 26.2 kg, EI Y 1.24, Z 2.37, GJ 0.93. Mid-span deflection under 200 N: 0.4 µm (150 × 150).
+- Why steel: the BK12/BF12 bolt flat on the top face (keeps the 700 screw), torsion is much better, and steel expands like EG. Against: moving mass about 70–80 kg (was 56); accuracy now comes from the epoxy levelling of 3 rail faces (beam top and bottom, saddle front); top-to-bottom rail parallelism and Z squareness are set by indicator and shims; weld and cut before levelling; hot-finished (EN 10210) warps less.
+- 150 × 150 preferred: its 150 top face takes the top rail plus the BK12 (60 wide), and the taller rail spacing resists tilt.
+- Suppliers (other session): `docs/steel-rhs-suppliers.md`. Phone Dyfed Steels, Llanelli, first. K I Metals online: 150 × 150 × 8 £90.30 ex VAT (probably per metre; check).
+- Budget: dropping the Vallder frees £148.08, which leaves about £227 for the tube, levelling epoxy, end plates and feet.
+
+**Exact next step:** the owner prices the tube (Dyfed first) and decides steel vs Vallder. If steel: record D-164 (supersedes D-162/D-163); replace G01 in `bom.csv` and re-run the 5 generators; then lay out the beam, rails top and bottom, X screw on top and an RHS saddle (size it) in a new sketch, with the levelling-pour plan.
+
 ## 0000000000000000000. 17 Nov 2026: D-163, Vallder price corrected
 
 - The £229.56 was JLC's shipping, not Vallder's. Owner's Vallder checkout (UK): €121.93 + DHL €25.94 = €147.87, no EU VAT. With 20% UK import VAT (paid to DHL): **G01 £148.08** (was £331.31).
