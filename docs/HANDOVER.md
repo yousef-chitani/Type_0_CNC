@@ -4,6 +4,20 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 0000000. 17 Nov 2026: beam assessment, beam chosen
+
+**Done**
+- `docs/beam-assessment.md` (numbers: `cad/v2/beam_options.py` → `cad/v2/out/beam_options.json`). JLC max part size **1100 × 600 × 500** (curl, jlccnc.com/cnc-machining); JLC uses its own stock only (6061, 7075, steel 45, SUS304).
+- **D-147 beam:** JLC one-piece 6061 U channel 150 × 130 × 10, 890 long, back plate bonded and bolted (EI about 0.90 MNm², 12.5 kg, moving mass about 50 kg). No EG fill now; fill ports in the back plate for later.
+- **D-148:** no internal skeleton in the tub; D-115 stays.
+- **D-149:** expansion test on prism B2 (test 9 in `eg-mix-test-plan.md`). Industrial EG 12–16 × 10⁻⁶/°C (Schneeberger sheets).
+
+**Left**
+- Task 22 step 3: lengths (sketch: Y rails 2 × 600, Y screws 2 × 600, X rails 2 × 600, X screw 700, Z 350; the beam choice does not change them), revised LiMo basket (DDP sea, 950 mm max), `bom.csv` change list (2nd Y screw, M09 motor + driver, couplings, Y mounts, portal casting lines out, gantry parts in incl. the D-147 channel and back plate), electrical (Mesa ch 3 = Y2). **Ask the owner before editing `bom.csv`.**
+- Step 4: STEP of the gantry parts for a JLC quote. Unpriced: JLC beam, a 2nd epoxy kit (only if filled later; D-122 price is from 9 Nov), Aluminium Warehouse cut plate (calculator not readable by curl).
+
+**Exact next step:** task 22 step 3 (`docs/tasks/22-moving-gantry-redesign.md`, State section).
+
 ## 000000. 17 Nov 2026: EG video notes (side note, no decision)
 
 - Owner's transcript of a YouTube EG-base video, compared with the tub plan: `docs/video-notes-eg-base.md`. Its 80 % sand / 20 % epoxy pourable mix does not suit the tub (EG is the structure here; 20 % needs about 25.6 kg epoxy, more than the kit). Useful for the beam task (EG-filled box: about 25–30 kg more moving mass).
