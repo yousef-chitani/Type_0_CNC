@@ -56,7 +56,7 @@ Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,908.22 (D-
 15. **Epoxy confirmed by test bricks** (Ampreg 30 + 3X Slow, D-122), weeks 12–13.
    Who: owner, with the bricks; the session writes the mix and test plan first (task 6).
 
-15a. **EG video notes** (`video-notes-eg-base.md`, 17 Nov): mixing order (part A onto the stone first, or premixed?), 5 min mixing, EG-filled beam for D-143, pigment. Who: owner.
+15a. **Black pigment price** (D-146): black iron oxide or epoxy pigment, about 0.25 % of the mix (about 0.5 kg covers the tub and bricks, ASSUMED). Live price needed before it goes in `bom.csv`. Who: any session, by curl.
 
 ## Electrical bench tests (weeks 3–6, and when the spindle kit arrives)
 

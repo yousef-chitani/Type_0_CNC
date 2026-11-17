@@ -8,7 +8,8 @@
 
 - Owner's transcript of a YouTube EG-base video, compared with the tub plan: `docs/video-notes-eg-base.md`. Its 80 % sand / 20 % epoxy pourable mix does not suit the tub (EG is the structure here; 20 % needs about 25.6 kg epoxy, more than the kit). Useful for the beam task (EG-filled box: about 25–30 kg more moving mass).
 - 4 owner questions at the end of that file (mixing order, mix time, EG-filled beam, pigment). Open question 15a.
-- Exact next step unchanged: task 22, the beam assessment (D-143).
+- Owner answered (D-144 premix, Ampreg mixed density 1.10 and the test-plan table fixed; D-145 filled beam and internal skeleton go into the beam assessment; D-146 black pigment, price open: question 15a).
+- Exact next step unchanged: task 22, the beam assessment (D-143, D-145).
 
 ## 00000. 17 Nov 2026: task 22 sketch agreed in part
 

@@ -62,7 +62,7 @@ Only the portal beam is cored: 2 × Ø40 capped PVC pipe (D-114). Large foam cor
 ## Pour and demould sequence
 
 1. Mould on its deck, checked level and flat. Inserts bolted on. Temperature probes in place (`curing-heat.md`).
-2. Mix in batches. Wet the aggregate with resin first, then tamp in layers 30–50 mm deep.
+2. Mix in batches: resin and hardener premixed (D-144), poured onto the stone straight away, then tamp in layers 30–50 mm deep.
 3. First cure and post-cure as in `curing-heat.md` (48 h or more at 18 °C or more, then 16 h at 50 °C in the tent, casting still in its mould). Let it cool to room temperature, and only then demould.
 4. **Remove the jig bolts through the floor first.** They hold the casting to the floor.
 5. Remove the hold-down batten, then unscrew the walls. For the portal, pull the centre wedge first, then the plug halves.

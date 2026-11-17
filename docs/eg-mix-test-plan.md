@@ -24,7 +24,7 @@
 | Coarse | GCL Winter Quartz 2–5 mm, washed, kiln-dried (F03) | 2.65 kg/L |
 | Sand | Hancock & Brown kiln-dried pavior sand 0–1 mm (F04) | 2.65 |
 | Filler | Valentine Clays whiting, d50 9 µm (F06) | 2.7 |
-| Binder | Ampreg 30 resin + 3X Slow hardener, **100 : 26 by weight** (F01) | about 1.15 (ASSUMED: check the datasheet) |
+| Binder | Ampreg 30 resin + 3X Slow hardener, **100 : 26 by weight** (F01) | 1.10 (Ampreg 30 TDS, slow hardener, mixed) |
 | Fallback | GCL quartz 1–3 mm, if the packing test wants it | 2.65 |
 
 Everything is stored indoors for 48 h before use, so it is dry and at about 20 °C.
@@ -39,16 +39,16 @@ Blends are by mass of the dry aggregate. The whiting stays at 10 % or less (its 
 | P2 (coarser) | 55 % | – | 35 % | 10 % |
 | P3 (finer) | 45 % | – | 45 % | 10 % |
 
-Only P1–P3 are tested (D-125). A blend with GCL 1–3 mm quartz (about 35 / 20 / 35 / 10) is the fallback if none of them reaches 2.02 kg/L.
+Only P1–P3 are tested (D-125). A blend with GCL 1–3 mm quartz (about 35 / 20 / 35 / 10) is the fallback if none of them reaches 1.99 kg/L.
 
 What each epoxy level means. The packed stone must leave no more empty space than the epoxy can fill:
 
 | Epoxy by mass | Epoxy by volume | Dry tamped density the blend must reach | Density of a void-free brick |
 |---|---|---|---|
-| 10 % | 20.4 % | 2.11 kg/L | 2.34 kg/L |
-| 11 % | 22.2 % | 2.06 kg/L | 2.32 kg/L |
-| 12 % | 23.9 % | 2.02 kg/L | 2.29 kg/L |
-| 13 % | 25.6 % | 1.97 kg/L | 2.27 kg/L |
+| 10 % | 21.1 % | 2.09 kg/L | 2.32 kg/L |
+| 11 % | 22.9 % | 2.04 kg/L | 2.29 kg/L |
+| 12 % | 24.7 % | 1.99 kg/L | 2.27 kg/L |
+| 13 % | 26.5 % | 1.95 kg/L | 2.24 kg/L |
 
 For 1 kg of mix at 11 %: 110 g binder (87.3 g resin + 22.7 g hardener) and 890 g aggregate (P1: 445 g quartz, 356 g sand, 89 g whiting).
 
@@ -60,7 +60,7 @@ For 1 kg of mix at 11 %: 110 g binder (87.3 g resin + 22.7 g hardener) and 890 g
 4. Dry tamped density = stone mass ÷ tub volume. Do it twice and average.
 5. Repeat for P2 and P3.
 
-**Use the densest blend.** Read off the table above which epoxy level it can reach. If no blend reaches 2.02 kg/L, expect 13 % and tell the session: the epoxy quantity is then tight (section 9).
+**Use the densest blend.** Read off the table above which epoxy level it can reach. If no blend reaches 1.99 kg/L, expect 13 % and tell the session: the epoxy quantity is then tight (section 9).
 
 The stone is not wasted: it goes back in the bags.
 
@@ -70,7 +70,7 @@ All use the chosen blend. Moulds are sealed MDF or melamine offcuts, screwed, wi
 
 | Piece | Size (mm) | EG mass | What goes in it |
 |---|---|---|---|
-| A1–A4 mix bricks | 100 × 100 × 100 | 4 × 2.3 kg | Epoxy at 10, 11, 12, 13 % |
+| A1–A4 mix bricks | 100 × 100 × 100 | 4 × 2.3 kg | Epoxy at 10, 11, 12, 13 %; black pigment in A2 and A4 to set the amount (D-146) |
 | B1, B2 prisms | 25 × 40 × 300 | 2 × 0.7 kg | Chosen epoxy level |
 | C heat brick | 130 × 130 × 200 | 7.8 kg | 2 temperature probes; one 40 × 20 × 120 bar with an M12 rod, 30 mm under the face (as in the base) |
 | D beam section | 150 × 130 × 300 | 9.7 kg | The portal beam's cross-section: 2 × Ø40 cores, the X channel former, one 25 × 10 bar and its 43 mm recess strip |
@@ -82,9 +82,9 @@ All use the chosen blend. Moulds are sealed MDF or melamine offcuts, screwed, wi
 ## 6. Mixing and placing (the same method as the real castings)
 
 1. Dry-mix the aggregate for the batch in the bucket with the paddle mixer (F17), about 1 minute. Dust mask on.
-2. Weigh resin and hardener (100 : 26) to within 1 %. Stir 2–3 minutes, scraping the sides and bottom.
+2. Weigh resin and hardener (100 : 26) to within 1 %. Stir 2–3 minutes, scraping the sides and bottom (datasheet: 2 minutes or more). Premix only: never add the parts to the stone separately (D-144).
 3. Pour the binder onto the stone **straight away**. Never leave mixed resin standing in the bucket: in a mass it heats up and runs away.
-4. Mix 3–4 minutes, until every stone is wet and there are no dry pockets. At 10–12 % it looks like damp sand, not a liquid.
+4. Mix 3–4 minutes, until every stone is wet and there are no dry pockets. The datasheet gives no time for this step; lengthen it if the cut bricks show dry or resin-rich patches. At 10–12 % it looks like damp sand, not a liquid.
 5. First, pack a thin layer of **fine mix** (the same recipe without the 2–5 mm quartz) against the mould floor, the inserts and under any flat bar. Press it in by hand (gloved).
 6. Place the mix in **layers of 30–50 mm**. Tamp each layer with a flat-ended rod or a block, edges and corners first, until the surface closes and a sheen of resin shows. Rough up the top of each layer lightly before the next.
 7. Note the time each batch was mixed and when it was placed.

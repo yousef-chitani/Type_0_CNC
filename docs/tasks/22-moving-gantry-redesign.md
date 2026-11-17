@@ -31,4 +31,7 @@ The owner has agreed the sketch, the new LiMo basket list is ready before 4 Jan 
 ## State (17 Nov 2026)
 - Steps 1–2 done: sketch `docs/moving-gantry-sketch.md` (`cad/v2/gantry_sketch.py`). Owner answers D-139 … D-142: no back wall, solid, walls 100 above the table, Y screws outboard on the wall tops, Y travel 350 for the ATC, Y motors direct at the back.
 - **Open: the beam (D-143).** The owner wants the next task to assess how it is made (bolted 4-plate box, stock tube, EG-filled) and JLC's maximum part size, before step 3.
+- **D-145 (owner, 17 Nov): the beam assessment includes an EG-filled beam, and the video's internal skeleton is assessed for the beam and the tub** (`docs/video-notes-eg-base.md`). Points to weigh:
+  - Filled beam: about 29 kg more moving mass (50 → about 79 kg in Y), about 3–5 kg more epoxy than the kit has to spare. Partial fill or a damping strip are lighter options.
+  - Skeleton in the tub: machined reference bars (rail and screw seats) joined by a frame and cast in, instead of the levelling pour (D-115). Accuracy then comes from machining (JLC), not from the pour. Check: aluminium expands about twice as much as EG and steel per °C (CHECK the EG figure), so long Al bars in EG may bow with temperature; steel bars match better. Check the frame doesn't block tamping (walls 140 wide).
 - Sketch lengths for step 3: Y rails 2 × 600, Y screws 2 × 600, X rails 2 × 600, X screw 700, Z 350 (all under the 950 limit). Not ordered; `bom.csv` unchanged.

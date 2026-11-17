@@ -41,7 +41,14 @@ An aluminium box filled with EG for damping is the video's case. Rough numbers f
 - Either way the moving mass in Y goes from about 50 kg to about 75–80 kg, and the epoxy kit would not cover it on top of the tub.
 - So: input for the beam task, not a choice. A partial fill or a damping strip are options that task can weigh.
 
-## Questions for the owner
+## Owner answers (17 Nov 2026)
+
+1. **Premix** (D-144). The Ampreg 30 datasheet says stir resin and hardener 2 minutes or more, sides and bottom; it gives no time for mixing into the stone, so the plan's 3–4 min stays until the bricks show otherwise. The datasheet's mixed density is 1.10, not the 1.15 assumed; the test-plan table is corrected.
+2. Mix time: as 1.
+3. **Filled beam: yes, in the beam assessment** (D-145). **The internal skeleton idea is liked**: task 22 assesses it for the beam and the tub.
+4. **Black pigment** (D-146): amount set on the test bricks; needs a live price before it goes on the parts list.
+
+## Questions for the owner (answered above)
 
 1. Mixing order for the test bricks: resin and hardener premixed (test plan), or part A onto the stone first and part B last (video)? Or test both on two bricks? (Note: the epoxy margin after the tub is only about 7–8 kg.)
 2. Mix 5 min after the hardener goes in, not 3–4?
