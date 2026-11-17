@@ -224,3 +224,5 @@ DDP means the duty is paid by the carrier; the page doesn't say in so many words
 - As saved: $714.07 − $71.42 + $129 = **$771.65 = £583.67**.
 - With 1 × 600 (as in `bom.csv`): $515.25 + $89 = **$604.25 = £457.05**, unchanged. The second 600 set adds $127.41 after the code + $40 shipping = **$167.41 = £126.63**.
 - Rate 1 USD = £0.756391 (15 Nov 2026). Owner: set the 600 mm set back to 1, then check that DDP sea shows $89 again.
+
+**Fourth checkout (`Checkout4.htm`, 17 Nov 2026): basket correct.** 1 × each set and rail, HM12-60 C7, D25L35; goods $572.50, `10OFF` −$57.26, DDP sea **$89** (DAP air $239, DDP air $269). **Total $604.24 = £457.04** at 1 USD = £0.756391 (15 Nov 2026), 1 cent under `bom.csv` (rounding of the discount). Ready to order on 4 Jan; X and Y stub drawings still to send with the order number.
