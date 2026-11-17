@@ -56,6 +56,8 @@ Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,908.22 (D-
 15. **Epoxy confirmed by test bricks** (Ampreg 30 + 3X Slow, D-122), weeks 12–13.
    Who: owner, with the bricks; the session writes the mix and test plan first (task 6).
 
+15a. **EG video notes** (`video-notes-eg-base.md`, 17 Nov): mixing order (part A onto the stone first, or premixed?), 5 min mixing, EG-filled beam for D-143, pigment. Who: owner.
+
 ## Electrical bench tests (weeks 3–6, and when the spindle kit arrives)
 
 16. **Drive and Mesa CHECKs** (docs/linuxcnc.md section 6). Manuals answered most of them (electrical.md section 5); left for the bench:

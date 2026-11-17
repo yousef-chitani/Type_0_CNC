@@ -4,6 +4,12 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 000000. 17 Nov 2026: EG video notes (side note, no decision)
+
+- Owner's transcript of a YouTube EG-base video, compared with the tub plan: `docs/video-notes-eg-base.md`. Its 80 % sand / 20 % epoxy pourable mix does not suit the tub (EG is the structure here; 20 % needs about 25.6 kg epoxy, more than the kit). Useful for the beam task (EG-filled box: about 25–30 kg more moving mass).
+- 4 owner questions at the end of that file (mixing order, mix time, EG-filled beam, pigment). Open question 15a.
+- Exact next step unchanged: task 22, the beam assessment (D-143).
+
 ## 00000. 17 Nov 2026: task 22 sketch agreed in part
 
 - Sketch: `docs/moving-gantry-sketch.md`, PNG `cad/v2/out/gantry_sketch.png`, script `cad/v2/gantry_sketch.py`. Tub 890 × 630 × 185, 128 kg solid, inside 610, walls 140 wide and 100 above the table, floor 60. Al box beam 150 × 130 × 10, 890 long, EI 0.90 MNm²; about 50 kg moving in Y.
