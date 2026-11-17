@@ -29,11 +29,11 @@ Castings are planned for April–May: the epoxy needs about **20 °C** to cure, 
 
 | Wave | Order in week | Date | What | £ |
 |---|---|---|---|---|
-| 1 | 1 | 04 Jan 2027 | Electrical, motors, **spindle kit and cooling loop** (bench-test indoors): E01, E04, E05, E06, E07, E08, E09, E10, E12, E13, E14, E17, E18, E21, **E23, E24, E25**, S04, **S08, S05**, M09, M10, M14 | £1,470.69 |
-| 2 | 7 | 15 Feb 2027 | Bench, moulds, local items **and motion parts** (D-103): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T07, T09–T13** (bench, D-99: B&Q Swansea with in-store ply cutting, Screwfix, B&Q marketplace, AliExpress), **M01, M02, M03, M05, M08, M13** (rails, ballscrews, couplings, motor mounts), **F07 + F20** (flat bars, one Metal Store order) and **M15–M17** (pulleys, belts, outboard bearing) | £1,051.71 |
+| 1 | 1 | 04 Jan 2027 | Electrical, motors, **spindle kit and cooling loop** (bench-test indoors): E01, E04, E05, E06, E07, E08, E09, E10, E12, E13, E14, E17, E18, E21, **E23, E24, E25**, S04, **S08, S05**, M09, M10, M14, **M01, M02, M03, M05, M08, M13** (LiMo motion parts, C5, DDP sea, D-136) | £1,927.74 |
+| 2 | 7 | 15 Feb 2027 | Bench, moulds, local items (motion parts moved to wave 1, D-136): F10, F11, F17, F18, F08, F09, X03, T02, **T03–T07, T09–T13** (bench, D-99: B&Q Swansea with in-store ply cutting, Screwfix, B&Q marketplace, AliExpress), **F07 + F20** (flat bars, one Metal Store order) and **M15–M17** (pulleys, belts, outboard bearing) | £587.30 |
 | 3 | 9 | 01 Mar 2027 | Casting materials, test kit, curing tent and measuring tools: F01, F02, F12, F03, F04, F06, X01, X02, **X05–X10** (straightedge, feeler gauges, torque wrench, grinder, PPE, engineer's square), **F22–F24** (PIR board, heater, thermostat) | £954.55 |
 | 4 | 13 | 29 Mar 2027 | Aluminium plates and ER20 collets: M11, M12, S09 | £438.63 |
-| | | | **Total** | **£3,915.58** |
+| | | | **Total** | **£3,908.22** |
 
 3D-printed parts (D-100, docs/printed-parts.md): fan grills, cable grommet and e-stop box can be printed any time before the bench is fitted out (week 8).
 
@@ -44,6 +44,6 @@ Owner-built or DIY (no cost apart from materials): timber bench (materials T03�
 ## Watch points
 - **Mesa 7i76EU:** £257.74 including import VAT, ordered in wave 1 (week 1). Needed first for the LinuxCNC bench tests.
 - **Spindle kit:** ordered in wave 1 (D-94). Shipping was quoted at about 8–9 weeks, so it should arrive in early March, well before it is mounted in week 23. Check the price is still £217.39 + shipping when ordering.
-- **AliExpress motion parts:** ordered in wave 2 (15 Feb, D-103) so they arrive (2–6 weeks) in time to be measured before the moulds are finished in week 11. If they're late, finish the moulds from the datasheet sizes and check the parts against the moulds before casting (week 14).
+- **LiMo motion parts (D-136):** ordered in wave 1 (4 Jan), DDP sea 30–45 workdays, so they arrive mid-February to early March, in time to be measured before the moulds are finished in week 11. The X and Y stub drawings must be ready by 4 Jan. Pulleys, belts and the KFL000 (M15–M17) stay in wave 2 (AliExpress). If they're late, finish the moulds from the datasheet sizes and check the parts against the moulds before casting (week 14).
 - **Cold and post-cure:** cure inside a 50 mm PIR-board tent with a 500 W–1 kW thermostat heater: 20 °C for the first 48 h, then 50 °C for 16 h. Log with the temperature probes (curing-heat.md).
 - **Slack:** about 1 week of buffer, inside weeks 27–28.

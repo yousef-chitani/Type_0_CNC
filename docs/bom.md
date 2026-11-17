@@ -7,7 +7,7 @@ Full list: [bom.csv](bom.csv). **118 line items, 118 priced.** Prices were read 
 | Subsystem | Line items | Priced | GBP total |
 |---|---|---|---|
 | Frame | 23 | 23 | £885.46 |
-| Motion | 17 | 17 | £1,112.15 |
+| Motion | 17 | 17 | £1,104.79 |
 | Spindle | 9 | 9 | £1,533.95 |
 | Tool changer | 7 | 7 | £154.46 |
 | Pneumatics | 6 | 6 | £110.22 |
@@ -16,14 +16,14 @@ Full list: [bom.csv](bom.csv). **118 line items, 118 priced.** Prices were read 
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £308.36 |
 | Fixings | 2 | 2 | £70.67 |
-| **All** | **118** | **118** | **£5,339.45** |
+| **All** | **118** | **118** | **£5,332.09** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,339.45**. Not priced yet: .
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,332.09**. Not priced yet: .
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,915.58 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,908.22 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -32,10 +32,10 @@ Lines still TO PRICE: see the list above.
 | ID | Item | £ |
 |---|---|---|
 | S01 | Jianken JGL-80/2.2R24-20 ATC spindle | 990.57 |
+| M05 | DFU1605 C5 ballscrew sets X 850 / Y 600 / Z 350 | 356.44 |
 | F01 | Main EG epoxy: Ampreg 30 + slow hardener, 22.68 kg | 354.00 |
 | S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 318.16 |
 | E01 | Mesa 7i76EU | 257.74 |
-| M05 | DFU1605 ballscrew kits X 850 / Y 600 / Z 350 | 229.01 |
 | M11 | Table plate 6082 460 × 330 × 25 | 221.33 |
 | M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 186.26 |
 | F22 | Curing tent: 50 mm foil-faced PIR board + foil tape | 139.99 |
@@ -78,14 +78,14 @@ Lines still TO PRICE: see the list above.
 | F22 | 1 | Curing tent: 50 mm foil-faced PIR board + foil tape | 3 sheets | Recticel Instafit PIR 2400 × 1200 × 50 mm × 3 (tent about 1.5 × 1.0 × 0.8 m) + Diall insulation board tape 45 m × 50 mm | [product](https://www.diy.com/departments/recticel-instafit-polyurethane-insulation-board-l-2-4m-w-1-2m-t-50mm/5411545016640_BQ.prd) | Boards £45 each (B&Q Swansea, 39 in stock, aisle 103) + tape £4.99 (Screwfix 4806V) | 139.99 | Price check 14. Boards are 2.4 × 1.2 m: cut in the car park or use a roof rack (home delivery £35). Tape: https://www.screwfix.com/p/diall-insulation-board-tape-silver-45m-x-50mm/4806v |
 | F23 | 1 | Tent heater: 500 W oil-filled radiator | 1 pcs | Essentials 500 W portable oil-filled radiator, overheat protection, tip-over switch. Own thermostat set to maximum; F24 switches it | [product](https://www.screwfix.com/p/essentials-500w-electric-portable-oil-filled-radiator-white/482ky) | £20.99 inc VAT (Screwfix 482KY, sale, was £29.99) | 20.99 | Price check 14. Sale price: re-check when ordering. B&Q alternative £22 |
 | F24 | 1 | Thermostat controller with remote probe | 1 pcs | INKBIRD ITC-308, UK socket, −50 to 99 °C, 10 A | [product](https://www.aliexpress.com/item/32748373141.html) | £33.19 inc VAT, free shipping (AliExpress, INKBIRD Official Store; normal £40.48) | 33.19 | Price check 14. Not at Screwfix, B&Q or RS |
-| M01 | 1 | HGR20 rail kit Y: 2 × 500 mm + 4 blocks | 2 pcs | Y: 2 × 500 mm HGR20 + 4 × HGH20CA (min 478, D-80) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £64.79 inc VAT, free shipping (AliExpress, logged in; no per-shopper limit) | 64.79 | Y 2 × 400 mm. Deal price per size: if refused, normal £126.79. Kaiyade fallback £21.29 + £79.28 shipping PER ITEM (not per order) |
-| M02 | 1 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | 2 pcs | X: 2 × 800 mm HGR20 + 4 × HGH20CA (min 748, D-79) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £81.99 inc VAT, free shipping (AliExpress, logged in) | 81.99 | Deal price: if refused, normal £163.88. Kaiyade alt £28.29 + £79.28 shipping |
-| M03 | 1 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | 2 pcs | Z: 2 × 350 mm HGR20 + 4 × HGH20CA (v2, min 318) | [product](https://www.aliexpress.com/item/1005010242098397.html) | £60.59 inc VAT, free shipping (AliExpress, logged in) | 60.59 | Switched from Kaiyade: its shipping is per item, not per order (task 6). Deal price: if refused, normal £120.47 |
-| M04 | 1 | HGH20CA carriages (in the rail kits) | 12 pcs | 4 per axis | [product]() | Included in M01-M03 | 0 | 4 HGH20CA per Kaiyade kit. Preload not stated |
-| M05 | 1 | DFU1605 ballscrew kits X 850 / Y 600 / Z 350 | 3 pcs | DFU1605 kits with BK12/BF12 + nut housing: X 850, Y 600, Z 350. Needed overall: X 823, Y 582 (assembly.py with vendor models, D-111) | [product](https://www.aliexpress.com/item/1005010046279521.html) | £82.39 + £68.19 + £54.79 inc VAT (sale) + 3 × £7.88 shipping (AliExpress, logged in) | 229.01 | Price check 12: X 850 / Y 600 / Z 350. Shipping may combine to £18.06 for 3 kits (all-in £223.43): the basket shows it. Sale prices: re-check when ordering. Still ask the seller whether "Guide Length" is overall or thread length (supplier-messages.md) |
-| M06 | 1 | BK12 + BF12 end supports (in the screw kits) | 3 sets |  | [product](https://www.aliexpress.com/item/1005010046279521.html) | Included in M05 | 0 |  |
-| M07 | 1 | Nut housings (in the screw kits) | 3 pcs |  | [product](https://www.aliexpress.com/item/1005010046279521.html) | Included in M05 | 0 |  |
-| M08 | 1 | Disc coupling 10 mm to 10 mm (Z only) | 1 pcs | Listings give a 10 mm shaft on the 4 Nm NEMA 24 (24HS40-5004D-E1000). Verify. BK12 end is 10 mm | [product](https://www.aliexpress.com/item/1005009879991986.html) | £3.35 + £4.05 shipping (AliExpress, logged in) | 7.40 | D-110: X and Y are belt-driven now (D-107), only Z needs a coupling. D26 L35 double diaphragm, 10 x 10 bore |
+| M01 | 1 | HGR20 rail set Y: 2 × 500 mm + 4 blocks | 2 pcs | Y: LiMo Linear Guide Set HGH20CA 500 mm (2 rails + 4 blocks), preload ZA (min 478, D-80) | [product](https://limobearing.com/) | $40.30 less 10 % (LiMo, owner basket) | 27.43 | D-136. Accuracy class not stated: asked in reply 6a. Old: AliExpress £64.79 |
+| M02 | 1 | HGR20 rail set X: 2 × 800 mm + 4 blocks | 2 pcs | X: LiMo Linear Guide Set HGH20CA 800 mm (2 rails + 4 blocks), preload ZA (min 748, D-79) | [product](https://limobearing.com/) | $49.38 less 10 % (LiMo, owner basket) | 33.62 | D-136. Old: AliExpress £81.99 |
+| M03 | 1 | HGR20 rail set Z: 2 × 350 mm + 4 blocks | 2 pcs | Z: LiMo Linear Guide Set HGH20CA 350 mm (2 rails + 4 blocks), preload ZA (v2, min 318) | [product](https://limobearing.com/) | $35.76 less 10 % (LiMo, owner basket) | 24.34 | D-136. Old: AliExpress £60.59 |
+| M04 | 1 | HGH20CA carriages (in the rail kits) | 12 pcs | 4 per axis | [product]() | Included in M01-M03 | 0 | 4 HGH20CA per LiMo set, preload ZA |
+| M05 | 1 | DFU1605 C5 ballscrew sets X 850 / Y 600 / Z 350 | 3 pcs | LiMo DFU1605 Double-nut Ball Screw Set C5 ground, steel nut housing, C5 BK12/BF12, light preload P2: X 850, Y 600, Z 350 (50 mm steps). Needed overall: X 823, Y 582 (D-111). X and Y drive stubs to our drawing (task 13), Z standard | [product](https://limobearing.com/) | $171.57 + $141.57 + $111.57 less 10 % + DDP sea $89 for the whole LiMo order (owner checkout; updated basket) | 356.44 | D-136: C5, ordered in wave 1. This line carries the whole LiMo shipping ($89 = £67.32). LiMo checkout 17 Nov 2026 (updated basket): DDP sea $89 to SA2 (30–45 workdays), duty included; whole LiMo order $515.25 after 10OFF + $89 = $604.25 = £457.05 at $1 = £0.756391 (15 Nov). VAT in the DDP price: confirm (reply 6a). Steel housing size not known (CAD uses DSG16H): check. Basket fix still needed: HM12-60 (not HM10-60), code 10OFF |
+| M06 | 1 | BK12 + BF12 end supports, C5 (in the screw sets) | 3 sets |  | [product](https://limobearing.com/) | Included in M05 | 0 |  |
+| M07 | 1 | Steel nut housings (in the screw sets) | 3 pcs |  | [product](https://limobearing.com/) | Included in M05 | 0 | Size and bolt pattern not known; CAD uses DSG16H |
+| M08 | 1 | Flexible coupling D25L35, 10 mm to 10 mm (Z only) | 1 pcs | LiMo flexible shaft coupling D25L35, aluminium + PU spider, bores 10 × 10 by remark | [product](https://limobearing.com/) | $3.21 less 10 % (LiMo, owner basket) | 2.19 | D-136. Fit inside the HM12-60 asked in reply 6a. Old: AliExpress disc coupling £7.40 |
 | M09 | 1 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | X and Y. Candidate: StepperOnline 1-CL57T-S40-V41 (24HS40-5004D-E1000 + CL57T V4.1 / 24-48 V DC / 1000 PPR encoder) | [product](https://www.omc-stepperonline.com/ts-series-4-0-nm-566-56oz-in-1-axis-closed-loop-stepper-cnc-kit-nema-24-motor-driver-1-cl57t-s40-v41) | £51.34 (VAT?) per set + £10.03 UK warehouse (StepperOnline) | 112.71 | 24HS40-5004D-E1000 + CL57T-V41. Shaft 10 mm D-cut. UK stock 5. VAT basis unclear |
 | M10 | 1 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | StepperOnline 24HS34-5004D-E1000-B280: 3 Nm / 5 A / 1000 PPR encoder / 2.8 Nm 24 V power-off brake | [product](https://www.omc-stepperonline.com/s-series-nema-24-closed-loop-stepper-motor-3-0nm-424-92oz-in-with-2-8nm-396-51oz-in-electromagnetic-brake-24hs34-5004d-e1000-b280) | £59.22 (VAT?) (StepperOnline) | 59.22 | China warehouse only, backorder, est. 13-19 Nov. Shaft 10 mm D-cut. Shipping not shown |
 | M14 | 1 | CL57T V4.1 closed-loop driver | 1 pcs | For the Z brake motor. 24-48 V DC / 0-8 A | [product](https://www.omc-stepperonline.com/closed-loop-stepper-driver-v4-1-0-8-0a-24-48vdc-for-nema-17-23-24-stepper-motor-cl57t-v41) | £28.75 (VAT?) + £5.47 DE warehouse (StepperOnline) | 34.22 | No UK stock |
@@ -94,7 +94,7 @@ Lines still TO PRICE: see the list above.
 | M17 | 1 | Ø10 flange bearing (X screw outboard support) | 1 pcs | 2-bolt flange bearing, 10 mm bore (e.g. KFL000), on the X motor bracket beyond the pulley | [product](https://www.aliexpress.com/item/1005003157160985.html) | £3.26 + £0.79 shipping inc VAT (AliExpress, AUC Official Store) | 4.05 | D-107: KFL000, carries the belt pull on the X screw stub |
 | M11 | 1 | Table plate 6082 460 × 330 × 25 | 1 pcs | 6082 aluminium 460 × 330 × 25 mm (D-79) | [product](https://www.aluminiumwarehouse.co.uk/products/25-mm-6082-aluminium-plate) | £184.44 ex VAT, 6082 460 × 330 × 25 custom cut (Aluminium Warehouse) | 221.33 | D-79. Inc VAT calculated. Order with M12 + A06 (free delivery over £150 ex VAT unless SA2 is excluded). Cast tooling plate £251.04 ex VAT |
 | M12 | 1 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | 6082: saddle 180 x 400 x 20, Z plate 140 x 200 x 20, X nut-housing spacer 52 x 52 x 25, Z rail risers 2 x 25 x 15 x 350, X/Y motor plates + brackets and Z BK12 bracket about 10 mm plate (assembly.py, D-109) | [product](https://www.aluminiumwarehouse.co.uk/products/20-mm-6082-aluminium-plate) | 20 mm 400 × 180 £69.98 + 20 mm 200 × 140 £27.22 + 25 mm 100 × 100 £15.00 + 15 mm 350 × 100 £25.52 + 10 mm 300 × 120 £17.50 = £155.22 ex VAT (Aluminium Warehouse) | 186.26 | Price check 12, D-126: the 10 mm plate is one 300 × 120 piece, cut in two at home. Smallest cut is 100 × 100: the 52 × 52 spacer and the 2 × 25 × 350 risers are cut from larger pieces at home. Free delivery over £150 ex VAT if SA2 qualifies (order with M11) |
-| M13 | 1 | Z motor mount (NEMA 24 to BK12) | 1 pcs | NEMA 24 mount for the Z motor above the Z BK12. HOLE SPACING 50 mm (StepperOnline drawing), not 47.1 | [product](https://www.aliexpress.com/item/1005006232398099.html) | £9.99 + £10.64 shipping inc VAT (AliExpress, HM12-60 bracket) | 20.63 | PROVISIONAL (D-126): no listing confirms the 50 mm hole spacing and Ø36 pilot (motor drawing A4717). Ask the seller for the HM12-60 drawing (supplier-messages.md section 4). If it does not fit, make the mount from the 10 mm M12 plate |
+| M13 | 1 | Z motor mount (NEMA 24 to BK12) | 1 pcs | NEMA 24 mount for the Z motor above the Z BK12. HOLE SPACING 50 mm (StepperOnline drawing), not 47.1 | [product](https://limobearing.com/) | $19.14 less 10 % (LiMo HM12-60 C7, owner basket) | 13.03 | PROVISIONAL (D-126, D-136): LiMo HM12-60 has 49.5 mm hole spacing (owner, 15 Nov), the motor 50 mm: asked LiMo to drill to 50 (reply 6a). If not, make the mount from the 10 mm M12 plate (task 14). Old: AliExpress £20.63 |
 | S01 | 2 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | 2.2 kW / 24000 rpm / 400 Hz / 220 V / about 0.87 Nm / ISO20 / water-cooled / 80 mm body. Order the clamp/unclamp sensor variant (PNP) | [product](https://www.alibaba.com/product-detail/Jianken-JGL-80-2-2KW-24000RPM_1601249825246.html) | £937.79 (VAT?) + £52.78 shipping (Alibaba, 1-4 pcs) | 990.57 | Owner is contacting Jianken and ordering. Drawing confirms JGL-80/2.2R24, 220 V, 400 Hz, ISO20-ER16, water-cooled. Sensors: clamped/released + temperature, PNP 24 V. VFD not included. Pull stud not shown. KEY ATTRIBUTES SAY 0.7 Nm (other listings 0.87 Nm): confirm with Jianken. Import VAT likely on top. Delivery 18 Nov-19 Dec. Alt AliExpress with 2.2 kW VFD £1402.79 inc VAT + £140.15: https://www.aliexpress.com/item/1005010706946690.html |
 | S08 | 1 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 1 pcs | BST2.2C-80-24K: 2.2 kW, 220 V, 400 Hz, 24,000 rpm, 0.88 Nm, ER20, Ø80 × 230 (+52 nose), 5.5 kg, runout 0.005 mm, bearings 2 × 7005C + 2 × 7002C P4 DT. Kit: Huanyang 2.2 kW VFD (220 V 1-ph in, 0-400 Hz), 80 mm clamp, 75 W 220 V pump + 5 m hose, ER20 collets 4/6/8/10/12 mm + 1/8, 1/4, 1/2 in | [product](https://www.aliexpress.com/item/32253760001.html) | £217.39 + £100.77 shipping (owner, AliExpress), delivery 8 Jan | 318.16 | D-78. Known maker with stated runout and P4 bearings. Shipping is heavy (about 9 kg kit): a UK/EU-stock seller may be cheaper or faster |
 | S09 | 1 | ER20 collet set | 1 set | 13 × ER20 collets 1-13 mm, AA 0.008 mm, boxed + ER20A spanner | [product](https://www.aliexpress.com/item/1005010595086817.html) | Collets £27.79 + spanner £3.25 (AliExpress, logged in) | 31.04 | Small sizes (1-3 mm) not in the kit collets: keep for small tools. Spanner may come with the kit: check |

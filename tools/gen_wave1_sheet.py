@@ -17,6 +17,7 @@ VENDORS = [  # (domain fragment, vendor name), in the order to place the orders
     ("rs-online", "RS Components (free delivery over £60)"),
     ("stepperonline", "StepperOnline"),
     ("aliexpress", "AliExpress (log in, UK delivery)"),
+    ("limobearing", "LiMo (DDP sea, code 10OFF; screw drawings by email with the order number)"),
 ]
 
 # Open checks (open-questions.md "Before wave 1" and the bom.csv notes)
@@ -33,6 +34,9 @@ CHECKS = {
     "M09": "VAT basis unclear",
     "M10": "Was backorder from the China warehouse; VAT basis and shipping not shown",
     "M14": "No UK stock (DE warehouse); VAT basis unclear",
+    "M05": "X and Y stub drawings by email; LiMo 6a answers; steel housing size; code 10OFF",
+    "M13": "Basket had HM10-60: must be HM12-60. Holes 49.5 mm: LiMo to drill to 50 (6a)",
+    "M01": "Rail accuracy class (6a)",
 }
 
 

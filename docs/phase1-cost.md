@@ -1,19 +1,19 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,915.58** (budget £4,200, D-127). Every line priced. No eBay.
+**Phase 1 priced total: £3,908.22** (budget £4,200, D-127). Every line priced. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
 | Frame | £885.46 |
-| Motion | £1,112.15 |
+| Motion | £1,104.79 |
 | Spindle | £477.09 |
 | Electronics | £818.49 |
 | Stand | £243.36 |
 | Metrology | £308.36 |
 | Fixings | £70.67 |
-| **Total** | **£3,915.58** |
+| **Total** | **£3,908.22** |
 
 ## Frame
 
@@ -47,14 +47,14 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| M01 | HGR20 rail kit Y: 2 × 500 mm + 4 blocks | 2 pcs | £64.79 |
-| M02 | HGR20 rail kit X: 2 × 800 mm + 4 blocks | 2 pcs | £81.99 |
-| M03 | HGR20 rail kit Z: 2 × 350 mm + 4 blocks | 2 pcs | £60.59 |
+| M01 | HGR20 rail set Y: 2 × 500 mm + 4 blocks | 2 pcs | £27.43 |
+| M02 | HGR20 rail set X: 2 × 800 mm + 4 blocks | 2 pcs | £33.62 |
+| M03 | HGR20 rail set Z: 2 × 350 mm + 4 blocks | 2 pcs | £24.34 |
 | M04 | HGH20CA carriages (in the rail kits) | 12 pcs | £0.00 |
-| M05 | DFU1605 ballscrew kits X 850 / Y 600 / Z 350 | 3 pcs | £229.01 |
-| M06 | BK12 + BF12 end supports (in the screw kits) | 3 sets | £0.00 |
-| M07 | Nut housings (in the screw kits) | 3 pcs | £0.00 |
-| M08 | Disc coupling 10 mm to 10 mm (Z only) | 1 pcs | £7.40 |
+| M05 | DFU1605 C5 ballscrew sets X 850 / Y 600 / Z 350 | 3 pcs | £356.44 |
+| M06 | BK12 + BF12 end supports, C5 (in the screw sets) | 3 sets | £0.00 |
+| M07 | Steel nut housings (in the screw sets) | 3 pcs | £0.00 |
+| M08 | Flexible coupling D25L35, 10 mm to 10 mm (Z only) | 1 pcs | £2.19 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | £112.71 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
@@ -63,7 +63,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M17 | Ø10 flange bearing (X screw outboard support) | 1 pcs | £4.05 |
 | M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
 | M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | £186.26 |
-| M13 | Z motor mount (NEMA 24 to BK12) | 1 pcs | £20.63 |
+| M13 | Z motor mount (NEMA 24 to BK12) | 1 pcs | £13.03 |
 
 ## Spindle
 
