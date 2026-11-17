@@ -64,3 +64,6 @@ BASKET C (moving gantry, D-150; 17 Nov 2026, after Checkout5)
     REMOVE: HGH20CA 500mm, HGH15CA 600mm
                                          goods without line 4: $612.81
     Discount code: 10OFF. Write down DDP sea shipping (was $89; may be $129).
+
+    After Checkout6: lines 1, 2, 3, 5, 6 correct. Still to fix: line 4 is HGH15CA,
+    must be HGH20CA (600mm, qty 2); line 7 coupling qty 1, must be 3.

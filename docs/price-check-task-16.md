@@ -233,3 +233,10 @@ DDP means the duty is paid by the carrier; the page doesn't say in so many words
 - Wrong: (1) C5 600 set × 1, needs × 2 (Y1, Y2); (2) HGH20CA **500** set, needs 600; (3) **HGH15CA** 600 is the wrong size (HGH15, not HGH20): needs HGH20CA 600 × 2 (X and Y); (4) D25L35 × 1, needs × 3.
 - Still not known: **HGH20CA 600** price.
 - Corrected, known so far: goods $612.81 + 2 × HGH20CA 600, less 10 %. Shipping must be re-seen: checkout 3 went from $89 to $129 when a 2nd 600 set was added.
+
+
+**Sixth checkout (`Checkout6.htm`, 17 Nov 2026): 2 of the 4 errors fixed.**
+- Seen: C5 600 × 2 $283.14, 350 $111.57, 700 $153.57, HGH20CA 350 $35.76, **HGH15CA 600 × 2 $78.56**, D25L35 × 1 $3.21, HM12-60 C7 $19.14. Goods $684.95, `10OFF` −$68.51, **DDP sea $89** (DDP air $209, DAP air $239). Total $705.44.
+- Fixed: 600 screw × 2; the HGH20CA 500 set is gone. **DDP sea stays $89 with 2 × 600 sets** (unlike checkout 3, $129).
+- Still wrong: (1) rails are **HGH15CA** 600 × 2: need **HGH20CA** 600 × 2 (D-11, HGR20 rails; the CAD and blocks are size 20); (2) D25L35 × 1: needs × 3 (+$6.42).
+- Still not known: HGH20CA 600 price.

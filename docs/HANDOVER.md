@@ -4,6 +4,13 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 00000000000. 17 Nov 2026: LiMo Checkout6
+
+- 600 screw × 2 and the 500 rail removed: fixed. DDP sea stays **$89** with 2 × 600 sets, so M05 £440.56 stands.
+- Still wrong: rails are HGH15CA 600 × 2 (need HGH20CA, D-11); coupling × 1 (need 3). HGH20CA 600 price still not known.
+
+**Exact next step:** owner swaps HGH15CA for HGH20CA 600 × 2 and sets D25L35 to 3, saves Checkout7; owner decides F08/F20; then task 22 step 4.
+
 ## 0000000000. 17 Nov 2026: LiMo Checkout5
 
 - `Checkout5.htm`: C5 set 700 **$153.57** (M05 now £440.56 with the $89 DDP sea seen; £470.82 if it becomes $129). Phase 1 priced **£3,969.54**, wave 1 £2,008.07, excluding 6 lines not priced: M01, M02 (LiMo HGH20CA 600) and G01–G04 (JLC gantry, not in a wave yet).
