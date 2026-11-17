@@ -52,8 +52,8 @@
   "centroid_from_rail_face_mm": 60.3
  },
  "heavy_layout": {
-  "rails_apart_mm": 155,
-  "block_outer_edges_mm": 199,
+  "rails_apart_mm": 154,
+  "block_outer_edges_mm": 198,
   "saddle_height_mm": 400,
   "block_top_proud_of_lips_mm": 4.0,
   "screw_axis_behind_lips_mm": 16.0,
@@ -63,6 +63,16 @@
   "channel_floor_thickness_mm": 4.0,
   "channel_opening_mm": 76,
   "saddle_back_to_centroid_mm": 62.6,
-  "jlc_saddle_back_to_centroid_mm": 90.3
+  "jlc_saddle_back_to_centroid_mm": 90.3,
+  "channel_width_at_depth_mm": {
+   "20": 76.0,
+   "30": 75.6,
+   "36": 63.7,
+   "40": 55.1,
+   "41": 52.9,
+   "43": 48.5
+  },
+  "nut_flange_clear_of_floor_mm": 3.6,
+  "bk12_width_mm": 60
  }
 }

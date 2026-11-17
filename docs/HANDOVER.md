@@ -8,7 +8,7 @@
 
 - Owner sent Vallder's DXF and STEP files. Sections in `cad/vendor/vallder_*.dxf`; `cad/v2/vallder_profiles.py` computes them with the `beam_options.py` load model.
 - **Heavy 235 × 125: EI Y 0.51, Z 2.15, twist about 13 µm, 13.1 kg.** JLC step-4 beam on the same routine: **EI Y 0.92, Z 1.33, twist about 4 µm**. 200 × 96: EI Y 0.17, out.
-- Heavy layout fits (rails 155 apart, DSG16H 7.6 clear), but BK12/BF12 would sit on a 4 mm floor over a hollow cell (needs a steel strip slid in, or end plates and a 952 screw).
+- Heavy layout: rails 154 apart, DSG16H fits (7.6 clear). **BK12/BF12 do not fit** the tapered channel (52.9 wide at their base, they are 60): cut them down, or end plates and a 952 screw (re-buy).
 - `docs/beam-extrusion-check.md` rewritten. My pick: keep the JLC channel (D-147); heavy as fallback if the JLC quote is high.
 
 **Exact next step:** the owner picks the beam (`beam-extrusion-check.md` question 1) and answers the 7 questions in `task22-step4.md`; then write `cad/v2/gantry_parts.py`.

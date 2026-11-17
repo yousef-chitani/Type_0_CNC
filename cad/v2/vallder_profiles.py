@@ -134,13 +134,13 @@ res["JLC step 4 (150 x 130, 30 front wall, 80 x 20 channel)"] = dict(
 loops_by["JLC step 4"] = [outer, cavity]
 
 # ---- heavy profile: rail grooves, saddle face, X screw position (from the DXF outer loop)
-# Rail groove floors 26.0 behind the outer lips (23.0 behind the channel fingers), grooves about 21 wide, rail centres +-77.5
-# from the profile centre (155 apart). HGR20 rail 17.5 + HGH20CA to the block top = 30 above the seat.
+# Rail groove floors 26.0 behind the outer lips (23.0 behind the channel fingers), grooves 20 wide at the floor, rail centres +-77.0
+# from the profile centre (154 apart). HGR20 rail 17.5 + HGH20CA to the block top = 30 above the seat.
 LIP_TO_SEAT = 26.0; BLOCK_H = 30.0; CH_FLOOR = 43.6; FLOOR_T = 4.0
 saddle_back = BLOCK_H - LIP_TO_SEAT                     # block top this far in front of the lips
 axis = -saddle_back + 20.0                              # DSG16H axis 20 behind the saddle back (from the lips)
 res["heavy_layout"] = dict(
-    rails_apart_mm=155, block_outer_edges_mm=155 + 44, saddle_height_mm=400,
+    rails_apart_mm=154, block_outer_edges_mm=154 + 44, saddle_height_mm=400,
     block_top_proud_of_lips_mm=saddle_back,
     screw_axis_behind_lips_mm=axis, channel_floor_behind_lips_mm=CH_FLOOR,
     housing_back_clear_of_floor_mm=round(CH_FLOOR - (-saddle_back + 40.0), 1),
@@ -168,3 +168,24 @@ for ax, (name, lp) in zip(axs, loops_by.items()):
 fig.suptitle("Beam sections at the same scale (rail face on the left; force in Y pushes left-right)", fontsize=10)
 fig.tight_layout()
 fig.savefig(OUT / "vallder_profiles.png", dpi=110)
+
+
+# ---- heavy channel width at a given depth behind the outer lips (the channel walls taper)
+def channel_width(lp, depth, yc):
+    o = lp[0]; xl = min(q[0] for q in o); x = xl + depth; ys = []
+    for i in range(len(o)):
+        (x0, y0), (x1, y1) = o[i], o[(i + 1) % len(o)]
+        if (x0 - x) * (x1 - x) <= 0 and x0 != x1:
+            ys.append(y0 + (x - x0) * (y1 - y0) / (x1 - x0))
+    up = min(y for y in ys if y > yc); dn = max(y for y in ys if y < yc)
+    return round(up - dn, 1)
+
+
+hl = loops_by["Vallder heavy 235 x 125"]
+yc_ch = -21.53                                          # channel centre = profile centre (DXF)
+cw = {f"{d}": channel_width(hl, d, yc_ch) for d in (20, 30, 36, 40, 41, 43)}
+res["heavy_layout"]["channel_width_at_depth_mm"] = cw
+res["heavy_layout"]["nut_flange_clear_of_floor_mm"] = round(CH_FLOOR - (axis + 24.0), 1)   # DFU flange dia 48
+res["heavy_layout"]["bk12_width_mm"] = 60
+(OUT / "vallder_profiles.json").write_text(json.dumps(res, indent=1))
+print("channel width by depth behind lips:", cw)
