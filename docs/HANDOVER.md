@@ -4,6 +4,12 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 00000000000000. 17 Nov 2026: D-160, tests cut to the mix bricks
+
+- **D-160:** every EG test dropped except mix bricks A1–A4 (10–13 % epoxy, blend P1), judged on surface and voids. Gone: packing test, heat brick and pull test (so the D-159 M5 torque question is gone too), beam section, rail-seat strip, prisms, expansion test (D-149 superseded). `eg-mix-test-plan.md` rewritten (93 lines). Release still compared on the 4 brick moulds (D-120), no cost.
+- Now relied on without a test: blend P1, the `curing-heat.md` estimate, rail-bar bow and the rail-seat pour first seen on the real casting.
+- **No `bom.csv` change.** Open for the owner: X07 torque wrench + 19 mm socket (£43.71) was for M12 nuts and the pull test, both gone; keep it or drop it?
+
 ## 0000000000000. 17 Nov 2026: D-159, F08 and F20 dropped
 
 - Owner set the LiMo coupling to 3 (no new checkout saved: DDP sea at $129 not re-seen).

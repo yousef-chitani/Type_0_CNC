@@ -38,7 +38,7 @@ Hotter than the old GlassCast plan. GlassCast released its heat over days; Ampre
 - That is not harmful to the epoxy. The risks are side effects: a shorter working time for the last batches, a mould that moves as it warms, and stress locked in if one face cools much faster than the other.
 - **A closed insulated tent keeps the heat in** and pushes the peak towards the +58 °C limit. For the first 24 h, open the tent lid or a side if the centre probe passes about 40 °C, and close it again as it falls back.
 - Keep the PVC cores in mind: PVC softens at about 75–80 °C. The estimate stays below that, and the post-cure is held at 50 °C.
-- **The heat brick settles it.** Its sides are wrapped in 50 mm insulation so it reads a little hotter than the real base. If its centre passes 60 °C, start the real pours cooler (materials at 18 °C) and leave the tent open for the first day.
+- **No heat brick (D-160):** this estimate is all there is. Log the real pour's centre probe (F16); if it passes 60 °C, open the tent and let it cool before closing it again.
 
 ## The tent and heater
 

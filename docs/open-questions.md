@@ -46,7 +46,7 @@ Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,969.54 pri
    Who: owner.
 12. **GCL delivery cost to SA2** for 3 × 25 kg quartz, and **Hancock & Brown** collection of 3 × 20 kg sand.
    Who: owner. Drafts in `supplier-messages.md` (sections 2 and 3).
-13. **Curing heat: confirm with the heat brick** (`eg-mix-test-plan.md`, piece C). Estimate: centre 30–50 °C (D-124).
+13. ~~Curing heat: confirm with the heat brick~~ No heat brick (D-160); estimate only: centre 30–50 °C (D-124).
    Who: owner casts and logs the brick in weeks 12–13.
 
 ## Before wave 4 (29 Mar 2027)

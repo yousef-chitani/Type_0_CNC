@@ -105,4 +105,4 @@ My pick, if asked: **B3 with the C2 strip, and no skeleton in the tub.**
 2. **Fill (D-147):** not now. It can be filled later: fill ports in the back plate.
 3. **Skeleton (D-148):** no. D-115 stays.
 4. Not asked (3 is no).
-5. **Expansion test (D-149):** yes, test 9 in `eg-mix-test-plan.md`.
+5. **Expansion test (D-149):** yes, then dropped (D-160): not measured.

@@ -6,7 +6,7 @@
 **Depends on:** 10, 11 (06 on hold, D-131)
 
 ## Read
-- docs/eg-mix-test-plan.md (rail-seat strip)
+- docs/eg-mix-test-plan.md (no rail-seat strip any more, D-160: the procedure is first tried on the real pour)
 - docs/portal-relocation.md
 - cad/v2/out/assembly/cast_in_features.md
 
