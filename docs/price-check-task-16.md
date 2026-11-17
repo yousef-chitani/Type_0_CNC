@@ -216,3 +216,11 @@ DDP means the duty is paid by the carrier; the page doesn't say in so many words
 `bom.csv` unchanged; the owner decides C5 or C7 (D-136).
 
 **Updated checkout (17 Nov 2026):** 1 × 600 now. Shipping: **DDP sea $89**, DDP air $209, DAP air $239 (tax extra). Still HM10-60 ($18.86) and no code: as saved $572.22 + $89 = $661.22. Corrected (HM12-60, `10OFF`): $515.25 + $89 = **$604.25 = £457.05**, £7.36 under the £464.41 it replaces. **D-136: C5 from LiMo, ordered in wave 1.** `bom.csv` updated.
+
+**Third checkout (owner's saved page `Checkout3.htm`, 17 Nov 2026):**
+- **HM12-60, C7 ($19.14) now in the basket**: fixed.
+- **Code `10OFF` accepted**: $71.42 off goods of $714.07 (10 %, goods only, not shipping).
+- **But the 600 mm set is × 2 again** ($283.14), and DDP sea is back to **$129** (it was $89 with 1 × 600; the longer parcel or extra weight seems to set the band).
+- As saved: $714.07 − $71.42 + $129 = **$771.65 = £583.67**.
+- With 1 × 600 (as in `bom.csv`): $515.25 + $89 = **$604.25 = £457.05**, unchanged. The second 600 set adds $127.41 after the code + $40 shipping = **$167.41 = £126.63**.
+- Rate 1 USD = £0.756391 (15 Nov 2026). Owner: set the 600 mm set back to 1, then check that DDP sea shows $89 again.

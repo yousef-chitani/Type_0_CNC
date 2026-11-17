@@ -20,9 +20,11 @@
 - **Updated checkout** (owner fixed 1 × 600): **DDP sea $89**, DDP air $209, DAP air $239. Still HM10-60 and no code in it. Corrected: $515.25 + $89 = **£457.05** (without the code: £500.35).
 - **D-136 (owner): C5, LiMo, ordered in wave 1 (4 Jan 2027).** `bom.csv` M01–M08 and M13 moved to LiMo, one line per item (all the shipping is on M05). The 5 scripts were re-run. Wave 1 is now £1,927.74 and wave 2 £587.30. **Phase 1: £3,908.22** (was £3,915.58). The wave 1 order sheet has a LiMo section.
 
+- **Checkout 3 (17 Nov, later):** HM12-60 in and **`10OFF` accepted** (10 % of goods, not shipping). But the 600 mm set is × 2 again and DDP sea is $129: as saved $771.65 = £583.67. With 1 × 600 it stays $604.25 = £457.05 (`bom.csv` unchanged).
+
 **Left**
-1. **Before 4 Jan:** in the basket, swap **HM10-60 for HM12-60** and apply the code `10OFF`; choose DDP sea. X and Y stub drawings to email with the order number (needs the owner's new CAD, task 09).
-2. Is the 10 % code accepted? If not, the order is £500.35 and `bom.csv` must go up by £43.30.
+1. **Before 4 Jan:** set the 600 mm set back to **qty 1** and check DDP sea shows $89; choose DDP sea. X and Y stub drawings to email with the order number (needs the owner's new CAD, task 09).
+2. ~~Is the 10 % code accepted?~~ Yes (checkout 3).
 3. The steel nut housing in the C5 set: size and bolt pattern not known (the CAD uses DSG16H). Ask LiMo or check their CAD drawing.
 4. LiMo's answer to 6a (rail class, HM12-60 at 50 mm, coupling fit, VAT in DDP): record it under 6a and in `open-questions.md`.
 5. After that and the owner's new CAD: X and Y screw end drawings.
