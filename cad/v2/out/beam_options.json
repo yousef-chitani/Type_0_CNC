@@ -1,0 +1,132 @@
+{
+ "beams": [
+  {
+   "option": "Box 150x130x10, one piece or bonded plates",
+   "EI_Y_MNm2": 0.9,
+   "EI_Z_MNm2": 1.133,
+   "defl_Y_um_ss": 1.52,
+   "defl_Y_um_fixed": 0.38,
+   "defl_Z_um_ss": 1.21,
+   "twist_um": 3.7,
+   "mass_kg": 12.5,
+   "note": "sketch beam; also the bolted box if the joints do not slip"
+  },
+  {
+   "option": "Bolted 4-plate box, joints slipping (lower bound)",
+   "EI_Y_MNm2": 0.155,
+   "EI_Z_MNm2": 0.389,
+   "defl_Y_um_ss": 8.84,
+   "defl_Y_um_fixed": 2.21,
+   "defl_Z_um_ss": 3.52,
+   "twist_um": null,
+   "mass_kg": 12.5,
+   "note": "torsion also lost; real value between this and row 1"
+  },
+  {
+   "option": "Tube 152.4x76.2x9.5 (6x3x3/8), 152 face",
+   "EI_Y_MNm2": 0.244,
+   "EI_Z_MNm2": 0.77,
+   "defl_Y_um_ss": 5.61,
+   "defl_Y_um_fixed": 1.4,
+   "defl_Z_um_ss": 1.78,
+   "twist_um": 9.7,
+   "mass_kg": 9.6,
+   "note": "face takes 2 rails at 100"
+  },
+  {
+   "option": "Tube 120x120x5",
+   "EI_Y_MNm2": 0.35,
+   "EI_Z_MNm2": 0.35,
+   "defl_Y_um_ss": 3.91,
+   "defl_Y_um_fixed": 0.98,
+   "defl_Z_um_ss": 3.91,
+   "twist_um": 10.5,
+   "mass_kg": 5.5,
+   "note": "face 120: 2 rails at 100 fit edge to edge, no margin"
+  },
+  {
+   "option": "Tube 101.6 sq x 6.3 (4x4x1/4)",
+   "EI_Y_MNm2": 0.252,
+   "EI_Z_MNm2": 0.252,
+   "defl_Y_um_ss": 5.43,
+   "defl_Y_um_fixed": 1.36,
+   "defl_Z_um_ss": 5.43,
+   "twist_um": 14.6,
+   "mass_kg": 5.8,
+   "note": "face too small for 2 rails at 100"
+  },
+  {
+   "option": "2 x tube 6x3x3/8 bonded side by side",
+   "EI_Y_MNm2": 1.286,
+   "EI_Z_MNm2": 1.54,
+   "defl_Y_um_ss": 1.06,
+   "defl_Y_um_fixed": 0.27,
+   "defl_Z_um_ss": 0.89,
+   "twist_um": 2.9,
+   "mass_kg": 19.1,
+   "note": "both cut from one 2000 mm length; only if bonded and bolted"
+  },
+  {
+   "option": "Box 150x130x10 filled with EG (bonded)",
+   "EI_Y_MNm2": 1.26,
+   "EI_Z_MNm2": 1.637,
+   "defl_Y_um_ss": 1.09,
+   "defl_Y_um_fixed": 0.27,
+   "defl_Z_um_ss": 0.84,
+   "twist_um": null,
+   "mass_kg": 41.8,
+   "note": "fill adds stiffness only if it stays bonded; damping is the point"
+  },
+  {
+   "option": "Box 150x130x10 + EG strip 30 thick on the inside bottom",
+   "EI_Y_MNm2": 0.9,
+   "EI_Z_MNm2": 1.133,
+   "defl_Y_um_ss": 1.52,
+   "defl_Y_um_fixed": 0.38,
+   "defl_Z_um_ss": 1.21,
+   "twist_um": null,
+   "mass_kg": 19.3,
+   "note": "damping only; stiffness gain ignored"
+  }
+ ],
+ "epoxy": {
+  "fill_litres": 12.73,
+  "fill_kg_tub_mix": 29.3,
+  "epoxy_kg_tub_mix": [
+   3.2,
+   3.5
+  ],
+  "fill_kg_sand_mix": 25.5,
+  "epoxy_kg_sand_mix": 5.1,
+  "strip_epoxy_kg": 0.78
+ },
+ "bar_bow_um": {
+  "room swing 10 K": {
+   "Al bar, 600 long": 16.2,
+   "Al bar, 890 long": 35.7,
+   "steel bar, 600 long": -5.3,
+   "steel bar, 890 long": -11.7
+  },
+  "post-cure lock-in 30 K (50 -> 20 C)": {
+   "Al bar, 600 long": 48.7,
+   "Al bar, 890 long": 107.2,
+   "steel bar, 600 long": -15.9,
+   "steel bar, 890 long": -35.0
+  },
+  "EG shrinkage 0.3 mm/m (industrial sheet)": {
+   "Al bar, 600 long": 54.1,
+   "Al bar, 890 long": 119.1,
+   "steel bar, 600 long": 79.5,
+   "steel bar, 890 long": 174.9
+  }
+ },
+ "cte_per_K": {
+  "aluminium": 2.3e-05,
+  "steel": 1.2e-05,
+  "eg_industrial": [
+   1.2e-05,
+   1.6e-05
+  ]
+ },
+ "notes": "Bow sign ignored; shrinkage case: EG shrinks round the bar, so the stiffer bar bows more."
+}
