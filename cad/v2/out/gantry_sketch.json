@@ -1,0 +1,233 @@
+{
+ "S": {
+  "table_top": 25,
+  "nose_top": 205,
+  "nose_bot": 55,
+  "beam_zc": 270,
+  "beam_z": [
+   195.0,
+   345.0
+  ],
+  "saddle_z0": 70,
+  "saddle_x_sweep": 290.0,
+  "wall_in_x": 305.0,
+  "wall_w": 140.0,
+  "rail_x": 345.0,
+  "screw_x": 410.0,
+  "wall_out_x": 445.0,
+  "span": 690.0,
+  "floor_t": 60.0,
+  "wall_top": 125,
+  "car_top": 155.0,
+  "foot_t": 40.0,
+  "beam_len": 890.0,
+  "car_y_from_spindle": 140,
+  "moving_kg": 49.82479,
+  "core_cover_side": 40.0,
+  "core_cover_top": 20,
+  "core_cover_bottom": 90.0
+ },
+ "Y": {
+  "no_reach": {
+   "spindle_y": [
+    -125.0,
+    125.0
+   ],
+   "travel": 250.0,
+   "car_y": [
+    15.0,
+    265.0
+   ],
+   "rail_need": 487.5,
+   "rail_buy": 500,
+   "rail_y": [
+    -103.75,
+    396.25
+   ],
+   "screw_need": 472.0,
+   "screw_buy": 500,
+   "bf_y0": -60.0,
+   "bk_y1": 357.0,
+   "tub_y": [
+    -185.0,
+    411.25
+   ],
+   "tub_len": 596.25,
+   "motor_end_y": 596.25
+  },
+  "atc_reach_100": {
+   "spindle_y": [
+    -225.0,
+    125.0
+   ],
+   "travel": 350.0,
+   "car_y": [
+    -85.0,
+    265.0
+   ],
+   "rail_need": 587.5,
+   "rail_buy": 600,
+   "rail_y": [
+    -203.75,
+    396.25
+   ],
+   "screw_need": 572.0,
+   "screw_buy": 600,
+   "bf_y0": -160.0,
+   "bk_y1": 357.0,
+   "tub_y": [
+    -218.75,
+    411.25
+   ],
+   "tub_len": 630.0,
+   "motor_end_y": 596.25
+  }
+ },
+ "variants": [
+  {
+   "name": "A  baseline: floor 60, walls 140 x 100 above the table, no back wall, ATC reach",
+   "kg": 128.1,
+   "epoxy_11": 14.1,
+   "epoxy_12": 15.4
+  },
+  {
+   "name": "B  as A + back wall 100 thick",
+   "kg": 145.6,
+   "epoxy_11": 16.0,
+   "epoxy_12": 17.5
+  },
+  {
+   "name": "C  as A, floor 80",
+   "kg": 153.9,
+   "epoxy_11": 16.9,
+   "epoxy_12": 18.5
+  },
+  {
+   "name": "D  as A, walls only 50 above the table (gantry gets 50 mm legs)",
+   "kg": 107.8,
+   "epoxy_11": 11.9,
+   "epoxy_12": 12.9
+  },
+  {
+   "name": "E  as A + one \u00d860 PVC core per wall",
+   "kg": 119.9,
+   "epoxy_11": 13.2,
+   "epoxy_12": 14.4
+  },
+  {
+   "name": "F  as A without the ATC reach (tub shorter)",
+   "kg": 121.2,
+   "epoxy_11": 13.3,
+   "epoxy_12": 14.5
+  }
+ ],
+ "beam": {
+  "Iz_mm4": 13043333.333333334,
+  "Iy_mm4": 16423333.333333334,
+  "J_mm4": 21710769.230769232,
+  "EI_y_load_MNm2": 0.89999,
+  "EI_z_load_MNm2": 1.13321,
+  "span": 690.0,
+  "dY_simple_um": 1.5208918987988755,
+  "dY_fixed_um": 0.3802229746997189,
+  "dZ_simple_um": 1.2078851227927745,
+  "dZ_fixed_um": 0.3019712806981936,
+  "twist_arm": 245,
+  "twist_tool_um": 3.6686197916666665,
+  "beam_kg": 12.4956
+ },
+ "atc": {
+  "pcd": 178.25353626292278,
+  "outer_d": 248.25353626292278,
+  "pickup": [
+   150.0,
+   -225.0
+  ],
+  "centre": [
+   150.0,
+   -314.1267681314614
+  ],
+  "fork_z": 65
+ },
+ "x_rail": 600,
+ "x_screw": 700,
+ "foot_l": 267.5,
+ "moving": [
+  [
+   "spindle 2.2 kW ISO20 (ASSUMED 7 kg)",
+   7.0,
+   0
+  ],
+  [
+   "spindle clamp",
+   0.8,
+   40
+  ],
+  [
+   "Z plate 140x200x20",
+   1.51,
+   70
+  ],
+  [
+   "Z motor with brake + mount (ASSUMED)",
+   2.0,
+   35
+  ],
+  [
+   "Z screw 350 + nut + BK/BF",
+   1.55,
+   100
+  ],
+  [
+   "Z rails 2x350 + 4 blocks",
+   3.15,
+   95
+  ],
+  [
+   "Z risers",
+   0.71,
+   112
+  ],
+  [
+   "saddle 180x400x20",
+   3.89,
+   125
+  ],
+  [
+   "X blocks (4) + nut housing + spacer",
+   2.1,
+   155
+  ],
+  [
+   "X rails 2x600",
+   2.65,
+   166
+  ],
+  [
+   "X screw 700 + nut + BK/BF",
+   2.11,
+   160
+  ],
+  [
+   "X motor + plate + belt (ASSUMED)",
+   2.0,
+   240
+  ],
+  [
+   "beam box 150x130x10, 890 long",
+   12.5,
+   240.0
+  ],
+  [
+   "2 foot blocks 268x140x40 (pocketed)",
+   5.66,
+   140
+  ],
+  [
+   "4 Y blocks + 2 Y nut housings",
+   2.2,
+   140
+  ]
+ ],
+ "com_from_spindle": 138.43650319870073
+}
