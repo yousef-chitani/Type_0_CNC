@@ -1,0 +1,22 @@
+{
+ "beam_channel_kg": 14.1669,
+ "back_plate_kg": 3.6045,
+ "beam_total_kg": 17.7714,
+ "foot_kg_each": 3.2421599999999997,
+ "moving_mass_change_kg": 6.095719999999999,
+ "x_axis_y": -10.0,
+ "bk_base_y": 15.0,
+ "housing_clear": 10.0,
+ "flange_clear": 6.0,
+ "block_reach": 288.75,
+ "bk": [
+  290.0,
+  327.0
+ ],
+ "bf": [
+  -310.0,
+  -290.0
+ ],
+ "x_screw_need": 696.0,
+ "x_screw_buy": 700
+}
