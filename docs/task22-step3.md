@@ -8,7 +8,7 @@
 |---|---|---|---|---|
 | Y rails | 2 × 600 (one set) | 588 | yes, D-141 | yes |
 | Y screws | 2 × 600 | 572 | yes, D-141 | yes |
-| X rails | 2 × 600 (one set) | 400 work + 150 block pitch + block + 20 | **no: sketch** | yes |
+| X rails | 2 × 600 (one set) | **597.5** = 400 work + 100 block pitch (D-104) + 77.5 block + 20; only 2.5 spare. X travel stays 400: the ATC reach is now in Y (D-141, pickup at X +150) | **no: sketch** | yes |
 | X screw | 700 | 653 (400 + the same 253 end allowance as now) | **no: sketch** | yes |
 | Z rails, Z screw | 350, 350 | unchanged (D-136) | yes | yes |
 
@@ -77,7 +77,7 @@
 
 **Electrical**
 - Mesa 7i76EU: channel 3 becomes **Y2** (D-137); the Phase 2 wheel moves to channel 4 on TB3. No part change.
-- One more CL57T driver on the 48 V supply (E04, 480 W): in M09.
+- One more CL57T driver on the 48 V supply (E04, 480 W): in M09. D-36 sized E04 for 4 drivers (X, Y, Z, ATC). Phase 1 now has 4 (X, Y1, Y2, Z); the Phase 2 wheel makes 5 (question 11).
 - Question 8: a home sensor for Y2 (each Y motor homes on its own switch to square the gantry). E10 has 5 LJ12A3 now (4 homing + 1 ATC).
 - E14 cable chain: length still TBD; the gantry needs a Y chain along one wall.
 
@@ -85,7 +85,7 @@
 
 ## 4. Questions for the owner
 
-1. **X lengths:** X rails 2 × 600 and X screw 700, as in the sketch? Yes or no.
+1. **X lengths:** X rails 2 × 600 (need 597.5, 2.5 mm spare; 650 would give room for end bumpers) and X screw 700 (need 653)? Yes or no.
 2. **Missing LiMo prices:** please save the LiMo pages (or note the prices) for the **C5 set 700 mm** and the **HGH20CA set 600 mm**, and do a new checkout to SA2 with the basket above (DDP sea price). Curl is blocked.
 3. **Y motor mounts (2):**
    - (a) a plate bracket from the 10 mm 6082 plate (M12), motor coaxial behind the set's own C5 BK12 on the levelled seat (D-140); or
@@ -94,7 +94,8 @@
 4. **M09:** 3 sets from StepperOnline, price re-checked by you at order time (curl is blocked)? Yes or no.
 5. **F07 X rail bars:** drop them (the X rails bolt straight onto the machined beam face)? Yes or no.
 6. **F08, F09:** drop them with the portal joint, or keep for something else (lifting points, hold-downs)?
-7. **Back plate bonding:** Ampreg 30 from the kit, or a structural adhesive (unpriced)?
+7. **Back plate bonding:** Ampreg 30 from the kit is a laminating resin and runs out of a joint, so thicken it to a paste with the whiting (F06, already bought); the bolts carry the load. Or a structural adhesive (unpriced)? My pick: thickened Ampreg 30.
 8. **Y2 home sensor:** add a 6th LJ12A3 to E10? Yes or no.
 9. **Y drive stub:** the standard BK12 end (Ø10 × 15) goes straight into the coupling, so no Y stub drawing is needed (only X). Agree?
-10. **Edit `bom.csv`** with the agreed lines (unknown prices left blank), and re-run the generators? Yes or no.
+11. **48 V supply (E04, 480 W, D-36: 4 drivers):** keep it for Phase 1 (4 drivers) and re-check when the Phase 2 wheel driver (5th) is added? Yes or no.
+12. **Edit `bom.csv`** with the agreed lines (unknown prices left blank), and re-run the generators? Yes or no.
