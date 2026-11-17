@@ -4,6 +4,17 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 000000000. 17 Nov 2026: task 22 step 3 done
+
+- Owner took all picks: **D-150 … D-158** (X rails 2 × 600, X screw 700; Y motor brackets from the 6082 plate; 3 × M09; X rail bars out; F09 out; back plate bonded with Ampreg 30 thickened with whiting; 6th home switch for Y2; Y drive standard BK12 end; 48 V supply kept for Phase 1).
+- `bom.csv` edited (M01, M02, M05–M09, M12, M15, M16, F07–F10, F20, E04, E10, E14, X10; new G01–G04) and the 5 generators re-run (`PYTHONUTF8=1` needed on Windows). `gen_wave1_sheet.py` now shows blank prices as "to price".
+- **Phase 1 priced £3,528.98**, excluding M01, M02, M05 (LiMo, not priced) and G01–G04 (JLC). Wave 1 £1,567.51, wave 2 £568.29.
+- **Held, not dropped:** F08 (M12 rod) and F20 (40 × 20 bar): test brick C in `eg-mix-test-plan.md` uses them, and F08 was listed for lifting points. Owner to decide.
+- Flagged prices: M09, M15, E10 are unit price × quantity, shipping for the new quantity not re-checked.
+- Open: F07 (does 2 m of 40 × 10 cover 2 × 600 + plates + pads; is the 25 × 10 still needed), M12 cut list (2 Y brackets).
+
+**Exact next step:** the owner saves the LiMo pages (C5 set 700, HGH20CA set 600) and does a new checkout to SA2 (DDP sea), and decides F08/F20; then task 22 step 4 (STEP of G01–G03 for a JLC quote).
+
 ## 00000000. 17 Nov 2026: task 22 step 3 draft (waiting on the owner)
 
 - Draft: `docs/task22-step3.md` (lengths, revised LiMo basket in `limo-basket.txt`, `bom.csv` change list, 12 questions). Nothing decided; `bom.csv` unchanged.

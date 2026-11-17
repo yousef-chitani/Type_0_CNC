@@ -1,6 +1,6 @@
 # Task 22 step 3: lengths, LiMo basket, `bom.csv` change list (17 Nov 2026)
 
-**A draft for the owner. Nothing here is decided and `bom.csv` is unchanged.** Sources: `moving-gantry-sketch.md` (`cad/v2/out/gantry_sketch.json`), D-136 to D-149, `limo-basket.txt`, `price-check-task-16.md`.
+**Answered 17 Nov 2026: the owner took all picks (D-150 … D-158); `bom.csv` is updated.** F08 and F20 are held, not dropped: test brick C uses them (D-154). Sources: `moving-gantry-sketch.md` (`cad/v2/out/gantry_sketch.json`), D-136 to D-149, `limo-basket.txt`, `price-check-task-16.md`.
 
 ## 1. Lengths
 
@@ -97,5 +97,5 @@
 7. **Back plate bonding:** Ampreg 30 from the kit is a laminating resin and runs out of a joint, so thicken it to a paste with the whiting (F06, already bought); the bolts carry the load. Or a structural adhesive (unpriced)? My pick: thickened Ampreg 30.
 8. **Y2 home sensor:** add a 6th LJ12A3 to E10? Yes or no.
 9. **Y drive stub:** the standard BK12 end (Ø10 × 15) goes straight into the coupling, so no Y stub drawing is needed (only X). Agree?
-11. **48 V supply (E04, 480 W, D-36: 4 drivers):** keep it for Phase 1 (4 drivers) and re-check when the Phase 2 wheel driver (5th) is added? Yes or no.
-12. **Edit `bom.csv`** with the agreed lines (unknown prices left blank), and re-run the generators? Yes or no.
+10. **48 V supply (E04, 480 W, D-36: 4 drivers):** keep it for Phase 1 (4 drivers) and re-check when the Phase 2 wheel driver (5th) is added? Yes or no.
+11. **Edit `bom.csv`** with the agreed lines (unknown prices left blank), and re-run the generators? Yes or no.

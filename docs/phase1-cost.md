@@ -1,19 +1,20 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,908.22** (budget £4,200, D-127). Every line priced. No eBay.
+**Phase 1 priced total: £3,528.98** (budget £4,200, D-127). Not priced yet: M01, M02, M05, G01, G02, G03, G04. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £885.46 |
-| Motion | £1,104.79 |
+| Frame | £883.17 |
+| Motion | £726.30 |
+| Gantry | £0.00 |
 | Spindle | £477.09 |
-| Electronics | £818.49 |
+| Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £308.36 |
 | Fixings | £70.67 |
-| **Total** | **£3,908.22** |
+| **Total** | **£3,528.98** |
 
 ## Frame
 
@@ -26,7 +27,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
 | F07 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 lot | £54.90 |
 | F08 | M12 threaded rod 2 × 1 m + nuts | 1 lot | £29.08 |
-| F09 | Steel or PVC tube for M12 bolt sleeves | 2 m | £2.29 |
+| F09 | Steel or PVC tube for M12 bolt sleeves (dropped with the portal joint: D-154) | 2 m | £0.00 |
 | F10 | MDF sheets for moulds (floors + walls) | 1 sheet | £28.00 |
 | F11 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | £23.82 |
 | F12 | Release agents (Easy Composites) | 1 set | £14.90 |
@@ -47,23 +48,32 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| M01 | HGR20 rail set Y: 2 × 500 mm + 4 blocks | 2 pcs | £27.43 |
-| M02 | HGR20 rail set X: 2 × 800 mm + 4 blocks | 2 pcs | £33.62 |
+| M01 | HGR20 rail set Y: 2 × 600 mm + 4 blocks | 2 pcs | to price |
+| M02 | HGR20 rail set X: 2 × 600 mm + 4 blocks | 2 pcs | to price |
 | M03 | HGR20 rail set Z: 2 × 350 mm + 4 blocks | 2 pcs | £24.34 |
 | M04 | HGH20CA carriages (in the rail kits) | 12 pcs | £0.00 |
-| M05 | DFU1605 C5 ballscrew sets X 850 / Y 600 / Z 350 | 3 pcs | £356.44 |
-| M06 | BK12 + BF12 end supports, C5 (in the screw sets) | 3 sets | £0.00 |
-| M07 | Steel nut housings (in the screw sets) | 3 pcs | £0.00 |
-| M08 | Flexible coupling D25L35, 10 mm to 10 mm (Z only) | 1 pcs | £2.19 |
-| M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | £112.71 |
+| M05 | DFU1605 C5 ballscrew sets X 700 / Y 600 × 2 / Z 350 | 4 pcs | to price |
+| M06 | BK12 + BF12 end supports, C5 (in the screw sets) | 4 sets | £0.00 |
+| M07 | Steel nut housings (in the screw sets) | 4 pcs | £0.00 |
+| M08 | Flexible coupling D25L35, 10 mm to 10 mm (Z, Y1, Y2) | 3 pcs | £6.57 |
+| M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 3 sets | £164.05 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
-| M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore | 4 pcs | £15.68 |
-| M16 | HTD-5M timing belts 15 mm wide | 4 pcs | £14.27 |
+| M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore | 2 pcs | £7.84 |
+| M16 | HTD-5M timing belt 15 mm wide (X) | 1 pcs | £5.39 |
 | M17 | Ø10 flange bearing (X screw outboard support) | 1 pcs | £4.05 |
 | M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
 | M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | £186.26 |
 | M13 | Z motor mount (NEMA 24 to BK12) | 1 pcs | £13.03 |
+
+## Gantry
+
+| ID | Item | Qty | £ |
+|---|---|---|---|
+| G01 | Gantry beam: 6061 U channel 150 × 130 × 10, 890 long | 1 pcs | to price |
+| G02 | Beam back plate 6061, with fill ports | 1 pcs | to price |
+| G03 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed | 2 pcs | to price |
+| G04 | Back plate bolts | 1 lot | to price |
 
 ## Spindle
 
@@ -94,7 +104,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | E07 | Contactor with 24 V coil | 1 pcs | £26.29 |
 | E08 | E-stop buttons 2 NC (×5) | 1 set | £12.39 |
 | E09 | MCBs / main isolator / EMC filter for VFD | 1 set | £10.39 |
-| E10 | Inductive proximity switches 24 V | 5 pcs | £12.20 |
+| E10 | Inductive proximity switches 24 V | 6 pcs | £13.74 |
 | E12 | Electrical cabinet RS PRO 600 × 400 × 200 IP66 | 1 set | £109.04 |
 | E13 | DIN rail, terminals, end stops, ferrules + crimper, wire | 1 lot | £52.26 |
 | E14 | Cable chain and shielded motor cables | 1 lot | £15.79 |

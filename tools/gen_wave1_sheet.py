@@ -34,7 +34,7 @@ CHECKS = {
     "M09": "VAT basis unclear",
     "M10": "Was backorder from the China warehouse; VAT basis and shipping not shown",
     "M14": "No UK stock (DE warehouse); VAT basis unclear",
-    "M05": "X and Y stub drawings by email; LiMo 6a answers; steel housing size; code 10OFF",
+    "M05": "X stub drawing by email (Y, Z standard, D-157); 700 set price and a new checkout; LiMo 6a answers; steel housing size; code 10OFF",
     "M13": "Basket had HM10-60: must be HM12-60. Holes 49.5 mm: LiMo to drill to 50 (6a)",
     "M01": "Rail accuracy class (6a)",
 }
@@ -79,11 +79,13 @@ def main():
         "",
     ]
     total = 0.0
+    unpriced = 0
     order = [n for _, n in VENDORS] + ["Other"]
     for name in order:
         if name not in groups:
             continue
-        sub = sum(float(r["price_gbp"]) for r in groups[name])
+        sub = sum(float(r["price_gbp"] or 0) for r in groups[name])
+        unpriced += sum(1 for r in groups[name] if not r["price_gbp"].strip())
         total += sub
         out += [f"## {name}: £{sub:,.2f}", "",
                 "| ✓ | ID | Item | Qty | Price as listed (option) | £ | Seen | Link | Check |",
@@ -91,10 +93,10 @@ def main():
         for r in groups[name]:
             qty = f'{r["qty"]} {r["unit"]}'.strip()
             out.append("| ☐ | {} | {} | {} | {} | {} | {} | [page]({}) | {} |".format(
-                r["id"], cell(r["item"]), qty, cell(r["price_listed"]), r["price_gbp"],
+                r["id"], cell(r["item"]), qty, cell(r["price_listed"]), r["price_gbp"] or "to price",
                 r["date_checked"], r["link"], CHECKS.get(r["id"], "")))
         out.append("")
-    out += [f"**Wave 1 total: £{total:,.2f}** ({len(ids)} lines; "
+    out += [f"**Wave 1 total: £{total:,.2f}** ({len(ids)} lines, {unpriced} not priced; "
             f"phase1-schedule.md says £{sched_total:,.2f})", ""]
     OUT.write_text("\n".join(out), encoding="utf8")
     print(f"{OUT.name}: {len(ids)} lines, £{total:.2f} (schedule £{sched_total:.2f})")
