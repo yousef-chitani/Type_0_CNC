@@ -1,5 +1,20 @@
 *** ON HOLD (D-137, 17 Nov): moving gantry - Y needs 2 screws, lengths change. Do not order until task 22 gives the new list. ***
 
+REVISED BASKET C (17 Nov 2026, task 22 step 3, DRAFT - NOT AGREED). Details: docs/task22-step3.md
+Prices from your saved pages of 17 Nov (curl still blocked by LiMo). Rate 1 USD = GBP 0.75767 (16 Nov).
+
+ 1. DFU1605 Double-nut Ball Screw Set C5, Steel House & C5 BKBF12, 700mm, qty 1   PRICE NEEDED
+ 2. same, 600mm, qty 2  (Y1, Y2)                                                   $141.57 each
+ 3. same, 350mm, qty 1  (Z)                                                        $111.57
+ 4. Linear Guide Set HGH20CA, 600mm, qty 2  (X and Y)                              PRICE NEEDED
+ 5. same, HGH20CA, 350mm, qty 1  (Z)                                               $35.76
+ 6. HM12-60, C7, qty 1  (Z)                                                        $19.14
+ 7. D25L35 coupling, qty 3  (Z, Y1, Y2)                                            $3.21 each
+ (8. HM12-60, C7, qty 2 for Y - only if you choose it, question 3)                 $19.14 each
+    Discount code: 10OFF. Go to checkout to SA2, DON'T PAY; note DDP sea price and total.
+
+----- OLD BASKET (D-136), superseded by the lengths above -----
+
 LIMO BASKET (17 Nov 2026) - D-136: BASKET A (C5), ORDER IN WAVE 1, 4 JAN 2027
 
 limobearing.com, delivery address Swansea SA2, UK.
