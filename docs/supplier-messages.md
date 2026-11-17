@@ -109,6 +109,6 @@ Owner (16 Nov): screw lengths stay **X 850 / Y 600**, Z standard ends; **no draw
 
 **Sent 16 Nov 2026** (owner dropped question 4, the stub cost). Answer: (waiting)
 
-For you: C5 price done (17 Nov: C5 sets with supports $424.71; see `price-check-task-16.md`). Still: at checkout (don't pay) note the shipping to SA2 for sea and air and the dates. That replaces the shipping-weight question.
+For you: C5 price done (17 Nov: C5 sets with supports $424.71; see `price-check-task-16.md`). Checkout done 17 Nov: DDP sea $129, DDP air $269 (see `price-check-task-16.md`).
 
 For you: the all-in DDP price must beat **£464.41** (price check 16). Need the rail accuracy class and a clear yes on the HM12-60 fitting the 50 mm / Ø36 motor face (or drilled to fit). If it won't fit, task 14 makes the mount from the 10 mm plate.

@@ -1,8 +1,30 @@
-# Type 0 CNC: handover (2026-11-16)
+# Type 0 CNC: handover (2026-11-17)
 
-**Branch:** `claude/hopeful-sagan-28twty` on `yousef-chitani/Type_0_CNC` (holds everything from `claude/charming-cori-349jm7` plus the 16 Nov LiMo session). Everything below is committed and pushed. Earlier work: `claude/charming-cori-349jm7`, `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
+**Branch:** `claude/hopeful-sagan-28twty` on `yousef-chitani/Type_0_CNC` (holds everything from `claude/charming-cori-349jm7` plus the 16 and 17 Nov LiMo sessions). Everything below is committed and pushed. Earlier work: `claude/charming-cori-349jm7`, `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
+
+## 000. Session of 17 Nov 2026 (LiMo prices and checkout)
+
+**Done** (all in `price-check-task-16.md`, last three sections)
+- **C5 screw page:** screw + nut only, no supports (superseded).
+- **C5 set page:** DFU1605 + steel housing + **C5 BK12/BF12**, lengths in 50 mm steps: 850 $171.57, 600 $141.57, 350 $111.57 = **$424.71** (C7 kits 900/600/400: $152.19). Light preload P2 by default.
+- `docs/limo-basket.txt`: basket list for the owner (A = C5, B = C7).
+- **Checkout to SA2:** DDP sea $129 (30–45 workdays, max 950 mm), DAP air $239 (tax extra), DDP air $269 (duty included). The owner's saved basket had **2 × 600 mm** and an **HM10-60** (should be 1 × 600 and HM12-60) and no code; corrected in the figures.
+- **Whole LiMo order, DDP sea, corrected:**
+  - **C5 £487.30** ($644.25: goods after `10OFF` + $129);
+  - **C7 £313.13** ($413.98: after `5OFF` + $129);
+  - **against £464.41 now** (several sellers).
+  - C5 is £22.89 more than now; C7 is £151.28 less.
+
+**Left**
+1. **Owner decides C5 or C7 (D-136).** Then update `bom.csv` lines M01–M03, M05–M08 and M13 to LiMo. Ask about one total line or one line per item. Re-run the 5 BOM scripts, update the wave 2 total in `phase1-schedule.md`, and update `limo-basket.txt`.
+2. **Before ordering,** fix the basket: 1 × 600 mm, **HM12-60** (not HM10-60), the discount code, and the DDP sea option. Sea takes 30–45 workdays, so order by mid-December for wave 2 (15 Feb). That is earlier than the D-103 wave plan: ask the owner.
+3. The steel nut housing in the C5 set: size and bolt pattern not known (the CAD uses DSG16H). Ask LiMo or check their CAD drawing.
+4. LiMo's answer to 6a (rail class, HM12-60 at 50 mm, coupling fit, VAT in DDP): record it under 6a and in `open-questions.md`.
+5. After that and the owner's new CAD: X and Y screw end drawings.
+
+**Exact next step:** ask the owner C5 or C7 (Q&A tool), record D-136, then do item 1.
 
 ## 00. Session of 16 Nov 2026 (LiMo reply)
 
@@ -18,7 +40,7 @@
 2. LiMo's answer to 6a: record it under 6a and in `open-questions.md`.
 3. After that and the new CAD: make the X and Y screw drawings (still ask the owner: exact lengths or 850 / 600).
 
-**Exact next step:** wait for the checkout shipping or LiMo's answer to 6a (VAT in DDP?); record it, compare the all-in total with £464.41 (`price-check-task-16.md`), ask the owner before changing `bom.csv`.
+**Exact next step:** superseded by section 000.
 
 ## 0. Where the session of 15 Nov (late evening) stopped
 

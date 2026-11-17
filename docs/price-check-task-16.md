@@ -184,3 +184,33 @@ The set's housing is steel, and its size isn't on the page. The CAD uses the alu
 | air 15–20 kg $229 | £675.53 | £562.94 |
 
 With the HM12-60 in C5 ($24.86), add about £4. **Against:** £464.41 now (several sellers, C7 grade from AliExpress) and LiMo C7 by sea £348.53 (£290.44 if VAT is included). So **C5 costs about £209 more than LiMo C7** with VAT added (£174 if VAT is included). With VAT added, it's **£93 more than now**; if VAT is included, it's about the same as now. Phase 1 headroom: £284.42. Still missing: checkout shipping to SA2, and LiMo's answer on VAT (6a). `bom.csv` unchanged.
+
+### LiMo checkout (owner's saved checkout page, 17 Nov 2026, basket A = C5)
+
+**Shipping offered to SA2:**
+- **DDP sea, 30–45 workdays, $129.00** (max length 950 mm; our longest is 850);
+- DAP air, 7–14 workdays, $239.00, tax not included;
+- DDP air, 8–15 workdays, $269.00, duty included.
+
+**The saved basket had two mistakes:**
+- **600 mm set × 2** ($283.14); it should be × 1;
+- **HM10-60, C7** ($18.86); it should be the **HM12-60, C7** ($19.14), for BK12 / DFU1605.
+
+No discount code was applied either. As saved: $713.79 + $129 = $842.79.
+
+**Corrected** (1 × 600, HM12-60, 10 % code `10OFF` on goods; assumes the code doesn't apply to shipping), at 1 USD = £0.756391 (15 Nov 2026):
+
+| basket | goods after code | + DDP sea $129 | + DDP air $269 |
+|---|---|---|---|
+| **A, C5 sets** | $515.25 | **$644.25 = £487.30** | $784.25 = £593.20 |
+| B, C7 kits (not checked out; code `5OFF`) | $284.98 | **$413.98 = £313.13** | $553.98 = £419.03 |
+
+DDP means the duty is paid by the carrier; the page doesn't say in so many words that UK VAT is included (LiMo's 6a answer will confirm).
+
+**Against £464.41 now:**
+- **C5 by DDP sea: £22.89 more**, for C5 ground screws with C5 supports and light preload. Phase 1 would go from £3,915.58 to about £3,938 (headroom left about £262).
+- **C7 by DDP sea: £151.28 less.**
+- Sea takes 30–45 workdays, so order by mid-December for the wave 2 date (15 Feb).
+- Pulleys, belts and the KFL000 (M15–M17) still come from elsewhere.
+
+`bom.csv` unchanged; the owner decides C5 or C7 (D-136).
