@@ -1,0 +1,35 @@
+{
+ "G01_beam": {
+  "qty": 1,
+  "solids": 1,
+  "size_mm": [
+   890.0,
+   120.0,
+   150.0
+  ],
+  "mass_kg": 13.6,
+  "file": "cad/v2/out/jlc/G01_beam.step"
+ },
+ "G02_back_plate": {
+  "qty": 1,
+  "solids": 1,
+  "size_mm": [
+   890.0,
+   10.0,
+   150.0
+  ],
+  "mass_kg": 3.55,
+  "file": "cad/v2/out/jlc/G02_back_plate.step"
+ },
+ "G03_foot_block": {
+  "qty": 2,
+  "solids": 1,
+  "size_mm": [
+   140.0,
+   268.0,
+   40.0
+  ],
+  "mass_kg": 3.48,
+  "file": "cad/v2/out/jlc/G03_foot_block.step"
+ }
+}

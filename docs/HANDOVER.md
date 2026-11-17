@@ -4,6 +4,13 @@
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
+## 00000000000000000. 17 Nov 2026: basic JLC STEP for pricing
+
+- Owner asked for a very basic model to get the JLC price now. `cad/v2/gantry_parts.py` → `cad/v2/out/jlc/G01_beam.step` (13.6 kg), `G02_back_plate.step` (3.55 kg), `G03_foot_block.step` (3.48 kg, qty 2). Each re-imports as one solid at the right size.
+- Built on my step-4 picks; the 7 questions in `task22-step4.md` and the beam choice (`beam-extrusion-check.md` q1) are still open. Left out: datum shoulder, BK/BF pads, Y nut step, counterbores.
+
+**Exact next step:** the owner uploads the 3 STEPs to JLCCNC (6061, standard finish, G03 × 2) and reports the price; then record it on G01–G03 in `bom.csv` (run the 5 generator scripts) and finish the model after the 7 answers.
+
 ## 0000000000000000. 17 Nov 2026: Vallder beam check measured
 
 - Owner sent Vallder's DXF and STEP files. Sections in `cad/vendor/vallder_*.dxf`; `cad/v2/vallder_profiles.py` computes them with the `beam_options.py` load model.

@@ -46,3 +46,15 @@ Script: `PYTHONUTF8=1 python cad/v2/gantry_parts_sketch.py` (numbers in `cad/v2/
 
 1. `cad/v2/gantry_parts.py`: G01, G02, G03 as STEP (one solid each, 6061), checked by re-import (solid, size, mass), plus the thread drawing.
 2. **The owner uploads them to JLCCNC** (browser; not curl): 6061, G01 × 1, G02 × 1, G03 × 2, standard finish. G01–G04 in `bom.csv` stay unpriced until then.
+
+## Basic STEP for the price (17 Nov 2026, owner: "very basic cad model for the JLC to price now")
+
+`PYTHONUTF8=1 python cad/v2/gantry_parts.py` → `cad/v2/out/jlc/` (re-import check in `gantry_parts.json`). Uses my picks above; **the 7 questions are still open**, so the final model may differ.
+
+| File | Qty | Size (mm) | Mass | Features |
+|---|---|---|---|---|
+| `G01_beam.step` | 1 | 890 × 120 × 150 | 13.6 kg | U channel open at the back, 30 front wall, 80 × 20 screw channel, 40 solid ends, 20 × M5 rail holes (Ø4.2 × 14), 8 × Ø9 beam-to-foot, 24 × M4 (Ø3.3) for the plate |
+| `G02_back_plate.step` | 1 | 890 × 10 × 150 | 3.55 kg | 3 × Ø25 fill ports, 24 × Ø4.5 |
+| `G03_foot_block.step` | 2 | 140 × 268 × 40 | 3.48 kg | 2 pockets 40 × 100 × 25, 8 × Ø5.5 (Y blocks), 4 × M8 (Ø6.8 × 20) |
+
+Not in it yet: rail datum shoulder, BK/BF pads and holes, the 15 mm Y nut step under the feet, port cover holes, counterbores. **Owner:** upload the 3 files to JLCCNC, 6061, standard finish (G03 qty 2), and send me the price.
