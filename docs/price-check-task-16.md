@@ -161,3 +161,26 @@ With the HM12-60 in C5 ($24.86), add about £4.70. **Against:** £464.41 now (se
 **The end drawing on the page** is the same standard machining as task 13's notes: BK12 end Ø10 × 15, M12×1 × 14, Ø12 to 39 from the thread start (so Ø12 × 25); BF12 end Ø10 × 11 with a Ø9.6 circlip groove 1.15 wide at 9.15. Nothing changes there.
 
 **Still missing:** BK12/BF12 support price (C5 or C7 grade) at LiMo, and the checkout shipping to SA2 for sea and air. `bom.csv` unchanged.
+
+### LiMo DFU1605 **C5 set** with C5 BK12/BF12 (owner's second saved page, 17 Nov 2026)
+
+**This replaces the C5 figures above** (they were for the screw alone). Page: "DFU1605 2005 2505 2510 Double-nut Ball Screw Set C5 Gound". The set is **DFU1605 + steel nut housing + C5 BK12/BF12 supports**. Same spec as the C5 screw page: 52100 steel, C5 ground, light preload P2 by default, standard BK12/BF12 end machining unless a note or drawing says otherwise. Lengths go in **50 mm steps**, so 850 and 350 are standard lengths and no cutting remark is needed.
+
+| ID | option | price (USD) |
+|---|---|---|
+| M05 X | DFU1605 & Steel House & C5 BKBF12, **850 mm** | $171.57 |
+| M06 Y | same, **600 mm** | $141.57 |
+| M07 Z | same, **350 mm** | $111.57 |
+| | **3 sets** | **$424.71 = £385.50 inc 20 % VAT** (C7 kits: $152.19 = £138.14) |
+
+The set's housing is steel; the C7 kit's housing was the DSG16H shape, so check that the steel house's bolt pattern fits the saddle and table before ordering. The Z set's BK12 isn't needed if the HM12-60 is used, because the HM12-60 has the BK12 built in.
+
+**Whole LiMo order with C5 sets** (sets $424.71, rails $125.44, HM12-60 C7 $19.14, coupling $3.21 = $572.50; 10 % code `10OFF` → $515.25), at 1 USD = £0.756391 (15 Nov 2026):
+
+| shipping (page table) | 20 % VAT added | if the DDP price already includes VAT |
+|---|---|---|
+| sea 10–22 kg $99 | **£557.54** | £464.61 |
+| air 10–15 kg $169 | £621.07 | £517.56 |
+| air 15–20 kg $229 | £675.53 | £562.94 |
+
+With the HM12-60 in C5 ($24.86), add about £4. **Against:** £464.41 now (several sellers, C7 grade from AliExpress) and LiMo C7 by sea £348.53 (£290.44 if VAT is included). So **C5 costs about £209 more than LiMo C7** with VAT added (£174 if VAT is included). With VAT added, it's **£93 more than now**; if VAT is included, it's about the same as now. Phase 1 headroom: £284.42. Still missing: checkout shipping to SA2, and LiMo's answer on VAT (6a). `bom.csv` unchanged.
