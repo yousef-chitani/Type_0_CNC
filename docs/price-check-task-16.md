@@ -131,3 +131,33 @@ The rails make it heavy, and no page gives the weight, so the shipping band is n
 **Ask LiMo before ordering:** shipping weight and the UK DDP price (sea and air); rail accuracy class (C / H) and whether rails are matched pairs; Z0 instead of ZA is not needed (ZA is fine); HM12-60 motor face (50 mm square, Ø36 pilot?) and coupling fit inside it; X stub extra cost; P2 preload on the screws. `bom.csv` unchanged.
 
 **HM12-60 hole spacing (owner, 15 Nov 2026): 49.5 mm.** The motor (24HS34, drawing A4717) has 50 mm, and the project limit is 50 ± 0.2 mm (`supplier-messages.md` section 4), so **as listed it does not fit**: each hole is about 0.35 mm off on the diagonal. Options: ask LiMo to machine the 4 holes on a 50 mm square (they take custom machining by remark), or open the mount's holes about 1 mm larger and let the pilot do the centring (only if the holes are clearance, not tapped), or make the mount from the 10 mm plate (task 14). Pilot bore still to confirm (must be Ø36 or larger).
+
+### LiMo DFU1605 **C5 ground** (owner's saved page, 17 Nov 2026)
+
+Page: "DFU1605 2005 2505 2510 Double-nut Ball Screw C5 Gound" (`limobearing.com/dfu-double-ball-screw-nut`), prices from its variant data (USD, all available). Spec: 52100 steel, **C5 ground**, **light preload P2 by default** (P1, P3 on request), overall length, custom 10–4,000 mm by remark, standard end machining for BK12 + BF12 unless a note or drawing says otherwise. The page also says LiMo ships **DDP** (duties and taxes paid upfront); below, 20 % VAT is still added as before, so the C5 and C7 figures compare like for like.
+
+**The C5 price is for the screw and nut only.** The C7 price ($152.19) was a kit with the BK12/BF12 supports and the DSG16H nut housing. This page lists no kit and no support price.
+
+| ID | option | C5 (screw + nut) | C7 kit (screw + supports + housing) |
+|---|---|---|---|
+| M05 X | 900 mm (cut to 850) | $155.71 | $54.31 |
+| M06 Y | 600 mm | $119.71 | $51.74 |
+| M07 Z | 400 mm (cut to 350) | $95.71 | $46.14 |
+| | 3 nut housings DSG1605 ($7.38 each, separate page) | $22.14 | included |
+| | **total** | **$393.27 = £356.96 inc VAT, plus the BK12/BF12 supports (price not known)** | **$152.19 = £138.14 inc VAT** |
+
+So C5 costs about **£219 more than C7** (inc VAT), before the supports.
+
+**Whole LiMo order with C5** (C5 screws + housings $393.27, rails $125.44, HM12-60 C7 $19.14, coupling $3.21 = $541.06). That is over $500, so the 10 % code `10OFF` applies: $486.95. Goods: **£441.99 inc VAT, without the supports.** At 1 USD = £0.756391, with 20 % VAT on goods and shipping:
+
+| shipping (page table) | all-in £ |
+|---|---|
+| sea 10–22 kg $99 | **£531.85** + supports |
+| air 10–15 kg $169 | £595.39 + supports |
+| air 15–20 kg $229 | £649.85 + supports |
+
+With the HM12-60 in C5 ($24.86), add about £4.70. **Against:** £464.41 now (several sellers) and £348.53 for LiMo with C7 by sea. So C5 by sea costs about **£67 more than now** and **£183 more than LiMo C7**, plus the supports. Phase 1 has £284 headroom (£4,200 − £3,915.58).
+
+**The end drawing on the page** is the same standard machining as task 13's notes: BK12 end Ø10 × 15, M12×1 × 14, Ø12 to 39 from the thread start (so Ø12 × 25); BF12 end Ø10 × 11 with a Ø9.6 circlip groove 1.15 wide at 9.15. Nothing changes there.
+
+**Still missing:** BK12/BF12 support price (C5 or C7 grade) at LiMo, and the checkout shipping to SA2 for sea and air. `bom.csv` unchanged.
