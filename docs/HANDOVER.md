@@ -17,14 +17,17 @@
   - **against £464.41 now** (several sellers).
   - C5 is £22.89 more than now; C7 is £151.28 less.
 
+- **Updated checkout** (owner fixed 1 × 600): **DDP sea $89**, DDP air $209, DAP air $239. Still HM10-60 and no code in it. Corrected: $515.25 + $89 = **£457.05** (without the code: £500.35).
+- **D-136 (owner): C5, LiMo, ordered in wave 1 (4 Jan 2027).** `bom.csv` M01–M08 and M13 moved to LiMo, one line per item (all the shipping is on M05). The 5 scripts were re-run. Wave 1 is now £1,927.74 and wave 2 £587.30. **Phase 1: £3,908.22** (was £3,915.58). The wave 1 order sheet has a LiMo section.
+
 **Left**
-1. **Owner decides C5 or C7 (D-136).** Then update `bom.csv` lines M01–M03, M05–M08 and M13 to LiMo. Ask about one total line or one line per item. Re-run the 5 BOM scripts, update the wave 2 total in `phase1-schedule.md`, and update `limo-basket.txt`.
-2. **Before ordering,** fix the basket: 1 × 600 mm, **HM12-60** (not HM10-60), the discount code, and the DDP sea option. Sea takes 30–45 workdays, so order by mid-December for wave 2 (15 Feb). That is earlier than the D-103 wave plan: ask the owner.
+1. **Before 4 Jan:** in the basket, swap **HM10-60 for HM12-60** and apply the code `10OFF`; choose DDP sea. X and Y stub drawings to email with the order number (needs the owner's new CAD, task 09).
+2. Is the 10 % code accepted? If not, the order is £500.35 and `bom.csv` must go up by £43.30.
 3. The steel nut housing in the C5 set: size and bolt pattern not known (the CAD uses DSG16H). Ask LiMo or check their CAD drawing.
 4. LiMo's answer to 6a (rail class, HM12-60 at 50 mm, coupling fit, VAT in DDP): record it under 6a and in `open-questions.md`.
 5. After that and the owner's new CAD: X and Y screw end drawings.
 
-**Exact next step:** ask the owner C5 or C7 (Q&A tool), record D-136, then do item 1.
+**Exact next step:** wait for LiMo's 6a answer and the owner's new CAD; then draw the X and Y screw ends (ask the owner: exact lengths or 850 / 600) so they are ready for the 4 Jan order.
 
 ## 00. Session of 16 Nov 2026 (LiMo reply)
 
@@ -111,7 +114,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 ## 3. Money and phases
 | Phase | Scope | Priced | Budget |
 |---|---|---|---|
-| 1 | Working mill, manual ER20 tool changes | **£3,915.58**, every line priced (price checks 12–15 applied, D-126). £282 under the budget; not yet in it: delivery for the Ampreg kit and the GCL quartz. M13 (Z motor mount) is provisional | £4,200 (D-127) |
+| 1 | Working mill, manual ER20 tool changes | **£3,908.22**, every line priced (price checks 12–15 applied, D-126; LiMo C5, D-136). £282 under the budget; not yet in it: delivery for the Ampreg kit and the GCL quartz. M13 (Z motor mount) is provisional | £4,200 (D-127) |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel | about £1,400 (not re-checked) | not set |
 
 - Source of truth: **`docs/bom.csv`**. After editing it, regenerate everything: `python tools/gen_bom_md.py`, `python tools/gen_phase1_xlsx.py`, `python tools/gen_phase1_cost.py`, `python tools/build_open_links.py`, `python tools/gen_wave1_sheet.py`.
@@ -133,7 +136,7 @@ The detailed design now lives in **`cad/v2/assembly.py`** (parametric CadQuery, 
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-135**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-136**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 

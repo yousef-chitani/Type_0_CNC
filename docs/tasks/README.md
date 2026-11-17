@@ -4,10 +4,10 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/hopeful-sagan-28twty` (continues `claude/charming-cori-349jm7`). Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-135).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-136).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). After editing it run: `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
-- **Castings: keep them simple.** Do not add cast-in features. Phase 1 budget £4,200; priced total £3,915.58.
+- **Castings: keep them simple.** Do not add cast-in features. Phase 1 budget £4,200; priced total £3,908.22 (D-136).
 - Write plainly and briefly. Do not merge branch `claude/awesome-ramanujan-by9kds` (old design).
 
 ## State in five lines
@@ -33,7 +33,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [10](10-mould-drawing.md) | Mould drawing: portal (cast first) | main session | 09 | open |
 | [11](11-mould-drawing.md) | Mould drawing: base | main session | 10 | open |
 | [12](12-printed-mould-helpers.md) | Printed mould helpers | Opus 5.5 is fine | 10 | open |
-| [13](13-supplier-messages.md) | Supplier messages | owner sends; Opus 5.5 can update the drafts | none | 6 (LiMo) answered 16 Nov, reply 6a sent 16 Nov; C5 price recorded 17 Nov; checkout recorded 17 Nov; owner: C5 (£487.30) or C7 (£313.13); 5 to send |
+| [13](13-supplier-messages.md) | Supplier messages | owner sends; Opus 5.5 can update the drafts | none | 6 (LiMo) answered 16 Nov, reply 6a sent 16 Nov; C5 price recorded 17 Nov; **D-136: C5 from LiMo, wave 1, £457.05**; X/Y stub drawings and HM12-60 swap before 4 Jan; 5 to send |
 | [14](14-z-motor-mount.md) | Z motor mount | main session | 13 (seller's drawing) | open |
 | [15](15-wave-1-order-sheet.md) | Wave 1 order sheet | Opus 5.5 is fine | none | done: `docs/wave1-order-sheet.md` |
 | [16](16-wave-1-price-re-check.md) | Wave 1 price re-check | Opus 5.5 writes and applies; owner runs it | 15 | open |

@@ -1,6 +1,6 @@
 # Open questions (updated 2026-11-15, in priority order)
 
-Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,915.58, every line priced (D-126); the Ampreg and GCL delivery costs, the square and shims (X10, X11) and the M5 × 20 bolts are not in it yet.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell). The owner's short list is `owner-todo.txt`.
+Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,908.22 (D-136), every line priced (D-126); the Ampreg and GCL delivery costs, the square and shims (X10, X11) and the M5 × 20 bolts are not in it yet.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell). The owner's short list is `owner-todo.txt`.
 
 ## Before wave 1 (4 Jan 2027)
 
@@ -31,7 +31,7 @@ Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,915.58, ev
     Who: owner, measure the feet.
 8. **Reservoir:** 20 L bucket, no radiator (D-135). Measure it when it arrives (bench drawing assumes 300 × 300 × 370 high) and check the kit pump sits in it.
     Who: owner.
-9. **Ballscrew "Guide Length"** (before wave 2, D-103): overall or thread length? The assembly needs **overall X 823, Y 582, Z ≈ 350** (D-111): buy X 850 / Y 600 / Z 350; still confirm the end machining. A wrong answer means unusable screws. **LiMo (16 Nov):** length is overall; custom end machining from our drawings; they advise C5 ground with light preload. Waiting on reply 6a (rail class, HM12-60 at 50 mm, coupling fit, stub cost, VAT). **C5 price (17 Nov):** C5 sets with C5 BK12/BF12, 850 / 600 / 350 mm = $424.71 (C7 kits $152.19); whole LiMo order with C5 by sea £557.54 (£464.61 if DDP includes VAT), against £464.41 now (`price-check-task-16.md`). **Checkout (17 Nov):** DDP sea $129 to SA2; whole order C5 £487.30, C7 £313.13 (corrected basket). Owner decides C5 or C7. Drawings after that.
+9. **Ballscrew "Guide Length"** (before wave 2, D-103): overall or thread length? The assembly needs **overall X 823, Y 582, Z ≈ 350** (D-111): buy X 850 / Y 600 / Z 350; still confirm the end machining. A wrong answer means unusable screws. **LiMo (16 Nov):** length is overall; custom end machining from our drawings; they advise C5 ground with light preload. Waiting on reply 6a (rail class, HM12-60 at 50 mm, coupling fit, stub cost, VAT). **C5 price (17 Nov):** C5 sets with C5 BK12/BF12, 850 / 600 / 350 mm = $424.71 (C7 kits $152.19); whole LiMo order with C5 by sea £557.54 (£464.61 if DDP includes VAT), against £464.41 now (`price-check-task-16.md`). **Checkout (17 Nov, updated):** DDP sea $89; C5 order £457.05 with 10OFF. **D-136: C5 from LiMo, ordered in wave 1.** X/Y stub drawings needed by 4 Jan. Drawings after that.
    Who: owner, message to the seller. Draft in `supplier-messages.md` (section 1).
 
 ## Before wave 3 and the moulds (1 Mar 2027)

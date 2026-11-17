@@ -214,3 +214,5 @@ DDP means the duty is paid by the carrier; the page doesn't say in so many words
 - Pulleys, belts and the KFL000 (M15–M17) still come from elsewhere.
 
 `bom.csv` unchanged; the owner decides C5 or C7 (D-136).
+
+**Updated checkout (17 Nov 2026):** 1 × 600 now. Shipping: **DDP sea $89**, DDP air $209, DAP air $239 (tax extra). Still HM10-60 ($18.86) and no code: as saved $572.22 + $89 = $661.22. Corrected (HM12-60, `10OFF`): $515.25 + $89 = **$604.25 = £457.05**, £7.36 under the £464.41 it replaces. **D-136: C5 from LiMo, ordered in wave 1.** `bom.csv` updated.
