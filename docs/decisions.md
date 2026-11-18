@@ -172,3 +172,4 @@
 | D-168 | **X motor folded over the top of the X screw** (supersedes D-167): axis 137.5 above the screw, body inboard, 375 belt. **Drag chain on the back of the gantry**, so the rear face stays clear. X screw stays 700; M15, M16 and M17 stay in the parts list | Owner, 18 Nov 2026: "switch to fold over top - a drag chain will go on the back of the gantry" |
 | D-169 | **Foot step starts at X 378; X block pitch 90** (was 380 and 100) | Owner, 18 Nov 2026, accepted both proposed fixes |
 | D-170 | **Ball nut flanges are 40 across the flats, flats top and bottom**: no 12 × 30 × 5 relief slots. DFU01605-4: A 48, H 40, B 10, L 100 | Owner, 18 Nov 2026, with the catalogue sheet |
+| D-171 | **Ball nut housings sit 20 off the carriage centre, towards the flange**, because the flange bolts to the housing end face. The nut stays within 50 of the carriage centre, so the screw lengths do not change | Owner, 18 Nov 2026: "sure" |

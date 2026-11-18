@@ -1,6 +1,6 @@
 # Steel gantry layout sketch (18 Nov 2026)
 
-**Status: no clashes. Waiting for the owner to agree the layout.** Decisions: D-164 to D-166, D-168 to D-170. Drawing: `cad/v2/out/steel_gantry_sketch.png`. Numbers: `cad/v2/out/steel_gantry_sketch.json`. Script: `cad/v2/steel_gantry_sketch.py`.
+**Status: no clashes. Waiting for the owner to agree the layout.** Decisions: D-164 to D-166, D-168 to D-171. Drawing: `cad/v2/out/steel_gantry_sketch.png`. Numbers: `cad/v2/out/steel_gantry_sketch.json`. Script: `cad/v2/steel_gantry_sketch.py`.
 
 ## Result
 
@@ -19,9 +19,10 @@ The check covers the whole X, Y and Z travel and finds **no clashes**. Every par
 
 ## For the owner to agree
 
-1. **Rear M10 row at X 395 and X 430**, on both feet. The motor bracket covers the old hole at X 345. Front row stays at X 345 and X 420. Use **M10 × 25** in the 25 thick foot step (X 395, 420, 430).
-2. **1 mm relief over each nut flange**, in the top arm and both foot steps. The flats are exactly level with the housing face, so without it the flange touches.
-3. **Nut housings sit 20 off centre**, towards the flange, because the flange bolts to the housing's end face. This keeps the nut inside its travel.
+1. **Do the M10 bolts need holes in the top wall?** Owner asked why, 18 Nov. Proposal: **no top holes.** All 4 bolts per foot are within 100 of the open tube end, and the inside of the tube is 134 square, so they can be fitted and tightened from the end. The bolts then go through the bottom wall only, and the rear row can go back to X 345 and X 420. Use **M10 × 25** in the 25 thick foot step.
+2. **1 mm relief over each nut flange**, in the top arm and both foot steps. The flats are nominally level with the housing face. If a flange stands proud, the housing cannot seat flat and the nut is forced out of line. Owner asked why, 18 Nov: not decided.
+
+**Agreed:** nut housings 20 off centre, towards the flange (D-171).
 
 ## Checked and fine
 
