@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000. 18 Nov 2026: beam 120 × 120 × 8, L bracket seated
+
+**Done:** owner chose SHS 120 × 120 × 8 (D-177, amends D-176). In the open Fusion model `XGantryWidth` and `XGantryHeight` are 120, `XGantryOffset` is −35, and the bracket joint `d4192` now subtracts the offset. The L bracket has its full 50 seat and its 8 bolt holes line up. `docs/bom.csv` G01 and `docs/printnc-assessment.md` are updated. The earlier entry's offsets of +25 and +50 had the wrong sign: negative moves the beam to the rear.
+
+**Left:** the rear beam bolts into the Y roller are 3 from the roller end and break out (Thread1 fails). The Fusion document is **unsaved** with **8 failing features**. The full travel has not been run. Availability and price of 120 × 120 × 8 and the real corner radius are not confirmed. LiMo prices for the 550 rail and 650 screws are still not confirmed.
+
+**Exact next step:** the owner chooses how the rear beam bolts fix to the Y roller (`docs/printnc-assessment.md`, seat section), then saves the Fusion document under a new name.
+
 ## 00000000000000000000000000000. 18 Nov 2026: Y roller brace has no seat
 
 **Done:** measured the L bracket `YRollerBrace` in the open Fusion model, read-only. It needs at least 50 of roller top in front of the beam. A centred 150 wide beam leaves 0. The current 75 wide beam at `XGantryOffset` 0 leaves 37.5, so the front brace bolts sit 0.5 past the roller end. The table is in `docs/printnc-assessment.md`. No parameter was changed and no decision was made.
