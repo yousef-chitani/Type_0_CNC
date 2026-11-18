@@ -152,7 +152,7 @@ Fitted on X, Y and Y2 in `Type_0_v3`. Timeline 1205, 1 error, 5 warnings, the sa
 
 - **Nuts:** `dfu1605_nut.step`, flange on the old SFU1610 seat, bolt holes in line, held to the hidden SFU1610 nut by an as-built joint. The nut body runs 100 into the roller. The vendor's 130 screw stub is hidden.
 - **Motors:** `24hs40_motor.step`, flange on the back face of the `Nema24 Plate`, held by an as-built joint. Measured from the STEP: body 125 behind the flange, shaft Ø10 × 20, pilot Ø38.1, holes on a 50 square. The plate has the same 50 square.
-- **Motor identity not confirmed:** the STEP's own product name is `24HE40-5004D-E1000`, while the BOM part is 24HS40-5004D-E1000. No datasheet for this motor is in `cad/vendor/`, so the 125 length comes from the STEP only. The overhang has 51 to spare against D-142.
+- **Motor length confirmed from the datasheet (`cad/vendor/24hs40_motor.pdf`, 18 Nov):** the 24HS40-5004D-E1000 body is 122 ± 1 behind the flange and the shaft is Ø10 × 21 ± 1. The STEP (product name `24HE40-5004D-E1000`) shows 125 and 20. The STEP stays in the model, so the real motor rear is about 3 closer than modelled and the real shaft goes about 1 further into the coupling.
 - **Couplings:** `D25L35 Coupling (stand-in)` is a plain Ø25 × 35 sleeve with a Ø10 bore, because no vendor CAD exists.
 - **Hidden, not deleted:** SFU1610 nuts, their M6 90° grease fittings, NEMA 23 motors, D30L40 8-10 couplings, and the M4 × 16 motor bolts.
 
@@ -188,13 +188,25 @@ In `Type_0_v3` on X, Y and Y2. Timeline 1230, 1 error, 5 warnings, the same fail
 
 **Still to settle:**
 
-1. **Motor plate bolts (D-188).** M6 x 16, 9 in all, because an M6 x 20 would bottom out in the new 12 deep hole. Not yet in `docs/bom.csv`: a live price is needed.
-2. **X riser side holes.** The two 4 mm holes at X 375.5 now leave 0.5 of wall to the new end face. One holds an `M4x8 Pan Head`.
-3. **Tub holes.** The tub has no modelled holes for the Y riser bolts, so the new Y 629 position must go into the tub drilling.
-4. **Front Y riser bolts.** The bolts at X -305 and 305 (Y 561 and Y -6) are also outside the risers. They were already wrong and were not moved.
-5. **Assembly order.** Fit the rear riser bolts before the coupling, because the coupling sits close above them.
+1. **Tub holes.** The tub has no modelled holes for the Y riser bolts, so the new Y 629 position must go into the tub drilling.
+2. **Front Y riser bolts.** The bolts at X -305 and 305 (Y 561 and Y -6) are also outside the risers. They were already wrong and were not moved.
+3. **Assembly order.** Fit the rear riser bolts before the coupling, because the coupling sits close above them.
 
 The 0.5 edge chamfers were not re-cut on the new end faces, and the new holes carry no modelled thread.
+
+## X riser side holes moved (D-189), 18 Nov
+
+In `Type_0_v3`. Timeline 1235, 1 error, 5 warnings, the same failures as version 1. **Modified after version 4, not saved.**
+
+- **Holes:** the two M4 holes at X 375.5 are filled and re-cut at X 369.5, Z 348.5, on the Y 475 and Y 535 faces. The new holes copy the shape of the pair at X 325.5.
+- **Screw:** the `M4x8 Pan Head` at X 375.5 moved to X 369.5.
+- **Spacing:** 44 to the holes at X 325.5, was 50. Nothing in the model bolts to these holes and the pan head screws clamp no part, so check this if a part is added there later.
+
+| Check | Result |
+|---|---|
+| Old holes | Fully filled, no void left |
+| New hole volume against the X 325.5 holes | 87.18 mm³ each, the same |
+| Wall around each new hole, measured with a Ø6 test cylinder | At least 1 all round |
 
 ## Not checked
 

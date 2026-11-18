@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,957.42** (budget £4,200, D-127). Not priced yet: G01, G03. No eBay.
+**Phase 1 priced total: £3,963.41** (budget £4,200, D-127). Not priced yet: G01, G03. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -13,8 +13,8 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
-| Fixings | £70.67 |
-| **Total** | **£3,957.42** |
+| Fixings | £76.66 |
+| **Total** | **£3,963.41** |
 
 ## Frame
 
@@ -153,3 +153,4 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 |---|---|---|---|
 | X03 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | £70.67 |
 | X04 | (covered by X03) | 1 set | £0.00 |
+| X11 | Motor plate screws M6 x 16 socket cap | 1 pack | £5.99 |

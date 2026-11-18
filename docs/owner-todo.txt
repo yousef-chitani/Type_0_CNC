@@ -79,9 +79,9 @@ The mould drawings can't start until this is done.
 
    - Set the D25L35 coupling to 4 in the LiMo basket (D-182).
    - Save the open Fusion document Type_0_v3 before closing Fusion. It
-     holds the shortened risers and moved motor plates (D-186, D-187).
-   - Find a price for 9 x M6 x 16 socket cap screws, A2 (D-188), and give
-     it to a session with the link and date, for the BOM.
+     holds the moved X riser side holes (D-189).
+   - Wave 2 (15 Feb 2027): buy Drenky M6 x 16 socket cap screws, A2,
+     pack of 20, GBP 5.99 from Amazon (BOM X11, D-190).
 
 
 === LATER (no rush) ===

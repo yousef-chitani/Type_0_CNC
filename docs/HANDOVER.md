@@ -6,6 +6,17 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000. 18 Nov 2026: X riser side holes moved, motor length and plate screws settled (D-189, D-190)
+
+**Done:** owner saved `Type_0_v3` as version 4 with D-186 and D-187. After that, the two M4 side holes in the X riser moved from X 375.5 to X 369.5 (D-189), with the pan head screw. Timeline 1235, 1 error and 5 warnings, the same failures as version 1. The datasheet confirms the motor: body 122, shaft 21, against 125 and 20 in the STEP, which stays in the model. Motor plate screws are in `docs/bom.csv` as X11: Drenky A2 M6 x 16 socket cap, pack of 20, £5.99 from Amazon (D-190). Phase 1 is now £3,963.41, £236.59 left. **The document is modified and not saved. The owner saves it.**
+
+**Left:**
+1. **Front Y riser bolts** at X -305 and 305 sit outside the risers (already wrong, not moved). The tub needs drilling for the new Y 629 bolts.
+2. **Review the parts that moved with the rails:** Y trigger mount, roller sensor mount and cable chain supports.
+3. **Z axis (D-179, D-184).** New 150 wide plate, 6082 in Phase 1 then steel, 15 risers stay, 350 high.
+
+**Exact next step:** in a new session, once the owner has saved `Type_0_v3`, start the Z plate (D-179, D-184). Re-count errors and warnings after every write.
+
 ## 00000000000000000000000000000000000000. 18 Nov 2026: motor plates moved, risers shortened (D-186, D-187)
 
 **Done:** in `Type_0_v3` the motor plates on X, Y and Y2 moved 12 towards the screws, the motors moved with them and the couplings moved 6. The BK12 risers are 12 shorter, their rear bolts moved 12 forward, and the X gantry tube holes moved to match. Measured: 12.9 of grip per shaft, 1.6 from coupling to BK12, Y motor rear at Y 775, X motor rear at X 515. Timeline 1230, 1 error and 5 warnings, the same failures as version 1. Details are in `docs/printnc-assessment.md`. **The document is modified and not saved. The owner saves it.**
@@ -19,18 +30,6 @@
 6. **Z axis (D-179, D-184).** New 150 wide plate, 6082 in Phase 1 then steel, 15 risers stay, 350 high.
 
 **Exact next step:** in a new session, once the owner has saved `Type_0_v3`, start the Z plate (D-179, D-184). Re-count errors and warnings after every write.
-
-## 0000000000000000000000000000000000000. 18 Nov 2026: DFU1605 nuts, 24HS40 motors and couplings fitted
-
-**Done:** the owner saved `Type_0_v3` as version 2 with the rails shifted. After that, DFU1605 nuts, 24HS40 motors and stand-in D25L35 couplings went in on X, Y and Y2, and the parts they replace are hidden. Timeline 1205, 1 error and 5 warnings, the same failures as version 1. Y motor rear is 134 behind the tub (D-142 allows about 185). The nut-to-BF12 gap stays 4.7. Details are in `docs/printnc-assessment.md`. **The document is modified and not saved. The owner saves it.**
-
-**Left:**
-1. **Coupling grip: decided (D-186), not yet modelled.** Move the motor plates on X, Y and Y2 12 towards the screws, with the motors and couplings. Shorten the Y risers and the matching X part by 12. Expected result: 12.9 of grip per shaft, 1.6 from coupling to BK12, Y motor rear at Y 775.
-2. **Motor length, owner to confirm.** The STEP is named `24HE40-5004D-E1000` and gives a 125 body. No datasheet for it is in `cad/vendor/`.
-3. **Review the parts that moved with the rails:** Y trigger mount, roller sensor mount and cable chain supports.
-4. **Z axis (D-179, D-184).** New 150 wide plate, 6082 in Phase 1 then steel, 15 risers stay, 350 high.
-
-**Exact next step:** in a new session, once the owner has saved `Type_0_v3`, find what locates the `Nema24 Plate` on each axis and apply D-186. Re-count errors and warnings and re-measure the grip and gaps, then start the Z plate.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

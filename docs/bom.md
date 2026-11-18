@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **120 line items, 118 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **121 line items, 119 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -16,15 +16,15 @@ Full list: [bom.csv](bom.csv). **120 line items, 118 priced.** Prices were read 
 | Enclosure | 4 | 4 | £78.61 |
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
-| Fixings | 2 | 2 | £70.67 |
-| **All** | **120** | **118** | **£5,381.29** |
+| Fixings | 3 | 3 | £76.66 |
+| **All** | **121** | **119** | **£5,387.28** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,381.29**. Not priced yet: G01, G03.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,387.28**. Not priced yet: G01, G03.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,957.42 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,963.41 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -170,6 +170,7 @@ Lines still TO PRICE: see the list above.
 | X02 | 1 | Precision level 200 mm (AliExpress) | 1 pcs | 200 mm bar level, title "0.02 mm" (per-metre not stated) | [product](https://www.aliexpress.com/item/32814850915.html) | £15.69 + £17.25 shipping (AliExpress) | 32.94 | D-84: owner choice. Sensitivity unit not confirmed |
 | X03 | 1 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | M5 × 20 (100) + M6 × 20 (50) A2 [Screwfix]; M10 × 30 12.9 (20) [AliExpress]; M8 × 25 (50) + M12 × 120 (10) [RS] | [product](https://www.screwfix.com/) | Screwfix 2 × £5.89 + £7.59; AliExpress 10 × £1.52; RS £11.96 + £24.14 | 70.67 | Screwfix 1941T (M5 × 20 rail bolts, D-134 fallback: no good 12.9 found), 5209T; AliExpress https://www.aliexpress.com/item/4000784829771.html ; RS 052-9725, 124-7302. Covers X04 |
 | X04 | 1 | (covered by X03) | 1 set | 100 × M5 × 20 A2 + 10 × M12 × 120 12.9 | [product]() | Included in X03 | 0.00 |  |
+| X11 | 1 | Motor plate screws M6 x 16 socket cap | 1 pack | Drenky A2 (304) DIN 912, pack of 20. 9 needed: 3 per motor plate on X, Y and Y2 | [product](https://www.amazon.co.uk/dp/B0DNMS3M8L) | £5.99 inc VAT, free delivery (Amazon, seller Drenky-EU, in stock) | 5.99 | Button head rejected: its head is too wide for the Ø10 counterbores in the plates (D-190) |
 | X05 | 1 | Steel straightedge 500 mm | 1 pcs | RS PRO 500 mm steel straight edge, 30 mm wide, DIN 874/2 | [product](https://uk.rs-online.com/web/p/rulers/8771785) | £95.89 ex VAT / £115.07 inc VAT (RS 877-1785), free delivery | 115.07 | Price check 14. Owner chose it over the Maun 1000 mm (£71.99, no stated accuracy) |
 | X10 | 1 | Engineer's square 300 mm | 1 pcs | Silverline 245025, 300 mm hardened steel, DIN 875/1 | [product](https://www.amazon.co.uk/dp/B000LFTX1G) | £9.58 inc VAT (Amazon, owner 15 Nov 2026; page says free delivery on a first order, otherwise Amazon's usual delivery) | 9.58 | Price check 15. Beat AliExpress £18.19 and Mitutoyo £74.40 (MQS). For squaring the gantry (was the portal, D-133; D-137) |
 | X06 | 1 | Feeler gauge set | 1 pcs | Hilka Pro-Craft 32-blade, 0.04–0.88 mm | [product](https://www.screwfix.com/p/hilka-pro-craft-12700132-32-blade-feeler-gauge/4406r) | £5.19 inc VAT (Screwfix 4406R) | 5.19 | Price check 14 |
