@@ -6,6 +6,24 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000. 18 Nov 2026: supplier drawings saved, modelling not started
+
+**Done:** the owner's 7 drawings are saved in `cad/vendor/drawings/`, with their values and flags in `cad/vendor/drawings/README.md`. No CAD was changed in this step.
+
+**Left, by part:**
+1. **Couplings (4).** The D25L35 sizes are now known (hub 11.75, M3). Ready to model. The hub is shorter than the 12.9 grip set in D-186, so check the shaft ends against the spider.
+2. **Homing sensors.** M12 sizes are known. Ready to model, with the printed mounts changed to M12. The drawing says NPN and the BOM buys PNP.
+3. **Z motor mount.** The HM12-60-V drawing is saved. **Owner to decide:** it includes a 7001 bearing, so it may replace the Z BK12 and the D-206 bracket.
+4. **Spindle clamp.** The profile is known. Still missing: clamp length along the spindle, base bolt holes and bore centre height.
+5. **Spindle JGL-80.** The new page has specifications only. The Jianken dimension drawing is still missing.
+6. **Nut housings.** The LiMo drawing (M07) is still missing.
+7. **X, Y and Y2 nut flanges.** The catalogue gives 40 across flats. LiMo has not confirmed the flats.
+8. **X, Y and Y2 HGH20CA blocks.** Approved, not done: see the entry below.
+
+**`Type_0_v3` still has unsaved changes. The owner saves it.**
+
+**Exact next step:** the owner saves `Type_0_v3` and decides item 3. Then, in a new session, read `cad/vendor/drawings/README.md`, model the couplings and sensors, and do the block swap.
+
 ## 00000000000000000000000000000000000000000000000000. 18 Nov 2026: Z axis stand-ins replaced, the rest listed (D-206)
 
 **Done in `Type_0_v3`:**
@@ -33,31 +51,6 @@
 - **Bracket screws.** 4 x M5 x 35 and 2 x M6 x 25 are not in the BOM yet.
 
 **Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, re-anchor the roller hole sketches and fit the HGH20CA blocks on X, Y and Y2.
-
-## 0000000000000000000000000000000000000000000000000. 18 Nov 2026: Z nut flange settled, Z assembly checked over full travel (D-205)
-
-**Done:**
-- **Nut flange (D-205).** The owner's catalogue page gives the DFU1605 flange as 40 across flats. The flats are cut on the Z nut, facing the two plates. The moving plate has a relief pocket 34 wide x 14 tall x 2 deep with R3 corners, running 2 under the housing seat. The PrintNC Z in the model has the same kind of recess (62 x 44 x 3 deep). Measured gaps at Z travel -75, -37.5, 0, +37.5 and +75: 2 to the moving plate and 5 to the fixed plate. The flange is 4.5 from the Z blocks.
-- **Moving plate width.** 150 confirmed by the owner. `docs/bom.csv` M12 now says 150 x 200 x 20.
-- **Model fault fixed.** The Z nut was not fixed to `Z Moving Parts` and stayed still when the Z slider moved. The nut and the BK12 are now grounded to their parent components.
-- **Clash check.** Over the travel the only moving-to-fixed overlap is the Z block and simplified rail (known, the rail has no grooves). The timeline is 1353, with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
-
-**Left:**
-1. **M12 price.** The 200 x 140 piece in the price is too narrow. A 200 x 150 piece is not priced: the Aluminium Warehouse page blocked curl. The M12 price is unchanged until the owner confirms it.
-2. **Real nut housing.** Size and bolt pattern of the LiMo steel housing are unknown (M07). The housing stays a stand-in, and its 4 bolt holes in the moving plate and 6 flange bolt holes are not modelled until the drawing or the part arrives. Confirm the centre height is at least 18.
-3. **Nut oil hole.** The catalogue shows an M6 oil hole on the flange rim, and the rim is 4.5 from the Z blocks. Its position on our nut is not known, so check grease access when the nut arrives. The PrintNC Z in the model uses an M6 90 degree grease fitting on its nut.
-4. **Stand-ins.** The BK12 bracket, motor mount (task 14), spindle clamp and spindle are still stand-ins. The X, Y and Y2 nuts are still modelled with round flanges.
-5. **Mould assembly (D-204).** Not started. Task files 10 and 11 describe the old portal and base, not the tub.
-6. **Jianken reply.** Owner sends it: import VAT and the pull stud and dimension drawings. S06 holders depend on the pull stud.
-7. **Machine height.** The Z motor top is at Z 758. Check it against the enclosure.
-8. **Top roller screw strength.** They thread into only 3 of tube wall: check this. Roller flex adds to the stiffness figures.
-9. **Strip casting details.** Anchor screws, thread plugs and the mould fixing are not modelled. The 10 of EG between a strip and the bar pocket needs the fine mix (D-118), and it has not been proved by a cut test piece.
-10. **Machine width.** The brackets reach X -417 to 502.5; the chain side was 487.5. Check this against the enclosure and bench.
-11. **Spacer print files.** The 3 spacers are modelled but have no print file yet.
-12. **Not modelled:** the tapped riser bolt holes in the steel bars and levelling layer, table fixing holes, machine feet and pads.
-13. **Amazon delivery.** X11, X12 and X14 are free to deliver only on orders over £35. The three packs come to £20.47, and the charge below £35 is not known. X14 showed only 7 left.
-
-**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, model the EG tub mould upside down in Fusion (D-204).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
