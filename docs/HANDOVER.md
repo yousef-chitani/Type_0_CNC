@@ -17,7 +17,7 @@
 **Checked:** no clashes for the new angle at X slide 0, -215 and -430. The 4 plate holes line up with the leg. The timeline has the same 6 failing features as before, and no new ones.
 
 **Left for the owner:**
-1. **Flange fixing, not decided.** The 8 flange holes (Ø7, counterbored) line up with the tube's Ø6.5 top holes, but the 3 thick tube wall has no thread. The angle is held only by the 4 leg screws until this is settled.
+1. **Flange fixing, not decided.** The 8 flange holes (Ø7, counterbored) line up with the tube's Ø6.5 top holes, but the 3 thick tube wall has no thread. The angle is held only by the 4 leg screws until this is settled. The owner chose long screws from the flange into the rail blocks, but they are **not modelled because they do not fit the blocks being bought**. They clear everything on the model's HGW20CC pattern (40 x 53). On the BOM's HGH20CA pattern (36 x 32, Y 489 and 521) all 8 paths hit the M5 clamping rods and 4 also hit the X nut. Options: M5 rivet nuts in the tube at the existing flange holes (a Ø10 path there is clear above Z 384), or change the X blocks to HGW20CC (not priced).
 2. **Assembly order.** The Ø7 flange holes will not pass an M6 head, so the block screws inside the tube go in before the angle.
 3. **Rail class.** The owner reads LiMo's reply as a 10 % surcharge for Class H. Class H is not chosen yet, and `docs/bom.csv` is unchanged.
 
