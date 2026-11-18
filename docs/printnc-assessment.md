@@ -74,7 +74,10 @@ The L bracket `YRollerBrace` joins the Y roller to the front face of the beam. I
 | Clear above the BF12 screw support | 7 |
 | Clashes on the structure | None between the beam, bracket and roller |
 
-**Rear beam bolts, not solved:** the rear row into the roller is at Y 603.5, 3 from the roller end, so a hole breaks out of the 3 wall (Thread1 fails). The carriage access holes at Y 554 and 594 leave no clean symmetrical position for the row. Options: tap the row into the 15 thick fill plate under it, or set `AdjXGanYRolHoles` to 17, which leaves about 1.7 of steel between holes.
+**Rear beam bolts, not solved:** the rear row into the roller is at Y 603.5, 3 from the roller end, so a hole breaks out of the 3 wall (Thread1 fails). Two options, neither rebuilt yet:
+
+- **Move the rows (recommended):** set `AdjXGanYRolHoles` to 13. The rows go to Y 541.5 and 591.5, 25 either side of the centre bolt. The rear row is then 15 from the roller end, and the front row leaves about 6.8 of steel to the access hole at Y 554. The top wall has no access hole at Y 594. All bolts thread into the 3 wall, about 3 threads each.
+- **Tap the fill plate:** keep the row at Y 603.5 and thread it into the plate, with M6 × 25 bolts and about 13 of thread. The plate must be steel (the model gives it no real material), the roller wall stays open at the end, the hole is 2 from the plate's inner face, and the model's 0.5 gap between plate and wall must be closed. Needs a model change.
 
 **Lower bracket bolts:** Z 223 is 18 above the beam's underside. The flat starts 16 up with a 16 corner radius, and the bolts land on the corner with a 24 radius. Check the real tube radius before drilling.
 
