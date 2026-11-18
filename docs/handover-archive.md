@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000. 18 Nov 2026: Y rails 550, Y screws 650, tub 900 × 690
+
+**Done:** owner chose the 550 Y rail and a 690 tub (D-175). Fusion `YCuttingArea` is 385, which gives the 550 rail and 650 screw. The rail and its risers need 684, leaving 3 at each tub end. `cad/v2/gantry_sketch.py`, its outputs and `docs/bom.csv` are updated. Baseline tub 141.2 kg, epoxy 15.5 to 16.9 kg.
+
+**Left:** LiMo prices for the 550 rail set, the 650 screws and the shipping are **not confirmed**: curl found no product feed, and `docs/bom.csv` still carries the 600 prices, so the Phase 1 total is not current. Epoxy is tighter: tub 15.5 to 16.9 kg plus about 5 kg for the rail seats, from one 22.68 kg kit. The Fusion document is still **unsaved** with **8 failing features**. `cad/v2/assembly.py` and `docs/moving-gantry-sketch.md` are not updated to the new tub. The sketch still draws the old aluminium beam.
+
+**Exact next step:** the owner saves the Fusion document under a new name and checks the LiMo basket for the 550 rail set and 650 screws. Then put the prices in `docs/bom.csv`. Use parameters only in Fusion, never direct modelling.
+
 ## 00000000000000000000000000. 18 Nov 2026: Y screws above the rails, tub length now open
 
 **Done:** owner chose the Y screws directly above the rails (D-174, amends D-140). `cad/v2/gantry_sketch.py` and its outputs are updated. Measured in the Fusion model: the Y rail and its BK12 and BF12 risers need **734** in line with a 600 rail.

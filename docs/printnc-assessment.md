@@ -59,6 +59,25 @@ Flat on the 75 wide faces: 43 with a 16 corner radius, 27 with a 24 radius. The 
 | 1015 | Rigid 110 | XGantry Trigger Mount to XGantry | Joint failed |
 | 613, 614, 616, 617, 618 | Extrude2, Chamfer1, Chamfer2, Fillet1, Extrude4 | YRoller-Gantry Drill Guide | **Caused by the first 150 beam trial.** They stayed when the beam went back to 75, and a full recompute did not clear them |
 
+## Y roller brace seat (measured 18 Nov 2026, not decided)
+
+The L bracket `YRollerBrace` joins the Y roller to the front face of the beam. Its foot is 50 deep, with M6 bolt rows 18 and 38 in front of the beam face. The roller is 150 long.
+
+Roller top in front of the beam = 75 − (beam width ÷ 2) + `XGantryOffset`. It needs to be at least 50, which puts the front bolt row 12 from the roller end.
+
+| Beam width | `XGantryOffset` | Roller top in front of beam | Front bolt row | Beam past roller rear | State |
+|---|---|---|---|---|---|
+| 75 | 25 (PrintNC's value) | 62.5 | 24.5 inside the roller end | None | Fits. Earlier trial gave 10 failing features, against 8 at offset 0 |
+| 75 | **0 (model now)** | 37.5 | **0.5 past the roller end** | None | **Front 2 bolts on each side have no thread** |
+| 150 | 0 | 0 | Off the roller | None | **No seat at all** |
+| 150 | 50 | 50 | 12 inside the roller end | 50 | Fits on paper. Reverses D-176. Beam rear about 3.5 past the tub end at the back of travel. Top roller 150 and bottom angle 175 by formula |
+
+The nut plate at the roller end has no holes for the front row, so it does not rescue the current position.
+
+The lower brace bolts into the beam are at Z 223, 18 above the beam's underside. The flat of the face starts 16 up with a 16 corner radius, so they clear it by 2 to the hole centre. With a 24 radius they land on the corner. Check the real tube radius before drilling.
+
+Checked read-only, at one gantry position, with bounding boxes. No parameter was changed for this table and no rebuild was run.
+
 ## Not checked
 
 - Whether 150 × 75 × 8 tube can be bought. It is not in `docs/steel-rhs-suppliers.md`.
@@ -80,3 +99,4 @@ Flat on the 75 wide faces: 43 with a 16 corner radius, 27 with a 24 radius. The 
 2. **Drill guide:** repair the 5 failed features by undo or by hand in Fusion, or replace the guide.
 3. **Steel gantry sketch:** D-172 replaces its gantry layout, so its 2 open items need closing.
 4. **X screw supports:** the 60 wide risers overhang the 43 flat on the beam's top face by 8.5 each side. They need narrowing, or a seat that bridges the corners.
+5. **Y roller brace seat:** choose the beam width and `XGantryOffset` from the table above.
