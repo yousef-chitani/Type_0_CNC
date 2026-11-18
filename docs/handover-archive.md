@@ -2,6 +2,16 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000. 18 Nov 2026: Y rails shifted, Y travel measured
+
+**Done:** both Y rails in the open `Type_0_v3` now run Y 2.5 to 552.5, clear of the risers, and all 9 holes on each rail line up with the frame holes. The rail body was tied to the `YFrame` end face, so the frame hole (`d80`) and the rail end (`d196`) had to move together (`docs/printnc-assessment.md`). Y travel is 386.2 on the rails (Type 0 needs 350). At both ends of the 385 slider range the tightest measured gaps are 0.61 from block to rail end and 1.61 from block to riser. The gantry, trigger mount, sensor mount and cable chain supports moved with the rails; the last three still need reviewing. Timeline 1183, 1 error and 5 warnings, the same failures as version 1. **The document is modified and not saved. The owner saves it.**
+
+**Left:** the imported parts, then the Z axis. Rules for model edits: re-count errors and warnings after every write and undo any edit that raises them; hide parts, never delete them; list each change in `docs/printnc-assessment.md`; do not save through the tool.
+1. **Imported parts (D-180, D-182).** DFU1605 nut and 24HS40 motor from `cad/vendor/`, and a D25L35 coupling. Take the motor length from the datasheet, because the STEP includes other geometry. This gives the X motor overhang and the Y motor overhang against the 185 in D-142. Re-check the nut against the BF12: the SFU1610 nut stops 4.7 away and the DFU1605 is longer.
+2. **Z axis (D-179, D-184).** New 150 wide plate, 6082 in Phase 1 then steel, 15 risers stay, 350 high.
+
+**Exact next step:** in a new session, after the owner has saved `Type_0_v3`, import the DFU1605 nut from `cad/vendor/` on the Y axis and re-run the Y travel check.
+
 ## 00000000000000000000000000000000000. 18 Nov 2026: Y motors at the back, Y rails still to shift
 
 **Done:** D-184 (Z plate: 6082 in Phase 1 then steel, 15 risers stay, 350 high) and D-185 (Y stays 550 rail, 650 screw, 690 tub). In the open `Type_0_v3`: BK12 supports and NEMA 24 plates shown on X, Y and Y2, and the Y risers, screws and motors turned end for end, with the motors at the back on both sides. Timeline 1183, 1 error and 5 warnings, the same failures as version 1. **The document is modified and not saved. The owner saves it.**

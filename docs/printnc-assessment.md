@@ -163,9 +163,38 @@ Fitted on X, Y and Y2 in `Type_0_v3`. Timeline 1205, 1 error, 5 warnings, the sa
 | DFU1605 nut to X BK12 at full X travel | 6.9 |
 | Clashes for nuts, motors and couplings at Y 0, Y -385 and X -430 | None by body-to-body overlap once the M4 bolts were hidden |
 
-**Open problem: the coupling grips too little.** The screw end and the motor shaft are 21.2 apart on all three axes, so a 35 long coupling grips only **6.9 of each shaft**. Moving the motor plate 12 towards the screw would give 12.9 of grip and leave 1.6 between coupling and BK12. That means shortening the `BKHM12 Riser` on Y and the matching X part. **The owner chose this (D-186). It is not yet in the model.** Expected after the move: Y motor rear at Y 775, 122 behind the tub. The coupling's real bore depth has not been checked.
+**Open problem: the coupling grips too little.** The screw end and the motor shaft are 21.2 apart on all three axes, so a 35 long coupling grips only **6.9 of each shaft**. Moving the motor plate 12 towards the screw would give 12.9 of grip and leave 1.6 between coupling and BK12. That means shortening the `BKHM12 Riser` on Y and the matching X part. **The owner chose this (D-186). It is now in the model: see the D-186 and D-187 section below.** Y motor rear at Y 775, 122 behind the tub. The coupling's real bore depth has not been checked.
 
 The motor STEP is one solid that includes its cable tails, so those stick out 133 from the shaft, outboard on Y and upward on X. Ignore them for clearance. The vendor nut has no lube port or flange flats, so the real grease fitting position is not modelled. The M5 motor bolts are not modelled.
+
+## Motor plates moved and risers shortened (D-186, D-187), 18 Nov
+
+In `Type_0_v3` on X, Y and Y2. Timeline 1230, 1 error, 5 warnings, the same failures as version 1. **Modified after version 3, not saved.**
+
+- **Plates:** `Rigid 4` offset is -12 on Y (`d4556`) and X (`d4568`). Y2 follows through its mirror.
+- **Motors and couplings:** their as-built joints did not follow the plate, so they were rebuilt (`Rigid 370` to `Rigid 375`). Motors moved 12, couplings 6, which keeps each coupling centred between screw and shaft.
+- **Risers:** end face at Y 638 (X 378 on X), R4 corners restored, old rear holes filled, new rear holes at Y 629 (X 369), M6 plate holes 12 deep.
+- **Bolts:** rear M6 x 30 bolts moved to the new holes. The second rear bolt on Y and Y2 was at X -305 and 305, outside the riser, and now sits in the correct hole at X -365 and 365.
+- **X gantry tube:** old tapped holes at X 381 filled, new 5 mm holes at X 369.
+
+| Check | Result |
+|---|---|
+| Coupling grip, screw and shaft, X, Y and Y2 | 12.9 each |
+| Coupling to BK12 | 1.6 |
+| Y motor rear | Y 775 |
+| X motor rear | X 515 |
+| Clashes at the motor end, Y and Y2 | None |
+| Clashes at the motor end, X | Only the M6 bolt threads in the gantry tube, as intended |
+
+**Still to settle:**
+
+1. **Motor plate bolts.** An M6 x 20 reaches 12 into the riser, the full depth of the new 12 deep hole, so it would bottom out. Use M6 x 16. These are not in `docs/bom.csv` (only M6 x 20 is).
+2. **X riser side holes.** The two 4 mm holes at X 375.5 now leave 0.5 of wall to the new end face. One holds an `M4x8 Pan Head`.
+3. **Tub holes.** The tub has no modelled holes for the Y riser bolts, so the new Y 629 position must go into the tub drilling.
+4. **Front Y riser bolts.** The bolts at X -305 and 305 (Y 561 and Y -6) are also outside the risers. They were already wrong and were not moved.
+5. **Assembly order.** Fit the rear riser bolts before the coupling, because the coupling sits close above them.
+
+The 0.5 edge chamfers were not re-cut on the new end faces, and the new holes carry no modelled thread.
 
 ## Not checked
 
