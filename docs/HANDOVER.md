@@ -6,6 +6,24 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000. 18 Nov 2026: Z fixed plate to be extended for the HM12-60-V (D-208), not modelled yet
+
+**Done:** the owner chose to extend the Z fixed plate by about 95, to about 445 long (D-208). `docs/bom.csv` M12 is updated. **No CAD changed. `Type_0_v3` has unsaved changes. The owner saves it.**
+
+**To model next, in `Type_0_v3`:**
+1. Extend `Z Fixed Plate` upward from Z 519 to about Z 614, and set the exact top from the mount.
+2. Model the HM12-60-V from `cad/vendor/drawings/hm12_60_v_motor_mount.png`, base on the plate face at Y 417, screw axis at X -222.5, Y 392, and add its bolt holes to the plate.
+3. Hide the Z BK12 and the D-206 bracket. Fill or remove the 2 tapped holes that D-206 put in the plate's old top edge.
+4. Check the coupling, the motor flange height and the clash at the full Z travel.
+
+**Left for the owner:**
+- **M12 price.** The 20 mm 400 x 180 piece is too short for a 445 plate. The longer piece is not priced, so the M12 price is unchanged.
+- **LiMo.** Ask whether the standard BK12 end of the Z screw fits the 7001 bearing, and whether the Z set can come without its BK12.
+
+The other open items are in the next entry below.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, carry out items 1 to 4.
+
 ## 0000000000000000000000000000000000000000000000000000. 18 Nov 2026: HM12-60-V replaces the Z BK12 (D-207), not modelled yet
 
 **Done:** the owner chose the HM12-60-V as Z motor mount and fixed bearing (D-207). `docs/bom.csv` M13 is updated. **No CAD changed: `Type_0_v3` still shows the BK12, the D-206 bracket and the motor mount stand-in, and it has unsaved changes. The owner saves it.**
@@ -25,24 +43,6 @@
 - **Still missing:** JGL-80 dimension drawing; clamp length, base holes and bore centre height; LiMo nut housing drawing; LiMo confirmation of the nut flats.
 
 **Exact next step:** the owner saves `Type_0_v3` and chooses how the HM12-60-V is carried. Then, in a new session, model the mount and remove the Z BK12 and bracket.
-
-## 000000000000000000000000000000000000000000000000000. 18 Nov 2026: supplier drawings saved, modelling not started
-
-**Done:** the owner's 7 drawings are saved in `cad/vendor/drawings/`, with their values and flags in `cad/vendor/drawings/README.md`. No CAD was changed in this step.
-
-**Left, by part:**
-1. **Couplings (4).** The D25L35 sizes are now known (hub 11.75, M3). Ready to model. The hub is shorter than the 12.9 grip set in D-186, so check the shaft ends against the spider.
-2. **Homing sensors.** M12 sizes are known. Ready to model, with the printed mounts changed to M12. The drawing says NPN and the BOM buys PNP.
-3. **Z motor mount.** The HM12-60-V drawing is saved. **Owner to decide:** it includes a 7001 bearing, so it may replace the Z BK12 and the D-206 bracket.
-4. **Spindle clamp.** The profile is known. Still missing: clamp length along the spindle, base bolt holes and bore centre height.
-5. **Spindle JGL-80.** The new page has specifications only. The Jianken dimension drawing is still missing.
-6. **Nut housings.** The LiMo drawing (M07) is still missing.
-7. **X, Y and Y2 nut flanges.** The catalogue gives 40 across flats. LiMo has not confirmed the flats.
-8. **X, Y and Y2 HGH20CA blocks.** Approved, not done: see the entry below.
-
-**`Type_0_v3` still has unsaved changes. The owner saves it.**
-
-**Exact next step:** the owner saves `Type_0_v3` and decides item 3. Then, in a new session, read `cad/vendor/drawings/README.md`, model the couplings and sensors, and do the block swap.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
