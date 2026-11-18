@@ -25,7 +25,7 @@ EG_RHO = 2300e-9                                   # kg/mm3 (type0_v2 eg_density
 RAIL = dict(w=20, h=17.5, pitch=60, e=20, cb_d=9.5, cb_h=8.5, hole_d=6)          # HIWIN HGR20 datasheet
 BLOCK = dict(w=44, l=77.5, H=30, H1=4.6, C=32, B=36, bolt="M5")                    # HGH20CA (vendor STEP: H1 4.6)
 SCREW = dict(d=16, lead=5)                                                         # DFU1605
-NUT = dict(body_d=28, len=100, fl_d=48, fl_t=10, fl_flat=40, pcd=38)               # DFU1605 (vendor STEP: 100 long; flats 40 VERIFY, model has none)
+NUT = dict(body_d=28, len=100, fl_d=48, fl_t=10, fl_flat=40, pcd=38)               # DFU1605 (vendor STEP: 100 long; flats 40 from the DIN 69051 form B catalogue page, D-205)
 HOUSING = dict(w=52, h=40, l=40, ctr=20)                                           # DSG16H: face 52 x 40, 40 high, centre 20 below the face, 4 x M5 at 40 x 24 (seller drawing)
 BK = dict(w=60, h=43, l=25, ctr=25, lock=12, bolt_p=46)                            # BK12 (vendor STEP): 37 long incl. lock nut, centre 25, holes at 46
 BF = dict(w=60, h=43, l=20, ctr=25, bolt_p=46)                                     # BF12 (vendor STEP)

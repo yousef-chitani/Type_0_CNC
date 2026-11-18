@@ -19,3 +19,5 @@ Manufacturer STEP files (and PDF drawings) for the bought parts, downloaded by t
 | `vallder_heavy_235x125.dxf` | Vallder CNC X-axis heavy profile 235 × 125 (section only) | Owner's download, Vallder (`X-Axis Heavy mod3.dxf`) | 14.77 kg/m (Vallder: 14.80). Rail grooves 154 apart, 3 deep, seat 26 behind the lips. Vallder's STEP models (95 MB, 47 MB) are not in git |
 
 Not available as CAD: HGR20R rail alone (use the rail stub or the values above), DSG16H housing (52 × 40 face, 40 high, centre 20 below the face, 4 × M5 at 40 × 24, from the AliExpress drawing), D26 L35 coupling, NEMA 24 mount with 50 mm holes.
+
+`dfu_din69051_form_b_catalogue.webp`: catalogue page for DFU nuts, given by the owner on 18 Nov 2026. It names no maker. DFU01605-4: D 28, A 48, B 10, L 100, W 38, X 5.5, H 40 across flats, Q M6 oil hole.

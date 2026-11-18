@@ -2,6 +2,22 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000. 18 Nov 2026: riser bolts set in the model (D-199, D-201)
+
+**Done:** in `Type_0_v3` the 14 riser bolts now have their chosen lengths. 8 are M6 x 25 (Y -6 and Y 561), with tips at Z 112. 6 are M6 x 35 (Y -23 and Y 629), with tips at Z 114. The heads did not move and the tips keep their 0.4 chamfer. The bolt components are renamed `M6x25 and M6x35 Riser Bolts` and its mirror, and each body is named by length and position. `M6x12 (7)` is now `M6x30 Y2 Roller` and `M6x12 (8)` is now `M6x30 Y Roller`. The 3 spacers are in `docs/printed-parts.md`. Measured: the bolts overlap only the steel bar and the levelling layer, with 8 and 6 of thread in the bar, and no longer reach the EG. The timeline is 1324, up from 1304, with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
+
+**Left:**
+1. **Strip casting details.** Anchor screws, thread plugs and the mould fixing are not modelled. The 10 of EG between a strip and the bar pocket needs the fine mix (D-118), and it has not been proved by a cut test piece.
+2. **Machine width.** The brackets reach X -417 to 502.5; the chain side was 487.5. Check this against the enclosure and bench.
+3. **Spacer print files.** The 3 spacers are modelled but have no print file yet.
+4. **Not modelled:** the tapped riser bolt holes in the steel bars and levelling layer, table fixing holes, machine feet and pads, mould details.
+5. **Z plate stiffness** (D-184).
+6. **Top roller screw strength.** They thread into only 3 of tube wall: check this.
+7. **Amazon delivery.** X11, X12 and X14 are free to deliver only on orders over £35. The three packs come to £20.47, and the charge below £35 is not known. X14 showed only 7 left.
+8. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, check the Z plate stiffness (D-184).
+
 ## 0000000000000000000000000000000000000000000000. 18 Nov 2026: steel strips replace the cast-in inserts (D-200, D-201)
 
 **Done:** in `Type_0_v3` the 8 cast-in M6 inserts are gone and 3 tapped steel strips, 25 x 10, are cast flush in the outer walls: +X Y 520 (Z 60 to 120, 4 threads), -X Y 520 (Z 90 to 120, 2 threads), +X Y 220 (Z 60 to 90, 2 threads). The bracket hole positions did not change. The casting is 40.15 L, 92.3 kg. Measured: the strips overlap only the 8 bracket screws in their threaded holes, those screws get 7 to 8.5 of thread and stop inside the strip, and the timeline is 1304 with the same 1 error and 5 warnings. The 6 riser bolts at Y -23 and Y 629 are M6 x 35 (X14, £7.49, D-201). Phase 1 is now £3,985.48, £214.52 left. **The document is modified and not saved. The owner saves it.**
