@@ -20,12 +20,17 @@
 
 **Left for the owner:**
 1. **Measure the real mount before machining the plate.** The CAD differs from the seller's drawing: length 90 against 95, bolt spacing 46 against 45, lower rows 13 apart against 12, bearing 7901 against 7001.
-2. **Confirm D-211.** It is Claude's default, because the owner gave no preference. LiMo must confirm the 21.5 long 10 mm end on the Z screw, and any cost.
-3. **Spindle clearance.** The Jianken stand-in clears the mount by only 2 at Z travel +75, and its length is not confirmed.
-4. **6 x M6 mount screws.** Not sized, not in `docs/bom.csv`, not priced.
-5. **M12 price.** The 20 mm 400 x 180 piece is too short for the 442 plate. The longer piece is not priced.
+2. **Do not order a custom Z screw end yet.** The screw and the mount come in the same LiMo order, so ask LiMo for its HM12-60 length and hole pattern first. The 21.5 end suits a 90 long mount. A 95 long mount needs 26.
+3. **Choose the Z coupling (D-211 is Claude's default).** With the 90 long mount and the standard 15 end, the shaft ends are 18 apart. A D25L35 then grips 8.5 per shaft. The 30-42 coupling the drawing lists would grip about 12 with no custom screw end, but its hub depth and price are not known.
+4. **LiMo.** Ask whether the standard BK12 end of the Z screw fits the mount's bearing, and whether the Z set can come without its BK12.
+5. **6 x M6 mount screws.** Not sized, not in `docs/bom.csv`, not priced.
+6. **M12 price.** The 20 mm 400 x 180 piece is too short for the 442 plate. The longer piece is not priced.
 
-**Exact next step:** the owner saves `Type_0_v3` and measures the mount. Then model the couplings and sensors, and do the HGH20CA block swap.
+The other open items are in the D-207 entry at the top of the older entries in `docs/handover-archive.md`.
+
+**CAD source:** `hm12-60-servo-motor-mount-1.snapshot.2.zip`, supplied by the owner on 18 Nov 2026. It is a third-party model from 2022, not the seller's.
+
+**Exact next step:** the owner saves `Type_0_v3`, asks LiMo for the mount's length and hole pattern, and chooses the Z coupling. Then, in a new session, model the couplings and sensors, and do the HGH20CA block swap.
 
 ## 000000000000000000000000000000000000000000000000000000. 18 Nov 2026: XRollerShim replaced by a second XRoller Angle over the top tube (D-209)
 

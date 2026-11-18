@@ -16,5 +16,6 @@ Values are copied from the images in this folder. All sizes in mm. None of these
 
 1. **HM12-60-V is a mount and a bearing support in one.** It holds a 7001 bearing and lists BF12 as its partner. It replaces the Z BK12 and the D-206 bracket (D-207).
 2. **HM12-60-V hole square.** PCD 70 gives a 49.5 square and the motor is 50, so each M4 screw sits 0.35 off its hole centre. The motor holes are Ø5.1, so M4 should pass. The 50 bore does not locate the motor pilot.
-3. **HM12-60-V coupling.** The table lists a 30-42 coupling, and the BOM buys D25L35. Check that the Ø25 fits and that the screw and motor ends reach it.
+3. **HM12-60-V coupling.** The table lists a 30-42 coupling, and the BOM buys D25L35. The Ø25 fits. With the owner's CAD (flag below) and the standard 15 end, it grips 8.5 per shaft (D-211).
+3a. **HM12-60 CAD against this drawing.** The owner's third-party model (`hm12-60-servo-motor-mount-1.snapshot.2.zip`, 2022) is 90 long against L 95, has bolts 46 apart against P 45, lower rows 13 apart against C1 12, and 7901 bearings against 7001. Confirm with LiMo.
 4. **Coupling grip.** The hub is 11.75 long, but D-186 sets 12.9 of shaft into each end. The shafts would run 1.15 past the hub towards the spider. Check the gap between the shaft ends and the spider.
