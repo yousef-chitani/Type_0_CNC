@@ -70,7 +70,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| G01 | Gantry beam: steel SHS 150 × 150 × 8, 890 long | 1 pcs | to price |
+| G01 | Gantry beam: steel RHS 150 tall × 75 wide × 8, 775 long | 1 pcs | to price |
 | G03 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed | 2 pcs | to price |
 
 ## Spindle

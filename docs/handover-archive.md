@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000. 18 Nov 2026: Y screws above the rails, tub length now open
+
+**Done:** owner chose the Y screws directly above the rails (D-174, amends D-140). `cad/v2/gantry_sketch.py` and its outputs are updated. Measured in the Fusion model: the Y rail and its BK12 and BF12 risers need **734** in line with a 600 rail.
+
+**Left:** the tub is still drawn **630** long, so the supports do not fit yet. Options are in `docs/printnc-assessment.md`, open item 1: 600 rail and 734 tub (150.3 kg), or 550 rail and 684 tub (140.1 kg). Either changes the 600 Y screws in `docs/bom.csv`, which is not edited yet. The Fusion document is still **unsaved** with **8 failing features**. `cad/v2/assembly.py` and `docs/moving-gantry-sketch.md` are not updated to the new tub.
+
+**Exact next step:** the owner chooses the Y rail and tub length. Then set `YCuttingArea` if the rail changes, update `cad/v2/gantry_sketch.py` and `docs/bom.csv`, and record it as D-175. Use parameters only in Fusion, never direct modelling.
+
 ## 0000000000000000000000000. 18 Nov 2026: tub widened to 900 for the PrintNC gantry
 
 **Done:** owner chose to widen the tub by 10 (D-173). Tub is now 900 × 630, Y rails ± 350, inner walls ± 310, outer walls ± 450. `cad/v2/gantry_sketch.py` and its outputs are updated. Baseline tub 129.0 kg (was 128.1). The Fusion model already has the rails 700 apart and was not changed in this step.
