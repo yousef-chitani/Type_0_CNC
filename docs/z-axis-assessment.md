@@ -27,6 +27,9 @@
 - **Fixed plate 150 wide**, not the 180 in `assembly.py`. At 180 it touches the L bracket at the end of X travel. The Z blocks need 144.
 - **Holes to match the rollers:** X ± 32 from the plate centre at Z 181.5, 205.5, 372 and 396, and one at the centre at Z 181.5 (M6).
 - **Settled (D-184):** 6082 in Phase 1 and steel in a later phase, the 15 risers stay, plate height 350.
+- **Settled (D-191):** plate at Z 169 to 519, 9 holes 6.6 clearance with counterbores 10.5 × 6.5 deep. Modelled in `Type_0_v3` as component `Z Fixed Plate`: X -297.5 to -147.5, Y 417 to 437, held to the bottom X roller by a rigid as-built joint.
+- **Z reach at this position, using the block, moving plate and clamp sizes in `assembly.py`:** the blocks stay on the rails for a spindle nose between Z 92.75 and Z 275.25. With the table top at Z 70, 150 travel and 180 under the nose, the nose runs Z 100 to 250.
+- **Roller screw lengths, not yet in `docs/bom.csv`:** M6 × 20 for the 5 bottom holes and M6 × 25 for the 4 top holes (through the 8 shim). The top screws thread into only 3 of tube wall. Whether that is enough is not checked.
 
 ## Ball screws and steppers
 
