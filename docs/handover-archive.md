@@ -2,6 +2,24 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000. 18 Nov 2026: Z fixed plate to be extended for the HM12-60-V (D-208), not modelled yet
+
+**Done:** the owner chose to extend the Z fixed plate by about 95, to about 445 long (D-208). `docs/bom.csv` M12 is updated. **No CAD changed. `Type_0_v3` has unsaved changes. The owner saves it.**
+
+**To model next, in `Type_0_v3`:**
+1. Extend `Z Fixed Plate` upward from Z 519 to about Z 614, and set the exact top from the mount.
+2. Model the HM12-60-V from `cad/vendor/drawings/hm12_60_v_motor_mount.png`, base on the plate face at Y 417, screw axis at X -222.5, Y 392, and add its bolt holes to the plate.
+3. Hide the Z BK12 and the D-206 bracket. Fill or remove the 2 tapped holes that D-206 put in the plate's old top edge.
+4. Check the coupling, the motor flange height and the clash at the full Z travel.
+
+**Left for the owner:**
+- **M12 price.** The 20 mm 400 x 180 piece is too short for a 445 plate. The longer piece is not priced, so the M12 price is unchanged.
+- **LiMo.** Ask whether the standard BK12 end of the Z screw fits the 7001 bearing, and whether the Z set can come without its BK12.
+
+The other open items are in the D-207 entry at the top of `docs/handover-archive.md`.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, carry out items 1 to 4.
+
 ## 0000000000000000000000000000000000000000000000000000. 18 Nov 2026: HM12-60-V replaces the Z BK12 (D-207), not modelled yet
 
 **Done:** the owner chose the HM12-60-V as Z motor mount and fixed bearing (D-207). `docs/bom.csv` M13 is updated. **No CAD changed: `Type_0_v3` still shows the BK12, the D-206 bracket and the motor mount stand-in, and it has unsaved changes. The owner saves it.**

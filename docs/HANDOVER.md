@@ -6,6 +6,27 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000. 18 Nov 2026: HM12-60 mount modelled, Z plate 442 long (D-211)
+
+**Done in `Type_0_v3`, not saved. The owner saves it.**
+- The owner's HM12-60 CAD is fitted as `HM12-60-V Z Mount`: bearing end on the screw shoulder at Z 534, motor face at Z 624.
+- `Z Fixed Plate` is 442 long, Z 169 to 611, 1 under the mount flange. It has 6 x M6 tapped holes at X -245.5 and -199.5, Z 541, 554 and 584.
+- The Z BK12, the D-206 bracket, its 2 tapped holes and the motor mount stand-in are removed.
+- The motor moved up 12, so its top is at Z 770. The coupling is at Z 580.75 to 615.75.
+- The screw's 10 mm end is 21.5 long, up from 15, ending at Z 592.5. The D25L35 grips 11.75 of each shaft, and the shaft ends stop at the spider.
+- `docs/bom.csv`: M05 and M12 updated. No price changes.
+
+**Checked:** no moving-to-fixed clash at Z travel -75, -37.5, 0, +37.5 and +75. The 6 mount holes line up with the plate holes. The only static overlaps are the lock nut's thread on the screw and 0.04 mm3 between the motor shaft and the coupling stand-in. No feature newly fails.
+
+**Left for the owner:**
+1. **Measure the real mount before machining the plate.** The CAD differs from the seller's drawing: length 90 against 95, bolt spacing 46 against 45, lower rows 13 apart against 12, bearing 7901 against 7001.
+2. **Confirm D-211.** It is Claude's default, because the owner gave no preference. LiMo must confirm the 21.5 long 10 mm end on the Z screw, and any cost.
+3. **Spindle clearance.** The Jianken stand-in clears the mount by only 2 at Z travel +75, and its length is not confirmed.
+4. **6 x M6 mount screws.** Not sized, not in `docs/bom.csv`, not priced.
+5. **M12 price.** The 20 mm 400 x 180 piece is too short for the 442 plate. The longer piece is not priced.
+
+**Exact next step:** the owner saves `Type_0_v3` and measures the mount. Then model the couplings and sensors, and do the HGH20CA block swap.
+
 ## 000000000000000000000000000000000000000000000000000000. 18 Nov 2026: XRollerShim replaced by a second XRoller Angle over the top tube (D-209)
 
 **Done in `Type_0_v3`, not saved. The owner saves it.**
@@ -25,24 +46,6 @@
 **Unused holes:** the leg's centre hole at X -222.5, Z 398.5 and the 4 old tapped holes in the tube's front wall.
 
 **Exact next step:** the owner saves `Type_0_v3`. Then carry out items 1 to 4 of the D-208 entry below.
-
-## 00000000000000000000000000000000000000000000000000000. 18 Nov 2026: Z fixed plate to be extended for the HM12-60-V (D-208), not modelled yet
-
-**Done:** the owner chose to extend the Z fixed plate by about 95, to about 445 long (D-208). `docs/bom.csv` M12 is updated. **No CAD changed. `Type_0_v3` has unsaved changes. The owner saves it.**
-
-**To model next, in `Type_0_v3`:**
-1. Extend `Z Fixed Plate` upward from Z 519 to about Z 614, and set the exact top from the mount.
-2. Model the HM12-60-V from `cad/vendor/drawings/hm12_60_v_motor_mount.png`, base on the plate face at Y 417, screw axis at X -222.5, Y 392, and add its bolt holes to the plate.
-3. Hide the Z BK12 and the D-206 bracket. Fill or remove the 2 tapped holes that D-206 put in the plate's old top edge.
-4. Check the coupling, the motor flange height and the clash at the full Z travel.
-
-**Left for the owner:**
-- **M12 price.** The 20 mm 400 x 180 piece is too short for a 445 plate. The longer piece is not priced, so the M12 price is unchanged.
-- **LiMo.** Ask whether the standard BK12 end of the Z screw fits the 7001 bearing, and whether the Z set can come without its BK12.
-
-The other open items are in the D-207 entry at the top of `docs/handover-archive.md`.
-
-**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, carry out items 1 to 4.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
