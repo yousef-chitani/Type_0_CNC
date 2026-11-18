@@ -65,7 +65,9 @@ Paste the replies into a session when they come in.
 
 === JOB 3: FUSION 360 (before 15 Feb 2027) ===
 
-   - Open cad/v2/out/assembly/type0_assembly.step in Fusion.
+   - DO NOT use cad/v2/out/assembly/type0_assembly.step: it is the old
+     fixed-gantry machine. Start from docs/moving-gantry-sketch.md, D-164
+     and the vendor models in cad/vendor/.
    - Draw the brackets, plates and sensor mounts in detail.
    - Go through the VERIFY list in assembly.md.
    - Export the result as STEP and save it in cad/v2/in/

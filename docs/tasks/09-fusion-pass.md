@@ -5,6 +5,8 @@
 **Who:** owner, then main session
 **Depends on:** none (03 is on hold, D-131)
 
+**Warning (18 Nov 2026):** `type0_assembly.step` is the old fixed-gantry design (before D-137). Build the moving-gantry assembly from `docs/moving-gantry-sketch.md`, D-164 and the vendor models in `cad/vendor/`.
+
 ## Read
 - docs/assembly.md (VERIFY list)
 - cad/v2/out/assembly/type0_assembly.step
