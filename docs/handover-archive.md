@@ -2,6 +2,23 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000. 18 Nov 2026: Y bracket clashes fixed (D-198, D-199)
+
+**Done:** in `Type_0_v3` the Y trigger mounts, Y cable chain supports, Y sensors and chain travel end all moved 15 outward, so the sensors still line up with their trigger screws and the chain stays in line. 3 printed spacers fill the gap at the rollers, 6 roller screws became M6 x 30, and 8 cast-in M6 inserts are modelled in the tub walls. The casting is now 40.17 L. The 8 riser bolts at Y -6 and Y 561 are M6 x 25 (X13, £7.59, D-199). Measured: no bracket, sensor or spacer overlaps the tub or another part, apart from screws in their threaded holes. Parts carried on the rollers stay clear over the 386.2 Y travel. The timeline is 1304 with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
+
+**Left:**
+1. **Riser bolts at Y -23 and Y 629 (6 bolts).** M6 x 35 is proposed and needs a live price. The model still shows M6 x 30 on all 14 riser bolts, including the 8 now set to M6 x 25.
+2. **Cast-in inserts.** Choose the M6 insert type and price 8 of them. The 10 diameter x 14 deep size is a modelling assumption. The mould must hold them in place. **Check they can be cast:** the top insert (Z 112.5) has 2.5 of EG below the seat recess and 6 to the bar pocket, and the 4 inserts at +X, Y 520 sit at 15 pitch, leaving 5 of EG between them. Hand-tamped EG may not fill these gaps. Options: a smaller insert, lower trigger mount holes, or one steel strip carrying all 4 threads.
+3. **Machine width.** The brackets now reach X -417 to 502.5; the chain side was 487.5. Check this against the enclosure and bench.
+4. **Tidy up.** Add the 3 spacers to `docs/printed-parts.md`. Rename the components `M6x12 (7)` and `M6x12 (8)`, which now hold M6 x 30 screws.
+5. **Not modelled:** table fixing holes, machine feet and pads, mould details.
+6. **Z plate stiffness** (D-184).
+7. **Top roller screw strength.** They thread into only 3 of tube wall: check this.
+8. **Amazon delivery.** X11 and X12 are free to deliver only on orders over £35. The two packs come to £12.98, and the charge below £35 is not known.
+9. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, settle the cast-in insert with the owner, including whether it can be cast at these positions, and price the M6 x 35 riser bolts.
+
 ## 00000000000000000000000000000000000000000000. 18 Nov 2026: EG tub walls thinned and floor edges filleted (D-197)
 
 **Done:** in `Type_0_v3` the tub walls go from 140 to 80 wide, so the tub is now 780 x 690 x 140 high (outer faces X ±390). Both floor-to-wall edges have an R20 fillet. No draft is needed, because the mould is destroyed at demoulding. The 4 front riser screws moved from X ±305 to X ±365, into the riser holes. The casting is 40.18 L, 92.4 kg at 2,300 kg/m³, down from 51.24 L and 117.8 kg. Measured: casting and levelling layer volumes match the hand figures, only the 3 tub bodies changed and the 4 screws moved out of 939 bodies, and the timeline is 1269 with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**

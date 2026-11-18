@@ -56,6 +56,18 @@ Total about 270 g PETG + 12 g TPU.
 - **Grommet:** cut a **70 × 150 mm** hole in the bench top (D-99 position: 850–930 from the left, 700–860 from the front, outer flange size). Drop the frame in, lay the TPU membrane in its recess, add the clamp ring, and fix with 4 × 4 × 30 screws (T11) through the ring and flange into the top. Feed the hoses and cables through the slits.
 - **E-stop box:** fit the XB2 button in the lid (22.5 mm hole, notch for its anti-turn tab), wire it, fit an M20 cable gland in the bottom hole, screw the box to the front apron with 2 × 4 × 40 screws, and close the lid with 4 × 4 × 30 screws (T11). **CHECK:** the button's depth behind the panel is under 75 mm before printing.
 
+## Y roller spacers (D-198)
+
+Three spacers fill the gap at the Y rollers. They are modelled in `Type_0_v3`. There is no print file yet: export them from Fusion. Material PETG (D-101).
+
+| Part | Qty | Size (mm) | Holes | Volume |
+|---|---|---|---|---|
+| Y Sensor Spacer | 1 | 14.5 thick x 15 x 30.5 | 2 x 6.6 through, 15 apart | 5.64 cm³ |
+| Y2 Sensor Spacer | 1 | 14.5 thick x 15 x 30.5 | 2 x 6.6 through, 15 apart | 5.64 cm³ |
+| Y Chain Travel End Spacer | 1 | 15 thick x 30 x 40 | 2 x 6.6 through, 15 apart | 16.97 cm³ |
+
+The M6 x 30 roller screws (X12) pass through them.
+
 ## Re-generating
 ```
 python cad/v2/printed_parts.py
