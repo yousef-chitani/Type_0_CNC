@@ -103,7 +103,7 @@ Visibility only, on X, Y and Y2. The timeline stayed at 1182 items with 1 error 
 | `HM12-57` (3) | `BK12` (3) |
 | `HM12 M6x50` bolts (3 sets) | `Nema24 Plate` (3) |
 
-The NEMA 23 motors and D30L40 couplings are still shown until the imported parts go in. No BK12 bolts are modelled yet.
+The NEMA 23 motors and D30L40 couplings have since been replaced and hidden (see the DFU1605 section below). No BK12 bolts are modelled yet.
 
 ## Moving the Y motors to the back (D-181): risers and rails moved
 
@@ -114,13 +114,13 @@ The NEMA 23 motors and D30L40 couplings are still shown until the imported parts
 | **550 (D-175, kept by D-185)** | 650 | 690 | **386.2** (550 less the measured 163.8 block span; the model's 385 slider range was run, 18 Nov) |
 | 570 (tried, dropped) | 670 | 710 | 406 (measured over 41 positions, no clashes) |
 
-Type 0 needs 350. In the 570 trial the tightest gaps at the ends of travel were 1.0 from block to riser and 4.1 from the SFU1610 nut to the BF12. The DFU1605 nut is longer, so re-check this when it is imported. These use PrintNC's blocks.
+Type 0 needs 350. In the 570 trial the tightest gaps at the ends of travel were 1.0 from block to riser and 4.1 from the SFU1610 nut to the BF12. These use PrintNC's blocks. The 550 figures below replace this trial.
 
 **Open document, not saved (timeline 1183, 1 error, 5 warnings, the same failures as version 1):**
 - `YCuttingArea` is back to 385 and `calcYRailLength` has its original formula.
 - New sketch `D-181 Y riser targets`, with plain-number points at (-350, -23, 125) and (-335, 561, 125).
 - `Rigid 311` and `Rigid 312` point at that sketch, angle 0, flipped. Risers, BK12, BF12, plate, screw, coupling, motor and bolts followed, and Y2 followed through its mirror features.
-- The rear of the motor is at Y 762, 109 behind the tub with the NEMA 23. D-142 allows about 185. The NEMA 24 length is still to come from its datasheet.
+- The rear of the NEMA 23 motor was at Y 762, 109 behind the tub. D-142 allows about 185. The NEMA 24 figure is in the DFU1605 section below.
 
 - **Y rails moved 61.5 forward (18 Nov):** `d80` is now `calcYRailStartingHole + 36.5 mm + 61.5 mm` and `d196` is `-61.5 mm`. Both rails run Y 2.5 to 552.5, and all 9 holes on each rail line up with the frame holes (Y 37 to 517). The risers did not move. Timeline 1183, 1 error, 5 warnings, the same failures as version 1.
 
@@ -152,6 +152,7 @@ Fitted on X, Y and Y2 in `Type_0_v3`. Timeline 1205, 1 error, 5 warnings, the sa
 
 - **Nuts:** `dfu1605_nut.step`, flange on the old SFU1610 seat, bolt holes in line, held to the hidden SFU1610 nut by an as-built joint. The nut body runs 100 into the roller. The vendor's 130 screw stub is hidden.
 - **Motors:** `24hs40_motor.step`, flange on the back face of the `Nema24 Plate`, held by an as-built joint. Measured from the STEP: body 125 behind the flange, shaft Ø10 × 20, pilot Ø38.1, holes on a 50 square. The plate has the same 50 square.
+- **Motor identity not confirmed:** the STEP's own product name is `24HE40-5004D-E1000`, while the BOM part is 24HS40-5004D-E1000. No datasheet for this motor is in `cad/vendor/`, so the 125 length comes from the STEP only. The overhang has 51 to spare against D-142.
 - **Couplings:** `D25L35 Coupling (stand-in)` is a plain Ø25 × 35 sleeve with a Ø10 bore, because no vendor CAD exists.
 - **Hidden, not deleted:** SFU1610 nuts, their M6 90° grease fittings, NEMA 23 motors, D30L40 8-10 couplings, and the M4 × 16 motor bolts.
 

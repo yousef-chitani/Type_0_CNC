@@ -12,9 +12,11 @@
 
 **Left:**
 1. **Coupling grip, owner's decision.** Screw end and motor shaft are 21.2 apart, so the 35 long coupling grips only 6.9 of each shaft. Moving the motor plate 12 towards the screw gives 12.9 of grip and 1.6 clear of the BK12, and needs the riser shortened on Y and the matching part on X.
-2. **Z axis (D-179, D-184).** New 150 wide plate, 6082 in Phase 1 then steel, 15 risers stay, 350 high.
+2. **Motor length, owner to confirm.** The STEP is named `24HE40-5004D-E1000` and gives a 125 body. No datasheet for it is in `cad/vendor/`.
+3. **Review the parts that moved with the rails:** Y trigger mount, roller sensor mount and cable chain supports.
+4. **Z axis (D-179, D-184).** New 150 wide plate, 6082 in Phase 1 then steel, 15 risers stay, 350 high.
 
-**Exact next step:** ask the owner to save and to decide the coupling grip. Apply that choice, then start the Z plate.
+**Exact next step:** in a new session, once the owner has saved `Type_0_v3` and decided the coupling grip, record the decision as D-186, apply it, then start the Z plate.
 
 ## 000000000000000000000000000000000000. 18 Nov 2026: Y rails shifted, Y travel measured
 
