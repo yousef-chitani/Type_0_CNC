@@ -75,6 +75,14 @@ Paste the replies into a session when they come in.
 The mould drawings can't start until this is done.
 
 
+=== JOB 4: FUSION MODEL AND LIMO BASKET (added 18 Nov 2026) ===
+
+   - Save the open Fusion document under a new name. It is unsaved.
+   - Tell a session whether the model may be changed beyond parameters
+     to match D-179 to D-182.
+   - Set the D25L35 coupling to 4 in the LiMo basket (D-182).
+
+
 === LATER (no rush) ===
 
    - When the safety relay arrives: photo of its terminal labels.
