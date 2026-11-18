@@ -10,7 +10,7 @@
 
 **Done:** `cad/v2/steel_gantry_sketch.py` draws the layout below from one list of boxes and checks it over the full X, Y and Z travel. Outputs: `cad/v2/out/steel_gantry_sketch.png` and `.json`. Summary and owner questions: `docs/steel-gantry-sketch.md`. Moving mass **73.4 kg**, centre of mass 30.5 behind the Y carriages.
 
-**Found (still in the drawing, fixes proposed, nothing decided):** (1) round Ø48 ball nut flange overlaps the top arm and both foot steps by 4; (2) the X belt covers the right foot access hole at X 345, Y 262; (3) Y BK12/BF12 touch the foot at X 380; (4) X block to BK12/BF12 gap only 1.25 at the end of travel.
+**Found (still in the drawing, fixes proposed, nothing decided):** (1) round Ø48 ball nut flange overlaps the top arm and both foot steps by 4; (2) the X belt covers the right foot access hole at X 345, Y 262; (3) Y BK12/BF12 touch the foot at X 380; (4) X block to BK12/BF12 gap only 1.25 at the end of travel. With the proposed fixes (`--fixes`) the check finds no clashes and every access hole is clear.
 
 **Left:** the owner has not agreed the layout or the 4 fixes. Not verified: SHS corner radius (flat width), the real ball nut flange. No D-numbers, no STEP. `cad/v2/Facebutton v2 frame.step` is still untracked: ask the owner what it is.
 

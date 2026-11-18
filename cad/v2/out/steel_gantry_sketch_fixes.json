@@ -1,0 +1,672 @@
+{
+ "near": [
+  {
+   "a": "Tub wall R",
+   "b": "Y flange R",
+   "same_group": false,
+   "gap": 1.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Tub wall L",
+   "b": "Y flange L",
+   "same_group": false,
+   "gap": 1.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Top seat",
+   "b": "X flange",
+   "same_group": false,
+   "gap": 1.0,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Y BF12 R",
+   "b": "Foot inner R",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Y BF12 R",
+   "b": "Foot step R",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Y BK12 R",
+   "b": "Foot inner R",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": 50.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Y BK12 R",
+   "b": "Foot step R",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": 50.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Y BF12 L",
+   "b": "Foot inner L",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Y BF12 L",
+   "b": "Foot step L",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Y BK12 L",
+   "b": "Foot inner L",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": 50.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "Y BK12 L",
+   "b": "Foot step L",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": 50.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "X BK12",
+   "b": "Top arm",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": 0.0,
+   "saddle_x": 200.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "X BF12",
+   "b": "Top arm",
+   "same_group": false,
+   "gap": 2.0,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "X pulley screw",
+   "b": "X outboard bearing",
+   "same_group": true,
+   "gap": 2.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "X pulley motor",
+   "b": "X motor plate",
+   "same_group": true,
+   "gap": 2.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "X block top R",
+   "b": "X housing",
+   "same_group": true,
+   "gap": 2.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "X spacer R",
+   "b": "X housing",
+   "same_group": true,
+   "gap": 2.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "X block top L",
+   "b": "X housing",
+   "same_group": true,
+   "gap": 2.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "X spacer L",
+   "b": "X housing",
+   "same_group": true,
+   "gap": 2.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
+   "a": "X BK lock nut",
+   "b": "X pulley screw",
+   "same_group": true,
+   "gap": 3.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Beam SHS 150x150x8",
+   "b": "X rail top",
+   "same_group": true,
+   "gap": 4.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Beam SHS 150x150x8",
+   "b": "X rail bottom",
+   "same_group": true,
+   "gap": 4.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Beam SHS 150x150x8",
+   "b": "X BK12",
+   "same_group": true,
+   "gap": 4.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Beam SHS 150x150x8",
+   "b": "X BF12",
+   "same_group": true,
+   "gap": 4.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "X block top R",
+   "b": "X flange",
+   "same_group": true,
+   "gap": 4.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "X spacer R",
+   "b": "X flange",
+   "same_group": true,
+   "gap": 4.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Tub wall R",
+   "b": "Y block front R",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Tub wall R",
+   "b": "Y block rear R",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Tub wall L",
+   "b": "Y block front L",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Tub wall L",
+   "b": "Y block rear L",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Top seat",
+   "b": "X block top R",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Top seat",
+   "b": "X block top L",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Bottom seat",
+   "b": "X block bottom R",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Bottom seat",
+   "b": "X block bottom L",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Z riser R",
+   "b": "Z block low R",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 55,
+   "status": "ok"
+  },
+  {
+   "a": "Z riser R",
+   "b": "Z block high R",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 55,
+   "status": "ok"
+  },
+  {
+   "a": "Z riser L",
+   "b": "Z block low L",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 55,
+   "status": "ok"
+  },
+  {
+   "a": "Z riser L",
+   "b": "Z block high L",
+   "same_group": false,
+   "gap": 4.3,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 55,
+   "status": "ok"
+  },
+  {
+   "a": "Tub wall R",
+   "b": "Y housing R",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Y BF12 R",
+   "b": "Y nut R",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Y BF12 R",
+   "b": "Y flange R",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Y BK12 R",
+   "b": "Y nut R",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": 125.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Foot inner R",
+   "b": "Bottom seat",
+   "same_group": true,
+   "gap": 5.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Tub wall L",
+   "b": "Y housing L",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Y BF12 L",
+   "b": "Y nut L",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Y BF12 L",
+   "b": "Y flange L",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": -225.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Y BK12 L",
+   "b": "Y nut L",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": 125.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Foot inner L",
+   "b": "Bottom seat",
+   "same_group": true,
+   "gap": 5.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Beam SHS 150x150x8",
+   "b": "Saddle front plate",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Beam SHS 150x150x8",
+   "b": "X flange",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "Top seat",
+   "b": "X housing",
+   "same_group": false,
+   "gap": 5.0,
+   "spindle_y": 0.0,
+   "saddle_x": -200.0,
+   "nose_z": 205,
+   "status": "ok"
+  },
+  {
+   "a": "X belt",
+   "b": "X motor plate",
+   "same_group": true,
+   "gap": 5.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "ok"
+  }
+ ],
+ "clashes": 0,
+ "access": [
+  {
+   "x": 345.0,
+   "yg": 190.0,
+   "blocked_by": []
+  },
+  {
+   "x": 420.0,
+   "yg": 190.0,
+   "blocked_by": []
+  },
+  {
+   "x": 395.0,
+   "yg": 262.0,
+   "blocked_by": []
+  },
+  {
+   "x": 430.0,
+   "yg": 262.0,
+   "blocked_by": []
+  },
+  {
+   "x": -345.0,
+   "yg": 190.0,
+   "blocked_by": []
+  },
+  {
+   "x": -420.0,
+   "yg": 190.0,
+   "blocked_by": []
+  },
+  {
+   "x": -395.0,
+   "yg": 262.0,
+   "blocked_by": []
+  },
+  {
+   "x": -430.0,
+   "yg": 262.0,
+   "blocked_by": []
+  }
+ ],
+ "bolts": {
+  "m10_to_nearest_block_bolt": 17.5,
+  "m10_edge_to_foot_rear": 13,
+  "thread_into_foot": 22,
+  "foot_left_under_thread_inner": 18,
+  "foot_left_under_thread_step": 3,
+  "rail_bolt_thread_in_wall": 7.0,
+  "rail_edge_past_flat_start": 2.0,
+  "bk_edge_inside_flat_end": 10.0,
+  "x_block_end_on_rail": 16.25,
+  "y_block_front_on_rail": 5.0,
+  "y_block_rear_on_rail": 17.5,
+  "foot_centre_yg": 143.0,
+  "carriage_centre_yg": 140.0
+ },
+ "mass": {
+  "total_kg": 73.4,
+  "beam_kg": 31.7,
+  "com_yg": 170.5,
+  "carriages_yg": 140.0,
+  "com_behind_carriages": 30.5,
+  "rear_blocks_share_pct": 70.3,
+  "parts": [
+   [
+    "spindle (assumed)",
+    7.0,
+    0
+   ],
+   [
+    "spindle clamp",
+    0.8,
+    40
+   ],
+   [
+    "Z plate",
+    1.51,
+    70
+   ],
+   [
+    "Z motor + mount (assumed)",
+    2.0,
+    35
+   ],
+   [
+    "Z screw + nut + BK/BF",
+    1.55,
+    100
+   ],
+   [
+    "Z rails + blocks",
+    3.15,
+    95
+   ],
+   [
+    "Z risers",
+    0.71,
+    112
+   ],
+   [
+    "saddle front plate 180x400x20",
+    3.89,
+    135.0
+   ],
+   [
+    "2 saddle arms 180x130x25",
+    3.16,
+    210.0
+   ],
+   [
+    "4 X blocks + nut housing + 2 spacers",
+    2.38,
+    194.0
+   ],
+   [
+    "X rails 2x600",
+    2.65,
+    186.0
+   ],
+   [
+    "X screw 700 + nut + BK/BF",
+    2.11,
+    236.0
+   ],
+   [
+    "X motor + plate + belt (assumed)",
+    2.0,
+    373.5
+   ],
+   [
+    "beam SHS 150x150x8, 890",
+    31.75,
+    225.0
+   ],
+   [
+    "2 feet (solid)",
+    6.55,
+    143.0
+   ],
+   [
+    "4 Y blocks + 2 Y nut housings",
+    2.2,
+    140.0
+   ]
+  ]
+ }
+}

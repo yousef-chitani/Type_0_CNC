@@ -1,6 +1,7 @@
 """Steel SHS gantry layout (D-164): boxes, clash check, one PNG. No STEP. All of it is a PROPOSAL.
 
 Run: PYTHONUTF8=1 python cad/v2/steel_gantry_sketch.py
+     add --fixes to check the 4 proposed fixes (writes steel_gantry_sketch_fixes.json only, no PNG)
   -> cad/v2/out/steel_gantry_sketch.png   saddle section, front view, beam top view, foot section
   -> cad/v2/out/steel_gantry_sketch.json  gaps, access holes, bolt checks, moving mass
 
@@ -9,19 +10,21 @@ Gantry parts: Yg = Y measured back from the spindle axis (tub Y = spindle Y + Yg
 The tub comes from out/gantry_sketch.json. Bought-part sizes: cad/vendor/README.md and assembly.py.
 Every part is a bounding box, so a round part is checked as its square envelope.
 """
-import itertools, json, math, pathlib
+import itertools, json, math, pathlib, sys
 
 HERE = pathlib.Path(__file__).parent
 OUT = HERE / "out"
 T = json.loads((OUT / "gantry_sketch.json").read_text(encoding="utf-8"))
 S, YC = T["S"], T["Y"]["atc_reach_100"]
 AL, STEEL = 2700e-9, 7850e-9
+FIXES = "--fixes" in sys.argv                   # proposed fixes in docs/steel-gantry-sketch.md
+STEP_X = 378.0 if FIXES else 380.0              # inner edge of the foot step
 
 # ---------------------------------------------------------------- bought parts (mm)
 RAIL_W, RAIL_H = 20.0, 17.5                     # HGR20
 BL_W, BL_L, BL_H, BL_H1 = 44.0, 77.5, 30.0, 4.3 # HGH20CA, H1 from the drawing in cad/vendor/README.md
 BL_B, BL_C = 32.0, 36.0                         # HGH20CA hole spacing: across the rail, along the rail
-X_PITCH, Y_PITCH, Z_PITCH = 100.0, 150.0, 90.0
+X_PITCH, Y_PITCH, Z_PITCH = (90.0 if FIXES else 100.0), 150.0, 90.0
 BK_W, BK_H, BK_L, BK_LOCK, BF_L, AXIS_H = 60.0, 43.0, 25.0, 12.0, 20.0, 25.0  # BK12 / BF12
 HS_W, HS_H, HS_L, HS_C = 52.0, 40.0, 40.0, 20.0 # DSG16H
 NUT_D, NUT_L, FL_D, FL_T = 28.0, 100.0, 48.0, 10.0  # DFU1605: vendor model has a ROUND Ø48 flange (flats 40 unconfirmed)
@@ -67,13 +70,13 @@ for sn, s in (("R", 1), ("L", -1)):
     add(f"Y motor mount {sn}", "F", fx(sx - 30, sx + 30), (ty[1], ty[1] + 60), (wt - 5, wt + 55), "al")
     add(f"Y motor {sn}", "F", fx(sx - 30, sx + 30), (ty[1] + 60, ty[1] + 185), (wt - 5, wt + 55), "motor")
     # ------------------------------------------------------------ moves with Y: feet and carriages
-    add(f"Foot inner {sn}", "Y", fx(310, 380), (6, 280), (155, BZ0))
-    add(f"Foot step {sn}", "Y", fx(380, 445), (6, 280), (170, BZ0))
+    add(f"Foot inner {sn}", "Y", fx(310, STEP_X), (6, 280), (155, BZ0))
+    add(f"Foot step {sn}", "Y", fx(STEP_X, 445), (6, 280), (170, BZ0))
     for k, d in (("front", -Y_PITCH / 2), ("rear", Y_PITCH / 2)):
         add(f"Y block {k} {sn}", "Y", fx(rx - BL_W / 2, rx + BL_W / 2), mid(CAR_Y + d, BL_L), (wt + BL_H1, wt + BL_H), "block")
     add(f"Y housing {sn}", "Y", fx(sx - HS_W / 2, sx + HS_W / 2), mid(CAR_Y, HS_L), (130, 170), "al")
     add(f"Y nut {sn}", "Y", fx(sx - NUT_D / 2, sx + NUT_D / 2), mid(CAR_Y, NUT_L), (150 - NUT_D / 2, 150 + NUT_D / 2), "steel")
-    add(f"Y flange {sn}", "Y", fx(sx - FL_D / 2, sx + FL_D / 2), (CAR_Y + NUT_L / 2 - FL_T, CAR_Y + NUT_L / 2), (150 - FL_D / 2, 150 + FL_D / 2), "steel")
+    add(f"Y flange {sn}", "Y", fx(sx - FL_D / 2, sx + FL_D / 2), ((CAR_Y - NUT_L / 2, CAR_Y - NUT_L / 2 + FL_T) if FIXES else (CAR_Y + NUT_L / 2 - FL_T, CAR_Y + NUT_L / 2)), (150 - FL_D / 2, 150 + FL_D / 2), "steel")
 
 # ---------------------------------------------------------------- moves with Y: beam and X drive
 add("Beam SHS 150x150x8", "Y", (-BEAM_HALF, BEAM_HALF), (B0, B1), (BZ0, BZ1), "beam")
@@ -126,7 +129,7 @@ ALLOWED = [  # these pairs overlap or touch on purpose (a part running on, insid
     ("Y screw", "Y BF"), ("Y nut", "Y housing"), ("Y nut", "Y flange"), ("Y flange", "Y housing"), ("X belt", "X pulley"),
     ("X BK12", "X BK lock"), ("Spindle body", "Spindle clamp"), ("Spindle body", "Spindle nose"), ("Spindle nose", "Spindle clamp"),
     ("X screw", "X belt"),
-]
+] + ([("Top arm", "X flange"), ("Foot step", "Y flange")] if FIXES else [])  # relief slots 12 x 30 x 5 deep
 def allowed(a, b):
     return any((a.startswith(p) and b.startswith(q)) or (a.startswith(q) and b.startswith(p)) for p, q in ALLOWED)
 
@@ -170,7 +173,8 @@ def status(r):
 near = [dict(r, status=status(r)) for r in sorted(results, key=lambda r: r["gap"]) if r["gap"] < 6 and not (r["same_group"] and r["gap"] == 0)]
 
 # ---------------------------------------------------------------- wrench access through the Ø20 holes in the top wall
-HOLES = [(s * x, y) for s in (1, -1) for x in (345.0, 420.0) for y in (190.0, 262.0)]
+M10 = [(x, 190.0) for x in (345.0, 420.0)] + [(x, 262.0) for x in ((395.0, 430.0) if FIXES else (345.0, 420.0))]
+HOLES = [(s * x, y) for s in (1, -1) for x, y in M10]
 access = []
 for hx, hy in HOLES:
     col = ((hx - 10, hx + 10), (hy - 10, hy + 10), (BZ1, 520.0))
@@ -180,7 +184,7 @@ for hx, hy in HOLES:
 
 # ---------------------------------------------------------------- bolts
 m5 = [(345 + i * BL_B / 2, CAR_Y + d + j * BL_C / 2) for i in (-1, 1) for j in (-1, 1) for d in (-Y_PITCH / 2, Y_PITCH / 2)]
-m10 = [(x, y) for x in (345.0, 420.0) for y in (190.0, 262.0)]
+m10 = M10
 bolts = dict(
     m10_to_nearest_block_bolt=round(min(math.dist(p, q) for p in m10 for q in m5), 1),
     m10_edge_to_foot_rear=280 - 262 - 5,
@@ -226,7 +230,15 @@ mass = dict(total_kg=round(total, 1), beam_kg=round(beam_kg, 1), com_yg=round(co
             parts=[(n, round(k, 2), y) for n, k, y in masses])
 
 report = dict(near=near, clashes=sum(r["status"] == "CLASH" for r in near), access=access, bolts=bolts, mass=mass)
-(OUT / "steel_gantry_sketch.json").write_text(json.dumps(report, indent=1, ensure_ascii=False), encoding="utf-8")
+(OUT / ("steel_gantry_sketch_fixes.json" if FIXES else "steel_gantry_sketch.json")).write_text(json.dumps(report, indent=1, ensure_ascii=False), encoding="utf-8")
+
+if FIXES:
+    for r in near:
+        if r["status"] != "ok":
+            print(f"{r['status']:6} {r['gap']:7.2f}  {r['a']} / {r['b']}")
+    print("clashes:", report["clashes"], "| blocked holes:", [(h["x"], h["yg"], h["blocked_by"]) for h in access if h["blocked_by"]])
+    print("nearest M10 to a Y block bolt:", bolts["m10_to_nearest_block_bolt"], "| X block end on rail:", bolts["x_block_end_on_rail"])
+    sys.exit(0)
 
 # ---------------------------------------------------------------- drawing
 import matplotlib; matplotlib.use("Agg")
