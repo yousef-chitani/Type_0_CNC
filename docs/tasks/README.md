@@ -7,7 +7,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 - **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-199).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). When Claude edits it, a hook (`tools/bom_hook.py`) runs the 5 generators automatically and reports only errors. After a hand edit, set `PYTHONUTF8=1` and run `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
-- **Castings: keep them simple.** Do not add cast-in features. Phase 1 budget £4,200; priced total **£3,977.99, £222.01 left** (18 Nov 2026, D-164 steel SHS beam, D-182 no X belt; G01 beam and G03 feet not priced; G02/G04 dropped).
+- **Castings: keep them simple.** Do not add cast-in features (except the 8 M6 inserts, D-198). Phase 1 budget £4,200; priced total **£3,977.99, £222.01 left** (18 Nov 2026, D-164 steel SHS beam, D-182 no X belt; G01 beam and G03 feet not priced; G02/G04 dropped).
 - Write plainly and briefly. Do not merge branch `claude/awesome-ramanujan-by9kds` (old design).
 
 ## State in five lines
