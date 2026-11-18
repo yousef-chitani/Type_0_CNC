@@ -2,6 +2,16 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000. 18 Nov 2026: D-164, steel SHS beam chosen
+
+- Owner chose **SHS 150 × 150 × 8, 890 long**: rails on the top and bottom faces, X screw on top. Supersedes D-162/D-163. `bom.csv`: G01 replaced (not priced), generators re-run.
+- **Phase 1 £3,972.51 excluding G01 and G03: £227.49 left** for the tube, levelling epoxy, end plates and feet.
+- K I Metals live page (curl, 18 Nov): £90.30 ex VAT, £108.36 inc, with 33.9 kg shown, so about 1 m. The 890 mm price and delivery to SA2 were not seen.
+- **`cad/v2/out/assembly/type0_assembly.step` and `assembly.py` are the old fixed-gantry design.** Do not start the Fusion assembly from them.
+- Open: saddle (RHS or plate), spindle offset (D-106), X motor position, beam-to-foot joint, levelling-pour plan.
+
+**Exact next step:** lay out the beam, rails, X screw, saddle and feet in a new sketch with the levelling-pour plan, and ask the owner the open choices. The owner prices the tube (Dyfed Steels first).
+
 ## 00000000000000000000. 17 Nov 2026: steel box-section beam proposed (superseded by D-164)
 
 - Owner proposes a **PrintNC-style steel beam**: rails on the top and bottom faces, X screw on top. The saddle may be RHS too. **D-162/D-163 (Vallder) still stand until the owner decides**; the Vallder beam is not ordered.

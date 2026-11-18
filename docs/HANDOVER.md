@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000. 18 Nov 2026: steel gantry sketch drawn and clash-checked
+
+**Done:** `cad/v2/steel_gantry_sketch.py` draws the layout below from one list of boxes and checks it over the full X, Y and Z travel. Outputs: `cad/v2/out/steel_gantry_sketch.png` and `.json`. Summary and owner questions: `docs/steel-gantry-sketch.md`. Moving mass **73.4 kg**, centre of mass 30.5 behind the Y carriages.
+
+**Found (still in the drawing, fixes proposed, nothing decided):** (1) round Ø48 ball nut flange overlaps the top arm and both foot steps by 4; (2) the X belt covers the right foot access hole at X 345, Y 262; (3) Y BK12/BF12 touch the foot at X 380; (4) X block to BK12/BF12 gap only 1.25 at the end of travel.
+
+**Left:** the owner has not agreed the layout or the 4 fixes. Not verified: SHS corner radius (flat width), the real ball nut flange. No D-numbers, no STEP. `cad/v2/Facebutton v2 frame.step` is still untracked: ask the owner what it is.
+
+**Exact next step:** get the owner's answers to the 4 questions at the end of `docs/steel-gantry-sketch.md`, apply them to the script, re-run until no clashes are left, and record the decisions (next: D-165). Then the owner starts the gantry in Fusion and prices the tube (Dyfed Steels first).
+
 ## 0000000000000000000000. 18 Nov 2026: steel gantry layout brief (sketch NOT drawn)
 
 **Done:** the layout below was worked out by hand. **Not done:** no script, PNG or note exists; no clash check has been run; the owner has not seen or agreed these numbers. All of it is a proposal: no D-numbers.
@@ -38,16 +48,6 @@
 **Note:** `cad/v2/Facebutton v2 frame.step` is untracked, single part named "facebutton", about 491 × 418 × 1000. Not used here and not committed: ask the owner what it is.
 
 **Exact next step:** write `cad/v2/steel_gantry_sketch.py` from the table above (read `cad/v2/out/gantry_sketch.json` for the tub; do not import `gantry_sketch.py`, it rewrites its outputs). Output a PNG with a section through the saddle, a front view and a beam top view, box clash checks, and a one-page `docs/steel-gantry-sketch.md` with the questions. Then the owner agrees it and starts the gantry in Fusion. The owner can model the tub and Y axis now, and prices the tube (Dyfed Steels first).
-
-## 000000000000000000000. 18 Nov 2026: D-164, steel SHS beam chosen
-
-- Owner chose **SHS 150 × 150 × 8, 890 long**: rails on the top and bottom faces, X screw on top. Supersedes D-162/D-163. `bom.csv`: G01 replaced (not priced), generators re-run.
-- **Phase 1 £3,972.51 excluding G01 and G03: £227.49 left** for the tube, levelling epoxy, end plates and feet.
-- K I Metals live page (curl, 18 Nov): £90.30 ex VAT, £108.36 inc, with 33.9 kg shown, so about 1 m. The 890 mm price and delivery to SA2 were not seen.
-- **`cad/v2/out/assembly/type0_assembly.step` and `assembly.py` are the old fixed-gantry design.** Do not start the Fusion assembly from them.
-- Open: saddle (RHS or plate), spindle offset (D-106), X motor position, beam-to-foot joint, levelling-pour plan.
-
-**Exact next step:** lay out the beam, rails, X screw, saddle and feet in a new sketch with the levelling-pour plan, and ask the owner the open choices. The owner prices the tube (Dyfed Steels first).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
