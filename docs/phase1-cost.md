@@ -48,11 +48,11 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| M01 | HGR20 rail set Y: 2 × 600 mm + 4 blocks | 2 pcs | £29.50 |
+| M01 | HGR20 rail set Y: 2 × 550 mm + 4 blocks | 2 pcs | £29.50 |
 | M02 | HGR20 rail set X: 2 × 600 mm + 4 blocks | 2 pcs | £29.50 |
 | M03 | HGR20 rail set Z: 2 × 350 mm + 4 blocks | 2 pcs | £24.34 |
 | M04 | HGH20CA carriages (in the rail kits) | 12 pcs | £0.00 |
-| M05 | DFU1605 C5 ballscrew sets X 700 / Y 600 × 2 / Z 350 | 4 pcs | £470.82 |
+| M05 | DFU1605 C5 ballscrew sets X 700 / Y 650 × 2 / Z 350 | 4 pcs | £470.82 |
 | M06 | BK12 + BF12 end supports, C5 (in the screw sets) | 4 sets | £0.00 |
 | M07 | Steel nut housings (in the screw sets) | 4 pcs | £0.00 |
 | M08 | Flexible coupling D25L35, 10 mm to 10 mm (Z, Y1, Y2) | 3 pcs | £6.57 |

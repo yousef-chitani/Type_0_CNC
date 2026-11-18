@@ -65,57 +65,57 @@
     -85.0,
     265.0
    ],
-   "rail_need": 587.5,
-   "rail_buy": 600,
+   "rail_need": 520.6,
+   "rail_buy": 550,
    "rail_y": [
-    -203.75,
-    396.25
+    -185.0,
+    365.0
    ],
-   "screw_need": 572.0,
-   "screw_buy": 600,
-   "bf_y0": -160.0,
-   "bk_y1": 357.0,
+   "screw_need": 650.0,
+   "screw_buy": 650,
+   "bf_y0": -216.3,
+   "bk_y1": 433.8,
    "tub_y": [
-    -218.75,
-    411.25
+    -224.0,
+    466.0
    ],
-   "tub_len": 630.0,
-   "motor_end_y": 596.25
+   "tub_len": 690.0,
+   "motor_end_y": 575.0
   }
  },
  "variants": [
   {
    "name": "A  baseline: floor 60, walls 140 x 100 above the table, no back wall, ATC reach",
-   "kg": 129.0,
-   "epoxy_11": 14.2,
-   "epoxy_12": 15.5
+   "kg": 141.2,
+   "epoxy_11": 15.5,
+   "epoxy_12": 16.9
   },
   {
    "name": "B  as A + back wall 100 thick",
-   "kg": 146.8,
-   "epoxy_11": 16.1,
-   "epoxy_12": 17.6
+   "kg": 159.1,
+   "epoxy_11": 17.5,
+   "epoxy_12": 19.1
   },
   {
    "name": "C  as A, floor 80",
-   "kg": 155.0,
-   "epoxy_11": 17.1,
-   "epoxy_12": 18.6
+   "kg": 169.8,
+   "epoxy_11": 18.7,
+   "epoxy_12": 20.4
   },
   {
    "name": "D  as A, walls only 50 above the table (gantry gets 50 mm legs)",
-   "kg": 108.7,
-   "epoxy_11": 12.0,
-   "epoxy_12": 13.0
+   "kg": 119.0,
+   "epoxy_11": 13.1,
+   "epoxy_12": 14.3
   },
   {
    "name": "E  as A + one \u00d860 PVC core per wall",
-   "kg": 120.8,
-   "epoxy_11": 13.3,
-   "epoxy_12": 14.5
+   "kg": 132.3,
+   "epoxy_11": 14.5,
+   "epoxy_12": 15.9
   },
   {
-   "name": "F  as A without the ATC reach (tub shorter)",
+   "name": "F  as A without the ATC reach (old layout, not updated for D-175)",
    "kg": 122.1,
    "epoxy_11": 13.4,
    "epoxy_12": 14.6

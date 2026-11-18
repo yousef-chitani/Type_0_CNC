@@ -102,6 +102,18 @@ def y_case(front_extra):
 
 Y = {"no_reach": y_case(0.0), "atc_reach_100": y_case(100.0)}
 
+# D-175: PrintNC Y axis, sizes measured in the Fusion model. Rail centred on the carriage travel.
+c = Y["atc_reach_100"]
+y_mid = sum(c["car_y"]) / 2
+c["rail_need"], c["rail_buy"] = 350.0 + 170.6, 550                # travel + block group length in the model
+c["rail_y"] = (y_mid - 275.0, y_mid + 275.0)
+c["screw_need"], c["screw_buy"] = 650.0, 650                      # rail + 100
+c["bf_y0"], c["bk_y1"] = c["rail_y"][0] - 31.3, c["rail_y"][1] + 68.8
+seat_y = (c["rail_y"][0] - 36.0, c["rail_y"][1] + 98.0)           # BF12 riser at the front, BK12 riser at the back: 684
+c["tub_len"] = 690.0
+c["tub_y"] = (sum(seat_y) / 2 - 345.0, sum(seat_y) / 2 + 345.0)   # 3 clear at each end
+c["motor_end_y"] = seat_y[1] + 112.0                              # motor past the BK12 riser, from the model
+
 # ---------------------------------------------------------------- tub masses (solid unless stated)
 def tub_kg(L, floor_t=S["floor_t"], wall_top=S["wall_top"], back=0.0, core_d=0.0):
     W = 2 * S["wall_out_x"]
@@ -120,7 +132,7 @@ for name, L, kw in [
     ("C  as A, floor 80", L0, dict(floor_t=80.0)),
     ("D  as A, walls only 50 above the table (gantry gets 50 mm legs)", L0, dict(wall_top=S["table_top"] + 50)),
     ("E  as A + one Ø60 PVC core per wall", L0, dict(core_d=60.0)),
-    ("F  as A without the ATC reach (tub shorter)", L1, {}),
+    ("F  as A without the ATC reach (old layout, not updated for D-175)", L1, {}),
 ]:
     kg = tub_kg(L, **kw)
     variants.append(dict(name=name, kg=round(kg, 1), epoxy_11=round(0.11 * kg, 1), epoxy_12=round(0.12 * kg, 1)))

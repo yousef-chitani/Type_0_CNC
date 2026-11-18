@@ -1,6 +1,6 @@
 # PrintNC V4 gantry on Type 0 (18 Nov 2026)
 
-**Status: the parametric model is set to the Type 0 sizes, with 8 features still failing. The Fusion document is NOT saved.** Decisions: D-172, D-173, D-174.
+**Status: the parametric model is set to the Type 0 sizes, with 8 features still failing. The Fusion document is NOT saved.** Decisions: D-172 to D-175.
 
 ## Sources
 
@@ -16,7 +16,7 @@ Parameters only. No direct modelling.
 | Parameter | Was | Now | Why |
 |---|---|---|---|
 | `XCuttingArea` | 625 | **435** | Gives the 600 X rail |
-| `YCuttingArea` | 625 | **435** | Gives the 600 Y rail |
+| `YCuttingArea` | 625 | **385** | Gives the 550 Y rail (D-175) |
 | `XGantryWidth` | 75 | **150** | D-164 beam |
 | `XGantryHeight` | 75 | **150** | D-164 beam |
 | `XGantryThick` | 4 | **8** | D-164 beam |
@@ -27,14 +27,15 @@ Parameters only. No direct modelling.
 
 | Item | Value |
 |---|---|
-| X and Y rails | 600 |
+| X rails, Y rails | 600, **550** |
 | Gantry length | 775 |
 | Y rail spacing | **700**, tub widened to suit (D-173) |
 | X rails | Top and bottom of the beam, seats 150 apart |
 | Top roller, bottom roller | 150 wide, 175 wide by formula |
-| X and Y screw length in the model | 700 (Type 0: X 700, Y 600) |
+| X screw, Y screw | 700, **650** |
 | Y screw position | **Directly above the Y rail**, X ± 350 (D-174) |
-| Length of the Y rail and its supports in line | **734** with a 600 rail (riser 96.5 + gap 1.5 + rail 600 + gap 0.5 + riser 35.5, measured in the model from Y −34 to 700). The tub is 630 |
+| Length of the Y rail and its supports in line | **684** in the 690 tub, 3 clear at each end |
+| Y block travel on the 550 rail | About 379 with the model's blocks. Type 0 needs 350 |
 
 ## Still failing (8 features)
 
@@ -62,13 +63,6 @@ Parameters only. No direct modelling.
 
 ## Open for the owner
 
-1. **Tub length:** the Y rail and its supports no longer fit the 630 tub.
-
-   | Y rail | Length needed | Largest Y cutting area by the model's formula | Y screw by the model's formula | Tub mass, scaled from 129.0 kg |
-   |---|---|---|---|---|
-   | 600 (in the parts list) | 734 | 435 | 700 | 150.3 kg |
-   | 550 | 684 | 385 | 650 | 140.1 kg |
-
-   Type 0 needs 350 of Y travel (D-141). The lengths are the minimum, with no margin at the tub ends. The parts list has 600 Y screws, so either option changes them.
+1. **LiMo prices:** confirm the HGH20CA 550 set, the DFU1605 650 set and the shipping in the LiMo basket. `docs/bom.csv` still shows the old 600 prices.
 2. **Drill guide:** repair the 5 failed features by undo or by hand in Fusion, or replace the guide.
 3. **Steel gantry sketch:** D-172 replaces its gantry layout, so its 2 open items need closing.
