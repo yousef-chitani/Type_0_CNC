@@ -2,6 +2,20 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000. 18 Nov 2026: bottom roller screws settled, next tasks set (D-192)
+
+**Done:** the owner gave the Screwfix page for the 5 bottom roller screws: Easyfix A2 M6 x 20 socket cap, 5209T, pack of 50, £7.59 inc VAT, in stock. This is the pack already in `docs/bom.csv` under X03, so Phase 1 stays £3,963.41, £236.59 left. The owner also set the order: the Z plate stiffness next session, and modelling the cast element as the next major task, which is when the table top height gets confirmed (D-192). The Fusion model was not touched this session. **`Type_0_v3` still needs the owner to save it if D-191 is not saved yet.**
+
+**Left:**
+1. **Z plate stiffness** (D-184). Next session.
+2. **Model the cast element.** Next major task. Confirm the table top height of Z 70 from D-191 while doing it.
+3. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor. The owner has not said whether this comes before or after the cast element.
+4. **Top roller screws.** M6 x 25 for the 4 top holes: no live price yet. They thread into only 3 of tube wall: check this.
+5. **Front Y riser bolts** at X -305 and 305 sit outside the risers (already wrong, not moved). The tub needs drilling for the new Y 629 bolts.
+6. **Review the parts that moved with the rails:** Y trigger mount, roller sensor mount and cable chain supports.
+
+**Exact next step:** in a new session, check the stiffness of `Z Fixed Plate` (6082, 150 wide, 350 high, 20 thick, D-184, D-191). Start from `docs/z-axis-assessment.md`, and report the result to the owner before changing the plate.
+
 ## 0000000000000000000000000000000000000000. 18 Nov 2026: Z fixed plate modelled (D-191)
 
 **Done:** the owner saved `Type_0_v3` as version 5. The new component `Z Fixed Plate` is 150 wide, 350 high and 20 thick, at X -297.5 to -147.5, Y 417 to 437, Z 169 to 519, held to the bottom X roller by a rigid as-built joint. It has 9 holes, 6.6 clearance with counterbores 10.5 × 6.5 deep (D-191). Measured: all 9 hole axes match the roller and shim holes, the back face touches the bottom roller and the shim, and the next nearest parts are 8 away. The plate is flush with the roller sides, so it does not shorten X travel. Timeline 1243, 1 error and 5 warnings, the same failures as version 1. No material is assigned to the body. **The document is modified and not saved. The owner saves it.**
