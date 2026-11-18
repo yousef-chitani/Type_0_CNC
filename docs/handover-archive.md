@@ -2,6 +2,21 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000. 18 Nov 2026: roller screws settled, casting next (D-193 to D-195)
+
+**Done:** the 4 top roller screws change to M6 x 30, and the cast element is the next session (D-193). Measured in `Type_0_v3`, which had no unsaved changes: the screw seat is at Y 423.5, so an M6 x 30 ends at Y 453.5. At the top holes that is 5.5 past the 3 tube wall, with nothing in the way. The screws are in `docs/bom.csv` as X12: Drenky A2 M6 x 30, pack of 20, £6.99 from Amazon (D-194). Phase 1 is now £3,970.40, £229.60 left. The 5 bottom screws stay M6 x 20 (D-195). The Fusion model was not changed.
+
+**Left:**
+1. **Model the cast element.** Next session. Confirm the table top height of Z 70 from D-191 while doing it.
+2. **Amazon delivery.** X11 and X12 are free to deliver only on orders over £35. The two packs come to £12.98, and the charge below £35 is not known.
+3. **Top screw strength.** They thread into only 3 of tube wall: check this.
+4. **Z plate stiffness** (D-184), after the cast element.
+5. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
+6. **Front Y riser bolts** at X -305 and 305 sit outside the risers (already wrong, not moved). The tub needs drilling for the new Y 629 bolts.
+7. **Review the parts that moved with the rails:** Y trigger mount, roller sensor mount and cable chain supports.
+
+**Exact next step:** in a new session, model the cast element in `Type_0_v3`: tub 900 × 690 (D-175), with the new Y 629 riser bolts. Ask the owner about anything not already decided, and re-count errors and warnings after every write.
+
 ## 00000000000000000000000000000000000000000. 18 Nov 2026: bottom roller screws settled, next tasks set (D-192)
 
 **Done:** the owner gave the Screwfix page for the 5 bottom roller screws: Easyfix A2 M6 x 20 socket cap, 5209T, pack of 50, £7.59 inc VAT, in stock. This is the pack already in `docs/bom.csv` under X03, so Phase 1 stays £3,963.41, £236.59 left. The owner also set the order: the Z plate stiffness next session, and modelling the cast element as the next major task, which is when the table top height gets confirmed (D-192). The Fusion model was not touched this session. **`Type_0_v3` still needs the owner to save it if D-191 is not saved yet.**

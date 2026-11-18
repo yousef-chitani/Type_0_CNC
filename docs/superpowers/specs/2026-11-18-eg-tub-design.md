@@ -1,6 +1,6 @@
 # Epoxy-granite tub in `Type_0_v3`: short design (18 Nov 2026)
 
-**Status: approved by the owner and modelled, 18 Nov 2026 (D-196). The Fusion document is not saved yet.**
+**Status: approved by the owner and modelled, 18 Nov 2026 (D-196), then amended by D-197 (below). The D-197 changes are not saved in Fusion yet.**
 
 ## Why
 The tub is the one casting of the moving-gantry machine (D-137). Modelling it confirms the table height (D-191, D-192), fixes the rail-seat and bolt positions, and gives the mould drawing its sizes.
@@ -40,3 +40,16 @@ The tub goes in a new top-level component, `EG Tub`. Existing parts are not move
 
 ## Not in this design
 Table fixing holes, machine feet and pads, mould details, draft and corner fillets, new positions for the parts listed above.
+
+## Amendment D-197 (18 Nov 2026)
+This replaces the tub width, seat recess, levelling layer and draft entries above.
+
+| Item | Now |
+|---|---|
+| Tub outside | X ±390, Y -37 to 653, Z -15 to 125 (780 x 690 x 140 high) |
+| Walls | 80 wide, X 310 to 390. 20 of EG beside each bar pocket |
+| Levelling layer, each wall | X 315 to 390, Z 120 to 125 |
+| Inside long edges | R20 fillet, floor to wall, at X ±310, Z 45 |
+| Draft | None: the mould is destroyed at demoulding |
+| Front riser screws | Moved from X ±305 to X ±365 |
+| Casting | 40.18 L, 92.4 kg at 2,300 kg/m³ |
