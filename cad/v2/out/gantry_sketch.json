@@ -10,19 +10,19 @@
   ],
   "saddle_z0": 70,
   "saddle_x_sweep": 290.0,
-  "wall_in_x": 305.0,
+  "wall_in_x": 310.0,
   "wall_w": 140.0,
-  "rail_x": 345.0,
-  "screw_x": 410.0,
-  "wall_out_x": 445.0,
-  "span": 690.0,
+  "rail_x": 350.0,
+  "screw_x": 415.0,
+  "wall_out_x": 450.0,
+  "span": 700.0,
   "floor_t": 60.0,
   "wall_top": 125,
   "car_top": 155.0,
   "foot_t": 40.0,
-  "beam_len": 890.0,
+  "beam_len": 900.0,
   "car_y_from_spindle": 140,
-  "moving_kg": 49.82479,
+  "moving_kg": 49.96519,
   "core_cover_side": 40.0,
   "core_cover_top": 20,
   "core_cover_bottom": 90.0
@@ -86,39 +86,39 @@
  "variants": [
   {
    "name": "A  baseline: floor 60, walls 140 x 100 above the table, no back wall, ATC reach",
-   "kg": 128.1,
-   "epoxy_11": 14.1,
-   "epoxy_12": 15.4
+   "kg": 129.0,
+   "epoxy_11": 14.2,
+   "epoxy_12": 15.5
   },
   {
    "name": "B  as A + back wall 100 thick",
-   "kg": 145.6,
-   "epoxy_11": 16.0,
-   "epoxy_12": 17.5
+   "kg": 146.8,
+   "epoxy_11": 16.1,
+   "epoxy_12": 17.6
   },
   {
    "name": "C  as A, floor 80",
-   "kg": 153.9,
-   "epoxy_11": 16.9,
-   "epoxy_12": 18.5
+   "kg": 155.0,
+   "epoxy_11": 17.1,
+   "epoxy_12": 18.6
   },
   {
    "name": "D  as A, walls only 50 above the table (gantry gets 50 mm legs)",
-   "kg": 107.8,
-   "epoxy_11": 11.9,
-   "epoxy_12": 12.9
+   "kg": 108.7,
+   "epoxy_11": 12.0,
+   "epoxy_12": 13.0
   },
   {
    "name": "E  as A + one \u00d860 PVC core per wall",
-   "kg": 119.9,
-   "epoxy_11": 13.2,
-   "epoxy_12": 14.4
+   "kg": 120.8,
+   "epoxy_11": 13.3,
+   "epoxy_12": 14.5
   },
   {
    "name": "F  as A without the ATC reach (tub shorter)",
-   "kg": 121.2,
-   "epoxy_11": 13.3,
-   "epoxy_12": 14.5
+   "kg": 122.1,
+   "epoxy_11": 13.4,
+   "epoxy_12": 14.6
   }
  ],
  "beam": {
@@ -127,14 +127,14 @@
   "J_mm4": 21710769.230769232,
   "EI_y_load_MNm2": 0.89999,
   "EI_z_load_MNm2": 1.13321,
-  "span": 690.0,
-  "dY_simple_um": 1.5208918987988755,
-  "dY_fixed_um": 0.3802229746997189,
-  "dZ_simple_um": 1.2078851227927745,
-  "dZ_fixed_um": 0.3019712806981936,
+  "span": 700.0,
+  "dY_simple_um": 1.5879806071919318,
+  "dY_fixed_um": 0.39699515179798295,
+  "dZ_simple_um": 1.2611666563714288,
+  "dZ_fixed_um": 0.3152916640928572,
   "twist_arm": 245,
-  "twist_tool_um": 3.6686197916666665,
-  "beam_kg": 12.4956
+  "twist_tool_um": 3.721788194444444,
+  "beam_kg": 12.636
  },
  "atc": {
   "pcd": 178.25353626292278,
@@ -214,8 +214,8 @@
    240
   ],
   [
-   "beam box 150x130x10, 890 long",
-   12.5,
+   "beam box 150x130x10, 900 long",
+   12.64,
    240.0
   ],
   [
@@ -229,5 +229,5 @@
    140
   ]
  ],
- "com_from_spindle": 138.43650319870073
+ "com_from_spindle": 138.77518689396774
 }

@@ -1,6 +1,6 @@
 # Steel gantry layout sketch (18 Nov 2026)
 
-**Status: no clashes. Waiting for the owner to agree the layout.** Decisions: D-164 to D-166, D-168 to D-171. Drawing: `cad/v2/out/steel_gantry_sketch.png`. Numbers: `cad/v2/out/steel_gantry_sketch.json`. Script: `cad/v2/steel_gantry_sketch.py`.
+**Status: replaced by the PrintNC gantry (D-172). This sketch was drawn for the 890 wide tub, before D-173, and has not been re-run.** Its check found no clashes. Decisions: D-164 to D-166, D-168 to D-171. Drawing: `cad/v2/out/steel_gantry_sketch.png`. Numbers: `cad/v2/out/steel_gantry_sketch.json`. Script: `cad/v2/steel_gantry_sketch.py`.
 
 ## Result
 

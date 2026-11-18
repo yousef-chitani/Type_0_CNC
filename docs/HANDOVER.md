@@ -6,6 +6,14 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000. 18 Nov 2026: tub widened to 900 for the PrintNC gantry
+
+**Done:** owner chose to widen the tub by 10 (D-173). Tub is now 900 × 630, Y rails ± 350, inner walls ± 310, outer walls ± 450. `cad/v2/gantry_sketch.py` and its outputs are updated. Baseline tub 129.0 kg (was 128.1). The Fusion model already has the rails 700 apart and was not changed in this step.
+
+**Left:** the Fusion document is still **unsaved** with **8 failing features**. New open item: the PrintNC model has each Y screw directly above its rail, D-140 has it 65 outboard. `cad/v2/assembly.py` and `docs/moving-gantry-sketch.md` have not been updated to 900. `cad/v2/steel_gantry_sketch.py` was not re-run because D-172 replaces it.
+
+**Exact next step:** the owner saves the Fusion document under a new name and chooses the Y screw position (`docs/printnc-assessment.md`, open item 1). Use parameters only, never direct modelling.
+
 ## 000000000000000000000000. 18 Nov 2026: PrintNC V4 gantry scaled in Fusion (document NOT saved)
 
 **Done:** owner chose the PrintNC V4 gantry and rollers on the epoxy granite tub, with the 150 × 150 × 8 beam and the Type 0 Z axis (D-172). The open Fusion document `PrintNC V4 Metalcutter V4.0.38` is set by parameters only: cutting area 435 × 435 (600 rails), beam 150 × 150 × 8, radius 16, `XGantryOffset` 0. Details: `docs/printnc-assessment.md`.
@@ -13,14 +21,6 @@
 **Left:** the document is **unsaved** and **8 features fail**. 5 are in the YRoller-Gantry Drill Guide and were caused by the first 150 beam trial; the others are Extrude8 in XRollers, Rigid 164 and Rigid 110. Y rail spacing is 700 against the tub's 690. Not checked: room for the gantry brace at offset 0, clashes over the travel, the real tube corner radius. The STEP file and `cad/v2/Facebutton v2 frame.step` are untracked and not committed.
 
 **Exact next step:** the owner saves the Fusion document under a new name, then answers the 3 open items in `docs/printnc-assessment.md` (Y rail spacing first). Use parameters only, never direct modelling.
-
-## 00000000000000000000000. 18 Nov 2026: steel gantry sketch drawn, no clashes
-
-**Done:** `cad/v2/steel_gantry_sketch.py` draws the layout from one list of boxes and checks it over the full X, Y and Z travel: **no clashes**, all access holes clear. Outputs: `cad/v2/out/steel_gantry_sketch.png` and `.json`. Summary: `docs/steel-gantry-sketch.md`. Decisions: D-165 steel saddle, D-166 M10 joint, D-168 X motor folded over the screw with the drag chain on the back (supersedes D-167), D-169 foot step X 378 and X block pitch 90, D-170 ball nut flange flats 40, D-171 nut housings 20 off centre. Moving mass **86.8 kg**. Parts list unchanged.
-
-**Left:** 2 items are open. (1) Proposal to drop the Ø20 top-wall holes and fit the M10 bolts from the open tube ends, rear row back at X 345 and X 420 (would amend D-166; the script still has the holes and the rear row at X 395 and X 430). (2) 1 mm relief over each nut flange. Steel saddle sizes, drag chain size and route are open. Not verified: SHS corner radius (flat width). `cad/v2/Facebutton v2 frame.step` is still untracked: ask the owner what it is.
-
-**Exact next step:** get the owner's answer on the 2 items in `docs/steel-gantry-sketch.md`, apply them to the script and re-run, size the steel saddle, record them (next: D-172). Then the owner starts the gantry in Fusion and prices the tube (Dyfed Steels first).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

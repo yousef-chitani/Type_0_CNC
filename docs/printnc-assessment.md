@@ -1,6 +1,6 @@
 # PrintNC V4 gantry on Type 0 (18 Nov 2026)
 
-**Status: the parametric model is set to the Type 0 sizes, with 8 features still failing. The Fusion document is NOT saved.** Decision: D-172.
+**Status: the parametric model is set to the Type 0 sizes, with 8 features still failing. The Fusion document is NOT saved.** Decisions: D-172, D-173.
 
 ## Sources
 
@@ -29,10 +29,11 @@ Parameters only. No direct modelling.
 |---|---|
 | X and Y rails | 600 |
 | Gantry length | 775 |
-| Y rail spacing | **700** (Type 0 tub: 690) |
+| Y rail spacing | **700**, tub widened to suit (D-173) |
 | X rails | Top and bottom of the beam, seats 150 apart |
 | Top roller, bottom roller | 150 wide, 175 wide by formula |
 | X and Y screw length in the model | 700 (Type 0: X 700, Y 600) |
+| Y screw position in the model | **Directly above the Y rail**, X ± 350 (Type 0, D-140: 65 outboard of the rail, X ± 415) |
 
 ## Still failing (8 features)
 
@@ -60,6 +61,6 @@ Parameters only. No direct modelling.
 
 ## Open for the owner
 
-1. **Y rail spacing:** widen the tub by 10 to suit 700, or keep 690 with a 65 wide Y roller.
+1. **Y screw position:** PrintNC puts the screw directly above the rail, inside the roller. D-140 puts it 65 outboard on the wall top. Choose one before the rollers and the wall tops are drawn.
 2. **Drill guide:** repair the 5 failed features by undo or by hand in Fusion, or replace the guide.
 3. **Steel gantry sketch:** D-172 replaces its gantry layout, so its 2 open items need closing.
