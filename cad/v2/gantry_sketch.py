@@ -39,14 +39,14 @@ S["wall_in_x"] = S["saddle_x_sweep"] + 20                # 310: Y rails 700 apar
 wall_w = 140.0
 S["wall_w"] = wall_w
 S["rail_x"] = S["wall_in_x"] + 40                        # rail on the wall top, 40 from the inner edge
-S["screw_x"] = S["rail_x"] + 65                          # screw outboard of the rail, same wall top (proposal A)
+S["screw_x"] = S["rail_x"]                               # screw directly above the rail, as the PrintNC rollers (D-174)
 S["wall_out_x"] = S["wall_in_x"] + wall_w                # 450
 S["span"] = 2 * S["rail_x"]                              # beam span between Y rails
 S["floor_t"] = 60.0
 S["wall_top"] = S["table_top"] + 100                     # proposal: walls 100 above the table
 S["car_top"] = S["wall_top"] + blk_h
 S["foot_t"] = S["beam_z"][0] - S["car_top"]              # foot block fills the gap to the beam
-S["beam_len"] = 2 * (S["screw_x"] + 35)
+S["beam_len"] = 2 * (S["rail_x"] + 100)                  # old check beam: length kept when the screw moved (D-174)
 
 # ---------------------------------------------------------------- moving mass (Y axis)
 rail_kgm, blk_kg = 2.21, 0.40                            # HGR20 / HGH20CA catalogue (ASSUMED)
@@ -204,7 +204,7 @@ dim(ax1, (-wi, ty0 - 30), (wi, ty0 - 30), f"inside {2*wi:.0f}")
 dim(ax1, (-wo - 40, ty0), (-wo - 40, ty1), f"tub {c['tub_len']:.0f}", off=(-35, 0))
 dim(ax1, (-rx, ty1 - 40), (rx, ty1 - 40), f"Y rails {2*rx:.0f} apart = beam span")
 dim(ax1, (rx + 75, c["rail_y"][0]), (rx + 75, c["rail_y"][1]), f"rail {c['rail_buy']}", off=(0, 0), fs=7)
-ax1.text(sx, ty0 - 60, f"Y1/Y2 screws {c['screw_buy']}\n(outboard on\nthe wall top)", ha="center", va="top", fontsize=7, color=SC)
+ax1.text(sx, ty0 - 60, f"Y1/Y2 screws {c['screw_buy']}\n(directly above\nthe rail)", ha="center", va="top", fontsize=7, color=SC)
 ax1.set_title("Top view (X right, Y back). Rails black, screws red, aluminium blue, EG grey", fontsize=10)
 ax1.set_aspect("equal"); ax1.set_xlim(-wo - 130, wo + 60); ax1.set_ylim(A["centre"][1] - 230, ty1 + 270); ax1.axis("off")
 

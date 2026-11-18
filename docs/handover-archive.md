@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000. 18 Nov 2026: PrintNC V4 gantry scaled in Fusion (document NOT saved)
+
+**Done:** owner chose the PrintNC V4 gantry and rollers on the epoxy granite tub, with the 150 × 150 × 8 beam and the Type 0 Z axis (D-172). The open Fusion document `PrintNC V4 Metalcutter V4.0.38` is set by parameters only: cutting area 435 × 435 (600 rails), beam 150 × 150 × 8, radius 16, `XGantryOffset` 0. Details: `docs/printnc-assessment.md`.
+
+**Left:** the document is **unsaved** and **8 features fail**. 5 are in the YRoller-Gantry Drill Guide and were caused by the first 150 beam trial; the others are Extrude8 in XRollers, Rigid 164 and Rigid 110. Y rail spacing is 700 against the tub's 690. Not checked: room for the gantry brace at offset 0, clashes over the travel, the real tube corner radius. The STEP file and `cad/v2/Facebutton v2 frame.step` are untracked and not committed.
+
+**Exact next step:** the owner saves the Fusion document under a new name, then answers the 3 open items in `docs/printnc-assessment.md` (Y rail spacing first). Use parameters only, never direct modelling.
+
 ## 00000000000000000000000. 18 Nov 2026: steel gantry sketch drawn, no clashes
 
 **Done:** `cad/v2/steel_gantry_sketch.py` draws the layout from one list of boxes and checks it over the full X, Y and Z travel: **no clashes**, all access holes clear. Outputs: `cad/v2/out/steel_gantry_sketch.png` and `.json`. Summary: `docs/steel-gantry-sketch.md`. Decisions: D-165 steel saddle, D-166 M10 joint, D-168 X motor folded over the screw with the drag chain on the back (supersedes D-167), D-169 foot step X 378 and X block pitch 90, D-170 ball nut flange flats 40, D-171 nut housings 20 off centre. Moving mass **86.8 kg**. Parts list unchanged.

@@ -6,6 +6,14 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000. 18 Nov 2026: Y screws above the rails, tub length now open
+
+**Done:** owner chose the Y screws directly above the rails (D-174, amends D-140). `cad/v2/gantry_sketch.py` and its outputs are updated. Measured in the Fusion model: the Y rail and its BK12 and BF12 risers need **734** in line with a 600 rail.
+
+**Left:** the tub is still drawn **630** long, so the supports do not fit yet. Options are in `docs/printnc-assessment.md`, open item 1: 600 rail and 734 tub (150.3 kg), or 550 rail and 684 tub (140.1 kg). Either changes the 600 Y screws in `docs/bom.csv`, which is not edited yet. The Fusion document is still **unsaved** with **8 failing features**. `cad/v2/assembly.py` and `docs/moving-gantry-sketch.md` are not updated to the new tub.
+
+**Exact next step:** the owner chooses the Y rail and tub length. Then set `YCuttingArea` if the rail changes, update `cad/v2/gantry_sketch.py` and `docs/bom.csv`, and record it as D-175. Use parameters only in Fusion, never direct modelling.
+
 ## 0000000000000000000000000. 18 Nov 2026: tub widened to 900 for the PrintNC gantry
 
 **Done:** owner chose to widen the tub by 10 (D-173). Tub is now 900 × 630, Y rails ± 350, inner walls ± 310, outer walls ± 450. `cad/v2/gantry_sketch.py` and its outputs are updated. Baseline tub 129.0 kg (was 128.1). The Fusion model already has the rails 700 apart and was not changed in this step.
@@ -13,14 +21,6 @@
 **Left:** the Fusion document is still **unsaved** with **8 failing features**. New open item: the PrintNC model has each Y screw directly above its rail, D-140 has it 65 outboard. `cad/v2/assembly.py` and `docs/moving-gantry-sketch.md` have not been updated to 900. `cad/v2/steel_gantry_sketch.py` was not re-run because D-172 replaces it.
 
 **Exact next step:** the owner saves the Fusion document under a new name and chooses the Y screw position (`docs/printnc-assessment.md`, open item 1). Use parameters only, never direct modelling.
-
-## 000000000000000000000000. 18 Nov 2026: PrintNC V4 gantry scaled in Fusion (document NOT saved)
-
-**Done:** owner chose the PrintNC V4 gantry and rollers on the epoxy granite tub, with the 150 × 150 × 8 beam and the Type 0 Z axis (D-172). The open Fusion document `PrintNC V4 Metalcutter V4.0.38` is set by parameters only: cutting area 435 × 435 (600 rails), beam 150 × 150 × 8, radius 16, `XGantryOffset` 0. Details: `docs/printnc-assessment.md`.
-
-**Left:** the document is **unsaved** and **8 features fail**. 5 are in the YRoller-Gantry Drill Guide and were caused by the first 150 beam trial; the others are Extrude8 in XRollers, Rigid 164 and Rigid 110. Y rail spacing is 700 against the tub's 690. Not checked: room for the gantry brace at offset 0, clashes over the travel, the real tube corner radius. The STEP file and `cad/v2/Facebutton v2 frame.step` are untracked and not committed.
-
-**Exact next step:** the owner saves the Fusion document under a new name, then answers the 3 open items in `docs/printnc-assessment.md` (Y rail spacing first). Use parameters only, never direct modelling.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

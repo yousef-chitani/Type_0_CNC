@@ -1,6 +1,6 @@
 # PrintNC V4 gantry on Type 0 (18 Nov 2026)
 
-**Status: the parametric model is set to the Type 0 sizes, with 8 features still failing. The Fusion document is NOT saved.** Decisions: D-172, D-173.
+**Status: the parametric model is set to the Type 0 sizes, with 8 features still failing. The Fusion document is NOT saved.** Decisions: D-172, D-173, D-174.
 
 ## Sources
 
@@ -33,7 +33,8 @@ Parameters only. No direct modelling.
 | X rails | Top and bottom of the beam, seats 150 apart |
 | Top roller, bottom roller | 150 wide, 175 wide by formula |
 | X and Y screw length in the model | 700 (Type 0: X 700, Y 600) |
-| Y screw position in the model | **Directly above the Y rail**, X ± 350 (Type 0, D-140: 65 outboard of the rail, X ± 415) |
+| Y screw position | **Directly above the Y rail**, X ± 350 (D-174) |
+| Length of the Y rail and its supports in line | **734** with a 600 rail (riser 96.5 + rail 600 + gap 0.5 + 2.0 + riser 35.5, measured in the model from Y −34 to 700). The tub is 630 |
 
 ## Still failing (8 features)
 
@@ -61,6 +62,13 @@ Parameters only. No direct modelling.
 
 ## Open for the owner
 
-1. **Y screw position:** PrintNC puts the screw directly above the rail, inside the roller. D-140 puts it 65 outboard on the wall top. Choose one before the rollers and the wall tops are drawn.
+1. **Tub length:** the Y rail and its supports no longer fit the 630 tub.
+
+   | Y rail | Length needed | Largest Y cutting area by the model's formula | Y screw by the model's formula | Tub mass, scaled from 129.0 kg |
+   |---|---|---|---|---|
+   | 600 (in the parts list) | 734 | 435 | 700 | 150.3 kg |
+   | 550 | 684 | 385 | 650 | 140.1 kg |
+
+   Type 0 needs 350 of Y travel (D-141). The lengths are the minimum, with no margin at the tub ends. The parts list has 600 Y screws, so either option changes them.
 2. **Drill guide:** repair the 5 failed features by undo or by hand in Fusion, or replace the guide.
 3. **Steel gantry sketch:** D-172 replaces its gantry layout, so its 2 open items need closing.
