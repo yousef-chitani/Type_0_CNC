@@ -6,19 +6,13 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
-## 00000000000000000000000. 18 Nov 2026: steel gantry sketch drawn and clash-checked
+## 00000000000000000000000. 18 Nov 2026: steel gantry sketch drawn, no clashes
 
-**Done:** `cad/v2/steel_gantry_sketch.py` draws the layout below from one list of boxes and checks it over the full X, Y and Z travel. Outputs: `cad/v2/out/steel_gantry_sketch.png` and `.json`. Summary and owner questions: `docs/steel-gantry-sketch.md`. Moving mass **73.4 kg**, centre of mass 30.5 behind the Y carriages.
+**Done:** `cad/v2/steel_gantry_sketch.py` draws the layout from one list of boxes and checks it over the full X, Y and Z travel: **no clashes**, all access holes clear. Outputs: `cad/v2/out/steel_gantry_sketch.png` and `.json`. Summary: `docs/steel-gantry-sketch.md`. Decisions: D-165 steel saddle, D-166 M10 joint, D-168 X motor folded over the screw with the drag chain on the back (supersedes D-167), D-169 foot step X 378 and X block pitch 90, D-170 ball nut flange flats 40. Moving mass **86.8 kg**. Parts list unchanged.
 
-**Found (still in the drawing, fixes proposed, nothing decided):** (1) round Ø48 ball nut flange overlaps the top arm and both foot steps by 4; (2) the X belt covers the right foot access hole at X 345, Y 262; (3) Y BK12/BF12 touch the foot at X 380; (4) X block to BK12/BF12 gap only 1.25 at the end of travel. With the proposed fixes (`--fixes`) the check finds no clashes and every access hole is clear.
+**Left:** the owner has not agreed 3 items: rear M10 row at X 395 and X 430, 1 mm relief over each nut flange, nut housings 20 off centre. Steel saddle sizes, drag chain size and route are open. Not verified: SHS corner radius (flat width). `cad/v2/Facebutton v2 frame.step` is still untracked: ask the owner what it is.
 
-**Left:** the owner has not agreed the layout or the 4 fixes. Not verified: SHS corner radius (flat width), the real ball nut flange. No D-numbers, no STEP. `cad/v2/Facebutton v2 frame.step` is still untracked: ask the owner what it is.
-
-**Owner's answers (18 Nov):** steel saddle (D-165), M10 through access holes (D-166), X motor in line with the screw (D-167). All three are in the script: **moving mass 86.8 kg**. As drawn there are 4 clashes, including the X motor 1 mm into the beam top. `--fixes` (flange slots, 5 mm pads under X BK12/BF12, foot step at X 378, X block pitch 90) gives no clashes. The fixes are **not agreed**: the owner wants to discuss them. The belt problem is gone; the rear right M10 bolts must be tightened before the X motor and mount go on.
-
-**Parts list not changed:** remove M15, M16, M17; M08 3 to 4; M13 1 to 2. The X screw stub drawing for LiMo changes (about 681 long).
-
-**Exact next step:** go through fixes 1 to 4 with the owner, size the steel saddle, get approval for the parts list changes, then apply them, re-run until no clashes are left and record the decisions (next: D-168). Then the owner starts the gantry in Fusion and prices the tube (Dyfed Steels first).
+**Exact next step:** get the owner to agree the 3 items in `docs/steel-gantry-sketch.md` and size the steel saddle, record them (next: D-171). Then the owner starts the gantry in Fusion and prices the tube (Dyfed Steels first).
 
 ## 0000000000000000000000. 18 Nov 2026: steel gantry layout brief (sketch NOT drawn)
 
