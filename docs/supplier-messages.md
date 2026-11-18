@@ -107,7 +107,11 @@ Owner (16 Nov): screw lengths stay **X 850 / Y 600**, Z standard ends; **no draw
 > Thanks,
 > [name]
 
-**Sent 16 Nov 2026** (owner dropped question 4, the stub cost). Answer: (waiting)
+**Sent 16 Nov 2026** (owner dropped question 4, the stub cost). Partial answer, passed on by the owner 18 Nov 2026 (Amy, LiMo):
+
+> Yes, LiMo provides Class H. Class H is 10% higher than class C.
+
+What it answers: Class H is available. The owner reads "10% higher" as a 10 % surcharge on the current price (18 Nov 2026); Class H is not chosen. Not stated: which class the listed HGH20CA sets are. Still not answered: HM12-60 at 50 mm, coupling fit, VAT in DDP.
 
 For you: C5 price done (17 Nov: C5 sets with supports $424.71; see `price-check-task-16.md`). Checkout done 17 Nov: DDP sea $129, DDP air $269 (see `price-check-task-16.md`).
 

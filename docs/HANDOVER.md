@@ -6,6 +6,25 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000. 18 Nov 2026: XRollerShim replaced by a second XRoller Angle over the top tube (D-209)
+
+**Done in `Type_0_v3`, not saved. The owner saves it.**
+- `XRoller Bottom:2` is the same part as the bottom roller, turned over, on top of the tube: flange Z 405 to 411, leg Z 361 to 411. It is joined to `XRollers` by the as-built joint `Top X roller angle to XRollers`.
+- `XRollerShim` is hidden, not deleted, because Rigid Groups 252 and 268 and Rigid 164 refer to it.
+- The 4 top holes of `Z Fixed Plate` moved from Z 372 and 396 to Z 374.5 and 398.5, in both plate sketches.
+- `docs/bom.csv`: the 4 top plate screws move from M6 x 30 (X12) to M6 x 20 (X03). No price changes.
+
+**Checked:** no clashes for the new angle at X slide 0, -215 and -430. The 4 plate holes line up with the leg. The timeline has the same 6 failing features as before, and no new ones.
+
+**Left for the owner:**
+1. **Flange fixing, not decided.** The 8 flange holes (Ø7, counterbored) line up with the tube's Ø6.5 top holes, but the 3 thick tube wall has no thread. The angle is held only by the 4 leg screws until this is settled.
+2. **Assembly order.** The Ø7 flange holes will not pass an M6 head, so the block screws inside the tube go in before the angle.
+3. **Rail class.** The owner reads LiMo's reply as a 10 % surcharge for Class H. Class H is not chosen yet, and `docs/bom.csv` is unchanged.
+
+**Unused holes:** the leg's centre hole at X -222.5, Z 398.5 and the 4 old tapped holes in the tube's front wall.
+
+**Exact next step:** the owner saves `Type_0_v3` and chooses the flange fixing. Then carry out items 1 to 4 of the D-208 entry below.
+
 ## 00000000000000000000000000000000000000000000000000000. 18 Nov 2026: Z fixed plate to be extended for the HM12-60-V (D-208), not modelled yet
 
 **Done:** the owner chose to extend the Z fixed plate by about 95, to about 445 long (D-208). `docs/bom.csv` M12 is updated. **No CAD changed. `Type_0_v3` has unsaved changes. The owner saves it.**
@@ -20,29 +39,9 @@
 - **M12 price.** The 20 mm 400 x 180 piece is too short for a 445 plate. The longer piece is not priced, so the M12 price is unchanged.
 - **LiMo.** Ask whether the standard BK12 end of the Z screw fits the 7001 bearing, and whether the Z set can come without its BK12.
 
-The other open items are in the next entry below.
+The other open items are in the D-207 entry at the top of `docs/handover-archive.md`.
 
 **Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, carry out items 1 to 4.
-
-## 0000000000000000000000000000000000000000000000000000. 18 Nov 2026: HM12-60-V replaces the Z BK12 (D-207), not modelled yet
-
-**Done:** the owner chose the HM12-60-V as Z motor mount and fixed bearing (D-207). `docs/bom.csv` M13 is updated. **No CAD changed: `Type_0_v3` still shows the BK12, the D-206 bracket and the motor mount stand-in, and it has unsaved changes. The owner saves it.**
-
-**Decide first, owner:** the HM12-60-V base is 25 from the screw axis, which is the plane of the fixed plate face (Y 417), but the plate stops at Z 519. With the motor flange kept at Z 612, the 95 long mount spans about Z 517 to 612, so it has nothing to bolt to. Options: make the fixed plate about 95 taller (350 to about 445, recommended, changes M12), or add a separate bracket.
-
-**Check with the mount:**
-1. **Screw end.** Confirm with LiMo that the Z screw's standard BK12 end fits the 7001 bearing, and whether the Z set can be supplied without its BK12.
-2. **Motor height.** Keep the flange at Z 612 or move it once J 89, L 95 and the coupling are placed.
-3. **Coupling.** The drawing lists a 30-42 coupling; the BOM buys D25L35. Check the fit inside the mount. The hub is 11.75 long against the 12.9 grip in D-186.
-4. **Motor screws.** PCD 70 gives a 49.5 square against the motor's 50. M4 screws should pass the Ø5.1 motor holes.
-5. **D-206 items fall away:** the bracket, its 2 tapped plate holes, the 15 mm piece and the bracket screws.
-
-**Other work left:**
-- **Couplings and M12 sensors:** ready to model from `cad/vendor/drawings/README.md`. The sensor drawing says NPN and the BOM buys PNP.
-- **X, Y and Y2 HGH20CA blocks:** approved, not done. Changing `YCarriageB/C` and `XCarriageB/C` broke `Rigid 3`, `Rigid 4`, `Rigid 361` and the D-199 riser bolt features, so it was undone. Re-anchor the sketches `YRoller Lower`, `XTopRollerLower` and `Xroller Carriage Holes` on the block centres. Block screws become M5 x 8 (M5 x 10 in the bottom X roller), because the block thread is 6 deep.
-- **Still missing:** JGL-80 dimension drawing; clamp length, base holes and bore centre height; LiMo nut housing drawing; LiMo confirmation of the nut flats.
-
-**Exact next step:** the owner saves `Type_0_v3` and chooses how the HM12-60-V is carried. Then, in a new session, model the mount and remove the Z BK12 and bracket.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

@@ -2,6 +2,26 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000. 18 Nov 2026: HM12-60-V replaces the Z BK12 (D-207), not modelled yet
+
+**Done:** the owner chose the HM12-60-V as Z motor mount and fixed bearing (D-207). `docs/bom.csv` M13 is updated. **No CAD changed: `Type_0_v3` still shows the BK12, the D-206 bracket and the motor mount stand-in, and it has unsaved changes. The owner saves it.**
+
+**Decide first, owner:** the HM12-60-V base is 25 from the screw axis, which is the plane of the fixed plate face (Y 417), but the plate stops at Z 519. With the motor flange kept at Z 612, the 95 long mount spans about Z 517 to 612, so it has nothing to bolt to. Options: make the fixed plate about 95 taller (350 to about 445, recommended, changes M12), or add a separate bracket.
+
+**Check with the mount:**
+1. **Screw end.** Confirm with LiMo that the Z screw's standard BK12 end fits the 7001 bearing, and whether the Z set can be supplied without its BK12.
+2. **Motor height.** Keep the flange at Z 612 or move it once J 89, L 95 and the coupling are placed.
+3. **Coupling.** The drawing lists a 30-42 coupling; the BOM buys D25L35. Check the fit inside the mount. The hub is 11.75 long against the 12.9 grip in D-186.
+4. **Motor screws.** PCD 70 gives a 49.5 square against the motor's 50. M4 screws should pass the Ø5.1 motor holes.
+5. **D-206 items fall away:** the bracket, its 2 tapped plate holes, the 15 mm piece and the bracket screws.
+
+**Other work left:**
+- **Couplings and M12 sensors:** ready to model from `cad/vendor/drawings/README.md`. The sensor drawing says NPN and the BOM buys PNP.
+- **X, Y and Y2 HGH20CA blocks:** approved, not done. Changing `YCarriageB/C` and `XCarriageB/C` broke `Rigid 3`, `Rigid 4`, `Rigid 361` and the D-199 riser bolt features, so it was undone. Re-anchor the sketches `YRoller Lower`, `XTopRollerLower` and `Xroller Carriage Holes` on the block centres. Block screws become M5 x 8 (M5 x 10 in the bottom X roller), because the block thread is 6 deep.
+- **Still missing:** JGL-80 dimension drawing; clamp length, base holes and bore centre height; LiMo nut housing drawing; LiMo confirmation of the nut flats.
+
+**Exact next step:** the owner saves `Type_0_v3` and chooses how the HM12-60-V is carried. Then, in a new session, model the mount and remove the Z BK12 and bracket.
+
 ## 000000000000000000000000000000000000000000000000000. 18 Nov 2026: supplier drawings saved, modelling not started
 
 **Done:** the owner's 7 drawings are saved in `cad/vendor/drawings/`, with their values and flags in `cad/vendor/drawings/README.md`. No CAD was changed in this step.

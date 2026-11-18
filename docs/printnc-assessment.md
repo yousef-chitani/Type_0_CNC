@@ -56,7 +56,7 @@ Flat on the 120 wide faces: 88 with a 16 corner radius, 72 with a 24 radius. The
 
 | Timeline | Feature | Part | Note |
 |---|---|---|---|
-| 543 | Rigid 164 | M6 × 12 bolt to XRollerShim | Missing joint origin |
+| 543 | Rigid 164 | M6 × 12 bolt to XRollerShim (shim hidden, D-209) | Missing joint origin |
 | 1015 | Rigid 110 | XGantry Trigger Mount to XGantry | Joint failed |
 | 613, 616, 617, 618 | Extrude2, Chamfer2, Fillet1, Extrude4 | YRoller-Gantry Drill Guide | **Caused by the first 150 beam trial.** They stayed when the beam went back to 75, and a full recompute did not clear them |
 

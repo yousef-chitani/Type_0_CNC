@@ -154,6 +154,6 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X03 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | £70.67 |
 | X04 | (covered by X03) | 1 set | £0.00 |
 | X11 | Motor plate screws M6 x 16 socket cap | 1 pack | £5.99 |
-| X12 | Top roller screws M6 x 30 socket cap | 1 pack | £6.99 |
+| X12 | Y roller spacer screws M6 x 30 socket cap | 1 pack | £6.99 |
 | X13 | Riser bolts M6 x 25 socket cap | 1 pack | £7.59 |
 | X14 | Riser bolts M6 x 35 socket cap | 1 pack | £7.49 |
