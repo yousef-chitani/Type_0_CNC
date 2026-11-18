@@ -29,7 +29,7 @@
 - **Settled (D-184):** 6082 in Phase 1 and steel in a later phase, the 15 risers stay, plate height 350.
 - **Settled (D-191):** plate at Z 169 to 519, 9 holes 6.6 clearance with counterbores 10.5 × 6.5 deep. Modelled in `Type_0_v3` as component `Z Fixed Plate`: X -297.5 to -147.5, Y 417 to 437, held to the bottom X roller by a rigid as-built joint.
 - **Z reach at this position, using the block, moving plate and clamp sizes in `assembly.py`:** the blocks stay on the rails for a spindle nose between Z 92.75 and Z 275.25. With the table top at Z 70, 150 travel and 180 under the nose, the nose runs Z 100 to 250.
-- **Roller screw lengths (D-192, D-193):** M6 × 30 for the 4 top holes (through the 8 shim), not yet in `docs/bom.csv`. They thread into only 3 of tube wall, and the extra length adds no thread. Whether that is enough is not checked. The 5 bottom holes are M6 × 20 until the owner decides: M6 × 30 is clear at the 3 holes at Z 181.5 but hits the gantry tube corner by about 2 at the 2 holes at Z 205.5, where M6 × 25 is the longest that fits.
+- **Roller screw lengths (D-192 to D-194):** M6 × 30 for the 4 top holes (through the 8 shim), X12 in `docs/bom.csv` (D-194). They thread into only 3 of tube wall, and the extra length adds no thread. Whether that is enough is not checked. The 5 bottom holes are M6 × 20 until the owner decides: M6 × 30 is clear at the 3 holes at Z 181.5 but hits the gantry tube corner by about 2 at the 2 holes at Z 205.5, where M6 × 25 is the longest that fits.
 
 ## Ball screws and steppers
 
