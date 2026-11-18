@@ -1,6 +1,6 @@
 # PrintNC V4 gantry on Type 0 (18 Nov 2026)
 
-**Status: the parametric model is set to the Type 0 sizes, with 6 features still failing. The Fusion document is NOT saved.** Decisions: D-172 to D-178.
+**Status: the model is `Type_0_v3`. Version 1 is saved. The support swap below is in the open document and is NOT saved. 6 features still fail (1 error, 5 warnings), the same as version 1.** Decisions: D-172 to D-184.
 
 ## Sources
 
@@ -93,6 +93,42 @@ Visibility only, nothing is deleted. Turn the eye icon back on to restore a part
 | Printed drill guides | Build aids for the steel frame, not machine parts |
 
 Still shown: beam, X and Y rollers, L brackets, rails, blocks, screws, supports, motors, sensors, cable chain brackets and their bolts. The rail blocks, nuts and motors are still PrintNC's models, not the Type 0 parts.
+
+## Screw supports changed to BK12 (D-180, 18 Nov 2026)
+
+Visibility only, on X, Y and Y2. The timeline stayed at 1182 items with 1 error and 5 warnings.
+
+| Hidden | Shown |
+|---|---|
+| `HM12-57` (3) | `BK12` (3) |
+| `HM12 M6x50` bolts (3 sets) | `Nema24 Plate` (3) |
+
+The NEMA 23 motors and D30L40 couplings are still shown until the imported parts go in. No BK12 bolts are modelled yet.
+
+## Moving the Y motors to the back (D-181): not done, Y travel falls short
+
+Measured on 18 Nov 2026 with temporary copies of the parts. The model was not changed. Rear is +Y.
+
+| Y travel, stop to stop | Motors at the front (model now) | Motors at the back |
+|---|---|---|
+| Front limit | Blocks reach the rail end | Blocks reach the rail end |
+| Rear limit | Blocks reach the rail end | Fill plate hits the BK12 |
+| **Travel** | **386** | **338** (Type 0 needs 350) |
+
+The BK12 is longer in line than the BF12, so it stops the roller earlier at the rear.
+
+| Part hitting at the rear, motors at the back | Travel if this is the limit |
+|---|---|
+| `Y 1610 Fill Plate` against BK12 | 338 |
+| `YRoller` against BK12 | 352 |
+| `Y HGW20CC` block against the BK12 riser | 358 |
+
+- These use the model's PrintNC blocks and fill plate, not the Type 0 HGH20CA blocks.
+- The figures are hard contact, with no allowance for limit switches or overtravel.
+- The 3 gap at each tub end stays, because the drive line turns about its own centre.
+- The rear end of the drive would be at Y 762, 109 behind the tub with the NEMA 23. D-142 allows about 185. The NEMA 24 length is still to be taken from its datasheet.
+
+**How the model is tied together:** `Rigid 311` and `Rigid 312` locate the two risers. The BK12, motor plate, screw, coupling, BF12 and motor follow them through joints. The nut stays with the roller. Y2 is made by mirror features from the Y groups, so it should follow, but this has not been tested.
 
 ## Not checked
 

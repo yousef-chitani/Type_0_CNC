@@ -78,8 +78,10 @@ The mould drawings can't start until this is done.
 === JOB 4: FUSION MODEL AND LIMO BASKET (added 18 Nov 2026) ===
 
    - Set the D25L35 coupling to 4 in the LiMo basket (D-182).
-   - Choose for the new Z fixed plate (D-179): steel or 6082, whether
-     the 15 mm risers stay, and the plate height.
+   - Save the open Fusion document Type_0_v3 (the BK12 supports are
+     shown but not saved).
+   - Choose how to recover the Y travel with the Y motors at the back
+     (338 mm against the 350 mm needed). See docs/HANDOVER.md.
 
 
 === LATER (no rush) ===

@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000. 18 Nov 2026: supports swapped, Y motor move blocked on travel
+
+**Done:** owner settled the Z plate (D-184: 6082 in Phase 1 then steel, 15 risers stay, 350 high). Item 1 below is done in the open `Type_0_v3`: on X, Y and Y2 the `HM12-57` and `HM12 M6x50` are hidden and the `BK12` and `Nema24 Plate` shown. Timeline still 1182, 1 error and 5 warnings. **The document is modified and not saved: the owner saves it.**
+
+**Found:** with the Y motors at the back the BK12 stops the roller early. Y travel is **338 against the 350 needed** (386 now). Trimming the fill plate gives 352, then the roller hits the BK12. These are hard-contact figures with PrintNC's blocks. Details are in `docs/printnc-assessment.md`. No joint was changed.
+
+**Left:** item 2 (needs the owner's choice), item 3, and item 4, which D-184 has now unblocked. The steps in the next entry still apply. Y2 following the move through its mirror features is not tested.
+
+**Exact next step:** the owner chooses how to recover the Y travel: 20 longer Y rails, screws and tub (about 358 travel, changes D-175 and the LiMo basket), or a trimmed fill plate (352), or less travel. Then edit `Rigid 311` and `Rigid 312`.
+
 ## 0000000000000000000000000000000000. 18 Nov 2026: model update planned, not started
 
 **Done:** the owner saved the model as `Type_0_v3` version 1 (CNC mill project, 1 error and 5 warnings, 1182 timeline items) and allowed changes beyond parameters for D-179 to D-182 (D-183). No change has been made to the model. The session stopped at the context limit.
@@ -17,14 +27,6 @@
 4. **Z axis (D-179): blocked.** The owner must first choose the plate material (steel or 6082), whether the 15 risers stay, and the plate height.
 
 **Exact next step:** in a new session, ask the owner the three Z plate questions, then start at item 1.
-
-## 000000000000000000000000000000000. 18 Nov 2026: Z axis and drive chosen
-
-**Done:** owner chose the Type 0 Z on a new 150 wide plate (D-179), DFU1605 and NEMA 24 on X and Y (D-180), Y motors at the back (D-181) and the X motor in line past the beam end, no belt (D-182). `docs/bom.csv`: M15, M16 and M17 dropped, M08 now 4 couplings. Phase 1 priced total **£3,957.42, £242.58 left**. X now uses the standard BK12 end, so no stub drawing is needed.
-
-**Left:** the Fusion model was not changed and still shows the PrintNC Z, SFU1610, NEMA 23 and the Y motors at the front. D-179 to D-182 cannot be modelled by parameters alone: there is no parameter for the Y motor end, and the new Z plate, nuts, motors and supports are different parts. D-172 says parameters only, so the owner must say whether the model may go beyond that. The document is **unsaved** with **6 failing features** (1 error, 5 warnings). The owner must add a fourth D25L35 to the LiMo basket. Not checked: X motor length past the beam end, the X motor mount, the X screw length, clashes over the full travel. Availability and price of 120 × 120 × 8 and the LiMo prices for the 550 rail and 650 screws are not confirmed.
-
-**Exact next step:** the owner saves the Fusion document under a new name and says whether the model may be changed beyond parameters for D-179 to D-182. Then update the model, or record the mismatch if it stays as it is.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

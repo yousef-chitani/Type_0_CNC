@@ -26,7 +26,7 @@
 
 - **Fixed plate 150 wide**, not the 180 in `assembly.py`. At 180 it touches the L bracket at the end of X travel. The Z blocks need 144.
 - **Holes to match the rollers:** X ± 32 from the plate centre at Z 181.5, 205.5, 372 and 396, and one at the centre at Z 181.5 (M6).
-- **To settle when it is drawn:** steel (D-165) or 6082 (M12), whether the 15 risers are needed, and the height of the plate.
+- **Settled (D-184):** 6082 in Phase 1 and steel in a later phase, the 15 risers stay, plate height 350.
 
 ## Ball screws and steppers
 
