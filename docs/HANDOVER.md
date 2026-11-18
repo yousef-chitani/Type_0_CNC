@@ -6,6 +6,31 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000. 18 Nov 2026: Z plate stiffness checked, Z assembly modelled (D-202 to D-204)
+
+**Done:**
+- **Z plate stiffness (D-202).** 6082 x 20 stays. At 200 N, plate bending moves the tool 0.4 to 2.2 µm with the nose at Z 100 and up to 3.5 to 10.9 µm at Z 250. Roller flex is not included. See `docs/z-plate-stiffness.md` and `tools/z_plate_stiffness.py`.
+- **Z assembly in `Type_0_v3`.** New component `Z Axis Assembly`, with `Z Fixed Parts` joined rigidly to `Z Fixed Plate` and `Z Moving Parts` on the slider `Z Travel Slider` (±75, nose Z 100 to 250, shown at Z 175). Vendor blocks, nut and BK12. Rails, screw and motor are simple solids. The BK12 bracket, motor mount, nut housing, clamp and spindle are stand-ins. The spindle body is the Jianken stand-in (D-203), and its length is not confirmed. The fixed plate body is now aluminium, 2.81 kg. The timeline is 1348, with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
+- **Jianken quote recorded.** $1,200 + $260 DDP = $1,460, 0.87 Nm, PNP 24 V, about 8 kg. `price_gbp` for S01 is unchanged until VAT is confirmed. Reply draft: `docs/supplier-messages.md` section 7, not sent.
+- **Casting way up decided (D-204).** Upside down, rail face on the mould floor.
+
+**Left:**
+1. **Nut flange clash, owner to decide.** The Ø48 flange overlaps the moving plate by 4 (centre 20 from the plate, radius 24), over the whole travel. Options: a relief pocket in the moving plate, or flats on the flange if the seller confirms them (40 across flats is unverified). On the other side the flange clears the fixed plate by only 1.
+2. **Moving plate width, owner to confirm.** Modelled 150 wide. The 140 in `docs/bom.csv` (M12) would break the outer M5 block holes through the plate edge (hole centre at 68, edge at 70). M12 is not changed yet.
+3. **Mould assembly (D-204).** Not started. Task files 10 and 11 describe the old portal and base, not the tub.
+4. **Jianken reply.** Owner sends it: import VAT and the pull stud and dimension drawings. S06 holders depend on the pull stud.
+5. **Machine height.** The Z motor top is at Z 758. Check it against the enclosure.
+6. **Clash check notes.** Over the full travel the only real clash is item 1. The block and rail overlap comes from the simplified rail, which has no grooves. The small screw and BK12 overlap is at the lock nut thread.
+7. **Z motor mount (task 14).** Still a stand-in, waiting for the seller's drawing.
+8. **Top roller screw strength.** They thread into only 3 of tube wall: check this. Roller flex adds to the stiffness figures.
+9. **Strip casting details.** Anchor screws, thread plugs and the mould fixing are not modelled. The 10 of EG between a strip and the bar pocket needs the fine mix (D-118), and it has not been proved by a cut test piece.
+10. **Machine width.** The brackets reach X -417 to 502.5; the chain side was 487.5. Check this against the enclosure and bench.
+11. **Spacer print files.** The 3 spacers are modelled but have no print file yet.
+12. **Not modelled:** the tapped riser bolt holes in the steel bars and levelling layer, table fixing holes, machine feet and pads.
+13. **Amazon delivery.** X11, X12 and X14 are free to deliver only on orders over £35. The three packs come to £20.47, and the charge below £35 is not known. X14 showed only 7 left.
+
+**Exact next step:** the owner saves `Type_0_v3` and answers items 1 and 2. Then, in a new session, model the EG tub mould upside down in Fusion (D-204).
+
 ## 00000000000000000000000000000000000000000000000. 18 Nov 2026: riser bolts set in the model (D-199, D-201)
 
 **Done:** in `Type_0_v3` the 14 riser bolts now have their chosen lengths. 8 are M6 x 25 (Y -6 and Y 561), with tips at Z 112. 6 are M6 x 35 (Y -23 and Y 629), with tips at Z 114. The heads did not move and the tips keep their 0.4 chamfer. The bolt components are renamed `M6x25 and M6x35 Riser Bolts` and its mirror, and each body is named by length and position. `M6x12 (7)` is now `M6x30 Y2 Roller` and `M6x12 (8)` is now `M6x30 Y Roller`. The 3 spacers are in `docs/printed-parts.md`. Measured: the bolts overlap only the steel bar and the levelling layer, with 8 and 6 of thread in the bar, and no longer reach the EG. The timeline is 1324, up from 1304, with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
@@ -21,23 +46,6 @@
 8. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
 
 **Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, check the Z plate stiffness (D-184).
-
-## 0000000000000000000000000000000000000000000000. 18 Nov 2026: steel strips replace the cast-in inserts (D-200, D-201)
-
-**Done:** in `Type_0_v3` the 8 cast-in M6 inserts are gone and 3 tapped steel strips, 25 x 10, are cast flush in the outer walls: +X Y 520 (Z 60 to 120, 4 threads), -X Y 520 (Z 90 to 120, 2 threads), +X Y 220 (Z 60 to 90, 2 threads). The bracket hole positions did not change. The casting is 40.15 L, 92.3 kg. Measured: the strips overlap only the 8 bracket screws in their threaded holes, those screws get 7 to 8.5 of thread and stop inside the strip, and the timeline is 1304 with the same 1 error and 5 warnings. The 6 riser bolts at Y -23 and Y 629 are M6 x 35 (X14, £7.49, D-201). Phase 1 is now £3,985.48, £214.52 left. **The document is modified and not saved. The owner saves it.**
-
-**Left:**
-1. **Riser bolts in the model.** All 14 still show M6 x 30. Set 8 to M6 x 25 and 6 to M6 x 35.
-2. **Strip casting details.** Anchor screws, thread plugs and the mould fixing are not modelled. The 10 of EG between a strip and the bar pocket needs the fine mix (D-118), and it has not been proved by a cut test piece.
-3. **Machine width.** The brackets reach X -417 to 502.5; the chain side was 487.5. Check this against the enclosure and bench.
-4. **Tidy up.** Add the 3 spacers to `docs/printed-parts.md`. Rename the components `M6x12 (7)` and `M6x12 (8)`, which now hold M6 x 30 screws.
-5. **Not modelled:** table fixing holes, machine feet and pads, mould details.
-6. **Z plate stiffness** (D-184).
-7. **Top roller screw strength.** They thread into only 3 of tube wall: check this.
-8. **Amazon delivery.** X11, X12 and X14 are free to deliver only on orders over £35. The three packs come to £20.47, and the charge below £35 is not known. X14 showed only 7 left.
-9. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
-
-**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, set the 14 riser bolts in the model to their chosen lengths and do the tidy-up in item 4.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

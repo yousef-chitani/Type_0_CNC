@@ -2,6 +2,23 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000. 18 Nov 2026: steel strips replace the cast-in inserts (D-200, D-201)
+
+**Done:** in `Type_0_v3` the 8 cast-in M6 inserts are gone and 3 tapped steel strips, 25 x 10, are cast flush in the outer walls: +X Y 520 (Z 60 to 120, 4 threads), -X Y 520 (Z 90 to 120, 2 threads), +X Y 220 (Z 60 to 90, 2 threads). The bracket hole positions did not change. The casting is 40.15 L, 92.3 kg. Measured: the strips overlap only the 8 bracket screws in their threaded holes, those screws get 7 to 8.5 of thread and stop inside the strip, and the timeline is 1304 with the same 1 error and 5 warnings. The 6 riser bolts at Y -23 and Y 629 are M6 x 35 (X14, £7.49, D-201). Phase 1 is now £3,985.48, £214.52 left. **The document is modified and not saved. The owner saves it.**
+
+**Left:**
+1. **Riser bolts in the model.** All 14 still show M6 x 30. Set 8 to M6 x 25 and 6 to M6 x 35.
+2. **Strip casting details.** Anchor screws, thread plugs and the mould fixing are not modelled. The 10 of EG between a strip and the bar pocket needs the fine mix (D-118), and it has not been proved by a cut test piece.
+3. **Machine width.** The brackets reach X -417 to 502.5; the chain side was 487.5. Check this against the enclosure and bench.
+4. **Tidy up.** Add the 3 spacers to `docs/printed-parts.md`. Rename the components `M6x12 (7)` and `M6x12 (8)`, which now hold M6 x 30 screws.
+5. **Not modelled:** table fixing holes, machine feet and pads, mould details.
+6. **Z plate stiffness** (D-184).
+7. **Top roller screw strength.** They thread into only 3 of tube wall: check this.
+8. **Amazon delivery.** X11, X12 and X14 are free to deliver only on orders over £35. The three packs come to £20.47, and the charge below £35 is not known. X14 showed only 7 left.
+9. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, set the 14 riser bolts in the model to their chosen lengths and do the tidy-up in item 4.
+
 ## 000000000000000000000000000000000000000000000. 18 Nov 2026: Y bracket clashes fixed (D-198, D-199)
 
 **Done:** in `Type_0_v3` the Y trigger mounts, Y cable chain supports, Y sensors and chain travel end all moved 15 outward, so the sensors still line up with their trigger screws and the chain stays in line. 3 printed spacers fill the gap at the rollers, 6 roller screws became M6 x 30, and 8 cast-in M6 inserts are modelled in the tub walls. The casting is now 40.17 L. The 8 riser bolts at Y -6 and Y 561 are M6 x 25 (X13, £7.59, D-199). Measured: no bracket, sensor or spacer overlaps the tub or another part, apart from screws in their threaded holes. Parts carried on the rollers stay clear over the 386.2 Y travel. The timeline is 1304 with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
