@@ -6,6 +6,34 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000. 18 Nov 2026: Z axis stand-ins replaced, the rest listed (D-206)
+
+**Done in `Type_0_v3`:**
+- **Z motor.** The StepperOnline 24HS34-5004D-E1000-B280 vendor model is fitted, flange at Z 612, top at Z 758, cables to the back.
+- **Z rails.** Two HGR20 x 350 rails with the HIWIN section, 6 counterbored holes at 60 pitch, first hole 25 from the end (`tools/build_fusion_parts.py`). The block and rail overlap has gone.
+- **Z BK12 bracket (D-206).** Finished at 90 x 60 x 15: 4 x M5 tapped holes for the BK12, and 2 x M6 counterbored holes into 2 tapped holes in the top edge of the fixed plate.
+- **Z coupling.** Corrected from Ø26 to the D25L35 in the BOM. It is still a stand-in.
+- **Checks.** No moving-to-fixed clash at Z travel -75, -37.5, 0, +37.5 and +75. The motor clears the mount. The timeline is 1367. The old bodies are hidden, not deleted. **The document is modified and not saved. The owner saves it.**
+
+**Not done: X, Y and Y2 blocks.** The owner approved the swap to HGH20CA, but the 8 HGW20CC blocks are still fitted. Setting `YCarriageB/C` and `XCarriageB/C` to 32 and 36 was tried and undone: it broke `Rigid 3`, `Rigid 4`, `Rigid 361` and the D-199 riser bolt features, the Y roller holes did not move, and the X holes ended up 2 off the block centre. The sketches `YRoller Lower`, `XTopRollerLower` and `Xroller Carriage Holes` need re-anchoring on the block centres. The thread in the HGH20CA is M5 and only 6 deep, so the M6 x 12 block screws must become M5 x 8 (M5 x 10 in the bottom X roller).
+
+**Still stand-ins, and what each needs:**
+1. **Spindle JGL-80/2.2R24-20.** Jianken dimension drawing. The page the owner sent covers the JGM series only, and the manual linked in D-39 could not be reached (connection refused).
+2. **Spindle clamp 80.** Drawing or measurements of the clamp in the G-Penny kit (S03).
+3. **Z nut housing, and the X, Y and Y2 housings.** LiMo drawing of the steel housing (M07).
+4. **Z motor mount.** LiMo HM12-60 drawing and the reply to message 6a (task 14).
+5. **4 x D25L35 couplings.** LiMo drawing: bore depth and hub shape.
+6. **X, Y and Y2 nut flanges.** Still round. LiMo to confirm the flats.
+7. **Homing sensors.** M8 in the model, M12 LJ12A3 in the BOM. Owner chose to leave them until the LJ12A3 drawing is available.
+
+**Check when the parts arrive:**
+- **BK12 holes.** The vendor CAD has 4 x Ø5.5 on 46 x 16, but `cad/vendor/README.md` said Ø6.6 at 46. The bracket follows the CAD.
+- **Motor pilot.** The Z motor STEP shows Ø38.1, its PDF says Ø36. The mount needs the real size.
+- **M12 cut list.** The bracket needs a 15 mm piece at least 90 x 60. The 350 x 100 piece leaves under 50 wide after the risers, so it does not cover it. Not priced.
+- **Bracket screws.** 4 x M5 x 35 and 2 x M6 x 25 are not in the BOM yet.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, re-anchor the roller hole sketches and fit the HGH20CA blocks on X, Y and Y2.
+
 ## 0000000000000000000000000000000000000000000000000. 18 Nov 2026: Z nut flange settled, Z assembly checked over full travel (D-205)
 
 **Done:**
@@ -30,31 +58,6 @@
 13. **Amazon delivery.** X11, X12 and X14 are free to deliver only on orders over £35. The three packs come to £20.47, and the charge below £35 is not known. X14 showed only 7 left.
 
 **Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, model the EG tub mould upside down in Fusion (D-204).
-
-## 000000000000000000000000000000000000000000000000. 18 Nov 2026: Z plate stiffness checked, Z assembly modelled (D-202 to D-204)
-
-**Done:**
-- **Z plate stiffness (D-202).** 6082 x 20 stays. At 200 N, plate bending moves the tool 0.4 to 2.2 µm with the nose at Z 100 and up to 3.5 to 10.9 µm at Z 250. Roller flex is not included. See `docs/z-plate-stiffness.md` and `tools/z_plate_stiffness.py`.
-- **Z assembly in `Type_0_v3`.** New component `Z Axis Assembly`, with `Z Fixed Parts` joined rigidly to `Z Fixed Plate` and `Z Moving Parts` on the slider `Z Travel Slider` (±75, nose Z 100 to 250, shown at Z 175). Vendor blocks, nut and BK12. Rails, screw and motor are simple solids. The BK12 bracket, motor mount, nut housing, clamp and spindle are stand-ins. The spindle body is the Jianken stand-in (D-203), and its length is not confirmed. The fixed plate body is now aluminium, 2.81 kg. The timeline is 1348, with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
-- **Jianken quote recorded.** $1,200 + $260 DDP = $1,460, 0.87 Nm, PNP 24 V, about 8 kg. `price_gbp` for S01 is unchanged until VAT is confirmed. Reply draft: `docs/supplier-messages.md` section 7, not sent.
-- **Casting way up decided (D-204).** Upside down, rail face on the mould floor.
-
-**Left:**
-1. **Nut flange clash, owner to decide.** The Ø48 flange overlaps the moving plate by 4 (centre 20 from the plate, radius 24), over the whole travel. Options: a relief pocket in the moving plate, or flats on the flange if the seller confirms them (40 across flats is unverified). On the other side the flange clears the fixed plate by only 1.
-2. **Moving plate width, owner to confirm.** Modelled 150 wide. The 140 in `docs/bom.csv` (M12) would break the outer M5 block holes through the plate edge (hole centre at 68, edge at 70). M12 is not changed yet.
-3. **Mould assembly (D-204).** Not started. Task files 10 and 11 describe the old portal and base, not the tub.
-4. **Jianken reply.** Owner sends it: import VAT and the pull stud and dimension drawings. S06 holders depend on the pull stud.
-5. **Machine height.** The Z motor top is at Z 758. Check it against the enclosure.
-6. **Clash check notes.** Over the full travel the only real clash is item 1. The block and rail overlap comes from the simplified rail, which has no grooves. The small screw and BK12 overlap is at the lock nut thread.
-7. **Z motor mount (task 14).** Still a stand-in, waiting for the seller's drawing.
-8. **Top roller screw strength.** They thread into only 3 of tube wall: check this. Roller flex adds to the stiffness figures.
-9. **Strip casting details.** Anchor screws, thread plugs and the mould fixing are not modelled. The 10 of EG between a strip and the bar pocket needs the fine mix (D-118), and it has not been proved by a cut test piece.
-10. **Machine width.** The brackets reach X -417 to 502.5; the chain side was 487.5. Check this against the enclosure and bench.
-11. **Spacer print files.** The 3 spacers are modelled but have no print file yet.
-12. **Not modelled:** the tapped riser bolt holes in the steel bars and levelling layer, table fixing holes, machine feet and pads.
-13. **Amazon delivery.** X11, X12 and X14 are free to deliver only on orders over £35. The three packs come to £20.47, and the charge below £35 is not known. X14 showed only 7 left.
-
-**Exact next step:** the owner saves `Type_0_v3` and answers items 1 and 2. Then, in a new session, model the EG tub mould upside down in Fusion (D-204).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
