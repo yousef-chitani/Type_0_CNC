@@ -14,9 +14,11 @@
 
 **Left:** the owner has not agreed the layout or the 4 fixes. Not verified: SHS corner radius (flat width), the real ball nut flange. No D-numbers, no STEP. `cad/v2/Facebutton v2 frame.step` is still untracked: ask the owner what it is.
 
-**Owner's answers (18 Nov):** steel saddle (D-165), M10 through access holes (D-166), X motor "no fold over" (read as in line with the screw, **not confirmed**), fixes 1 to 4 to be discussed first (none applied).
+**Owner's answers (18 Nov):** steel saddle (D-165), M10 through access holes (D-166), X motor in line with the screw (D-167). All three are in the script: **moving mass 86.8 kg**. As drawn there are 4 clashes, including the X motor 1 mm into the beam top. `--fixes` (flange slots, 5 mm pads under X BK12/BF12, foot step at X 378, X block pitch 90) gives no clashes. The fixes are **not agreed**: the owner wants to discuss them. The belt problem is gone; the rear right M10 bolts must be tightened before the X motor and mount go on.
 
-**Exact next step:** confirm the X motor meaning, go through fixes 1 to 4 with the owner, size the steel saddle, then update the script, re-run until no clashes are left and record the decisions (next: D-167). Then the owner starts the gantry in Fusion and prices the tube (Dyfed Steels first).
+**Parts list not changed:** remove M15, M16, M17; M08 3 to 4; M13 1 to 2. The X screw stub drawing for LiMo changes (about 681 long).
+
+**Exact next step:** go through fixes 1 to 4 with the owner, size the steel saddle, get approval for the parts list changes, then apply them, re-run until no clashes are left and record the decisions (next: D-168). Then the owner starts the gantry in Fusion and prices the tube (Dyfed Steels first).
 
 ## 0000000000000000000000. 18 Nov 2026: steel gantry layout brief (sketch NOT drawn)
 

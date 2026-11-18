@@ -38,14 +38,14 @@ BEAM_HALF = 445.0
 FLAT0, FLAT1 = B0 + 24, B0 + 126                # usable flat, corner radius 24 NOT verified
 SEAT = 4.0
 RAIL_Y = B0 + 36
-SCREW_Y, SCREW_Z = B0 + 86, 374.0
+RAISE = 5.0 if FIXES else 0.0                   # proposed: 5 pads under BK12/BF12 lift the X screw so the motor clears the beam
+SCREW_Y, SCREW_Z = B0 + 86, 374.0 + RAISE
 SEAT_TOP, SEAT_BOT = BZ1 + SEAT, BZ0 - SEAT     # 349, 191
 XS_MAX = 200.0                                  # saddle centre travel, ±
 SPY = YC["spindle_y"]                           # -225 ... 125
 ZN = (S["nose_bot"], S["nose_top"])             # nose tip, 55 ... 205
 CAR_Y = 140.0                                   # Y carriage centre behind the spindle
-MOTOR_Y = SCREW_Y + 137.5                       # 375 belt, 20T : 20T
-PUL_X0 = 330.0                                  # pulley starts 3 past the BK lock nut (327)
+MOUNT_X0, MOUNT_L = 327.0, 60.0                 # X motor in line (D-167): same 60 long mount as the Y motors
 
 boxes = []
 def add(name, group, x, y, z, mat="al"):
@@ -84,29 +84,26 @@ add("Top seat", "Y", (-325, 325), (FLAT0, FLAT1), (BZ1, SEAT_TOP), "seat")
 add("Bottom seat", "Y", (-305, 305), (FLAT0, FLAT1), (SEAT_BOT, BZ0), "seat")
 add("X rail top", "Y", (-300, 300), mid(RAIL_Y, RAIL_W), (SEAT_TOP, SEAT_TOP + RAIL_H), "rail")
 add("X rail bottom", "Y", (-300, 300), mid(RAIL_Y, RAIL_W), (SEAT_BOT - RAIL_H, SEAT_BOT), "rail")
-add("X screw", "Y", (-319, 381), mid(SCREW_Y, 16), mid(SCREW_Z, 16), "screw")
-add("X BK12", "Y", (290, 315), mid(SCREW_Y, BK_W), (SEAT_TOP, SEAT_TOP + BK_H), "steel")
+add("X screw", "Y", (-319, 362), mid(SCREW_Y, 16), mid(SCREW_Z, 16), "screw")
+add("X BK12", "Y", (290, 315), mid(SCREW_Y, BK_W), (SEAT_TOP + RAISE, SEAT_TOP + RAISE + BK_H), "steel")
 add("X BK lock nut", "Y", (315, 327), mid(SCREW_Y, 30), mid(SCREW_Z, 30), "steel")
-add("X BF12", "Y", (-310, -290), mid(SCREW_Y, BK_W), (SEAT_TOP, SEAT_TOP + BK_H), "steel")
-add("X pulley screw", "Y", (PUL_X0, PUL_X0 + PUL_W + PUL_HUB), mid(SCREW_Y, PUL_OD), mid(SCREW_Z, PUL_OD), "motor")
-add("X pulley motor", "Y", (PUL_X0, PUL_X0 + PUL_W + PUL_HUB), mid(MOTOR_Y, PUL_OD), mid(SCREW_Z, PUL_OD), "motor")
-add("X belt", "Y", (PUL_X0 + 3, PUL_X0 + PUL_W - 3), (SCREW_Y - 20, MOTOR_Y + 20), mid(SCREW_Z, 40), "belt")
-add("X outboard bearing", "Y", (PUL_X0 + PUL_W + PUL_HUB + 2, PUL_X0 + PUL_W + PUL_HUB + 16), mid(SCREW_Y, 60), mid(SCREW_Z, 36), "steel")
-add("X motor plate", "Y", (PUL_X0 - 10, PUL_X0 - 2), (B1, MOTOR_Y + 34), (BZ1 - 60, SCREW_Z + 34), "al")
-add("X motor", "Y", (PUL_X0 - 10 - MOT_LEN, PUL_X0 - 10), mid(MOTOR_Y, MOT_SQ), mid(SCREW_Z, MOT_SQ), "motor")
+add("X BF12", "Y", (-310, -290), mid(SCREW_Y, BK_W), (SEAT_TOP + RAISE, SEAT_TOP + RAISE + BK_H), "steel")
+add("X coupling", "Y", (345, 380), mid(SCREW_Y, 26), mid(SCREW_Z, 26), "steel")
+add("X motor mount", "Y", (MOUNT_X0, MOUNT_X0 + MOUNT_L), mid(SCREW_Y, MOT_SQ), (BZ1, SCREW_Z + MOT_SQ / 2), "al")
+add("X motor", "Y", (MOUNT_X0 + MOUNT_L, MOUNT_X0 + MOUNT_L + MOT_LEN), mid(SCREW_Y, MOT_SQ), mid(SCREW_Z, MOT_SQ), "motor")
 
 # ---------------------------------------------------------------- moves with X: saddle (centred on X 0 here)
 add("Saddle front plate", "X", (-90, 90), (125, 145), (70, 470))
-add("Top arm", "X", (-90, 90), (145, 275), (394, 419))
+add("Top arm", "X", (-90, 90), (145, 275), (394 + RAISE, 419 + RAISE))
 add("Bottom arm", "X", (-90, 90), (145, 275), (136, 161))
 for sn, s in (("R", 1), ("L", -1)):
     xb = mid(s * X_PITCH / 2, BL_L)
     add(f"X block top {sn}", "X", xb, mid(RAIL_Y, BL_W), (SEAT_TOP + BL_H1, SEAT_TOP + BL_H), "block")
-    add(f"X spacer {sn}", "X", xb, mid(RAIL_Y, BL_W), (SEAT_TOP + BL_H, 394))
+    add(f"X spacer {sn}", "X", xb, mid(RAIL_Y, BL_W), (SEAT_TOP + BL_H, 394 + RAISE))
     add(f"X block bottom {sn}", "X", xb, mid(RAIL_Y, BL_W), (SEAT_BOT - BL_H, SEAT_BOT - BL_H1), "block")
     add(f"Z riser {sn}", "X", mid(s * 50, 25), (110, 125), (95, 445))
     add(f"Z rail {sn}", "X", mid(s * 50, RAIL_W), (110 - RAIL_H, 110), (95, 445), "rail")
-add("X housing", "X", mid(0, HS_L), mid(SCREW_Y, HS_W), (354, 394))
+add("X housing", "X", mid(0, HS_L), mid(SCREW_Y, HS_W), (354 + RAISE, 394 + RAISE))
 add("X nut", "X", mid(0, NUT_L), mid(SCREW_Y, NUT_D), mid(SCREW_Z, NUT_D), "steel")
 add("X flange", "X", (NUT_L / 2 - FL_T, NUT_L / 2), mid(SCREW_Y, FL_D), mid(SCREW_Z, FL_D), "steel")
 add("Z motor (position assumed)", "X", (-30, 30), (70, 130), (480, 626), "motor")
@@ -124,11 +121,10 @@ add("Spindle nose", "Z", (-17, 17), (-17, 17), (0, 52), "spindle")
 ALLOWED = [  # these pairs overlap or touch on purpose (a part running on, inside or bolted to the other)
     ("X rail top", "X block top"), ("X rail bottom", "X block bottom"), ("Y rail", "Y block"), ("Z rail", "Z block"),
     ("X screw", "X nut"), ("X screw", "X flange"), ("X screw", "X housing"), ("X screw", "X BK"), ("X screw", "X BF"),
-    ("X screw", "X pulley screw"), ("X screw", "X outboard"), ("X nut", "X housing"), ("X nut", "X flange"),
+    ("X screw", "X coupling"), ("X screw", "X motor mount"), ("X coupling", "X motor mount"), ("X nut", "X housing"), ("X nut", "X flange"),
     ("X flange", "X housing"), ("Y screw", "Y nut"), ("Y screw", "Y flange"), ("Y screw", "Y housing"), ("Y screw", "Y BK"),
-    ("Y screw", "Y BF"), ("Y nut", "Y housing"), ("Y nut", "Y flange"), ("Y flange", "Y housing"), ("X belt", "X pulley"),
+    ("Y screw", "Y BF"), ("Y nut", "Y housing"), ("Y nut", "Y flange"), ("Y flange", "Y housing"),
     ("X BK12", "X BK lock"), ("Spindle body", "Spindle clamp"), ("Spindle body", "Spindle nose"), ("Spindle nose", "Spindle clamp"),
-    ("X screw", "X belt"),
 ] + ([("Top arm", "X flange"), ("Foot step", "Y flange")] if FIXES else [])  # relief slots 12 x 30 x 5 deep
 def allowed(a, b):
     return any((a.startswith(p) and b.startswith(q)) or (a.startswith(q) and b.startswith(p)) for p, q in ALLOWED)
@@ -173,7 +169,7 @@ def status(r):
 near = [dict(r, status=status(r)) for r in sorted(results, key=lambda r: r["gap"]) if r["gap"] < 6 and not (r["same_group"] and r["gap"] == 0)]
 
 # ---------------------------------------------------------------- wrench access through the Ø20 holes in the top wall
-M10 = [(x, 190.0) for x in (345.0, 420.0)] + [(x, 262.0) for x in ((395.0, 430.0) if FIXES else (345.0, 420.0))]
+M10 = [(x, y) for x in (345.0, 420.0) for y in (190.0, 262.0)]
 HOLES = [(s * x, y) for s in (1, -1) for x, y in M10]
 access = []
 for hx, hy in HOLES:
@@ -212,12 +208,12 @@ masses = [
     ("spindle (assumed)", *keep("spindle 2.2")), ("spindle clamp", *keep("spindle clamp")), ("Z plate", *keep("Z plate")),
     ("Z motor + mount (assumed)", *keep("Z motor")), ("Z screw + nut + BK/BF", *keep("Z screw")), ("Z rails + blocks", *keep("Z rails")),
     ("Z risers", *keep("Z risers")),
-    ("saddle front plate 180x400x20", 180 * 400 * 20 * AL, 135.0),
-    ("2 saddle arms 180x130x25", 2 * 180 * 130 * 25 * AL, 210.0),
+    ("steel saddle front plate 180x400x20", 180 * 400 * 20 * STEEL, 135.0),
+    ("2 steel saddle arms 180x130x25", 2 * 180 * 130 * 25 * STEEL, 210.0),
     ("4 X blocks + nut housing + 2 spacers", 4 * 0.4 + 0.5 + 2 * 77.5 * 44 * 15 * AL, RAIL_Y + 8),
     ("X rails 2x600", 2 * 0.6 * 2.21, RAIL_Y),
     ("X screw 700 + nut + BK/BF", screw_kg, SCREW_Y),
-    ("X motor + plate + belt (assumed)", 2.0, MOTOR_Y),
+    ("X motor + mount + coupling (assumed)", 2.0, SCREW_Y),
     ("beam SHS 150x150x8, 890", beam_kg, (B0 + B1) / 2),
     ("2 feet (solid)", 2 * foot_kg, 143.0),
     ("4 Y blocks + 2 Y nut housings", 4 * 0.4 + 2 * 0.3, CAR_Y),
@@ -308,9 +304,9 @@ for b in boxes:
 for h in access:
     c = "#c0172c" if h["blocked_by"] else "#0a7d33"
     a3.add_patch(plt.Circle((h["x"], h["yg"]), 10, fc="white", ec=c, lw=1.6, zorder=6))
-label(a3, 345, 262, 470, 430, "red: Ø20 access hole under the X belt", "#c0172c")
+label(a3, 420, 262, 430, 400, "red: Ø20 holes under the X mount and motor:\ntighten these bolts before fitting them", "#c0172c")
 label(a3, 290, 210, 120, 40, "top arm outline, saddle at X +200 (blue dashed)", "#1f5fbf")
-label(a3, 260, 373, 130, 430, "X motor behind the beam, body inboard")
+label(a3, 450, 236, 120, 400, "X motor in line with the screw, ends at X 512")
 label(a3, -300, 186, -300, 110, "X rail: beam front + 36")
 label(a3, -200, 236, -200, 335, "X screw: beam front + 86")
 a3.set_title("C. Beam top view (Y up the page = further behind the spindle). Green circles: wrench access clear", fontsize=10)

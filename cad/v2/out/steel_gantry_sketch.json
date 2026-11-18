@@ -31,6 +31,16 @@
    "status": "CLASH"
   },
   {
+   "a": "Beam SHS 150x150x8",
+   "b": "X motor",
+   "same_group": true,
+   "gap": -1.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "CLASH"
+  },
+  {
    "a": "Y BF12 R",
    "b": "Foot inner R",
    "same_group": false,
@@ -181,6 +191,16 @@
    "status": "TIGHT"
   },
   {
+   "a": "Top seat",
+   "b": "X motor mount",
+   "same_group": true,
+   "gap": 2.0,
+   "spindle_y": 0.0,
+   "saddle_x": 0.0,
+   "nose_z": 205,
+   "status": "TIGHT"
+  },
+  {
    "a": "X BK12",
    "b": "Top arm",
    "same_group": false,
@@ -197,26 +217,6 @@
    "gap": 2.0,
    "spindle_y": 0.0,
    "saddle_x": -200.0,
-   "nose_z": 205,
-   "status": "TIGHT"
-  },
-  {
-   "a": "X pulley screw",
-   "b": "X outboard bearing",
-   "same_group": true,
-   "gap": 2.0,
-   "spindle_y": 0.0,
-   "saddle_x": 0.0,
-   "nose_z": 205,
-   "status": "TIGHT"
-  },
-  {
-   "a": "X pulley motor",
-   "b": "X motor plate",
-   "same_group": true,
-   "gap": 2.0,
-   "spindle_y": 0.0,
-   "saddle_x": 0.0,
    "nose_z": 205,
    "status": "TIGHT"
   },
@@ -259,16 +259,6 @@
    "saddle_x": 0.0,
    "nose_z": 205,
    "status": "TIGHT"
-  },
-  {
-   "a": "X BK lock nut",
-   "b": "X pulley screw",
-   "same_group": true,
-   "gap": 3.0,
-   "spindle_y": 0.0,
-   "saddle_x": 0.0,
-   "nose_z": 205,
-   "status": "ok"
   },
   {
    "a": "Foot inner R",
@@ -599,19 +589,9 @@
    "saddle_x": -200.0,
    "nose_z": 205,
    "status": "ok"
-  },
-  {
-   "a": "X belt",
-   "b": "X motor plate",
-   "same_group": true,
-   "gap": 5.0,
-   "spindle_y": 0.0,
-   "saddle_x": 0.0,
-   "nose_z": 205,
-   "status": "ok"
   }
  ],
- "clashes": 3,
+ "clashes": 4,
  "access": [
   {
    "x": 345.0,
@@ -619,36 +599,37 @@
    "blocked_by": []
   },
   {
-   "x": 420.0,
-   "yg": 190.0,
-   "blocked_by": []
-  },
-  {
    "x": 345.0,
    "yg": 262.0,
    "blocked_by": [
-    "X pulley screw",
-    "X belt"
+    "X motor mount"
    ]
   },
   {
    "x": 420.0,
-   "yg": 262.0,
+   "yg": 190.0,
    "blocked_by": []
+  },
+  {
+   "x": 420.0,
+   "yg": 262.0,
+   "blocked_by": [
+    "X motor"
+   ]
   },
   {
    "x": -345.0,
    "yg": 190.0,
+   "blocked_by": []
+  },
+  {
+   "x": -345.0,
+   "yg": 262.0,
    "blocked_by": []
   },
   {
    "x": -420.0,
    "yg": 190.0,
-   "blocked_by": []
-  },
-  {
-   "x": -345.0,
-   "yg": 262.0,
    "blocked_by": []
   },
   {
@@ -673,12 +654,12 @@
   "carriage_centre_yg": 140.0
  },
  "mass": {
-  "total_kg": 73.4,
+  "total_kg": 86.8,
   "beam_kg": 31.7,
-  "com_yg": 170.5,
+  "com_yg": 167.1,
   "carriages_yg": 140.0,
-  "com_behind_carriages": 30.5,
-  "rear_blocks_share_pct": 70.3,
+  "com_behind_carriages": 27.1,
+  "rear_blocks_share_pct": 68.0,
   "parts": [
    [
     "spindle (assumed)",
@@ -716,13 +697,13 @@
     112
    ],
    [
-    "saddle front plate 180x400x20",
-    3.89,
+    "steel saddle front plate 180x400x20",
+    11.3,
     135.0
    ],
    [
-    "2 saddle arms 180x130x25",
-    3.16,
+    "2 steel saddle arms 180x130x25",
+    9.18,
     210.0
    ],
    [
@@ -741,9 +722,9 @@
     236.0
    ],
    [
-    "X motor + plate + belt (assumed)",
+    "X motor + mount + coupling (assumed)",
     2.0,
-    373.5
+    236.0
    ],
    [
     "beam SHS 150x150x8, 890",
