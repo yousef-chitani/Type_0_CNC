@@ -111,17 +111,24 @@ The NEMA 23 motors and D30L40 couplings are still shown until the imported parts
 
 | Y rail | Y screw | Tub length | Y travel, blocks to rail ends |
 |---|---|---|---|
-| 550 (D-175) | 650 | 690 | **386** (worked out, same layout as 570) |
-| 570 (in the open model) | 670 | 710 | **406** (measured over 41 positions, no clashes) |
+| **550 (D-175, kept by D-185)** | 650 | 690 | **386** (worked out from the 570 trial, not measured at 550) |
+| 570 (tried, dropped) | 670 | 710 | 406 (measured over 41 positions, no clashes) |
 
-Type 0 needs 350, so **the 550 rail is enough**. At 570, the tightest gaps at the ends of travel are 1.0 from block to riser and 4.1 from the SFU1610 nut to the BF12. The DFU1605 nut is longer, so re-check this when it is imported. These use PrintNC's blocks.
+Type 0 needs 350. In the 570 trial the tightest gaps at the ends of travel were 1.0 from block to riser and 4.1 from the SFU1610 nut to the BF12. The DFU1605 nut is longer, so re-check this when it is imported. These use PrintNC's blocks.
 
-**Open document, not saved:**
-- `YCuttingArea` is 405 (was 385). `calcYRailLength` no longer rounds up to 25 steps: it is now `YCuttingArea + 65 mm + ( YCarriageCount * 50 mm )`.
-- New sketch `D-181 Y riser targets` (timeline now 1183). Its points are plain numbers for the 570 rail. For 550, the `Rigid 312` point moves from Y 581 to Y 561.
-- `Rigid 311` and `Rigid 312` now point at that sketch, angle 0, flipped. Risers, BK12, BF12, plate, screw, coupling, motor and bolts followed, and Y2 followed through its mirror features.
-- **The rail has not moved yet and overlaps the BK12 riser by 60.5.** `Rigid 2` (`Y HGR20` to `YFrame`) locates it.
-- The rear of the motor is 109 behind the tub with the NEMA 23. D-142 allows about 185. The NEMA 24 length is still to come from its datasheet.
+**Open document, not saved (timeline 1183, 1 error, 5 warnings, the same failures as version 1):**
+- `YCuttingArea` is back to 385 and `calcYRailLength` has its original formula.
+- New sketch `D-181 Y riser targets`, with plain-number points at (-350, -23, 125) and (-335, 561, 125).
+- `Rigid 311` and `Rigid 312` point at that sketch, angle 0, flipped. Risers, BK12, BF12, plate, screw, coupling, motor and bolts followed, and Y2 followed through its mirror features.
+- The rear of the motor is at Y 762, 109 behind the tub with the NEMA 23. D-142 allows about 185. The NEMA 24 length is still to come from its datasheet.
+
+**Still wrong: the Y rails have not moved. They run Y 64 to 614 and overlap the BK12 risers by 60.5.** They should run Y 2.5 to 552.5.
+
+**Two ways of moving the rail failed, and both were undone:**
+1. `Rigid 2` offset of -61.5 moves the rail in Z, not Y, and raises the warnings to 10.
+2. Pointing `Rigid 2` at a new sketch point moved the rail occurrence and its bolts by -61.5, but the rail body stayed at Y 64 to 614. The Y2 rail and its whole drive then moved +61.5. Y2 is held by `Rigid 202` and `Rigid Group 247`, which holds the Y2 rail and drive together.
+
+The rail body is made of a base feature, extrudes, a pattern and `MoveFace2`, and has no sketches. Why the body stays put is not yet known.
 
 ## Not checked
 

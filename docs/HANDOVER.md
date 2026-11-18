@@ -6,15 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
-## 00000000000000000000000000000000000. 18 Nov 2026: supports swapped, Y motors at the back, rail length to re-decide
+## 00000000000000000000000000000000000. 18 Nov 2026: Y motors at the back, Y rails still to shift
 
-**Done:** owner settled the Z plate (D-184: 6082 in Phase 1 then steel, 15 risers stay, 350 high). In the open `Type_0_v3`: BK12 supports and NEMA 24 plates shown on X, Y and Y2, Y lengthened by 20 at the owner's request, Y risers and motors moved to the back, Y2 followed. Timeline 1183, 1 error and 5 warnings, the same failures as version 1. **The document is modified and not saved. Do not save it while the rail overlaps the riser unless the owner wants to.**
+**Done:** D-184 (Z plate: 6082 in Phase 1 then steel, 15 risers stay, 350 high) and D-185 (Y stays 550 rail, 650 screw, 690 tub). In the open `Type_0_v3`: BK12 supports and NEMA 24 plates shown on X, Y and Y2, and the Y risers, screws and motors turned end for end, with the motors at the back on both sides. Timeline 1183, 1 error and 5 warnings, the same failures as version 1. **The document is modified and not saved. The owner saves it.**
 
-**Correction:** the 338 Y travel given to the owner was wrong, because it left the rail in place. With the rail shifted 61.5 forward, 550 rails give 386 and 570 rails give 406, against 350 needed. The owner chose +20 on the wrong figure, so **D-175 is unchanged and no D-185 is recorded yet**. Details are in `docs/printnc-assessment.md`.
+**Left:** the Y rails still run Y 64 to 614 and overlap the BK12 risers by 60.5. They should run Y 2.5 to 552.5. The 386 travel is worked out, and must be measured once the rails are in place. Then item 3 and item 4 in the next entry (D-184 unblocks item 4).
 
-**Left:** the rail shift (`Rigid 2`, 61.5 towards the front), item 3 and item 4 in the next entry.
+**Do not repeat:** a `Rigid 2` offset moves the rail in Z. Re-pointing `Rigid 2` at a sketch point leaves the rail body behind and throws the Y2 drive 61.5 out. Both are in `docs/printnc-assessment.md`.
 
-**Exact next step:** the owner chooses 550 (back to `YCuttingArea` 385, `Rigid 312` sketch point to Y 561) or 570 (record D-185: rail 570, screw 670, tub 710, new LiMo prices). Then shift the rail and re-measure.
+**Exact next step:** in a new session, find out why the `Y HGR20` body stays at Y 64 to 614 when its occurrence moves (start with `MoveFace2`, `Base Feature1` and `Rigid Group 247`). Then shift both Y rails 61.5 forward, keeping the 1 error and 5 warnings, and re-measure the travel.
 
 ## 0000000000000000000000000000000000. 18 Nov 2026: model update planned, not started
 
