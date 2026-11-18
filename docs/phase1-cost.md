@@ -64,7 +64,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M17 | Ø10 flange bearing (X screw outboard support) (dropped: D-182) | 1 pcs | £0.00 |
 | M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
 | M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | £186.26 |
-| M13 | Z motor mount (NEMA 24 to BK12) | 1 pcs | £13.03 |
+| M13 | Z motor mount and fixed bearing HM12-60-V (replaces the Z BK12) | 1 pcs | £13.03 |
 
 ## Gantry
 

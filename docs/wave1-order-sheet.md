@@ -53,7 +53,7 @@ Generated from `docs/bom.csv` by `tools/gen_wave1_sheet.py`: edit the BOM, not t
 | ☐ | M03 | HGR20 rail set Z: 2 × 350 mm + 4 blocks | 2 pcs | $35.76 less 10 % (LiMo, owner basket) | 24.34 | 2026-11-17 | [page](https://limobearing.com/) |  |
 | ☐ | M05 | DFU1605 C5 ballscrew sets X 700 / Y 650 × 2 / Z 350 | 4 pcs | $153.57 (700) + $141.57 × 2 (600) + $111.57 (350) less 10 % + DDP sea $129 (Checkout7) | 470.82 | 2026-11-17 | [page](https://limobearing.com/) | Standard BK12 ends on X, Y and Z, no drawing (D-157, D-182); HGH20CA 600 price and a corrected checkout (Checkout6 still has HGH15CA 600 × 2 and D25L35 × 1); LiMo 6a answers; steel housing size; code 10OFF |
 | ☐ | M08 | Flexible coupling D25L35, 10 mm to 10 mm (X, Z, Y1, Y2) | 4 pcs | $3.21 each less 10 % (LiMo, owner basket) | 8.76 | 2026-11-17 | [page](https://limobearing.com/) | Basket must have 4 (D-182) |
-| ☐ | M13 | Z motor mount (NEMA 24 to BK12) | 1 pcs | $19.14 less 10 % (LiMo HM12-60 C7, owner basket) | 13.03 | 2026-11-17 | [page](https://limobearing.com/) | Basket had HM10-60: must be HM12-60. Holes 49.5 mm: LiMo to drill to 50 (6a) |
+| ☐ | M13 | Z motor mount and fixed bearing HM12-60-V (replaces the Z BK12) | 1 pcs | $19.14 less 10 % (LiMo HM12-60 C7, owner basket) | 13.03 | 2026-11-17 | [page](https://limobearing.com/) | Basket had HM10-60: must be HM12-60. Holes 49.5 mm: LiMo to drill to 50 (6a) |
 
 ## Other: £51.77
 

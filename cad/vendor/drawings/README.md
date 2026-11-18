@@ -14,7 +14,7 @@ Values are copied from the images in this folder. All sizes in mm. None of these
 
 ## Flags for the next session
 
-1. **HM12-60-V is a mount and a bearing support in one.** It holds a 7001 bearing and lists BF12 as its partner. Fitting it may replace the Z BK12 and the D-206 bracket. Owner to decide before modelling.
+1. **HM12-60-V is a mount and a bearing support in one.** It holds a 7001 bearing and lists BF12 as its partner. It replaces the Z BK12 and the D-206 bracket (D-207).
 2. **HM12-60-V hole square.** PCD 70 gives a 49.5 square and the motor is 50, so each M4 screw sits 0.35 off its hole centre. The motor holes are Ø5.1, so M4 should pass. The 50 bore does not locate the motor pilot.
 3. **HM12-60-V coupling.** The table lists a 30-42 coupling, and the BOM buys D25L35. Check that the Ø25 fits and that the screw and motor ends reach it.
 4. **Coupling grip.** The hub is 11.75 long, but D-186 sets 12.9 of shaft into each end. The shafts would run 1.15 past the hub towards the spider. Check the gap between the shaft ends and the spider.
