@@ -2,6 +2,22 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000. 18 Nov 2026: EG tub modelled (D-196)
+
+**Done:** the new component `EG Tub` is in `Type_0_v3`: casting, 2 steel bars 40 x 10 x 684 and 2 levelling layers, with 9 M5 and 7 M6 tap holes per wall through the bar and layer. The tub is 900 x 690 x 140 high, with the floor top at Z 45 and the walls at Z 125. The cast EG is 51.24 L, about 117.8 kg at 2,300 kg/m³. The recess inner edge moved from X 325 to X 315, because the risers span X 320 to 380 (D-196). Table top Z 70 is confirmed: floor Z 45 plus the 25 table plate (M11). Measured: all body volumes match the hand figures, all 939 existing bodies are unchanged, and the timeline is 1266 with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
+
+**Left:**
+1. **Riser bolt lengths.** The M6 x 30 bolts do not suit the seat. At Y -23 and Y 629 (6 bolts) they end at Z 119, 1 of thread. At Y -6 and Y 561 (8 bolts) they end at Z 107, 3 past the bar into solid EG. M6 x 35 and M6 x 25 would give 6 and 8 of thread. Needs the owner's decision and a live price.
+2. **Front riser screws in the model.** The 4 screws at X -305 and 305 (Y -6, Y 561) still need moving to X -365 and 365.
+3. **Parts that clash with the walls need new positions:** both Y frame trigger mounts, the Y cable chain support, the Y cable chain fixed end support, its zip tie plate, and their screws.
+4. **Not modelled:** table fixing holes, machine feet and pads, draft and corner fillets, mould details.
+5. **Z plate stiffness** (D-184).
+6. **Top roller screw strength.** They thread into only 3 of tube wall: check this.
+7. **Amazon delivery.** X11 and X12 are free to deliver only on orders over £35. The two packs come to £12.98, and the charge below £35 is not known.
+8. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, settle the riser bolt lengths with the owner and get a live price.
+
 ## 000000000000000000000000000000000000000000. 18 Nov 2026: roller screws settled, casting next (D-193 to D-195)
 
 **Done:** the 4 top roller screws change to M6 x 30, and the cast element is the next session (D-193). Measured in `Type_0_v3`, which had no unsaved changes: the screw seat is at Y 423.5, so an M6 x 30 ends at Y 453.5. At the top holes that is 5.5 past the 3 tube wall, with nothing in the way. The screws are in `docs/bom.csv` as X12: Drenky A2 M6 x 30, pack of 20, £6.99 from Amazon (D-194). Phase 1 is now £3,970.40, £229.60 left. The 5 bottom screws stay M6 x 20 (D-195). The Fusion model was not changed.
