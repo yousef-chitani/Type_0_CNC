@@ -11,7 +11,7 @@
 **Done:** in `Type_0_v3` the motor plates on X, Y and Y2 moved 12 towards the screws, the motors moved with them and the couplings moved 6. The BK12 risers are 12 shorter, their rear bolts moved 12 forward, and the X gantry tube holes moved to match. Measured: 12.9 of grip per shaft, 1.6 from coupling to BK12, Y motor rear at Y 775, X motor rear at X 515. Timeline 1230, 1 error and 5 warnings, the same failures as version 1. Details are in `docs/printnc-assessment.md`. **The document is modified and not saved. The owner saves it.**
 
 **Left:**
-1. **Motor plate bolts, owner to confirm.** M6 x 20 would bottom out in the 12 deep holes. M6 x 16 fits but is not in `docs/bom.csv`, and needs a live price.
+1. **Motor plate bolts: M6 x 16 chosen (D-188), 9 needed.** Not yet in `docs/bom.csv`. Screwfix and RS blocked curl on 18 Nov, so the owner needs to give a live price.
 2. **X riser side holes.** The two 4 mm holes at X 375.5 leave 0.5 of wall to the new end face. Decide whether to move them.
 3. **Front Y riser bolts** at X -305 and 305 sit outside the risers (already wrong, not moved). The tub needs drilling for the new Y 629 bolts.
 4. **Motor length, owner to confirm.** The STEP is named `24HE40-5004D-E1000` and gives a 125 body. No datasheet for it is in `cad/vendor/`.

@@ -188,7 +188,7 @@ In `Type_0_v3` on X, Y and Y2. Timeline 1230, 1 error, 5 warnings, the same fail
 
 **Still to settle:**
 
-1. **Motor plate bolts.** An M6 x 20 reaches 12 into the riser, the full depth of the new 12 deep hole, so it would bottom out. Use M6 x 16. These are not in `docs/bom.csv` (only M6 x 20 is).
+1. **Motor plate bolts (D-188).** M6 x 16, 9 in all, because an M6 x 20 would bottom out in the new 12 deep hole. Not yet in `docs/bom.csv`: a live price is needed.
 2. **X riser side holes.** The two 4 mm holes at X 375.5 now leave 0.5 of wall to the new end face. One holds an `M4x8 Pan Head`.
 3. **Tub holes.** The tub has no modelled holes for the Y riser bolts, so the new Y 629 position must go into the tub drilling.
 4. **Front Y riser bolts.** The bolts at X -305 and 305 (Y 561 and Y -6) are also outside the risers. They were already wrong and were not moved.

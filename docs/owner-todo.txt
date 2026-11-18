@@ -79,8 +79,9 @@ The mould drawings can't start until this is done.
 
    - Set the D25L35 coupling to 4 in the LiMo basket (D-182).
    - Save the open Fusion document Type_0_v3 before closing Fusion. It
-     holds the BK12 supports and the Y motors at the back. The Y rails
-     are still to be moved, so they overlap the risers for now.
+     holds the shortened risers and moved motor plates (D-186, D-187).
+   - Find a price for 9 x M6 x 16 socket cap screws, A2 (D-188), and give
+     it to a session with the link and date, for the BOM.
 
 
 === LATER (no rush) ===
