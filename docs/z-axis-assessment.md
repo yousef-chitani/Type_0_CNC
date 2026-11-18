@@ -64,7 +64,9 @@ Thrust assumes 90 % screw efficiency. 1200 rpm is an assumption, in line with th
 
 ## Not checked
 
+The fixed plate stiffness is now checked: `docs/z-plate-stiffness.md` (D-202).
+
+
 - No prices were looked up for any new part.
 - Clashes over the full travel with the Type 0 Z and the longer nuts.
-- Stiffness of the fixed plate.
 - Length of the X and Y motors. The vendor STEP sizes include other geometry.

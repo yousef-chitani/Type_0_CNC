@@ -112,3 +112,17 @@ Owner (16 Nov): screw lengths stay **X 850 / Y 600**, Z standard ends; **no draw
 For you: C5 price done (17 Nov: C5 sets with supports $424.71; see `price-check-task-16.md`). Checkout done 17 Nov: DDP sea $129, DDP air $269 (see `price-check-task-16.md`).
 
 For you: the all-in DDP price must beat **£464.41** (price check 16). Need the rail accuracy class and a clear yes on the HM12-60 fitting the 50 mm / Ø36 motor face (or drilled to fit). If it won't fit, task 14 makes the mount from the 10 mm plate.
+
+## 7. Jianken (reply to the quote of 18 Nov 2026, draft, owner sends)
+
+Quote received: JGL-80/2.2R24 $1,200 with one ISO20 holder and one ER16 collet, DDP shipping to the UK $260, total $1,460. Rated torque 0.87 Nm, PNP 24 V sensors, about 8 kg, 6 working days to make, about 15 working days to ship. The reply says tariff and customs duties are covered but does not mention import VAT, and it has no pull stud drawing.
+
+> Hello Wafer,
+>
+> Thank you for the quote.
+>
+> 1. Does the 1,460 USD total include UK import VAT as well as duty?
+> 2. Please send the pull stud drawing and the spindle dimension drawing.
+>
+> Thank you,
+> Yousef
