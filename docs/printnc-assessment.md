@@ -34,7 +34,7 @@ Parameters only. No direct modelling.
 | Top roller, bottom roller | 150 wide, 175 wide by formula |
 | X and Y screw length in the model | 700 (Type 0: X 700, Y 600) |
 | Y screw position | **Directly above the Y rail**, X ± 350 (D-174) |
-| Length of the Y rail and its supports in line | **734** with a 600 rail (riser 96.5 + rail 600 + gap 0.5 + 2.0 + riser 35.5, measured in the model from Y −34 to 700). The tub is 630 |
+| Length of the Y rail and its supports in line | **734** with a 600 rail (riser 96.5 + gap 1.5 + rail 600 + gap 0.5 + riser 35.5, measured in the model from Y −34 to 700). The tub is 630 |
 
 ## Still failing (8 features)
 
