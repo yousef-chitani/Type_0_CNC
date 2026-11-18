@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000. 18 Nov 2026: beam bolts moved, unused parts hidden
+
+**Done:** owner chose to move the beam bolt rows (D-178): `AdjXGanYRolHoles` is 13, and the holes line up after the rebuild. Failing features went from 8 to 6. The base frame, PrintNC Z axis, spindle and drill guides are hidden in Fusion, listed in `docs/printnc-assessment.md`. Nothing was deleted.
+
+**Left:** the Fusion document is **unsaved** with **6 failing features**. The full travel has not been run. The Y cable chain brackets are still shown with nothing to mount on. Availability and price of 120 × 120 × 8, the real corner radius and the LiMo prices for the 550 rail and 650 screws are not confirmed.
+
+**Exact next step:** the owner saves the Fusion document under a new name. Then run the gantry through its full travel and check for clashes. Use parameters only in Fusion, never direct modelling.
+
 ## 000000000000000000000000000000. 18 Nov 2026: beam 120 × 120 × 8, L bracket seated
 
 **Done:** owner chose SHS 120 × 120 × 8 (D-177, amends D-176). In the open Fusion model `XGantryWidth` and `XGantryHeight` are 120, `XGantryOffset` is −35, and the bracket joint `d4192` now subtracts the offset. The L bracket has its full 50 seat and its 8 bolt holes line up. `docs/bom.csv` G01 and `docs/printnc-assessment.md` are updated. The earlier entry's offsets of +25 and +50 had the wrong sign: negative moves the beam to the rear.

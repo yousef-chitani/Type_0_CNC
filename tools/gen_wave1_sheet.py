@@ -17,7 +17,7 @@ VENDORS = [  # (domain fragment, vendor name), in the order to place the orders
     ("rs-online", "RS Components (free delivery over £60)"),
     ("stepperonline", "StepperOnline"),
     ("aliexpress", "AliExpress (log in, UK delivery)"),
-    ("limobearing", "LiMo (DDP sea, code 10OFF; screw drawings by email with the order number)"),
+    ("limobearing", "LiMo (DDP sea, code 10OFF)"),
 ]
 
 # Open checks (open-questions.md "Before wave 1" and the bom.csv notes)
@@ -34,7 +34,8 @@ CHECKS = {
     "M09": "VAT basis unclear",
     "M10": "Was backorder from the China warehouse; VAT basis and shipping not shown",
     "M14": "No UK stock (DE warehouse); VAT basis unclear",
-    "M05": "X stub drawing by email (Y, Z standard, D-157); HGH20CA 600 price and a corrected checkout (Checkout6 still has HGH15CA 600 × 2 and D25L35 × 1); LiMo 6a answers; steel housing size; code 10OFF",
+    "M05": "Standard BK12 ends on X, Y and Z, no drawing (D-157, D-182); HGH20CA 600 price and a corrected checkout (Checkout6 still has HGH15CA 600 × 2 and D25L35 × 1); LiMo 6a answers; steel housing size; code 10OFF",
+    "M08": "Basket must have 4 (D-182)",
     "M13": "Basket had HM10-60: must be HM12-60. Holes 49.5 mm: LiMo to drill to 50 (6a)",
     "M01": "Rail accuracy class (6a)",
 }

@@ -6,6 +6,14 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000. 18 Nov 2026: Z axis and drive chosen
+
+**Done:** owner chose the Type 0 Z on a new 150 wide plate (D-179), DFU1605 and NEMA 24 on X and Y (D-180), Y motors at the back (D-181) and the X motor in line past the beam end, no belt (D-182). `docs/bom.csv`: M15, M16 and M17 dropped, M08 now 4 couplings. Phase 1 priced total **£3,957.42, £242.58 left**. X now uses the standard BK12 end, so no stub drawing is needed.
+
+**Left:** the Fusion model was not changed and still shows the PrintNC Z, SFU1610, NEMA 23 and the Y motors at the front. It has no parameter for the Y motor end, so moving them means editing joints, and the owner has not said how to show this in the model. The document is **unsaved** with **6 failing features** (1 error, 5 warnings). The owner must add a fourth D25L35 to the LiMo basket. Not checked: X motor length past the beam end, the X motor mount, the X screw length, clashes over the full travel. Availability and price of 120 × 120 × 8 and the LiMo prices for the 550 rail and 650 screws are not confirmed.
+
+**Exact next step:** the owner saves the Fusion document under a new name and says whether the Y motors may be moved by editing joints. Then update the model to D-179 to D-182.
+
 ## 00000000000000000000000000000000. 18 Nov 2026: Z axis and drive options
 
 **Done:** assessed the Z axis and the screw and motor mismatch in `docs/z-axis-assessment.md`. Recommended: keep the Type 0 Z with a new 150 wide fixed plate bolted to the PrintNC X rollers, and keep DFU1605 and NEMA 24, changing the model to match. The DFU1605 flange fits the PrintNC rollers. No decision was made and the Fusion model was not changed.
@@ -13,14 +21,6 @@
 **Left:** the owner has not chosen. The model has the Y motors at the front, but D-142 puts them at the back. The Fusion document is **unsaved** with **6 failing features**. The full travel has not been run. Availability and price of 120 × 120 × 8 and the LiMo prices for the 550 rail and 650 screws are not confirmed.
 
 **Exact next step:** the owner chooses the Z axis option, the drive option and the Y motor end. Then record them as D-179 onwards and update the Fusion model.
-
-## 0000000000000000000000000000000. 18 Nov 2026: beam bolts moved, unused parts hidden
-
-**Done:** owner chose to move the beam bolt rows (D-178): `AdjXGanYRolHoles` is 13, and the holes line up after the rebuild. Failing features went from 8 to 6. The base frame, PrintNC Z axis, spindle and drill guides are hidden in Fusion, listed in `docs/printnc-assessment.md`. Nothing was deleted.
-
-**Left:** the Fusion document is **unsaved** with **6 failing features**. The full travel has not been run. The Y cable chain brackets are still shown with nothing to mount on. Availability and price of 120 × 120 × 8, the real corner radius and the LiMo prices for the 550 rail and 650 screws are not confirmed.
-
-**Exact next step:** the owner saves the Fusion document under a new name. Then run the gantry through its full travel and check for clashes. Use parameters only in Fusion, never direct modelling.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

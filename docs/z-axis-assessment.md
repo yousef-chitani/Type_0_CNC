@@ -1,6 +1,6 @@
 # Z axis and drive parts: assessment (18 Nov 2026)
 
-**Status: recommendation only. The owner has not decided.** Measured from the open Fusion model (120 × 120 × 8 beam), `cad/v2/assembly.py`, `docs/bom.csv` and the vendor STEP files. Nothing is drawn or rebuilt yet.
+**Status: decided 18 Nov 2026.** Z axis option B (D-179), drive option 1 (D-180), Y motors at the back (D-181), X motor in line past the beam end (D-182, not the fold shown in the table below). Measured from the open Fusion model (120 × 120 × 8 beam), `cad/v2/assembly.py`, `docs/bom.csv` and the vendor STEP files. Nothing is drawn or rebuilt yet.
 
 ## Z axis
 

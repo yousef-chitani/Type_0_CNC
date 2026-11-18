@@ -1,20 +1,20 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,972.51** (budget £4,200, D-127). Not priced yet: G01, G03. No eBay.
+**Phase 1 priced total: £3,957.42** (budget £4,200, D-127). Not priced yet: G01, G03. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
 | Frame | £840.59 |
-| Motion | £1,256.12 |
+| Motion | £1,241.03 |
 | Gantry | £0.00 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
 | Fixings | £70.67 |
-| **Total** | **£3,972.51** |
+| **Total** | **£3,957.42** |
 
 ## Frame
 
@@ -55,13 +55,13 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M05 | DFU1605 C5 ballscrew sets X 700 / Y 650 × 2 / Z 350 | 4 pcs | £470.82 |
 | M06 | BK12 + BF12 end supports, C5 (in the screw sets) | 4 sets | £0.00 |
 | M07 | Steel nut housings (in the screw sets) | 4 pcs | £0.00 |
-| M08 | Flexible coupling D25L35, 10 mm to 10 mm (Z, Y1, Y2) | 3 pcs | £6.57 |
+| M08 | Flexible coupling D25L35, 10 mm to 10 mm (X, Z, Y1, Y2) | 4 pcs | £8.76 |
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 3 sets | £164.05 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
-| M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore | 2 pcs | £7.84 |
-| M16 | HTD-5M timing belt 15 mm wide (X) | 1 pcs | £5.39 |
-| M17 | Ø10 flange bearing (X screw outboard support) | 1 pcs | £4.05 |
+| M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore (dropped: D-182) | 2 pcs | £0.00 |
+| M16 | HTD-5M timing belt 15 mm wide (X) (dropped: D-182) | 1 pcs | £0.00 |
+| M17 | Ø10 flange bearing (X screw outboard support) (dropped: D-182) | 1 pcs | £0.00 |
 | M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
 | M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | £186.26 |
 | M13 | Z motor mount (NEMA 24 to BK12) | 1 pcs | £13.03 |
