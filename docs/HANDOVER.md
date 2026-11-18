@@ -6,6 +6,18 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000. 18 Nov 2026: model update planned, not started
+
+**Done:** the owner saved the model as `Type_0_v3` version 1 (CNC mill project, 1 error and 5 warnings, 1182 timeline items) and allowed changes beyond parameters for D-179 to D-182 (D-183). No change has been made to the model. The session stopped at the context limit.
+
+**Left, in this order.** Re-count errors and warnings after every write and undo any edit that raises them. Hide parts, never delete them, and list each change in `docs/printnc-assessment.md`. Do not save through the tool: tell the owner the document is modified.
+1. **Supports (D-180), visibility only.** For X, Y and Y2: hide `HM12-57` and the `HM12 M6x50` fasteners, show the hidden `BK12` and `Nema24 Plate`. The timeline should stay at 1182.
+2. **Y motors to the back (D-181).** Root joints `Rigid 311` (BF12 riser to YFrame) and `Rigid 312` (BKHM12 riser to YFrame) locate the risers, and the BK12, motor plates, screw and motor chain off them. Y2 has a `Derived Base Feature1`, so check whether it follows or needs its own edit. Confirm which Y direction is the rear first. Then check the riser fasteners, the 3 gap at each tub end (D-175) and the motor overhang against the 185 in D-142.
+3. **Imported parts (D-180, D-182).** DFU1605 nut and 24HS40 motor from `cad/vendor/`, and a D25L35 coupling. Take the motor length from the datasheet, because the STEP includes other geometry. This gives the X motor overhang.
+4. **Z axis (D-179): blocked.** The owner must first choose the plate material (steel or 6082), whether the 15 risers stay, and the plate height.
+
+**Exact next step:** in a new session, ask the owner the three Z plate questions, then start at item 1.
+
 ## 000000000000000000000000000000000. 18 Nov 2026: Z axis and drive chosen
 
 **Done:** owner chose the Type 0 Z on a new 150 wide plate (D-179), DFU1605 and NEMA 24 on X and Y (D-180), Y motors at the back (D-181) and the X motor in line past the beam end, no belt (D-182). `docs/bom.csv`: M15, M16 and M17 dropped, M08 now 4 couplings. Phase 1 priced total **£3,957.42, £242.58 left**. X now uses the standard BK12 end, so no stub drawing is needed.
@@ -13,14 +25,6 @@
 **Left:** the Fusion model was not changed and still shows the PrintNC Z, SFU1610, NEMA 23 and the Y motors at the front. D-179 to D-182 cannot be modelled by parameters alone: there is no parameter for the Y motor end, and the new Z plate, nuts, motors and supports are different parts. D-172 says parameters only, so the owner must say whether the model may go beyond that. The document is **unsaved** with **6 failing features** (1 error, 5 warnings). The owner must add a fourth D25L35 to the LiMo basket. Not checked: X motor length past the beam end, the X motor mount, the X screw length, clashes over the full travel. Availability and price of 120 × 120 × 8 and the LiMo prices for the 550 rail and 650 screws are not confirmed.
 
 **Exact next step:** the owner saves the Fusion document under a new name and says whether the model may be changed beyond parameters for D-179 to D-182. Then update the model, or record the mismatch if it stays as it is.
-
-## 00000000000000000000000000000000. 18 Nov 2026: Z axis and drive options
-
-**Done:** assessed the Z axis and the screw and motor mismatch in `docs/z-axis-assessment.md`. Recommended: keep the Type 0 Z with a new 150 wide fixed plate bolted to the PrintNC X rollers, and keep DFU1605 and NEMA 24, changing the model to match. The DFU1605 flange fits the PrintNC rollers. No decision was made and the Fusion model was not changed.
-
-**Left:** the owner has not chosen. The model has the Y motors at the front, but D-142 puts them at the back. The Fusion document is **unsaved** with **6 failing features**. The full travel has not been run. Availability and price of 120 × 120 × 8 and the LiMo prices for the 550 rail and 650 screws are not confirmed.
-
-**Exact next step:** the owner chooses the Z axis option, the drive option and the Y motor end. Then record them as D-179 onwards and update the Fusion model.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

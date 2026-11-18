@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000. 18 Nov 2026: Z axis and drive options
+
+**Done:** assessed the Z axis and the screw and motor mismatch in `docs/z-axis-assessment.md`. Recommended: keep the Type 0 Z with a new 150 wide fixed plate bolted to the PrintNC X rollers, and keep DFU1605 and NEMA 24, changing the model to match. The DFU1605 flange fits the PrintNC rollers. No decision was made and the Fusion model was not changed.
+
+**Left:** the owner has not chosen. The model has the Y motors at the front, but D-142 puts them at the back. The Fusion document is **unsaved** with **6 failing features**. The full travel has not been run. Availability and price of 120 × 120 × 8 and the LiMo prices for the 550 rail and 650 screws are not confirmed.
+
+**Exact next step:** the owner chooses the Z axis option, the drive option and the Y motor end. Then record them as D-179 onwards and update the Fusion model.
+
 ## 0000000000000000000000000000000. 18 Nov 2026: beam bolts moved, unused parts hidden
 
 **Done:** owner chose to move the beam bolt rows (D-178): `AdjXGanYRolHoles` is 13, and the holes line up after the rebuild. Failing features went from 8 to 6. The base frame, PrintNC Z axis, spindle and drill guides are hidden in Fusion, listed in `docs/printnc-assessment.md`. Nothing was deleted.

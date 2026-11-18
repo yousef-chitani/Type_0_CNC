@@ -77,10 +77,9 @@ The mould drawings can't start until this is done.
 
 === JOB 4: FUSION MODEL AND LIMO BASKET (added 18 Nov 2026) ===
 
-   - Save the open Fusion document under a new name. It is unsaved.
-   - Tell a session whether the model may be changed beyond parameters
-     to match D-179 to D-182.
    - Set the D25L35 coupling to 4 in the LiMo basket (D-182).
+   - Choose for the new Z fixed plate (D-179): steel or 6082, whether
+     the 15 mm risers stay, and the plate height.
 
 
 === LATER (no rush) ===
