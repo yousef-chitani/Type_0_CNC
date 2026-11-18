@@ -134,7 +134,7 @@ Type 0 needs 350. In the 570 trial the tightest gaps at the ends of travel were 
 | SFU1610 nut to BF12 | 4.7 |
 | Gantry tube to rear BK12 | 14.7 |
 
-These are minimum distances between bodies, except the rail end and nut gaps, which are read along Y. Fusion's interference check is not used as evidence: it also reported nothing for the nut on its screw, so it was not shown to detect a hit. The DFU1605 nut is longer, so re-check the nut gap when it is imported.
+These are minimum distances between bodies, except the rail end and nut gaps, which are read along Y. Fusion's interference check is not used as evidence: it also reported nothing for the nut on its screw, so it was not shown to detect a hit. The DFU1605 nut has since been fitted at the same seat, and its extra length runs into the roller, so the 4.7 is unchanged.
 
 **Parts that moved 61.5 forward with the rails:** the rollers, the gantry and X rails (now Y 495 to 515), the Y trigger mount, the roller sensor mount and the cable chain supports. The last three follow the frame holes, and their positions have not been reviewed.
 
@@ -146,10 +146,30 @@ These are minimum distances between bodies, except the rail end and nut gaps, wh
 
 **So the frame hole and the rail end must move together.** The frame hole is `d80` in sketch `YFrameTopHoles` (`calcYRailStartingHole + 36.5 mm`, measured from Y 650). The rail end is `d196`. Changing `d196` alone would leave the first hole outside the rail.
 
+## DFU1605 nuts, 24HS40 motors and D25L35 couplings (D-180, D-182), 18 Nov
+
+Fitted on X, Y and Y2 in `Type_0_v3`. Timeline 1205, 1 error, 5 warnings, the same failures as version 1. **Modified after version 2, not saved.**
+
+- **Nuts:** `dfu1605_nut.step`, flange on the old SFU1610 seat, bolt holes in line, held to the hidden SFU1610 nut by an as-built joint. The nut body runs 100 into the roller. The vendor's 130 screw stub is hidden.
+- **Motors:** `24hs40_motor.step`, flange on the back face of the `Nema24 Plate`, held by an as-built joint. Measured from the STEP: body 125 behind the flange, shaft Ø10 × 20, pilot Ø38.1, holes on a 50 square. The plate has the same 50 square.
+- **Couplings:** `D25L35 Coupling (stand-in)` is a plain Ø25 × 35 sleeve with a Ø10 bore, because no vendor CAD exists.
+- **Hidden, not deleted:** SFU1610 nuts, their M6 90° grease fittings, NEMA 23 motors, D30L40 8-10 couplings, and the M4 × 16 motor bolts.
+
+| Check | Result |
+|---|---|
+| Y motor rear | Y 787, 134 behind the tub (D-142 allows about 185) |
+| X motor rear | X 527, 139.5 past the 387.5 beam end |
+| DFU1605 nut to X BK12 at full X travel | 6.9 |
+| Clashes for nuts, motors and couplings at Y 0, Y -385 and X -430 | None by body-to-body overlap once the M4 bolts were hidden |
+
+**Open problem: the coupling grips too little.** The screw end and the motor shaft are 21.2 apart on all three axes, so a 35 long coupling grips only **6.9 of each shaft**. Moving the motor plate 12 towards the screw would give 12.9 of grip and leave 1.6 between coupling and BK12. That means shortening the `BKHM12 Riser` on Y and the matching X part. The owner decides. The coupling's real bore depth has not been checked.
+
+The motor STEP is one solid that includes its cable tails, so those stick out 133 from the shaft, outboard on Y and upward on X. Ignore them for clearance. The vendor nut has no lube port or flange flats, so the real grease fitting position is not modelled. The M5 motor bolts are not modelled.
+
 ## Not checked
 
 - Whether 120 × 120 × 8 tube can be bought. It is not in `docs/steel-rhs-suppliers.md`.
-- Clashes over the full X and Z travel. Only the two ends of Y have been measured, with the PrintNC blocks, nut and NEMA 23 motor still in the model.
+- Clashes over the full Z travel, and a full X check. Y and X were checked at their ends only for the parts listed above, with the PrintNC blocks still in the model.
 - The real corner radius of the tube.
 
 ## Differences parameters will not fix
