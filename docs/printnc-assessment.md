@@ -124,7 +124,19 @@ Type 0 needs 350. In the 570 trial the tightest gaps at the ends of travel were 
 
 - **Y rails moved 61.5 forward (18 Nov):** `d80` is now `calcYRailStartingHole + 36.5 mm + 61.5 mm` and `d196` is `-61.5 mm`. Both rails run Y 2.5 to 552.5, and all 9 holes on each rail line up with the frame holes (Y 37 to 517). The risers did not move. Timeline 1183, 1 error, 5 warnings, the same failures as version 1.
 
-**Travel check at 550 (18 Nov), slider at 0, 96.25, 192.5, 288.75 and 385:** no clashes between the moving parts (blocks, grease fittings, SFU1610 nuts, rollers, roller braces) and the fixed parts (12 risers, BK12, BF12, couplings, motors). At the ends of travel the blocks stop 0.61 from the rail ends and 1.6 from the risers. The SFU1610 nut stops 4.7 from the BF12. The DFU1605 nut is longer, so re-check this when it is imported.
+**Travel check at 550 (18 Nov), measured at both ends of the 385 slider range:**
+
+| Gap | Measured |
+|---|---|
+| Block to rail end | 0.61 |
+| Block to riser | 1.61 |
+| Grease fitting to riser | 2.0 |
+| SFU1610 nut to BF12 | 4.7 |
+| Gantry tube to rear BK12 | 14.7 |
+
+These are minimum distances between bodies, except the rail end and nut gaps, which are read along Y. Fusion's interference check is not used as evidence: it also reported nothing for the nut on its screw, so it was not shown to detect a hit. The DFU1605 nut is longer, so re-check the nut gap when it is imported.
+
+**Parts that moved 61.5 forward with the rails:** the rollers, the gantry and X rails (now Y 495 to 515), the Y trigger mount, the roller sensor mount and the cable chain supports. The last three follow the frame holes, and their positions have not been reviewed.
 
 **Two earlier ways of moving the rail failed, and both were undone:**
 1. `Rigid 2` offset of -61.5 moves the rail in Z, not Y, and raises the warnings to 10.
@@ -137,7 +149,7 @@ Type 0 needs 350. In the 570 trial the tightest gaps at the ends of travel were 
 ## Not checked
 
 - Whether 120 × 120 × 8 tube can be bought. It is not in `docs/steel-rhs-suppliers.md`.
-- Clashes over the full X and Z travel. Only Y has been run, at 5 positions, with the PrintNC blocks, nut and NEMA 23 motor still in the model.
+- Clashes over the full X and Z travel. Only the two ends of Y have been measured, with the PrintNC blocks, nut and NEMA 23 motor still in the model.
 - The real corner radius of the tube.
 
 ## Differences parameters will not fix
