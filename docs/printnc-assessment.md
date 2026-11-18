@@ -105,30 +105,23 @@ Visibility only, on X, Y and Y2. The timeline stayed at 1182 items with 1 error 
 
 The NEMA 23 motors and D30L40 couplings are still shown until the imported parts go in. No BK12 bolts are modelled yet.
 
-## Moving the Y motors to the back (D-181): not done, Y travel falls short
+## Moving the Y motors to the back (D-181): risers moved, rail still to move
 
-Measured on 18 Nov 2026 with temporary copies of the parts. The model was not changed. Rear is +Y.
+**Correction:** the earlier figure of 338 Y travel was wrong. It left the rail where it was. The rail must shift 61.5 towards the front, to sit between the turned risers, and then the motors at the back cost no travel.
 
-| Y travel, stop to stop | Motors at the front (model now) | Motors at the back |
-|---|---|---|
-| Front limit | Blocks reach the rail end | Blocks reach the rail end |
-| Rear limit | Blocks reach the rail end | Fill plate hits the BK12 |
-| **Travel** | **386** | **338** (Type 0 needs 350) |
+| Y rail | Y screw | Tub length | Y travel, blocks to rail ends |
+|---|---|---|---|
+| 550 (D-175) | 650 | 690 | **386** (worked out, same layout as 570) |
+| 570 (in the open model) | 670 | 710 | **406** (measured over 41 positions, no clashes) |
 
-The BK12 is longer in line than the BF12, so it stops the roller earlier at the rear.
+Type 0 needs 350, so **the 550 rail is enough**. At 570, the tightest gaps at the ends of travel are 1.0 from block to riser and 4.1 from the SFU1610 nut to the BF12. The DFU1605 nut is longer, so re-check this when it is imported. These use PrintNC's blocks.
 
-| Part hitting at the rear, motors at the back | Travel if this is the limit |
-|---|---|
-| `Y 1610 Fill Plate` against BK12 | 338 |
-| `YRoller` against BK12 | 352 |
-| `Y HGW20CC` block against the BK12 riser | 358 |
-
-- These use the model's PrintNC blocks and fill plate, not the Type 0 HGH20CA blocks.
-- The figures are hard contact, with no allowance for limit switches or overtravel.
-- The 3 gap at each tub end stays, because the drive line turns about its own centre.
-- The rear end of the drive would be at Y 762, 109 behind the tub with the NEMA 23. D-142 allows about 185. The NEMA 24 length is still to be taken from its datasheet.
-
-**How the model is tied together:** `Rigid 311` and `Rigid 312` locate the two risers. The BK12, motor plate, screw, coupling, BF12 and motor follow them through joints. The nut stays with the roller. Y2 is made by mirror features from the Y groups, so it should follow, but this has not been tested.
+**Open document, not saved:**
+- `YCuttingArea` is 405 (was 385). `calcYRailLength` no longer rounds up to 25 steps: it is now `YCuttingArea + 65 mm + ( YCarriageCount * 50 mm )`.
+- New sketch `D-181 Y riser targets` (timeline now 1183). Its points are plain numbers for the 570 rail. For 550, the `Rigid 312` point moves from Y 581 to Y 561.
+- `Rigid 311` and `Rigid 312` now point at that sketch, angle 0, flipped. Risers, BK12, BF12, plate, screw, coupling, motor and bolts followed, and Y2 followed through its mirror features.
+- **The rail has not moved yet and overlaps the BK12 riser by 60.5.** `Rigid 2` (`Y HGR20` to `YFrame`) locates it.
+- The rear of the motor is 109 behind the tub with the NEMA 23. D-142 allows about 185. The NEMA 24 length is still to come from its datasheet.
 
 ## Not checked
 

@@ -78,10 +78,10 @@ The mould drawings can't start until this is done.
 === JOB 4: FUSION MODEL AND LIMO BASKET (added 18 Nov 2026) ===
 
    - Set the D25L35 coupling to 4 in the LiMo basket (D-182).
-   - Save the open Fusion document Type_0_v3 (the BK12 supports are
-     shown but not saved).
-   - Choose how to recover the Y travel with the Y motors at the back
-     (338 mm against the 350 mm needed). See docs/HANDOVER.md.
+   - Choose the Y rail length: 550 mm (386 mm travel, no order change)
+     or 570 mm (406 mm travel, longer screws and tub). See
+     docs/HANDOVER.md.
+   - Save the open Fusion document Type_0_v3 after the Y rail is moved.
 
 
 === LATER (no rush) ===
