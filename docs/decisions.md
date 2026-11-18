@@ -173,3 +173,4 @@
 | D-169 | **Foot step starts at X 378; X block pitch 90** (was 380 and 100) | Owner, 18 Nov 2026, accepted both proposed fixes |
 | D-170 | **Ball nut flanges are 40 across the flats, flats top and bottom**: no 12 × 30 × 5 relief slots. DFU01605-4: A 48, H 40, B 10, L 100 | Owner, 18 Nov 2026, with the catalogue sheet |
 | D-171 | **Ball nut housings sit 20 off the carriage centre, towards the flange**, because the flange bolts to the housing end face. The nut stays within 50 of the carriage centre, so the screw lengths do not change | Owner, 18 Nov 2026: "sure" |
+| D-172 | **Take the PrintNC V4 gantry and rollers, scaled from its parametric Fusion model, onto the epoxy granite tub.** Beam stays SHS 150 × 150 × 8 (D-164). The Type 0 Z axis stays. Parameters only, no direct modelling. Replaces the gantry layout in `docs/steel-gantry-sketch.md` | Owner, 18 Nov 2026. See `docs/printnc-assessment.md` |
