@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000. 18 Nov 2026: Y rails shifted, Y travel measured
+
+**Done:** both Y rails in the open `Type_0_v3` now run Y 2.5 to 552.5, clear of the risers, and all 9 holes on each rail line up with the frame holes. The rail body was tied to the `YFrame` end face, so the frame hole (`d80`) and the rail end (`d196`) had to move together (`docs/printnc-assessment.md`). Y travel is 386.2 on the rails (Type 0 needs 350). The 385 slider range was run at 5 positions with no clashes. Timeline 1183, 1 error and 5 warnings, the same failures as version 1. **The document is modified and not saved. The owner saves it.**
+
+**Left:** the imported parts, then the Z axis. Rules for model edits: re-count errors and warnings after every write and undo any edit that raises them; hide parts, never delete them; list each change in `docs/printnc-assessment.md`; do not save through the tool.
+1. **Imported parts (D-180, D-182).** DFU1605 nut and 24HS40 motor from `cad/vendor/`, and a D25L35 coupling. Take the motor length from the datasheet, because the STEP includes other geometry. This gives the X motor overhang and the Y motor overhang against the 185 in D-142. Re-check the nut against the BF12: the SFU1610 nut stops 4.7 away and the DFU1605 is longer.
+2. **Z axis (D-179, D-184).** New 150 wide plate, 6082 in Phase 1 then steel, 15 risers stay, 350 high.
+
+**Exact next step:** in a new session, after the owner has saved `Type_0_v3`, import the DFU1605 nut from `cad/vendor/` on the Y axis and re-run the Y travel check.
+
 ## 00000000000000000000000000000000000. 18 Nov 2026: Y motors at the back, Y rails still to shift
 
 **Done:** D-184 (Z plate: 6082 in Phase 1 then steel, 15 risers stay, 350 high) and D-185 (Y stays 550 rail, 650 screw, 690 tub). In the open `Type_0_v3`: BK12 supports and NEMA 24 plates shown on X, Y and Y2, and the Y risers, screws and motors turned end for end, with the motors at the back on both sides. Timeline 1183, 1 error and 5 warnings, the same failures as version 1. **The document is modified and not saved. The owner saves it.**
@@ -15,18 +25,6 @@
 **Do not repeat:** a `Rigid 2` offset moves the rail in Z. Re-pointing `Rigid 2` at a sketch point leaves the rail body behind and throws the Y2 drive 61.5 out. Both are in `docs/printnc-assessment.md`.
 
 **Exact next step:** in a new session, find out why the `Y HGR20` body stays at Y 64 to 614 when its occurrence moves (start with `MoveFace2`, `Base Feature1` and `Rigid Group 247`). Then shift both Y rails 61.5 forward, keeping the 1 error and 5 warnings, and re-measure the travel.
-
-## 0000000000000000000000000000000000. 18 Nov 2026: model update planned, not started
-
-**Done:** the owner saved the model as `Type_0_v3` version 1 (CNC mill project, 1 error and 5 warnings, 1182 timeline items) and allowed changes beyond parameters for D-179 to D-182 (D-183). No change has been made to the model. The session stopped at the context limit.
-
-**Left, in this order.** Re-count errors and warnings after every write and undo any edit that raises them. Hide parts, never delete them, and list each change in `docs/printnc-assessment.md`. Do not save through the tool: tell the owner the document is modified.
-1. **Supports (D-180), visibility only.** For X, Y and Y2: hide `HM12-57` and the `HM12 M6x50` fasteners, show the hidden `BK12` and `Nema24 Plate`. The timeline should stay at 1182.
-2. **Y motors to the back (D-181).** Root joints `Rigid 311` (BF12 riser to YFrame) and `Rigid 312` (BKHM12 riser to YFrame) locate the risers, and the BK12, motor plates, screw and motor chain off them. Y2 has a `Derived Base Feature1`, so check whether it follows or needs its own edit. Confirm which Y direction is the rear first. Then check the riser fasteners, the 3 gap at each tub end (D-175) and the motor overhang against the 185 in D-142.
-3. **Imported parts (D-180, D-182).** DFU1605 nut and 24HS40 motor from `cad/vendor/`, and a D25L35 coupling. Take the motor length from the datasheet, because the STEP includes other geometry. This gives the X motor overhang.
-4. **Z axis (D-179): blocked.** The owner must first choose the plate material (steel or 6082), whether the 15 risers stay, and the plate height.
-
-**Exact next step:** in a new session, ask the owner the three Z plate questions, then start at item 1.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

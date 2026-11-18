@@ -105,13 +105,13 @@ Visibility only, on X, Y and Y2. The timeline stayed at 1182 items with 1 error 
 
 The NEMA 23 motors and D30L40 couplings are still shown until the imported parts go in. No BK12 bolts are modelled yet.
 
-## Moving the Y motors to the back (D-181): risers moved, rail still to move
+## Moving the Y motors to the back (D-181): risers and rails moved
 
 **Correction:** the earlier figure of 338 Y travel was wrong. It left the rail where it was. The rail must shift 61.5 towards the front, to sit between the turned risers, and then the motors at the back cost no travel.
 
 | Y rail | Y screw | Tub length | Y travel, blocks to rail ends |
 |---|---|---|---|
-| **550 (D-175, kept by D-185)** | 650 | 690 | **386** (worked out from the 570 trial, not measured at 550) |
+| **550 (D-175, kept by D-185)** | 650 | 690 | **386.2** (550 less the measured 163.8 block span; the model's 385 slider range was run, 18 Nov) |
 | 570 (tried, dropped) | 670 | 710 | 406 (measured over 41 positions, no clashes) |
 
 Type 0 needs 350. In the 570 trial the tightest gaps at the ends of travel were 1.0 from block to riser and 4.1 from the SFU1610 nut to the BF12. The DFU1605 nut is longer, so re-check this when it is imported. These use PrintNC's blocks.
@@ -122,18 +122,22 @@ Type 0 needs 350. In the 570 trial the tightest gaps at the ends of travel were 
 - `Rigid 311` and `Rigid 312` point at that sketch, angle 0, flipped. Risers, BK12, BF12, plate, screw, coupling, motor and bolts followed, and Y2 followed through its mirror features.
 - The rear of the motor is at Y 762, 109 behind the tub with the NEMA 23. D-142 allows about 185. The NEMA 24 length is still to come from its datasheet.
 
-**Still wrong: the Y rails have not moved. They run Y 64 to 614 and overlap the BK12 risers by 60.5.** They should run Y 2.5 to 552.5.
+- **Y rails moved 61.5 forward (18 Nov):** `d80` is now `calcYRailStartingHole + 36.5 mm + 61.5 mm` and `d196` is `-61.5 mm`. Both rails run Y 2.5 to 552.5, and all 9 holes on each rail line up with the frame holes (Y 37 to 517). The risers did not move. Timeline 1183, 1 error, 5 warnings, the same failures as version 1.
 
-**Two ways of moving the rail failed, and both were undone:**
+**Travel check at 550 (18 Nov), slider at 0, 96.25, 192.5, 288.75 and 385:** no clashes between the moving parts (blocks, grease fittings, SFU1610 nuts, rollers, roller braces) and the fixed parts (12 risers, BK12, BF12, couplings, motors). At the ends of travel the blocks stop 0.61 from the rail ends and 1.6 from the risers. The SFU1610 nut stops 4.7 from the BF12. The DFU1605 nut is longer, so re-check this when it is imported.
+
+**Two earlier ways of moving the rail failed, and both were undone:**
 1. `Rigid 2` offset of -61.5 moves the rail in Z, not Y, and raises the warnings to 10.
 2. Pointing `Rigid 2` at a new sketch point moved the rail occurrence and its bolts by -61.5, but the rail body stayed at Y 64 to 614. The Y2 rail and its whole drive then moved +61.5. Y2 is held by `Rigid 202` and `Rigid Group 247`, which holds the Y2 rail and drive together.
 
-The rail body is made of a base feature, extrudes, a pattern and `MoveFace2`, and has no sketches. Why the body stays put is not yet known.
+**Why the body stays put (found 18 Nov):** only the first rail hole (`Base Feature1`) follows the occurrence, and `Rigid 2` pins that hole to the frame hole at Y 578.5. The rest of the body hangs off the frame: `Extrude1` runs to the `YFrame` end face at Y 650 (offset `d196`), `MoveFace2` pulls that end back to 614, and `Extrude2` adds the rail length. `Rigid 202` pins Y2 the same way, to the mirrored frame hole.
+
+**So the frame hole and the rail end must move together.** The frame hole is `d80` in sketch `YFrameTopHoles` (`calcYRailStartingHole + 36.5 mm`, measured from Y 650). The rail end is `d196`. Changing `d196` alone would leave the first hole outside the rail.
 
 ## Not checked
 
 - Whether 120 × 120 × 8 tube can be bought. It is not in `docs/steel-rhs-suppliers.md`.
-- Clashes over the full travel. The model has not been run through its travel.
+- Clashes over the full X and Z travel. Only Y has been run, at 5 positions, with the PrintNC blocks, nut and NEMA 23 motor still in the model.
 - The real corner radius of the tube.
 
 ## Differences parameters will not fix
