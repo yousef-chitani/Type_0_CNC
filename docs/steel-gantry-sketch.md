@@ -44,9 +44,9 @@ As drawn, the layout has 3 clashes, all from problem 1. **With fixes 1 to 4 appl
 - Pour order: top seat first with the beam level. After cure, turn the beam over, rest the cured seat on 3 equal pads on the levelled tub rail seats, pour the bottom seat, then check parallelism with an indicator.
 - Fit the feet on the Y blocks first, then the beam.
 
-## Questions for the owner
+## Owner's answers (18 Nov 2026)
 
-1. **Saddle:** aluminium 3-piece (pick) or steel?
-2. **X motor:** behind the beam (pick) or above it?
-3. **Beam to foot:** M10 through access holes (pick) or welded end plates?
-4. **The 4 fixes above (1 to 4):** accept them all (pick)?
+1. **Saddle: steel (D-165).** Sizes open. At the sizes above it adds about 13.4 kg, so about 86.8 kg moving.
+2. **X motor: "no fold over".** Read as no belt fold, motor in line with the X screw. **Not confirmed yet.** If so, the motor ends about X 512, about 67 past the beam end, and it covers the rear access holes at X 345 and X 420. Not yet run through the check.
+3. **Beam to foot: M10 through access holes (D-166).** Positions depend on answer 2.
+4. **Fixes 1 to 4: the owner wants to discuss them first.** None is applied.

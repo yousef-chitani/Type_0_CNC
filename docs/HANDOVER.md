@@ -14,7 +14,9 @@
 
 **Left:** the owner has not agreed the layout or the 4 fixes. Not verified: SHS corner radius (flat width), the real ball nut flange. No D-numbers, no STEP. `cad/v2/Facebutton v2 frame.step` is still untracked: ask the owner what it is.
 
-**Exact next step:** get the owner's answers to the 4 questions at the end of `docs/steel-gantry-sketch.md`, apply them to the script, re-run until no clashes are left, and record the decisions (next: D-165). Then the owner starts the gantry in Fusion and prices the tube (Dyfed Steels first).
+**Owner's answers (18 Nov):** steel saddle (D-165), M10 through access holes (D-166), X motor "no fold over" (read as in line with the screw, **not confirmed**), fixes 1 to 4 to be discussed first (none applied).
+
+**Exact next step:** confirm the X motor meaning, go through fixes 1 to 4 with the owner, size the steel saddle, then update the script, re-run until no clashes are left and record the decisions (next: D-167). Then the owner starts the gantry in Fusion and prices the tube (Dyfed Steels first).
 
 ## 0000000000000000000000. 18 Nov 2026: steel gantry layout brief (sketch NOT drawn)
 
