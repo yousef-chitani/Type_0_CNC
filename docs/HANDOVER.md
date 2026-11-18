@@ -11,12 +11,12 @@
 **Done:** the owner saved `Type_0_v3` as version 2 with the rails shifted. After that, DFU1605 nuts, 24HS40 motors and stand-in D25L35 couplings went in on X, Y and Y2, and the parts they replace are hidden. Timeline 1205, 1 error and 5 warnings, the same failures as version 1. Y motor rear is 134 behind the tub (D-142 allows about 185). The nut-to-BF12 gap stays 4.7. Details are in `docs/printnc-assessment.md`. **The document is modified and not saved. The owner saves it.**
 
 **Left:**
-1. **Coupling grip, owner's decision.** Screw end and motor shaft are 21.2 apart, so the 35 long coupling grips only 6.9 of each shaft. Moving the motor plate 12 towards the screw gives 12.9 of grip and 1.6 clear of the BK12, and needs the riser shortened on Y and the matching part on X.
+1. **Coupling grip: decided (D-186), not yet modelled.** Move the motor plates on X, Y and Y2 12 towards the screws, with the motors and couplings. Shorten the Y risers and the matching X part by 12. Expected result: 12.9 of grip per shaft, 1.6 from coupling to BK12, Y motor rear at Y 775.
 2. **Motor length, owner to confirm.** The STEP is named `24HE40-5004D-E1000` and gives a 125 body. No datasheet for it is in `cad/vendor/`.
 3. **Review the parts that moved with the rails:** Y trigger mount, roller sensor mount and cable chain supports.
 4. **Z axis (D-179, D-184).** New 150 wide plate, 6082 in Phase 1 then steel, 15 risers stay, 350 high.
 
-**Exact next step:** in a new session, once the owner has saved `Type_0_v3` and decided the coupling grip, record the decision as D-186, apply it, then start the Z plate.
+**Exact next step:** in a new session, once the owner has saved `Type_0_v3`, find what locates the `Nema24 Plate` on each axis and apply D-186. Re-count errors and warnings and re-measure the grip and gaps, then start the Z plate.
 
 ## 000000000000000000000000000000000000. 18 Nov 2026: Y rails shifted, Y travel measured
 

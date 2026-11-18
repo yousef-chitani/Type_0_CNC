@@ -163,7 +163,7 @@ Fitted on X, Y and Y2 in `Type_0_v3`. Timeline 1205, 1 error, 5 warnings, the sa
 | DFU1605 nut to X BK12 at full X travel | 6.9 |
 | Clashes for nuts, motors and couplings at Y 0, Y -385 and X -430 | None by body-to-body overlap once the M4 bolts were hidden |
 
-**Open problem: the coupling grips too little.** The screw end and the motor shaft are 21.2 apart on all three axes, so a 35 long coupling grips only **6.9 of each shaft**. Moving the motor plate 12 towards the screw would give 12.9 of grip and leave 1.6 between coupling and BK12. That means shortening the `BKHM12 Riser` on Y and the matching X part. The owner decides. The coupling's real bore depth has not been checked.
+**Open problem: the coupling grips too little.** The screw end and the motor shaft are 21.2 apart on all three axes, so a 35 long coupling grips only **6.9 of each shaft**. Moving the motor plate 12 towards the screw would give 12.9 of grip and leave 1.6 between coupling and BK12. That means shortening the `BKHM12 Riser` on Y and the matching X part. **The owner chose this (D-186). It is not yet in the model.** Expected after the move: Y motor rear at Y 775, 122 behind the tub. The coupling's real bore depth has not been checked.
 
 The motor STEP is one solid that includes its cable tails, so those stick out 133 from the shaft, outboard on Y and upward on X. Ignore them for clearance. The vendor nut has no lube port or flange flats, so the real grease fitting position is not modelled. The M5 motor bolts are not modelled.
 
