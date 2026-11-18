@@ -1,6 +1,6 @@
 # PrintNC V4 gantry on Type 0 (18 Nov 2026)
 
-**Status: the parametric model is set to the Type 0 sizes, with 8 features still failing. The Fusion document is NOT saved.** Decisions: D-172 to D-177.
+**Status: the parametric model is set to the Type 0 sizes, with 6 features still failing. The Fusion document is NOT saved.** Decisions: D-172 to D-178.
 
 ## Sources
 
@@ -22,6 +22,7 @@ Parameters only. No direct modelling.
 | `XGantryThick` | 4 | **8** | 8 wall |
 | `XGantryRadius` | 10 | **16** | Trial value. The real tube corner is not verified |
 | `XGantryOffset` | 25 | **−35** | Negative moves the beam towards the rear. Gives the L bracket its 50 seat (D-177) |
+| `AdjXGanYRolHoles` | 1 | **13** | Beam bolt rows 25 either side of the centre bolt (D-178) |
 | `d4192` (joint Rigid 305, L bracket position) | `… + XGantryOffset` | **`( YRollerLength / 2 ) - ( XGantryWidth / 2 ) - XGantryOffset`** | The original sign moved the bracket the opposite way to the beam |
 
 ## Result after the rebuild
@@ -51,14 +52,13 @@ Sharp-corner figures, 8 wall.
 
 Flat on the 120 wide faces: 88 with a 16 corner radius, 72 with a 24 radius. The 20 wide X rail and the 60 wide X BK12 and BF12 risers fit both.
 
-## Still failing (8 features)
+## Still failing (6 features)
 
 | Timeline | Feature | Part | Note |
 |---|---|---|---|
-| 60 | Thread1 | YRoller | **New with D-177.** The rear beam bolt holes are 3 from the roller end, so the M6 thread breaks out. See the seat section |
 | 543 | Rigid 164 | M6 × 12 bolt to XRollerShim | Missing joint origin |
 | 1015 | Rigid 110 | XGantry Trigger Mount to XGantry | Joint failed |
-| 613, 614, 616, 617, 618 | Extrude2, Chamfer1, Chamfer2, Fillet1, Extrude4 | YRoller-Gantry Drill Guide | **Caused by the first 150 beam trial.** They stayed when the beam went back to 75, and a full recompute did not clear them |
+| 613, 616, 617, 618 | Extrude2, Chamfer2, Fillet1, Extrude4 | YRoller-Gantry Drill Guide | **Caused by the first 150 beam trial.** They stayed when the beam went back to 75, and a full recompute did not clear them |
 
 ## Y roller brace seat (D-177, rebuilt in Fusion 18 Nov 2026)
 
@@ -74,16 +74,25 @@ The L bracket `YRollerBrace` joins the Y roller to the front face of the beam. I
 | Clear above the BF12 screw support | 7 |
 | Clashes on the structure | None between the beam, bracket and roller |
 
-**Rear beam bolts, not solved:** the rear row into the roller is at Y 603.5, 3 from the roller end, so a hole breaks out of the 3 wall (Thread1 fails). Two options, neither rebuilt yet:
-
-- **Move the rows (recommended):** set `AdjXGanYRolHoles` to 13. The rows go to Y 541.5 and 591.5, 25 either side of the centre bolt. The rear row is then 15 from the roller end, and the front row leaves about 6.8 of steel to the access hole at Y 554. The top wall has no access hole at Y 594. All bolts thread into the 3 wall, about 3 threads each.
-- **Tap the fill plate:** keep the row at Y 603.5 and thread it into the plate, with M6 × 25 bolts and about 13 of thread. The plate must be steel (the model gives it no real material), the roller wall stays open at the end, the hole is 2 from the plate's inner face, and the model's 0.5 gap between plate and wall must be closed. Needs a model change.
+**Rear beam bolts (D-178):** the rows are at Y 541.5 and 591.5, 25 either side of the centre bolt at Y 566.5. The rear row is 15 from the roller end, and the front row leaves about 6.8 of steel to the access hole at Y 554. The holes in the beam and roller line up after the rebuild. All 5 bolts per side thread into the 3 wall, about 3 threads each.
 
 **Lower bracket bolts:** Z 223 is 18 above the beam's underside. The flat starts 16 up with a 16 corner radius, and the bolts land on the corner with a 24 radius. Check the real tube radius before drilling.
 
 **Other clashes reported:** PrintNC's dual-carriage Z tram bar overlaps the top roller, and that Z axis is not used on Type 0 (D-172). The Y roller sensor mount overlaps the roller side by 0.5.
 
 Checked at one gantry position. The full travel has not been run.
+
+## Hidden in the Fusion model (18 Nov 2026)
+
+Visibility only, nothing is deleted. Turn the eye icon back on to restore a part.
+
+| Hidden | Why |
+|---|---|
+| Base frame: XFrame, YFrame tubes, wasteboard, cutting area, their end caps and bolts | The epoxy granite tub replaces them |
+| PrintNC Z axis: single and dual carriage, spindle, Z hardware, mounts and bolts | Type 0 keeps its own Z axis (D-172) |
+| Printed drill guides | Build aids for the steel frame, not machine parts |
+
+Still shown: beam, X and Y rollers, L brackets, rails, blocks, screws, supports, motors, sensors, cable chain brackets and their bolts. The rail blocks, nuts and motors are still PrintNC's models, not the Type 0 parts.
 
 ## Not checked
 
@@ -105,4 +114,4 @@ Checked at one gantry position. The full travel has not been run.
 1. **LiMo prices:** confirm the HGH20CA 550 set, the DFU1605 650 set and the shipping in the LiMo basket. `docs/bom.csv` still shows the old 600 prices.
 2. **Drill guide:** repair the 5 failed features by undo or by hand in Fusion, or replace the guide.
 3. **Steel gantry sketch:** D-172 replaces its gantry layout, so its 2 open items need closing.
-4. **Rear beam bolts:** choose how the rear row fixes to the Y roller (see the seat section).
+4. **Y cable chain brackets:** they are still shown but were mounted on the hidden frame. Keep or hide them once the chain route on the tub is chosen.

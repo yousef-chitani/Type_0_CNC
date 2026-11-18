@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000. 18 Nov 2026: Y roller brace has no seat
+
+**Done:** measured the L bracket `YRollerBrace` in the open Fusion model, read-only. It needs at least 50 of roller top in front of the beam. A centred 150 wide beam leaves 0. The current 75 wide beam at `XGantryOffset` 0 leaves 37.5, so the front brace bolts sit 0.5 past the roller end. The table is in `docs/printnc-assessment.md`. No parameter was changed and no decision was made.
+
+**Left:** the owner has not chosen the beam width and offset. Options: 75 wide at offset 25 (recommended, keeps D-176), or 150 wide at offset 50 (reverses D-176). Neither has been rebuilt in Fusion. Offset 25 gave 10 failing features in an earlier trial, against 8 now. The Fusion document is still **unsaved**.
+
+**Exact next step:** the owner chooses the option and saves the Fusion document under a new name. Then set the parameters, rebuild, check the brace bolts and the full travel, and record it as D-177.
+
 ## 0000000000000000000000000000. 18 Nov 2026: gantry beam 150 tall × 75 wide × 8
 
 **Done:** owner changed the beam to RHS 150 tall × 75 wide × 8, 775 long (D-176, amends D-164). Fusion `XGantryWidth` is 75, and `XGantryOffset` stays 0 (25 gives 2 more failures). `docs/bom.csv` G01 and `docs/printnc-assessment.md` are updated.
