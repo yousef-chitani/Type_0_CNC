@@ -6,6 +6,23 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000. 18 Nov 2026: steel strips replace the cast-in inserts (D-200, D-201)
+
+**Done:** in `Type_0_v3` the 8 cast-in M6 inserts are gone and 3 tapped steel strips, 25 x 10, are cast flush in the outer walls: +X Y 520 (Z 60 to 120, 4 threads), -X Y 520 (Z 90 to 120, 2 threads), +X Y 220 (Z 60 to 90, 2 threads). The bracket hole positions did not change. The casting is 40.15 L, 92.3 kg. Measured: the strips overlap only the 8 bracket screws in their threaded holes, those screws get 7 to 8.5 of thread and stop inside the strip, and the timeline is 1304 with the same 1 error and 5 warnings. The 6 riser bolts at Y -23 and Y 629 are M6 x 35 (X14, £7.49, D-201). Phase 1 is now £3,985.48, £214.52 left. **The document is modified and not saved. The owner saves it.**
+
+**Left:**
+1. **Riser bolts in the model.** All 14 still show M6 x 30. Set 8 to M6 x 25 and 6 to M6 x 35.
+2. **Strip casting details.** Anchor screws, thread plugs and the mould fixing are not modelled. The 10 of EG between a strip and the bar pocket needs the fine mix (D-118), and it has not been proved by a cut test piece.
+3. **Machine width.** The brackets reach X -417 to 502.5; the chain side was 487.5. Check this against the enclosure and bench.
+4. **Tidy up.** Add the 3 spacers to `docs/printed-parts.md`. Rename the components `M6x12 (7)` and `M6x12 (8)`, which now hold M6 x 30 screws.
+5. **Not modelled:** table fixing holes, machine feet and pads, mould details.
+6. **Z plate stiffness** (D-184).
+7. **Top roller screw strength.** They thread into only 3 of tube wall: check this.
+8. **Amazon delivery.** X11, X12 and X14 are free to deliver only on orders over £35. The three packs come to £20.47, and the charge below £35 is not known. X14 showed only 7 left.
+9. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, set the 14 riser bolts in the model to their chosen lengths and do the tidy-up in item 4.
+
 ## 000000000000000000000000000000000000000000000. 18 Nov 2026: Y bracket clashes fixed (D-198, D-199)
 
 **Done:** in `Type_0_v3` the Y trigger mounts, Y cable chain supports, Y sensors and chain travel end all moved 15 outward, so the sensors still line up with their trigger screws and the chain stays in line. 3 printed spacers fill the gap at the rollers, 6 roller screws became M6 x 30, and 8 cast-in M6 inserts are modelled in the tub walls. The casting is now 40.17 L. The 8 riser bolts at Y -6 and Y 561 are M6 x 25 (X13, £7.59, D-199). Measured: no bracket, sensor or spacer overlaps the tub or another part, apart from screws in their threaded holes. Parts carried on the rollers stay clear over the 386.2 Y travel. The timeline is 1304 with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
@@ -22,21 +39,6 @@
 9. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
 
 **Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, settle the cast-in insert with the owner, including whether it can be cast at these positions, and price the M6 x 35 riser bolts.
-
-## 00000000000000000000000000000000000000000000. 18 Nov 2026: EG tub walls thinned and floor edges filleted (D-197)
-
-**Done:** in `Type_0_v3` the tub walls go from 140 to 80 wide, so the tub is now 780 x 690 x 140 high (outer faces X ±390). Both floor-to-wall edges have an R20 fillet. No draft is needed, because the mould is destroyed at demoulding. The 4 front riser screws moved from X ±305 to X ±365, into the riser holes. The casting is 40.18 L, 92.4 kg at 2,300 kg/m³, down from 51.24 L and 117.8 kg. Measured: casting and levelling layer volumes match the hand figures, only the 3 tub bodies changed and the 4 screws moved out of 939 bodies, and the timeline is 1269 with the same 1 error and 5 warnings. **The document is modified and not saved. The owner saves it.**
-
-**Left:**
-1. **Riser bolt lengths.** The M6 x 30 bolts do not suit the seat. At Y -23 and Y 629 (6 bolts) they end at Z 119, 1 of thread. At Y -6 and Y 561 (8 bolts) they end at Z 107, 3 past the bar into solid EG. M6 x 35 and M6 x 25 would give 6 and 8 of thread. Needs the owner's decision and a live price.
-2. **Parts that clash with the walls need new positions:** both Y frame trigger mounts, the Y cable chain support, the Y cable chain fixed end support, and their M6 x 12 screws. The zip tie plate and its M5 screws no longer clash.
-3. **Not modelled:** table fixing holes, machine feet and pads, mould details.
-4. **Z plate stiffness** (D-184).
-5. **Top roller screw strength.** They thread into only 3 of tube wall: check this.
-6. **Amazon delivery.** X11 and X12 are free to deliver only on orders over £35. The two packs come to £12.98, and the charge below £35 is not known.
-7. **Z risers and rails.** 15 risers and HGR20 rails on the plate, then the blocks, moving plate, screw and motor.
-
-**Exact next step:** the owner saves `Type_0_v3`. Then, in a new session, settle the riser bolt lengths with the owner and get a live price.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **123 line items, 121 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **124 line items, 122 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -16,15 +16,15 @@ Full list: [bom.csv](bom.csv). **123 line items, 121 priced.** Prices were read 
 | Enclosure | 4 | 4 | £78.61 |
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
-| Fixings | 5 | 5 | £91.24 |
-| **All** | **123** | **121** | **£5,401.86** |
+| Fixings | 6 | 6 | £98.73 |
+| **All** | **124** | **122** | **£5,409.35** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,401.86**. Not priced yet: G01, G03.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,409.35**. Not priced yet: G01, G03.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,977.99 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,985.48 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -61,7 +61,7 @@ Lines still TO PRICE: see the list above.
 | F03 | 1 | Coarse aggregate: quartz 2-5 mm | 3 25 kg bags | Washed, kiln-dried angular quartz 2-5 mm (resin-bound grade) | [product](https://www.gclproducts.co.uk/p/resin-bound-gravel/winter-quartz-2-5mm-gravel) | £12.10 ex VAT / £14.52 inc VAT per 25 kg (GCL PermaBound Winter Quartz) | 43.56 | D-125: 3 bags. £14.52 per bag confirmed 2026-11-15. DELIVERY NOT KNOWN (shown at checkout only): ask GCL (supplier-messages.md) |
 | F04 | 1 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | Kiln Dried KDIS Pavior Sand 0-1 mm | [product](https://hancockandbrown.com/kiln-dried-block-paving-sand-20kg-bag) | £6.38 inc VAT per 20 kg (Hancock & Brown, Swansea) | 19.14 | D-79 resize: about 43 kg medium + fine. Hancock & Brown £6.38 each |
 | F06 | 1 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | Pottery-grade whiting, dry powder (< 0.1 mm) | [product](https://valentineclays.co.uk/products/whiting) | £20.42 inc VAT per 25 kg (Valentine Clays) | 20.42 | D-64. Delivery cost not shown: check in the basket. Alternatives: Potterycrafts silica flour £36.05 ex VAT (£43.26 inc), Womersleys Trucarb whiting from £11.55 ex VAT (construction chalk, dryness not stated). Keep the bag sealed and dry |
-| F07 | 1 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 lot | 40 x 10 x 2 m: Y rail bars 2 x 600 (D-141, D-148), support plates, 3 base pads 40 x 60 (T17). 25 x 10 x 2 m: X rail bars out (D-153); ATC bar 140 (D-104, D-105) was for the old ATC. Portal joint bars are now F20 | [product](https://www.themetalstore.co.uk/products/3-metre-lengths-10mm-flat-bar) | 40 x 10: 2 x 1000 mm £24.00; 25 x 10: 2 x 1000 mm £14.40; delivery £16.50 (lengths under 1.5 m), all inc VAT (The Metal Store) | 54.90 | Open: does 2 m of 40 x 10 cover 2 x 600 + plates + pads, and is the 25 x 10 still needed (old ATC bar only)? Price unchanged until then. Price check 12: order as 1 m pieces (a 2 m bar costs £27.00 delivery). Free cutting to finished lengths. The F20 bar rides on this delivery. Page does not say bright or black |
+| F07 | 1 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 lot | 40 x 10 x 2 m: Y rail bars 2 x 600 (D-141, D-148), support plates, 3 base pads 40 x 60 (T17). 25 x 10 x 2 m: X rail bars out (D-153); ATC bar 140 (D-104, D-105) was for the old ATC; 3 tub strips 60 + 30 + 30 (D-200). Portal joint bars are now F20 | [product](https://www.themetalstore.co.uk/products/3-metre-lengths-10mm-flat-bar) | 40 x 10: 2 x 1000 mm £24.00; 25 x 10: 2 x 1000 mm £14.40; delivery £16.50 (lengths under 1.5 m), all inc VAT (The Metal Store) | 54.90 | Open: does 2 m of 40 x 10 cover 2 x 600 + plates + pads, (the 25 x 10 stays for the tub strips, D-200)? Price unchanged until then. Price check 12: order as 1 m pieces (a 2 m bar costs £27.00 delivery). Free cutting to finished lengths. The F20 bar rides on this delivery. Page does not say bright or black |
 | F08 | 1 | M12 threaded rod 2 × 1 m + nuts (dropped: D-159) | 1 lot | 5 × Easyfix BZP M12 × 1000 mm rod (5-pack) + 100 × M12 BZP nuts | [product](https://www.screwfix.com/p/easyfix-bzp-steel-threaded-rods-m12-x-1000mm-5-pack/98942) | Not needed | 0.00 | D-159: no portal joint, no lifting points (hydraulic hoist and straps); brick C uses an F07 offcut and M5. Was £29.08. Old: the portal joint is gone; held because test brick C (eg-mix-test-plan.md) uses an M12 rod and it was listed for lifting points: owner to decide. Nuts: https://www.screwfix.com/p/easyfix-bzp-steel-hex-nuts-m12-100-pack/15569 . Spare rods and nuts |
 | F09 | 1 | Steel or PVC tube for M12 bolt sleeves (dropped with the portal joint: D-154) | 2 m | About 14-16 mm bore | [product](https://www.screwfix.com/p/deta-tte-round-upvc-white-conduit-20mm-x-3m/256vt) | Not needed | 0.00 | D-154. Was £2.29 (Screwfix 20 mm conduit). D-84: back to Screwfix (cheaper than the AliExpress hose, same shopping trip) |
 | F10 | 1 | MDF sheets for moulds (floors + walls) | 1 sheet | 18 mm MDF 2440 × 1220: one tub mould (floor about 930 × 670, D-139) + walls | [product]() | £28 each (B&Q, owner-confirmed), collect | 28.00 | D-137: the portal mould is gone; one sheet should still do. v2: 3 small moulds fit in one sheet (about 1.5 m²) |
@@ -172,7 +172,8 @@ Lines still TO PRICE: see the list above.
 | X04 | 1 | (covered by X03) | 1 set | 100 × M5 × 20 A2 + 10 × M12 × 120 12.9 | [product]() | Included in X03 | 0.00 |  |
 | X11 | 1 | Motor plate screws M6 x 16 socket cap | 1 pack | Drenky A2 (304) DIN 912, pack of 20. 9 needed: 3 per motor plate on X, Y and Y2 | [product](https://www.amazon.co.uk/dp/B0DNMS3M8L) | £5.99 inc VAT, free delivery only on orders over £35 (Amazon, seller Drenky-EU, in stock) | 5.99 | Button head rejected: its head is too wide for the Ø10 counterbores in the plates (D-190) |
 | X12 | 1 | Top roller screws M6 x 30 socket cap | 1 pack | Drenky A2 (304) DIN 912, fully threaded, pack of 20. 10 needed: 4 top holes of the Z fixed plate, 6 through the Y roller spacers | [product](https://www.amazon.co.uk/dp/B0D94BDYHP) | £6.99 inc VAT, free delivery only on orders over £35 (Amazon, seller Drenky-EU, in stock) | 6.99 | Delivery charge below £35 not shown on the saved page |
-| X13 | 1 | Riser bolts M6 x 25 socket cap | 1 pack | Easyfix A2 stainless, pack of 50. 8 needed: risers at Y -6 and Y 561 | [product](https://www.screwfix.com/p/easyfix-cap-head-socket-screws-a2-stainless-steel-m6-x-25mm-50-pack/8655t) | £7.59 inc VAT (Screwfix 8655T, in stock, page saved by the owner 18 Nov 2026) | 7.59 | The 6 bolts at Y -23 and Y 629 need M6 x 35: not priced |
+| X13 | 1 | Riser bolts M6 x 25 socket cap | 1 pack | Easyfix A2 stainless, pack of 50. 8 needed: risers at Y -6 and Y 561 | [product](https://www.screwfix.com/p/easyfix-cap-head-socket-screws-a2-stainless-steel-m6-x-25mm-50-pack/8655t) | £7.59 inc VAT (Screwfix 8655T, in stock, page saved by the owner 18 Nov 2026) | 7.59 | The 6 bolts at Y -23 and Y 629 are M6 x 35: X14 |
+| X14 | 1 | Riser bolts M6 x 35 socket cap | 1 pack | Drenky A2 (304) DIN 912, fully threaded, pack of 20. 6 needed: risers at Y -23 and Y 629 | [product](https://www.amazon.co.uk/dp/B0D94B9M2H) | £7.49 inc VAT, free delivery only on orders over £35 (Amazon, seller Drenky-EU, only 7 left, page saved by the owner 18 Nov 2026) | 7.49 | Delivery charge below £35 not shown on the saved page |
 | X05 | 1 | Steel straightedge 500 mm | 1 pcs | RS PRO 500 mm steel straight edge, 30 mm wide, DIN 874/2 | [product](https://uk.rs-online.com/web/p/rulers/8771785) | £95.89 ex VAT / £115.07 inc VAT (RS 877-1785), free delivery | 115.07 | Price check 14. Owner chose it over the Maun 1000 mm (£71.99, no stated accuracy) |
 | X10 | 1 | Engineer's square 300 mm | 1 pcs | Silverline 245025, 300 mm hardened steel, DIN 875/1 | [product](https://www.amazon.co.uk/dp/B000LFTX1G) | £9.58 inc VAT (Amazon, owner 15 Nov 2026; page says free delivery on a first order, otherwise Amazon's usual delivery) | 9.58 | Price check 15. Beat AliExpress £18.19 and Mitutoyo £74.40 (MQS). For squaring the gantry (was the portal, D-133; D-137) |
 | X06 | 1 | Feeler gauge set | 1 pcs | Hilka Pro-Craft 32-blade, 0.04–0.88 mm | [product](https://www.screwfix.com/p/hilka-pro-craft-12700132-32-blade-feeler-gauge/4406r) | £5.19 inc VAT (Screwfix 4406R) | 5.19 | Price check 14 |
