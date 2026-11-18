@@ -1,6 +1,6 @@
 # Steel box section, cut to length: suppliers near Swansea (17 Nov 2026)
 
-> **18 Nov 2026 (D-176): the beam is now RHS 150 tall × 75 wide × 8, 775 long.** The sizes and prices below are for the old 150 × 150 × 8 beam. Availability of 150 × 75 × 8 is not confirmed.
+> **18 Nov 2026 (D-177): the beam is now SHS 120 × 120 × 8, 775 long.** The sizes and prices below are for the old 150 × 150 × 8 beam. Availability and price of 120 × 120 × 8 are not confirmed.
 
 Nothing is decided here. This is a phone list for the owner, who will price and collect.
 

@@ -6,6 +6,14 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000. 18 Nov 2026: beam 120 × 120 × 8, L bracket seated
+
+**Done:** owner chose SHS 120 × 120 × 8 (D-177, amends D-176). In the open Fusion model `XGantryWidth` and `XGantryHeight` are 120, `XGantryOffset` is −35, and the bracket joint `d4192` now subtracts the offset. The L bracket has its full 50 seat and its 8 bolt holes line up. `docs/bom.csv` G01 and `docs/printnc-assessment.md` are updated. The earlier entry's offsets of +25 and +50 had the wrong sign: negative moves the beam to the rear.
+
+**Left:** the rear beam bolts into the Y roller are 3 from the roller end and break out (Thread1 fails). The Fusion document is **unsaved** with **8 failing features**. The full travel has not been run. Availability and price of 120 × 120 × 8 and the real corner radius are not confirmed. LiMo prices for the 550 rail and 650 screws are still not confirmed.
+
+**Exact next step:** the owner chooses how the rear beam bolts fix to the Y roller (`docs/printnc-assessment.md`, seat section), then saves the Fusion document under a new name.
+
 ## 00000000000000000000000000000. 18 Nov 2026: Y roller brace has no seat
 
 **Done:** measured the L bracket `YRollerBrace` in the open Fusion model, read-only. It needs at least 50 of roller top in front of the beam. A centred 150 wide beam leaves 0. The current 75 wide beam at `XGantryOffset` 0 leaves 37.5, so the front brace bolts sit 0.5 past the roller end. The table is in `docs/printnc-assessment.md`. No parameter was changed and no decision was made.
@@ -13,14 +21,6 @@
 **Left:** the owner has not chosen the beam width and offset. Options: 75 wide at offset 25 (recommended, keeps D-176), or 150 wide at offset 50 (reverses D-176). Neither has been rebuilt in Fusion. Offset 25 gave 10 failing features in an earlier trial, against 8 now. The Fusion document is still **unsaved**.
 
 **Exact next step:** the owner chooses the option and saves the Fusion document under a new name. Then set the parameters, rebuild, check the brace bolts and the full travel, and record it as D-177.
-
-## 0000000000000000000000000000. 18 Nov 2026: gantry beam 150 tall × 75 wide × 8
-
-**Done:** owner changed the beam to RHS 150 tall × 75 wide × 8, 775 long (D-176, amends D-164). Fusion `XGantryWidth` is 75, and `XGantryOffset` stays 0 (25 gives 2 more failures). `docs/bom.csv` G01 and `docs/printnc-assessment.md` are updated.
-
-**Left:** the 60 wide X BK12 and BF12 risers overhang the 43 flat on the beam's top face by 8.5 each side. Availability and price of 150 × 75 × 8 are not confirmed. The beam is 5.1 times less stiff horizontally and 3.3 times less in twist than the 150 × 150. LiMo prices for the 550 rail and 650 screws are still not confirmed. The Fusion document is still **unsaved** with **8 failing features**.
-
-**Exact next step:** the owner saves the Fusion document under a new name, then chooses how the X screw supports sit on the 75 wide beam (`docs/printnc-assessment.md`, open item 4). Use parameters only in Fusion, never direct modelling.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
