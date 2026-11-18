@@ -6,6 +6,31 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000. 18 Nov 2026: Y and Y2 blocks swapped to HGH20CA (D-212), X not done
+
+**Done in `Type_0_v3` and saved. Timeline 1409.**
+- `YRoller` and `YRoller(Mirror)`: old HGW20CC holes filled, 8 x Ø5.5 block holes and 4 x Ø6.5 key access holes added, as `D-212` features at the end of the timeline.
+- 4 x `hgh20ca_1` blocks at Y 427.5 and 512.5, top face Z 155, and `M5x8 Y block screws` and `M5x8 Y2 block screws` (16 simple screws), each held to its roller by an as-built rigid joint.
+- The Y and Y2 HGW20CC blocks and their M6 x 12 screws are hidden, not deleted (owner's choice: hidden parts stay).
+
+**Checked:** no baseline body moved. Timeline health is the same as before (5 warnings, 1 error, all old). The blocks clash with nothing.
+
+**Found:**
+1. **Clash, not fixed: 4 M5 x 8 screw heads hit the `M5 Nut (2)` nuts by 0.9 in Z**, at Y 405.9, X ±335.7 and ±364.3. A standard head tops out at Z 163 and the nut starts at Z 162.1. A low head screw (DIN 7984, 3.5 high) would top out at Z 161.5 and clear it. Owner to choose.
+2. **Fit the block screws before the M5 rods.** The rods run under the key access holes.
+3. **Do not edit `YRoller to Carriages` or `Xroller Carriage Holes`.** Changing them breaks 189 joints. Add end-of-timeline features instead.
+4. **Roller frames differ from world.** Place new parts at root in world coordinates and join them as built.
+
+**Left, in order:**
+1. X axis swap: `XRollers` (top blocks, Z 355) and `XRoller Bottom` (bottom blocks, Z 175), block centres X -265 and -180, Y 505. `XRoller Bottom` is used twice, so check the top angle before changing it. Screws M5 x 8 in the tube, M5 x 10 in the bottom angle.
+2. Tube access holes, then real D25L35 couplings and M12 sensors.
+3. Clean names and materials. Then STEP files, hole tables and the parts list (owner chose STEP plus hole tables).
+4. `docs/bom.csv`: M5 x 8 and M5 x 10 screws are not listed or priced.
+
+**Blocked on suppliers:** spindle, spindle clamp, nut housings, nut flats, HM12-60 size and the Z screw end.
+
+**Exact next step:** the owner chooses the screw for the nut clash. Then, in a new session, do the X axis swap with end-of-timeline features.
+
 ## 0000000000000000000000000000000000000000000000000000000. 18 Nov 2026: HM12-60 mount modelled, Z plate 442 long (D-211)
 
 **Done in `Type_0_v3`, not saved. The owner saves it.**
@@ -31,26 +56,6 @@ The other open items are in the D-207 entry at the top of the older entries in `
 **CAD source:** `hm12-60-servo-motor-mount-1.snapshot.2.zip`, supplied by the owner on 18 Nov 2026. It is a third-party model from 2022, not the seller's.
 
 **Exact next step:** the owner saves `Type_0_v3`, asks LiMo for the mount's length and hole pattern, and chooses the Z coupling. Then, in a new session, model the couplings and sensors, and do the HGH20CA block swap.
-
-## 000000000000000000000000000000000000000000000000000000. 18 Nov 2026: XRollerShim replaced by a second XRoller Angle over the top tube (D-209)
-
-**Done in `Type_0_v3`, not saved. The owner saves it.**
-- `XRoller Bottom:2` is the same part as the bottom roller, turned over, on top of the tube: flange Z 405 to 411, leg Z 361 to 411. It is joined to `XRollers` by the as-built joint `Top X roller angle to XRollers`.
-- `XRollerShim` is hidden, not deleted, because Rigid Groups 252 and 268 and Rigid 164 refer to it.
-- The 4 top holes of `Z Fixed Plate` moved from Z 372 and 396 to Z 374.5 and 398.5, in both plate sketches.
-- The tube's 8 top holes are tapped M6, and 8 x M6 x 8 flange screws are modelled in `Top angle flange screws M6x8` (D-210).
-- `docs/bom.csv`: the 4 top plate screws move from M6 x 30 (X12) to M6 x 20 (X03). No price changes.
-
-**Checked:** no clashes for the new angle at X slide 0, -215 and -430. The 4 plate holes line up with the leg. The timeline has the same 6 failing features as before, and no new ones.
-
-**Left for the owner:**
-1. **M6 x 8 screws, 8 off (D-210).** Not in `docs/bom.csv` and not priced. They thread only into the 3 thick tube wall, about 3 threads each.
-2. **Rail block screw access.** The tube's top holes are now tapped, so they no longer give tool access to the block screws. The HGH20CA block swap needs its own access holes in the top wall at X -283, -247, -198, -162 and Y 489, 521, under the flange. The M5 rods and X nut sit in line with those holes, so the block screws go in first.
-3. **Rail class.** The owner reads LiMo's reply as a 10 % surcharge for Class H. Class H is not chosen yet, and `docs/bom.csv` is unchanged.
-
-**Unused holes:** the leg's centre hole at X -222.5, Z 398.5 and the 4 old tapped holes in the tube's front wall.
-
-**Exact next step:** the owner saves `Type_0_v3`. Then carry out items 1 to 4 of the D-208 entry below.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

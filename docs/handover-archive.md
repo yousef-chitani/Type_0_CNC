@@ -2,6 +2,26 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000. 18 Nov 2026: XRollerShim replaced by a second XRoller Angle over the top tube (D-209)
+
+**Done in `Type_0_v3`, not saved. The owner saves it.**
+- `XRoller Bottom:2` is the same part as the bottom roller, turned over, on top of the tube: flange Z 405 to 411, leg Z 361 to 411. It is joined to `XRollers` by the as-built joint `Top X roller angle to XRollers`.
+- `XRollerShim` is hidden, not deleted, because Rigid Groups 252 and 268 and Rigid 164 refer to it.
+- The 4 top holes of `Z Fixed Plate` moved from Z 372 and 396 to Z 374.5 and 398.5, in both plate sketches.
+- The tube's 8 top holes are tapped M6, and 8 x M6 x 8 flange screws are modelled in `Top angle flange screws M6x8` (D-210).
+- `docs/bom.csv`: the 4 top plate screws move from M6 x 30 (X12) to M6 x 20 (X03). No price changes.
+
+**Checked:** no clashes for the new angle at X slide 0, -215 and -430. The 4 plate holes line up with the leg. The timeline has the same 6 failing features as before, and no new ones.
+
+**Left for the owner:**
+1. **M6 x 8 screws, 8 off (D-210).** Not in `docs/bom.csv` and not priced. They thread only into the 3 thick tube wall, about 3 threads each.
+2. **Rail block screw access.** The tube's top holes are now tapped, so they no longer give tool access to the block screws. The HGH20CA block swap needs its own access holes in the top wall at X -283, -247, -198, -162 and Y 489, 521, under the flange. The M5 rods and X nut sit in line with those holes, so the block screws go in first.
+3. **Rail class.** The owner reads LiMo's reply as a 10 % surcharge for Class H. Class H is not chosen yet, and `docs/bom.csv` is unchanged.
+
+**Unused holes:** the leg's centre hole at X -222.5, Z 398.5 and the 4 old tapped holes in the tube's front wall.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then carry out items 1 to 4 of the D-208 entry below.
+
 ## 00000000000000000000000000000000000000000000000000000. 18 Nov 2026: Z fixed plate to be extended for the HM12-60-V (D-208), not modelled yet
 
 **Done:** the owner chose to extend the Z fixed plate by about 95, to about 445 long (D-208). `docs/bom.csv` M12 is updated. **No CAD changed. `Type_0_v3` has unsaved changes. The owner saves it.**
