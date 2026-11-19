@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate now 10 bolts (D-240)
+- Owner: the plate should have 10 bolts; the model and docs had 8. Placed in the Q&A: side pair moved from (X ±175, Y 128) to (X ±175, Y 78), new pair at (X ±175, Y 178). Rows Y 28, 78, 178, 228; slot limit unchanged.
+- `Type_0_v3`: 10 counterbored holes, 10 screws, 10 hex pockets, inserts and back plugs; no clashes among 32 bodies; timeline healthy. **Not saved.**
+- `bom.csv` X15 to X17: 10 needed, the packs of 10 are used up (no spares); no cost change.
+
+**Left:** the owner saves the model (or says to); then the slot (item 6: at most X ±107.5, ending by Y 210; plate cut-out; floor strength); then the bench.
+
+**Exact next step:** ask the owner to save `Type_0_v3`; then propose the slot width and depth (task 24, item 6) and ask the owner.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate, inserts and screws modelled in `Type_0_v3`
 - New component `Fixture Plate`: plate 460 x 330 x 25 (X ±230, Y -37 to 293, Z 45 to 70), 54 M6 tap holes, 4 dowel holes, 8 counterbored M8 holes, 8 M8 x 30 screws.
 - `EG Tub`: 8 hex pockets cut, 8 inserts (Z 21 to 45) and 8 back plugs (Z 15.7 to 29) as bodies. `Wasteboard M6x20` hidden.
@@ -14,15 +23,6 @@
 **Left:** the owner saves the model (or says to); then the slot (item 6: at most X ±107.5, ending by Y 210; plate cut-out; floor strength); then the bench.
 
 **Exact next step:** if not saved, ask the owner to save `Type_0_v3`; then propose the slot width and depth (task 24, item 6) and ask the owner.
-
-## 00000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate screws chosen (D-238, D-239)
-- D-238: 8 x M8 x 30 socket caps, 12.9 zinc (Unifix, box of 200, £20.24, B&Q marketplace, Trade Hut Direct). Counterbores Ø14 x 9; 14 into the insert (Z 45 to 31). Smaller steel packs were out of stock.
-- D-239: back plugs M8 x 8 hex A2 (10 pack, £10.45, SIMFIX), epoxied in (Z 21 to 29), head as the anchor; 2 clear of the screw tip.
-- `bom.csv` X16, X17 added; Phase 1 £4,023.69, £176.31 left. Nothing changed in Fusion.
-
-**Left:** model the plate (grid, dowels, counterbores), the 8 inserts and plugs in the tub, and hide the PrintNC wasteboard screws, in `Type_0_v3`; then the slot (item 6, at most X ±107.5, ending by Y 210); then the bench.
-
-**Exact next step:** model the fixture plate and inserts in `Type_0_v3` through the Fusion MCP (task 24, done-when list), save, and report.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

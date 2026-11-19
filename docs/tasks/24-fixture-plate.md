@@ -17,14 +17,15 @@
 1. ~~Plate position~~ **done (D-233): X ±230, Y -37 to 293, top Z 70.** Measured 19 Nov: spindle axis X -222.5, Y 292 at joint zero; Y slider (`Slider 273`, +Y) 0 to -385, X slider (`Slider 275`, -X) 0 to -430; reach X -222.5 to 207.5, Y -93 to 292. Front = -Y (Y motors at Y 638 to 650).
 2. ~~Grid~~ **done (D-234): 9 x 6 M6, X -200 to 200, Y 3 to 253.**
 3. Dowels: **4 x Ø8 H7 (D-234).** Proposed places, on half-grid points clear of a centre slot: (X ±175, Y 28) front, (X ±175, Y 228) back, 350 x 200 apart. **Confirmed (D-235).**
-4. ~~Cast-in fixings~~ **done (D-236, D-237): 8 x M8 x 24 DIN 6334 A2 hex connector nuts (B&Q, SIMFIX, £7.52 for 10), cast flush (Z 45 to 21), bolted to the channel core, D-200 prep with a short M8 screw in the back end. Places (X ±125, Y 28), (X ±175, Y 128), (X ±125, Y 228), (X ±25, Y 228).** Slot limit from these: X ±107.5, ending at Y 210 or nearer the front.
+4. ~~Cast-in fixings~~ **done (D-236, D-237): 8 x M8 x 24 DIN 6334 A2 hex connector nuts (B&Q, SIMFIX, £7.52 for 10), cast flush (Z 45 to 21), bolted to the channel core, D-200 prep with a short M8 screw in the back end. Places (X ±125, Y 28), (X ±175, Y 128), (X ±125, Y 228), (X ±25, Y 228).** **Now 10 (D-240): side pair at (X ±175, Y 78) and a new pair at (X ±175, Y 178), no spares.** Slot limit from these: X ±107.5, ending at Y 210 or nearer the front.
 5. ~~Hold-down~~ **done (D-238, D-239): 8 x M8 x 30 socket caps 12.9 zinc (Unifix, £20.24 for 200), counterbores Ø14 x 9, 14 into the insert; back plugs M8 x 8 hex A2 (£10.45 for 10), epoxied in, head as anchor.**
 6. Then the slot: width (X), depth (Y), plate cut-out, floor strength; then the bench.
 
-## Modelled in `Type_0_v3` (19 Nov 2026, not saved)
-- New component `Fixture Plate`: body `Fixture plate 6082` (X ±230, Y -37 to 293, Z 45 to 70; 54 x Ø5.0 M6 tap holes, 4 x Ø8 dowel holes, 8 x Ø9 with Ø14 x 9 counterbores; aluminium as the Z plate) and 8 bodies `M8 x 30 socket cap 12.9` (head Z 61 to 69, tip Z 31).
-- In `EG Tub`: hex 13 AF pockets cut in the casting (Z 15.7 to 45), 8 bodies `Insert M8 x 24 DIN 6334 A2` (Z 21 to 45, bore 8) and 8 bodies `Back plug M8 x 8 ISO 4017 A2` (head Z 15.7 to 21, shank to Z 29). Casting volume 40,147,760 to 40,113,454 mm³ (34,306 removed).
-- `Wasteboard M6x20` hidden. Clash check of the 26 bodies near the plate: none.
+## Modelled in `Type_0_v3` (19 Nov 2026; 10-bolt change not saved)
+- New component `Fixture Plate`: body `Fixture plate 6082` (X ±230, Y -37 to 293, Z 45 to 70; 54 x Ø5.0 M6 tap holes, 4 x Ø8 dowel holes, 10 x Ø9 with Ø14 x 9 counterbores; aluminium as the Z plate) and 10 bodies `M8 x 30 socket cap 12.9` #1 to #10 (head Z 61 to 69, tip Z 31).
+- In `EG Tub`: hex 13 AF pockets cut in the casting (Z 15.7 to 45), 10 bodies `Insert M8 x 24 DIN 6334 A2` (Z 21 to 45, bore 8) and 10 bodies `Back plug M8 x 8 ISO 4017 A2` (head Z 15.7 to 21, shank to Z 29). Casting volume 40,147,760 to 40,104,877 mm³ (42,883 removed).
+- D-240 change (same session): the side pair geometry in the 8 sketches moved to Y 78 and copied to Y 178; the extrude profiles re-picked; 2 combines added per component for #9 and #10. Re-picking the pocket cut's profiles reset its participant bodies to all bodies, so it cut the screw shanks; it is set back to `EG Tub casting` only. If a later edit re-picks that profile, set the participants again.
+- `Wasteboard M6x20` hidden. Clash check of the 32 bodies near the plate (plate, screws, casting, inserts, plugs): none. Timeline healthy from the plate on (the one error, `Chamfer2` at 617, is far earlier and not touched).
 
 ## Notes
 - `Type_0_v3` still shows PrintNC's `Wasteboard M6x20` screws (X ±305, Y 32.5 to 567.5, Z 40 to 66) inside the tub floor; the `Wasteboard` (650 x 600) is hidden. Hide or delete the screws when the plate is modelled.

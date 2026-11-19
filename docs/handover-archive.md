@@ -2,6 +2,15 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate screws chosen (D-238, D-239)
+- D-238: 8 x M8 x 30 socket caps, 12.9 zinc (Unifix, box of 200, £20.24, B&Q marketplace, Trade Hut Direct). Counterbores Ø14 x 9; 14 into the insert (Z 45 to 31). Smaller steel packs were out of stock.
+- D-239: back plugs M8 x 8 hex A2 (10 pack, £10.45, SIMFIX), epoxied in (Z 21 to 29), head as the anchor; 2 clear of the screw tip.
+- `bom.csv` X16, X17 added; Phase 1 £4,023.69, £176.31 left. Nothing changed in Fusion.
+
+**Left:** model the plate (grid, dowels, counterbores), the 8 inserts and plugs in the tub, and hide the PrintNC wasteboard screws, in `Type_0_v3`; then the slot (item 6, at most X ±107.5, ending by Y 210); then the bench.
+
+**Exact next step:** model the fixture plate and inserts in `Type_0_v3` through the Fusion MCP (task 24, done-when list), save, and report.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate inserts placed and chosen (D-236, D-237)
 - D-236: 8 cast-in M8 inserts at (X ±125, Y 28), (X ±175, Y 128), (X ±125, Y 228), (X ±25, Y 228). With 10 of EG cover these limit the front slot to X ±107.5 (215 wide), ending at Y 210 or nearer the front.
 - D-237: M8 x 24 DIN 6334 A2 hex connector nuts, 10 pack, £7.52 (B&Q marketplace, SIMFIX; delivery charge only at checkout). Cast flush (Z 45 to 21), bolted to the channel core, D-200 prep with a short M8 back screw. Hold-down screws steel, not A2. Screwfix and RS blocked curl.
