@@ -1,5 +1,7 @@
 # Task 23: Plate Y roller (`mod-y-roller`) fitted to Type 0
 
+**Dropped (D-229, 19 Nov 2026): the owner calls the plate Y roller a failed experiment. `Type_0_v3` keeps the PrintNC tube Y rollers. This file is history.**
+
 **Who:** main session (Fusion MCP). **Read only:** this file, D-218 … D-221 in `docs/decisions.md`.
 
 The owner's open plate Y roller is the Fusion document `mod-y-roller` (project "CNC mill"). It replaces the PrintNC tube Y roller later; it is not in `Type_0_v3` yet.

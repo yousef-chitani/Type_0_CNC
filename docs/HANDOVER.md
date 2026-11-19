@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller dropped; task 24 fixture plate opened (D-229 to D-232)
+- **D-229:** the plate Y roller (task 23, `mod-y-roller` and `y-roller-10`) was a failed experiment. `Type_0_v3` keeps the PrintNC tube Y rollers; D-218 to D-228 are void, the LiMo nut housings (M07) stay.
+- **Task 24** (`docs/tasks/24-fixture-plate.md`): front slot through the cast tub floor for parts clamped upright (D-230); plate stays 6082 460 x 330 x 25 with M6 on a 50 grid plus dowel holes (D-231); plate held by cast-in fixings (D-232). Plate first, then the slot; the bench hole waits.
+- Nothing changed in Fusion or `bom.csv`.
+
+**Left:** plate position, grid margins, dowels, cast-in fixing type and places, hold-down screws; then the slot size; then the bench.
+
+**Exact next step:** measure in `Type_0_v3` where the spindle reaches at the ends of X and Y travel, propose the plate position, and ask the owner (task 24, open item 1).
+
 ## 0000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: `mod-y-roller` front plate into the side plates (D-228)
 **Done in Fusion `mod-y-roller`, not saved: the owner saves.** The open document was its saved state, without D-221 … D-225; the owner chose to work from it. Details: `docs/tasks/23-plate-y-roller.md`, section "Front plate into the side plates".
 - Front and back plates sit on the bottom plate (Z 45); held by M5 through the side plates into tapped edge holes at Z 70, 87, 128, 150. Nothing bolts them to the bottom plate.
@@ -14,18 +23,6 @@
 **Left:** `FX cross bolt holes X5.5` fails; the bottom plate volume rose 6.5 cm³ after the full recompute (a cut is missing); no interference check with screws yet.
 
 **Exact next step:** fix items 1 and 2 in that section, then the screw interference check, then the owner saves.
-
-## 000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: Y roller remade, 10 mm box (D-226, D-227)
-**Built in a new Fusion document (`Untitled`, not saved: the owner saves it as `y-roller-10`).** Details: `docs/tasks/23-plate-y-roller.md`, section "Remake".
-- All plates 10 mm: base 75 x 140, 2 low side plates 120 x 40 that the beam sits on, 2 full-width end plates 75 x 137. Front = back and left = right (identical parts); the same set builds Y2.
-- All edge screws M5; block pitch 85, as `Type_0_v3`; heights as D-218.
-- Every screw modelled: no interference in 49 bodies; every screw reaches its thread; key access and fitting order recorded.
-
-STEP: `cad/v2/out/y_roller_10.step`.
-
-**Left:** the owner confirms 6 build calls (listed in task 23), key access to the 4 end-plate screws from below is not verified, then a check against the tub and Y BF12 in `Type_0_v3`, the sensor bracket, prices.
-
-**Exact next step:** the owner saves the document as `y-roller-10` and confirms the 6 calls in task 23.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
