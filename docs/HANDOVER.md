@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: inner rear plate bolts removed (D-241); spec gaps listed
+- Owner: remove the rear 2 bolts; Q&A chose the inner pair (X ±25, Y 228). Plate now 8 bolts: (X ±125, Y 28), (X ±175, Y 78), (X ±175, Y 178), (X ±125, Y 228).
+- `Type_0_v3`: geometry and 4 combines removed, profiles re-picked, pocket cut kept to the casting, bodies renumbered #1 to #8; 26 bodies, no clashes, timeline healthy. **Not saved.**
+- `bom.csv` X15 to X17: 8 needed, 2 spares again. `docs/spec-gaps.md`: 8 misses (10-bolt spec now missed, slot open, nose clearance 175 vs 180 to 200, X travel 430 vs 570, `requirements.md` out of date on layout, ATC and frame material, mass not summed).
+
+**Left:** the owner saves the model; the owner decides what to do about the gaps in `docs/spec-gaps.md`; then the slot (task 24, item 6); then the bench.
+
+**Exact next step:** ask the owner to save `Type_0_v3` and which spec gap to settle first (the 10-bolt spec against D-241 included); then propose the slot width and depth.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate now 10 bolts (D-240)
 - Owner: the plate should have 10 bolts; the model and docs had 8. Placed in the Q&A: side pair moved from (X ±175, Y 128) to (X ±175, Y 78), new pair at (X ±175, Y 178). Rows Y 28, 78, 178, 228; slot limit unchanged.
 - `Type_0_v3`: 10 counterbored holes, 10 screws, 10 hex pockets, inserts and back plugs; no clashes among 32 bodies; timeline healthy. **Not saved.**
@@ -14,15 +23,6 @@
 **Left:** the owner saves the model (or says to); then the slot (item 6: at most X ±107.5, ending by Y 210; plate cut-out; floor strength); then the bench.
 
 **Exact next step:** ask the owner to save `Type_0_v3`; then propose the slot width and depth (task 24, item 6) and ask the owner.
-
-## 000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate, inserts and screws modelled in `Type_0_v3`
-- New component `Fixture Plate`: plate 460 x 330 x 25 (X ±230, Y -37 to 293, Z 45 to 70), 54 M6 tap holes, 4 dowel holes, 8 counterbored M8 holes, 8 M8 x 30 screws.
-- `EG Tub`: 8 hex pockets cut, 8 inserts (Z 21 to 45) and 8 back plugs (Z 15.7 to 29) as bodies. `Wasteboard M6x20` hidden.
-- Volumes match a hand check; no clashes among the 26 bodies near the plate. Details in `docs/tasks/24-fixture-plate.md`.
-
-**Left:** the owner saves the model (or says to); then the slot (item 6: at most X ±107.5, ending by Y 210; plate cut-out; floor strength); then the bench.
-
-**Exact next step:** if not saved, ask the owner to save `Type_0_v3`; then propose the slot width and depth (task 24, item 6) and ask the owner.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
