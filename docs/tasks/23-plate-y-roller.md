@@ -4,6 +4,22 @@
 
 The owner's open plate Y roller is the Fusion document `mod-y-roller` (project "CNC mill"). It replaces the PrintNC tube Y roller later; it is not in `Type_0_v3` yet.
 
+## Front plate into the side plates (D-228, 19 Nov 2026, `mod-y-roller`, not saved)
+The open `mod-y-roller` was its saved state: none of D-221 … D-225 (front plate down to Z 36 in a slot, HGW20CC blocks, nut axis Z 56, beam bottom Z 82). The owner chose to work from it. Frame here: front plate Y −26.324 … −16.324, back plate Y 103.676 … 113.676 (all Y values carry −0.004).
+
+**Conflicts found:** the bottom plate's cross bolts (Ø6.5 along X, Y −28.824 / 116.176, Z 37.5) cut 0.75 into the front/back plates; the side-screw row Z 46 cut slivers off the bottom plate (3 loose bodies); row Z 169 ran into the beam-bolt counterbores; the outer block screws sat under the plates.
+
+**Done (features `FX …` at the end of the timeline, root sketches and planes named `FX …`):**
+- Front and back plates: old side holes (Z 46, 87, 128, 169) and the 2 lower flange holes filled; plates cut to start at Z 45; M5 tapped Ø4.2, 13 deep from each edge, at Z 70, 87, 128, 150; beam-bolt holes at Z 164 recut (Ø6.5 + Ø10.5 cbore 5 deep).
+- Side plates (both): rows Z 46 and 169 filled; new Ø5.5 + Ø9 cbore 5 deep at Z 70 and 150 (Z 87 and 128 kept).
+- Bottom plate: end slots filled outside the Ø48 trough (the 3 loose bodies merged); outer block-screw holes recut, counterbores Ø10.6 x 6.5 deep (Z 38.5); cross-bolt holes recut Ø6.6.
+
+**Not finished (stopped at the context limit):**
+1. `FX cross bolt holes X5.5` fails ("No target body"; it hit ASM_EDGECOIN when the Y values were corrected by −0.004). Fix: roll back to it, set its participant body to the bottom plate, or delete it and recut Ø6.6 from X −2.5 to 13.5. Its sketch circles are already Ø6.6; its symmetric distance is 16.
+2. After the full recompute, the bottom plate volume rose from 99,745 to 106,252 mm³ and its faces fell from 110 to 98. Find which cut is missing (compare with the holes listed above); the outer block-screw sketch may still be Ø6.5 / Ø10.5 (a radius change failed).
+3. Then: interference check with stand-in screws (block M6 heads under the plates, M5 x 16 side screws, cross bolts), no face under 0.01 mm² on any plate, screenshot.
+4. Leftover seam faces of 0.0001 mm² at the plates' bottom edge (old flange holes) and 0.0096 mm² at the back plate's Z 164 cbores: harmless, clean if wanted.
+
 ## Remake: `y-roller-10` (D-226, D-227, 19 Nov 2026)
 New Fusion document `y-roller-10` (project "CNC mill"). `mod-y-roller` below is history.
 

@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: `mod-y-roller` front plate into the side plates (D-228)
+**Done in Fusion `mod-y-roller`, not saved: the owner saves.** The open document was its saved state, without D-221 … D-225; the owner chose to work from it. Details: `docs/tasks/23-plate-y-roller.md`, section "Front plate into the side plates".
+- Front and back plates sit on the bottom plate (Z 45); held by M5 through the side plates into tapped edge holes at Z 70, 87, 128, 150. Nothing bolts them to the bottom plate.
+- Bottom plate end slots filled; outer block-screw counterbores 6.5 deep; the cross bolts no longer touch the plates.
+
+**Left:** `FX cross bolt holes X5.5` fails; the bottom plate volume rose 6.5 cm³ after the full recompute (a cut is missing); no interference check with screws yet.
+
+**Exact next step:** fix items 1 and 2 in that section, then the screw interference check, then the owner saves.
+
 ## 000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: Y roller remade, 10 mm box (D-226, D-227)
 **Built in a new Fusion document (`Untitled`, not saved: the owner saves it as `y-roller-10`).** Details: `docs/tasks/23-plate-y-roller.md`, section "Remake".
 - All plates 10 mm: base 75 x 140, 2 low side plates 120 x 40 that the beam sits on, 2 full-width end plates 75 x 137. Front = back and left = right (identical parts); the same set builds Y2.
@@ -17,17 +26,6 @@ STEP: `cad/v2/out/y_roller_10.step`.
 **Left:** the owner confirms 6 build calls (listed in task 23), key access to the 4 end-plate screws from below is not verified, then a check against the tub and Y BF12 in `Type_0_v3`, the sensor bracket, prices.
 
 **Exact next step:** the owner saves the document as `y-roller-10` and confirms the 6 calls in task 23.
-
-## 00000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller holes and cut-outs fixed (D-222 … D-225)
-**Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
-- Bottom plate: end slots gone (D-221), counterbores 7.5 deep, cut back to the front plate face (D-223), Ø32 trough only under the nut (D-224), cross holes M6 tapped 12 deep (D-225).
-- Front and back plates sit on Z 45; nut flange on its 4 upper bolts (D-222); side-screw rows moved to Z 82, 118, 140, 167, clear of the flange and beam bolts, tapped M5.
-- Nut body corrected to Ø28 (supplier table). Unused front side-plate hole filled.
-- No interference between bodies; no face under 3 mm² on any plate.
-
-**Left:** the side plate's Ø9 counterbores leave 0.5 mm to the beam opening (was the same before): owner to choose. Screws and plates not priced.
-
-**Exact next step:** the owner checks and saves `mod-y-roller`, and answers task 23 item 1.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

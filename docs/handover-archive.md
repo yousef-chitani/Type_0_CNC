@@ -2,6 +2,17 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller holes and cut-outs fixed (D-222 … D-225)
+**Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
+- Bottom plate: end slots gone (D-221), counterbores 7.5 deep, cut back to the front plate face (D-223), Ø32 trough only under the nut (D-224), cross holes M6 tapped 12 deep (D-225).
+- Front and back plates sit on Z 45; nut flange on its 4 upper bolts (D-222); side-screw rows moved to Z 82, 118, 140, 167, clear of the flange and beam bolts, tapped M5.
+- Nut body corrected to Ø28 (supplier table). Unused front side-plate hole filled.
+- No interference between bodies; no face under 3 mm² on any plate.
+
+**Left:** the side plate's Ø9 counterbores leave 0.5 mm to the beam opening (was the same before): owner to choose. Screws and plates not priced.
+
+**Exact next step:** the owner checks and saves `mod-y-roller`, and answers task 23 item 1.
+
 ## 0000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller fitted to Type 0 (D-218 … D-221), slots left
 **Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
 - The open plate Y roller now takes the HGR20 rail (17.5), HGH20CA blocks (M5 on 32 x 36), the 120 x 120 x 8 beam (R16), our heights (beam bottom 50 and screw 25 above the block top), a 75 wide body, the 100-long DFU1605 double nut on 6 x M5 tapped holes (D-219), and an M12 sensor mount.
