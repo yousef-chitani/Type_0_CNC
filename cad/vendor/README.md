@@ -13,6 +13,7 @@ Manufacturer STEP files (and PDF drawings) for the bought parts, downloaded by t
 | `bf12.step` | BF12 floating support | TraceParts, Engder (`BF12.STEP`) | 60 × 43 × 20. **Centre height 25**, holes Ø6.6 at **46** |
 | `dfu1605_nut.step` | DFU1605 double nut, with a 130 mm screw piece | TraceParts, Engder (`dfu01605.stp`) | Nut length **100** (2 nuts + 10 spacer), body Ø28, flange Ø48 × 10, **no flats in this model** |
 | `htd5m_20t_15.step` | HTD-5M 20T pulley, 15 mm belt | TraceParts, Mädler 17232000 (`17232000.stp`) | Teeth Ø30.7, flanges Ø36, 20.7 wide + hub Ø23 × 5.5 (26.2 overall). **Pilot bore in the model**, not Ø10 |
+| `jianken_jgl80_2.2r24.step` | Jianken JGL-80/2.2R24 ATC spindle (S01) | Jianken, from the owner 19 Nov 2026 (`JGL-80 2.2外型图.STEP`, SolidWorks 2018) | Axis along +X. Body Ø80, rear face X 0, front face X 319, ISO20 nose Ø30 to X 351 (no ER16 nut or holder). Air, water and cable fittings at the rear to X -19. Drawing: `drawings/jianken_jgl80_2.2r24_drawing.pdf` |
 | `kfl000_bearing.step` | KFL000 2-bolt flange bearing, Ø10 | TraceParts, AMI Bearings KFL000 (`kfl000.stp`) | a 60, b 36, bolt spacing e **45**, M6, s 7, Z 15.5, Bi 14 |
 | `lj12a3_sensor.step` | M12 inductive sensor (stand-in for LJ12A3-4-Z/BY) | TraceParts, Omron E2E-X8MD12 via RS 2883243 (`2883243.step`) | M12 × 1, 57.1 long |
 | `vallder_200x96.dxf` | Vallder CNC X-axis profile 200 × 96 (section only) | Owner's download, Vallder (`CNC-X-Axis-alu-profil-dxf.dxf`) | 8.53 kg/m from the DXF (Vallder: 8.20). Rail grooves 126.5 apart. `cad/v2/vallder_profiles.py` |

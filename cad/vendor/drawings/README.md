@@ -1,9 +1,10 @@
 # Supplier drawings (given by the owner, 18 Nov 2026)
 
-Values are copied from the images in this folder. All sizes in mm. None of these parts has been modelled from these drawings yet.
+Values are copied from the images and PDFs in this folder. All sizes in mm. None of these parts has been modelled from these drawings yet.
 
 | File | Part | Key values | Not given, or to check |
 |---|---|---|---|
+| `jianken_jgl80_2.2r24_drawing.pdf` | Jianken JGL-80/2.2R24 outline drawing (外型图), from the owner 19 Nov 2026 | Body Ø80 (-0.015/-0.018 at the rear, 0/-0.02 in the middle), 306 long to the front step, Ø72 front step 13 long, nose 45 past the body to ISO20-ER16. Clamping range **120 long, starting 42 from the front face**. 2.2 kW, 380 V (220 V), 3.5 A (6.0 A), 400 Hz, 24,000 rpm, 0.87 Nm constant from about 100 to 400 Hz. Matching STEP: `../jianken_jgl80_2.2r24.step` | Pull stud still not shown. The STEP nose ends 32 past the front face, against 45 on the drawing (the drawing likely includes the ER16 nut) |
 | `jianken_jgl_specifications.png` | Jianken JGL series, manual section 2.1 | JGL-80/2.2R24-20: 24,000 rpm, 2.2 kW, 220 V, 400 Hz, 6 A, grease, ISO20, water-cooled, sensor and unclamp/clamp unit | **No dimensions.** Length, nose and top unit still need the Jianken drawing |
 | `jianken_jgm_specifications.png` | Jianken JGM series | Diameter x length table, for example JGM-80/1.5R24 80 x 215 | Different series from the JGL-80. Do not use for the model |
 | `spindle_clamp_80.png` | 80 mm split clamp | Bore Ø80, base 148 wide, body 110 wide, feet 19 wide x 13 thick, wall 15 each side of the bore, 99 high, shoulder 77 high, 64 from foot top to the top face in the side view, slot 2, corner R8, dimension 55 centre to body side, 40 bore radius | **Clamp length along the spindle, base bolt holes and bore centre height are not dimensioned.** The base sits on the plate, so check it against the 60 centre offset now modelled. One side-view height is hard to read (96 or 99) |

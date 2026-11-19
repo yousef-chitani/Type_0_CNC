@@ -2,6 +2,32 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000. 18 Nov 2026: HM12-60 mount modelled, Z plate 442 long (D-211)
+
+**Done in `Type_0_v3`, not saved. The owner saves it.**
+- The owner's HM12-60 CAD is fitted as `HM12-60-V Z Mount`: bearing end on the screw shoulder at Z 534, motor face at Z 624.
+- `Z Fixed Plate` is 442 long, Z 169 to 611, 1 under the mount flange. It has 6 x M6 tapped holes at X -245.5 and -199.5, Z 541, 554 and 584.
+- The Z BK12, the D-206 bracket, its 2 tapped holes and the motor mount stand-in are removed.
+- The motor moved up 12, so its top is at Z 770. The coupling is at Z 580.75 to 615.75.
+- The screw's 10 mm end is 21.5 long, up from 15, ending at Z 592.5. The D25L35 grips 11.75 of each shaft, and the shaft ends stop at the spider.
+- `docs/bom.csv`: M05 and M12 updated. No price changes.
+
+**Checked:** no moving-to-fixed clash at Z travel -75, -37.5, 0, +37.5 and +75. The 6 mount holes line up with the plate holes. The only static overlaps are the lock nut's thread on the screw and 0.04 mm3 between the motor shaft and the coupling stand-in. No feature newly fails.
+
+**Left for the owner:**
+1. **Measure the real mount before machining the plate.** The CAD differs from the seller's drawing: length 90 against 95, bolt spacing 46 against 45, lower rows 13 apart against 12, bearing 7901 against 7001.
+2. **Do not order a custom Z screw end yet.** The screw and the mount come in the same LiMo order, so ask LiMo for its HM12-60 length and hole pattern first. The 21.5 end suits a 90 long mount. A 95 long mount needs 26.
+3. **Choose the Z coupling (D-211 is Claude's default).** With the 90 long mount and the standard 15 end, the shaft ends are 18 apart. A D25L35 then grips 8.5 per shaft. The 30-42 coupling the drawing lists would grip about 12 with no custom screw end, but its hub depth and price are not known.
+4. **LiMo.** Ask whether the standard BK12 end of the Z screw fits the mount's bearing, and whether the Z set can come without its BK12.
+5. **6 x M6 mount screws.** Not sized, not in `docs/bom.csv`, not priced.
+6. **M12 price.** The 20 mm 400 x 180 piece is too short for the 442 plate. The longer piece is not priced.
+
+The other open items are in the D-207 entry at the top of the older entries in `docs/handover-archive.md`.
+
+**CAD source:** `hm12-60-servo-motor-mount-1.snapshot.2.zip`, supplied by the owner on 18 Nov 2026. It is a third-party model from 2022, not the seller's.
+
+**Exact next step:** the owner saves `Type_0_v3`, asks LiMo for the mount's length and hole pattern, and chooses the Z coupling. Then, in a new session, model the couplings and sensors, and do the HGH20CA block swap.
+
 ## 000000000000000000000000000000000000000000000000000000. 18 Nov 2026: XRollerShim replaced by a second XRoller Angle over the top tube (D-209)
 
 **Done in `Type_0_v3`, not saved. The owner saves it.**
