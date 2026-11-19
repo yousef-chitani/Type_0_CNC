@@ -2,6 +2,15 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: `mod-y-roller` front plate into the side plates (D-228)
+**Done in Fusion `mod-y-roller`, not saved: the owner saves.** The open document was its saved state, without D-221 … D-225; the owner chose to work from it. Details: `docs/tasks/23-plate-y-roller.md`, section "Front plate into the side plates".
+- Front and back plates sit on the bottom plate (Z 45); held by M5 through the side plates into tapped edge holes at Z 70, 87, 128, 150. Nothing bolts them to the bottom plate.
+- Bottom plate end slots filled; outer block-screw counterbores 6.5 deep; the cross bolts no longer touch the plates.
+
+**Left:** `FX cross bolt holes X5.5` fails; the bottom plate volume rose 6.5 cm³ after the full recompute (a cut is missing); no interference check with screws yet.
+
+**Exact next step:** fix items 1 and 2 in that section, then the screw interference check, then the owner saves.
+
 ## 000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: Y roller remade, 10 mm box (D-226, D-227)
 **Built in a new Fusion document (`Untitled`, not saved: the owner saves it as `y-roller-10`).** Details: `docs/tasks/23-plate-y-roller.md`, section "Remake".
 - All plates 10 mm: base 75 x 140, 2 low side plates 120 x 40 that the beam sits on, 2 full-width end plates 75 x 137. Front = back and left = right (identical parts); the same set builds Y2.

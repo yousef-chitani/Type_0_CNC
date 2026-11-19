@@ -6,6 +6,17 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate placed and specified (D-233 to D-235)
+Measured in `Type_0_v3` (read only, nothing changed): spindle axis reaches X -222.5 to 207.5, Y -93 to 292; front = -Y; tub floor front Y -37.
+- D-233: plate X ±230, Y -37 to 293 (front flush with the floor front), top Z 70.
+- D-234: 9 x 6 M6 grid on 50, X -200 to 200, Y 3 to 253; 4 x Ø8 H7 dowels.
+- D-235: dowels at (X ±175, Y 28 and 228); 8 x M8 counterbored socket caps into 8 cast-in M8 steel inserts.
+Details: `docs/tasks/24-fixture-plate.md`.
+
+**Left:** insert part, length and places; model the plate and inserts in Fusion; then the slot (width, depth, floor strength); then the bench.
+
+**Exact next step:** propose the 8 insert places (half-grid points near the plate edges, clear of the grid, dowels and slot) and an M8 insert part priced by curl, and ask the owner (task 24, item 4).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller dropped; task 24 fixture plate opened (D-229 to D-232)
 - **D-229:** the plate Y roller (task 23, `mod-y-roller` and `y-roller-10`) was a failed experiment. `Type_0_v3` keeps the PrintNC tube Y rollers; D-218 to D-228 are void, the LiMo nut housings (M07) stay.
 - **Task 24** (`docs/tasks/24-fixture-plate.md`): front slot through the cast tub floor for parts clamped upright (D-230); plate stays 6082 460 x 330 x 25 with M6 on a 50 grid plus dowel holes (D-231); plate held by cast-in fixings (D-232). Plate first, then the slot; the bench hole waits.
@@ -14,15 +25,6 @@
 **Left:** plate position, grid margins, dowels, cast-in fixing type and places, hold-down screws; then the slot size; then the bench.
 
 **Exact next step:** measure in `Type_0_v3` where the spindle reaches at the ends of X and Y travel, propose the plate position, and ask the owner (task 24, open item 1).
-
-## 0000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: `mod-y-roller` front plate into the side plates (D-228)
-**Done in Fusion `mod-y-roller`, not saved: the owner saves.** The open document was its saved state, without D-221 … D-225; the owner chose to work from it. Details: `docs/tasks/23-plate-y-roller.md`, section "Front plate into the side plates".
-- Front and back plates sit on the bottom plate (Z 45); held by M5 through the side plates into tapped edge holes at Z 70, 87, 128, 150. Nothing bolts them to the bottom plate.
-- Bottom plate end slots filled; outer block-screw counterbores 6.5 deep; the cross bolts no longer touch the plates.
-
-**Left:** `FX cross bolt holes X5.5` fails; the bottom plate volume rose 6.5 cm³ after the full recompute (a cut is missing); no interference check with screws yet.
-
-**Exact next step:** fix items 1 and 2 in that section, then the screw interference check, then the owner saves.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
