@@ -2,6 +2,15 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate inserts placed and chosen (D-236, D-237)
+- D-236: 8 cast-in M8 inserts at (X ±125, Y 28), (X ±175, Y 128), (X ±125, Y 228), (X ±25, Y 228). With 10 of EG cover these limit the front slot to X ±107.5 (215 wide), ending at Y 210 or nearer the front.
+- D-237: M8 x 24 DIN 6334 A2 hex connector nuts, 10 pack, £7.52 (B&Q marketplace, SIMFIX; delivery charge only at checkout). Cast flush (Z 45 to 21), bolted to the channel core, D-200 prep with a short M8 back screw. Hold-down screws steel, not A2. Screwfix and RS blocked curl.
+- `bom.csv` X15 added; Phase 1 £3,993.00, £207.00 left. Nothing changed in Fusion.
+
+**Left:** hold-down screw length and part (about M8 x 30, steel) and the back plug screw (item 5); model the plate, inserts and holes in `Type_0_v3`; then the slot (item 6); then the bench.
+
+**Exact next step:** propose the hold-down screw (steel M8 socket cap, length from plate 25, counterbore about 9, 13 to 16 into the insert) and the back plug screw, priced by curl, and ask the owner (task 24, item 5).
+
 ## 000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate placed and specified (D-233 to D-235)
 Measured in `Type_0_v3` (read only, nothing changed): spindle axis reaches X -222.5 to 207.5, Y -93 to 292; front = -Y; tub floor front Y -37.
 - D-233: plate X ±230, Y -37 to 293 (front flush with the floor front), top Z 70.

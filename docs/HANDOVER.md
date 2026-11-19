@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate, inserts and screws modelled in `Type_0_v3`
+- New component `Fixture Plate`: plate 460 x 330 x 25 (X ±230, Y -37 to 293, Z 45 to 70), 54 M6 tap holes, 4 dowel holes, 8 counterbored M8 holes, 8 M8 x 30 screws.
+- `EG Tub`: 8 hex pockets cut, 8 inserts (Z 21 to 45) and 8 back plugs (Z 15.7 to 29) as bodies. `Wasteboard M6x20` hidden.
+- Volumes match a hand check; no clashes among the 26 bodies near the plate. Details in `docs/tasks/24-fixture-plate.md`.
+
+**Left:** the owner saves the model (or says to); then the slot (item 6: at most X ±107.5, ending by Y 210; plate cut-out; floor strength); then the bench.
+
+**Exact next step:** if not saved, ask the owner to save `Type_0_v3`; then propose the slot width and depth (task 24, item 6) and ask the owner.
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate screws chosen (D-238, D-239)
 - D-238: 8 x M8 x 30 socket caps, 12.9 zinc (Unifix, box of 200, £20.24, B&Q marketplace, Trade Hut Direct). Counterbores Ø14 x 9; 14 into the insert (Z 45 to 31). Smaller steel packs were out of stock.
 - D-239: back plugs M8 x 8 hex A2 (10 pack, £10.45, SIMFIX), epoxied in (Z 21 to 29), head as the anchor; 2 clear of the screw tip.
@@ -14,15 +23,6 @@
 **Left:** model the plate (grid, dowels, counterbores), the 8 inserts and plugs in the tub, and hide the PrintNC wasteboard screws, in `Type_0_v3`; then the slot (item 6, at most X ±107.5, ending by Y 210); then the bench.
 
 **Exact next step:** model the fixture plate and inserts in `Type_0_v3` through the Fusion MCP (task 24, done-when list), save, and report.
-
-## 0000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate inserts placed and chosen (D-236, D-237)
-- D-236: 8 cast-in M8 inserts at (X ±125, Y 28), (X ±175, Y 128), (X ±125, Y 228), (X ±25, Y 228). With 10 of EG cover these limit the front slot to X ±107.5 (215 wide), ending at Y 210 or nearer the front.
-- D-237: M8 x 24 DIN 6334 A2 hex connector nuts, 10 pack, £7.52 (B&Q marketplace, SIMFIX; delivery charge only at checkout). Cast flush (Z 45 to 21), bolted to the channel core, D-200 prep with a short M8 back screw. Hold-down screws steel, not A2. Screwfix and RS blocked curl.
-- `bom.csv` X15 added; Phase 1 £3,993.00, £207.00 left. Nothing changed in Fusion.
-
-**Left:** hold-down screw length and part (about M8 x 30, steel) and the back plug screw (item 5); model the plate, inserts and holes in `Type_0_v3`; then the slot (item 6); then the bench.
-
-**Exact next step:** propose the hold-down screw (steel M8 socket cap, length from plate 25, counterbore about 9, 13 to 16 into the insert) and the back plug screw, priced by curl, and ask the owner (task 24, item 5).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

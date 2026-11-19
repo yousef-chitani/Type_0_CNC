@@ -21,6 +21,11 @@
 5. ~~Hold-down~~ **done (D-238, D-239): 8 x M8 x 30 socket caps 12.9 zinc (Unifix, £20.24 for 200), counterbores Ø14 x 9, 14 into the insert; back plugs M8 x 8 hex A2 (£10.45 for 10), epoxied in, head as anchor.**
 6. Then the slot: width (X), depth (Y), plate cut-out, floor strength; then the bench.
 
+## Modelled in `Type_0_v3` (19 Nov 2026, not saved)
+- New component `Fixture Plate`: body `Fixture plate 6082` (X ±230, Y -37 to 293, Z 45 to 70; 54 x Ø5.0 M6 tap holes, 4 x Ø8 dowel holes, 8 x Ø9 with Ø14 x 9 counterbores; aluminium as the Z plate) and 8 bodies `M8 x 30 socket cap 12.9` (head Z 61 to 69, tip Z 31).
+- In `EG Tub`: hex 13 AF pockets cut in the casting (Z 15.7 to 45), 8 bodies `Insert M8 x 24 DIN 6334 A2` (Z 21 to 45, bore 8) and 8 bodies `Back plug M8 x 8 ISO 4017 A2` (head Z 15.7 to 21, shank to Z 29). Casting volume 40,147,760 to 40,113,454 mm³ (34,306 removed).
+- `Wasteboard M6x20` hidden. Clash check of the 26 bodies near the plate: none.
+
 ## Notes
 - `Type_0_v3` still shows PrintNC's `Wasteboard M6x20` screws (X ±305, Y 32.5 to 567.5, Z 40 to 66) inside the tub floor; the `Wasteboard` (650 x 600) is hidden. Hide or delete the screws when the plate is modelled.
 - Fusion script `print` output does not come back through the MCP here: write to a file in the scratchpad and read it.
