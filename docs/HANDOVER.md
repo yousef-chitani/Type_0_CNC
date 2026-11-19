@@ -6,6 +6,18 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller fitted to Type 0 (D-218 … D-221), slots left
+**Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
+- The open plate Y roller now takes the HGR20 rail (17.5), HGH20CA blocks (M5 on 32 x 36), the 120 x 120 x 8 beam (R16), our heights (beam bottom 50 and screw 25 above the block top), a 75 wide body, the 100-long DFU1605 double nut on 6 x M5 tapped holes (D-219), and an M12 sensor mount.
+- Beam centred on the roller (D-220, amends D-177 for this roller).
+- No clash between any bodies.
+
+**Found, not fixed:** HGH20CA blocks take screws from above only, and the front and back plates sit in 10-deep slots over the outer block screws. The owner chose to drop the slots (D-221): plates on top, block screws first, M5 x 12 in 7.5-deep counterbores.
+
+**Left:** drop the slots, fix the `sideholes` projection warning, check the sensor's 70 overhang, price the plates and M5 x 12, then fit the roller into `Type_0_v3`. The other 19 Nov entries (below) are about `Type_0_v3`, not this roller.
+
+**Exact next step:** the owner checks and saves `mod-y-roller`. Then a new session does task 23 step 1 (drop the slots).
+
 ## 000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: the 2 open items sketched
 
 **Done:** `cad/v2/open_items_sketch.py` draws both items from numbers measured in `Type_0_v3` (model not changed). Picture `cad/v2/out/open_items_sketch.png`, note `docs/open-items-sketch.md`.
@@ -15,22 +27,6 @@
 **Left:** the owner chooses both. Still open: old HGW20CC holes not filled on X; rail fixing bolts not modelled; LiMo nut flats not confirmed.
 
 **Exact next step:** the owner answers items 1 and 2 from the sketch. Record them as D-218 and D-219 and change the model. Then couplings, sensors, clean-up and STEP files.
-
-## 00000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: top angle split off (D-216); X and Y nut flats (D-217)
-
-**Done in `Type_0_v3` and saved. Timeline 1439.**
-- **`XRoller Top Angle`**: new root component, a copy of `XRoller Bottom:2` with the 8 unused Ø5.5 HGH holes (D-215) filled, joined rigidly (as built) to `XRollers`. `XRoller Bottom:2` is hidden, not deleted. `XRoller Bottom` is now used only by the bottom angle.
-- **Flange flats on the X, Y and Y2 DFU1605 nuts** (one shared component, `DFU1605 Nut`): flange cut to **40 across flats** (`Flange flats 40 AF (DIN 69051 form B)`), as on the supplier's table and the Z nut (D-205). The flats are horizontal on all three nuts: flanges now Z 160 to 200 (Y, Y2) and Z 360 to 400 (X). This is the only orientation that misses the 6 flange holes (holes at 0° and 45°).
-
-**Checked:** no clash between the 16 changed bodies and the 99 bodies around them. All new timeline items are healthy.
-
-**Left (still open from D-215):**
-1. Old HGW20CC holes not filled in the X tube bottom wall and bottom angle flange.
-2. No key access for the M5 x 8 X top block screws: the top angle covers the tube's top wall. Owner to choose.
-3. The D-212 Y block screw / M5 nut clash: owner to choose the screw.
-4. Rail fixing bolts (M5 x 20, X03) not modelled. LiMo has still not confirmed that its nuts have the flats.
-
-**Exact next step:** owner answers items 2 and 3. Then couplings, sensors, clean-up and STEP files.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

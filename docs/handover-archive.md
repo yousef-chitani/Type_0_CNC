@@ -2,6 +2,22 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: top angle split off (D-216); X and Y nut flats (D-217)
+
+**Done in `Type_0_v3` and saved. Timeline 1439.**
+- **`XRoller Top Angle`**: new root component, a copy of `XRoller Bottom:2` with the 8 unused Ø5.5 HGH holes (D-215) filled, joined rigidly (as built) to `XRollers`. `XRoller Bottom:2` is hidden, not deleted. `XRoller Bottom` is now used only by the bottom angle.
+- **Flange flats on the X, Y and Y2 DFU1605 nuts** (one shared component, `DFU1605 Nut`): flange cut to **40 across flats** (`Flange flats 40 AF (DIN 69051 form B)`), as on the supplier's table and the Z nut (D-205). The flats are horizontal on all three nuts: flanges now Z 160 to 200 (Y, Y2) and Z 360 to 400 (X). This is the only orientation that misses the 6 flange holes (holes at 0° and 45°).
+
+**Checked:** no clash between the 16 changed bodies and the 99 bodies around them. All new timeline items are healthy.
+
+**Left (still open from D-215):**
+1. Old HGW20CC holes not filled in the X tube bottom wall and bottom angle flange.
+2. No key access for the M5 x 8 X top block screws: the top angle covers the tube's top wall. Owner to choose.
+3. The D-212 Y block screw / M5 nut clash: owner to choose the screw.
+4. Rail fixing bolts (M5 x 20, X03) not modelled. LiMo has still not confirmed that its nuts have the flats.
+
+**Exact next step:** owner answers items 2 and 3. Then couplings, sensors, clean-up and STEP files.
+
 ## 0000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: spindle lowered 5 (D-214); real HGR20 rails and X HGH20CA blocks (D-215)
 
 **Done in `Type_0_v3` and saved. Timeline 1434.**
