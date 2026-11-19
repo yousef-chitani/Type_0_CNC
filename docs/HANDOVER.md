@@ -12,9 +12,11 @@
 - All edge screws M5; block pitch 85, as `Type_0_v3`; heights as D-218.
 - Every screw modelled: no interference in 49 bodies; every screw reaches its thread; key access and fitting order recorded.
 
-**Left:** the owner confirms 4 build calls (no counterbores under the base, beam bolts at X ±25 with plain holes, open nut notch, side-screw rows), then a check against the tub and Y BF12 in `Type_0_v3`, the sensor bracket, prices.
+STEP: `cad/v2/out/y_roller_10.step`.
 
-**Exact next step:** the owner saves the document as `y-roller-10` and confirms the 4 calls in task 23.
+**Left:** the owner confirms 6 build calls (listed in task 23), key access to the 4 end-plate screws from below is not verified, then a check against the tub and Y BF12 in `Type_0_v3`, the sensor bracket, prices.
+
+**Exact next step:** the owner saves the document as `y-roller-10` and confirms the 6 calls in task 23.
 
 ## 00000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller holes and cut-outs fixed (D-222 … D-225)
 **Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
