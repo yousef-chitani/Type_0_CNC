@@ -2,6 +2,15 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller dropped; task 24 fixture plate opened (D-229 to D-232)
+- **D-229:** the plate Y roller (task 23, `mod-y-roller` and `y-roller-10`) was a failed experiment. `Type_0_v3` keeps the PrintNC tube Y rollers; D-218 to D-228 are void, the LiMo nut housings (M07) stay.
+- **Task 24** (`docs/tasks/24-fixture-plate.md`): front slot through the cast tub floor for parts clamped upright (D-230); plate stays 6082 460 x 330 x 25 with M6 on a 50 grid plus dowel holes (D-231); plate held by cast-in fixings (D-232). Plate first, then the slot; the bench hole waits.
+- Nothing changed in Fusion or `bom.csv`.
+
+**Left:** plate position, grid margins, dowels, cast-in fixing type and places, hold-down screws; then the slot size; then the bench.
+
+**Exact next step:** measure in `Type_0_v3` where the spindle reaches at the ends of X and Y travel, propose the plate position, and ask the owner (task 24, open item 1).
+
 ## 0000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: `mod-y-roller` front plate into the side plates (D-228)
 **Done in Fusion `mod-y-roller`, not saved: the owner saves.** The open document was its saved state, without D-221 … D-225; the owner chose to work from it. Details: `docs/tasks/23-plate-y-roller.md`, section "Front plate into the side plates".
 - Front and back plates sit on the bottom plate (Z 45); held by M5 through the side plates into tapped edge holes at Z 70, 87, 128, 150. Nothing bolts them to the bottom plate.

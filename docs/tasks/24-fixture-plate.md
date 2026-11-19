@@ -17,8 +17,8 @@
 1. ~~Plate position~~ **done (D-233): X ±230, Y -37 to 293, top Z 70.** Measured 19 Nov: spindle axis X -222.5, Y 292 at joint zero; Y slider (`Slider 273`, +Y) 0 to -385, X slider (`Slider 275`, -X) 0 to -430; reach X -222.5 to 207.5, Y -93 to 292. Front = -Y (Y motors at Y 638 to 650).
 2. ~~Grid~~ **done (D-234): 9 x 6 M6, X -200 to 200, Y 3 to 253.**
 3. Dowels: **4 x Ø8 H7 (D-234).** Proposed places, on half-grid points clear of a centre slot: (X ±175, Y 28) front, (X ±175, Y 228) back, 350 x 200 apart. **Confirmed (D-235).**
-4. Cast-in fixings: **8 x M8 threaded steel inserts (D-235).** Still open: the insert part (price by curl), its length in the 60 floor, places (half-grid points near the plate edges, missing grid holes, dowels and the slot), how each is held on the channel core.
-5. Hold-down: **8 x M8 socket caps, counterbored (D-235)**; length and part follow the insert.
+4. ~~Cast-in fixings~~ **done (D-236, D-237): 8 x M8 x 24 DIN 6334 A2 hex connector nuts (B&Q, SIMFIX, £7.52 for 10), cast flush (Z 45 to 21), bolted to the channel core, D-200 prep with a short M8 screw in the back end. Places (X ±125, Y 28), (X ±175, Y 128), (X ±125, Y 228), (X ±25, Y 228).** Slot limit from these: X ±107.5, ending at Y 210 or nearer the front.
+5. Hold-down: **8 x M8 socket caps, counterbored (D-235)**, steel not A2 (D-237). Still open: length (plate 25, counterbore about 9, 13 to 16 into the 24 insert, so about M8 x 30), part and price; and the short M8 back screw for each insert.
 6. Then the slot: width (X), depth (Y), plate cut-out, floor strength; then the bench.
 
 ## Notes

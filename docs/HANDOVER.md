@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate inserts placed and chosen (D-236, D-237)
+- D-236: 8 cast-in M8 inserts at (X ±125, Y 28), (X ±175, Y 128), (X ±125, Y 228), (X ±25, Y 228). With 10 of EG cover these limit the front slot to X ±107.5 (215 wide), ending at Y 210 or nearer the front.
+- D-237: M8 x 24 DIN 6334 A2 hex connector nuts, 10 pack, £7.52 (B&Q marketplace, SIMFIX; delivery charge only at checkout). Cast flush (Z 45 to 21), bolted to the channel core, D-200 prep with a short M8 back screw. Hold-down screws steel, not A2. Screwfix and RS blocked curl.
+- `bom.csv` X15 added; Phase 1 £3,993.00, £207.00 left. Nothing changed in Fusion.
+
+**Left:** hold-down screw length and part (about M8 x 30, steel) and the back plug screw (item 5); model the plate, inserts and holes in `Type_0_v3`; then the slot (item 6); then the bench.
+
+**Exact next step:** propose the hold-down screw (steel M8 socket cap, length from plate 25, counterbore about 9, 13 to 16 into the insert) and the back plug screw, priced by curl, and ask the owner (task 24, item 5).
+
 ## 000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate placed and specified (D-233 to D-235)
 Measured in `Type_0_v3` (read only, nothing changed): spindle axis reaches X -222.5 to 207.5, Y -93 to 292; front = -Y; tub floor front Y -37.
 - D-233: plate X ±230, Y -37 to 293 (front flush with the floor front), top Z 70.
@@ -16,15 +25,6 @@ Details: `docs/tasks/24-fixture-plate.md`.
 **Left:** insert part, length and places; model the plate and inserts in Fusion; then the slot (width, depth, floor strength); then the bench.
 
 **Exact next step:** propose the 8 insert places (half-grid points near the plate edges, clear of the grid, dowels and slot) and an M8 insert part priced by curl, and ask the owner (task 24, item 4).
-
-## 00000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller dropped; task 24 fixture plate opened (D-229 to D-232)
-- **D-229:** the plate Y roller (task 23, `mod-y-roller` and `y-roller-10`) was a failed experiment. `Type_0_v3` keeps the PrintNC tube Y rollers; D-218 to D-228 are void, the LiMo nut housings (M07) stay.
-- **Task 24** (`docs/tasks/24-fixture-plate.md`): front slot through the cast tub floor for parts clamped upright (D-230); plate stays 6082 460 x 330 x 25 with M6 on a 50 grid plus dowel holes (D-231); plate held by cast-in fixings (D-232). Plate first, then the slot; the bench hole waits.
-- Nothing changed in Fusion or `bom.csv`.
-
-**Left:** plate position, grid margins, dowels, cast-in fixing type and places, hold-down screws; then the slot size; then the bench.
-
-**Exact next step:** measure in `Type_0_v3` where the spindle reaches at the ends of X and Y travel, propose the plate position, and ask the owner (task 24, open item 1).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
