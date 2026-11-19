@@ -6,6 +6,27 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: spindle lowered 5 (D-214); real HGR20 rails and X HGH20CA blocks (D-215)
+
+**Done in `Type_0_v3` and saved. Timeline 1434.**
+- **Spindle 5 lower** (`Position96`): the clamp now covers 43 to 103 from the front face (allowed 42 to 162). Nose Z 170 at the shown position, so nose travel is Z 95 to 245.
+- **Real HGR20 section on Y, Y2 and both X rails** (`HGR20 real section` base features in `Y HGR20`, `Y2 HGR20` and `X HGR20`). Copied from the Z rail section: 17.5 high, Ø6 through with Ø9.5 counterbore, 60 pitch. Same lengths and hole positions as before (Y 550, holes 34.5 / 35.5 from the ends; X 600, E 30). The 18-high stand-in bodies are hidden, not deleted.
+- **X blocks: 4 x `hgh20ca_1` (:6 to :9)** at X -265 and -180, Y 505, faces Z 355 (top, on `XRollers`) and Z 175 (bottom, on `XRoller Bottom:1`), each held by an as-built rigid joint. `X HGW20CC` and `X HGW20CC(Mirror)` are hidden.
+- **Screws:** `M5x8 X top block screws` (heads inside the tube on the 3 mm bottom wall) and `M5x10 X bottom block screws` (heads under the 6 mm angle flange), 8 each on 32 x 36, jointed to their parts.
+- **Holes:** 8 x Ø5.5 cut through the tube bottom wall and through the angle flange (`HGH20CA block holes 5.5 (X top / X bottom)`).
+- Ball screws unchanged: they already match M05 (X 700, Y 650 x 2, Z 350, DFU1605 vendor nuts, vendor BK12/BF12).
+
+**Checked:** no clash between the 28 new or changed bodies and the 96 bodies around them. This closes the 700 mm3 block-to-rail overlap and the X nut clash expected in D-212. All new timeline items are healthy.
+
+**Found / left:**
+1. **`XRoller Bottom` is one component used twice**, so the 8 new Ø5.5 holes are also in the top angle's flange (`XRoller Bottom:2`), where nothing uses them. Make the top angle its own component if the owner wants them gone.
+2. **Old HGW20CC holes are not filled** in the tube bottom wall or the angle flange (on Y they were, D-212). The HGW and HGH holes do not overlap.
+3. **No key-access holes for the X top screws.** The top angle (D-209) covers the tube's top wall, so the M5 x 8 heads inside the tube may need a different way in. Owner to choose.
+4. The Y block screw / M5 nut clash from D-212 is still open (owner to choose the screw).
+5. Rail fixing bolts (M5 x 20, X03) are not modelled.
+
+**Exact next step:** owner answers items 1 to 3 and the D-212 screw choice. Then couplings, sensors, clean-up and STEP files.
+
 ## 000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: Jianken JGL-80 vendor STEP replaces the spindle stand-in (D-213)
 
 **Done in `Type_0_v3` and saved. Timeline 1412.**
@@ -20,33 +41,6 @@
 1. **Clamp sits 4 below the clamping range.** The drawing allows clamping 42 to 162 from the front face. The clamp stand-in covers 38 to 98. Move the clamp up at least 4 (or the spindle down) when the real clamp is modelled.
 2. **Nose length.** The STEP nose is 32 past the front face, the drawing says 45. The extra 13 is likely the ER16 nut. The nose tip in the model is the STEP's, not the drawing's.
 3. **Rear clearance is fine.** The body reaches about 88 higher than the stand-in, but the whole spindle is at Y 336 or less and every Z fixed part (rails, screw, mount, motor) is at Y 384 or more, so no Z position can clash.
-
-## 00000000000000000000000000000000000000000000000000000000. 18 Nov 2026: Y and Y2 blocks swapped to HGH20CA (D-212), X not done
-
-**Done in `Type_0_v3` and saved. Timeline 1409.**
-- `YRoller` and `YRoller(Mirror)`: old HGW20CC holes filled, 8 x Ø5.5 block holes and 4 x Ø6.5 key access holes added, as `D-212` features at the end of the timeline.
-- 4 x `hgh20ca_1` blocks at Y 427.5 and 512.5, top face Z 155, and `M5x8 Y block screws` and `M5x8 Y2 block screws` (16 simple screws), each held to its roller by an as-built rigid joint.
-- The Y and Y2 HGW20CC blocks, their grease fittings and their 16 M6 x 12 block screws are hidden, not deleted (owner's choice: hidden parts stay). The other M6 x 12 screws in those groups stay visible.
-
-**Checked:** no baseline body moved. Timeline health is the same as before (5 warnings, 1 error, all old). Only the 24 bodies listed above were hidden. The tube volumes each rose by the 226 mm3 the hole changes predict.
-
-**Found:**
-1. **Clash, not fixed: 4 M5 x 8 screw heads hit the `M5 Nut (2)` nuts by 0.9 in Z**, at Y 405.9, X ±335.7 and ±364.3. A standard head tops out at Z 163 and the nut starts at Z 162.1. A low head screw (DIN 7984, 3.5 high) would top out at Z 161.5 and clear it. Owner to choose.
-2. **Each new block overlaps its Y rail by about 700 mm3, not fixed.** The X and Y rails are still simplified PrintNC stand-ins, 18 high against 17.5 for the real section used on Z. Fit the real HGR20 section on Y, Y2 and X, then re-run the clash check. Until then the block-to-rail fit is unproven.
-2a. **Fit the block screws before the M5 rods.** The rods pass 1.15 above every screw head and block the key access holes once they are in.
-3. **Do not edit `YRoller to Carriages` or `Xroller Carriage Holes`.** Changing them breaks 189 joints. Add end-of-timeline features instead.
-4. **Roller frames differ from world.** Place new parts at root in world coordinates and join them as built.
-
-**Left, in order:**
-0. Record a new baseline at timeline 1409, with visibility included, before touching X. The old one was in the session scratchpad.
-1. X axis swap: expect the same nut clash at one end of X. `XRollers` (top blocks, Z 355) and `XRoller Bottom` (bottom blocks, Z 175), block centres X -265 and -180, Y 505. `XRoller Bottom` is used twice, so check the top angle before changing it. Screws M5 x 8 in the tube, M5 x 10 in the bottom angle.
-2. Tube access holes, then real D25L35 couplings and M12 sensors.
-3. Clean names and materials, and group the 4 new `hgh20ca_1` blocks now at the root. Then STEP files, hole tables and the parts list (owner chose STEP plus hole tables).
-4. `docs/bom.csv`: M5 x 8 and M5 x 10 screws are not listed or priced.
-
-**Blocked on suppliers:** spindle, spindle clamp, nut housings, nut flats, HM12-60 size and the Z screw end.
-
-**Exact next step:** the owner chooses the screw for the nut clash. Then, in a new session, do the X axis swap with end-of-timeline features.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
