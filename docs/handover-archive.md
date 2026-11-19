@@ -2,6 +2,27 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: spindle lowered 5 (D-214); real HGR20 rails and X HGH20CA blocks (D-215)
+
+**Done in `Type_0_v3` and saved. Timeline 1434.**
+- **Spindle 5 lower** (`Position96`): the clamp now covers 43 to 103 from the front face (allowed 42 to 162). Nose Z 170 at the shown position, so nose travel is Z 95 to 245.
+- **Real HGR20 section on Y, Y2 and both X rails** (`HGR20 real section` base features in `Y HGR20`, `Y2 HGR20` and `X HGR20`). Copied from the Z rail section: 17.5 high, Ø6 through with Ø9.5 counterbore, 60 pitch. Same lengths and hole positions as before (Y 550, holes 34.5 / 35.5 from the ends; X 600, E 30). The 18-high stand-in bodies are hidden, not deleted.
+- **X blocks: 4 x `hgh20ca_1` (:6 to :9)** at X -265 and -180, Y 505, faces Z 355 (top, on `XRollers`) and Z 175 (bottom, on `XRoller Bottom:1`), each held by an as-built rigid joint. `X HGW20CC` and `X HGW20CC(Mirror)` are hidden.
+- **Screws:** `M5x8 X top block screws` (heads inside the tube on the 3 mm bottom wall) and `M5x10 X bottom block screws` (heads under the 6 mm angle flange), 8 each on 32 x 36, jointed to their parts.
+- **Holes:** 8 x Ø5.5 cut through the tube bottom wall and through the angle flange (`HGH20CA block holes 5.5 (X top / X bottom)`).
+- Ball screws unchanged: they already match M05 (X 700, Y 650 x 2, Z 350, DFU1605 vendor nuts, vendor BK12/BF12).
+
+**Checked:** no clash between the 28 new or changed bodies and the 96 bodies around them. This closes the 700 mm3 block-to-rail overlap and the X nut clash expected in D-212. All new timeline items are healthy.
+
+**Found / left:**
+1. **`XRoller Bottom` is one component used twice**, so the 8 new Ø5.5 holes are also in the top angle's flange (`XRoller Bottom:2`), where nothing uses them. Make the top angle its own component if the owner wants them gone.
+2. **Old HGW20CC holes are not filled** in the tube bottom wall or the angle flange (on Y they were, D-212). The HGW and HGH holes do not overlap.
+3. **No key-access holes for the X top screws.** The top angle (D-209) covers the tube's top wall, so the M5 x 8 heads inside the tube may need a different way in. Owner to choose.
+4. The Y block screw / M5 nut clash from D-212 is still open (owner to choose the screw).
+5. Rail fixing bolts (M5 x 20, X03) are not modelled.
+
+**Exact next step:** owner answers items 1 to 3 and the D-212 screw choice. Then couplings, sensors, clean-up and STEP files.
+
 ## 000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: Jianken JGL-80 vendor STEP replaces the spindle stand-in (D-213)
 
 **Done in `Type_0_v3` and saved. Timeline 1412.**

@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: the 2 open items sketched
+
+**Done:** `cad/v2/open_items_sketch.py` draws both items from numbers measured in `Type_0_v3` (model not changed). Picture `cad/v2/out/open_items_sketch.png`, note `docs/open-items-sketch.md`.
+1. **Y block screw / M5 nut clash (D-212):** options DIN 912 (clash 0.9), DIN 7984 low head (clears by 0.6, Claude's pick), ISO 7380 button head (clears by 1.35). Not priced.
+2. **X top block screw access (D-215):** **new finding:** the tie rods inside the tube (1.1 above the heads) and, over screws 7 and 8, the ball nut block a key from above, so holes alone do not fix it. Options: screw-first assembly order with an L-key through the open tube ends (Claude's pick), holes through the angle and top wall (help only with the rods out), or back to HGW20CC (undoes D-215).
+
+**Left:** the owner chooses both. Still open: old HGW20CC holes not filled on X; rail fixing bolts not modelled; LiMo nut flats not confirmed.
+
+**Exact next step:** the owner answers items 1 and 2 from the sketch. Record them as D-218 and D-219 and change the model. Then couplings, sensors, clean-up and STEP files.
+
 ## 00000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: top angle split off (D-216); X and Y nut flats (D-217)
 
 **Done in `Type_0_v3` and saved. Timeline 1439.**
@@ -21,27 +31,6 @@
 4. Rail fixing bolts (M5 x 20, X03) not modelled. LiMo has still not confirmed that its nuts have the flats.
 
 **Exact next step:** owner answers items 2 and 3. Then couplings, sensors, clean-up and STEP files.
-
-## 0000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: spindle lowered 5 (D-214); real HGR20 rails and X HGH20CA blocks (D-215)
-
-**Done in `Type_0_v3` and saved. Timeline 1434.**
-- **Spindle 5 lower** (`Position96`): the clamp now covers 43 to 103 from the front face (allowed 42 to 162). Nose Z 170 at the shown position, so nose travel is Z 95 to 245.
-- **Real HGR20 section on Y, Y2 and both X rails** (`HGR20 real section` base features in `Y HGR20`, `Y2 HGR20` and `X HGR20`). Copied from the Z rail section: 17.5 high, Ø6 through with Ø9.5 counterbore, 60 pitch. Same lengths and hole positions as before (Y 550, holes 34.5 / 35.5 from the ends; X 600, E 30). The 18-high stand-in bodies are hidden, not deleted.
-- **X blocks: 4 x `hgh20ca_1` (:6 to :9)** at X -265 and -180, Y 505, faces Z 355 (top, on `XRollers`) and Z 175 (bottom, on `XRoller Bottom:1`), each held by an as-built rigid joint. `X HGW20CC` and `X HGW20CC(Mirror)` are hidden.
-- **Screws:** `M5x8 X top block screws` (heads inside the tube on the 3 mm bottom wall) and `M5x10 X bottom block screws` (heads under the 6 mm angle flange), 8 each on 32 x 36, jointed to their parts.
-- **Holes:** 8 x Ø5.5 cut through the tube bottom wall and through the angle flange (`HGH20CA block holes 5.5 (X top / X bottom)`).
-- Ball screws unchanged: they already match M05 (X 700, Y 650 x 2, Z 350, DFU1605 vendor nuts, vendor BK12/BF12).
-
-**Checked:** no clash between the 28 new or changed bodies and the 96 bodies around them. This closes the 700 mm3 block-to-rail overlap and the X nut clash expected in D-212. All new timeline items are healthy.
-
-**Found / left:**
-1. **`XRoller Bottom` is one component used twice**, so the 8 new Ø5.5 holes are also in the top angle's flange (`XRoller Bottom:2`), where nothing uses them. Make the top angle its own component if the owner wants them gone.
-2. **Old HGW20CC holes are not filled** in the tube bottom wall or the angle flange (on Y they were, D-212). The HGW and HGH holes do not overlap.
-3. **No key-access holes for the X top screws.** The top angle (D-209) covers the tube's top wall, so the M5 x 8 heads inside the tube may need a different way in. Owner to choose.
-4. The Y block screw / M5 nut clash from D-212 is still open (owner to choose the screw).
-5. Rail fixing bolts (M5 x 20, X03) are not modelled.
-
-**Exact next step:** owner answers items 1 to 3 and the D-212 screw choice. Then couplings, sensors, clean-up and STEP files.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
