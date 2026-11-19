@@ -6,6 +6,17 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller holes and cut-outs fixed (D-222 … D-225)
+**Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
+- Bottom plate: end slots gone (D-221), counterbores 7.5 deep, cut back to the front plate face (D-223), Ø32 trough only under the nut (D-224), cross holes M6 tapped 12 deep (D-225).
+- Front and back plates sit on Z 45; nut flange on its 4 upper bolts (D-222); side-screw rows moved to Z 82, 118, 140, 167, clear of the flange and beam bolts, tapped M5.
+- Nut body corrected to Ø28 (supplier table). Unused front side-plate hole filled.
+- No interference between bodies; no face under 3 mm² on any plate.
+
+**Left:** the side plate's Ø9 counterbores leave 0.5 mm to the beam opening (was the same before): owner to choose. Screws and plates not priced.
+
+**Exact next step:** the owner checks and saves `mod-y-roller`, and answers task 23 item 1.
+
 ## 0000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller fitted to Type 0 (D-218 … D-221), slots left
 **Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
 - The open plate Y roller now takes the HGR20 rail (17.5), HGH20CA blocks (M5 on 32 x 36), the 120 x 120 x 8 beam (R16), our heights (beam bottom 50 and screw 25 above the block top), a 75 wide body, the 100-long DFU1605 double nut on 6 x M5 tapped holes (D-219), and an M12 sensor mount.
@@ -17,16 +28,6 @@
 **Left:** drop the slots, fix the `sideholes` projection warning, check the sensor's 70 overhang, price the plates and M5 x 12, then fit the roller into `Type_0_v3`. The other 19 Nov entries (below) are about `Type_0_v3`, not this roller.
 
 **Exact next step:** the owner checks and saves `mod-y-roller`. Then a new session does task 23 step 1 (drop the slots).
-
-## 000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: the 2 open items sketched
-
-**Done:** `cad/v2/open_items_sketch.py` draws both items from numbers measured in `Type_0_v3` (model not changed). Picture `cad/v2/out/open_items_sketch.png`, note `docs/open-items-sketch.md`.
-1. **Y block screw / M5 nut clash (D-212):** options DIN 912 (clash 0.9), DIN 7984 low head (clears by 0.6, Claude's pick), ISO 7380 button head (clears by 1.35). Not priced.
-2. **X top block screw access (D-215):** **new finding:** the tie rods inside the tube (1.1 above the heads) and, over screws 7 and 8, the ball nut block a key from above, so holes alone do not fix it. Options: screw-first assembly order with an L-key through the open tube ends (Claude's pick), holes through the angle and top wall (help only with the rods out), or back to HGW20CC (undoes D-215).
-
-**Left:** the owner chooses both. Still open: old HGW20CC holes not filled on X; rail fixing bolts not modelled; LiMo nut flats not confirmed.
-
-**Exact next step:** the owner answers items 1 and 2 from the sketch. Record them as D-218 and D-219 and change the model. Then couplings, sensors, clean-up and STEP files.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

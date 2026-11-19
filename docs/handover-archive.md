@@ -2,6 +2,16 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: the 2 open items sketched
+
+**Done:** `cad/v2/open_items_sketch.py` draws both items from numbers measured in `Type_0_v3` (model not changed). Picture `cad/v2/out/open_items_sketch.png`, note `docs/open-items-sketch.md`.
+1. **Y block screw / M5 nut clash (D-212):** options DIN 912 (clash 0.9), DIN 7984 low head (clears by 0.6, Claude's pick), ISO 7380 button head (clears by 1.35). Not priced.
+2. **X top block screw access (D-215):** **new finding:** the tie rods inside the tube (1.1 above the heads) and, over screws 7 and 8, the ball nut block a key from above, so holes alone do not fix it. Options: screw-first assembly order with an L-key through the open tube ends (Claude's pick), holes through the angle and top wall (help only with the rods out), or back to HGW20CC (undoes D-215).
+
+**Left:** the owner chooses both. Still open: old HGW20CC holes not filled on X; rail fixing bolts not modelled; LiMo nut flats not confirmed.
+
+**Exact next step:** the owner answers items 1 and 2 from the sketch. Record them as D-218 and D-219 and change the model. Then couplings, sensors, clean-up and STEP files.
+
 ## 00000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: top angle split off (D-216); X and Y nut flats (D-217)
 
 **Done in `Type_0_v3` and saved. Timeline 1439.**
