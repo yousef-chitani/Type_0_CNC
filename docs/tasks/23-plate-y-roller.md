@@ -4,6 +4,38 @@
 
 The owner's open plate Y roller is the Fusion document `mod-y-roller` (project "CNC mill"). It replaces the PrintNC tube Y roller later; it is not in `Type_0_v3` yet.
 
+## Remake: `y-roller-10` (D-226, D-227, 19 Nov 2026)
+New Fusion document `y-roller-10` (project "CNC mill"). `mod-y-roller` below is history.
+
+**Frame:** X across (rail centre 0, +X toward the machine), Y along the rail (roller centre 0, front = −Y, nut end), Z up (rail base 0). Fixed heights (D-218): block top 30, screw axis 55, beam bottom 80.
+
+| Part (qty) | Size | Place |
+|---|---|---|
+| Base plate (1) | 75 x 140 x 10 | X ±37.5, Y ±70, Z 30 … 40 |
+| Side plate (2, identical) | 120 x 40 x 10 | X ±27.5 … ±37.5, Y ±60, Z 40 … 80; beam sits on top |
+| End plate (2, identical) | 75 x 137 x 10 | X ±37.5, Y ±60 … ±70, Z 40 … 177; Ø29 notch on the screw axis, open at the bottom |
+
+**Holes** (all M5 tapped Ø4.2, clearance Ø5.5, head counterbore Ø10):
+- Base, block screws: 8 x M5 x 10 at X ±16, Y ±24.5 and ±60.5, counterbore 5.5 deep from the top (5.5 in the 6-deep block thread). Fit before the end plates.
+- Base, from below: M5 x 16 into the side plates (X ±32.5, Y 0 and ±40) and the end plates (X ±32.5, Y ±65), plain Ø5.5 holes, heads under the plate beside the block (Z 25 … 30), tapped 10 in the plates (6 engaged). No counterbore: a Ø10 counterbore at X ±32.5 breaks out at the plate edge.
+- End plate into the side-plate ends: M5 x 20 at X ±32.5, Z 60 and 72, tapped 12 in the side plate.
+- Nut flange (front plate; back plate has the same holes, unused): M5 tapped through at (X ±19, Z 55) and (X ±13.4, Z 68.4), 4 x M5 x 20 (D-222).
+- Beam: M6 clearance Ø6.5 at X ±25, Z 102 and 155, tapped M6 in the beam wall.
+- Sensor mount: M6 tapped Ø5.0 at X 0, Z 102 and 127.5.
+
+**Built (19 Nov 2026, document `Untitled`, not saved: the owner saves it as `y-roller-10` in "CNC mill").** Components: Base plate, Side plate (2 occurrences of one component), End plate (2 occurrences of one component), Hardware (HGR20 rail, 2 x HGH20CA with 6-deep M5 threads, beam SHS 120 x 120 x 8 R16 with M6 taps, DFU1605 double nut Ø28 x 100 with flange Ø48 / 40 flats, ball screw Ø16), Screws (46 bodies: head, shank, real length). The sensor bracket is not modelled.
+
+**Checked:**
+- Interference across all 49 bodies, screws included: none. All features healthy.
+- Every screw reaches its thread: block screws 5.5 into the 6-deep block thread; base screws 6 into side/end plates; end-to-side screws 10; flange screws 10 (tapped through); beam M6 6 into the 8 wall.
+- Walls: hole to hole at least 7.1 in the side plates and 9.3 in the base; edge holes 2.9 from the plate faces (M5 tapped in 10). End plate: flange tapped holes 2.35 from the Ø29 nut bore (fixed by the DIN flange, PCD 38); side-screw clearance holes 2.25 from the plate's side edge.
+- Key access: the 8 block screws are covered by the nut, beam and end plates, so fit them first. Order: block screws, side plates (from below), end plates (from below, then 4 screws into the side-plate ends), nut through the front notch, flange screws, beam on top, beam bolts. All other heads are clear along their axis.
+
+**Calls made in the build (owner to confirm):** base screws without counterbores (above); beam bolts at X ±25 with plain Ø6.5 holes (heads proud 6, no thin counterbore floor); the Ø29 nut bore is an open notch to the plate bottom (a closed bore leaves 0.5 mm); end-to-side screw rows at Z 60 and 72, clear of the base screws.
+
+**Left (new roller):** owner saves; check the heads under the base plate and the end-plate heads against the tub and the Y BF12 in `Type_0_v3`; model the sensor bracket; price the plates and M5 x 10 (8), M5 x 16 (10), M5 x 20 (12), M6 x 16 (8); then fit into `Type_0_v3`.
+
+
 ## Done (19 Nov 2026, not saved: the owner saves)
 - Parameters: `gantry_width` 120, `gantry_height` 120, `steel_radius` 16, `gantry_rail_distance` 62.5 (d38 = it − 12.5), `ballscrew_rail_distance` 37.5, `ballscrew_bolthole` 4.2 (M5 tap). Rail extrude d13 17.5.
 - Blocks: HGH20CA, d1 44, d5 32/2, d8 36, d6 5.5; bottom plate counterbore d25 10; plate edge offsets d23, d24 11.5 (75 wide). Components renamed `HGH20CA`, `HGR20 rail`.

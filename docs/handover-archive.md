@@ -2,6 +2,18 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller fitted to Type 0 (D-218 … D-221), slots left
+**Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
+- The open plate Y roller now takes the HGR20 rail (17.5), HGH20CA blocks (M5 on 32 x 36), the 120 x 120 x 8 beam (R16), our heights (beam bottom 50 and screw 25 above the block top), a 75 wide body, the 100-long DFU1605 double nut on 6 x M5 tapped holes (D-219), and an M12 sensor mount.
+- Beam centred on the roller (D-220, amends D-177 for this roller).
+- No clash between any bodies.
+
+**Found, not fixed:** HGH20CA blocks take screws from above only, and the front and back plates sit in 10-deep slots over the outer block screws. The owner chose to drop the slots (D-221): plates on top, block screws first, M5 x 12 in 7.5-deep counterbores.
+
+**Left:** drop the slots, fix the `sideholes` projection warning, check the sensor's 70 overhang, price the plates and M5 x 12, then fit the roller into `Type_0_v3`. The other 19 Nov entries (below) are about `Type_0_v3`, not this roller.
+
+**Exact next step:** the owner checks and saves `mod-y-roller`. Then a new session does task 23 step 1 (drop the slots).
+
 ## 000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: the 2 open items sketched
 
 **Done:** `cad/v2/open_items_sketch.py` draws both items from numbers measured in `Type_0_v3` (model not changed). Picture `cad/v2/out/open_items_sketch.png`, note `docs/open-items-sketch.md`.

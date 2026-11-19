@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: Y roller remade, 10 mm box (D-226, D-227)
+**Built in a new Fusion document (`Untitled`, not saved: the owner saves it as `y-roller-10`).** Details: `docs/tasks/23-plate-y-roller.md`, section "Remake".
+- All plates 10 mm: base 75 x 140, 2 low side plates 120 x 40 that the beam sits on, 2 full-width end plates 75 x 137. Front = back and left = right (identical parts); the same set builds Y2.
+- All edge screws M5; block pitch 85, as `Type_0_v3`; heights as D-218.
+- Every screw modelled: no interference in 49 bodies; every screw reaches its thread; key access and fitting order recorded.
+
+**Left:** the owner confirms 4 build calls (no counterbores under the base, beam bolts at X ±25 with plain holes, open nut notch, side-screw rows), then a check against the tub and Y BF12 in `Type_0_v3`, the sensor bracket, prices.
+
+**Exact next step:** the owner saves the document as `y-roller-10` and confirms the 4 calls in task 23.
+
 ## 00000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller holes and cut-outs fixed (D-222 … D-225)
 **Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
 - Bottom plate: end slots gone (D-221), counterbores 7.5 deep, cut back to the front plate face (D-223), Ø32 trough only under the nut (D-224), cross holes M6 tapped 12 deep (D-225).
@@ -16,18 +26,6 @@
 **Left:** the side plate's Ø9 counterbores leave 0.5 mm to the beam opening (was the same before): owner to choose. Screws and plates not priced.
 
 **Exact next step:** the owner checks and saves `mod-y-roller`, and answers task 23 item 1.
-
-## 0000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller fitted to Type 0 (D-218 … D-221), slots left
-**Done in Fusion `mod-y-roller`, not saved. The owner saves.** Details: `docs/tasks/23-plate-y-roller.md`.
-- The open plate Y roller now takes the HGR20 rail (17.5), HGH20CA blocks (M5 on 32 x 36), the 120 x 120 x 8 beam (R16), our heights (beam bottom 50 and screw 25 above the block top), a 75 wide body, the 100-long DFU1605 double nut on 6 x M5 tapped holes (D-219), and an M12 sensor mount.
-- Beam centred on the roller (D-220, amends D-177 for this roller).
-- No clash between any bodies.
-
-**Found, not fixed:** HGH20CA blocks take screws from above only, and the front and back plates sit in 10-deep slots over the outer block screws. The owner chose to drop the slots (D-221): plates on top, block screws first, M5 x 12 in 7.5-deep counterbores.
-
-**Left:** drop the slots, fix the `sideholes` projection warning, check the sensor's 70 overhang, price the plates and M5 x 12, then fit the roller into `Type_0_v3`. The other 19 Nov entries (below) are about `Type_0_v3`, not this roller.
-
-**Exact next step:** the owner checks and saves `mod-y-roller`. Then a new session does task 23 step 1 (drop the slots).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
