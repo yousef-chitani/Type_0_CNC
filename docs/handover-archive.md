@@ -2,6 +2,21 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: Jianken JGL-80 vendor STEP replaces the spindle stand-in (D-213)
+
+**Done in `Type_0_v3` and saved. Timeline 1412.**
+- Jianken's STEP (`cad/vendor/jianken_jgl80_2.2r24.step`) imported into `Z Moving Parts` as `Jianken JGL-80-2.2R24 spindle (vendor STEP)`, held by a position snapshot, so it rides the Z slider.
+- Same axis as the stand-in (X -222.5, Y 292) and the same nose tip (Z 175 at the shown Z position). Body front face Z 207, rear face Z 526, fittings to Z 545.
+- The stand-in body is removed with `RemoveBody-Jianken JGL-80 stand-in, length not confirmed` (end of timeline). Sub-component names decoded from GBK to Chinese.
+- Outline drawing saved as `cad/vendor/drawings/jianken_jgl80_2.2r24_drawing.pdf`; both READMEs updated.
+
+**Checked:** no clash between the 19 spindle bodies and the 63 other Z assembly, Z fixed plate and EG tub bodies. Timeline health unchanged (the old Chamfer2 error only).
+
+**Found:**
+1. **Clamp sits 4 below the clamping range.** The drawing allows clamping 42 to 162 from the front face. The clamp stand-in covers 38 to 98. Move the clamp up at least 4 (or the spindle down) when the real clamp is modelled.
+2. **Nose length.** The STEP nose is 32 past the front face, the drawing says 45. The extra 13 is likely the ER16 nut. The nose tip in the model is the STEP's, not the drawing's.
+3. **Rear clearance is fine.** The body reaches about 88 higher than the stand-in, but the whole spindle is at Y 336 or less and every Z fixed part (rails, screw, mount, motor) is at Y 384 or more, so no Z position can clash.
+
 ## 00000000000000000000000000000000000000000000000000000000. 18 Nov 2026: Y and Y2 blocks swapped to HGH20CA (D-212), X not done
 
 **Done in `Type_0_v3` and saved. Timeline 1409.**
