@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **125 line items, 123 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **127 line items, 125 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -16,15 +16,15 @@ Full list: [bom.csv](bom.csv). **125 line items, 123 priced.** Prices were read 
 | Enclosure | 4 | 4 | £78.61 |
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
-| Fixings | 7 | 7 | £106.25 |
-| **All** | **125** | **123** | **£5,416.87** |
+| Fixings | 9 | 9 | £136.94 |
+| **All** | **127** | **125** | **£5,447.56** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,416.87**. Not priced yet: G01, G03.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,447.56**. Not priced yet: G01, G03.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,993.00 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £4,023.69 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
 
 Lines still TO PRICE: see the list above.
@@ -174,7 +174,9 @@ Lines still TO PRICE: see the list above.
 | X12 | 1 | Y roller spacer screws M6 x 30 socket cap | 1 pack | Drenky A2 (304) DIN 912, fully threaded, pack of 20. 6 needed, through the Y roller spacers. The 4 top holes of the Z fixed plate now take M6 x 20 from X03 (D-209) | [product](https://www.amazon.co.uk/dp/B0D94BDYHP) | £6.99 inc VAT, free delivery only on orders over £35 (Amazon, seller Drenky-EU, in stock) | 6.99 | Delivery charge below £35 not shown on the saved page |
 | X13 | 1 | Riser bolts M6 x 25 socket cap | 1 pack | Easyfix A2 stainless, pack of 50. 8 needed: risers at Y -6 and Y 561 | [product](https://www.screwfix.com/p/easyfix-cap-head-socket-screws-a2-stainless-steel-m6-x-25mm-50-pack/8655t) | £7.59 inc VAT (Screwfix 8655T, in stock, page saved by the owner 18 Nov 2026) | 7.59 | The 6 bolts at Y -23 and Y 629 are M6 x 35: X14 |
 | X14 | 1 | Riser bolts M6 x 35 socket cap | 1 pack | Drenky A2 (304) DIN 912, fully threaded, pack of 20. 6 needed: risers at Y -23 and Y 629 | [product](https://www.amazon.co.uk/dp/B0D94B9M2H) | £7.49 inc VAT, free delivery only on orders over £35 (Amazon, seller Drenky-EU, only 7 left, page saved by the owner 18 Nov 2026) | 7.49 | Delivery charge below £35 not shown on the saved page |
-| X15 | 1 | Fixture plate cast-in inserts M8 x 24 hex connector nut | 1 pack | DIN 6334, A2 stainless, 13 AF, pack of 10. 8 needed, cast flush in the tub floor top under the fixture plate (D-236), 2 spares | [product](https://www.diy.com/departments/m8-x-24-hex-rod-connector-nut-10-pack-din-6334-a2-stainless-steel/5064120126144_BQ.prd) | £7.52 inc VAT (B&Q marketplace, seller SIMFIX, in stock, live page) | 7.52 | Delivery charge shown only at checkout. Hold-down screws and back plug screws not yet chosen |
+| X15 | 1 | Fixture plate cast-in inserts M8 x 24 hex connector nut | 1 pack | DIN 6334, A2 stainless, 13 AF, pack of 10. 8 needed, cast flush in the tub floor top under the fixture plate (D-236), 2 spares | [product](https://www.diy.com/departments/m8-x-24-hex-rod-connector-nut-10-pack-din-6334-a2-stainless-steel/5064120126144_BQ.prd) | £7.52 inc VAT (B&Q marketplace, seller SIMFIX, in stock, live page) | 7.52 | Delivery charge shown only at checkout. Hold-down screws X16, back plugs X17 |
+| X16 | 1 | Fixture plate hold-down screws M8 x 30 socket cap | 1 box | Unifix grade 12.9 DIN 912 BZP, box of 200. 8 needed, in Ø14 x 9 counterbores, 14 into the X15 inserts. Steel, not A2, so the A2 inserts do not gall (D-237) | [product](https://www.diy.com/departments/unifix-grade-12-9-socket-head-cap-screws-din-912-bzp-m8-x-30-box-of-200/5014196343327_BQ.prd) | £20.24 inc VAT (B&Q marketplace, seller Trade Hut Direct, in stock, live page) | 20.24 | Delivery charge shown only at checkout. Smaller steel packs were out of stock |
+| X17 | 1 | Insert back plugs M8 x 8 hex head set screw | 1 pack | ISO 4017 A2 stainless, pack of 10. 8 needed, epoxied into the back end of each X15 insert, head as anchor in the EG | [product](https://www.diy.com/departments/m8-x-8-hexagon-head-set-screw-10-pack-iso-4017-a2-stainless-steel/5064120052320_BQ.prd) | £10.45 inc VAT (B&Q marketplace, seller SIMFIX, in stock, live page) | 10.45 | Delivery charge shown only at checkout |
 | X05 | 1 | Steel straightedge 500 mm | 1 pcs | RS PRO 500 mm steel straight edge, 30 mm wide, DIN 874/2 | [product](https://uk.rs-online.com/web/p/rulers/8771785) | £95.89 ex VAT / £115.07 inc VAT (RS 877-1785), free delivery | 115.07 | Price check 14. Owner chose it over the Maun 1000 mm (£71.99, no stated accuracy) |
 | X10 | 1 | Engineer's square 300 mm | 1 pcs | Silverline 245025, 300 mm hardened steel, DIN 875/1 | [product](https://www.amazon.co.uk/dp/B000LFTX1G) | £9.58 inc VAT (Amazon, owner 15 Nov 2026; page says free delivery on a first order, otherwise Amazon's usual delivery) | 9.58 | Price check 15. Beat AliExpress £18.19 and Mitutoyo £74.40 (MQS). For squaring the gantry (was the portal, D-133; D-137) |
 | X06 | 1 | Feeler gauge set | 1 pcs | Hilka Pro-Craft 32-blade, 0.04–0.88 mm | [product](https://www.screwfix.com/p/hilka-pro-craft-12700132-32-blade-feeler-gauge/4406r) | £5.19 inc VAT (Screwfix 4406R) | 5.19 | Price check 14 |

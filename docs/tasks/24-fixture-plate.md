@@ -18,7 +18,7 @@
 2. ~~Grid~~ **done (D-234): 9 x 6 M6, X -200 to 200, Y 3 to 253.**
 3. Dowels: **4 x Ø8 H7 (D-234).** Proposed places, on half-grid points clear of a centre slot: (X ±175, Y 28) front, (X ±175, Y 228) back, 350 x 200 apart. **Confirmed (D-235).**
 4. ~~Cast-in fixings~~ **done (D-236, D-237): 8 x M8 x 24 DIN 6334 A2 hex connector nuts (B&Q, SIMFIX, £7.52 for 10), cast flush (Z 45 to 21), bolted to the channel core, D-200 prep with a short M8 screw in the back end. Places (X ±125, Y 28), (X ±175, Y 128), (X ±125, Y 228), (X ±25, Y 228).** Slot limit from these: X ±107.5, ending at Y 210 or nearer the front.
-5. Hold-down: **8 x M8 socket caps, counterbored (D-235)**, steel not A2 (D-237). Still open: length (plate 25, counterbore about 9, 13 to 16 into the 24 insert, so about M8 x 30), part and price; and the short M8 back screw for each insert.
+5. ~~Hold-down~~ **done (D-238, D-239): 8 x M8 x 30 socket caps 12.9 zinc (Unifix, £20.24 for 200), counterbores Ø14 x 9, 14 into the insert; back plugs M8 x 8 hex A2 (£10.45 for 10), epoxied in, head as anchor.**
 6. Then the slot: width (X), depth (Y), plate cut-out, floor strength; then the bench.
 
 ## Notes

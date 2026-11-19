@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,993.00** (budget £4,200, D-127). Not priced yet: G01, G03. No eBay.
+**Phase 1 priced total: £4,023.69** (budget £4,200, D-127). Not priced yet: G01, G03. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -13,8 +13,8 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
-| Fixings | £106.25 |
-| **Total** | **£3,993.00** |
+| Fixings | £136.94 |
+| **Total** | **£4,023.69** |
 
 ## Frame
 
@@ -158,3 +158,5 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X13 | Riser bolts M6 x 25 socket cap | 1 pack | £7.59 |
 | X14 | Riser bolts M6 x 35 socket cap | 1 pack | £7.49 |
 | X15 | Fixture plate cast-in inserts M8 x 24 hex connector nut | 1 pack | £7.52 |
+| X16 | Fixture plate hold-down screws M8 x 30 socket cap | 1 box | £20.24 |
+| X17 | Insert back plugs M8 x 8 hex head set screw | 1 pack | £10.45 |

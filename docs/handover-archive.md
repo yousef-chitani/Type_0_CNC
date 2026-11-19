@@ -2,6 +2,17 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate placed and specified (D-233 to D-235)
+Measured in `Type_0_v3` (read only, nothing changed): spindle axis reaches X -222.5 to 207.5, Y -93 to 292; front = -Y; tub floor front Y -37.
+- D-233: plate X ±230, Y -37 to 293 (front flush with the floor front), top Z 70.
+- D-234: 9 x 6 M6 grid on 50, X -200 to 200, Y 3 to 253; 4 x Ø8 H7 dowels.
+- D-235: dowels at (X ±175, Y 28 and 228); 8 x M8 counterbored socket caps into 8 cast-in M8 steel inserts.
+Details: `docs/tasks/24-fixture-plate.md`.
+
+**Left:** insert part, length and places; model the plate and inserts in Fusion; then the slot (width, depth, floor strength); then the bench.
+
+**Exact next step:** propose the 8 insert places (half-grid points near the plate edges, clear of the grid, dowels and slot) and an M8 insert part priced by curl, and ask the owner (task 24, item 4).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: plate Y roller dropped; task 24 fixture plate opened (D-229 to D-232)
 - **D-229:** the plate Y roller (task 23, `mod-y-roller` and `y-roller-10`) was a failed experiment. `Type_0_v3` keeps the PrintNC tube Y rollers; D-218 to D-228 are void, the LiMo nut housings (M07) stay.
 - **Task 24** (`docs/tasks/24-fixture-plate.md`): front slot through the cast tub floor for parts clamped upright (D-230); plate stays 6082 460 x 330 x 25 with M6 on a 50 grid plus dowel holes (D-231); plate held by cast-in fixings (D-232). Plate first, then the slot; the bench hole waits.
