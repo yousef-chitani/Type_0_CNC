@@ -6,6 +6,17 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000. 20 Nov 2026: Phase 1 repriced after the recent changes (D-242 to D-245)
+- Checked `bom.csv` against D-159 to D-241 and the visible parts in `Type_0_v3` (read-only script, nothing changed in the model). Owner answered 5 questions.
+- **G03 dropped** (D-242): the Y rollers carry the beam. **G05 roller steel** added, unpriced (D-243): modelled X tube 120 x 50 x 3, angles 125 x 50 x 6 and braces 75 x 75 are not stock sizes. **Red PrintNC parts printed** (D-244): M12 loses the 10 mm plate, -£21.00. **X03** loses M12 x 120 and M10 x 30, -£39.34; **X18** lists 90-odd model screws and 4 dowels not in the BOM, unpriced (D-245).
+- **Phase 1 priced total £3,963.35, £236.65 left** (was £4,023.69). Excludes G01, G05 and X18. No line got dearer.
+- G01: Dyfed Steels lists 120 x 120 x 8 (owner's saved pages, no prices); K I Metals live £67.05 ex VAT per about 1 m. Owner waits for Dyfed. Noted in `docs/steel-rhs-suppliers.md`.
+- Not re-checked, still flagged in their notes: M01 and M05 (priced at the 600 rail set and the 600 Y screws, LiMo 403 to curl), M12 (Aluminium Warehouse 429; both 20 mm pieces too small). The ~90 unchanged lines were not re-fetched: that is task 16 (late December). Bench and enclosure lines not re-derived for the new layout.
+
+**Left:** `docs/price-check-task-17.md`: LiMo basket changes (550 set, 650 screws, 4 couplings), Dyfed call for G01, M12 cut-to-size prices, X18 screws. Then G05 stock sizes. Model still not saved (from 19 Nov).
+
+**Exact next step:** owner does the LiMo basket and the Dyfed call in `docs/price-check-task-17.md` and reports the prices; then apply them to `bom.csv`.
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: inner rear plate bolts removed (D-241); spec gaps listed
 - Owner: remove the rear 2 bolts; Q&A chose the inner pair (X ±25, Y 228). Plate now 8 bolts: (X ±125, Y 28), (X ±175, Y 78), (X ±175, Y 178), (X ±125, Y 228).
 - `Type_0_v3`: geometry and 4 combines removed, profiles re-picked, pocket cut kept to the casting, bodies renumbered #1 to #8; 26 bodies, no clashes, timeline healthy. **Not saved.**
@@ -14,15 +25,6 @@
 **Left:** the owner saves the model; the owner decides what to do about the gaps in `docs/spec-gaps.md`; then the slot (task 24, item 6); then the bench.
 
 **Exact next step:** ask the owner to save `Type_0_v3` and which spec gap to settle first (the 10-bolt spec against D-241 included); then propose the slot width and depth.
-
-## 0000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate now 10 bolts (D-240)
-- Owner: the plate should have 10 bolts; the model and docs had 8. Placed in the Q&A: side pair moved from (X ±175, Y 128) to (X ±175, Y 78), new pair at (X ±175, Y 178). Rows Y 28, 78, 178, 228; slot limit unchanged.
-- `Type_0_v3`: 10 counterbored holes, 10 screws, 10 hex pockets, inserts and back plugs; no clashes among 32 bodies; timeline healthy. **Not saved.**
-- `bom.csv` X15 to X17: 10 needed, the packs of 10 are used up (no spares); no cost change.
-
-**Left:** the owner saves the model (or says to); then the slot (item 6: at most X ±107.5, ending by Y 210; plate cut-out; floor strength); then the bench.
-
-**Exact next step:** ask the owner to save `Type_0_v3`; then propose the slot width and depth (task 24, item 6) and ask the owner.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

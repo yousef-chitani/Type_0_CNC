@@ -1,20 +1,20 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,023.69** (budget £4,200, D-127). Not priced yet: G01, G03. No eBay.
+**Phase 1 priced total: £3,963.35** (budget £4,200, D-127). Not priced yet: G01, G05, X18. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
 | Frame | £840.59 |
-| Motion | £1,241.03 |
+| Motion | £1,220.03 |
 | Gantry | £0.00 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
-| Fixings | £136.94 |
-| **Total** | **£4,023.69** |
+| Fixings | £97.60 |
+| **Total** | **£3,963.35** |
 
 ## Frame
 
@@ -63,7 +63,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M16 | HTD-5M timing belt 15 mm wide (X) (dropped: D-182) | 1 pcs | £0.00 |
 | M17 | Ø10 flange bearing (X screw outboard support) (dropped: D-182) | 1 pcs | £0.00 |
 | M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
-| M12 | Saddle, Z plate, spacer, risers, motor plates 6082 | 1 lot | £186.26 |
+| M12 | Z plates, Z rail risers, X nut-housing spacer 6082 | 1 lot | £165.26 |
 | M13 | Z motor mount and fixed bearing HM12-60-V (replaces the Z BK12) | 1 pcs | £13.03 |
 
 ## Gantry
@@ -71,7 +71,8 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | ID | Item | Qty | £ |
 |---|---|---|---|
 | G01 | Gantry beam: steel SHS 120 × 120 × 8, 775 long | 1 pcs | to price |
-| G03 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed | 2 pcs | to price |
+| G03 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed (dropped: D-242) | 2 pcs | £0.00 |
+| G05 | Roller steel: X roller tube, 2 X roller angles, 2 Y roller tubes, 2 Y roller braces | 1 lot | to price |
 
 ## Spindle
 
@@ -151,7 +152,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| X03 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | £70.67 |
+| X03 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | £31.33 |
 | X04 | (covered by X03) | 1 set | £0.00 |
 | X11 | Motor plate screws M6 x 16 socket cap | 1 pack | £5.99 |
 | X12 | Y roller spacer screws M6 x 30 socket cap | 1 pack | £6.99 |
@@ -160,3 +161,4 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X15 | Fixture plate cast-in inserts M8 x 24 hex connector nut | 1 pack | £7.52 |
 | X16 | Fixture plate hold-down screws M8 x 30 socket cap | 1 box | £20.24 |
 | X17 | Insert back plugs M8 x 8 hex head set screw | 1 pack | £10.45 |
+| X18 | Gantry and roller screws not yet in X03 to X17 | 1 lot | to price |

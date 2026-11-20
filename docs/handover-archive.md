@@ -2,6 +2,15 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate now 10 bolts (D-240)
+- Owner: the plate should have 10 bolts; the model and docs had 8. Placed in the Q&A: side pair moved from (X ±175, Y 128) to (X ±175, Y 78), new pair at (X ±175, Y 178). Rows Y 28, 78, 178, 228; slot limit unchanged.
+- `Type_0_v3`: 10 counterbored holes, 10 screws, 10 hex pockets, inserts and back plugs; no clashes among 32 bodies; timeline healthy. **Not saved.**
+- `bom.csv` X15 to X17: 10 needed, the packs of 10 are used up (no spares); no cost change.
+
+**Left:** the owner saves the model (or says to); then the slot (item 6: at most X ±107.5, ending by Y 210; plate cut-out; floor strength); then the bench.
+
+**Exact next step:** ask the owner to save `Type_0_v3`; then propose the slot width and depth (task 24, item 6) and ask the owner.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate, inserts and screws modelled in `Type_0_v3`
 - New component `Fixture Plate`: plate 460 x 330 x 25 (X ±230, Y -37 to 293, Z 45 to 70), 54 M6 tap holes, 4 dowel holes, 8 counterbored M8 holes, 8 M8 x 30 screws.
 - `EG Tub`: 8 hex pockets cut, 8 inserts (Z 21 to 45) and 8 back plugs (Z 15.7 to 29) as bodies. `Wasteboard M6x20` hidden.

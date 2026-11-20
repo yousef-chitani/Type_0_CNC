@@ -1,5 +1,7 @@
 # Steel box section, cut to length: suppliers near Swansea (17 Nov 2026)
 
+> **20 Nov 2026: Dyfed Steels lists SHS 120 x 120 x 8** (27.89 kg/m; also 4, 5, 6.3, 10, 12.5 wall) and RHS 120 x 60 x 3, 100 x 50 x 3 and 120 x 80 x 5 to 10, but not 75 x 50 (owner's saved stock pages, no prices). K I Metals live (curl, 20 Nov): 120 x 120 x 8 £67.05 ex VAT / £80.46 inc for about 1 m, free cutting, delivery to SA2 not shown.
+
 > **18 Nov 2026 (D-177): the beam is now SHS 120 × 120 × 8, 775 long.** The sizes and prices below are for the old 150 × 150 × 8 beam. Availability and price of 120 × 120 × 8 are not confirmed.
 
 Nothing is decided here. This is a phone list for the owner, who will price and collect.

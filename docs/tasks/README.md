@@ -4,10 +4,10 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/hopeful-sagan-28twty` (continues `claude/charming-cori-349jm7`). Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-241).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-245).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). When Claude edits it, a hook (`tools/bom_hook.py`) runs the 5 generators automatically and reports only errors. After a hand edit, set `PYTHONUTF8=1` and run `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
-- **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£4,023.69, £176.31 left** (19 Nov 2026, X15 to X17 fixture plate inserts and screws; D-164 steel SHS beam, D-182 no X belt; G01 beam and G03 feet not priced; G02/G04 dropped).
+- **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£3,963.35, £236.65 left** (20 Nov 2026 repricing, D-242 to D-245: G03 dropped; G01 beam, G05 roller steel and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
 - Write plainly and briefly. Do not merge branch `claude/awesome-ramanujan-by9kds` (old design).
 
 ## State in five lines
@@ -36,7 +36,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 | [13](13-supplier-messages.md) | Supplier messages | owner sends; Opus 5.5 can update the drafts | none | 6 (LiMo) answered 16 Nov, reply 6a sent 16 Nov; C5 price recorded 17 Nov; **D-136: C5 from LiMo, wave 1, £457.05**; basket correct (checkout 4, $604.24); no stub drawings needed (D-157, D-182); 5 to send |
 | [14](14-z-motor-mount.md) | Z motor mount | main session | 13 (seller's drawing) | open |
 | [15](15-wave-1-order-sheet.md) | Wave 1 order sheet | Opus 5.5 is fine | none | done: `docs/wave1-order-sheet.md` |
-| [16](16-wave-1-price-re-check.md) | Wave 1 price re-check | Opus 5.5 writes and applies; owner runs it | 15 | open |
+| [16](16-wave-1-price-re-check.md) | Wave 1 price re-check | Opus 5.5 writes and applies; owner runs it | 15 | open. **20 Nov: design repricing done (D-242 to D-245), £3,963.35; lines left in `docs/price-check-task-17.md`** |
 | [17](17-tidy-the-old-casting-notes.md) | Tidy the old casting notes | Opus 5.5 is fine | none (03, 06 on hold) | done: 4 disagreements listed in the task file |
 | [18](18-rail-seat-and-assembly-procedure.md) | Rail-seat and assembly procedure | main session | 10, 11 | open |
 | [19](19-linuxcnc-config-after-the-bench-tests.md) | LinuxCNC config after the bench tests | Opus 5.5 is fine | owner's bench results (build weeks 3–6) | open |

@@ -18,7 +18,7 @@ Checked against `docs/requirements.md`, the decisions it cites and the task 24 d
 ## Met, with notes
 - Work area 400 x 250: spindle reach X 430, Y 385 (D-233). The plate is larger than the reach: 7.5 at -X, 22.5 at +X and 1 at the back cannot be reached.
 - Z travel 150: nose Z 95 to 245.
-- Phase 1 budget £4,200: £4,023.69 priced, £176.31 left; G01 and G03 not priced yet.
+- Phase 1 budget £4,200: £3,963.35 priced, £236.65 left (20 Nov 2026); G01, G05 and X18 not priced yet, G03 dropped (D-242).
 
 ## Not checkable from the model
 - Part accuracy ±0.02 (D-10): needs the mapping run on the built machine.
