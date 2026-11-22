@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (5th session): missing joint screws modelled (D-262); model saved
+- Owner: "Yes, model them" (the joints listed in `docs/cad-cleanup-owner-items.md` section 1).
+- `Type_0_v3`: new top-level component `Joint screws added (D-262)` (one base feature): 112 screws + 2 M10 nuts. Axes snapped to the exact hole centres; heads on the counterbore floors found by ray. Sizes and counts in D-262. Clash check: only threads in tapped holes and the known 0.03 rail seat. Timeline 35 unhealthy before and after. **Saved.**
+- BOM: new line X21 (M6 x 40, M5 x 16, M5 x 6, M6 x 45, not priced); the rest fall under X03, X11, X14, X18, X19, A06.
+
+**Left:** riser holes for the BK12 screws drawn Ø6.1 (tap M6) and the NEMA 24 plate motor holes drawn Ø5.0 (tap M5): change the hole drawings or the screws. The 3 holes Claude could not place and the X 1610 fill and nut plates (`docs/cad-cleanup-owner-items.md` sections 2 and 3). X21 and X18 pricing. From before: ATC clash check with the moving Z, A06 re-pricing, motor length, fork screw M3 or M4, plate flatness spec, mould drawing, mass.
+
+**Exact next step:** owner answers sections 2 and 3 of `docs/cad-cleanup-owner-items.md` and says whether to re-draw the BK12 riser and motor plate holes as tapped. Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (4th session): one-piece printed ATC bracket modelled (D-260); CAD clean-up of loose screws and unused holes (D-261); model saved
 - Owner (Q&A): save the model first (done, then saved again at the end); clean visible fasteners only (hidden PrintNC leftovers stay); fill unused holes in our parts, leave vendor parts; D-259 proposals confirmed (D-260).
 - `Type_0_v3`, `ATC Wheel (Phase 2)`: base features edited in place. `ATC Bracket (PETG print, top plate 6082)` now holds one PETG body (block, arms 15, motor plate 15, Z 68 to 83, about 120 cm³) and the top plate (post holes at X 150/250). Posts Ø12 x 32 at X 150/250. Fasteners: 8 M6 x 25 arm and 4 M5 x 20 motor-plate screws gone; post screws M6 x 25 (bottom) and M6 x 16 (top) at the new X. Motor M3 x 10 kept (counterbores 9 deep). Interference: only the 2 M6 x 40 in the tapped strip.
@@ -16,15 +25,6 @@
 **Left:** owner answers `docs/cad-cleanup-owner-items.md` (model the missing screws or not; the 3 unplaced holes; the X 1610 fill and nut plates). From before: ATC clash check with the moving Z (only the static check was run this time), A06 re-pricing, motor length, fork screw M3 or M4, plate flatness spec, mould drawing, mass in `docs/machine-assessment.md`.
 
 **Exact next step:** owner reads `docs/cad-cleanup-owner-items.md` and says whether to model the missing screws. Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (3rd session): flat tub wall tops under a bolted steel plate (D-256 to D-258); one-piece printed ATC bracket decided (D-259), not modelled
-- Owner (Q&A): the 5 lip at X ±310 to ±315 goes; the wall top is cast flat at Z 113 and covered by an 80 x 10 x 690 steel plate per wall (Z 115 to 125) on 2 of grout; rails stay at the same height and rely on the plate's flatness; the 40 x 10 bar is cast flush in the wall top (Z 103 to 113) and only takes 10 x M6 x 20 countersunk hold-downs per plate on the rail line. Rail and riser screws tap the plate: M5 x 16, M6 x 20, M6 x 30. Outer strips and everything on them 5 lower (D-258); trigger mounts grow 5 at the bottom so the sensor gap stays 1. Also asked: keep 2 Y blocks per rail (D-20 stands).
-- `Type_0_v3`, `EG Tub`: base feature `Wall top plates and strips (D-256 to D-258)` (plates, grout beds, bars, 3 strips, all holes), old bars, levelling layers and strips removed, combine `Wall tops flat Z113, bar and strip pockets`; casting 40,100,817 -> 39,293,267 mm³ (checked by hand). Screws trimmed by combine cuts in their own components; trigger flanges refilled and re-holed; chain supports and screws moved by Move features (world vector); the zip-tie plate by its joint offset (-5). Interference over the tub region: only screws in tapped holes and the overlaps that were there before (roller screws, sensor in its mount, rail 0.03 into the seat). Timeline: 35 unhealthy before and after. **Not saved.**
-- BOM: G06 plates, X19 hold-downs, X20 rail screws (all unpriced); X13, X14, F02, F07 notes.
-
-**Left:** D-259 ATC bracket remodel (one PETG print: block + arms 15 + motor plate 15 up to Z 83; posts to X 150/250, 32 long; drop 8 M6 x 25 and 4 M5 x 20; bottom post screws M6 x 25; update A06, `atc-wheel.md`, rerun the ATC clash check). Plate flatness spec and keeping both plates co-planar while the grout cures; mould drawing (flat wall top, bar at Z 103); `docs/machine-assessment.md` mass (tub about 1.9 kg lighter, plus 2 plates about 8.7 kg).
-
-**Exact next step:** owner saves `Type_0_v3`. New session: read this entry and D-259, then rebuild the base feature `ATC Bracket (6082) (geometry)` in `ATC Bracket (6082)` (edit it in place; note: MoveFeature takes a world vector).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

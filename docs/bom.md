@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **132 line items, 126 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **133 line items, 126 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -16,10 +16,10 @@ Full list: [bom.csv](bom.csv). **132 line items, 126 priced.** Prices were read 
 | Enclosure | 4 | 4 | £78.61 |
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
-| Fixings | 12 | 9 | £97.60 |
-| **All** | **132** | **126** | **£5,377.90** |
+| Fixings | 13 | 9 | £97.60 |
+| **All** | **133** | **126** | **£5,377.90** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,377.90**. Not priced yet: G01, G05, X18, G06, X19, X20.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,377.90**. Not priced yet: G01, G05, X18, G06, X19, X20, X21.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
@@ -188,3 +188,4 @@ Lines still TO PRICE: see the list above.
 | G06 | 1 | Steel plate 80 x 10 x 690, wall tops (D-256) | 2 pcs | Flat steel plate over each tub wall top (X ±310 to ±390, Y -37 to 653), bedded on 2 mm epoxy grout; rails and risers bolt to it. Tapped through: 9 x M5 (rail), 7 x M6 (risers); 10 x M6 countersunk clearance. Flatness spec not set: the rails rely on it | [product]() | Not priced |  | Flat enough for the rails without a levelling pour? Owner to set the stock (ground flat or machined) |
 | X19 | 1 | Plate hold-down screws M6 x 20 countersunk DIN 7991 | 20 pcs | 10 per plate on the rail line X ±350, flush heads under the rail and risers, 8 into the cast-in bar | [product]() | Not priced |  |  |
 | X20 | 1 | Rail screws M5 x 16 socket cap | 18 pcs | HGR20 Y and Y2 rail screws into the tapped wall-top plate (6.5 of thread). Were M5 x 20 from X03 | [product]() | Not priced |  |  |
+| X21 | 1 | Joint screws added in the CAD (D-262) and not covered by X03 to X20 | 1 lot | 4 x M6 x 40 (BK12 to riser; riser tapped M6), 12 x M5 x 16 (motor to NEMA 24 plate; plate tapped M5), 8 x M5 x 6 (zip-tie plate to chain support), 4 x M6 x 45 (HM12 to Z fixed plate). Covered elsewhere: 16 M5 x 20 Z block screws (X03), 9 M6 x 20 Z fixed plate to X roller angles (X03), 2 M6 x 35 HM12 deep counterbores (X14 pack, 8 of 20 used), 26 M6 x 12 roller and brace screws (X18), 9 M6 x 16 (X11), 20 hold-downs (X19), 2 M10 bearing bolts (A06) | [product]() | Not priced |  |  |

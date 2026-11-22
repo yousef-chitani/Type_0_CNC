@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,963.35** (budget £4,200, D-127). Not priced yet: G01, G05, X18, G06, X19, X20. No eBay.
+**Phase 1 priced total: £3,963.35** (budget £4,200, D-127). Not priced yet: G01, G05, X18, G06, X19, X20, X21. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -165,3 +165,4 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X18 | Gantry and roller screws not yet in X03 to X17 | 1 lot | to price |
 | X19 | Plate hold-down screws M6 x 20 countersunk DIN 7991 | 20 pcs | to price |
 | X20 | Rail screws M5 x 16 socket cap | 18 pcs | to price |
+| X21 | Joint screws added in the CAD (D-262) and not covered by X03 to X20 | 1 lot | to price |

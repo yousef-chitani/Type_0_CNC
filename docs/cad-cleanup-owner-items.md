@@ -2,24 +2,11 @@
 
 `Type_0_v3` was searched by script for visible screws that clamp nothing and for holes with no screw. 26 screws were removed and 15 holes filled (D-261). The model is saved.
 
-## 1. Missing screws: holes that line up in two parts, but no screw is modelled
-These are real joints, so the holes stay. Should Claude model the screws (and add any missing ones to `bom.csv`)?
-
-| Joint | Holes | Note |
-|---|---|---|
-| Motor to NEMA 24 plate (X, Y, Y2) | 4 each | vendor motor holes |
-| NEMA 24 plate to BKHM12 riser (X, Y, Y2) | 3 each, counterbored | |
-| BK12 to riser (Y, Y2) | 2 each, at Y 579 and 592 | |
-| Y roller brace to Y roller tube (both sides) | 4 each, Z 407/427 | the PrintNC M6 x 12 set for these is hidden |
-| Y roller brace to X gantry tube (both sides) | 4 each, Z 223/268 | |
-| Y roller tube to X gantry tube (both sides) | 5 each, Y 480/505/530 | |
-| X roller bottom angle to Z fixed plate | 5, Z 182/206 | |
-| X roller top angle to Z fixed plate | 4, Z 374/398 | |
-| HM12 to Z fixed plate | 6 | |
-| Z moving plate to the Z HGH20 blocks | 16, counterbored M5 | the blocks sit about 7 behind the plate's back face: check the stack |
-| Steel plate hold-downs to the wall bar (D-257, X19) | 10 per wall | M6 x 20 countersunk |
-| Cable zip-tie plates to chain supports | 2 each, 4 plates | |
-| KFL004 bearing to ATC top plate | 2 (M10) | |
+## 1. Missing screws: done (D-262)
+112 screws and 2 nuts are modelled in `Joint screws added (D-262)` (sizes in D-262; new ones in BOM line X21). Three things follow from them:
+- The BK12 riser holes are drawn Ø6.1 (clearance). The BK12 screws need them tapped M6.
+- The NEMA 24 plate motor holes are drawn Ø5.0. The motor screws need them tapped M5 (or a different screw: the motor flange holes are Ø5).
+- Thread lengths are short in the 3 mm Y roller tube walls (M6 x 12 gets 3 of thread, as PrintNC does).
 
 ## 2. Holes Claude could not place
 - X gantry tube: a Ø16 hole along X at Y 549, Z 309. Clearance for something, or a leftover?
