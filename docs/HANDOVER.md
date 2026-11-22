@@ -14,7 +14,12 @@
 
 **Left:** the open items list in `docs/machine-assessment.md` section 7; the strip must go on the tub mould drawing.
 
-**Exact next step:** owner saves `Type_0_v3`; then price G01, G05 and X18 and finish the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
+**Owner's new request (22 Nov 2026, not started: session at its context limit):** "direct drive the tool changer and have the bracket inline with centre of the spindle". The owner has a toolholder model open in Fusion (use it in place of the stand-in holders, D-252).
+- Direct drive: drop the A08 GT2 3:1 belt and pulleys. The NEMA 17 (A03) goes on the wheel shaft axis (coupling or hollow hub), probably under the bearing plate. Check: room under it (lowest ATC part is Z 0, tub bottom Z -15), 0.8 Nm without the 3:1 reduction, and the index accuracy at the fork (r 89).
+- "Bracket inline with centre of the spindle": ask the owner what it means before modelling. Likely: the arm runs along X 200 (the pickup line, the wheel centre line), not along X 315. Then the strip on the right wall's front face (D-251) may need to move or change. Also ask: does the wheel stay at X 200, Y -174?
+- Then rerun the clash check (script approach in `docs/atc-wheel.md`: move copies of the Z bodies by dX 421.8, dY -352/-382, dZ 11/62) and update D-250 to D-252, A03, A06 to A08 and `docs/atc-wheel.md`.
+
+**Exact next step:** new session: read this entry and `docs/atc-wheel.md`, ask the owner the 2 questions above, then remodel `ATC Wheel (Phase 2)`. Owner: save `Type_0_v3` first.
 
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC spindle clamp on our Z (D-247 to D-249)
 - `Type_0_v3`, `Z Moving Parts`: the PrintNC 80 mm 3-hole clamp, 2 tram blocks, 4 M6 x 30 + washers, pivot M6 x 12, 4 M6 x 12, 2 M6 x 30 and 4 M8 grub screws added (same components as the PrintNC Z, so they move with our Z slider). Stand-in clamp body hidden.
