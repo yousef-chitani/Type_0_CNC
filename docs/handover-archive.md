@@ -2,6 +2,15 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: inner rear plate bolts removed (D-241); spec gaps listed
+- Owner: remove the rear 2 bolts; Q&A chose the inner pair (X ±25, Y 228). Plate now 8 bolts: (X ±125, Y 28), (X ±175, Y 78), (X ±175, Y 178), (X ±125, Y 228).
+- `Type_0_v3`: geometry and 4 combines removed, profiles re-picked, pocket cut kept to the casting, bodies renumbered #1 to #8; 26 bodies, no clashes, timeline healthy. **Not saved.**
+- `bom.csv` X15 to X17: 8 needed, 2 spares again. `docs/spec-gaps.md`: 8 misses (10-bolt spec now missed, slot open, nose clearance 175 vs 180 to 200, X travel 430 vs 570, `requirements.md` out of date on layout, ATC and frame material, mass not summed).
+
+**Left:** the owner saves the model; the owner decides what to do about the gaps in `docs/spec-gaps.md`; then the slot (task 24, item 6); then the bench.
+
+**Exact next step:** ask the owner to save `Type_0_v3` and which spec gap to settle first (the 10-bolt spec against D-241 included); then propose the slot width and depth.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: fixture plate now 10 bolts (D-240)
 - Owner: the plate should have 10 bolts; the model and docs had 8. Placed in the Q&A: side pair moved from (X ±175, Y 128) to (X ±175, Y 78), new pair at (X ±175, Y 178). Rows Y 28, 78, 178, 228; slot limit unchanged.
 - `Type_0_v3`: 10 counterbored holes, 10 screws, 10 hex pockets, inserts and back plugs; no clashes among 32 bodies; timeline healthy. **Not saved.**

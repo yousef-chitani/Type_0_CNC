@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC dual-carriage Z tried, Type 0 Z kept (D-246)
+- Owner asked for the PrintNC dual-carriage Z with the Jianken spindle, without Y braces and with shorter saddles. Then dropped the saddle and brace changes ("Both stay").
+- Tried in `Type_0_v3`: Jianken in the PrintNC clamp fits (spindle 38 closer to the beam, no clashes at the top or bottom of travel). Owner wanted our drive (DFU1605, HM12-60-V, brake motor), but the DFU1605 flange does not fit the 28 gap between the tram plate and the Z plate (9 and 5 deep cuts, only 2 of 6 flange screws fully held).
+- **Owner: go back to our Z plate (D-246).** Model put back: `Z Axis Assembly` and `Z Fixed Plate` shown, `Zaxis Dual Carriage HGH15CA` hidden and unchanged, the trial spindle copy deleted. The 33 unhealthy timeline items were there before (2 joint warnings, the rest suppressed or rolled back). **Not saved** (owner: go on unsaved).
+- No BOM change.
+
+**Left:** as in the 20 Nov entry: the LiMo basket and the Dyfed call (`docs/price-check-task-17.md`); task 24 slot; the owner saves the model.
+
+**Exact next step:** owner saves `Type_0_v3`, does the LiMo basket and Dyfed call and reports the prices; then apply them to `bom.csv`.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000. 20 Nov 2026: Phase 1 repriced after the recent changes (D-242 to D-245)
 - Checked `bom.csv` against D-159 to D-241 and the visible parts in `Type_0_v3` (read-only script, nothing changed in the model). Owner answered 5 questions.
 - **G03 dropped** (D-242): the Y rollers carry the beam. **G05 roller steel** added, unpriced (D-243): modelled X tube 120 x 50 x 3, angles 125 x 50 x 6 and braces 75 x 75 are not stock sizes. **Red PrintNC parts printed** (D-244): M12 loses the 10 mm plate, -£21.00. **X03** loses M12 x 120 and M10 x 30, -£39.34; **X18** lists 90-odd model screws and 4 dowels not in the BOM, unpriced (D-245).
@@ -16,15 +26,6 @@
 **Left:** `docs/price-check-task-17.md`: LiMo basket changes (550 set, 650 screws, 4 couplings), Dyfed call for G01, M12 cut-to-size prices, X18 screws. Then G05 stock sizes. Model still not saved (from 19 Nov).
 
 **Exact next step:** owner does the LiMo basket and the Dyfed call in `docs/price-check-task-17.md` and reports the prices; then apply them to `bom.csv`.
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000. 19 Nov 2026: inner rear plate bolts removed (D-241); spec gaps listed
-- Owner: remove the rear 2 bolts; Q&A chose the inner pair (X ±25, Y 228). Plate now 8 bolts: (X ±125, Y 28), (X ±175, Y 78), (X ±175, Y 178), (X ±125, Y 228).
-- `Type_0_v3`: geometry and 4 combines removed, profiles re-picked, pocket cut kept to the casting, bodies renumbered #1 to #8; 26 bodies, no clashes, timeline healthy. **Not saved.**
-- `bom.csv` X15 to X17: 8 needed, 2 spares again. `docs/spec-gaps.md`: 8 misses (10-bolt spec now missed, slot open, nose clearance 175 vs 180 to 200, X travel 430 vs 570, `requirements.md` out of date on layout, ATC and frame material, mass not summed).
-
-**Left:** the owner saves the model; the owner decides what to do about the gaps in `docs/spec-gaps.md`; then the slot (task 24, item 6); then the bench.
-
-**Exact next step:** ask the owner to save `Type_0_v3` and which spec gap to settle first (the 10-bolt spec against D-241 included); then propose the slot width and depth.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
