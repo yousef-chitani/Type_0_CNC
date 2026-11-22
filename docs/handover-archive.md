@@ -2,6 +2,16 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC dual-carriage Z tried, Type 0 Z kept (D-246)
+- Owner asked for the PrintNC dual-carriage Z with the Jianken spindle, without Y braces and with shorter saddles. Then dropped the saddle and brace changes ("Both stay").
+- Tried in `Type_0_v3`: Jianken in the PrintNC clamp fits (spindle 38 closer to the beam, no clashes at the top or bottom of travel). Owner wanted our drive (DFU1605, HM12-60-V, brake motor), but the DFU1605 flange does not fit the 28 gap between the tram plate and the Z plate (9 and 5 deep cuts, only 2 of 6 flange screws fully held).
+- **Owner: go back to our Z plate (D-246).** Model put back: `Z Axis Assembly` and `Z Fixed Plate` shown, `Zaxis Dual Carriage HGH15CA` hidden and unchanged, the trial spindle copy deleted. The 33 unhealthy timeline items were there before (2 joint warnings, the rest suppressed or rolled back). **Not saved** (owner: go on unsaved).
+- No BOM change.
+
+**Left:** as in the 20 Nov entry: the LiMo basket and the Dyfed call (`docs/price-check-task-17.md`); task 24 slot; the owner saves the model.
+
+**Exact next step:** owner saves `Type_0_v3`, does the LiMo basket and Dyfed call and reports the prices; then apply them to `bom.csv`.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000. 20 Nov 2026: Phase 1 repriced after the recent changes (D-242 to D-245)
 - Checked `bom.csv` against D-159 to D-241 and the visible parts in `Type_0_v3` (read-only script, nothing changed in the model). Owner answered 5 questions.
 - **G03 dropped** (D-242): the Y rollers carry the beam. **G05 roller steel** added, unpriced (D-243): modelled X tube 120 x 50 x 3, angles 125 x 50 x 6 and braces 75 x 75 are not stock sizes. **Red PrintNC parts printed** (D-244): M12 loses the 10 mm plate, -£21.00. **X03** loses M12 x 120 and M10 x 30, -£39.34; **X18** lists 90-odd model screws and 4 dowels not in the BOM, unpriced (D-245).

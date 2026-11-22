@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: ATC wheel modelled (D-250 to D-252); whole-machine assessment
+- Owner chose by Q&A: pickup X 200, Y -85, fork plane Z 167 to 175, slide in along -Y (D-250); a 4th cast-in tapped strip on the right wall's front face (D-251); stand-ins for forks, holders, bearings and motor (D-252).
+- `Type_0_v3`: new top-level component `ATC Wheel (Phase 2)` (bracket, posts, 2 KFL004, shaft and Ø128 hub, 8 forks, 8 holders and tools, NEMA 17 and GT2 drive, index sensor, screws). In `EG Tub`: body `Steel strip +X front (ATC)`, combines `ATC front strip pocket` and `ATC strip hole clearance`. No clash at rest or at 4 tool-change positions (copies of the Z bodies moved; the joints do not move from scripts). Timeline: 35 unhealthy items before and after. **Not saved.**
+- BOM: A01, A03, A05 to A08 re-described for the wheel; F07 covers the strip. A06 price is for the old stock list and must be re-priced; A08 belt now about 366. Phase 1 total unchanged, £3,963.35.
+- Docs: `docs/atc-wheel.md` (layout, sequence, gaps), `docs/atc-wheel.png`, `docs/machine-assessment.md` (travel, clashes, stiffness, mass, cost, open items).
+
+**Left:** the open items list in `docs/machine-assessment.md` section 7; the strip must go on the tub mould drawing.
+
+**Exact next step:** owner saves `Type_0_v3`; then price G01, G05 and X18 and finish the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC spindle clamp on our Z (D-247 to D-249)
 - `Type_0_v3`, `Z Moving Parts`: the PrintNC 80 mm 3-hole clamp, 2 tram blocks, 4 M6 x 30 + washers, pivot M6 x 12, 4 M6 x 12, 2 M6 x 30 and 4 M8 grub screws added (same components as the PrintNC Z, so they move with our Z slider). Stand-in clamp body hidden.
 - Spindle (Jianken) re-added 5 towards the plate: axis Y 297, nose height unchanged; clamp covers 43 to 122 from the front face.
@@ -19,16 +29,6 @@
 **Left:** nothing open on the clamp. Then the D-246 list below.
 
 **Exact next step:** owner saves `Type_0_v3`; then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`) and apply the prices to `bom.csv`.
-
-## 0000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC dual-carriage Z tried, Type 0 Z kept (D-246)
-- Owner asked for the PrintNC dual-carriage Z with the Jianken spindle, without Y braces and with shorter saddles. Then dropped the saddle and brace changes ("Both stay").
-- Tried in `Type_0_v3`: Jianken in the PrintNC clamp fits (spindle 38 closer to the beam, no clashes at the top or bottom of travel). Owner wanted our drive (DFU1605, HM12-60-V, brake motor), but the DFU1605 flange does not fit the 28 gap between the tram plate and the Z plate (9 and 5 deep cuts, only 2 of 6 flange screws fully held).
-- **Owner: go back to our Z plate (D-246).** Model put back: `Z Axis Assembly` and `Z Fixed Plate` shown, `Zaxis Dual Carriage HGH15CA` hidden and unchanged, the trial spindle copy deleted. The 33 unhealthy timeline items were there before (2 joint warnings, the rest suppressed or rolled back). **Not saved** (owner: go on unsaved).
-- No BOM change.
-
-**Left:** as in the 20 Nov entry: the LiMo basket and the Dyfed call (`docs/price-check-task-17.md`); task 24 slot; the owner saves the model.
-
-**Exact next step:** owner saves `Type_0_v3`, does the LiMo basket and Dyfed call and reports the prices; then apply them to `bom.csv`.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
