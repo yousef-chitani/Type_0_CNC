@@ -33,7 +33,7 @@ Envelope: X 88 to 312, Y -286 to -37, Z -10 to 225. The lowest part is Z -10, 5 
 
 ## Clash check (22 Nov 2026, after D-253 to D-255)
 Copies of the Z axis bodies were moved by dX 421.8, dY -352 or -382, dZ 11 or 62 (approach, pickup, lifted at both Y) and intersected with every ATC body. At the approach a copy of holder 1 was also moved to Y -55.
-- **Spindle against the wheel: no clash** with any fork, the hub or holders 2 to 8. The only hits are with holder 1, the one the spindle carries or grips.
+- **Spindle against the wheel: no clash** with any fork, the hub or holders 2 to 8. The only hits are 2 Z-side bodies (both named `Body1`, not traced) with holder 1, the pocket that is empty at the drop-off and gripped at the pick-up.
 - **ATC against the machine at rest: no clash.** The M6 x 40 screws sit in the strip.
 - Inside the ATC: only screws in their tapped holes (not modelled as holes).
 - Neighbouring forks: no overlap (1 mm apart). Forks against the hub and the holders: no overlap.
@@ -49,7 +49,8 @@ Copies of the Z axis bodies were moved by dX 421.8, dY -352 or -382, dZ 11 or 62
 | Neighbouring forks | 1 | model |
 
 ## Direct drive: what is and is not checked
-- Torque is not the limit: the wheel only has to turn 45° and nothing pushes on it sideways (the holder slides in radially).
+- Torque is not the limit: the wheel only has to turn 45° and the holder slides in radially, so nothing turns it.
+- **Tilt loads (not checked):** the KFL004 is self-aligning, so a vertical force at a fork (drawbar eject, clamp pull-up, a height mismatch) bends the Ø5 motor shaft at about 1.3 times that force.
 - **Index error at the fork:** the closed-loop encoder is said to give 4000 counts per turn (not confirmed: the maker's page blocked curl). That is 0.09°, about 0.14 mm at r 89. The fork's snap mouth should take that up. Check on the bench.
 - **Inertia:** the wheel with 8 holders is far heavier than the motor's rotor. Use a low acceleration in the ATC macro.
 - **Rigid joint:** the motor's own bearings carry the lower end of the shaft. Line the motor up with the shaft before tightening its screws.
@@ -60,5 +61,8 @@ Copies of the Z axis bodies were moved by dX 421.8, dY -352 or -382, dZ 11 or 62
 - Fork screw: the fork hole is Ø3.8 with a Ø7.1 countersink. M3 or M4? The hub holes are tapped M3 for now.
 - Tool length limit: under pocket 1 and the drop-off point is the wall block (top Z 40), 90 below the holder body; under the other pockets, only the bench. The arms and plates sit inside the ring of tools.
 - The bench under the wheel is not modelled. The lowest ATC part is Z -10, so a flat bench top level with the tub bottom (Z -15) clears it.
+- Fork seat: the hub is round, so each fork's flat step touches it at one point and only the M3 stops the fork turning. A hub with 8 flats (101.6 across) would seat the steps.
+- The index flag (225°, r 44) is 2.3 from fork 4's M3 hole: move the flag or the sensor before making the hub.
+- Strip cores now run Y -27 to -25 only (behind the strip); the old ones ran from -37. Draw them so on the mould drawing.
 - A05 (tool setter) has no place yet.
 - Bracket stiffness is not calculated. The motor plate now sits on two arms, not one.

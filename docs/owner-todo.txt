@@ -84,6 +84,16 @@ The mould drawings can't start until this is done.
      pack of 20, GBP 5.99 from Amazon (BOM X11, D-190).
 
 
+=== JOB 5: ATC WHEEL (added 22 Nov 2026) ===
+
+1. Save Type_0_v3 in Fusion (the ATC changes D-253 to D-255 are not saved).
+2. Measure or read off your NEMA 17 closed-loop motor (A03): body length
+   with the encoder, shaft length, encoder counts per turn.
+   (The StepperOnline page blocks Claude's download.)
+3. Your fork's screw hole is 3.8 mm with a 7.1 mm countersink: M3 or M4?
+4. Confirm or change Claude's proposals in D-253 to D-255
+   (docs/decisions.md): bracket sizes, posts, shaft, round hub, sensor place.
+
 === LATER (no rush) ===
 
    - When the safety relay arrives: photo of its terminal labels.

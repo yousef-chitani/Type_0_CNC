@@ -39,7 +39,7 @@ The parts that were calculated add up to about 15 µm at the worst corner (top o
 | EG tub casting (40,101 cm³ at 2,300 kg/m³) | 92.2 | M volume, C density |
 | Fixture plate 6082 460 x 330 x 25 | 10.2 | H |
 | Gantry beam (775 of SHS 120 x 8 at 28.1 kg/m) | 21.8 | H |
-| ATC aluminium and shaft | 2.2 | M |
+| ATC aluminium and shaft (D-253 to D-255) | 1.8 | M |
 
 The frame target was about 200 to 350 kg (requirements). The machine is well under it, but the tub carries no cutting loads that need mass. What matters is that the tub sits flat and the Y rails stay straight. Moving mass in Y is about 45 to 55 kg (beam, rollers, Z, spindle; the spindle mass is not known until Jianken's drawing). Two NEMA 24 4 Nm motors on 5 mm lead screws have ample thrust (C, `moving-gantry-sketch.md`).
 
