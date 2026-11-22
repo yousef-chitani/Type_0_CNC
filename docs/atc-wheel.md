@@ -2,7 +2,7 @@
 
 ![ATC wheel at the front right of the tub](atc-wheel.png)
 
-The ATC wheel is the top-level component `ATC Wheel (Phase 2)` in `Type_0_v3`. It is a horizontal umbrella wheel (D-138) in front of the tub. The bracket comes straight out of the tub front face along X 200, the spindle's pickup line (D-253). The wheel is direct driven (D-254). It carries the owner's fork (D-255). **The model is not saved.**
+The ATC wheel is the top-level component `ATC Wheel (Phase 2)` in `Type_0_v3`. It is a horizontal umbrella wheel (D-138) in front of the tub. The bracket comes straight out of the tub front face along X 200, the spindle's pickup line (D-253). The wheel is direct driven (D-254). It carries the owner's fork (D-255). The bracket is one PETG print (D-259, D-260). Model saved 22 Nov 2026.
 
 ## Layout (world mm, Y = 0 at the rail front ends, tub front face Y -37)
 
@@ -14,10 +14,8 @@ The ATC wheel is the top-level component `ATC Wheel (Phase 2)` in `Type_0_v3`. I
 | Forks (owner's model) | Z 166 to 176, V rib mid-plane Z 171; each trimmed to its 45° sector less 0.5 a side; 1 x M3 x 12 countersunk into the hub at r 41.7 |
 | Hub | Ø101.5 x 12 6082, Z 159 to 171; the fork tabs sit on top, the fork steps against its edge |
 | Holders (stand-in ISO20-ER16) | Ø45 flanges above and below the fork, groove shaped to the fork's 60° V (root Ø29.1), pull stud top Z 225, body to Z 130, tool to Z 85 |
-| Wall block | 50 x 50 x 50 6082, X 175 to 225, Y -87 to -37, Z -10 to 40; 2 x M6 x 40 (counterbored) into the strip |
-| Arms | 2 plates 10 x 78 x 182 on edge, X 165 to 175 and 225 to 235, Y -224 to -42, Z -10 to 68; 4 x M6 x 25 each into the block's sides |
-| Motor plate | Ø120 x 10, Z 68 to 78, on the arms (4 x M5 x 20 into their top edges) |
-| Top plate | Ø120 x 10, Z 115 to 125, on 2 Ø12 x 37 posts at X 157 and 243 (M6 x 16 each end) |
+| Bracket (one PETG print, D-259, D-260) | Wall block X 175 to 225, Y -87 to -37, Z -10 to 40, 2 x M6 x 40 (counterbored) into the strip; 2 arms 15 thick, X 160 to 175 and 225 to 240, Y -224 to -42, Z -10 to 68; motor plate Ø120 x 15, Z 68 to 83. About 120 cm³, 80 x 187 x 93 overall. Fit it to the strip before the motor |
+| Top plate | Ø120 x 10 6082, Z 115 to 125, on 2 Ø12 x 32 posts at X 150 and 250 (Z 83 to 115); M6 x 25 from under the motor plate, M6 x 16 from the top |
 | Bearing | 1 x KFL004 on the top plate (Z 125 to 151), collar Z 151 to 159 |
 | Drive | NEMA 17 closed loop (A03) face up under the motor plate, Z 0 to 68, between the arms; 4 x M3 x 10 in Ø4 holes (tighten last). Shaft bored Ø5 x 14, M4 grub onto the motor shaft |
 | Index | LJ12A3 M12 (A09) through the top plate at 225°, r 44; flag under the hub |

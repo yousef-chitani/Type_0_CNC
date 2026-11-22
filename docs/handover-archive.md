@@ -2,6 +2,17 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (2nd session): ATC direct drive, bracket along X 200, owner's fork (D-253 to D-255)
+- Owner chose by Q&A: bracket in line with the spindle centre = arm along X 200; wheel stays at X 200, Y -174; direct drive under the plate, rigid with 1 bearing; twin arm plates; fork tabs tapered; the hidden extra forks in the owner's file are leftovers.
+- `Type_0_v3`, `ATC Wheel (Phase 2)`: wall block on the floor's front face at X 200, 2 arm plates either side of the motor, Ø120 motor plate, posts at X 157/243, lower KFL004 and GT2 dropped, NEMA 17 face up Z 0 to 68, shaft Z 80 to 171 bored onto the motor shaft, hub Ø101.5 x 12, 8 owner forks (from the unsaved `ISO20_Toolholders` file, one fork) trimmed to 45° sectors, holder grooves shaped to the fork V, sensor and flag at r 44. `EG Tub`: the D-251 strip and its cores edited in place to X 187.5 to 212.5, Z -10 to 40. Timeline: 35 unhealthy before and after. **Not saved.**
+- Clash check (same method as before): no clash except the spindle with holder 1 (the carried one) and screws in tapped holes. Forks 1 mm apart.
+- BOM: A01, A03, A06, A07 re-described; A08 dropped (0). Phase 1 total unchanged, £3,963.35.
+- Docs: `docs/atc-wheel.md` and `.png` rewritten, `docs/machine-assessment.md` sections 5 to 7.
+
+**Left:** real motor length and encoder counts (StepperOnline page blocks curl: owner reads it or measures); fork screw M3 or M4; A06 re-pricing and ATC screws; strip on the tub mould drawing.
+
+**Exact next step:** owner saves `Type_0_v3` (and `ISO20_Toolholders` if wanted). Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`), and apply the prices to `bom.csv`.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: ATC wheel modelled (D-250 to D-252); whole-machine assessment
 - Owner chose by Q&A: pickup X 200, Y -85, slide in along -Y (D-250); a cast-in tapped strip on the right wall's front face (D-251); stand-ins (D-252). **Proposed by Claude, owner to confirm:** the bracket parts, the lift to Z 232, the drive at X 342 (envelope to X 380), the strip's size, threads and the Ø6.6 void behind each hole.
 - `Type_0_v3`: new top-level component `ATC Wheel (Phase 2)` (bracket, posts, 2 KFL004, shaft and Ø128 hub, 8 forks, 8 holders and tools, NEMA 17 and GT2 drive, index sensor, screws). In `EG Tub`: body `Steel strip +X front (ATC)`, combines `ATC front strip pocket` and `ATC strip hole clearance`. No clash at rest or at 4 tool-change positions (copies of the Z bodies moved; the joints do not move from scripts). Timeline: 35 unhealthy items before and after. **Not saved.**

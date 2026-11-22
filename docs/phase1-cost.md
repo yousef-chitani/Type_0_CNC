@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,963.35** (budget £4,200, D-127). Not priced yet: G01, G05, X18. No eBay.
+**Phase 1 priced total: £3,963.35** (budget £4,200, D-127). Not priced yet: G01, G05, X18, G06, X19, X20. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -43,6 +43,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F22 | Curing tent: 50 mm foil-faced PIR board + foil tape | 3 sheets | £139.99 |
 | F23 | Tent heater: 500 W oil-filled radiator | 1 pcs | £20.99 |
 | F24 | Thermostat controller with remote probe | 1 pcs | £33.19 |
+| G06 | Steel plate 80 x 10 x 690, wall tops (D-256) | 2 pcs | to price |
 
 ## Motion
 
@@ -162,3 +163,5 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X16 | Fixture plate hold-down screws M8 x 30 socket cap | 1 box | £20.24 |
 | X17 | Insert back plugs M8 x 8 hex head set screw | 1 pack | £10.45 |
 | X18 | Gantry and roller screws not yet in X03 to X17 | 1 lot | to price |
+| X19 | Plate hold-down screws M6 x 20 countersunk DIN 7991 | 20 pcs | to price |
+| X20 | Rail screws M5 x 16 socket cap | 18 pcs | to price |
