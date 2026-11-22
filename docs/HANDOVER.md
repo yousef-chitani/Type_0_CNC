@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC spindle clamp on our Z (D-247)
+- `Type_0_v3`, `Z Moving Parts`: the PrintNC 80 mm 3-hole clamp, 2 tram blocks, 4 M6 x 30 + washers, pivot M6 x 12, 4 M6 x 12, 2 M6 x 30 and 4 M8 grub screws added (same components as the PrintNC Z, so they move with our Z slider). Stand-in clamp body hidden.
+- Spindle (Jianken) re-added 5 towards the plate: axis Y 297, nose height unchanged; clamp covers 43 to 122 from the front face.
+- 9 tapped M6 holes cut in the moving plate (feature names `PNC clamp M6 holes 18/14/10`, threads cosmetic). Clash check: only screw-in-thread overlaps, plus washer and grub overlaps that the PrintNC model already has.
+- X18 lists the new screws (unpriced). **Not saved.**
+
+**Left:** HGH20 block screw heads under the clamp (rows Z 274 and 306) are not modelled: counterbores or flush heads needed. Tram-block M6 x 12 engage only about 5 (M6 x 16 would give 9). Then the 22 Nov list below.
+
+**Exact next step:** ask the owner how to seat the block screws under the clamp (counterbore the moving plate, or low-head screws); then the owner saves `Type_0_v3`.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC dual-carriage Z tried, Type 0 Z kept (D-246)
 - Owner asked for the PrintNC dual-carriage Z with the Jianken spindle, without Y braces and with shorter saddles. Then dropped the saddle and brace changes ("Both stay").
 - Tried in `Type_0_v3`: Jianken in the PrintNC clamp fits (spindle 38 closer to the beam, no clashes at the top or bottom of travel). Owner wanted our drive (DFU1605, HM12-60-V, brake motor), but the DFU1605 flange does not fit the 28 gap between the tram plate and the Z plate (9 and 5 deep cuts, only 2 of 6 flange screws fully held).
@@ -15,17 +25,6 @@
 **Left:** as in the 20 Nov entry: the LiMo basket and the Dyfed call (`docs/price-check-task-17.md`); task 24 slot; the owner saves the model.
 
 **Exact next step:** owner saves `Type_0_v3`, does the LiMo basket and Dyfed call and reports the prices; then apply them to `bom.csv`.
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000. 20 Nov 2026: Phase 1 repriced after the recent changes (D-242 to D-245)
-- Checked `bom.csv` against D-159 to D-241 and the visible parts in `Type_0_v3` (read-only script, nothing changed in the model). Owner answered 5 questions.
-- **G03 dropped** (D-242): the Y rollers carry the beam. **G05 roller steel** added, unpriced (D-243): modelled X tube 120 x 50 x 3, angles 125 x 50 x 6 and braces 75 x 75 are not stock sizes. **Red PrintNC parts printed** (D-244): M12 loses the 10 mm plate, -£21.00. **X03** loses M12 x 120 and M10 x 30, -£39.34; **X18** lists 90-odd model screws and 4 dowels not in the BOM, unpriced (D-245).
-- **Phase 1 priced total £3,963.35, £236.65 left** (was £4,023.69). Excludes G01, G05 and X18. No line got dearer.
-- G01: Dyfed Steels lists 120 x 120 x 8 (owner's saved pages, no prices); K I Metals live £67.05 ex VAT per about 1 m. Owner waits for Dyfed. Noted in `docs/steel-rhs-suppliers.md`.
-- Not re-checked, still flagged in their notes: M01 and M05 (priced at the 600 rail set and the 600 Y screws, LiMo 403 to curl), M12 (Aluminium Warehouse 429; both 20 mm pieces too small). The ~90 unchanged lines were not re-fetched: that is task 16 (late December). Bench and enclosure lines not re-derived for the new layout.
-
-**Left:** `docs/price-check-task-17.md`: LiMo basket changes (550 set, 650 screws, 4 couplings), Dyfed call for G01, M12 cut-to-size prices, X18 screws. Then G05 stock sizes. Model still not saved (from 19 Nov).
-
-**Exact next step:** owner does the LiMo basket and the Dyfed call in `docs/price-check-task-17.md` and reports the prices; then apply them to `bom.csv`.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
