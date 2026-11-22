@@ -7,7 +7,7 @@
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: ATC wheel modelled (D-250 to D-252); whole-machine assessment
-- Owner chose by Q&A: pickup X 200, Y -85, fork plane Z 167 to 175, slide in along -Y (D-250); a 4th cast-in tapped strip on the right wall's front face (D-251); stand-ins for forks, holders, bearings and motor (D-252).
+- Owner chose by Q&A: pickup X 200, Y -85, slide in along -Y (D-250); a cast-in tapped strip on the right wall's front face (D-251); stand-ins (D-252). **Proposed by Claude, owner to confirm:** the bracket parts, the lift to Z 232, the drive at X 342 (envelope to X 380), the strip's size, threads and the Ø6.6 void behind each hole.
 - `Type_0_v3`: new top-level component `ATC Wheel (Phase 2)` (bracket, posts, 2 KFL004, shaft and Ø128 hub, 8 forks, 8 holders and tools, NEMA 17 and GT2 drive, index sensor, screws). In `EG Tub`: body `Steel strip +X front (ATC)`, combines `ATC front strip pocket` and `ATC strip hole clearance`. No clash at rest or at 4 tool-change positions (copies of the Z bodies moved; the joints do not move from scripts). Timeline: 35 unhealthy items before and after. **Not saved.**
 - BOM: A01, A03, A05 to A08 re-described for the wheel; F07 covers the strip. A06 price is for the old stock list and must be re-priced; A08 belt now about 366. Phase 1 total unchanged, £3,963.35.
 - Docs: `docs/atc-wheel.md` (layout, sequence, gaps), `docs/atc-wheel.png`, `docs/machine-assessment.md` (travel, clashes, stiffness, mass, cost, open items).

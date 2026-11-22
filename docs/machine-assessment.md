@@ -3,7 +3,7 @@
 Based on `Type_0_v3` as it is now (with the ATC wheel, D-250 to D-252, not saved), `docs/bom.csv` and the earlier checks. Each line says where its figure comes from: **M** measured in the model today, **H** a hand calculation done today (inputs given), **C** carried over from an earlier doc.
 
 ## Verdict
-The machine as modelled fits together and should meet its accuracy target. Nothing found today blocks the design. The risks are elsewhere:
+The machine as modelled fits together, and nothing found today blocks the design. Accuracy is not proven: the parts calculated so far use about 15 of the 20 µm, and the rest (rollers, blocks, clamp, screws in 3 mm walls) stays unknown until the mapping run (D-10). The risks are elsewhere:
 1. **Money:** three Phase 1 lines are still unpriced against £236.65 left.
 2. **Phase 1 items not yet in the model:** the front slot, the D-251 strip in the mould, and the stand-in parts.
 3. **Joints nobody has checked:** the PrintNC rollers and the screws threaded into 3 mm tube walls.
