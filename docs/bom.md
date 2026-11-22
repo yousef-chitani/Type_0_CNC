@@ -10,22 +10,22 @@ Full list: [bom.csv](bom.csv). **129 line items, 126 priced.** Prices were read 
 | Motion | 17 | 17 | £1,220.03 |
 | Gantry | 3 | 1 | £0.00 |
 | Spindle | 9 | 9 | £1,533.95 |
-| Tool changer | 7 | 7 | £154.46 |
+| Tool changer | 7 | 7 | £145.14 |
 | Pneumatics | 6 | 6 | £110.22 |
 | Electronics | 25 | 25 | £843.75 |
 | Enclosure | 4 | 4 | £78.61 |
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
 | Fixings | 10 | 9 | £97.60 |
-| **All** | **129** | **126** | **£5,387.22** |
+| **All** | **129** | **126** | **£5,377.90** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,387.22**. Not priced yet: G01, G05, X18.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,377.90**. Not priced yet: G01, G05, X18.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
 | 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,963.35 |
-| 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,423.87 |
+| 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,414.55 |
 
 Lines still TO PRICE: see the list above.
 
@@ -108,12 +108,12 @@ Lines still TO PRICE: see the list above.
 | S05 | 1 | Spindle cooling loop (DIY) | 1 pcs | Kit 220 V pump (S08) in a 20 L lidded bucket reservoir; no radiator or fans (D-135); 2 × 8 mm × 1/4 barbs; 60 hose clamps; brass flow switch G1/4 NO 1.5-3 L/min; 5 m 8 mm ID braided PVC hose | [product](https://www.amazon.co.uk/gp/product/B07NY2GQ1P) | 20 L bucket £10.00 (owner, Amazon, 15 Nov 2026) + barbs £2.38, clamps £17.89 + flow switch £12.51 (AliExpress) + 8 mm ID hose £8.99 (B&Q marketplace, free delivery) | 51.77 | D-85. D-135: radiator and fans dropped (were £22.05). Flow switch: https://www.aliexpress.com/item/1005010428362103.html (contact rating not stated: check before wiring to a 7i76EU input). Hose: https://www.diy.com/departments/clear-pvc-braided-hose-food-grade-oil-water-fuel-reinforced-pipe-tube-8mm-internal-12mm-external-5m-/5060449706401_BQ.prd . Remove the 6 mm ID tube from the AliExpress basket |
 | S06 | 2 | ISO20 ER16 holders with pull studs | 8 pcs | ISO20-ER16. Pull studs must match the spindle drawbar | [product](https://www.aliexpress.com/item/4000141590118.html) | £6.05 inc VAT each, free shipping (AliExpress; list £22.37) | 48.40 | ISO20-ER16-35L, 0.003 mm. £6.05 may be a new-shopper deal: at list price 8 × £22.37 = £178.96. PULL STUD NOT STATED: must match Jianken. Jianken own holders £37.52-75.03 on the S01 page. DamenCNC Teknomotor €123.50 each |
 | S07 | 2 | ER16 collet set | 1 set | Precision (AA grade or better) 1-10 mm | [product](https://www.aliexpress.com/item/1005005626185405.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | AA ER16 10-piece set. Sizes not listed. AAA set £68.39 |
-| A01 | 2 | ISO20 tool forks (3D printed) | 8 pcs | 3D-printed ISO20 forks from a friend's model, 8 thick, on the umbrella wheel hub (D-250); stand-in modelled (slot 36 for the holder groove, 2 x M5 to the hub disc at r 50 and 58) | [product]() | Owner sourcing (3D printed) | 0.00 | D-58. Print in PETG/ASA/PA for stiffness and heat. Check grip force and holder fit before Stage 2 |
-| A03 | 2 | Small closed-loop stepper + driver (48 V) | 1 set | Indexes the ATC wheel through the A08 3:1 GT2 drive; face down on the bearing plate at X 342 (D-250) | [product](https://www.omc-stepperonline.com/1-axis-closed-loop-stepper-cnc-kit-80ncm-113-29oz-in-nema-17-motor-driver-1-cl42t-s08-v41) | £39.43 (VAT?) + £8.34 DE warehouse (StepperOnline) | 47.77 | 1-CL42T-S08-V41: NEMA 17 0.8 Nm + CL42T 24-48 V. 5 mm shaft |
+| A01 | 2 | ISO20 tool forks (3D printed) | 8 pcs | Owner's fork model (22 Nov 2026), 10 thick, V rib for the 60 deg holder groove; tabs tapered to 45 deg so 8 fit at r 89 (D-255); 1 x M3 x 12 countersunk each into the hub (fork hole 3.8, to confirm) | [product]() | Owner sourcing (3D printed) | 0.00 | D-58. Print in PETG/ASA/PA for stiffness and heat. Check grip force and holder fit before Stage 2 |
+| A03 | 2 | Small closed-loop stepper + driver (48 V) | 1 set | Turns the ATC wheel directly (no reduction, D-254): face up under the motor plate on the wheel axis, Z 0 to 68; wheel shaft bored 5 and grub-screwed onto its 5 mm shaft | [product](https://www.omc-stepperonline.com/1-axis-closed-loop-stepper-cnc-kit-80ncm-113-29oz-in-nema-17-motor-driver-1-cl42t-s08-v41) | £39.43 (VAT?) + £8.34 DE warehouse (StepperOnline) | 47.77 | 1-CL42T-S08-V41: NEMA 17 0.8 Nm + CL42T 24-48 V. 5 mm shaft |
 | A05 | 2 | Tool length setter (wired switch) | 1 pcs | Place not set: the old rack carrier (D-19) is gone with the umbrella wheel (D-250) | [product](https://www.aliexpress.com/item/1005012101891449.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | N96R, 24 V, NC |
-| A06 | 2 | ATC hub disc + bracket | 1 lot | 6082: hub disc Ø128 x 8; bracket (D-250): wall block 60 x 50 x 60, arm 10 x 60 x 182, bearing plate 10 x 220 x 100, top plate Ø120 x 10, 2 posts Ø12 x 45 | [product](https://www.aluminiumwarehouse.co.uk/products/8-mm-6082-aluminium-plate) | 2 × 200 × 200 × 8 (£15.55 each) + 150 × 120 × 10 (£15.00) ex VAT (Aluminium Warehouse) | 55.32 | D-250 (22 Nov 2026): stock list changed, price is for the old 2 x 200 x 200 x 8 + 150 x 120 x 10 and needs re-pricing. Screws not priced: 2 x M6 x 40 (block to the D-251 strip), 4 x M6 x 25 (arm to block), 3 x M5 x 20 (plate to arm), 4 x M10 (bearings), 4 x M6 (posts), 4 x M3 (motor) |
-| A07 | 2 | ATC wheel shaft + 2 bearings | 1 set | Ø20 chrome steel shaft, cut to 122 (Z 45 to 167), + 2 x KFL004 20 mm flange bearings, one on each bracket plate (D-250) | [product](https://www.aliexpress.com/item/1005007995333691.html) | Shaft £11.99 + £2.25 shipping; bearings £7.50 for 2 (AliExpress, logged in) | 21.74 | Bearings: https://www.aliexpress.com/item/1005007098430647.html (under £8: shipping fee only shown in basket). Turn the shaft end to 18 mm for the 60T pulley (A08) |
-| A08 | 2 | ATC wheel drive reduction | 1 set | GT2 belt + pulleys about 3:1 (or a small worm gearbox) for the NEMA 17 | [product](https://www.aliexpress.com/item/32650791423.html) | 20T £0.99 + 60T £3.99 + £3.35 shipping + belt 222 mm £0.99 (AliExpress) | 9.32 | 60T has an 18 mm bore with keyway: turn the shaft end to 18 mm. 20T and belt are 1-per-shopper deals (normal £4.72, £2.74). 222 mm belt gives about 70 mm centres. D-250 (22 Nov 2026): centres are now 142, so the belt is about 366 mm closed (183 teeth), not 222; belt size not chosen or priced |
+| A06 | 2 | ATC hub disc + bracket | 1 lot | 6082 (D-253 to D-255): hub disc 101.5 x 12; wall block 50 x 50 x 50; 2 arms 10 x 78 x 182; motor plate 120 x 10; top plate 120 x 10; 2 posts 12 x 37 | [product](https://www.aluminiumwarehouse.co.uk/products/8-mm-6082-aluminium-plate) | 2 × 200 × 200 × 8 (£15.55 each) + 150 × 120 × 10 (£15.00) ex VAT (Aluminium Warehouse) | 55.32 | D-253 to D-255 (22 Nov 2026): stock list changed again; the price is for the old 2 x 200 x 200 x 8 + 150 x 120 x 10 and needs re-pricing. Screws not priced: 2 x M6 x 40 (block to the D-251 strip), 8 x M6 x 25 (arms to block), 4 x M5 x 20 (motor plate to arms), 2 x M10 (bearing), 4 x M6 x 16 (posts), 4 x M3 x 10 (motor), 8 x M3 x 12 countersunk (forks), 1 x M4 x 6 grub (shaft to motor) |
+| A07 | 2 | ATC wheel shaft + 2 bearings | 1 set | Ø20 chrome steel shaft cut to 91 (Z 80 to 171), lower end bored 5 x 14 for the motor shaft, M4 grub; 1 x KFL004 20 mm flange bearing on the top plate (lower bearing dropped, D-254) | [product](https://www.aliexpress.com/item/1005007995333691.html) | Shaft £11.99 + £2.25 shipping; bearings £7.50 for 2 (AliExpress, logged in) | 21.74 | Bearings: https://www.aliexpress.com/item/1005007098430647.html (pack of 2 priced; only 1 needed now, D-254). The 18 mm pulley end is no longer needed |
+| A08 | 2 | ATC wheel drive reduction | 0 set | Dropped (D-254): the wheel is direct driven | [product](https://www.aliexpress.com/item/32650791423.html) | 20T £0.99 + 60T £3.99 + £3.35 shipping + belt 222 mm £0.99 (AliExpress) | 0.00 | D-254 (22 Nov 2026): not bought. Was GT2 20T/60T and belt |
 | A09 | 2 | ATC wheel index sensor | 1 set | Inductive sensor M8/M12 PNP + home flag | [product](https://www.aliexpress.com/item/1005010648075147.html) | Added to E10 order: £1.54 + £0.88 extra shipping | 2.42 | Bought with E10 (5 sensors) |
 | P01 | 2 | Filter / regulator / dryer | 1 pcs |  | [product](https://www.aliexpress.com/item/1005002589702135.html) | £6.50 inc VAT (AliExpress) | 6.50 | AW2000-02 filter-regulator. No dryer |
 | P02 | 2 | 24 V solenoid valves | 4 pcs | Tool release / taper clean / air blast | [product](https://www.aliexpress.com/item/1005012294513653.html) | £9.49 inc VAT each, free shipping (AliExpress) | 37.96 | 3V1-06 24 V 3/2 NC. Qty 4 (3 + 1 for mist unit) |

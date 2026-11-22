@@ -2,6 +2,20 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC spindle clamp on our Z (D-247 to D-249)
+- `Type_0_v3`, `Z Moving Parts`: the PrintNC 80 mm 3-hole clamp, 2 tram blocks, 4 M6 x 30 + washers, pivot M6 x 12, 4 M6 x 12, 2 M6 x 30 and 4 M8 grub screws added (same components as the PrintNC Z, so they move with our Z slider). Stand-in clamp body hidden.
+- Spindle (Jianken) re-added 5 towards the plate: axis Y 297, nose height unchanged; clamp covers 43 to 122 from the front face.
+- 9 tapped M6 holes cut in the moving plate (feature names `PNC clamp M6 holes 18/14/10`, threads cosmetic). Clash check: only screw-in-thread overlaps, plus washer and grub overlaps that the PrintNC model already has.
+- X18 lists the new screws (unpriced). **Not saved.**
+
+- **D-248:** 16 M5 counterbores (9.5 x 5.5) cut in the moving plate for the block screws (feature `Z block screw counterbores`); M5 x 20 for all, in X03. **Not saved.**
+
+- **D-249:** tram-block screws M6 x 16 (new component `M6x16 Tram Blocks`), holes 12 deep. No clashes beyond thread overlap. **Not saved.**
+
+**Left:** nothing open on the clamp. Then the D-246 list below.
+
+**Exact next step:** owner saves `Type_0_v3`; then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`) and apply the prices to `bom.csv`.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC dual-carriage Z tried, Type 0 Z kept (D-246)
 - Owner asked for the PrintNC dual-carriage Z with the Jianken spindle, without Y braces and with shorter saddles. Then dropped the saddle and brace changes ("Both stay").
 - Tried in `Type_0_v3`: Jianken in the PrintNC clamp fits (spindle 38 closer to the beam, no clashes at the top or bottom of travel). Owner wanted our drive (DFU1605, HM12-60-V, brake motor), but the DFU1605 flange does not fit the 28 gap between the tram plate and the Z plate (9 and 5 deep cuts, only 2 of 6 flange screws fully held).

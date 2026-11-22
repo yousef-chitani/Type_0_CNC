@@ -46,20 +46,20 @@ The frame target was about 200 to 350 kg (requirements). The machine is well und
 ## 5. Cost
 - Phase 1 priced: **£3,963.35 of £4,200, £236.65 left** (C, 20 Nov; unchanged today: the ATC is Phase 2 and the D-251 strip comes from the F07 bar already bought).
 - Unpriced: **G01 beam, G05 roller steel, X18 screws**. M12 and the LiMo 550/650 lines are not re-checked. The price rule allows no guess, so it is **not known whether £236.65 covers them**. This is the next real risk.
-- Phase 2 ATC: A06 needs re-pricing (new stock list), the A08 belt is now about 366 (unpriced), and the ATC screws are unpriced.
+- Phase 2 ATC: A06 needs re-pricing (new stock list, D-253 to D-255), A08 is dropped (direct drive, D-254), and the ATC screws are unpriced.
 
 ## 6. What the ATC forces on Phase 1
-1. **D-251 strip in the tub mould** (right wall front face): must be on the mould drawing (tasks 10/11) before the pour.
-2. **Nothing in front of the right front corner** of the tub up to about 265 forward: the bench top and any front slot bench (D-230) must leave it clear, and the Phase 2 enclosure must reach round it.
+1. **D-251 strip in the tub mould** (now in the floor's front face at X 200, Z -10 to 40, D-253): must be on the mould drawing (tasks 10/11) before the pour.
+2. **Nothing in front of the tub between X 88 and 312** up to about 250 forward (D-253; was the right front corner to X 380): the bench top and any front slot bench (D-230) must leave it clear, and the Phase 2 enclosure must reach round it.
 3. No change to rails, screws, electronics or the order. The 5th driver (Mesa channel 4, D-137) and the 48 V supply check (D-158) stay Phase 2.
 
 ## 7. Open items (most urgent first)
-1. Owner saves `Type_0_v3`: it was saved at the start of this session, so only the D-250 to D-252 changes are unsaved.
+1. Owner saves `Type_0_v3`: the D-253 to D-255 changes (22 Nov, second session) are unsaved.
 2. Price G01, G05, X18; finish the LiMo basket and the Dyfed call (`price-check-task-17.md`). Wave 1 order is 4 Jan 2027.
 3. Front slot (task 24 item 6): size it, and place it to leave the ATC corner free.
 4. Top roller screws in 3 mm walls: check thread engagement or add rivet nuts or through-bolts.
 5. Owner decides the 2 open items in `open-items-sketch.md` (Y screw head, X screw access).
-6. Jianken dimension drawing: spindle mass, nose shape and ISO20 holder sizes (the ATC's 2 and 7 mm gaps depend on them).
-7. Friend's fork model (D-58) to replace the stand-in.
+6. Jianken dimension drawing: spindle mass, nose shape and ISO20 holder sizes (the ATC's 5 and 7 mm gaps depend on them).
+7. Done 22 Nov (D-255): the owner's fork is on the wheel. Left: fork screw M3 or M4, real motor length and encoder (D-254).
 8. Update `requirements.md` (`spec-gaps.md` items 4 to 6) and decide the table-to-nose shortfall (item 3).
 9. The timeline has 35 unhealthy items, the same before and after today's work.
