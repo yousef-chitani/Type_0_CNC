@@ -6,15 +6,17 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
-## 00000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC spindle clamp on our Z (D-247)
+## 00000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC spindle clamp on our Z (D-247, D-248)
 - `Type_0_v3`, `Z Moving Parts`: the PrintNC 80 mm 3-hole clamp, 2 tram blocks, 4 M6 x 30 + washers, pivot M6 x 12, 4 M6 x 12, 2 M6 x 30 and 4 M8 grub screws added (same components as the PrintNC Z, so they move with our Z slider). Stand-in clamp body hidden.
 - Spindle (Jianken) re-added 5 towards the plate: axis Y 297, nose height unchanged; clamp covers 43 to 122 from the front face.
 - 9 tapped M6 holes cut in the moving plate (feature names `PNC clamp M6 holes 18/14/10`, threads cosmetic). Clash check: only screw-in-thread overlaps, plus washer and grub overlaps that the PrintNC model already has.
 - X18 lists the new screws (unpriced). **Not saved.**
 
-**Left:** HGH20 block screw heads under the clamp (rows Z 274 and 306) are not modelled: counterbores or flush heads needed. Tram-block M6 x 12 engage only about 5 (M6 x 16 would give 9). Then the 22 Nov list below.
+- **D-248:** 16 M5 counterbores (9.5 x 5.5) cut in the moving plate for the block screws (feature `Z block screw counterbores`); M5 x 20 for all, in X03. **Not saved.**
 
-**Exact next step:** ask the owner how to seat the block screws under the clamp (counterbore the moving plate, or low-head screws); then the owner saves `Type_0_v3`.
+**Left:** tram-block M6 x 12 engage only about 5 (M6 x 16 would give 9): owner to choose. Then the D-246 list below.
+
+**Exact next step:** owner saves `Type_0_v3`; ask about the tram-block screw length; then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
 
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026: PrintNC dual-carriage Z tried, Type 0 Z kept (D-246)
 - Owner asked for the PrintNC dual-carriage Z with the Jianken spindle, without Y braces and with shorter saddles. Then dropped the saddle and brace changes ("Both stay").
