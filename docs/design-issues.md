@@ -25,7 +25,7 @@ Collected from `HANDOVER.md`, `tasks/README.md`, `machine-assessment.md`, `spec-
 14. Y block screw heads hit the tie-rod nuts by 0.9 (D-212). Claude's pick: DIN 7984 low head M5 x 8. **Decided D-264: ISO 7380; modelled 23 Nov (5th session), clears the nut by 1.35.**
 15. No key access to the X top block screws (D-215), and Y is the same. Claude's pick: fit the blocks first, through the open tube ends. **Decided D-265: blocks first.**
 16. Three holes Claude could not place: Ø16 in the X gantry tube (Y 549, Z 309); Ø10 in the Y chain support (Y 220, Z 39); 2 M5 in the X roller tube 2 below the top angle holes. **Decided D-266: fill. Modelled 23 Nov (5th session): the 2 M5 tube holes are filled. The other two are not holes: the Ø16 is the gantry tube's own R8 inside corner, the Ø10 is the zip-tie channel under the chain support base (links its 4 zip-tie slots). Left as they are.**
-17. X 1610 fill plate and nut plate: still visible. Used with the DFU1605 nuts or not? (Claude checks the fit in the model, then asks)
+17. X 1610 fill plate and nut plate: still visible. Used with the DFU1605 nuts or not? **Decided D-277: kept; they fit the DFU1605 nut. The check found the 2 X top block screws by the nut plate hit the tie-rod nuts by 0.9: D-278, ISO 7380, modelled 23 Nov (6th session).**
 18. X gantry trigger mount: its M6 x 20 is 2.5 short of the tube face.
 19. X BKHM12 riser: its BK12 holes were not checked in D-263 (Y and Y2 were).
 

@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (6th session): X 1610 plates checked, 2 X block screws ISO 7380; not saved
+- Design-issues item 17 checked in `Type_0_v3`: the X DFU1605 flange sits on the X 1610 nut plate face (X -140), its 6 holes (PCD 38) line up, the Ø28.2 bore clears the Ø28 nut body, the fill plate's Ø18 hole clears the Ø16 screw. Same as Y and Y2. **D-277: both plates stay** (owner).
+- The check found 2 X top block screws by the nut plate (Body7, Body8 of `M5x8 X top block screws`, X -162, Y 489 and 521) hit the 2 lower tie-rod nuts by 0.9, as on Y before D-264. **D-278: ISO 7380 M5 x 8** (owner); modelled, head Z 358 to 360.75, 1.35 under the nut (Z 362.1). Clash check of the X nut area: none left (only threads in holes and vendor-internal overlaps). Health 35 before and after.
+- BOM X18: 18 x M5 x 8 plus 6 x ISO 7380 M5 x 8.
+- **Model not saved.** The owner saves `Type_0_v3`.
+
+**Left (model):** D-275 hub, the X BKHM12 riser BK12 holes (item 19), X trigger mount M6 x 20 short (item 18). **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session checks the X BKHM12 riser BK12 holes (design-issues item 19).
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (5th session): D-264 and D-266 modelled, saved
 - The owner had saved `Type_0_v3` with the D-271 follow-up (document open, not modified, at the start).
 - D-264: the 4 Y and Y2 block screws by the nut plate (Body1, Body3 of `M5x8 Y block screws` and `M5x8 Y2 block screws`; X ±334, ±366, Y 409.5) are now ISO 7380 M5 x 8 button heads (Ø9.5, head Z 158 to 160.75, domed). They clear the tie-rod nut (Z 162.1) by 1.35; clash check of all 16 Y block screws: none.
@@ -16,17 +26,6 @@
 **Left (model):** X 1610 plates fit check, D-275 hub, the X BKHM12 riser BK12 holes. **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
 
 **Exact next step:** a session checks the X 1610 fill plate and nut plate fit with the DFU1605 nuts (design-issues item 17) and asks the owner.
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (4th session): Y fixed-end chain support moved 6 lower; hole cores cut; clash check run; saved
-- `Type_0_v3`: `YAxis Cable Chain Fixed End Support:1` (with its zip-tie plate and 4 M5x20 (9)) moved 6 lower (origin Z 55 to 49); its 2 holes now line up with the strip screws M6x12 (6) at Z 56.5 and 71.5. Joints `Rigid 91` (support to `YFrame(Mirror)`, which held it) and `Rigid 230` (strip screw to support, which dragged the screws) are **suppressed**; screws put back at their D-271 place.
-- Casting: the D-271 pocket cuts had left the tapped holes of the parts as casting. Cut out: 3 slivers in the lower strip holes (+X Y520, +X Y220 at Z 54 to 55, -X Y520 at Z 84 to 85; features `Strip pocket hole slivers` / `Remove strip hole slivers (D-271)`) and 20 cores Ø5 x 6 in the 40 x 10 bar holes, Z 97 to 103, which the M6 x 25 hold-down tips hit (`Bar pocket hole cores` / `Remove bar hole cores (D-271)`, 2,356 mm3). Casting 38,630.9 cm3.
-- Clash check, visible bodies below Z 140: no clash left with the casting, the levelling pours or the chain support. The 114 left are screw threads in tap-drill holes, 0.03 mm float of the rails and countersunk heads on the plate top, and older stand-ins (risers, ATC, posts). Health 35 before and after.
-
-**Saved** (owner: "Yes, save it").
-
-**Left (model):** D-264 (ISO 7380 Y screws), D-266 (fill 3 holes; first check the top angle screws at Z 374 have their own holes), X 1610 plates fit check, D-275 hub, the X BKHM12 riser BK12 holes. **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
-
-**Exact next step:** a new session does D-264 and D-266.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
