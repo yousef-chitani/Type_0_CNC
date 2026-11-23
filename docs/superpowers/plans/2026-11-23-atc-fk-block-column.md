@@ -66,13 +66,14 @@
 
 ### Task 5b: Angle column and bent sheet base L (D-299)
 **Interfaces:** replaces the walls in `ATC Column plates (6082)` with one angle body; replaces `ATC Base L (6082)` with `ATC Base L (steel 4, bent)`.
-- [ ] Ask the owner before fixing sizes not in D-299 (angle stock size, screw counts).
-- [ ] Column: remove the far wall and the D-298 joints to it; make the tub-side wall and a -X leg one L body (angle). **-X leg position first:** it sits between the motor side (X 179) and the sensor body under the ear (centre about X 159.4, Y -190.8, edge about X 165.3): about 5.6 total clearance for an 8 leg. Leg ends inside r 58 (an 80 leg on the tub-side wall reaches about r 58, a 70 leg about r 50: trim). Extruded angle root radius against the motor corner and the motor plate corner (R 9 just clears, R 10 does not). The angle's top end milled square (it sets the wheel axis).
-- [ ] Top plate and motor plate joints to both legs (screws; dowels at the top plate as D-298).
-- [ ] Base L in 4 mm sheet: tub upright, U-channel arm (side flanges 20 up, top Z 12), wall upright; corner reliefs; bend radius and minimum flange from the bending service (check by curl). M6 to the strip: no counterbores in 4 mm, heads stand proud, recheck the M6 length against the strip's 2 deep core. Wall-upright M5s: move the Z 0 row up (it sat about 2 from the Z -8 bend). The upright cannot hang to Z -10 below an arm at Z -8: fix the Z layout. Dowels in laser-cut holes do little: ask the owner (reamed holes or none).
-- [ ] Key reach from +X (or -Y) to the coupling clamp and the locknut setscrew (measure).
-- [ ] Static overlap of the changed bodies (as task 6, one body at a time).
-- [ ] Commit (model not saved).
+- [x] Ask the owner before fixing sizes not in D-299 (angle stock size, screw counts).
+- [x] Column: remove the far wall and the D-298 joints to it; make the tub-side wall and a -X leg one L body (angle). **-X leg position first:** it sits between the motor side (X 179) and the sensor body under the ear (centre about X 159.4, Y -190.8, edge about X 165.3): about 5.6 total clearance for an 8 leg. Leg ends inside r 58 (an 80 leg on the tub-side wall reaches about r 58, a 70 leg about r 50: trim). Extruded angle root radius against the motor corner and the motor plate corner (R 9 just clears, R 10 does not). The angle's top end milled square (it sets the wheel axis).
+- [x] Top plate and motor plate joints to both legs (screws; dowels at the top plate as D-298).
+- [x] Base L in 4 mm sheet: tub upright, U-channel arm (side flanges 20 up, top Z 12), wall upright; corner reliefs; bend radius and minimum flange from the bending service (check by curl). M6 to the strip: no counterbores in 4 mm, heads stand proud, recheck the M6 length against the strip's 2 deep core. Wall-upright M5s: move the Z 0 row up (it sat about 2 from the Z -8 bend). The upright cannot hang to Z -10 below an arm at Z -8: fix the Z layout. Dowels in laser-cut holes do little: ask the owner (reamed holes or none).
+- [x] Key reach from +X (or -Y) to the coupling clamp and the locknut setscrew (measure).
+- [x] Static overlap of the changed bodies (as task 6, one body at a time).
+- [x] Commit (model not saved).
+- Done 23 Nov (19th session, D-300): angle 80 x 80 x 8 cut (legs X 168 to 235 and Y -141.8 to -208), root R 6 modelled (the motor allows about R 18, the motor plate R 13 relief allows about R 12); base L upright 70 x 52 with 4 x M5 at 57 x 17 (Z 21/38, above the U flanges); R 4 inside bends and the 20 flange are not confirmed with a bending service.
 
 ### Task 6: Checks
 - [ ] (rerun after task 5b) Static overlap of every ATC body against all visible bodies in X 75 to 325, Y -300 to -15, Z -60 to 200: expect only screws in tapped holes.
