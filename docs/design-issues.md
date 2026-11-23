@@ -34,11 +34,11 @@ Collected from `HANDOVER.md`, `tasks/README.md`, `machine-assessment.md`, `spec-
 21. D-211: HM12-60 Z motor mount and the 442 Z plate. **D-276: ask the seller (message 4).**
 
 ## F. Stand-ins and unknown dimensions
-22. Jianken spindle drawing: mass, nose shape, ISO20 holder sizes. The ATC's 5 and 7 mm gaps depend on them.
+22. Jianken spindle drawing: mass, nose shape, ISO20 holder sizes. The ATC's 5 and 7 mm gaps depend on them. **Spindle drawing and STEP received (D-213); only the ISO20 holder is still a stand-in (owner 23 Nov: keep it until Phase 2, see item 24).**
 23. ATC motor real length and encoder; fork screw M3 or M4. **Fork screw M4, 8-flat hub (D-275); modelled 23 Nov (9th), not saved.**
 24. ATC holders, bearings and collar are still stand-ins (D-252).
-25. Roller steel sizes (D-243): X roller tube 120 x 50 x 3, X roller angles 125 x 50 x 6 and Y braces 75 x 75 are not stock sizes. Choosing stock sizes may move the layout.
-26. ATC bracket print is 80 x 187 x 93: check that it fits the printer bed.
+25. Roller steel sizes (D-243): X roller tube 120 x 50 x 3, X roller angles 125 x 50 x 6 and Y braces 75 x 75 are not stock sizes. Choosing stock sizes may move the layout. **Decided D-281 to D-283: tube 120 x 60 x 3 (top up 10), angles 100 x 50 x 6, braces stay 75 x 50 x 6 (they were never 75 x 75); all stock, G05 priced £78.62. Modelled 23 Nov (10th), not saved.**
+26. ATC bracket print is 80 x 187 x 93: check that it fits the printer bed. **Done: fits the Bambu P1S bed, 256 x 256 x 256 (`printed-parts.md`).**
 
 ## G. Model health and checks still to run
 27. ATC clash check with the **moving** Z (only the static check and moved copies were done).
@@ -50,4 +50,4 @@ Collected from `HANDOVER.md`, `tasks/README.md`, `machine-assessment.md`, `spec-
 31. Z motor mount (task 14): waits on the seller's drawing.
 
 ## Not design, but it limits the design
-- £236.65 left, with G01 beam, G05 roller steel, X18 and X21 screws unpriced; A06 needs re-pricing. Next: LiMo basket and the Dyfed call (`price-check-task-17.md`). Wave 1 is 4 Jan 2027.
+- £158.03 left (total £4,041.97 with G05, 23 Nov), with G01 beam, X18 and X21 screws unpriced; A06 needs re-pricing. Next: LiMo basket and the Dyfed call (`price-check-task-17.md`). Wave 1 is 4 Jan 2027.

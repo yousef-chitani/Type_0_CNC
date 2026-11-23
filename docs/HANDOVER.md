@@ -6,6 +6,21 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (10th session): section F with the owner; D-281 to D-283 roller steel, modelled; not saved
+- `Type_0_v3` was found **saved** with D-275.
+- Section E had nothing the owner could confirm yet (item 20 waits on the rear ATC study D-274, item 21 on the seller), so the owner chose section F.
+- **Item 26 done:** the 80 x 187 x 93 ATC bracket fits the P1S bed (256 cube). **Item 22:** the spindle drawing came in D-213; the ISO20 holder stays a stand-in until Phase 2 (owner).
+- **D-281:** X roller tube 120 x 60 x 3 (stock); the extra 10 goes up (tube Z 355 to 415, X screw axis still Z 380). Moved up 10: top angle, its 8 M6 x 8, D-262 screws #6 to #9, 4 Z plate holes (now Z 384.5 and 408.5). Nut plate and fill plate are now 120 x 60.
+- **D-282:** X roller angles 100 x 50 x 6 (stock); flat legs end at Y 537. 4 rear holes in the top angle and tube top wall moved to Y 521 with their screws; 4 unused rear holes in the bottom angle filled.
+- **D-283:** the Y braces are 75 x 50 x 6 (earlier notes said 75 x 75, wrongly), already stock, unchanged.
+- Clash check: only screws in tapped holes, rails in blocks and vendor internals. Health 35 before and after. Features `D-281 ...`, `D-282 ...` in `XRollers`, `X 1610 Nut Plate`, `X 1610 Fill Plate`, `XRoller Top Angle`, `XRoller Bottom`, `Top angle flange screws M6x8`, `Joint screws added (D-262)`, `Z Fixed Plate`.
+- **BOM:** G05 priced (owner): K I Metals, curl 23 Nov, £65.52 ex VAT, **£78.62** inc VAT, delivery not shown. Total **£4,041.97, £158.03 left**.
+- **Model not saved.** The owner saves `Type_0_v3`.
+
+**Left:** hidden drill guides 8A, 8B, 9A, 9B no longer fit the X roller (redo before printing them). Design-issues item 23 (ATC motor length) and 24 (stand-ins) wait on Phase 2 parts; section G (item 27 ATC clash with moving Z, item 28 Chamfer2).
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session does design-issues item 27 (ATC clash check with the moving Z), or the drill guides if they are needed soon.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (9th session): docs for D-271, D-275 ATC hub modelled; not saved
 - `Type_0_v3` was found **saved** with D-280.
 - **Docs (D-271), committed:** `bom.csv` G06 (8 mm levelling pour, jack screws, no ground stock), X19 now M6 x 25, new **X22** jack screws 12 x M6 x 20 DIN 913 (unpriced), F02 pour quantity (2 x 437.5 cm³, about 1 kg neat resin). `cad/v2/out/assembly/cast_in_features.md` has a new section for the EG tub, with numbers from the model (tub 38.63 L, about 88.8 kg); the old base and portal tables are kept below it as history. `spec-gaps.md` updated. Phase 1 total unchanged, £3,963.35. `bom.csv` is LF in git now (the CRLF note in section 9 is out of date).
@@ -15,16 +30,6 @@
 **Left (model):** none from the list. **Docs:** design-issues sections E and F (owner confirmations, stand-ins); X22 and G06 to price; the jack screw length and positions (D-271) for the owner to confirm.
 
 **Exact next step:** the owner saves `Type_0_v3`; then a session works through design-issues section E (owner confirmations) with the owner in the Q&A tool.
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (8th session): X trigger mount 45 taller (D-280); not saved
-- `Type_0_v3` was found **saved** with D-278 and D-279.
-- Design-issues item 18 checked: the X gantry trigger mount (X 250 to 265, Y 565 to 577.5) and its M6 x 20 target ended at Z 288.5, 46 below the X home sensor tip (Z 334.5, pointing down from the X roller). X could not home. (The "2.5 short" note was not the real fault.)
-- **D-280** (owner: "Taller trigger mount"): mount grown 45 to Z 333.5, screw up 45 (axis Z 328.5), 1 gap to the sensor as on Y. The band under the sensor is clear over the X travel; the X cable chain lies at Y 584 and beyond, clear of the mount. Features `D-280 ...` in `XGantry Trigger Mount` and `M6x20 (5)`. Clash check: only the 2 old screw overlaps. Health 35 before and after.
-- **Model not saved.** The owner saves `Type_0_v3`.
-
-**Left (model):** D-275 hub. **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`. Design-issues sections E and F (owner confirmations, stand-ins).
-
-**Exact next step:** the owner saves `Type_0_v3`; then a session models the D-275 ATC hub (fork screw M4, 8-flat hub), or does the docs list above.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £3,963.35** (budget £4,200, D-127). Not priced yet: G01, G05, X18, G06, X19, X20, X21, X22. No eBay.
+**Phase 1 priced total: £4,041.97** (budget £4,200, D-127). Not priced yet: G01, X18, G06, X19, X20, X21, X22. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -8,13 +8,13 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 |---|---|
 | Frame | £840.59 |
 | Motion | £1,220.03 |
-| Gantry | £0.00 |
+| Gantry | £78.62 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
 | Fixings | £97.60 |
-| **Total** | **£3,963.35** |
+| **Total** | **£4,041.97** |
 
 ## Frame
 
@@ -73,7 +73,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 |---|---|---|---|
 | G01 | Gantry beam: steel SHS 120 × 120 × 8, 775 long | 1 pcs | to price |
 | G03 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed (dropped: D-242) | 2 pcs | £0.00 |
-| G05 | Roller steel: X roller tube, 2 X roller angles, 2 Y roller tubes, 2 Y roller braces | 1 lot | to price |
+| G05 | Roller steel: X roller tube, 2 X roller angles, 2 Y roller tubes, 2 Y roller braces | 1 lot | £78.62 |
 
 ## Spindle
 

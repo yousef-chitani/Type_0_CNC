@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **134 line items, 126 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **134 line items, 127 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -8,7 +8,7 @@ Full list: [bom.csv](bom.csv). **134 line items, 126 priced.** Prices were read 
 |---|---|---|---|
 | Frame | 24 | 23 | £840.59 |
 | Motion | 17 | 17 | £1,220.03 |
-| Gantry | 3 | 1 | £0.00 |
+| Gantry | 3 | 2 | £78.62 |
 | Spindle | 9 | 9 | £1,533.95 |
 | Tool changer | 7 | 7 | £145.14 |
 | Pneumatics | 6 | 6 | £110.22 |
@@ -17,14 +17,14 @@ Full list: [bom.csv](bom.csv). **134 line items, 126 priced.** Prices were read 
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
 | Fixings | 14 | 9 | £97.60 |
-| **All** | **134** | **126** | **£5,377.90** |
+| **All** | **134** | **127** | **£5,456.52** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,377.90**. Not priced yet: G01, G05, X18, G06, X19, X20, X21, X22.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,456.52**. Not priced yet: G01, X18, G06, X19, X20, X21, X22.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £3,963.35 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £4,041.97 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,414.55 |
 
 Lines still TO PRICE: see the list above.
@@ -98,7 +98,7 @@ Lines still TO PRICE: see the list above.
 | M13 | 1 | Z motor mount and fixed bearing HM12-60-V (replaces the Z BK12) | 1 pcs | HM12-60-V: NEMA 24 mount with its own 7001 bearing, replaces the Z BK12 and its bracket (D-207). Holes PCD 70 (49.5 square), motor HOLE SPACING 50 mm (StepperOnline drawing), not 47.1 | [product](https://limobearing.com/) | $19.14 less 10 % (LiMo HM12-60 C7, owner basket) | 13.03 | PROVISIONAL (D-126, D-136): LiMo HM12-60 has 49.5 mm hole spacing (owner, 15 Nov), the motor 50 mm: asked LiMo to drill to 50 (reply 6a). If not, make the mount from the 10 mm M12 plate (task 14). Old: AliExpress £20.63 |
 | G01 | 1 | Gantry beam: steel SHS 120 × 120 × 8, 775 long | 1 pcs | Steel box section cut to 775. Rails on the top and bottom faces, X screw above the top rail, rail seats levelled with epoxy. EI 1.58 MNm² vertical and horizontal, GJ 0.90, about 21 kg | [product](https://kimetals.co.uk/materials/mild-steel/mild-steel-box-section/kim147614) | Not priced: owner to get the price for 775 mm delivered or collected |  | 20 Nov 2026: Dyfed Steels lists 120 x 120 x 8 SHS (27.89 kg/m, so about 21.6 kg for 775; owner saved page, no prices). K I Metals live 20 Nov 2026 (curl, store API): 120 x 120 x 8 £67.05 ex VAT / £80.46 inc for about 1 m, free cutting, delivery to SA2 not shown. Owner: wait for the Dyfed price. D-177 (18 Nov 2026): size changed to 120 × 120 × 8; availability not confirmed. The link and K I Metals price are for the old 150 × 150 × 8. Replaces the Vallder heavy beam (D-162, D-163). K I Metals live page 18 Nov 2026: £90.30 ex VAT (£108.36 inc) with 33.9 kg shown, so about 1 m; price for 890 mm and delivery to SA2 not seen. Phone Dyfed Steels first. Grade does not change stiffness |
 | G03 | 1 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed (dropped: D-242) | 2 pcs | Each on 2 Y HGH20CA blocks at 150 pitch; 15 mm step for the Y nut housing (D-140) | [product](https://jlccnc.com/cnc-machining) | Not needed | 0.00 | D-242 (20 Nov 2026): the PrintNC Y rollers carry the beam (D-172), so no feet. To be redrawn for the SHS 150 × 150 beam (D-164) |
-| G05 | 1 | Roller steel: X roller tube, 2 X roller angles, 2 Y roller tubes, 2 Y roller braces | 1 lot | As modelled in Type_0_v3 (PrintNC, scaled): X roller tube 120 x 50 x 3 x 150; XRoller Bottom and XRoller Top Angle 125 x 50 x 6 x 150; 2 Y roller tubes 75 x 50 x 3 x 150; 2 YRollerBrace angles 75 x 75, 50 long. Only 75 x 50 x 3 is a stock size; the others need a stock size chosen | [product]() | Not priced |  | D-243 (20 Nov 2026): owner: leave unpriced; sizes settled later. Stock seen 20 Nov 2026: K I Metals 120 x 60 x 3 RHS £21.34, 75 x 50 x 3 RHS £13.47, 125 x 75 x 8 angle £32.50, 75 x 75 x 6 angle £16.84 (ex VAT, about 1 m, curl). Dyfed lists 120 x 60 x 3 but not 75 x 50 |
+| G05 | 1 | Roller steel: X roller tube, 2 X roller angles, 2 Y roller tubes, 2 Y roller braces | 1 lot | All stock sizes, mild steel (D-281 to D-283): X roller tube 120 x 60 x 3 RHS x 150; XRoller Bottom and XRoller Top Angle 100 x 50 x 6 x 150; 2 Y roller tubes 75 x 50 x 3 RHS x 150; 2 YRollerBrace angles 75 x 50 x 6, 75 long. One about-1 m length of each size covers it | [product](https://kimetals.co.uk/materials/mild-steel/mild-steel-box-section/kim147765) | 120 x 60 x 3 RHS £21.34 + 100 x 50 x 6 angle £16.82 + 75 x 50 x 3 RHS £13.47 + 75 x 50 x 6 angle £13.89 = £65.52 ex VAT, £78.62 inc VAT (about 1 m each, curl store API; delivery to SA2 not shown) | 78.62 | D-281 to D-283 (23 Nov 2026): owner chose stock sizes and added G05 to the total. Other links: 100 x 50 x 6 https://kimetals.co.uk/materials/mild-steel/mild-steel-angle-iron/kim124552 ; 75 x 50 x 3 https://kimetals.co.uk/materials/mild-steel/mild-steel-box-section/kim42393 ; 75 x 50 x 6 https://kimetals.co.uk/materials/mild-steel/mild-steel-angle-iron/kim147642. Cutting and delivery charges not seen. Dyfed (no online prices) may be cheaper locally |
 | S01 | 2 | Jianken JGL-80/2.2R24-20 ATC spindle | 1 pcs | 2.2 kW / 24000 rpm / 400 Hz / 220 V / about 0.87 Nm / ISO20 / water-cooled / 80 mm body. Order the clamp/unclamp sensor variant (PNP) | [product](https://www.alibaba.com/product-detail/Jianken-JGL-80-2-2KW-24000RPM_1601249825246.html) | £937.79 (VAT?) + £52.78 shipping (Alibaba, 1-4 pcs) | 990.57 | Owner is contacting Jianken and ordering. Drawing confirms JGL-80/2.2R24, 220 V, 400 Hz, ISO20-ER16, water-cooled. Sensors: clamped/released + temperature, PNP 24 V. VFD not included. Pull stud not shown. Jianken quote 18 Nov 2026: $1,200 with 1 ISO20 holder and 1 ER16 collet + $260 DDP UK = $1,460, 0.87 Nm and PNP 24 V confirmed, about 8 kg, 6 working days + about 15 working days shipping. Import VAT and pull stud drawing still to confirm; price_gbp not updated until then. Import VAT likely on top. Delivery 18 Nov-19 Dec. Alt AliExpress with 2.2 kW VFD £1402.79 inc VAT + £140.15: https://www.aliexpress.com/item/1005010706946690.html |
 | S08 | 1 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 1 pcs | BST2.2C-80-24K: 2.2 kW, 220 V, 400 Hz, 24,000 rpm, 0.88 Nm, ER20, Ø80 × 230 (+52 nose), 5.5 kg, runout 0.005 mm, bearings 2 × 7005C + 2 × 7002C P4 DT. Kit: Huanyang 2.2 kW VFD (220 V 1-ph in, 0-400 Hz), 80 mm clamp, 75 W 220 V pump + 5 m hose, ER20 collets 4/6/8/10/12 mm + 1/8, 1/4, 1/2 in | [product](https://www.aliexpress.com/item/32253760001.html) | £217.39 + £100.77 shipping (owner, AliExpress), delivery 8 Jan | 318.16 | D-78. Known maker with stated runout and P4 bearings. Shipping is heavy (about 9 kg kit): a UK/EU-stock seller may be cheaper or faster |
 | S09 | 1 | ER20 collet set | 1 set | 13 × ER20 collets 1-13 mm, AA 0.008 mm, boxed + ER20A spanner | [product](https://www.aliexpress.com/item/1005010595086817.html) | Collets £27.79 + spanner £3.25 (AliExpress, logged in) | 31.04 | Small sizes (1-3 mm) not in the kit collets: keep for small tools. Spanner may come with the kit: check |

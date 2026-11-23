@@ -4,10 +4,10 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/hopeful-sagan-28twty` (continues `claude/charming-cori-349jm7`). Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-280).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-283).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). When Claude edits it, a hook (`tools/bom_hook.py`) runs the 5 generators automatically and reports only errors. After a hand edit, set `PYTHONUTF8=1` and run `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
-- **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£3,963.35, £236.65 left** (20 Nov 2026 repricing, D-242 to D-245: G03 dropped; G01 beam, G05 roller steel and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
+- **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£4,041.97, £158.03 left** (20 Nov 2026 repricing, D-242 to D-245, plus G05 roller steel £78.62 on 23 Nov, D-281 to D-283: G03 dropped; G01 beam and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
 - Write plainly and briefly. Do not merge branch `claude/awesome-ramanujan-by9kds` (old design).
 
 ## State in five lines
@@ -20,6 +20,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 - D-279 (23 Nov, 7th): X BKHM12 riser BK12 holes tapped M6 x 22 as D-263; saved with D-278.
 - D-280 (23 Nov, 8th): X gantry trigger mount 45 taller and its M6 x 20 target 45 higher, so the X home sensor sees it (was 46 short); saved.
 - 23 Nov, 9th: D-271 docs done (BOM G06, X19 M6 x 25, X22 jack screws, pour quantity, tub cast-in features, spec-gaps). D-275 ATC hub modelled (8 flats, M4 fork screws, index flag and sensor at 202.5°); not saved.
+- 23 Nov, 10th: section F with the owner. D-281 X roller tube 120 x 60 x 3 (top up 10), D-282 X roller angles 100 x 50 x 6, D-283 Y braces stay 75 x 50 x 6: all stock, G05 priced £78.62; modelled, not saved. Item 26 done (P1S bed fits).
 - Background, only if a task needs it: `docs/HANDOVER.md`.
 
 ## Tasks
