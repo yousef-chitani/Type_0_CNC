@@ -6,6 +6,13 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (2nd session): takeover, outstanding design and layout issues listed
+- New `docs/design-issues.md`: 31 open design and layout items in 8 groups (structure, spec misses, layout not yet modelled, fastener questions, proposals waiting for confirmation, stand-ins, model checks, blocked work). No CAD or decision changes.
+
+**Left:** everything in `docs/design-issues.md`. Biggest risks: stiffness margin (about 5 µm left, rollers, 3 mm wall screws and the printed PETG risers not checked); the front slot and the ATC keep-out not modelled; the wall-plate flatness spec; the unpriced lines against £236.65.
+
+**Exact next step:** owner answers `docs/cad-cleanup-owner-items.md` sections 2 and 3 and `open-items-sketch.md` items 1 and 2 (items 14 to 17 in `design-issues.md`). Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026: BK12 riser holes and NEMA 24 plate motor holes redrawn as tapped (D-263); model saved
 - Owner (Q&A): all 4 BK12 holes per riser tapped, not only the X ±373 pair (the X ±327 pair hold PrintNC's M6 x 50, ending at Z 136); 22 deep; plate holes M5 through.
 - `Type_0_v3`, Y and Y2 BKHM12 risers: 4 holes each tapped M6, drill 5.0 x 22 (Z 155 to 133), cosmetic thread. 3 NEMA 24 plates: 4 motor holes each tapped M5, drill 4.2 through, cosmetic thread. Each old hole had a square void inside (PrintNC STEP artefact); plugged by base feature + combine-join, re-cut by base feature + combine-cut (the hole and extrude commands found no target body in these parts). Outlines and volumes checked.
@@ -14,15 +21,6 @@
 **Left:** the 3 holes Claude could not place and the X 1610 fill and nut plates (`docs/cad-cleanup-owner-items.md` sections 2 and 3). X21 and X18 pricing. The X BKHM12 riser was not in this task (its BK12 holes not checked). From before: ATC clash check with the moving Z, A06 re-pricing, motor length, fork screw M3 or M4, plate flatness spec, mould drawing, mass.
 
 **Exact next step:** owner answers sections 2 and 3 of `docs/cad-cleanup-owner-items.md`. Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
-
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (5th session): missing joint screws modelled (D-262); model saved
-- Owner: "Yes, model them" (the joints listed in `docs/cad-cleanup-owner-items.md` section 1).
-- `Type_0_v3`: new top-level component `Joint screws added (D-262)` (one base feature): 112 screws + 2 M10 nuts. Axes snapped to the exact hole centres; heads on the counterbore floors found by ray. Sizes and counts in D-262. Clash check: only threads in tapped holes and the known 0.03 rail seat. Timeline 35 unhealthy before and after. **Saved.**
-- BOM: new line X21 (M6 x 40, M5 x 16, M5 x 6, M6 x 45, not priced); the rest fall under X03, X11, X14, X18, X19, A06.
-
-**Left:** riser holes for the BK12 screws drawn Ø6.1 (tap M6) and the NEMA 24 plate motor holes drawn Ø5.0 (tap M5): change the hole drawings or the screws. The 3 holes Claude could not place and the X 1610 fill and nut plates (`docs/cad-cleanup-owner-items.md` sections 2 and 3). X21 and X18 pricing. From before: ATC clash check with the moving Z, A06 re-pricing, motor length, fork screw M3 or M4, plate flatness spec, mould drawing, mass.
-
-**Exact next step (owner said "Yes, redraw them", 22 Nov):** new session redraws as tapped holes in `Type_0_v3`: the 2 BK12 screw holes in each of the Y and Y2 BKHM12 risers (X ±373, Y 579 and 592, now Ø6.1 through: tap M6, about 15 deep from the top, Z 155 down; the M6 x 40 ends at Z 146) and the 4 motor holes in each of the 3 NEMA 24 plates (now Ø5.0: tap M5, drill 4.2). Edit the hole features in the riser and plate components (or delete-face and re-cut), check health stays 35, re-run the clash check of `Joint screws added (D-262)`, record D-263, save. Then owner answers sections 2 and 3 of `docs/cad-cleanup-owner-items.md`. Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

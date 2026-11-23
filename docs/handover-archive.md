@@ -2,6 +2,15 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (5th session): missing joint screws modelled (D-262); model saved
+- Owner: "Yes, model them" (the joints listed in `docs/cad-cleanup-owner-items.md` section 1).
+- `Type_0_v3`: new top-level component `Joint screws added (D-262)` (one base feature): 112 screws + 2 M10 nuts. Axes snapped to the exact hole centres; heads on the counterbore floors found by ray. Sizes and counts in D-262. Clash check: only threads in tapped holes and the known 0.03 rail seat. Timeline 35 unhealthy before and after. **Saved.**
+- BOM: new line X21 (M6 x 40, M5 x 16, M5 x 6, M6 x 45, not priced); the rest fall under X03, X11, X14, X18, X19, A06.
+
+**Left:** riser holes for the BK12 screws drawn Ø6.1 (tap M6) and the NEMA 24 plate motor holes drawn Ø5.0 (tap M5): change the hole drawings or the screws. The 3 holes Claude could not place and the X 1610 fill and nut plates (`docs/cad-cleanup-owner-items.md` sections 2 and 3). X21 and X18 pricing. From before: ATC clash check with the moving Z, A06 re-pricing, motor length, fork screw M3 or M4, plate flatness spec, mould drawing, mass.
+
+**Exact next step (owner said "Yes, redraw them", 22 Nov):** new session redraws as tapped holes in `Type_0_v3`: the 2 BK12 screw holes in each of the Y and Y2 BKHM12 risers (X ±373, Y 579 and 592, now Ø6.1 through: tap M6, about 15 deep from the top, Z 155 down; the M6 x 40 ends at Z 146) and the 4 motor holes in each of the 3 NEMA 24 plates (now Ø5.0: tap M5, drill 4.2). Edit the hole features in the riser and plate components (or delete-face and re-cut), check health stays 35, re-run the clash check of `Joint screws added (D-262)`, record D-263, save. Then owner answers sections 2 and 3 of `docs/cad-cleanup-owner-items.md`. Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (4th session): one-piece printed ATC bracket modelled (D-260); CAD clean-up of loose screws and unused holes (D-261); model saved
 - Owner (Q&A): save the model first (done, then saved again at the end); clean visible fasteners only (hidden PrintNC leftovers stay); fill unused holes in our parts, leave vendor parts; D-259 proposals confirmed (D-260).
 - `Type_0_v3`, `ATC Wheel (Phase 2)`: base features edited in place. `ATC Bracket (PETG print, top plate 6082)` now holds one PETG body (block, arms 15, motor plate 15, Z 68 to 83, about 120 cm³) and the top plate (post holes at X 150/250). Posts Ø12 x 32 at X 150/250. Fasteners: 8 M6 x 25 arm and 4 M5 x 20 motor-plate screws gone; post screws M6 x 25 (bottom) and M6 x 16 (top) at the new X. Motor M3 x 10 kept (counterbores 9 deep). Interference: only the 2 M6 x 40 in the tapped strip.
