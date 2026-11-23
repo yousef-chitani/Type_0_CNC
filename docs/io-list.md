@@ -1,5 +1,7 @@
 # I/O list (draft)
 
+> **Out of date (old fixed-gantry draft with a rack slide).** The live pin map is `docs/electrical.md` section 4: step/dir 0 X, 1 Y1, 2 Z, 3 Y2, 4 ATC wheel (Phase 2); Y2 home IN15, Y2 drive alarm IN16 (D-284). This file is kept only for the signal counts.
+
 Board: **Mesa 7i76EU** (D-31). Pin numbers will be assigned after checking the 7i76EU manual.
 
 ## Step/dir channels

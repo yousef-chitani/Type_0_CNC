@@ -3,6 +3,8 @@
 Config folder: [`linuxcnc/type0/`](../linuxcnc/type0/). LinuxCNC **2.9** (tested on 2.9.10), AXIS screen, mm.
 Decisions: D-92. Items marked **CHECK** must be confirmed on the hardware.
 
+> **The config is still the old 3-joint machine (X, Y, Z, fixed gantry).** The moving-gantry machine has two Y motors (D-137): step/dir 3 = Y2, Y2 home IN15, Y2 drive alarm IN16 (D-284). The travel and home positions below (X 570, Y 250) are also the old machine's; `Type_0_v3` gives X 430, Y 385 of spindle travel (D-233). The files are changed in task 19, where the simulator can be run (D-285); the list of changes is in `docs/tasks/19-linuxcnc-config-after-the-bench-tests.md`.
+
 ## 1. What is in the folder
 
 | File | What |

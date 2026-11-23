@@ -83,7 +83,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | S09 | ER20 collet set | 1 set | £31.04 |
 | S02 | VFD (included in the G-Penny kit, S08) | 1 pcs | £0.00 |
 | S03 | 80 mm spindle clamp (included in S08) | 1 pcs | £0.00 |
-| S04 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + 3 motors) | 4 × 5 m | £76.12 |
+| S04 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + motors) | 4 × 5 m | £76.12 |
 | S05 | Spindle cooling loop (DIY) | 1 pcs | £51.77 |
 
 ## Electronics

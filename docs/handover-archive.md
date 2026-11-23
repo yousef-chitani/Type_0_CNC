@@ -2,6 +2,16 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (9th session): docs for D-271, D-275 ATC hub modelled; not saved
+- `Type_0_v3` was found **saved** with D-280.
+- **Docs (D-271), committed:** `bom.csv` G06 (8 mm levelling pour, jack screws, no ground stock), X19 now M6 x 25, new **X22** jack screws 12 x M6 x 20 DIN 913 (unpriced), F02 pour quantity (2 x 437.5 cm³, about 1 kg neat resin). `cad/v2/out/assembly/cast_in_features.md` has a new section for the EG tub, with numbers from the model (tub 38.63 L, about 88.8 kg); the old base and portal tables are kept below it as history. `spec-gaps.md` updated. Phase 1 total unchanged, £3,963.35. `bom.csv` is LF in git now (the CRLF note in section 9 is out of date).
+- **D-275 modelled** (owner, Q&A: "Down, hub tapped M4", "202.5°, r 44"): hub with 8 flats 101.6 across (corners Ø110), holes Ø3.3 x 10 tapped M4 (cosmetic threads), fork holes opened to Ø4.5 with a Ø8.5 countersink, 8 x M4 x 12 countersunk screws (replacing the M3s), index flag and LJ12A3 sensor rotated to 202.5°, and the top plate sensor hole moved with them. Features `D-275 ...` in `ATC Shaft and Hub`, `ATC Forks`, `ATC Fasteners` (base feature edited), `ATC Drive`, `ATC Bracket`. Clash check of the wheel: only screw threads and a 0.01 contact band at each fork step (the step measures 50.79 from the centre). Health 35 before and after. Docs: `decisions.md` D-275, `atc-wheel.md`, BOM A01 and A06, design-issues item 23.
+- **Model not saved.** The owner saves `Type_0_v3`.
+
+**Left (model):** none from the list. **Docs:** design-issues sections E and F (owner confirmations, stand-ins); X22 and G06 to price; the jack screw length and positions (D-271) for the owner to confirm.
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session works through design-issues section E (owner confirmations) with the owner in the Q&A tool.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (8th session): X trigger mount 45 taller (D-280); not saved
 - `Type_0_v3` was found **saved** with D-278 and D-279.
 - Design-issues item 18 checked: the X gantry trigger mount (X 250 to 265, Y 565 to 577.5) and its M6 x 20 target ended at Z 288.5, 46 below the X home sensor tip (Z 334.5, pointing down from the X roller). X could not home. (The "2.5 short" note was not the real fault.)

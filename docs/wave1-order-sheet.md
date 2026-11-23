@@ -41,7 +41,7 @@ Generated from `docs/bom.csv` by `tools/gen_wave1_sheet.py`: edit the BOM, not t
 | ☐ | E18 | Cabinet filter fan + exhaust grille (9803 series) | 1 set | Fan £7.41 + £9.93 shipping, grille £4.99 (AliExpress) | 22.33 | 2026-11-08 | [page](https://www.aliexpress.com/item/1005003027013500.html) |  |
 | ☐ | E21 | Reset button 22 mm green (in your basket) | 1 pcs | £4.25 inc VAT (AliExpress basket, Sweideer) | 4.25 | 2026-11-08 | [page](https://www.aliexpress.com/item/1005006872683640.html) |  |
 | ☐ | E24 | USB-RS485 adapter for the VFD link | 1 pcs | £13.59 inc VAT, free shipping (AliExpress, logged in; Waveshare industrial USB TO RS485, option FT232RL version) | 13.59 | 2026-11-08 | [page](https://www.aliexpress.com/item/1005008217229755.html) | Photos must show A+/B-/GND screw terminals (open question 1) |
-| ☐ | S04 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + 3 motors) | 4 × 5 m | £19.03 each inc VAT, free shipping (AliExpress) | 76.12 | 2026-11-08 | [page](https://www.aliexpress.com/item/32971008305.html) |  |
+| ☐ | S04 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + motors) | 4 × 5 m | £19.03 each inc VAT, free shipping (AliExpress) | 76.12 | 2026-11-08 | [page](https://www.aliexpress.com/item/32971008305.html) |  |
 | ☐ | S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 1 pcs | £217.39 + £100.77 shipping (owner, AliExpress), delivery 8 Jan | 318.16 | 2026-11-07 | [page](https://www.aliexpress.com/item/32253760001.html) | Re-check the price (£217.39 + shipping); add to the basket (open question 2) |
 
 ## LiMo (DDP sea, code 10OFF): £575.95

@@ -7,7 +7,7 @@ Source for all Mesa details: **7I76EU manual** (owner-supplied PDF). Items marke
 ```
 13 A plug (fused 13 A) ──► 2-pole main isolator (E17)
    ├─► MCB C16 ──► EMC filter (E09) ──► contactor pole 1 (L) + pole 2 (N) ──► VFD (S02) ──► spindle
-   ├─► MCB C6  ──► contactor pole 3 (L) ──► 48 V PSU SDR-480-48 (E04) ──► 3 × CL57T drives
+   ├─► MCB C6  ──► contactor pole 3 (L) ──► 48 V PSU SDR-480-48 (E04) ──► 4 × CL57T drives (X, Y1, Y2, Z; D-137, D-284)
    └─► MCB C6  ──► 24 V PSU HDR-150-24 (E05)  [ALWAYS ON: never through the contactor]
                 │   ──► cabinet filter fan 230 V (E18)
                 └─► pump relay contact (E23) ──► coolant pump 220 V (S08 kit)
@@ -17,7 +17,7 @@ PC + monitor: own plug (or the third C6 MCB).
 - **24 V rail (always on):** 7I76EU field + logic power, safety relay, contactor coil, sensors, Z brake, pump relay coil, flow switch.
 - **The 7I76EU field power (VFIELD) must come straight from the PSU.** A fuse is OK. A switch, relay or contactor is not (manual: VFIELD ramp < 10 V/ms).
 - **13 A plug note:** a single-phase VFD draws more input current than the spindle's output power suggests. Normal cuts are fine. If sustained full-power cutting blows the plug fuse, move to a 16 A circuit (D-91).
-- 24 V budget (Phase 1): Mesa about 0.1 A, sensors 4 × 15 mA, contactor coil about 0.1 A, Z brake 0.19 A (4.5 W), fans about 0.2 A, relay coil about 20 mA, safety relay about 0.1 A ⇒ **under 1 A** of the 6.25 A available. Phase 2 solenoids add about 0.6 A.
+- 24 V budget (Phase 1): Mesa about 0.1 A, sensors 5 × 15 mA, contactor coil about 0.1 A, Z brake 0.19 A (4.5 W), fans about 0.2 A, relay coil about 20 mA, safety relay about 0.1 A ⇒ **under 1 A** of the 6.25 A available. Phase 2 solenoids add about 0.6 A.
 
 ## 2. Safety chain (hardwired, D-35)
 
@@ -62,9 +62,11 @@ Logic power: +24 V to **TB3-21/22**, 0 V to **TB3-23/24** (on-card regulator; bo
 | Channel | Axis | STEP− / STEP+ | DIR− / DIR+ |
 |---|---|---|---|
 | 0 | X | 2 / 3 | 4 / 5 |
-| 1 | Y | 8 / 9 | 10 / 11 |
+| 1 | Y1 | 8 / 9 | 10 / 11 |
 | 2 | Z (brake motor) | 14 / 15 | 16 / 17 |
-| 3 | *Phase 2: ATC wheel* | 20 / 21 | 22 / 23 |
+| 3 | Y2 (D-137, D-284) | 20 / 21 | 22 / 23 |
+Channel 4 (*Phase 2: ATC wheel*, D-137) is on TB3: **CHECK** its pin numbers in the 7I76EU manual.
+
 Wire STEP+→PUL+, STEP−→PUL−, DIR+→DIR+, DIR−→DIR− at each driver, using screened twisted pairs (GND pins 1, 7, 13, 19 to the screen at the cabinet end only).
 
 ### TB3: logic power (RS-485 not used in Phase 1, D-92)
@@ -85,11 +87,11 @@ Inputs are **sinking** (they read a positive voltage). The PNP sensors connect d
 | Pin | I/O | Function | Device |
 |---|---|---|---|
 | 1 | IN0 | X home | LJ12A3-4-Z/BY (brown +24, blue 0 V, black → IN) |
-| 2 | IN1 | Y home | LJ12A3 |
+| 2 | IN1 | Y1 home | LJ12A3 |
 | 3 | IN2 | Z home | LJ12A3 |
 | 4 | IN3 | Machine power OK (e-stop chain) | contactor aux NO from +24 V |
 | 5 | IN4 | X drive alarm | CL57T ALM (CHECK polarity, invert in HAL if needed) |
-| 6 | IN5 | Y drive alarm | CL57T ALM |
+| 6 | IN5 | Y1 drive alarm | CL57T ALM |
 | 7 | IN6 | Z drive alarm | CL57T ALM |
 | 8 | IN7 | Coolant flow OK | flow switch from +24 V (CHECK contact rating) |
 | 9 | IN8 | Tool length setter | *Phase 2 (A05)* |
@@ -99,8 +101,8 @@ Inputs are **sinking** (they read a positive voltage). The PNP sensors connect d
 | 13 | IN12 | Tool released | *Phase 2* |
 | 14 | IN13 | ATC wheel index | *Phase 2 (A09)* |
 | 15 | IN14 | ATC wheel drive alarm | *Phase 2 (A03)* |
-| 16 | IN15 | spare | |
-| 17 | OUT0 | Drive enable (X, Y, Z ENA in parallel) | CL57T ENA (CHECK input voltage and logic) |
+| 16 | IN15 | Y2 home (D-284) | LJ12A3 |
+| 17 | OUT0 | Drive enable (X, Y1, Y2, Z ENA in parallel) | CL57T ENA (CHECK input voltage and logic) |
 | 18 | OUT1 | Z brake release | via safety relay 23-24 (D-93) to the brake coil 24 V, 0.19 A |
 | 19 | OUT2 | Coolant pump | interface relay coil (E23) |
 | 20 | OUT3 | spare | was the radiator fans: dropped (D-135) |
@@ -110,7 +112,7 @@ Inputs are **sinking** (they read a positive voltage). The PNP sensors connect d
 | 24 | OUT7 | ATC wheel drive enable | *Phase 2* |
 
 ### TB5: inputs 16–31, outputs 8–15
-All spare for later (probe, pendant, Phase 2 additions).
+IN16: **Y2 drive alarm** (CL57T ALM, D-284). The rest is spare for later (probe, pendant, Phase 2 additions).
 
 ## 5. Drives (CL57T V4.1)
 - Power: 48 V from the SDR-480-48, each drive with its own pair of wires back to the PSU terminals.
@@ -144,7 +146,7 @@ All spare for later (probe, pendant, Phase 2 additions).
 1. Top: VFD (hot; vents clear above it), filter fan exhaust grille.
 2. DIN rail 1: main isolator, 3 MCBs, EMC filter, contactor, pump relay.
 3. DIN rail 2: 24 V PSU, 48 V PSU (or 48 V on the back plate), safety relay, terminal blocks (24 V, 0 V, PE).
-4. Back plate: 7I76EU on standoffs, 3 CL57T drives.
+4. Back plate: 7I76EU on standoffs, 4 CL57T drives.
 5. Bottom: cable glands (gland plate), filter fan intake.
 - Keep mains and spindle wiring on one side, signal wiring on the other. Cross at right angles.
 

@@ -68,6 +68,18 @@ Three spacers fill the gap at the Y rollers. They are modelled in `Type_0_v3`. T
 
 The M6 x 30 roller screws (X12) pass through them.
 
+## Commissioning parts with tapped holes (D-244, D-272, D-287)
+
+The PrintNC red parts are printed PETG to get the mill running; its first job is to cut aluminium replacements (or they come from JLC). They carry the ballscrew thrust, and the BK12 risers and NEMA 24 plates have M6 and M5 holes tapped straight into the print (D-263, D-279), so they print stronger than the parts above. The earlier note "don't print motor mounts" is overruled for these parts only, as commissioning parts (D-272).
+
+| Parts | Material | Settings |
+|---|---|---|
+| BK12/HM12 and BF12 risers, NEMA 24 motor plates, X and Y nut plates and fill plates | PETG | 0.2 mm layers, **6 walls**, **50% gyroid** infill, 5 top and 5 bottom layers |
+
+- Tapped holes: 6 walls of 0.4 mm give about 2.4 mm of solid plastic round each hole, so the tap cuts walls, not infill. Tap by hand, slowly, and do not over-tighten (no torque figure for PETG threads).
+- Lay each part so the bolt loads press layers together rather than pull them apart, where the shape allows.
+- These parts are not checked for stiffness (D-272). Replace them with aluminium as soon as the mill can cut it.
+
 ## Re-generating
 ```
 python cad/v2/printed_parts.py

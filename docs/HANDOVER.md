@@ -6,6 +6,18 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (11th session): Gemini review checked; docs fixed (D-284 to D-287)
+- The owner pasted a review of the repo by Gemini (8 points, at commit `db206e3`). Checked each against the repo. Point 2 (roller steel) was already done in D-281 to D-283; point 4 (ATC shaft on one bearing) is the risk the owner accepted in D-254; the rest hold.
+- **D-284:** Y2 on the 7I76EU with no pin moved: step/dir 3 = Y2, ATC to channel 4 on TB3 (pins to check), Y2 home IN15, Y2 alarm IN16 (TB5). `electrical.md` updated (4 CL57T drives); `io-list.md` marked out of date.
+- **D-285:** LinuxCNC config left at 3 joints (no LinuxCNC on this PC to run the 23 simulator checks). Task 19 step 2 lists the exact changes (trivkins `XYZY`, `HOME_SEQUENCE = -1` on both Y joints, nets, fault input, `Type_0_v3` travel, simulator checks). `linuxcnc.md` says the config is out of date.
+- **D-286:** S04 stays 4 x 5 m; its note says 5 runs now, decide when the motor cables are measured. Total unchanged, **£4,041.97, £158.03 left**.
+- **D-287:** PETG commissioning parts (risers, motor plates, nut and fill plates): 6 walls, 50% gyroid, in `printed-parts.md`.
+- Stale lines fixed: `README.md` (moving gantry, `Type_0_v3`), `tasks/README.md` state lines, key-files row for `cad/v2/assembly.py` (superseded).
+
+**Left from the review:** (1) task 26: the spindle reaches only Y 292 to 297 and the tub runs to Y 653, so a rear wheel needs longer Y travel or sits behind the plate under the gantry; check this first. (3) Task 18: say how each wall-top plate is pulled down onto its jack screws and checked with the straightedge, and how the 8 mm gap is dammed, vented and poured without air. (4) Phase 2: a 6804 bearing in the ATC motor plate (then the motor joint needs some give). (6) Budget: G01, G06, X18 to X22 unpriced against £158.03; one steel order, one screw order. Also from the 10th session: owner saves `Type_0_v3`; drill guides 8A, 8B, 9A, 9B; design-issues item 27.
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session does the Y reach check for task 26 (can the spindle reach a rear wheel at all), before any other rear ATC work.
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (10th session): section F with the owner; D-281 to D-283 roller steel, modelled; not saved
 - `Type_0_v3` was found **saved** with D-275.
 - Section E had nothing the owner could confirm yet (item 20 waits on the rear ATC study D-274, item 21 on the seller), so the owner chose section F.
@@ -21,16 +33,6 @@
 
 **Exact next step:** the owner saves `Type_0_v3`; then a session does design-issues item 27 (ATC clash check with the moving Z), or the drill guides if they are needed soon.
 
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (9th session): docs for D-271, D-275 ATC hub modelled; not saved
-- `Type_0_v3` was found **saved** with D-280.
-- **Docs (D-271), committed:** `bom.csv` G06 (8 mm levelling pour, jack screws, no ground stock), X19 now M6 x 25, new **X22** jack screws 12 x M6 x 20 DIN 913 (unpriced), F02 pour quantity (2 x 437.5 cm³, about 1 kg neat resin). `cad/v2/out/assembly/cast_in_features.md` has a new section for the EG tub, with numbers from the model (tub 38.63 L, about 88.8 kg); the old base and portal tables are kept below it as history. `spec-gaps.md` updated. Phase 1 total unchanged, £3,963.35. `bom.csv` is LF in git now (the CRLF note in section 9 is out of date).
-- **D-275 modelled** (owner, Q&A: "Down, hub tapped M4", "202.5°, r 44"): hub with 8 flats 101.6 across (corners Ø110), holes Ø3.3 x 10 tapped M4 (cosmetic threads), fork holes opened to Ø4.5 with a Ø8.5 countersink, 8 x M4 x 12 countersunk screws (replacing the M3s), index flag and LJ12A3 sensor rotated to 202.5°, and the top plate sensor hole moved with them. Features `D-275 ...` in `ATC Shaft and Hub`, `ATC Forks`, `ATC Fasteners` (base feature edited), `ATC Drive`, `ATC Bracket`. Clash check of the wheel: only screw threads and a 0.01 contact band at each fork step (the step measures 50.79 from the centre). Health 35 before and after. Docs: `decisions.md` D-275, `atc-wheel.md`, BOM A01 and A06, design-issues item 23.
-- **Model not saved.** The owner saves `Type_0_v3`.
-
-**Left (model):** none from the list. **Docs:** design-issues sections E and F (owner confirmations, stand-ins); X22 and G06 to price; the jack screw length and positions (D-271) for the owner to confirm.
-
-**Exact next step:** the owner saves `Type_0_v3`; then a session works through design-issues section E (owner confirmations) with the owner in the Q&A tool.
-
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
 - **Only prices confirmed from a live page** (or given by the owner), with the date. Never estimate prices.
@@ -44,7 +46,7 @@
 ## 8. Key files
 | File | What |
 |---|---|
-| `docs/assembly.md`, `cad/v2/assembly.py`, `cad/v2/out/assembly/` | **Full CAD assembly**: STEP for Fusion, castings, cast-in features, views, data |
+| `docs/assembly.md`, `cad/v2/assembly.py`, `cad/v2/out/assembly/` | **Old** CadQuery assembly of the fixed-gantry design: **superseded by the Fusion 360 model `Type_0_v3`** (D-137, D-183). `cad/v2/out/assembly/cast_in_features.md` has a current section for the EG tub |
 | `cad/vendor/` | Manufacturer STEP files (and the Z motor PDF) used by the assembly |
 | `docs/decisions.md` | Decision log D-01 … D-113 |
 | `docs/open-questions.md` | What's still open, in priority order |
