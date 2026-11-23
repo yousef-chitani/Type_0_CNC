@@ -2,6 +2,17 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (15th session): ATC redesign approved: FK12 block, plate column, stub shaft (spec and plan; not modelled)
+- Owner sent a picture of another machine's ATC (column beside the frame, wheel on a small block, motor hanging under) and its designer's note: "just a ball screw support block and motor mount, and one little custom stub shaft". Owner: the tub flange is much oversized.
+- Q&A: approach A (FK12 flange block on a column of screwed 6082 plates; B tube column and C BK12 on a plate dropped); motor hangs below like the picture, lowest point about Z -46 (was -10), so **the ATC overhangs the bench front edge**; tub plate **50 x 40 x 10**, cast-in strip **50 x 10 x 40**, 2 x M6 at X 185/215, Z 21.
+- FK12 sizes from THK sheet A15-314 (shaft 12, L 27, flange H 10, nose Ø36 g6 x 17, flange Ø54, 4 x Ø4.5 on PCD 44, 7001 DF pair, M12 x 1 locknut), fitted by THK mounting method B (flange on top of the plate, locknut inside the column).
+- Spec approved: `docs/superpowers/specs/2026-11-23-atc-fk-block-column-design.md`. Plan: `docs/superpowers/plans/2026-11-23-atc-fk-block-column.md` (7 tasks). No D-numbers yet (plan task 7 adds D-295 to D-297). Nothing changed in `Type_0_v3` (it was saved at the start).
+- Known risk in the spec: the FK12's DF pair is weak in tilt; bench test, fallback FF12 floating block lower in the column.
+
+**Left:** everything in the plan: prices and FK12 CAD (curl), remove the old mount, hub and stub shaft, FK12 and column, base L and strip, checks, docs.
+
+**Exact next step:** a new session runs the plan `docs/superpowers/plans/2026-11-23-atc-fk-block-column.md` from task 1 (the owner picks subagent-driven or native; native recommended).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (14th session): ATC mount faults fixed (D-292, D-293); real motor in, 2-wall mount (D-294); sweep clean
 - Owner Q&A: sensor held in a tapped web (D-292); flag fix as proposed (D-293). D-291 carried out.
 - Modelled in `Type_0_v3`, **not saved** (17 features, all healthy; the 35 broken timeline items are older): motor pocket Ø62 cut through the arm (Z -10 to 81), motor goes in from below; Z 0 flange holes, strip holes and tub cores filled, 2 M6 x 20 removed; web top recessed Z 115 to 119 (r 30 to edge), boss Z 118.5, hub underside relieved 0.5 (r 11.5 to 17); sensor hole Ø11 + cosmetic M12 x 1, M4 hole + cosmetic thread from the web edge, M4 x 8 grub body. Mount now 675 cm³.

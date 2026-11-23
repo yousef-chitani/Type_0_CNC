@@ -4,7 +4,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/hopeful-sagan-28twty` (continues `claude/charming-cori-349jm7`). Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-291).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-298; D-295 to D-297 are kept for ATC plan task 7).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). When Claude edits it, a hook (`tools/bom_hook.py`) runs the 5 generators automatically and reports only errors. After a hand edit, set `PYTHONUTF8=1` and run `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
 - **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£4,041.97, £158.03 left** (20 Nov 2026 repricing, D-242 to D-245, plus G05 roller steel £78.62 on 23 Nov, D-281 to D-283: G03 dropped; G01 beam and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
@@ -27,6 +27,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 - 23 Nov, 14th: the 4 ATC mount faults fixed in the model (D-291 carried out, D-292 sensor in tapped web, D-293 flag recess); 4 leftover KFL004 M10 parts removed; sweep check clean. Then the real motor 17HS24-2004D-E1K in (vendor STEP) and the round cup replaced by 2 flat walls at ±Y; hub grub on the shaft flat (D-294). Not saved. Open: lower bearing retention, motor runout, cable route, front slot (task 24 item 6).
 - 23 Nov, 15th: ATC redesign approved (owner's picture): FK12 block on a column of screwed plates, stub shaft, coupling, motor hanging below (ATC overhangs the bench front), tub plate 50 x 40 x 10 and strip 50 x 10 x 40. Spec and plan in `docs/superpowers/`; not modelled yet.
 - 23 Nov, 16th: ATC FK12 plan tasks 1 to 4 modelled (FK12 + FF12 and coupling priced at LiMo, FK12 STEP in; old mount removed; hub, stub shaft, FK12, column plates, coupling, motor down to Z -46); not saved. Left: rest of task 4, tasks 5 to 7 (D-295 to D-297 not written). See the handover.
+- 23 Nov, 17th: ATC plan task 4 finished (column joints and dowels, motor plate 8 thick, sensor grub; D-298) and task 5 done (strip 50 x 10 x 40, base L with a wall flange); clash check clean; not saved. Next: task 6 (sweep, spindle), task 7 docs (D-295 to D-297).
 - Background, only if a task needs it: `docs/HANDOVER.md`.
 
 ## Tasks

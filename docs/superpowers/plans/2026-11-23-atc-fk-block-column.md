@@ -49,23 +49,23 @@
 
 ### Task 4: FK12, column plates, coupling, motor
 **Interfaces:** Produces components `ATC Block FK12 (A06)`, `ATC Column plates (6082)`, `ATC Coupling 8-5`.
-- [ ] FK12 stand-in (or vendor STEP): flange Ø54/44 across flats x 10 at Z 98 to 108, nose Ø36 x 17 to Z 81, locknut stand-in Ø22 x 8.5 (M12 x 1; check against the vendor CAD) to about Z 72.5; 4 x M4 x 12 into the top plate.
-- [ ] Top plate 70 x 70 x 12, Z 86 to 98, Ø36 bore, 4 x M4 tapped, ear at -X for the sensor at r 44, 202.5° (tapped M12 x 1, M4 lock grub from the ear edge); ear inside r 58.
-- [ ] 2 walls 70 x 8, Z -8 to 86, inner faces at Y -149.8 and -198.2; motor plate 6 thick between them at Z 28 to 34 with Ø22 pilot and 4 x Ø3.4 on 31 square; screws and 2 dowels per joint (M4 into the plates' edges, *builder's choice* of count).
-- [ ] Move the motor so its face is at the motor plate underside (Z 28 if the plate is 28 to 34; keep the boss at +X), 4 x M3 x 10.
-- [ ] Coupling stand-in Ø20 x 25 joining the Ø8 drive and the Ø5 motor shaft; check the motor shaft enters ≥ 10.
-- [ ] Move the sensor to the ear, face 2 below the flag.
-- [ ] Check: a 2.5 key reaches the coupling clamp screws and the locknut setscrew through ±X (measure). Commit.
+- [x] FK12 stand-in (or vendor STEP): flange Ø54/44 across flats x 10 at Z 98 to 108, nose Ø36 x 17 to Z 81, locknut stand-in Ø22 x 8.5 (M12 x 1; check against the vendor CAD) to about Z 72.5; 4 x M4 x 12 into the top plate.
+- [x] Top plate 70 x 70 x 12, Z 86 to 98, Ø36 bore, 4 x M4 tapped, ear at -X for the sensor at r 44, 202.5° (tapped M12 x 1, M4 lock grub from the ear edge); ear inside r 58.
+- [x] 2 walls 70 x 8, Z -8 to 86, inner faces at Y -149.8 and -198.2; motor plate 6 thick between them at Z 28 to 34 with Ø22 pilot and 4 x Ø3.4 on 31 square; screws and 2 dowels per joint (M4 into the plates' edges, *builder's choice* of count).
+- [x] Move the motor so its face is at the motor plate underside (Z 28 if the plate is 28 to 34; keep the boss at +X), 4 x M3 x 10.
+- [x] Coupling stand-in Ø20 x 25 joining the Ø8 drive and the Ø5 motor shaft; check the motor shaft enters ≥ 10.
+- [x] Move the sensor to the ear, face 2 below the flag.
+- [x] Check: a 2.5 key reaches the coupling clamp screws and the locknut setscrew through ±X (measure). Commit.
 
 ### Task 5: Base L and cast-in strip
 **Interfaces:** Produces component `ATC Base L (6082)`; tub strip body renamed `Steel strip 50 x 10 x 40 (D-295)`.
-- [ ] Base L: tub plate as in Global Constraints, arm 50 wide Z -8 to 12 from Y -47 to the tub-side wall (Y -149.8 + 8 = -141.8), gusset 10 wide at X 195 to 205, sloped, Y -47 to -78 max; 2 x Ø6.6 + Ø11 x 6.5 counterbores at X 185/215, Z 21; arm end to wall 4 x M5 + 2 dowels.
-- [ ] Strip: remove the 80-wide strip, fill its holes and cores in the tub; new 50 x 10 x 40 strip with 2 x M6 at X 185/215, Z 21 and Ø6.6 cores Y -27 to -25.
-- [ ] 2 x M6 x 20 from the front.
-- [ ] Check: counterbore edge to gusset ≥ 3. Commit.
+- [x] Base L: tub plate as in Global Constraints, arm 50 wide Z -8 to 12 from Y -47 to the tub-side wall (Y -149.8 + 8 = -141.8), gusset 10 wide at X 195 to 205, sloped, Y -47 to -78 max; 2 x Ø6.6 + Ø11 x 6.5 counterbores at X 185/215, Z 21; arm end to wall 4 x M5 + 2 dowels.
+- [x] Strip: remove the 80-wide strip, fill its holes and cores in the tub; new 50 x 10 x 40 strip with 2 x M6 at X 185/215, Z 21 and Ø6.6 cores Y -27 to -25.
+- [x] 2 x M6 x 20 from the front.
+- [x] Check: counterbore edge to gusset ≥ 3. Commit.
 
 ### Task 6: Checks
-- [ ] Static overlap of every ATC body against all visible bodies in X 75 to 325, Y -300 to -15, Z -60 to 200: expect only screws in tapped holes.
+- [x] Static overlap of every ATC body against all visible bodies in X 75 to 325, Y -300 to -15, Z -60 to 200: expect only screws in tapped holes.
 - [ ] Sweep as in `atc-wheel.md` (hub, forks, fork screws, hub M4s, holders 0 to 45° in 3°; flag 0 to 360° in 5°) against the static bodies: expect no hits above 0.1 mm³.
 - [ ] Spindle against the wheel at drop-off, pickup and lifted (the method in `atc-wheel.md`, 13th session): expect only holder 1 at the gripped pocket.
 - [ ] Mass of the new metal parts; lowest Z (expect about -46). Record results.
