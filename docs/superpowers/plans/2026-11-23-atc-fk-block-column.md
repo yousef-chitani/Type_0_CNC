@@ -29,23 +29,23 @@
 
 ### Task 1: Prices and vendor CAD
 **Files:** Modify `docs/bom.csv` (CRLF, `""` quotes), `cad/vendor/README.md`; add `cad/vendor/FK12*.step` if a free download exists.
-- [ ] Find FK12 (fixed side, 7001 pair) and a Ø20 x 25 coupling, 5 x 8 bores, from the owner's usual vendors (RS first; Shopify `/products.json`, WooCommerce `/wp-json/wc/store/products`); record price, date, URL. If curl is blocked, write `docs/price-check-task-18.md` for the owner and go on with the THK sizes.
-- [ ] Get FK12 CAD (vendor or THK/HIWIN) to fix the shoulder Z (T2) and locknut Z. Without it, use the THK sheet values from the spec.
-- [ ] Commit.
+- [x] Find FK12 (fixed side, 7001 pair) and a Ø20 x 25 coupling, 5 x 8 bores, from the owner's usual vendors (RS first; Shopify `/products.json`, WooCommerce `/wp-json/wc/store/products`); record price, date, URL. If curl is blocked, write `docs/price-check-task-18.md` for the owner and go on with the THK sizes.
+- [x] Get FK12 CAD (vendor or THK/HIWIN) to fix the shoulder Z (T2) and locknut Z. Without it, use the THK sheet values from the spec.
+- [x] Commit.
 
 ### Task 2: Remove the old mount parts
 **Interfaces:** Produces an empty mount position; keeps hub, forks, holders, motor, sensor, flag.
-- [ ] Remove features for: `Mount one piece ...` body, the 2 x 6804 and the spacer, the hub grub M4 x 6, the 2 x M6 x 20 into the strip, the 4 x M3 x 12 motor screws, the sensor M4 grub. List the bodies removed in the commit message.
-- [ ] Check: read-only script prints every unhealthy timeline item after index 1891, the last item on 23 Nov (the 35 older broken items stay as they are): expect none new.
-- [ ] Commit (docs note only; the model is not saved).
+- [x] Remove features for: `Mount one piece ...` body, the 2 x 6804 and the spacer, the hub grub M4 x 6, the 2 x M6 x 20 into the strip, the 4 x M3 x 12 motor screws, the sensor M4 grub. List the bodies removed in the commit message.
+- [x] Check: read-only script prints every unhealthy timeline item after index 1891, the last item on 23 Nov (the 35 older broken items stay as they are): expect none new.
+- [x] Commit (docs note only; the model is not saved).
 
 ### Task 3: Hub change and stub shaft
 **Files:** model only.
 **Interfaces:** Produces component `ATC Stub shaft (FK12)` with body `Stub shaft 303: pilot 12, flange 40 x 5, shoulder 14, journal 12, M12 x 1, drive 8`; hub underside flat at Z 119.
-- [ ] Hub: cut the Ø20 spigot (Z 84 to 119) and fill the old relief to a flat Z 119; Ø12 pilot bore 6 deep; 4 x Ø4.5 with Ø8 x 4.5 counterbores at r 14 (at 0, 90, 180, 270°, turned to miss the fork screws).
-- [ ] Stub shaft as in the spec stack, Z from Task 1 (else: flange 114 to 119, shoulder to 108, journal to 81, thread 81 to 71, drive 71 to 59).
-- [ ] 4 x M4 x 10 cap screws, hub to shaft flange.
-- [ ] Check: M4 heads to the nearest fork body ≥ 1 mm (minimum distance script). Commit.
+- [x] Hub: cut the Ø20 spigot (Z 84 to 119) and fill the old relief to a flat Z 119; Ø12 pilot bore 6 deep; 4 x Ø4.5 with Ø8 x 4.5 counterbores at r 14 (at 0, 90, 180, 270°, turned to miss the fork screws).
+- [x] Stub shaft as in the spec stack, Z from Task 1 (else: flange 114 to 119, shoulder to 108, journal to 81, thread 81 to 71, drive 71 to 59).
+- [x] 4 x M4 x 10 cap screws, hub to shaft flange.
+- [x] Check: M4 heads to the nearest fork body ≥ 1 mm (minimum distance script). Commit.
 
 ### Task 4: FK12, column plates, coupling, motor
 **Interfaces:** Produces components `ATC Block FK12 (A06)`, `ATC Column plates (6082)`, `ATC Coupling 8-5`.
