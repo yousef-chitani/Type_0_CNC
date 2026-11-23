@@ -6,6 +6,17 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (15th session): ATC redesign approved: FK12 block, plate column, stub shaft (spec and plan; not modelled)
+- Owner sent a picture of another machine's ATC (column beside the frame, wheel on a small block, motor hanging under) and its designer's note: "just a ball screw support block and motor mount, and one little custom stub shaft". Owner: the tub flange is much oversized.
+- Q&A: approach A (FK12 flange block on a column of screwed 6082 plates; B tube column and C BK12 on a plate dropped); motor hangs below like the picture, lowest point about Z -46 (was -10), so **the ATC overhangs the bench front edge**; tub plate **50 x 40 x 10**, cast-in strip **50 x 10 x 40**, 2 x M6 at X 185/215, Z 21.
+- FK12 sizes from THK sheet A15-314 (shaft 12, L 27, flange H 10, nose Ø36 g6 x 17, flange Ø54, 4 x Ø4.5 on PCD 44, 7001 DF pair, M12 x 1 locknut), fitted by THK mounting method B (flange on top of the plate, locknut inside the column).
+- Spec approved: `docs/superpowers/specs/2026-11-23-atc-fk-block-column-design.md`. Plan: `docs/superpowers/plans/2026-11-23-atc-fk-block-column.md` (7 tasks). No D-numbers yet (plan task 7 adds D-295 to D-297). Nothing changed in `Type_0_v3` (it was saved at the start).
+- Known risk in the spec: the FK12's DF pair is weak in tilt; bench test, fallback FF12 floating block lower in the column.
+
+**Left:** everything in the plan: prices and FK12 CAD (curl), remove the old mount, hub and stub shaft, FK12 and column, base L and strip, checks, docs.
+
+**Exact next step:** a new session runs the plan `docs/superpowers/plans/2026-11-23-atc-fk-block-column.md` from task 1 (the owner picks subagent-driven or native; native recommended).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (14th session): ATC mount faults fixed (D-292, D-293); real motor in, 2-wall mount (D-294); sweep clean
 - Owner Q&A: sensor held in a tapped web (D-292); flag fix as proposed (D-293). D-291 carried out.
 - Modelled in `Type_0_v3`, **not saved** (17 features, all healthy; the 35 broken timeline items are older): motor pocket Ø62 cut through the arm (Z -10 to 81), motor goes in from below; Z 0 flange holes, strip holes and tub cores filled, 2 M6 x 20 removed; web top recessed Z 115 to 119 (r 30 to edge), boss Z 118.5, hub underside relieved 0.5 (r 11.5 to 17); sensor hole Ø11 + cosmetic M12 x 1, M4 hole + cosmetic thread from the web edge, M4 x 8 grub body. Mount now 675 cm³.
@@ -16,16 +27,6 @@
 **Left:** owner saves `Type_0_v3` (the ATC can now be confirmed by the owner). Still open: retaining ring under the lower bearing (only the M4 grub holds the wheel down); motor runout (measure when it arrives); cable route along the arm to the tub not drawn; arm stiffness hand calc; price A06 and A07 (curl); spindle-against-wheel check not re-run (wheel did not move); front slot against the ATC keep-out (task 24 item 6); the strip on the mould drawing.
 
 **Exact next step:** the owner saves `Type_0_v3`; then a session settles the front slot against the ATC keep-out (task 24 item 6), or solves the lower-bearing retention (a shoulder on the spigot under the lower bearing, or a circlip groove with a larger pilot).
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (13th session): ATC one-piece mount, 40 lower (D-289, D-290), modelled
-- Owner: "the mount should be 1 continuous part; the ATC assembly can be made much more compact and shorter". Q&A: machined 6082, wheel about 40 lower, rigid motor joint kept, 2 bearings in the mount, mill first with JLC as fallback. Design approved: `docs/superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`; plan in `docs/superpowers/plans/`.
-- **D-290:** bearings 2 x 6804 (the 6004 bore cut the motor screw holes).
-- Modelled in `Type_0_v3`, **not saved**: old bracket, posts, top plate, KFL004, collar, shaft and their screws removed (Remove features); wheel parts and sensor down 40, motor up 13 (Move features); one-piece mount (base feature, 766 cm³); hub spigot joined to the hub; 2 x 6804 and spacer; 4 x M6 x 20, 4 x M3 x 12, M4 grub. Tub: strip 80 x 10 x 50 with 4 x M6, new cores, old cores filled, old strip removed.
-- Overlap check in one pose clean, **but 4 faults found after** (listed at the top of `docs/atc-wheel.md`, with fixes): motor cannot be fitted (pocket closed), lower flange screws buried (owner, D-291: "2 is plenty", keep the Z 30 pair), flag hits the web as the hub turns, sensor nut does not fit by the cup. No retaining ring room under the lower bearing. `atc-wheel.md` rewritten, new render. BOM A03, A06, A07 text updated (A06, A07 need re-pricing); `cast_in_features.md` strip row updated.
-
-**Left:** do NOT confirm or save the ATC as final yet (saving the rest is fine). Fix the 4 faults in the model and re-check (hub, flag and forks swept against static bodies; assembly order). Then: measure the real motor (length, runout); arm stiffness hand calc; price A06 and A07 (curl); front slot against the ATC keep-out (task 24 item 6); the strip on the mould drawing.
-
-**Exact next step:** a session fixes the 4 ATC mount faults in `Type_0_v3` as listed at the top of `docs/atc-wheel.md` (pocket through the arm, drop the Z 0 screws per D-291, web recess and hub relief for the flag, sensor fixing), re-runs the checks including the turning hub, then the owner saves.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
