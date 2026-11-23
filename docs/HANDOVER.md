@@ -1,10 +1,20 @@
-# Type 0 CNC: handover (2026-11-19)
+# Type 0 CNC: handover (2026-11-23)
 
 **Branch:** `claude/hopeful-sagan-28twty` on `yousef-chitani/Type_0_CNC` (holds everything from `claude/charming-cori-349jm7` plus the 16 and 17 Nov LiMo sessions). Everything below is committed and pushed. Earlier work: `claude/charming-cori-349jm7`, `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
+
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (9th session): docs for D-271, D-275 ATC hub modelled; not saved
+- `Type_0_v3` was found **saved** with D-280.
+- **Docs (D-271), committed:** `bom.csv` G06 (8 mm levelling pour, jack screws, no ground stock), X19 now M6 x 25, new **X22** jack screws 12 x M6 x 20 DIN 913 (unpriced), F02 pour quantity (2 x 437.5 cm³, about 1 kg neat resin). `cad/v2/out/assembly/cast_in_features.md` has a new section for the EG tub, with numbers from the model (tub 38.63 L, about 88.8 kg); the old base and portal tables are kept below it as history. `spec-gaps.md` updated. Phase 1 total unchanged, £3,963.35. `bom.csv` is LF in git now (the CRLF note in section 9 is out of date).
+- **D-275 modelled** (owner, Q&A: "Down, hub tapped M4", "202.5°, r 44"): hub with 8 flats 101.6 across (corners Ø110), holes Ø3.3 x 10 tapped M4 (cosmetic threads), fork holes opened to Ø4.5 with a Ø8.5 countersink, 8 x M4 x 12 countersunk screws (replacing the M3s), index flag and LJ12A3 sensor rotated to 202.5°, and the top plate sensor hole moved with them. Features `D-275 ...` in `ATC Shaft and Hub`, `ATC Forks`, `ATC Fasteners` (base feature edited), `ATC Drive`, `ATC Bracket`. Clash check of the wheel: only screw threads and a 0.01 contact band at each fork step (the step measures 50.79 from the centre). Health 35 before and after. Docs: `decisions.md` D-275, `atc-wheel.md`, BOM A01 and A06, design-issues item 23.
+- **Model not saved.** The owner saves `Type_0_v3`.
+
+**Left (model):** none from the list. **Docs:** design-issues sections E and F (owner confirmations, stand-ins); X22 and G06 to price; the jack screw length and positions (D-271) for the owner to confirm.
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session works through design-issues section E (owner confirmations) with the owner in the Q&A tool.
 
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (8th session): X trigger mount 45 taller (D-280); not saved
 - `Type_0_v3` was found **saved** with D-278 and D-279.
@@ -15,16 +25,6 @@
 **Left (model):** D-275 hub. **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`. Design-issues sections E and F (owner confirmations, stand-ins).
 
 **Exact next step:** the owner saves `Type_0_v3`; then a session models the D-275 ATC hub (fork screw M4, 8-flat hub), or does the docs list above.
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (7th session): X BKHM12 riser BK12 holes tapped (D-279); not saved
-- `Type_0_v3` was open with the 6th session's D-278 change **still unsaved** (modified flag on).
-- Design-issues item 19 checked: the X BKHM12 riser's 4 BK12 holes (X 319 and 332, Y 482 and 528) were PrintNC's untapped Ø6.1 holes with a 5 x 5 square void inside, as Y before D-263. The BK12's M6 x 50 screws end at Z 335, 20 into the riser.
-- **D-279: redrawn as D-263** (owner): tapped M6, drill 5.0 x 22 from the top (Z 355 to 333), cosmetic thread. Features `D-279 fill X BK12 holes` and `D-279 X BK12 holes M6 x 22` in `X BKHM12 Riser`, 4 threads `D-279 M6 thread`. Volumes checked (+4 x 777, -4 x 432 mm³), outline unchanged. Clash check: only the 4 screw threads (144 mm³ each, 2 clear of the hole bottom) and the old M4 pan-head threads. Health 35 before and after. No BOM change.
-- **Model not saved** (D-278 and D-279). The owner saves `Type_0_v3`.
-
-**Left (model):** D-275 hub, X trigger mount M6 x 20 short (item 18). **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
-
-**Exact next step:** the owner saves `Type_0_v3`; then a session checks the X gantry trigger mount M6 x 20 (design-issues item 18) and asks the owner.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

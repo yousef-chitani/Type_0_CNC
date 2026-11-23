@@ -35,7 +35,7 @@ Collected from `HANDOVER.md`, `tasks/README.md`, `machine-assessment.md`, `spec-
 
 ## F. Stand-ins and unknown dimensions
 22. Jianken spindle drawing: mass, nose shape, ISO20 holder sizes. The ATC's 5 and 7 mm gaps depend on them.
-23. ATC motor real length and encoder; fork screw M3 or M4. **Fork screw M4, 8-flat hub (D-275).**
+23. ATC motor real length and encoder; fork screw M3 or M4. **Fork screw M4, 8-flat hub (D-275); modelled 23 Nov (9th), not saved.**
 24. ATC holders, bearings and collar are still stand-ins (D-252).
 25. Roller steel sizes (D-243): X roller tube 120 x 50 x 3, X roller angles 125 x 50 x 6 and Y braces 75 x 75 are not stock sizes. Choosing stock sizes may move the layout.
 26. ATC bracket print is 80 x 187 x 93: check that it fits the printer bed.

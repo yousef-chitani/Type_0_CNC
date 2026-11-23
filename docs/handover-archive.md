@@ -2,6 +2,16 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (7th session): X BKHM12 riser BK12 holes tapped (D-279); not saved
+- `Type_0_v3` was open with the 6th session's D-278 change **still unsaved** (modified flag on).
+- Design-issues item 19 checked: the X BKHM12 riser's 4 BK12 holes (X 319 and 332, Y 482 and 528) were PrintNC's untapped Ø6.1 holes with a 5 x 5 square void inside, as Y before D-263. The BK12's M6 x 50 screws end at Z 335, 20 into the riser.
+- **D-279: redrawn as D-263** (owner): tapped M6, drill 5.0 x 22 from the top (Z 355 to 333), cosmetic thread. Features `D-279 fill X BK12 holes` and `D-279 X BK12 holes M6 x 22` in `X BKHM12 Riser`, 4 threads `D-279 M6 thread`. Volumes checked (+4 x 777, -4 x 432 mm³), outline unchanged. Clash check: only the 4 screw threads (144 mm³ each, 2 clear of the hole bottom) and the old M4 pan-head threads. Health 35 before and after. No BOM change.
+- **Model not saved** (D-278 and D-279). The owner saves `Type_0_v3`.
+
+**Left (model):** D-275 hub, X trigger mount M6 x 20 short (item 18). **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session checks the X gantry trigger mount M6 x 20 (design-issues item 18) and asks the owner.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (6th session): X 1610 plates checked, 2 X block screws ISO 7380; not saved
 - Design-issues item 17 checked in `Type_0_v3`: the X DFU1605 flange sits on the X 1610 nut plate face (X -140), its 6 holes (PCD 38) line up, the Ø28.2 bore clears the Ø28 nut body, the fill plate's Ø18 hole clears the Ø16 screw. Same as Y and Y2. **D-277: both plates stay** (owner).
 - The check found 2 X top block screws by the nut plate (Body7, Body8 of `M5x8 X top block screws`, X -162, Y 489 and 521) hit the 2 lower tie-rod nuts by 0.9, as on Y before D-264. **D-278: ISO 7380 M5 x 8** (owner); modelled, head Z 358 to 360.75, 1.35 under the nut (Z 362.1). Clash check of the X nut area: none left (only threads in holes and vendor-internal overlaps). Health 35 before and after.

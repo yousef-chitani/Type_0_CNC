@@ -11,14 +11,14 @@ The ATC wheel is the top-level component `ATC Wheel (Phase 2)` in `Type_0_v3`. I
 | Pickup (spindle axis) | X 200, Y -85. Y stop -88, so 3 to spare |
 | Wheel centre | X 200, Y -174, vertical Ø20 shaft Z 80 to 171 |
 | Pockets | 8 at 45°, pitch radius 89; the pickup pocket opens towards +Y |
-| Forks (owner's model) | Z 166 to 176, V rib mid-plane Z 171; each trimmed to its 45° sector less 0.5 a side; 1 x M3 x 12 countersunk into the hub at r 41.7 |
-| Hub | Ø101.5 x 12 6082, Z 159 to 171; the fork tabs sit on top, the fork steps against its edge |
+| Forks (owner's model) | Z 166 to 176, V rib mid-plane Z 171; each trimmed to its 45° sector less 0.5 a side; fork hole opened to Ø4.5 with a Ø8.5 countersink; 1 x M4 x 12 countersunk into the hub at r 41.7 (head Z 175.75, 7.25 of thread) (D-275) |
+| Hub | 8 flats 101.6 across (corners Ø110) x 12, 6082, Z 159 to 171; a flat faces each fork, so each fork's step (41 wide, at r 50.79) seats along its width; 8 holes Ø3.3 x 10 tapped M4 at r 41.7 (D-275) |
 | Holders (stand-in ISO20-ER16) | Ø45 flanges above and below the fork, groove shaped to the fork's 60° V (root Ø29.1), pull stud top Z 225, body to Z 130, tool to Z 85 |
 | Bracket (one PETG print, D-259, D-260) | Wall block X 175 to 225, Y -87 to -37, Z -10 to 40, 2 x M6 x 40 (counterbored) into the strip; 2 arms 15 thick, X 160 to 175 and 225 to 240, Y -224 to -42, Z -10 to 68; motor plate Ø120 x 15, Z 68 to 83. About 120 cm³, 80 x 187 x 93 overall. Fit it to the strip before the motor |
 | Top plate | Ø120 x 10 6082, Z 115 to 125, on 2 Ø12 x 32 posts at X 150 and 250 (Z 83 to 115); M6 x 25 from under the motor plate, M6 x 16 from the top |
 | Bearing | 1 x KFL004 on the top plate (Z 125 to 151), collar Z 151 to 159 |
 | Drive | NEMA 17 closed loop (A03) face up under the motor plate, Z 0 to 68, between the arms; 4 x M3 x 10 in Ø4 holes (tighten last). Shaft bored Ø5 x 14, M4 grub onto the motor shaft |
-| Index | LJ12A3 M12 (A09) through the top plate at 225°, r 44; flag under the hub |
+| Index | LJ12A3 M12 (A09) through the top plate at 202.5°, r 44, halfway between forks 3 and 4 (moved from 225°, D-275); flag under the hub at the same place. Set the index offset in the config |
 | Cast in (Phase 1) | steel strip 25 x 10 x 50 in the floor's front face, X 187.5 to 212.5, Z -10 to 40, M6 at Z 0 and 30, Ø6.6 core 2 deep behind each hole (D-251, moved by D-253) |
 
 Envelope: X 88 to 312, Y -286 to -37, Z -10 to 225. The lowest part is Z -10, 5 above the tub bottom. Aluminium and shaft: about 645 cm³ (about 1.8 kg).
@@ -56,11 +56,9 @@ Copies of the Z axis bodies were moved by dX 421.8, dY -352 or -382, dZ 11 or 62
 
 ## Not done or not known
 - Holders, bearing, collar and motor are still stand-ins (D-252). The real ISO20 holder and the Jianken nose decide the 5 and 7 mm gaps.
-- Fork screw: the fork hole is Ø3.8 with a Ø7.1 countersink. M3 or M4? The hub holes are tapped M3 for now.
 - Tool length limit: under pocket 1 and the drop-off point is the wall block (top Z 40), 90 below the holder body; under the other pockets, only the bench. The arms and plates sit inside the ring of tools.
 - The bench under the wheel is not modelled. The lowest ATC part is Z -10, so a flat bench top level with the tub bottom (Z -15) clears it.
-- Fork seat: the hub is round, so each fork's flat step touches it at one point and only the M3 stops the fork turning. A hub with 8 flats (101.6 across) would seat the steps.
-- The index flag (225°, r 44) is 2.3 from fork 4's M3 hole: move the flag or the sensor before making the hub.
+- D-275 modelled 23 Nov 2026 (9th session): hub flats, M4 holes, fork holes opened, M4 screws, flag and sensor at 202.5°. The forks are the owner's model: print them with the Ø4.5 hole and Ø8.5 countersink. The flag is a stand-in head with no hole drawn in the hub.
 - Strip cores now run Y -27 to -25 only (behind the strip); the old ones ran from -37. Draw them so on the mould drawing.
 - A05 (tool setter) has no place yet.
 - Bracket stiffness is not calculated. The motor plate now sits on two arms, not one.
