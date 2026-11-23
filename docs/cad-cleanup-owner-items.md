@@ -16,5 +16,5 @@
 ## 3. Other things seen
 - 373 hidden PrintNC fastener bodies stay in the model (owner: visible only). They can go later.
 - The X 1610 fill plate and nut plate (PrintNC parts) are still visible. Are they used with the DFU1605 nuts?
-- X gantry trigger mount: its M6 x 20 is 2.5 short of the tube face.
+- X gantry trigger mount: its M6 x 20 is 2.5 short of the tube face. **Done (D-280): the mount was 46 below the X sensor; now 45 taller, screw up 45.**
 - ATC bracket print (D-260): 80 x 187 x 93 overall. Check that it fits your printer bed.

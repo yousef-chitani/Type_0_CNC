@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (8th session): X trigger mount 45 taller (D-280); not saved
+- `Type_0_v3` was found **saved** with D-278 and D-279.
+- Design-issues item 18 checked: the X gantry trigger mount (X 250 to 265, Y 565 to 577.5) and its M6 x 20 target ended at Z 288.5, 46 below the X home sensor tip (Z 334.5, pointing down from the X roller). X could not home. (The "2.5 short" note was not the real fault.)
+- **D-280** (owner: "Taller trigger mount"): mount grown 45 to Z 333.5, screw up 45 (axis Z 328.5), 1 gap to the sensor as on Y. The band under the sensor is clear over the X travel; the X cable chain lies at Y 584 and beyond, clear of the mount. Features `D-280 ...` in `XGantry Trigger Mount` and `M6x20 (5)`. Clash check: only the 2 old screw overlaps. Health 35 before and after.
+- **Model not saved.** The owner saves `Type_0_v3`.
+
+**Left (model):** D-275 hub. **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`. Design-issues sections E and F (owner confirmations, stand-ins).
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session models the D-275 ATC hub (fork screw M4, 8-flat hub), or does the docs list above.
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (7th session): X BKHM12 riser BK12 holes tapped (D-279); not saved
 - `Type_0_v3` was open with the 6th session's D-278 change **still unsaved** (modified flag on).
 - Design-issues item 19 checked: the X BKHM12 riser's 4 BK12 holes (X 319 and 332, Y 482 and 528) were PrintNC's untapped Ø6.1 holes with a 5 x 5 square void inside, as Y before D-263. The BK12's M6 x 50 screws end at Z 335, 20 into the riser.
@@ -15,16 +25,6 @@
 **Left (model):** D-275 hub, X trigger mount M6 x 20 short (item 18). **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
 
 **Exact next step:** the owner saves `Type_0_v3`; then a session checks the X gantry trigger mount M6 x 20 (design-issues item 18) and asks the owner.
-
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (6th session): X 1610 plates checked, 2 X block screws ISO 7380; not saved
-- Design-issues item 17 checked in `Type_0_v3`: the X DFU1605 flange sits on the X 1610 nut plate face (X -140), its 6 holes (PCD 38) line up, the Ø28.2 bore clears the Ø28 nut body, the fill plate's Ø18 hole clears the Ø16 screw. Same as Y and Y2. **D-277: both plates stay** (owner).
-- The check found 2 X top block screws by the nut plate (Body7, Body8 of `M5x8 X top block screws`, X -162, Y 489 and 521) hit the 2 lower tie-rod nuts by 0.9, as on Y before D-264. **D-278: ISO 7380 M5 x 8** (owner); modelled, head Z 358 to 360.75, 1.35 under the nut (Z 362.1). Clash check of the X nut area: none left (only threads in holes and vendor-internal overlaps). Health 35 before and after.
-- BOM X18: 18 x M5 x 8 plus 6 x ISO 7380 M5 x 8.
-- **Model not saved.** The owner saves `Type_0_v3`.
-
-**Left (model):** D-275 hub, the X BKHM12 riser BK12 holes (item 19), X trigger mount M6 x 20 short (item 18). **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
-
-**Exact next step:** the owner saves `Type_0_v3`; then a session checks the X BKHM12 riser BK12 holes (design-issues item 19).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
