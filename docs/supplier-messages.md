@@ -48,6 +48,8 @@ Before wave 2 (15 Feb 2027, D-126). Listing: https://www.aliexpress.com/item/100
 >
 > My motor has 4 holes on a 50 mm square and a 36 mm pilot. Will it fit?
 >
+> What is the overall length of the mount: 90 mm or 95 mm? And is the bearing a 7001 or a 7901?
+>
 > Thanks
 
 For you: needs 4 holes on a 50 ± 0.2 mm square, pilot bore Ø36 or larger, room for a D26 × L35 coupling. If it's 47.14 mm holes or a Ø38.1 pilot only, don't buy it: the session designs a mount from the 10 mm plate.
