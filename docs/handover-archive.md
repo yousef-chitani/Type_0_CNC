@@ -2,6 +2,21 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (10th session): section F with the owner; D-281 to D-283 roller steel, modelled; not saved
+- `Type_0_v3` was found **saved** with D-275.
+- Section E had nothing the owner could confirm yet (item 20 waits on the rear ATC study D-274, item 21 on the seller), so the owner chose section F.
+- **Item 26 done:** the 80 x 187 x 93 ATC bracket fits the P1S bed (256 cube). **Item 22:** the spindle drawing came in D-213; the ISO20 holder stays a stand-in until Phase 2 (owner).
+- **D-281:** X roller tube 120 x 60 x 3 (stock); the extra 10 goes up (tube Z 355 to 415, X screw axis still Z 380). Moved up 10: top angle, its 8 M6 x 8, D-262 screws #6 to #9, 4 Z plate holes (now Z 384.5 and 408.5). Nut plate and fill plate are now 120 x 60.
+- **D-282:** X roller angles 100 x 50 x 6 (stock); flat legs end at Y 537. 4 rear holes in the top angle and tube top wall moved to Y 521 with their screws; 4 unused rear holes in the bottom angle filled.
+- **D-283:** the Y braces are 75 x 50 x 6 (earlier notes said 75 x 75, wrongly), already stock, unchanged.
+- Clash check: only screws in tapped holes, rails in blocks and vendor internals. Health 35 before and after. Features `D-281 ...`, `D-282 ...` in `XRollers`, `X 1610 Nut Plate`, `X 1610 Fill Plate`, `XRoller Top Angle`, `XRoller Bottom`, `Top angle flange screws M6x8`, `Joint screws added (D-262)`, `Z Fixed Plate`.
+- **BOM:** G05 priced (owner): K I Metals, curl 23 Nov, £65.52 ex VAT, **£78.62** inc VAT, delivery not shown. Total **£4,041.97, £158.03 left**.
+- **Model not saved.** The owner saves `Type_0_v3`.
+
+**Left:** hidden drill guides 8A, 8B, 9A, 9B no longer fit the X roller (redo before printing them). Design-issues item 23 (ATC motor length) and 24 (stand-ins) wait on Phase 2 parts; section G (item 27 ATC clash with moving Z, item 28 Chamfer2).
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session does design-issues item 27 (ATC clash check with the moving Z), or the drill guides if they are needed soon.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (9th session): docs for D-271, D-275 ATC hub modelled; not saved
 - `Type_0_v3` was found **saved** with D-280.
 - **Docs (D-271), committed:** `bom.csv` G06 (8 mm levelling pour, jack screws, no ground stock), X19 now M6 x 25, new **X22** jack screws 12 x M6 x 20 DIN 913 (unpriced), F02 pour quantity (2 x 437.5 cm³, about 1 kg neat resin). `cad/v2/out/assembly/cast_in_features.md` has a new section for the EG tub, with numbers from the model (tub 38.63 L, about 88.8 kg); the old base and portal tables are kept below it as history. `spec-gaps.md` updated. Phase 1 total unchanged, £3,963.35. `bom.csv` is LF in git now (the CRLF note in section 9 is out of date).

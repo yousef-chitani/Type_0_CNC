@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (12th session): task 26, rear ATC not feasible; front kept (D-288)
+- Measured in `Type_0_v3` (bounding boxes, Y at the rear limit, not saved, nothing changed): spindle axis Y -88 to 297; tub floor top Z 45 to Y 653, no rear wall; carriage underside Z 169 (Z plate, Z rails, X roller angle, within X ±75 of the spindle), beam underside Z 205 over the full width, sweeping Y 60 to 565.
+- Result in `docs/rear-atc-reach.md`: a rear wheel inside the tub must have its holder tops at Z 165 or lower, which leaves about 25 of tool. With the wheel behind the pickup it also clashes at the pickup itself. With the wheel beside the pickup it sits under the beam's sweep and over the plate's back-right corner. A wheel past the tub end needs +367 of Y travel (rails, screws and tub about 370 longer). The Y motors and BK12 risers are not the limit.
+- **D-288 (owner):** rear dropped, front ATC kept, "very very elegant, integrate and not a kludge". Design-issues 11, 12 and 20 updated; task 26 done.
+
+**Left:** front slot against the ATC keep-out (the slot may be X ±107.5, the keep-out starts at X 88, so they overlap by 19.5); review the unconfirmed front ATC parts (D-250, D-253, D-255) against the owner's "elegant, integrated" requirement; the front strip goes on the mould drawing. Still open from the review: task 18 plate pull-down and pour, ATC 6804 bearing idea, the unpriced lines.
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session settles the front slot (task 24 item 6) together with the ATC keep-out, aiming for an integrated front ATC.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (11th session): Gemini review checked; docs fixed (D-284 to D-287)
 - The owner pasted a review of the repo by Gemini (8 points, at commit `db206e3`). Checked each against the repo. Point 2 (roller steel) was already done in D-281 to D-283; point 4 (ATC shaft on one bearing) is the risk the owner accepted in D-254; the rest hold.
 - **D-284:** Y2 on the 7I76EU with no pin moved: step/dir 3 = Y2, ATC to channel 4 on TB3 (pins to check), Y2 home IN15, Y2 alarm IN16 (TB5). `electrical.md` updated (4 CL57T drives); `io-list.md` marked out of date.
@@ -17,21 +26,6 @@
 **Left from the review:** (1) task 26: the spindle reaches only Y 292 to 297 and the tub runs to Y 653, so a rear wheel needs longer Y travel or sits behind the plate under the gantry; check this first. (3) Task 18: say how each wall-top plate is pulled down onto its jack screws and checked with the straightedge, and how the 8 mm gap is dammed, vented and poured without air. (4) Phase 2: a 6804 bearing in the ATC motor plate (then the motor joint needs some give). (6) Budget: G01, G06, X18 to X22 unpriced against £158.03; one steel order, one screw order. Also from the 10th session: owner saves `Type_0_v3`; drill guides 8A, 8B, 9A, 9B; design-issues item 27.
 
 **Exact next step:** the owner saves `Type_0_v3`; then a session does the Y reach check for task 26 (can the spindle reach a rear wheel at all), before any other rear ATC work.
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (10th session): section F with the owner; D-281 to D-283 roller steel, modelled; not saved
-- `Type_0_v3` was found **saved** with D-275.
-- Section E had nothing the owner could confirm yet (item 20 waits on the rear ATC study D-274, item 21 on the seller), so the owner chose section F.
-- **Item 26 done:** the 80 x 187 x 93 ATC bracket fits the P1S bed (256 cube). **Item 22:** the spindle drawing came in D-213; the ISO20 holder stays a stand-in until Phase 2 (owner).
-- **D-281:** X roller tube 120 x 60 x 3 (stock); the extra 10 goes up (tube Z 355 to 415, X screw axis still Z 380). Moved up 10: top angle, its 8 M6 x 8, D-262 screws #6 to #9, 4 Z plate holes (now Z 384.5 and 408.5). Nut plate and fill plate are now 120 x 60.
-- **D-282:** X roller angles 100 x 50 x 6 (stock); flat legs end at Y 537. 4 rear holes in the top angle and tube top wall moved to Y 521 with their screws; 4 unused rear holes in the bottom angle filled.
-- **D-283:** the Y braces are 75 x 50 x 6 (earlier notes said 75 x 75, wrongly), already stock, unchanged.
-- Clash check: only screws in tapped holes, rails in blocks and vendor internals. Health 35 before and after. Features `D-281 ...`, `D-282 ...` in `XRollers`, `X 1610 Nut Plate`, `X 1610 Fill Plate`, `XRoller Top Angle`, `XRoller Bottom`, `Top angle flange screws M6x8`, `Joint screws added (D-262)`, `Z Fixed Plate`.
-- **BOM:** G05 priced (owner): K I Metals, curl 23 Nov, £65.52 ex VAT, **£78.62** inc VAT, delivery not shown. Total **£4,041.97, £158.03 left**.
-- **Model not saved.** The owner saves `Type_0_v3`.
-
-**Left:** hidden drill guides 8A, 8B, 9A, 9B no longer fit the X roller (redo before printing them). Design-issues item 23 (ATC motor length) and 24 (stand-ins) wait on Phase 2 parts; section G (item 27 ATC clash with moving Z, item 28 Chamfer2).
-
-**Exact next step:** the owner saves `Type_0_v3`; then a session does design-issues item 27 (ATC clash check with the moving Z), or the drill guides if they are needed soon.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
