@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (14th session): ATC mount faults fixed (D-292, D-293), sweep clean
+- Owner Q&A: sensor held in a tapped web (D-292); flag fix as proposed (D-293). D-291 carried out.
+- Modelled in `Type_0_v3`, **not saved** (17 features, all healthy; the 35 broken timeline items are older): motor pocket Ø62 cut through the arm (Z -10 to 81), motor goes in from below; Z 0 flange holes, strip holes and tub cores filled, 2 M6 x 20 removed; web top recessed Z 115 to 119 (r 30 to edge), boss Z 118.5, hub underside relieved 0.5 (r 11.5 to 17); sensor hole Ø11 + cosmetic M12 x 1, M4 hole + cosmetic thread from the web edge, M4 x 8 grub body. Mount now 675 cm³.
+- **Sweep check found 4 leftover old parts:** 2 x M10 x 30 and 2 x M10 nuts of the old KFL004 (component `Joint screws added (D-262)`), through the hub and forks: removed. After that the sweep (hub, forks, screws, holders 0 to 45°; flag and hub grub 0 to 360°) against all static bodies nearby: no hits. Static overlaps only screws in tapped holes.
+- Docs: `atc-wheel.md` (faults marked fixed, table, sweep section, assembly order, new view `atc-wheel-under.png`, re-rendered `atc-wheel.png`), `decisions.md` D-291 note, D-292, D-293; BOM A06, A09; `cast_in_features.md` strip row.
+
+**Left:** owner saves `Type_0_v3` (the ATC can now be confirmed by the owner). Still open: retaining ring under the lower bearing (only the M4 grub holds the wheel down); measure the real motor (length, runout); arm stiffness hand calc; price A06 and A07 (curl); spindle-against-wheel check not re-run (wheel did not move); front slot against the ATC keep-out (task 24 item 6); the strip on the mould drawing.
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session settles the front slot against the ATC keep-out (task 24 item 6), or solves the lower-bearing retention (a shoulder on the spigot under the lower bearing, or a circlip groove with a larger pilot).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (13th session): ATC one-piece mount, 40 lower (D-289, D-290), modelled
 - Owner: "the mount should be 1 continuous part; the ATC assembly can be made much more compact and shorter". Q&A: machined 6082, wheel about 40 lower, rigid motor joint kept, 2 bearings in the mount, mill first with JLC as fallback. Design approved: `docs/superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`; plan in `docs/superpowers/plans/`.
 - **D-290:** bearings 2 x 6804 (the 6004 bore cut the motor screw holes).
@@ -15,15 +25,6 @@
 **Left:** do NOT confirm or save the ATC as final yet (saving the rest is fine). Fix the 4 faults in the model and re-check (hub, flag and forks swept against static bodies; assembly order). Then: measure the real motor (length, runout); arm stiffness hand calc; price A06 and A07 (curl); front slot against the ATC keep-out (task 24 item 6); the strip on the mould drawing.
 
 **Exact next step:** a session fixes the 4 ATC mount faults in `Type_0_v3` as listed at the top of `docs/atc-wheel.md` (pocket through the arm, drop the Z 0 screws per D-291, web recess and hub relief for the flag, sensor fixing), re-runs the checks including the turning hub, then the owner saves.
-
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (12th session): task 26, rear ATC not feasible; front kept (D-288)
-- Measured in `Type_0_v3` (bounding boxes, Y at the rear limit, not saved, nothing changed): spindle axis Y -88 to 297; tub floor top Z 45 to Y 653, no rear wall; carriage underside Z 169 (Z plate, Z rails, X roller angle, within X ±75 of the spindle), beam underside Z 205 over the full width, sweeping Y 60 to 565.
-- Result in `docs/rear-atc-reach.md`: a rear wheel inside the tub must have its holder tops at Z 165 or lower, which leaves about 25 of tool. With the wheel behind the pickup it also clashes at the pickup itself. With the wheel beside the pickup it sits under the beam's sweep and over the plate's back-right corner. A wheel past the tub end needs +367 of Y travel (rails, screws and tub about 370 longer). The Y motors and BK12 risers are not the limit.
-- **D-288 (owner):** rear dropped, front ATC kept, "very very elegant, integrate and not a kludge". Design-issues 11, 12 and 20 updated; task 26 done.
-
-**Left:** front slot against the ATC keep-out (the slot may be X ±107.5, the keep-out starts at X 88, so they overlap by 19.5); review the unconfirmed front ATC parts (D-250, D-253, D-255) against the owner's "elegant, integrated" requirement; the front strip goes on the mould drawing. Still open from the review: task 18 plate pull-down and pour, ATC 6804 bearing idea, the unpriced lines.
-
-**Exact next step:** the owner saves `Type_0_v3`; then a session settles the front slot (task 24 item 6) together with the ATC keep-out, aiming for an integrated front ATC.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
