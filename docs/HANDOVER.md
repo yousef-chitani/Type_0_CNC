@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026: BK12 riser holes and NEMA 24 plate motor holes redrawn as tapped (D-263); model saved
+- Owner (Q&A): all 4 BK12 holes per riser tapped, not only the X ±373 pair (the X ±327 pair hold PrintNC's M6 x 50, ending at Z 136); 22 deep; plate holes M5 through.
+- `Type_0_v3`, Y and Y2 BKHM12 risers: 4 holes each tapped M6, drill 5.0 x 22 (Z 155 to 133), cosmetic thread. 3 NEMA 24 plates: 4 motor holes each tapped M5, drill 4.2 through, cosmetic thread. Each old hole had a square void inside (PrintNC STEP artefact); plugged by base feature + combine-join, re-cut by base feature + combine-cut (the hole and extrude commands found no target body in these parts). Outlines and volumes checked.
+- Clash check (visible bodies, these 5 parts): only screw threads in the new holes; no screw reaches a hole bottom. Timeline 35 unhealthy before and after. **Saved.**
+
+**Left:** the 3 holes Claude could not place and the X 1610 fill and nut plates (`docs/cad-cleanup-owner-items.md` sections 2 and 3). X21 and X18 pricing. The X BKHM12 riser was not in this task (its BK12 holes not checked). From before: ATC clash check with the moving Z, A06 re-pricing, motor length, fork screw M3 or M4, plate flatness spec, mould drawing, mass.
+
+**Exact next step:** owner answers sections 2 and 3 of `docs/cad-cleanup-owner-items.md`. Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (5th session): missing joint screws modelled (D-262); model saved
 - Owner: "Yes, model them" (the joints listed in `docs/cad-cleanup-owner-items.md` section 1).
 - `Type_0_v3`: new top-level component `Joint screws added (D-262)` (one base feature): 112 screws + 2 M10 nuts. Axes snapped to the exact hole centres; heads on the counterbore floors found by ray. Sizes and counts in D-262. Clash check: only threads in tapped holes and the known 0.03 rail seat. Timeline 35 unhealthy before and after. **Saved.**
@@ -14,17 +23,6 @@
 **Left:** riser holes for the BK12 screws drawn Ø6.1 (tap M6) and the NEMA 24 plate motor holes drawn Ø5.0 (tap M5): change the hole drawings or the screws. The 3 holes Claude could not place and the X 1610 fill and nut plates (`docs/cad-cleanup-owner-items.md` sections 2 and 3). X21 and X18 pricing. From before: ATC clash check with the moving Z, A06 re-pricing, motor length, fork screw M3 or M4, plate flatness spec, mould drawing, mass.
 
 **Exact next step (owner said "Yes, redraw them", 22 Nov):** new session redraws as tapped holes in `Type_0_v3`: the 2 BK12 screw holes in each of the Y and Y2 BKHM12 risers (X ±373, Y 579 and 592, now Ø6.1 through: tap M6, about 15 deep from the top, Z 155 down; the M6 x 40 ends at Z 146) and the 4 motor holes in each of the 3 NEMA 24 plates (now Ø5.0: tap M5, drill 4.2). Edit the hole features in the riser and plate components (or delete-face and re-cut), check health stays 35, re-run the clash check of `Joint screws added (D-262)`, record D-263, save. Then owner answers sections 2 and 3 of `docs/cad-cleanup-owner-items.md`. Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (4th session): one-piece printed ATC bracket modelled (D-260); CAD clean-up of loose screws and unused holes (D-261); model saved
-- Owner (Q&A): save the model first (done, then saved again at the end); clean visible fasteners only (hidden PrintNC leftovers stay); fill unused holes in our parts, leave vendor parts; D-259 proposals confirmed (D-260).
-- `Type_0_v3`, `ATC Wheel (Phase 2)`: base features edited in place. `ATC Bracket (PETG print, top plate 6082)` now holds one PETG body (block, arms 15, motor plate 15, Z 68 to 83, about 120 cm³) and the top plate (post holes at X 150/250). Posts Ø12 x 32 at X 150/250. Fasteners: 8 M6 x 25 arm and 4 M5 x 20 motor-plate screws gone; post screws M6 x 25 (bottom) and M6 x 16 (top) at the new X. Motor M3 x 10 kept (counterbores 9 deep). Interference: only the 2 M6 x 40 in the tapped strip.
-- Clean-up (D-261): 26 visible screws that clamp nothing removed (old PrintNC HGW20CC block screws on X and Y2, 2 M4 pan heads); 15 unused holes filled with Delete Face features named `Fill unused hole (D-261)` (old riser holes from D-187, 4 on the gantry tube rear face, 2 in the X chain support, 1 in the X roller top angle). Timeline: 35 unhealthy before and after. **Saved.**
-- Found, not changed: about 100 aligned holes with no screw (missing screws, e.g. Y roller brace and tube joints, motor screws, Z block screws, plate hold-downs) and 3 holes Claude could not place. All in `docs/cad-cleanup-owner-items.md`.
-- BOM: A06 re-described (bracket printed, screws list updated). Docs: `docs/atc-wheel.md` layout rows.
-
-**Left:** owner answers `docs/cad-cleanup-owner-items.md` (model the missing screws or not; the 3 unplaced holes; the X 1610 fill and nut plates). From before: ATC clash check with the moving Z (only the static check was run this time), A06 re-pricing, motor length, fork screw M3 or M4, plate flatness spec, mould drawing, mass in `docs/machine-assessment.md`.
-
-**Exact next step:** owner reads `docs/cad-cleanup-owner-items.md` and says whether to model the missing screws. Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

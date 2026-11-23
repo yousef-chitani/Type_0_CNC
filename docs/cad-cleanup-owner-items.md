@@ -4,8 +4,7 @@
 
 ## 1. Missing screws: done (D-262)
 112 screws and 2 nuts are modelled in `Joint screws added (D-262)` (sizes in D-262; new ones in BOM line X21). Three things follow from them:
-- The BK12 riser holes are drawn Ø6.1 (clearance). The BK12 screws need them tapped M6.
-- The NEMA 24 plate motor holes are drawn Ø5.0. The motor screws need them tapped M5 (or a different screw: the motor flange holes are Ø5).
+- Done (D-263): the BK12 riser holes (all 4 per riser) are now tapped M6 x 22, and the NEMA 24 plate motor holes tapped M5 through.
 - Thread lengths are short in the 3 mm Y roller tube walls (M6 x 12 gets 3 of thread, as PrintNC does).
 
 ## 2. Holes Claude could not place
