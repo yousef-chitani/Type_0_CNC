@@ -8,6 +8,7 @@
 - Thread lengths are short in the 3 mm Y roller tube walls (M6 x 12 gets 3 of thread, as PrintNC does).
 
 ## 2. Holes Claude could not place
+**Closed (D-266, 23 Nov 2026):** the 2 M5 tube holes are filled. The Ø16 is the tube's R8 inside corner and the Ø10 is the zip-tie channel under the chain support (now at Z 33): neither is a hole, both left.
 - X gantry tube: a Ø16 hole along X at Y 549, Z 309. Clearance for something, or a leftover?
 - Y cable chain support: a Ø10 hole along X at Y 220, Z 39. Cable hole or leftover?
 - X roller tube: 2 M5 holes (X -254 and -190, Z 372) sit 2 below the top angle's holes (Z 374). A leftover from before D-216, or is the angle 2 out?

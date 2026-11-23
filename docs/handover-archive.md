@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (3rd session): owner Q&A on the design issues (D-264 to D-276); wall-top levelling pour modelled, saved
+- Q&A answers recorded as D-264 to D-276 (`docs/design-issues.md` has a status per item). `requirements.md` updated (D-269). Task 26 added (rear ATC study, D-274). Z mount length question added to `supplier-messages.md` section 4 (D-276).
+- `Type_0_v3` (D-271), **saved** (owner: "Yes, save it"): cast wall tops Z 113 to 107 (casting 39,293 to 38,633 cm3, about 88.9 kg); 40 x 10 bars Z 97 to 107; 2 mm grout replaced by 8 mm `Levelling pour 8 ±X (D-271)` bodies; 3 outer strips 6 lower, pockets re-cut, old +X Y220 pocket top filled; strip screws (M6x12 (5), (5)(Mirror), (6)), Y220 chain support, both trigger mounts and zip-tie screws #7 and #8 6 lower; trigger tops grown back to Z 133.5; 20 hold-downs extended to M6 x 25; 12 jack screws (bodies in `Joint screws added (D-262)`) and their M6 tap holes in the plates. Health 35 before and after.
+
+**Left (model):** (1) the Y fixed-end chain support (`YAxis Cable Chain Fixed End Support:1`), its zip-tie plate and its 4 M5x20 (9) did NOT move: they are held by joints (`Rigid 1` in the support, `Rigid 271` in root, and the support occurrence itself). Its strip screws did move, so it is 6 out. Fix: edit those joints, or move the occurrence with the joints suppressed (one try moved the plate 12, undone). (2) Strip hole cores in the casting (if any) were not moved. (3) Clash check of the changed parts not run. (4) Then D-264 (ISO 7380 Y screws), D-266 (fill 3 holes; first check the top angle screws at Z 374 have their own holes), X 1610 plates fit check, D-275 hub, the X BKHM12 riser BK12 holes. **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
+
+**Exact next step:** a new session fixes the fixed-end chain support (item 1 above) and runs the clash check.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (2nd session): takeover, outstanding design and layout issues listed
 - New `docs/design-issues.md`: 31 open design and layout items in 8 groups (structure, spec misses, layout not yet modelled, fastener questions, proposals waiting for confirmation, stand-ins, model checks, blocked work). No CAD or decision changes.
 
