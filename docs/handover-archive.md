@@ -2,6 +2,13 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (2nd session): takeover, outstanding design and layout issues listed
+- New `docs/design-issues.md`: 31 open design and layout items in 8 groups (structure, spec misses, layout not yet modelled, fastener questions, proposals waiting for confirmation, stand-ins, model checks, blocked work). No CAD or decision changes.
+
+**Left:** everything in `docs/design-issues.md`. Biggest risks: stiffness margin (about 5 µm left, rollers, 3 mm wall screws and the printed PETG risers not checked); the front slot and the ATC keep-out not modelled; the wall-plate flatness spec; the unpriced lines against £236.65.
+
+**Exact next step:** owner answers `docs/cad-cleanup-owner-items.md` sections 2 and 3 and `open-items-sketch.md` items 1 and 2 (items 14 to 17 in `design-issues.md`). Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026: BK12 riser holes and NEMA 24 plate motor holes redrawn as tapped (D-263); model saved
 - Owner (Q&A): all 4 BK12 holes per riser tapped, not only the X ±373 pair (the X ±327 pair hold PrintNC's M6 x 50, ending at Z 136); 22 deep; plate holes M5 through.
 - `Type_0_v3`, Y and Y2 BKHM12 risers: 4 holes each tapped M6, drill 5.0 x 22 (Z 155 to 133), cosmetic thread. 3 NEMA 24 plates: 4 motor holes each tapped M5, drill 4.2 through, cosmetic thread. Each old hole had a square void inside (PrintNC STEP artefact); plugged by base feature + combine-join, re-cut by base feature + combine-cut (the hole and extrude commands found no target body in these parts). Outlines and volumes checked.
