@@ -2,6 +2,17 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (5th session): D-264 and D-266 modelled, saved
+- The owner had saved `Type_0_v3` with the D-271 follow-up (document open, not modified, at the start).
+- D-264: the 4 Y and Y2 block screws by the nut plate (Body1, Body3 of `M5x8 Y block screws` and `M5x8 Y2 block screws`; X ±334, ±366, Y 409.5) are now ISO 7380 M5 x 8 button heads (Ø9.5, head Z 158 to 160.75, domed). They clear the tie-rod nut (Z 162.1) by 1.35; clash check of all 16 Y block screws: none.
+- D-266: the 2 leftover M5 holes in the X roller tube front wall (X -254.5, -190.5, Z 372, Y 445 to 448) are plugged: base feature and combine `Fill 2 leftover M5 holes (D-266)` in `XRollers` (119 mm3, faces 58 to 56). The top angle screws at Z 374.5 have their own tapped holes in the angle and end at Y 443.5, short of the tube.
+- **The other two D-266 "holes" are not holes, so they were left:** the Ø16 in the gantry tube is the R8 inside corner of the 120 x 120 x 8 tube (all 4 corners, full length); the Ø10 in the Y220 chain support is the arched zip-tie channel under its base (now Z 33), linking its 4 zip-tie slots. Recorded in D-266.
+- BOM X18: 20 x M5 x 8 plus 4 x ISO 7380 M5 x 8. Timeline health 35 before and after.
+
+**Left (model):** X 1610 plates fit check, D-275 hub, the X BKHM12 riser BK12 holes. **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
+
+**Exact next step:** a session checks the X 1610 fill plate and nut plate fit with the DFU1605 nuts (design-issues item 17) and asks the owner.
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (4th session): Y fixed-end chain support moved 6 lower; hole cores cut; clash check run; saved
 - `Type_0_v3`: `YAxis Cable Chain Fixed End Support:1` (with its zip-tie plate and 4 M5x20 (9)) moved 6 lower (origin Z 55 to 49); its 2 holes now line up with the strip screws M6x12 (6) at Z 56.5 and 71.5. Joints `Rigid 91` (support to `YFrame(Mirror)`, which held it) and `Rigid 230` (strip screw to support, which dragged the screws) are **suppressed**; screws put back at their D-271 place.
 - Casting: the D-271 pocket cuts had left the tapped holes of the parts as casting. Cut out: 3 slivers in the lower strip holes (+X Y520, +X Y220 at Z 54 to 55, -X Y520 at Z 84 to 85; features `Strip pocket hole slivers` / `Remove strip hole slivers (D-271)`) and 20 cores Ø5 x 6 in the 40 x 10 bar holes, Z 97 to 103, which the M6 x 25 hold-down tips hit (`Bar pocket hole cores` / `Remove bar hole cores (D-271)`, 2,356 mm3). Casting 38,630.9 cm3.

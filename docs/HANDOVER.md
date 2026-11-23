@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (7th session): X BKHM12 riser BK12 holes tapped (D-279); not saved
+- `Type_0_v3` was open with the 6th session's D-278 change **still unsaved** (modified flag on).
+- Design-issues item 19 checked: the X BKHM12 riser's 4 BK12 holes (X 319 and 332, Y 482 and 528) were PrintNC's untapped Ø6.1 holes with a 5 x 5 square void inside, as Y before D-263. The BK12's M6 x 50 screws end at Z 335, 20 into the riser.
+- **D-279: redrawn as D-263** (owner): tapped M6, drill 5.0 x 22 from the top (Z 355 to 333), cosmetic thread. Features `D-279 fill X BK12 holes` and `D-279 X BK12 holes M6 x 22` in `X BKHM12 Riser`, 4 threads `D-279 M6 thread`. Volumes checked (+4 x 777, -4 x 432 mm³), outline unchanged. Clash check: only the 4 screw threads (144 mm³ each, 2 clear of the hole bottom) and the old M4 pan-head threads. Health 35 before and after. No BOM change.
+- **Model not saved** (D-278 and D-279). The owner saves `Type_0_v3`.
+
+**Left (model):** D-275 hub, X trigger mount M6 x 20 short (item 18). **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
+
+**Exact next step:** the owner saves `Type_0_v3`; then a session checks the X gantry trigger mount M6 x 20 (design-issues item 18) and asks the owner.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (6th session): X 1610 plates checked, 2 X block screws ISO 7380; not saved
 - Design-issues item 17 checked in `Type_0_v3`: the X DFU1605 flange sits on the X 1610 nut plate face (X -140), its 6 holes (PCD 38) line up, the Ø28.2 bore clears the Ø28 nut body, the fill plate's Ø18 hole clears the Ø16 screw. Same as Y and Y2. **D-277: both plates stay** (owner).
 - The check found 2 X top block screws by the nut plate (Body7, Body8 of `M5x8 X top block screws`, X -162, Y 489 and 521) hit the 2 lower tie-rod nuts by 0.9, as on Y before D-264. **D-278: ISO 7380 M5 x 8** (owner); modelled, head Z 358 to 360.75, 1.35 under the nut (Z 362.1). Clash check of the X nut area: none left (only threads in holes and vendor-internal overlaps). Health 35 before and after.
@@ -15,17 +25,6 @@
 **Left (model):** D-275 hub, the X BKHM12 riser BK12 holes (item 19), X trigger mount M6 x 20 short (item 18). **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
 
 **Exact next step:** the owner saves `Type_0_v3`; then a session checks the X BKHM12 riser BK12 holes (design-issues item 19).
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (5th session): D-264 and D-266 modelled, saved
-- The owner had saved `Type_0_v3` with the D-271 follow-up (document open, not modified, at the start).
-- D-264: the 4 Y and Y2 block screws by the nut plate (Body1, Body3 of `M5x8 Y block screws` and `M5x8 Y2 block screws`; X ±334, ±366, Y 409.5) are now ISO 7380 M5 x 8 button heads (Ø9.5, head Z 158 to 160.75, domed). They clear the tie-rod nut (Z 162.1) by 1.35; clash check of all 16 Y block screws: none.
-- D-266: the 2 leftover M5 holes in the X roller tube front wall (X -254.5, -190.5, Z 372, Y 445 to 448) are plugged: base feature and combine `Fill 2 leftover M5 holes (D-266)` in `XRollers` (119 mm3, faces 58 to 56). The top angle screws at Z 374.5 have their own tapped holes in the angle and end at Y 443.5, short of the tube.
-- **The other two D-266 "holes" are not holes, so they were left:** the Ø16 in the gantry tube is the R8 inside corner of the 120 x 120 x 8 tube (all 4 corners, full length); the Ø10 in the Y220 chain support is the arched zip-tie channel under its base (now Z 33), linking its 4 zip-tie slots. Recorded in D-266.
-- BOM X18: 20 x M5 x 8 plus 4 x ISO 7380 M5 x 8. Timeline health 35 before and after.
-
-**Left (model):** X 1610 plates fit check, D-275 hub, the X BKHM12 riser BK12 holes. **Docs:** BOM G06 text (8 mm pour, jack screws), X19 hold-down length M6 x 25, new jack screw line (unpriced), pour quantity; `cast_in_features`, `spec-gaps.md`.
-
-**Exact next step:** a session checks the X 1610 fill plate and nut plate fit with the DFU1605 nuts (design-issues item 17) and asks the owner.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

@@ -27,7 +27,7 @@ Collected from `HANDOVER.md`, `tasks/README.md`, `machine-assessment.md`, `spec-
 16. Three holes Claude could not place: Ø16 in the X gantry tube (Y 549, Z 309); Ø10 in the Y chain support (Y 220, Z 39); 2 M5 in the X roller tube 2 below the top angle holes. **Decided D-266: fill. Modelled 23 Nov (5th session): the 2 M5 tube holes are filled. The other two are not holes: the Ø16 is the gantry tube's own R8 inside corner, the Ø10 is the zip-tie channel under the chain support base (links its 4 zip-tie slots). Left as they are.**
 17. X 1610 fill plate and nut plate: still visible. Used with the DFU1605 nuts or not? **Decided D-277: kept; they fit the DFU1605 nut. The check found the 2 X top block screws by the nut plate hit the tie-rod nuts by 0.9: D-278, ISO 7380, modelled 23 Nov (6th session).**
 18. X gantry trigger mount: its M6 x 20 is 2.5 short of the tube face.
-19. X BKHM12 riser: its BK12 holes were not checked in D-263 (Y and Y2 were).
+19. X BKHM12 riser: its BK12 holes were not checked in D-263 (Y and Y2 were). **Decided D-279: they were untapped Ø6.1 holes like Y before D-263; now tapped M6 x 22, modelled 23 Nov (7th session), not saved.**
 
 ## E. Proposals waiting for the owner's confirmation
 20. D-250, D-251, D-253, D-255: ATC bracket parts, lift height Z 232, the 4th strip's size and place, the fork layout ("Proposed by Claude, owner to confirm"). **Not confirmed: rear study (D-274).**
