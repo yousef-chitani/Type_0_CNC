@@ -6,6 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (13th session): ATC one-piece mount, 40 lower (D-289), design written
+- Owner: "the mount should be 1 continuous part; the ATC assembly can be made much more compact and shorter". Q&A: machined 6082 (made on the mill before Phase 2), wheel about 40 lower (fork plane Z 131), rigid motor joint kept (D-254).
+- Design: `docs/superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`. Mount, bearing, hub replace 9 parts: hub and shaft one part, 1204 self-aligning bearing and motor pilot bored in one set-up in the mount web, cup round the motor, slotted yoke so tools hang through, 80 x 10 x 50 strip with 4 x M6 (Phase 1 mould). Nose at pickup Z 141, lift Z 192 (53 to the top of Z).
+- All figures are Claude's proposal, owner to confirm. Nothing modelled.
+
+**Left:** owner approves the design doc; then model it in `Type_0_v3` and run the checks listed in the doc (plate edge at the approach below Z 70, moving-Z clash, grub screw access, real motor length, yoke stiffness). Front slot against the keep-out still open.
+
+**Exact next step:** owner reads and approves the design doc (or corrects it); then a session models the mount and runs its 6 checks.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (12th session): task 26, rear ATC not feasible; front kept (D-288)
 - Measured in `Type_0_v3` (bounding boxes, Y at the rear limit, not saved, nothing changed): spindle axis Y -88 to 297; tub floor top Z 45 to Y 653, no rear wall; carriage underside Z 169 (Z plate, Z rails, X roller angle, within X ±75 of the spindle), beam underside Z 205 over the full width, sweeping Y 60 to 565.
 - Result in `docs/rear-atc-reach.md`: a rear wheel inside the tub must have its holder tops at Z 165 or lower, which leaves about 25 of tool. With the wheel behind the pickup it also clashes at the pickup itself. With the wheel beside the pickup it sits under the beam's sweep and over the plate's back-right corner. A wheel past the tub end needs +367 of Y travel (rails, screws and tub about 370 longer). The Y motors and BK12 risers are not the limit.
@@ -14,18 +23,6 @@
 **Left:** front slot against the ATC keep-out (the slot may be X ±107.5, the keep-out starts at X 88, so they overlap by 19.5); review the unconfirmed front ATC parts (D-250, D-253, D-255) against the owner's "elegant, integrated" requirement; the front strip goes on the mould drawing. Still open from the review: task 18 plate pull-down and pour, ATC 6804 bearing idea, the unpriced lines.
 
 **Exact next step:** the owner saves `Type_0_v3`; then a session settles the front slot (task 24 item 6) together with the ATC keep-out, aiming for an integrated front ATC.
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (11th session): Gemini review checked; docs fixed (D-284 to D-287)
-- The owner pasted a review of the repo by Gemini (8 points, at commit `db206e3`). Checked each against the repo. Point 2 (roller steel) was already done in D-281 to D-283; point 4 (ATC shaft on one bearing) is the risk the owner accepted in D-254; the rest hold.
-- **D-284:** Y2 on the 7I76EU with no pin moved: step/dir 3 = Y2, ATC to channel 4 on TB3 (pins to check), Y2 home IN15, Y2 alarm IN16 (TB5). `electrical.md` updated (4 CL57T drives); `io-list.md` marked out of date.
-- **D-285:** LinuxCNC config left at 3 joints (no LinuxCNC on this PC to run the 23 simulator checks). Task 19 step 2 lists the exact changes (trivkins `XYZY`, `HOME_SEQUENCE = -1` on both Y joints, nets, fault input, `Type_0_v3` travel, simulator checks). `linuxcnc.md` says the config is out of date.
-- **D-286:** S04 stays 4 x 5 m; its note says 5 runs now, decide when the motor cables are measured. Total unchanged, **£4,041.97, £158.03 left**.
-- **D-287:** PETG commissioning parts (risers, motor plates, nut and fill plates): 6 walls, 50% gyroid, in `printed-parts.md`.
-- Stale lines fixed: `README.md` (moving gantry, `Type_0_v3`), `tasks/README.md` state lines, key-files row for `cad/v2/assembly.py` (superseded).
-
-**Left from the review:** (1) task 26: the spindle reaches only Y 292 to 297 and the tub runs to Y 653, so a rear wheel needs longer Y travel or sits behind the plate under the gantry; check this first. (3) Task 18: say how each wall-top plate is pulled down onto its jack screws and checked with the straightedge, and how the 8 mm gap is dammed, vented and poured without air. (4) Phase 2: a 6804 bearing in the ATC motor plate (then the motor joint needs some give). (6) Budget: G01, G06, X18 to X22 unpriced against £158.03; one steel order, one screw order. Also from the 10th session: owner saves `Type_0_v3`; drill guides 8A, 8B, 9A, 9B; design-issues item 27.
-
-**Exact next step:** the owner saves `Type_0_v3`; then a session does the Y reach check for task 26 (can the spindle reach a rear wheel at all), before any other rear ATC work.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

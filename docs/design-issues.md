@@ -30,7 +30,7 @@ Collected from `HANDOVER.md`, `tasks/README.md`, `machine-assessment.md`, `spec-
 19. X BKHM12 riser: its BK12 holes were not checked in D-263 (Y and Y2 were). **Decided D-279: they were untapped Ø6.1 holes like Y before D-263; now tapped M6 x 22, modelled 23 Nov (7th session); saved.**
 
 ## E. Proposals waiting for the owner's confirmation
-20. D-250, D-251, D-253, D-255: ATC bracket parts, lift height Z 232, the 4th strip's size and place, the fork layout ("Proposed by Claude, owner to confirm"). **Not confirmed. Rear dropped (D-288); the owner wants the front ATC very elegant and integrated, not a kludge, so review these parts against that before confirming.**
+20. D-250, D-251, D-253, D-255: ATC bracket parts, lift height Z 232, the 4th strip's size and place, the fork layout ("Proposed by Claude, owner to confirm"). **Not confirmed. Rear dropped (D-288); the owner wants the front ATC very elegant and integrated, not a kludge, so review these parts against that before confirming. D-289 (23 Nov): bracket stack replaced by a one-piece machined mount, wheel 40 lower; design waits for the owner (`superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`).**
 21. D-211: HM12-60 Z motor mount and the 442 Z plate. **D-276: ask the seller (message 4).**
 
 ## F. Stand-ins and unknown dimensions
