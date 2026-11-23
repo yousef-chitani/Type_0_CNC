@@ -8,10 +8,10 @@
 
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (13th session): ATC one-piece mount, 40 lower (D-289), design written
 - Owner: "the mount should be 1 continuous part; the ATC assembly can be made much more compact and shorter". Q&A: machined 6082 (made on the mill before Phase 2), wheel about 40 lower (fork plane Z 131), rigid motor joint kept (D-254).
-- Design: `docs/superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`. Mount, bearing, hub replace 9 parts: hub and shaft one part, 1204 self-aligning bearing and motor pilot bored in one set-up in the mount web, cup round the motor, slotted yoke so tools hang through, 80 x 10 x 50 strip with 4 x M6 (Phase 1 mould). Nose at pickup Z 141, lift Z 192 (53 to the top of Z).
+- Design: `docs/superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`. Mount, bearing, hub replace 9 parts: hub and shaft one part, 2 x 6004 and the motor pilot bored in one set-up in the mount web (owner: "2 x 6004 pair, rigid"), grub window, cup round the motor, low solid arm (top Z 12) so tool length grows to about 114 (98 today), 80 x 10 x 50 strip with 4 x M6 (Phase 1 mould). Nose at pickup Z 141, lift Z 192 (53 to the top of Z).
 - All figures are Claude's proposal, owner to confirm. Nothing modelled.
 
-**Left:** owner approves the design doc; then model it in `Type_0_v3` and run the checks listed in the doc (plate edge at the approach below Z 70, moving-Z clash, grub screw access, real motor length, yoke stiffness). Front slot against the keep-out still open.
+**Left:** owner approves the design doc; then model it in `Type_0_v3` and run the checks listed in the doc (plate edge at the approach, sweep and moving-Z clash, motor runout against the rigid 2-bearing joint, real motor length, arm stiffness, whether the Type 0 can cut it or JLC does). Front slot against the keep-out still open.
 
 **Exact next step:** owner reads and approves the design doc (or corrects it); then a session models the mount and runs its 6 checks.
 
