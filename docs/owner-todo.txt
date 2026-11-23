@@ -94,6 +94,17 @@ The mould drawings can't start until this is done.
 4. Confirm or change Claude's proposals in D-253 to D-255
    (docs/decisions.md): bracket sizes, posts, shaft, round hub, sensor place.
 
+=== JOB 6: ATC COLUMN AND BASE L (added 23 Nov 2026) ===
+
+1. Save Type_0_v3 in Fusion (ATC plan task 5b, D-300, is not saved).
+2. Buy the 80 x 80 x 8 aluminium angle with an inside root radius of
+   R 12 or less (R 6 is modelled).
+3. Ask your bending service, for 4 mm steel: inside bend radius (R 4
+   modelled), minimum flange (20 modelled) and the corner relief they
+   want (1 mm modelled).
+4. Assembly: screw the motor to the motor plate on the bench first, then
+   slide the pair into the column from the open side (D-300).
+
 === LATER (no rush) ===
 
    - When the safety relay arrives: photo of its terminal labels.
