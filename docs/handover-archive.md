@@ -2,6 +2,15 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026: BK12 riser holes and NEMA 24 plate motor holes redrawn as tapped (D-263); model saved
+- Owner (Q&A): all 4 BK12 holes per riser tapped, not only the X ±373 pair (the X ±327 pair hold PrintNC's M6 x 50, ending at Z 136); 22 deep; plate holes M5 through.
+- `Type_0_v3`, Y and Y2 BKHM12 risers: 4 holes each tapped M6, drill 5.0 x 22 (Z 155 to 133), cosmetic thread. 3 NEMA 24 plates: 4 motor holes each tapped M5, drill 4.2 through, cosmetic thread. Each old hole had a square void inside (PrintNC STEP artefact); plugged by base feature + combine-join, re-cut by base feature + combine-cut (the hole and extrude commands found no target body in these parts). Outlines and volumes checked.
+- Clash check (visible bodies, these 5 parts): only screw threads in the new holes; no screw reaches a hole bottom. Timeline 35 unhealthy before and after. **Saved.**
+
+**Left:** the 3 holes Claude could not place and the X 1610 fill and nut plates (`docs/cad-cleanup-owner-items.md` sections 2 and 3). X21 and X18 pricing. The X BKHM12 riser was not in this task (its BK12 holes not checked). From before: ATC clash check with the moving Z, A06 re-pricing, motor length, fork screw M3 or M4, plate flatness spec, mould drawing, mass.
+
+**Exact next step:** owner answers sections 2 and 3 of `docs/cad-cleanup-owner-items.md`. Then the LiMo basket and Dyfed call (`docs/price-check-task-17.md`).
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000. 22 Nov 2026 (5th session): missing joint screws modelled (D-262); model saved
 - Owner: "Yes, model them" (the joints listed in `docs/cad-cleanup-owner-items.md` section 1).
 - `Type_0_v3`: new top-level component `Joint screws added (D-262)` (one base feature): 112 screws + 2 M10 nuts. Axes snapped to the exact hole centres; heads on the counterbore floors found by ray. Sizes and counts in D-262. Clash check: only threads in tapped holes and the known 0.03 rail seat. Timeline 35 unhealthy before and after. **Saved.**
