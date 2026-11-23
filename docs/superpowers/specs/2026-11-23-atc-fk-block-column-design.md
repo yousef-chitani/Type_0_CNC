@@ -2,6 +2,12 @@
 
 23 Nov 2026, 15th session. Status: **for owner approval**. Replaces `2026-11-23-atc-one-piece-mount-design.md` (D-289 to D-294) for the mount; wheel, forks, hub top, holders and the pickup layout stay.
 
+## Revision 23 Nov 2026, 18th session (D-299): angle column, bent sheet base L
+The owner changed two parts after tasks 1 to 5 were modelled. Where this section and the text below disagree, this section wins.
+- **Column:** one continuous L-section part in plan (aluminium angle, size to choose) in place of the 2 walls: one leg is the tub-side wall (Y -149.8 to -141.8), the other closes **-X**. The far wall (Y -206.2 to -198.2) goes. **+X and -Y are open** (motor cables, 2.5 key, coupling). Top plate and motor plate screw to both legs.
+- **Base L:** one laser-cut and bent **4 mm steel** part from a **bending service**: tub upright against the tub face (Y -41 to -37), arm, wall upright on the tub-side leg; the arm's long edges bent up 20 (U channel, top at Z 12). No gusset. Arm bending stiffness about as before (EI about 2.2e9 against 2.3e9); end bends and twist not worked out: bench check.
+- Superseded below: the 2 walls, the motor plate joints of D-298, the 70 x 38 x 8 flange, the 10-thick tub plate with Ø11 counterbores, the gusset.
+
 ## Why
 The owner sent a picture of another machine's ATC: a column beside the frame, the wheel on a small block on top, the motor hanging out underneath. Its designer: *"the principle is just a ball screw support block and motor mount, and one little custom stub shaft."* Owner: the mount should look more like that, and the tub flange is much oversized.
 

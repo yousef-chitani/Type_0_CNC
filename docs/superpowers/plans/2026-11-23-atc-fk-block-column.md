@@ -13,7 +13,7 @@
 ## Global Constraints
 - Wheel axis X 200, Y -174; forks Z 126 to 136; hub top part Z 119 to 131 unchanged; pickup X 200, Y -85.
 - Nothing in the tools' sweep: r 89 around the axis, tools down to Z 17 (longest allowed); nothing at Y < -78 rises above Z 12 except the column (inside r 58).
-- Tub plate 50 x 40 x 10, X 175 to 225, Y -47 to -37, Z -10 to 30; strip 50 x 10 x 40, Y -37 to -27; 2 x M6 at X 185 and 215, Z 21.
+- Tub upright of the bent base L (D-299): 50 wide, 4 thick at Y -41 to -37, X 175 to 225 (Z range from the bend layout); strip 50 x 10 x 40, Y -37 to -27; 2 x M6 at X 185 and 215, Z 21.
 - Do not save `Type_0_v3`: the owner saves. Prices only from live pages with the date, by curl (CLAUDE.md). No eBay.
 - Names in the model and docs in plain words; decisions D-295 onward in `docs/decisions.md`.
 - Stop at about 130k tokens of context and hand over (CLAUDE.md).
@@ -64,12 +64,22 @@
 - [x] 2 x M6 x 20 from the front.
 - [x] Check: counterbore edge to gusset ≥ 3. Commit.
 
+### Task 5b: Angle column and bent sheet base L (D-299)
+**Interfaces:** replaces the walls in `ATC Column plates (6082)` with one angle body; replaces `ATC Base L (6082)` with `ATC Base L (steel 4, bent)`.
+- [ ] Ask the owner before fixing sizes not in D-299 (angle stock size, screw counts).
+- [ ] Column: remove the far wall and the D-298 joints to it; make the tub-side wall and a -X leg one L body (angle). **-X leg position first:** it sits between the motor side (X 179) and the sensor body under the ear (centre about X 159.4, Y -190.8, edge about X 165.3): about 5.6 total clearance for an 8 leg. Leg ends inside r 58 (an 80 leg on the tub-side wall reaches about r 58, a 70 leg about r 50: trim). Extruded angle root radius against the motor corner and the motor plate corner (R 9 just clears, R 10 does not). The angle's top end milled square (it sets the wheel axis).
+- [ ] Top plate and motor plate joints to both legs (screws; dowels at the top plate as D-298).
+- [ ] Base L in 4 mm sheet: tub upright, U-channel arm (side flanges 20 up, top Z 12), wall upright; corner reliefs; bend radius and minimum flange from the bending service (check by curl). M6 to the strip: no counterbores in 4 mm, heads stand proud, recheck the M6 length against the strip's 2 deep core. Wall-upright M5s: move the Z 0 row up (it sat about 2 from the Z -8 bend). The upright cannot hang to Z -10 below an arm at Z -8: fix the Z layout. Dowels in laser-cut holes do little: ask the owner (reamed holes or none).
+- [ ] Key reach from +X (or -Y) to the coupling clamp and the locknut setscrew (measure).
+- [ ] Static overlap of the changed bodies (as task 6, one body at a time).
+- [ ] Commit (model not saved).
+
 ### Task 6: Checks
-- [x] Static overlap of every ATC body against all visible bodies in X 75 to 325, Y -300 to -15, Z -60 to 200: expect only screws in tapped holes.
+- [ ] (rerun after task 5b) Static overlap of every ATC body against all visible bodies in X 75 to 325, Y -300 to -15, Z -60 to 200: expect only screws in tapped holes.
 - [ ] Sweep as in `atc-wheel.md` (hub, forks, fork screws, hub M4s, holders 0 to 45° in 3°; flag 0 to 360° in 5°) against the static bodies: expect no hits above 0.1 mm³.
 - [ ] Spindle against the wheel at drop-off, pickup and lifted (the method in `atc-wheel.md`, 13th session): expect only holder 1 at the gripped pocket.
-- [ ] Mass of the new metal parts; lowest Z (expect about -46). Record results.
+- [ ] Mass of the new metal parts (rerun after task 5b; the base L is now steel); lowest Z (expect about -46). Record results.
 
 ### Task 7: Docs and handover
-**Files:** `docs/atc-wheel.md` (rewrite to the new parts, renders `atc-wheel.png`, `atc-wheel-under.png`), `docs/decisions.md` (D-295: FK12 block, plate column, stub shaft, coupling, approach A; D-296: ATC overhangs the bench front, lowest Z about -46; D-297: tub plate 50 x 40 x 10, strip 50 x 10 x 40), `docs/bom.csv` (A06, A07, new lines FK12, coupling, plate), `cad/v2/out/assembly/cast_in_features.md` (strip row), `docs/design-issues.md` (bench overhang), `docs/HANDOVER.md`, `docs/tasks/README.md`.
+**Files:** `docs/atc-wheel.md` (rewrite to the new parts, renders `atc-wheel.png`, `atc-wheel-under.png`), `docs/decisions.md` (D-295: FK12 block, column (now one angle, D-299), stub shaft, coupling, approach A; D-296: ATC overhangs the bench front, lowest Z about -46; D-297: strip 50 x 10 x 40; the base L itself is D-299, bent 4 mm steel), `docs/bom.csv` (A06, A07, new lines FK12, coupling, plate, angle, bent base L: prices only from a live page), `cad/v2/out/assembly/cast_in_features.md` (strip row), `docs/design-issues.md` (bench overhang), `docs/HANDOVER.md`, `docs/tasks/README.md`.
 - [ ] Write, commit, push.
