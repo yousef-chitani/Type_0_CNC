@@ -10,22 +10,22 @@ Full list: [bom.csv](bom.csv). **134 line items, 127 priced.** Prices were read 
 | Motion | 17 | 17 | £1,220.03 |
 | Gantry | 3 | 2 | £78.62 |
 | Spindle | 9 | 9 | £1,533.95 |
-| Tool changer | 7 | 7 | £145.14 |
+| Tool changer | 7 | 7 | £136.37 |
 | Pneumatics | 6 | 6 | £110.22 |
 | Electronics | 25 | 25 | £843.75 |
 | Enclosure | 4 | 4 | £78.61 |
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
 | Fixings | 14 | 9 | £97.60 |
-| **All** | **134** | **127** | **£5,456.52** |
+| **All** | **134** | **127** | **£5,447.75** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,456.52**. Not priced yet: G01, X18, G06, X19, X20, X21, X22.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,447.75**. Not priced yet: G01, X18, G06, X19, X20, X21, X22.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
 | 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £4,041.97 |
-| 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,414.55 |
+| 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,405.78 |
 
 Lines still TO PRICE: see the list above.
 
@@ -112,7 +112,7 @@ Lines still TO PRICE: see the list above.
 | A03 | 2 | Small closed-loop stepper + driver (48 V) | 1 set | Motor 17HS24-2004D-E1K (80 long with encoder, 5 mm shaft with a 15 flat, 4 x M3 x 4.5 deep, cable boss on one side). Turns the ATC wheel directly (D-254): face up under the mount web, Z 1 to 81, between the 2 mount walls; hub grub on the shaft flat at Z 100 (D-289, D-294). Vendor STEP and PDF in cad/vendor/ | [product](https://www.omc-stepperonline.com/1-axis-closed-loop-stepper-cnc-kit-80ncm-113-29oz-in-nema-17-motor-driver-1-cl42t-s08-v41) | £39.43 (VAT?) + £8.34 DE warehouse (StepperOnline) | 47.77 | 1-CL42T-S08-V41: NEMA 17 0.8 Nm + CL42T 24-48 V. 5 mm shaft. Owner confirmed £39.43 on 23 Nov 2026 |
 | A05 | 2 | Tool length setter (wired switch) | 1 pcs | Place not set: the old rack carrier (D-19) is gone with the umbrella wheel (D-250) | [product](https://www.aliexpress.com/item/1005012101891449.html) | £17.89 inc VAT, free shipping (AliExpress) | 17.89 | N96R, 24 V, NC |
 | A06 | 2 | ATC hub + one-piece mount | 1 lot | 6082: hub 12 thick with 8 flats 101.6 across (corners Ø110), 8 x M4 tapped (D-275), with a Ø20 spigot Z 84 to 119 machined on (bore 5, M4 grub); one-piece mount (flange, arm, 2 walls, web) about 116 x 195 x 129, 661 cm³, rectangular motor pocket through, web tapped M12 x 1 and M4 for the sensor, top recessed for the flag, cut on the Type 0 or by JLC (D-289, D-290, D-292 to D-294). Posts, top plate and PETG bracket dropped | [product](https://www.aluminiumwarehouse.co.uk/products/8-mm-6082-aluminium-plate) | 2 × 200 × 200 × 8 (£15.55 each) + 150 × 120 × 10 (£15.00) ex VAT (Aluminium Warehouse) | 55.32 | D-253 to D-260 (22 Nov 2026): stock list changed again; the price is for the old 2 x 200 x 200 x 8 + 150 x 120 x 10 and needs re-pricing: D-289 needs a 6082 block for the mount (about 120 x 200 x 135) and 12 plate for the hub. Screws not priced: 4 x M6 x 20 (mount to the strip), 4 x M3 x 12 (motor to web), 8 x M4 x 12 countersunk (forks), 1 x M4 x 6 grub (spigot to motor) |
-| A07 | 2 | ATC wheel bearings | 1 set | 2 x 6804-2RS (20 x 32 x 7) in the mount web, Z 89 to 96 and 112 to 119, spacer 16 between (Ø5 hole for the grub key, D-294); the shaft is now the hub spigot (D-289, D-290). Rigid joint to the motor kept (D-254) | [product](https://www.aliexpress.com/item/1005007995333691.html) | Shaft £11.99 + £2.25 shipping; bearings £7.50 for 2 (AliExpress, logged in) | 21.74 | Price is for the old shaft + KFL004 and needs re-pricing for 2 x 6804-2RS (D-290); the shaft is no longer bought |
+| A07 | 2 | ATC wheel bearing block FK12 + coupling | 1 set | LiMo FK12 + FF12 set, C5, angular contact bearings (7001 pair in the FK12; the FF12 is the spare floating block for the tilt fallback); LiMo flexible coupling D20L25, bores 8 x 5 by remark. Replaces the 2 x 6804 and the spigot (spec 23 Nov 2026, approach A) | [product](https://limobearing.com/cnc-ball-screw-bearing-support-units-fk-ff) | $14.29 (FK12 + FF12 C5) + $2.86 (D20L25) = $17.15 list, ex shipping (LiMo pages, curl) | 12.97 | 23 Nov 2026: list price at $1 = £0.756391 (15 Nov, as the other LiMo lines), no 10 % code, no shipping (add to the wave 1 LiMo basket to share its shipping). Coupling page https://limobearing.com/flexible-shaft-coupling. C7 set with deep groove bearings is $8.86 (not used: the spec needs the angular contact pair). Old: 2 x 6804-2RS, shaft + KFL004 £21.74 (AliExpress 8 Nov) |
 | A08 | 2 | ATC wheel drive reduction | 0 set | Dropped (D-254): the wheel is direct driven | [product](https://www.aliexpress.com/item/32650791423.html) | 20T £0.99 + 60T £3.99 + £3.35 shipping + belt 222 mm £0.99 (AliExpress) | 0.00 | D-254 (22 Nov 2026): not bought. Was GT2 20T/60T and belt |
 | A09 | 2 | ATC wheel index sensor | 1 set | LJ12A3 M12 PNP (from E10) screwed into the mount web (tapped M12 x 1), locked by an M4 x 8 nylon-tip grub; M5 screw head on the hub as flag (D-292) | [product](https://www.aliexpress.com/item/1005010648075147.html) | Added to E10 order: £1.54 + £0.88 extra shipping | 2.42 | Bought with E10 (5 sensors) |
 | P01 | 2 | Filter / regulator / dryer | 1 pcs |  | [product](https://www.aliexpress.com/item/1005002589702135.html) | £6.50 inc VAT (AliExpress) | 6.50 | AW2000-02 filter-regulator. No dryer |
