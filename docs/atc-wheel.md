@@ -2,7 +2,9 @@
 
 ![ATC wheel on its one-piece mount at the front of the tub](atc-wheel.png)
 
-The ATC wheel is the top-level component `ATC Wheel (Phase 2)` in `Type_0_v3`. It is a horizontal umbrella wheel (D-138) in front of the tub, on the spindle's pickup line X 200 (D-253). Direct drive with a rigid joint (D-254), the owner's forks (D-255), 8-flat hub (D-275). **Since D-289 it stands on one machined 6082 mount**, 40 lower than before, on 2 x 6804 bearings (D-290). Design: `superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`. Modelled 23 Nov 2026 (13th session), **not saved**.
+The ATC wheel is the top-level component `ATC Wheel (Phase 2)` in `Type_0_v3`. It is a horizontal umbrella wheel (D-138) in front of the tub, on the spindle's pickup line X 200 (D-253). Direct drive with a rigid joint (D-254), the owner's forks (D-255), 8-flat hub (D-275). **Since D-289 it stands on one machined 6082 mount**, 40 lower than before, on 2 x 6804 bearings (D-290). Design: `superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`. Modelled 23 Nov 2026 (13th session), **not saved, and not buildable yet: see the faults below. Do not confirm.**
+
+**Faults found after the clash check (23 Nov, 13th session, not yet fixed in the model):** (1) the motor cannot go in: the Ø62 pocket is closed below by the arm and above by the web, and cannot be milled; fix: cut the pocket down through the arm (Ø62, Z -10 to 81), motor fitted before the mount goes on the tub. (2) the 2 lower flange screws (Z 0) are buried under the arm; owner (D-291): "2 is plenty", so only the 2 at Z 30 stay; remove the Z 0 holes, counterbores, strip holes and cores. (3) the flag (Z 116 to 119, r 44) hits the web top (Z 119) as the hub turns, and the hub sits face to face on the web; fix proposed: recess the web top Z 115 to 119 from r 30 to 58, lower the bearing boss top 0.5 (r 16 to 30), relieve the hub underside 0.5 from r 11.5 to 17, so the hub bears on the inner ring only; then sweep hub, flag, forks and fork screws against every static body. (4) the LJ12A3 nut (17 across flats, to check) does not fit between the sensor (r 44) and the cup wall (r 37); fix to choose: tap the web M12, or a notch in the cup. Also: no room for a retaining ring under the lower bearing inside the Ø22 pilot, so only the M4 grub holds the wheel down; to solve.
 
 ## Layout (world mm, Y = 0 at the rail front ends, tub front face Y -37)
 
@@ -28,10 +30,11 @@ Envelope: X 88 to 312, Y -286 to -25, Z -10 to 185. Parts from the tub face to t
 3. Release, lift the nose to **Z 192** (holder top is Z 185). Index the wheel to the wanted pocket.
 4. Pick-up: nose down to Z 141 over the holder, clamp, slide +Y to Y -55, Z up.
 
-## Clash check (23 Nov 2026, after D-289)
+## Clash check (23 Nov 2026, after D-289): overlap in one pose only
+This check does not cover access, assembly or the turning hub; it missed faults 1 to 4 at the top.
 Copies of the 23 Z moving bodies near the spindle were moved by dX 421.8, dY -352 or -382, dZ -29 or +22 (approach, pickup, lifted at both Y) and intersected with every ATC body.
 - **Spindle against the wheel:** the only hits are 2 Z-side bodies with holder 1, the pocket that is empty at the drop-off and gripped at the pick-up (as on 22 Nov). Lifted at Y -85 and Y -55: no clash.
-- **Wheel turning:** copies of all 16 holders and tools rotated 0 to 45° in 3° steps against the mount, the sensor, the motor and the flange screws: no clash.
+- **Wheel turning (holders and tools only, not the hub and flag):** copies of all 16 holders and tools rotated 0 to 45° in 3° steps against the mount, the sensor, the motor and the flange screws: no clash.
 - **ATC against the tub and fixture plate:** no clash; only the 4 M6 x 20 in the strip.
 - Inside the ATC: only screws in tapped holes (M4 fork screws, M3 into the motor, grub into the spigot). Hub against the forks: 2.6 mm³ each, a 0.01 mm touch at the flats.
 
