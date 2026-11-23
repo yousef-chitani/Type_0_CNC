@@ -1,6 +1,6 @@
 # ATC wheel: one-piece mount, 40 lower (design, 23 Nov 2026, D-289)
 
-**Status: written, waiting for the owner's approval. Not modelled.** Replaces the bracket stack in `docs/atc-wheel.md` (D-253, D-259, D-260). Phase 2, except the tub strip (Phase 1 mould).
+**Status: approved by the owner (23 Nov, "Approve, model it"); modelled 23 Nov (13th session), not saved. As built: `docs/atc-wheel.md`. Changed while modelling: bearings 2 x 6804 (D-290), flange screws M6 x 20, spigot Z 84 to 119, grub Z 86.5.** Replaces the bracket stack in `docs/atc-wheel.md` (D-253, D-259, D-260). Phase 2, except the tub strip (Phase 1 mould).
 
 ## Why
 The owner wants the front ATC "very very elegant, integrate and not a kludge" (D-288). Now (23 Nov): "the mount should be 1 continuous part; the ATC assembly can be made much more compact and shorter."

@@ -4,7 +4,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/hopeful-sagan-28twty` (continues `claude/charming-cori-349jm7`). Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-289).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-290).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). When Claude edits it, a hook (`tools/bom_hook.py`) runs the 5 generators automatically and reports only errors. After a hand edit, set `PYTHONUTF8=1` and run `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
 - **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£4,041.97, £158.03 left** (20 Nov 2026 repricing, D-242 to D-245, plus G05 roller steel £78.62 on 23 Nov, D-281 to D-283: G03 dropped; G01 beam and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
@@ -23,7 +23,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 - 23 Nov, 10th: section F with the owner. D-281 X roller tube 120 x 60 x 3 (top up 10), D-282 X roller angles 100 x 50 x 6, D-283 Y braces stay 75 x 50 x 6: all stock, G05 priced £78.62; modelled, not saved. Item 26 done (P1S bed fits).
 - 23 Nov, 11th: Gemini review of the repo checked. Docs fixed: Y2 pins (D-284), LinuxCNC Y2 change list in task 19 (D-285), S04 note (D-286), PETG commissioning-part print settings (D-287), stale README and summary lines. **Open from the review:** task 18 must say how the wall-top plates are pulled onto the jack screws and how the 8 mm gap is poured without air; the ATC lower bearing idea (6804 in the motor plate) for Phase 2.
 - 23 Nov, 12th: task 26 done. Rear ATC dropped (D-288, `docs/rear-atc-reach.md`): under the gantry only 124 from floor (Z 45) to carriage (Z 169); past the tub end it needs +367 Y travel. Front ATC kept; owner: "very very elegant, integrate and not a kludge". Next: front slot against the ATC keep-out (X ±107.5 against X 88).
-- 23 Nov, 13th: ATC one-piece mount (D-289): machined 6082 mount, wheel 40 lower, rigid joint kept. Design in `docs/superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`, waiting for the owner's approval; not modelled.
+- 23 Nov, 13th: ATC one-piece mount (D-289): machined 6082 mount, wheel 40 lower, rigid joint kept. Approved and modelled (D-290: 2 x 6804); strip 80 wide with 4 x M6 in the tub; clash check clean (`docs/atc-wheel.md`); not saved.
 - Background, only if a task needs it: `docs/HANDOVER.md`.
 
 ## Tasks

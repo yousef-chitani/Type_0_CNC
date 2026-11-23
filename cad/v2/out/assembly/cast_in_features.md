@@ -12,7 +12,7 @@ The moving-gantry design has one casting, the EG tub. Coordinates are from `Type
 | Outer-face strip +X, Y 520 | 25 x 10 flat bar, 58 long, flush in the outer face; 4 x M6 tapped through at Z 56.5, 71.5, 86.5, 101.5 | X 380 to 390, Y 507.5 to 532.5, Z 49 to 107 | D-200, D-258, D-271 |
 | Outer-face strip -X, Y 520 | 25 x 10, 28 long; 2 x M6 at Z 86.5, 101.5 | X -390 to -380, Y 507.5 to 532.5, Z 79 to 107 | D-200, D-258, D-271 |
 | Outer-face strip +X, Y 220 | 25 x 10, 30 long; 2 x M6 at Z 56.5, 71.5 | X 380 to 390, Y 207.5 to 232.5, Z 49 to 79 | D-200, D-258, D-271 |
-| ATC strip, floor front face (Phase 2 bracket) | 25 x 10, 50 long; 2 x M6 at Z 0 and 30, Ø6.6 cores 2 deep behind | X 187.5 to 212.5, Y -37 to -27, Z -10 to 40. **Held off the mould drawing until the rear ATC option is assessed (D-274)** | D-251, D-253, D-274 |
+| ATC strip, floor front face (Phase 2 mount) | 80 x 10, 50 long; 4 x M6 at X 172 and 228, Z 0 and 30, Ø6.6 cores 2 deep behind (Y -27 to -25) | X 160 to 240, Y -37 to -27, Z -10 to 40. On the mould drawing (D-288) | D-251, D-288, D-289 |
 | Fixture plate inserts | 8 x M8 x 24 DIN 6334 A2 hex connector nuts, flush with the floor top, M8 x 8 ISO 4017 A2 back plugs | Z 21 to 45; (X ±125, Y 28), (X ±175, Y 78), (X ±175, Y 178), (X ±125, Y 228) | D-235 to D-241 |
 
 Not cast in, but on the wall tops after the cure:

@@ -18,7 +18,7 @@ Collected from `HANDOVER.md`, `tasks/README.md`, `machine-assessment.md`, `spec-
 ## C. Layout items not yet in the model
 10. **Front slot** through the tub floor and plate (task 24 item 6): not sized or modelled. Limits: X ±107.5, ending by Y 210. Must also leave the ATC zone clear. **On hold, high priority (D-273).**
 11. **ATC keep-out**: nothing in front of the tub from X 88 to 312, up to about 250 forward. Bench top, slot bench and enclosure must respect it. **Rear ATC dropped (D-288, `rear-atc-reach.md`): the keep-out applies again. It overlaps the front slot limit (X ±107.5) by 19.5; settle with item 10.**
-12. **D-251 / D-253 ATC strip** in the tub floor front face (X 200, Z -10 to 40): must go on the mould drawing before the pour. **On again (D-288): goes on the mould drawing.**
+12. **D-251 / D-253 ATC strip** in the tub floor front face (X 200, Z -10 to 40): must go on the mould drawing before the pour. **On again (D-288): goes on the mould drawing. D-289: now 80 x 10 x 50 with 4 x M6 (X 160 to 240); modelled.**
 13. **Y soft limit**: ATC pickup is only 3 from the Y stop. Set the limit at -86 or beyond and check on the built machine.
 
 ## D. Fastener and assembly questions (owner to decide)
@@ -30,7 +30,7 @@ Collected from `HANDOVER.md`, `tasks/README.md`, `machine-assessment.md`, `spec-
 19. X BKHM12 riser: its BK12 holes were not checked in D-263 (Y and Y2 were). **Decided D-279: they were untapped Ø6.1 holes like Y before D-263; now tapped M6 x 22, modelled 23 Nov (7th session); saved.**
 
 ## E. Proposals waiting for the owner's confirmation
-20. D-250, D-251, D-253, D-255: ATC bracket parts, lift height Z 232, the 4th strip's size and place, the fork layout ("Proposed by Claude, owner to confirm"). **Not confirmed. Rear dropped (D-288); the owner wants the front ATC very elegant and integrated, not a kludge, so review these parts against that before confirming. D-289 (23 Nov): bracket stack replaced by a one-piece machined mount, wheel 40 lower; design waits for the owner (`superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`).**
+20. D-250, D-251, D-253, D-255: ATC bracket parts, lift height Z 232, the 4th strip's size and place, the fork layout ("Proposed by Claude, owner to confirm"). **Not confirmed. Rear dropped (D-288); the owner wants the front ATC very elegant and integrated, not a kludge, so review these parts against that before confirming. D-289 (23 Nov): bracket stack replaced by a one-piece machined mount, wheel 40 lower; approved and modelled 23 Nov (D-290), not saved (`atc-wheel.md`).**
 21. D-211: HM12-60 Z motor mount and the 442 Z plate. **D-276: ask the seller (message 4).**
 
 ## F. Stand-ins and unknown dimensions

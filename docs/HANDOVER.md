@@ -6,14 +6,15 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (13th session): ATC one-piece mount, 40 lower (D-289), design written
-- Owner: "the mount should be 1 continuous part; the ATC assembly can be made much more compact and shorter". Q&A: machined 6082 (made on the mill before Phase 2), wheel about 40 lower (fork plane Z 131), rigid motor joint kept (D-254).
-- Design: `docs/superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`. Mount, bearing, hub replace 9 parts: hub and shaft one part, 2 x 6004 and the motor pilot bored in one set-up in the mount web (owner: "2 x 6004 pair, rigid"), grub window, cup round the motor, low solid arm (top Z 12) so tool length grows to about 114 (98 today), 80 x 10 x 50 strip with 4 x M6 (Phase 1 mould). Nose at pickup Z 141, lift Z 192 (53 to the top of Z).
-- All figures are Claude's proposal, owner to confirm. Nothing modelled.
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (13th session): ATC one-piece mount, 40 lower (D-289, D-290), modelled
+- Owner: "the mount should be 1 continuous part; the ATC assembly can be made much more compact and shorter". Q&A: machined 6082, wheel about 40 lower, rigid motor joint kept, 2 bearings in the mount, mill first with JLC as fallback. Design approved: `docs/superpowers/specs/2026-11-23-atc-one-piece-mount-design.md`; plan in `docs/superpowers/plans/`.
+- **D-290:** bearings 2 x 6804 (the 6004 bore cut the motor screw holes).
+- Modelled in `Type_0_v3`, **not saved**: old bracket, posts, top plate, KFL004, collar, shaft and their screws removed (Remove features); wheel parts and sensor down 40, motor up 13 (Move features); one-piece mount (base feature, 766 cm³); hub spigot joined to the hub; 2 x 6804 and spacer; 4 x M6 x 20, 4 x M3 x 12, M4 grub. Tub: strip 80 x 10 x 50 with 4 x M6, new cores, old cores filled, old strip removed.
+- Clash check clean (`docs/atc-wheel.md`, rewritten, new render). BOM A03, A06, A07 text updated (A06, A07 need re-pricing); `cast_in_features.md` strip row updated.
 
-**Left:** owner approves the design doc; then model it in `Type_0_v3` and run the checks listed in the doc (plate edge at the approach, sweep and moving-Z clash, motor runout against the rigid 2-bearing joint, real motor length, arm stiffness, whether the Type 0 can cut it or JLC does). Front slot against the keep-out still open.
+**Left:** owner saves `Type_0_v3`. Then: measure the real motor (length, runout); arm stiffness hand calc; price A06 and A07 (curl); front slot against the ATC keep-out (task 24 item 6); the strip on the mould drawing.
 
-**Exact next step:** owner reads and approves the design doc (or corrects it); then a session models the mount and runs its 6 checks.
+**Exact next step:** the owner saves `Type_0_v3`; then a session settles the front slot (task 24 item 6) against the ATC keep-out.
 
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (12th session): task 26, rear ATC not feasible; front kept (D-288)
 - Measured in `Type_0_v3` (bounding boxes, Y at the rear limit, not saved, nothing changed): spindle axis Y -88 to 297; tub floor top Z 45 to Y 653, no rear wall; carriage underside Z 169 (Z plate, Z rails, X roller angle, within X ±75 of the spindle), beam underside Z 205 over the full width, sweeping Y 60 to 565.
