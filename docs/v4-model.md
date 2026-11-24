@@ -209,3 +209,60 @@ A second script set x_pos, z_pos and y_pos to the limits, checked every pair tha
 - **Rail spacing and bar support** (call 1) are the weak points of this layout. The other option is one rail on the top face with an L carriage, which needs the screw moved elsewhere.
 - The X screw has no cover, and the X rail and block wipers are not modelled.
 - The upright joint face is small (150 x 90) for a 325 upright carrying the beam 285 above it. The stiffness model (Task 2) took the joint as rigid.
+
+## Task 5 fix round 1 (24 Nov 2026)
+This section supersedes calls 1, 3 and 4 above where they differ. The review is at `.superpowers/sdd/2026-11-24-v4-fixed-gantry/task-5-review.md`.
+
+### I1. One ground front plate; X rails 120 apart (D-312)
+- **The 2 X bars are replaced by one plate**, `X rail front plate 160x20x890 (steel flat bar, shop-ground, D-312)`.
+  - It sits at Y 170 to 190, Z 140 to 300, X -350 to 540, and overhangs the tube by 20 at the top and the bottom.
+  - Its length follows `beam_len` and `beam_x0`.
+- **The X rails are now 120 apart** (centres Z 160 and 280, was 185 and 255), off the tube's corner radii. Two Move features shift the rows: `X upper rail row to Z 280` and `X lower rail row to Z 160`. The blocks moved with the rails.
+- **The Z fixed plate has 16 Ø5.5 holes for the new blocks.** They are at X ±32 and ±68, Z 144, 176, 264 and 296, inserted in the timeline before `Z axis at x_pos`, so they follow x_pos.
+  - The socket heads clear the Z risers: the inner heads end at X ±36.25 and the risers start at ±37.5.
+- **The uprights have a 5 x 20 relief** at their top front edge (Y 185 to 190, Z 140 to 160), so the plate does not bear on them.
+- **Roll stiffness estimate** (reviewer's method: k about 200 N/µm per block, plus about 3e5 N·m/rad for the blocks' own roll):
+  - At s 120: K = 4 · 2e8 · 0.06² + 3e5 ≈ **3.2e6 N·m/rad**. That is 2.4 times the 70 layout (1.3e6) and 78 % of v3's 137 (4.1e6).
+  - Tool tip per 100 N: about 1.5 µm in Z (Fz, 215 lever) and 0.7 to 2.0 µm in Y (Fy, 150 to 250 lever). In all, **about 2 to 3.5 µm per 100 N**, against 5 to 8 at 70 and 1.5 to 2.5 for v3.
+
+### I2. M16 end-plate bolts and the upright pocket
+- The 8 M16 bolts (F26/F27) are modelled in `Base (extrusion + EG)` as `End plate bolt M16`: head Ø24 x 16 on the end plate's outer face, shank 50, at Y ±290 and ±45, Z -120.
+- **Each upright has a Ø26 x 17 pocket** at Y 290, Z -120 for the head under it. The pocket has a 5 wall to the M12 counterbore at Y 310, Z -100, and 21 to the dowel. No overlap.
+
+### I3. X screw seats and cover
+- **The BK12 and BF12 stand on ground pads**, `X BK12 pad` and `X BF12 pad 50x80x20`, at X -350 to -300 and 490 to 540, Y 210 to 290, Z 280 to 300.
+  - The pads are cut from the front plate's stock (one 950 length, G11) and ground with it (F30).
+- **The whole X screw stack is 20 higher** (Move `X screw stack on ground pads (+20)`): screw axis Z 325, nut bracket Z 350 to 370. The X motor bracket was redrawn for the new axis (motor plate Z 285 to 365); its end plate (Z 160 to 295) is the beam's -X EG dam.
+- **X screw cover:** 2 bellows envelopes, `X screw bellows X-` and `X+`, 60 x 40 with a Ø20 bore. Their lengths follow x_pos: X- runs from the BK12 face to the nut flange, X+ from the nut end to the BF12 face.
+  - X- is 63 to 683 long and X+ 45 to 665.
+  - **Closed length must be 1/11 (X-) and 1/15 (X+) of open.** That is beyond ordinary bellows; the supplier must confirm, or use a telescopic or strip cover (BOM F33).
+
+### Minor
+- `Beam end dam X+ 10 (EG dam, envelope)` at X 540 to 550 is added.
+- BOM G01 now says the beam-to-upright bolt heads are cast into the EG, so the beam cannot be unbolted after the fill.
+
+### BOM changes
+- **G11, new:** one length of flat bar 160 x 20 x 950 for the plate and pads. K I Metals £61.77/m ex VAT (Store API, curl, 24 Nov 2026, https://kimetals.co.uk/materials/mild-steel/mild-steel-flat-bar/kim151153): £58.68 ex, **£70.42 inc VAT**.
+- **F29:** the X bars are dropped; Y only, 1340 mm, £68.96 inc VAT (was £156.47).
+- **F30:** the grinding scope is now 2 Y bars, the front plate and 2 pads (price pending).
+- **F33, new:** X screw bellows (price pending).
+- **M02 and G01:** the rail-face text is corrected (front plate, D-312).
+- **Phase 1 priced total: £4,416.08** (was £4,433.17).
+
+### Check results (fix round 1)
+- **At 0:** 182 timeline items, all healthy; 126 solid bodies; 76 overlaps, all expected:
+  - 48 bolts and pins in holes that are not modelled (now including the 8 M16 shanks in the end plates and profiles);
+  - the 2 BF12 rings;
+  - 26 inside v3's Z;
+  - v3's Z screw in the HM12 mount (131 mm³) and its motor touching the coupling (0.04 mm³).
+- **At the 4 limit poses**, every pair with a moving body (X carriage, Z, table, Y blocks, bellows) was checked, then x_pos, z_pos and y_pos were set back to 0:
+
+| Pose (x, z, y) | Nose | Moving overlaps | Carriage to upright | To upright and M16 bolt heads | To beam bolts | To supports and pads | Bellows X- / X+ |
+|---|---|---|---|---|---|---|---|
+| -215, -75, -150 | 25.0 | 0 | 19.6 (left) | 141.4 | 45.6 | 20.0 (bracket to BK12) | 63 / 665 |
+| -215, +75, +150 | 175.0 | 0 | 19.6 (left) | 202.3 | 45.6 | 20.0 | 63 / 665 |
+| 405, -75, +150 | 25.0 | 0 | **19.6 (right)** | 177.1 | 49.6 | 19.2 (nut to BF12 pad) | 683 / 45 |
+| 405, +75, -150 | 175.0 | 0 | **19.6 (right)** | 202.6 | 49.6 | 19.2 | 683 / 45 |
+
+- **Longest tool** (Ø20, 124 below the nose) at Z top: tip at Z 51, no hits at X -215 or 405.
+- **Nut to BK12:** 63 at the -X limit. **Nut to BF12:** 45 at the +X limit.

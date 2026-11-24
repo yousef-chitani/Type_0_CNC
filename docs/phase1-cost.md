@@ -1,20 +1,20 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,433.17** (budget £4,200, D-127). Not priced yet: X18, X20, X21, F27, F28, F30, F31, F32, G08, G09, G10, X23, X24, X25. No eBay.
+**Phase 1 priced total: £4,416.08** (budget £4,200, D-127). Not priced yet: X18, X20, X21, F27, F28, F30, F31, F32, F33, G08, G09, G10, X23, X24, X25. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £1,281.35 |
+| Frame | £1,193.84 |
 | Motion | £1,089.53 |
-| Gantry | £184.52 |
+| Gantry | £254.94 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
 | Fixings | £72.64 |
-| **Total** | **£4,433.17** |
+| **Total** | **£4,416.08** |
 
 ## Frame
 
@@ -48,10 +48,11 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F26 | Base end plates: steel flat bar 90 x 20, 2 x 670 | 2 pcs | £55.86 |
 | F27 | Base end plate bolts M16 socket cap (profile ends to end plates) | 8 pcs | to price |
 | F28 | Pocket bottom sheet and pocket sealing | 1 lot | to price |
-| F29 | Rail seat bars: bright flat bar 50 x 20 (Y 2 x 670, X 2 x 850) | 1 lot | £156.47 |
-| F30 | Shop surface grinding of the 4 rail seat bars | 4 pcs | to price |
+| F29 | Rail seat bars: bright flat bar 50 x 20 (Y 2 x 670) | 1 lot | £68.96 |
+| F30 | Shop surface grinding: 2 Y rail bars, the X front plate and 2 X screw pads | 5 pcs | to price |
 | F31 | Y screw bellows covers (2) | 2 pcs | to price |
 | F32 | Y rail drip skirts and rail wipers | 1 lot | to price |
+| F33 | X screw bellows covers (2) | 2 pcs | to price |
 
 ## Motion
 
@@ -86,6 +87,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | G08 | Dowels for the upright joints (2 per upright) | 4 pcs | to price |
 | G09 | Upright and beam bolts M12 socket cap | 12 pcs | to price |
 | G10 | Upright joint faces: ground or epoxy-shimmed | 1 lot | to price |
+| G11 | X rail front plate: steel flat bar 160 x 20, one length 950 (plate 890 + 2 pads) | 1 pcs | £70.42 |
 
 ## Spindle
 
