@@ -266,3 +266,45 @@ This section supersedes calls 1, 3 and 4 above where they differ. The review is 
 
 - **Longest tool** (Ø20, 124 below the nose) at Z top: tip at Z 51, no hits at X -215 or 405.
 - **Nut to BK12:** 63 at the -X limit. **Nut to BF12:** 45 at the +X limit.
+
+# Task 6: ATC wheel on the right side (24 Nov 2026, D-314 to D-316)
+The owner saved the design as `Type_0_v4` (CNC mill project) before this task. The wheel was added afterwards and **is not saved**. `Type_0_v3` was only read.
+
+## Placement (D-316)
+- **Pickup:** spindle axis X 402 (x_max 405 leaves 3 to spare, as in v3), Y 0. The nose is at Z 70 at the pickup and lifts 50 to Z 120 to clear the holder.
+- **Wheel:** axis along X at Y 0, Z -82; holder plane X 402 (holders X 379.5 to 424.5); fork mouths open -X (the spindle enters by moving +X and slides out to X 372).
+- **Why this low:** the Z rails' and risers' bottom ends (Z 99, Y 87.5 to 140) travel with X and pass over the wheel. The sweep radius is 197.3, so with a 3 margin the centre can be no higher than Z -81.2 (`tools/v4_wheel_fit.py`). The Z moving plate (lowest Z 145 at nose 100, Y 55) needs the centre at least 147.6 below the nose; at the pickup it is 152 below.
+- **The wheel reaches Z -278, 110 below the base bottom (Z -168).** It hangs past the bench's right edge (bench edge at X 330 or less), or the machine stands on risers of 115 or more (owner: OK).
+- **Longest tool: 100 below the nose** (D-316). A Ø20 tool 100 long passes 1.2 above the hub top when it enters the pocket. The Task 5 check with 124 still holds for the table side.
+
+## Component `ATC Wheel (Phase 2)` (one base feature, 59 bodies)
+Copied from `Type_0_v3`'s `ATC Wheel (Phase 2)` with temporary BRep copies:
+- **Turning part** (v3 placed by a +90° turn about Z, so v3 +Y is V4 -X): 12 forks (owner model), 12 ISO20 holders and 12 Ø6 tool stand-ins, the hub.
+  - Forks trimmed at the disc's rear face (v3 Y -112), so each ends in a foot on the disc (D-304). The owner's clip shape is unchanged; the fork screws into the disc (2 x M4 each) are not modelled.
+  - Hub: the v3 hub plus an 8-flat extension 31 long (101.6 AF), 43 long in all, X 386 to 429 (D-304).
+  - **New `Fork disc 5083 6 mm`:** 12-gon, apothem 150, X 429 to 435, centre hole Ø44 (stub flange Ø40). No windows drawn: about 1.13 kg in 5083 as drawn; D-304 allows windows with spokes 30 or wider (about 0.6 kg).
+- **Drive, turned round to the outboard side** (D-316): column block, FK12, stub shaft, coupling, 17HS24 motor and their screws, turned 180° about the wheel's vertical line and moved 11 out, so the stub flange bolts to the hub's front face through the disc's hole. FK12 X 444 to 467, motor X 490 to 594.
+  - Column block: the ear (above v3 Z -6) and the floor (D-304) cut off; it now sits on the mount bracket.
+- **New `ATC mount bracket 6082` (envelope, Claude's call):** a flange 20 thick on the right upright's outer face (X 320 to 340, Y 190 to 330, Z -137 to -45); an arm at Y 205 to 235, Z -137 to -117 (outside the wheel's sweep: 208 from the axis); a plate X 445 to 520, Y -40 to 235 under the column (top Z -117). The flange covers the upright's M12 counterbores: fit the bracket after the upright bolts. Bolts (flange to upright, column to plate) are not modelled.
+- **Left out:** the D-303 sheet carrier, 8 standoffs and their button heads, 12 fork-to-tab screws, the 2 ear M6 screws, the old locknut and the sensor grub. **The index flag and sensor (A09) are not placed yet:** the flag was on the hub's machine-side face and the sensor on the old column ear.
+
+## Checks (24 Nov 2026)
+- Timeline: 184 items, all healthy.
+- **Wheel against the frame** at wheel turns 0°, 10° and 20°: no overlaps.
+- **Wheel against the X carriage and Z axis** (a script set x_pos and z_pos, then set both back to 0):
+
+| Pose | Wheel turns checked | Result |
+|---|---|---|
+| Engaged: x 402, nose 70 | 0° | clean (the pickup holder in the spindle is excluded) |
+| Lifted for indexing: x 402, nose 120 | 0° to 30° in 5° steps | clean |
+| Withdrawn with a tool: x 372, nose 70, Ø20 x 100 tool | 0° | clean, except the pickup holder, which is the one in the spindle |
+| Withdrawn, lifted: x 372, nose 120 | 0°, 10°, 20°, 30° | clean |
+
+- **Inside the wheel (19 overlaps, all expected):** 4 hub-to-stub screws and the stub's Ø12 pilot in the hub (the holes are not cut in the new hub), 4 FK12 screws in the column, 4 motor screws and 2 inner bodies in the vendor motor (as v3).
+- **Machine envelope** at y_pos 0: X -508 (X motor) to 594 (ATC motor), Y -335 to 470 (base front to Y motor; the table reaches Y ±315), Z -278 (wheel) to 700 (Z motor). **About 1,102 x 805 x 978 overall**; the Phase 2 enclosure's inside must be at least this, plus room for cables and the table's travel.
+
+## Open (Task 6)
+- Index flag and sensor: place them (flag on the disc front at r 44, sensor in the bracket or column).
+- Bracket: bolt sizes and stiffness. Hand estimate: torsion of the 75 x 20 plate under the column adds about 0.2 mm per 100 N at the fork, on top of D-304's 2.6.
+- BOM A-lines (Phase 2): the disc, longer hub and bracket are not in `bom.csv` yet.
+- Bench: the right edge at X 330 or less, or risers.

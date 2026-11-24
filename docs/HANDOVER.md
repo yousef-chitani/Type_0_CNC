@@ -6,6 +6,18 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (26th session): V4 plan Task 6 done: ATC wheel on the right side (D-315, D-316); wheel not saved
+- **Owner saved the design as `Type_0_v4`** before this session's changes.
+- **D-315 (owner):** the EG fill is not structural; a lean mix packed into the voids. Task 7's pour plan shrinks to quantities and fill order. The cheaper resin option (saves £145.61) is open again; BOM not changed.
+- **D-316 (owner, Q&A):** pickup at spindle X 402, Y 0, nose Z 70 (lift to 120); wheel centre Z -82, so the wheel reaches Z -278, 110 below the base: it hangs past the bench edge (X 330 or less) or the machine goes on risers. Drive turned round to the outboard side (copied as v3 it landed in the end plate and table edge). Longest tool 100 below the nose.
+- **Modelled:** component `ATC Wheel (Phase 2)`, 59 bodies copied from v3 (forks trimmed to a foot on the disc, holders, tools, hub 31 longer, FK12, stub, coupling, motor, column without ear and floor) plus the D-304 disc (6 mm 5083, no windows drawn) and a 6082 mount bracket envelope on the right upright's outer face. Checks clean: frame, carriage engaged, lifted (wheel turned 0 to 30°), withdrawn with a Ø20 x 100 tool; 184 timeline items healthy. Details: `docs/v4-model.md` (Task 6). Hand check: `tools/v4_wheel_fit.py`.
+- **Machine envelope:** about 1,102 x 805 x 978 (X -508 to 594, Y -335 to 470, Z -278 to 700).
+- A heavy read-only clash script locked Fusion for about 10 minutes; keep Fusion checks to bounding-box-filtered, few-pose scripts.
+
+**Left:** owner saves `Type_0_v4` again (the wheel is unsaved); index flag and sensor not placed; bracket bolts; BOM A-lines for the disc, longer hub and bracket; Task 7 (fill quantities per D-315, wave 1 lengths: X travel 620, one Y set, plate and pads); the 14 unpriced BOM lines.
+
+**Exact next step:** the owner saves `Type_0_v4`. Then a new session runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (25th session): V4 plan Tasks 3 to 5 done: BOM, Fusion base and Y, uprights, beam, X and Z (D-312 to D-314); model unsaved
 - **Task 3 (BOM):** `docs/bom.csv` for V4: v3-only lines dropped, V4 lines added. Phase 1 **£4,416.08, over £4,200**, and a lower bound: 14 lines unpriced (grinding F30, machining X25, bellows F31/F33, skirt F32, dowels, bolts, T-nuts, delivery). Owner: "Go over budget" for now, decide when the prices are in. Cheaper option on record: 2 x 4.66 kg Ampreg instead of the 22.68 kg kit (saves £145.61).
 - **Task 4 (Fusion: base, Y, table):** tray B (540 in X, 670 in Y), rail bars 670, Y rails 500, one Y screw with rear motor, bellows and a table drip skirt. Owner: no carrier plate (D-313). Docs: `docs/v4-model.md`.
@@ -16,20 +28,6 @@
 **Left:** owner saves "Untitled" as `Type_0_v4` (CNC mill project); plan Task 6 (wheel on the right upright, D-304 disc, sweep, tool crossing, enclosure size) and Task 7 (pour plan, wave 1 lengths: X travel 620, one Y set, plate and pads); prices for the 14 pending lines; minor review items in the SDD ledger (stale construction sketches, price-check-v4.md F29 text, bellows closing ratios 1/7 to 1/15).
 
 **Exact next step:** the owner saves the Fusion design as `Type_0_v4`. Then a new session runs plan Task 6 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-314 and `docs/v4-model.md`, then Task 7.
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (24th session): V4 started: fixed gantry, moving table (D-305 to D-307); design doc written, not approved
-- **Why:** outside feedback on v3: the front ATC wheel is in the way; rails want machinable faces; a hollow beam rings; tools better outside the frame on an extended gantry.
-- **Owner (Q&A):** fixed gantry, table moves in Y on rails on top of the base; base bolted aluminium extrusion with voids filled with EG; steel SHS 120 x 120 x 8 beam; steel uprights bolted to the base sides; v3's indexing wheel outside the frame on the right (+X), one pickup (about +200 mm X); enclosure goes round the wheel.
-- **Carried over (Claude's proposal, not objected to):** 400 x 250 x 150, Jianken ATC spindle, LiMo C5 1605 + HGR20, LinuxCNC/Mesa, £4,200, wave 1 on 4 Jan 2027 with lengths redone. Dropped: cast tub, moulds, Y2, front ATC.
-- **Doc:** `docs/superpowers/specs/2026-11-24-v4-fixed-gantry-design.md` (builder check done; its 4 questions answered or marked as Claude's calls).
-
-- **Owner approved the doc** ("ignore mass keep budget write plan"): no mass limit; £4,200 kept. **Plan written:** `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md`, 7 tasks: sizing script, owner picks profiles and prices, BOM and budget, then the new Fusion model `Type_0_v4` (base and Y, uprights and X/Z, wheel), pour plan and wave 1 lengths.
-
-- **Plan run, subagent-driven (owner's choice).** Task 1 done and reviewed: `tools/v4_sizes.py`, `docs/v4-sizes.md` (X travel 630, X rail 850, X screw 900 (whips about 2,460 rpm, 12 m/min), Y rail 500, Y screw 600, Z 350, beam 890, base 670 x 660). Wheel pickup offset 85 is provisional: the wheel is about 392 across, so its plane (Task 6) may push X out. Task 2: `tools/v4_frame_stiffness.py`, `docs/v4-frame-options.md`, `docs/price-check-v4.md` (KJN Aluminium Profile, new vendor); owner chose tray B, uprights flat bar 50 x 150, beam full EG fill, ground rail bars (D-308 to D-311). Task 2's figures were not given a separate review; the owner read the options. SDD ledger: `.superpowers/sdd/2026-11-24-v4-fixed-gantry/progress.md` (gitignored, local only).
-
-**Left:** owner's shop grinding price for the 50 x 20 bars; plan Tasks 3 to 7. The wave 1 order lengths must be redone before 4 Jan 2027.
-
-**Exact next step:** a new session runs plan Task 3 (V4 BOM and budget) from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md`, using D-308 to D-311 and `docs/v4-frame-options.md`.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

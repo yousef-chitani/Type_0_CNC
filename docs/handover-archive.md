@@ -2,6 +2,20 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (24th session): V4 started: fixed gantry, moving table (D-305 to D-307); design doc written, not approved
+- **Why:** outside feedback on v3: the front ATC wheel is in the way; rails want machinable faces; a hollow beam rings; tools better outside the frame on an extended gantry.
+- **Owner (Q&A):** fixed gantry, table moves in Y on rails on top of the base; base bolted aluminium extrusion with voids filled with EG; steel SHS 120 x 120 x 8 beam; steel uprights bolted to the base sides; v3's indexing wheel outside the frame on the right (+X), one pickup (about +200 mm X); enclosure goes round the wheel.
+- **Carried over (Claude's proposal, not objected to):** 400 x 250 x 150, Jianken ATC spindle, LiMo C5 1605 + HGR20, LinuxCNC/Mesa, £4,200, wave 1 on 4 Jan 2027 with lengths redone. Dropped: cast tub, moulds, Y2, front ATC.
+- **Doc:** `docs/superpowers/specs/2026-11-24-v4-fixed-gantry-design.md` (builder check done; its 4 questions answered or marked as Claude's calls).
+
+- **Owner approved the doc** ("ignore mass keep budget write plan"): no mass limit; £4,200 kept. **Plan written:** `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md`, 7 tasks: sizing script, owner picks profiles and prices, BOM and budget, then the new Fusion model `Type_0_v4` (base and Y, uprights and X/Z, wheel), pour plan and wave 1 lengths.
+
+- **Plan run, subagent-driven (owner's choice).** Task 1 done and reviewed: `tools/v4_sizes.py`, `docs/v4-sizes.md` (X travel 630, X rail 850, X screw 900 (whips about 2,460 rpm, 12 m/min), Y rail 500, Y screw 600, Z 350, beam 890, base 670 x 660). Wheel pickup offset 85 is provisional: the wheel is about 392 across, so its plane (Task 6) may push X out. Task 2: `tools/v4_frame_stiffness.py`, `docs/v4-frame-options.md`, `docs/price-check-v4.md` (KJN Aluminium Profile, new vendor); owner chose tray B, uprights flat bar 50 x 150, beam full EG fill, ground rail bars (D-308 to D-311). Task 2's figures were not given a separate review; the owner read the options. SDD ledger: `.superpowers/sdd/2026-11-24-v4-fixed-gantry/progress.md` (gitignored, local only).
+
+**Left:** owner's shop grinding price for the 50 x 20 bars; plan Tasks 3 to 7. The wave 1 order lengths must be redone before 4 Jan 2027.
+
+**Exact next step:** a new session runs plan Task 3 (V4 BOM and budget) from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md`, using D-308 to D-311 and `docs/v4-frame-options.md`.
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (23rd session): ATC carrier becomes a flat 6 mm disc on a longer hub, clips kept, column floor removed (D-304); docs only, not modelled
 - **Owner:** "ATC needs a better solution than standoffs" and the displacement must leave enough room to engage and disengage the clips. The column block floor "need not really exist". Q&A: "Flat disc on a longer hub", "Keep outlines, cheek full height", "clips, the force is not going to be an issue". A fixed fence behind the holders (no clips) was drawn for the owner and declined.
 - **No Fusion connection this session**, so nothing was modelled. `Type_0_v3` still has the D-303 carrier and the column floor.
