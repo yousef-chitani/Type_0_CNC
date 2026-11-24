@@ -6,19 +6,22 @@ Made by `tools/v4_sizes.py` (`PYTHONUTF8=1 python tools/v4_sizes.py`). All lengt
 
 | Size | mm | Rule |
 |---|---|---|
-| x_travel | 630 | 430 work + 200 wheel reach |
+| x_travel | 620 | 430 work + 190 wheel reach (was 630 with the 80 upright and 20 gap; Task 5, 24 Nov 2026) |
 | y_travel | 300 | table 330 minus 15 tool margin at each end |
 | z_travel | 150 | v3 |
-| x_rail | 850 | travel + 100 + 77.5 + 20 = 827.5, next LiMo size |
-| x_screw | 900 | travel + 253 = 883, next 50 mm |
+| x_rail | 850 | travel + 100 + 77.5 + 20 = 817.5, next LiMo size |
+| x_screw | 900 | travel + 253 = 873, next 50 mm |
 | y_rail | 500 | 497.5, next LiMo size |
 | y_screw | 600 | 553, next 50 mm |
 | z_rail | 350 | v3 (need 347.5) |
 | z_screw | 350 | v3 (HM12-60 mount; the +253 rule does not apply). D-136 orders Z 350; whether 350 clears the 150 travel with the HM12 mount is to check in Task 5 |
 | beam_len | 890 | X rail 850 + 20 each end |
 | base_len | 670 | table 330 + y_travel 300 + 20 each end |
-| base_width | 660 | table 460 + 2 x (20 gap + 80 upright) |
-| beam_overhang_right | 230 | beam 890 less base width 660, beam flush with the left upright's outer face |
+| base_width | 640 | table 460 + 2 x (40 gap + 50 upright): uprights' outer faces at X ±320, as modelled (tray 500 + 2 x 20 end plates = 540, U2 flat bar 50) |
+| x_rail_x0, x_rail_x1 | -330, 520 | rail centred on the span the blocks sweep over the travel (-303.75 to 493.75; spindle axis X -215 to 405, blocks at ±50) |
+| beam_x0, beam_x1 | -350, 540 | rail + 20 each end |
+| beam_overhang_left | 30 | past the left upright's outer face (-320) |
+| beam_overhang_right | 220 | past the right upright's outer face (+320). Was 230 with the beam flush left: that left the blocks 3.75 past the rail end at the -X limit |
 
 ## Inputs and sources
 
@@ -36,10 +39,10 @@ Made by `tools/v4_sizes.py` (`PYTHONUTF8=1 python tools/v4_sizes.py`). All lengt
 | BK12 / BF12 length | 25 / 20 | estimate, check LiMo drawing |
 | Screw root diameter | 13.2 | estimate (typical 1605) |
 | Z rail, Z screw | 350, 350 | D-136 |
-| Upright width | 80 | estimate, Task 3 sets it |
-| Table edge to upright | 20 | estimate |
+| Upright width | 50 | D-309 (U2 flat bar 50 x 150) |
+| Table edge to upright | 40 | V4 model (Task 4): table edge 230, tray end plate outer face 270 |
 | Wheel pickup offset from right upright outer face | 85 | estimate, fixed in Task 6 |
-| Wheel reach (named constant `WHEEL_REACH`) | 200 | derived: table half 230 + 20 + 80 + 85, less 215 (end of work travel); matches the design doc's "about 200" |
+| Wheel reach (named constant `WHEEL_REACH`) | 190 | derived: table half 230 + 40 + 50 + 85, less 215 (end of work travel); pickup at X 405 |
 | Base and beam end margins | 20 | estimate |
 
 ## LiMo lengths (read 24 Nov 2026)
@@ -56,4 +59,4 @@ x_screw 900, DFU1605 root diameter 13.2, fixed-supported ends (BK12 fixed, BF12 
 
 ## Open
 
-- The wheel pickup offset (85) puts the wheel's centre only 85 past the upright, but the wheel is about 392 across (D-302). It fits only if the wheel sits below the base's side or the pickup is placed further out. Task 6 decides; a larger offset adds to x_travel, x_rail and x_screw (x_screw stays within 1000 up to about 100 more).
+- The wheel pickup offset (85) puts the wheel's centre only 85 past the upright, but the wheel is about 392 across (D-302). It fits only if the wheel sits below the base's side or the pickup is placed further out. Task 6 decides; a larger offset adds to x_travel, x_rail and x_screw. With x_travel 620: x_rail stays 850 up to 32 more offset, x_screw stays 900 up to 27 more and within 1000 up to about 127 more. A larger travel also moves the rail and the beam (x_rail_x0, beam_x0), which the V4 model takes as parameters.

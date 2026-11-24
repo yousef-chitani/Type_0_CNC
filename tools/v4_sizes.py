@@ -23,8 +23,9 @@ BF12_LEN = 20            # BF12 support body length (estimate; check LiMo drawin
 SCREW_ROOT_DIA = 13.2    # DFU1605 root diameter (typical 1605 screw, estimate)
 Z_RAIL = 350             # v3 Z rail set, 2 x 350 (D-136)
 Z_SCREW = 350            # v3 Z screw, 350 (D-136; HM12-60 mount, D-207)
-UPRIGHT_W = 80           # steel upright width in X (estimate; Task 3 sets it)
-UPRIGHT_GAP = 20         # table edge to upright inner face (estimate)
+UPRIGHT_W = 50           # steel upright U2 flat bar 50 x 150, 50 in X (D-309)
+UPRIGHT_GAP = 40         # table edge (230) to upright inner face = tray end plate outer face (270):
+                         # tray 500 + 2 x 20 end plates (D-308, V4 model Task 4)
 WHEEL_PICKUP_OFFSET = 85  # right upright outer face to pickup, X (estimate, fixed in Task 6)
 BASE_END_MARGIN = 20     # base past the table's Y travel, each end (estimate)
 BEAM_END_MARGIN = 20     # beam past the X rail, each end (estimate)
@@ -68,6 +69,14 @@ def sizes():
     y_rail, y_screw = rail_len(y_travel), screw_len(y_travel)
     base_width = TABLE_X + 2 * (UPRIGHT_GAP + UPRIGHT_W)
     beam_len = x_rail + 2 * BEAM_END_MARGIN
+    # X rail placed centred on the span the 2 blocks sweep over the whole travel
+    # (spindle axis from -WORK_X/2 to -WORK_X/2 + x_travel, blocks centred on it);
+    # the beam is the rail plus BEAM_END_MARGIN at each end.
+    block_half = BLOCK_PITCH / 2 + CARRIAGE_LEN / 2
+    sweep_min = -WORK_X / 2 - block_half
+    sweep_max = -WORK_X / 2 + x_travel + block_half
+    rail_x0 = (sweep_min + sweep_max) / 2 - x_rail / 2
+    beam_x0 = rail_x0 - BEAM_END_MARGIN
     return dict(
         x_travel=x_travel, y_travel=y_travel, z_travel=Z_TRAVEL,
         x_rail=x_rail, x_screw=x_screw, y_rail=y_rail, y_screw=y_screw,
@@ -75,7 +84,11 @@ def sizes():
         beam_len=beam_len,
         base_len=TABLE_Y + y_travel + 2 * BASE_END_MARGIN,
         base_width=base_width,
-        beam_overhang_right=beam_len - base_width,   # beam starts flush with left upright outer face
+        x_rail_x0=rail_x0, x_rail_x1=rail_x0 + x_rail,
+        beam_x0=beam_x0, beam_x1=beam_x0 + beam_len,
+        beam_overhang_left=-base_width / 2 - beam_x0,   # past the left upright's outer face
+        beam_overhang_right=beam_x0 + beam_len - base_width / 2,
+        block_sweep_min=sweep_min, block_sweep_max=sweep_max,
     )
 
 if __name__ == "__main__":
@@ -110,4 +123,6 @@ if __name__ == "__main__":
     # Assumes the Y screw lies along the base, with BK12 and BF12 outside its ends.
     assert s["base_len"] >= s["y_screw"] + BK12_LEN + BF12_LEN
     assert s["beam_overhang_right"] > 0
+    # The blocks stay on the X rail at both ends of the travel.
+    assert s["x_rail_x0"] <= s["block_sweep_min"] and s["x_rail_x1"] >= s["block_sweep_max"]
     print("PASS")
