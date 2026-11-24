@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (24th session): V4 started: fixed gantry, moving table (D-305 to D-307); design doc written, not approved
+- **Why:** outside feedback on v3: the front ATC wheel is in the way; rails want machinable faces; a hollow beam rings; tools better outside the frame on an extended gantry.
+- **Owner (Q&A):** fixed gantry, table moves in Y on rails on top of the base; base bolted aluminium extrusion with voids filled with EG; steel SHS 120 x 120 x 8 beam; steel uprights bolted to the base sides; v3's indexing wheel outside the frame on the right (+X), one pickup (about +200 mm X); enclosure goes round the wheel.
+- **Carried over (Claude's proposal, not objected to):** 400 x 250 x 150, Jianken ATC spindle, LiMo C5 1605 + HGR20, LinuxCNC/Mesa, £4,200, wave 1 on 4 Jan 2027 with lengths redone. Dropped: cast tub, moulds, Y2, front ATC.
+- **Doc:** `docs/superpowers/specs/2026-11-24-v4-fixed-gantry-design.md` (builder check done; its 4 questions answered or marked as Claude's calls).
+
+**Left:** owner approves the doc; then the plan (superpowers writing-plans), then a new Fusion model. The wave 1 order lengths must be redone before 4 Jan.
+
+**Exact next step:** the owner reads the design doc and approves or corrects it; then a session writes the V4 plan (task 27).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (23rd session): ATC carrier becomes a flat 6 mm disc on a longer hub, clips kept, column floor removed (D-304); docs only, not modelled
 - **Owner:** "ATC needs a better solution than standoffs" and the displacement must leave enough room to engage and disengage the clips. The column block floor "need not really exist". Q&A: "Flat disc on a longer hub", "Keep outlines, cheek full height", "clips, the force is not going to be an issue". A fixed fence behind the holders (no clips) was drawn for the owner and declined.
 - **No Fusion connection this session**, so nothing was modelled. `Type_0_v3` still has the D-303 carrier and the column floor.
@@ -16,16 +26,6 @@
 
 **Exact next step:** the owner saves `Type_0_v3`. Then a session with the Fusion MCP reads this entry and D-304, models it, runs the clash check, and runs plan task 6.
 
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (22nd session): ATC front carrier becomes laser-cut and bent 5754 sheet on 8 standoffs (D-303); modelled, not saved
-- **Owner:** the solid 6082 carrier (2.8 kg) is "too large and substantial, make it from a laser cut and bended sheet material". Q&A: aluminium 5754 3 mm; tabs tapped M4 ("I'll just tap them"); bought standoffs to the hub.
-- **Model:** `Front carrier 5754 3 mm sheet (D-303)` (base feature in `ATC Hub`): 12-gon disc Y -154 to -151 with 12 tabs bent +Y (inside R 3), tab outer face at apothem 142 (same fork seat), tab end Y -123.2 (fork step contact kept), tab 70 wide, tapped M4 (Ø3.3) at Y -132.25; Ø40 centre hole (key access to the hub-to-stub screws); 8 x Ø4.5 at r 41.75; 12 spokes 20 wide, 12 windows r 56 to 122, R 4 corners. **512 g** (was 2.8 kg). Old carrier removed (Remove feature). Fasteners (`Sheet carrier standoffs and screws (D-303)`): 12 x M4 x 8 countersunk fork to tab, 8 x M4 x 70 hex 7 AF male-female steel standoffs (stud into the hub's old M4 holes, 10 deep), 8 x M4 x 8 button head ISO 7380 at the front. The 20 old screws removed (Remove features).
-- **Checks:** clash of carrier, forks, holders, tools, hub, new fasteners: only screws/studs in their holes and the fork step face (0.01 mm). Front envelope now Y -156.2 (button heads; was -153). Timeline 2195, 37 unhealthy (unchanged).
-- **Stiffness (hand estimate, not simulated):** holder weight alone moves a groove about 0.05 mm. A radial push at the pickup fork (tool release or pull-off) goes out along a 3 mm tab and disc: roughly **1 to 3 mm at the groove per 100 N** (the 10 mm 6082 disc was about 30 x stiffer). Bend tolerance ±1 deg tilts a fork about ±1.1 mm radially at the groove (63 mm from the bend). The release force of the Jianken spindle is not known.
-- **Not done:** standoff not confirmed in stock (accu.co.uk 403, RS no answer to curl); no flat pattern/DXF (body is solid-modelled, not a Fusion sheet-metal body).
-
-**Left:** owner decides the pickup stiffness fix (options in D-303: a fixed stop under the pickup fork, solid disc without windows, or thicker 5083), and whether ±1 deg bends are acceptable or the tabs get a shim/adjustment; flat pattern DXF for the laser service; standoff stock and price (owner's browser); then task 6 (sweep) as in the entry below.
-
-**Exact next step:** the owner saves `Type_0_v3` and answers the stiffness question (D-303). Then a new session applies the answer, makes the flat pattern, and runs plan task 6.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
