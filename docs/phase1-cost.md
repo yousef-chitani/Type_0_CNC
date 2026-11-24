@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,415.66** (budget £4,200, D-127). Not priced yet: X18, X20, X21. No eBay.
+**Phase 1 priced total: £4,415.66** (budget £4,200, D-127). Not priced yet: X18, X20, X21, F27, F28, F30, G08, G09, G10, X23, X24, X25. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -46,10 +46,10 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | G06 | Steel plate 80 x 10 x 690, wall tops (D-256) (dropped: D-311) | 0 pcs | £0.00 |
 | F25 | Base extrusion: KJN 90 x 90 H profile, 4 x 500, ends tapped M16 | 4 pcs | £301.15 |
 | F26 | Base end plates: steel flat bar 90 x 20, 2 x 670 | 2 pcs | £55.86 |
-| F27 | Base end plate bolts M16 socket cap (profile ends to end plates) | 8 pcs | £0.00 |
-| F28 | Pocket bottom sheet and pocket sealing | 1 lot | £0.00 |
+| F27 | Base end plate bolts M16 socket cap (profile ends to end plates) | 8 pcs | to price |
+| F28 | Pocket bottom sheet and pocket sealing | 1 lot | to price |
 | F29 | Rail seat bars: bright flat bar 50 x 20 (Y 2 x 500, X 2 x 850) | 1 lot | £138.96 |
-| F30 | Shop surface grinding of the 4 rail seat bars | 4 pcs | £0.00 |
+| F30 | Shop surface grinding of the 4 rail seat bars | 4 pcs | to price |
 
 ## Motion
 
@@ -81,9 +81,9 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | G03 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed (dropped: D-242) | 2 pcs | £0.00 |
 | G05 | Roller steel: X roller tube, 2 X roller angles, 2 Y roller tubes, 2 Y roller braces (dropped: D-305) | 0 lot | £0.00 |
 | G07 | Uprights: steel flat bar 150 x 50, 2 x 325 | 2 pcs | £112.92 |
-| G08 | Dowels for the upright joints (2 per upright) | 4 pcs | £0.00 |
-| G09 | Upright and beam bolts M12 socket cap | 12 pcs | £0.00 |
-| G10 | Upright joint faces: ground or epoxy-shimmed | 1 lot | £0.00 |
+| G08 | Dowels for the upright joints (2 per upright) | 4 pcs | to price |
+| G09 | Upright and beam bolts M12 socket cap | 12 pcs | to price |
+| G10 | Upright joint faces: ground or epoxy-shimmed | 1 lot | to price |
 
 ## Spindle
 
@@ -177,5 +177,6 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X20 | Rail screws M5 x 16 socket cap (X and Y rails into the ground bars) | 44 pcs | to price |
 | X21 | Joint screws added in the CAD (D-262) and not covered by X03 to X20 | 1 lot | to price |
 | X22 | Plate jack screws M6 x 20 set screw DIN 913 (dropped: D-311) | 0 pcs | £0.00 |
-| X23 | Rail bar fixing: M8 socket cap screws and T-nuts | 1 lot | £0.00 |
-| X24 | Delivery charges for the V4 frame steel and extrusion | 1 lot | £0.00 |
+| X23 | Rail bar fixing: M8 socket cap screws and T-nuts | 1 lot | to price |
+| X24 | Delivery charges for the V4 frame steel and extrusion | 1 lot | to price |
+| X25 | Machining of the V4 steel: counterbore, tap, ream (end plates, uprights, beam) | 1 lot | to price |

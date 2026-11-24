@@ -65,3 +65,9 @@ WooCommerce. Already in the project's supplier list (`steel-rhs-suppliers.md`).
 | kjnltd.co.uk, systemprofile.co.uk | no response |
 | Rapid Metals (WooCommerce Store API) | empty answer |
 | Metals4U, Parker Steel (`/products.json`) | 404 |
+
+## Epoxy pack sizes (EC Fibreglass, Ampreg 30 SLOW, 24 Nov 2026)
+Read by `curl -sL --compressed` from the page's product data (https://www.ecfibreglasssupplies.co.uk/ampreg-30-low-viscosity-epoxy-resin-slow):
+- 4.66 kg pack: **£86.83** (read as ex VAT, like the £295.00 for the 22.68 kg pack, which is £354.00 inc).
+- 2 x 4.66 kg = 9.32 kg binder = £173.66 ex / **£208.39 inc**; V4 needs about 7 kg (`docs/bom.csv` F01). Saves £145.61 against the kit.
+- Not chosen: the owner kept the 22.68 kg kit (24 Nov 2026, "go over budget"). Delivery not shown.
