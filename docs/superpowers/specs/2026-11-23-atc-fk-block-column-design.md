@@ -2,10 +2,17 @@
 
 23 Nov 2026, 15th session. Status: **for owner approval**. Replaces `2026-11-23-atc-one-piece-mount-design.md` (D-289 to D-294) for the mount; wheel, forks, hub top, holders and the pickup layout stay.
 
+## Revision 24 Nov 2026, 20th session (D-301): base L milled again
+The base L is **one milled 6082-T6 part** from a CNC service, not bent steel. Where this section and the 18th-session revision disagree, this one wins.
+- Tub plate 50 x 40 x 10 (Y -47 to -37, Z -10 to 30), 2 x Ø6.6, **no counterbores** (unreachable: the wall upright faces them 85 away): M6 x 16, heads proud.
+- Solid arm 50 x 20 (Z -8 to 12) to Y -133.8; gusset 10 wide at X 195 to 205, Z 30 at Y -47 sloping to Z 12 at Y -78.
+- Wall upright 70 x 52 x 8 (X 165 to 235, Y -141.8 to -133.8, Z -8 to 44): 4 x Ø5.5 at X 172/229, Z 21/38 (M5 x 20 / M5 x 16, heads proud), 2 x Ø9 key holes, 2 x dowel Ø5 x 16 at X 186/214, Z 24 (reamed through the upright and the angle leg).
+- R 3 inside corners. No bending service needed.
+
 ## Revision 23 Nov 2026, 18th session (D-299): angle column, bent sheet base L
 The owner changed two parts after tasks 1 to 5 were modelled. Where this section and the text below disagree, this section wins.
 - **Column:** one continuous L-section part in plan (aluminium angle, size to choose) in place of the 2 walls: one leg is the tub-side wall (Y -149.8 to -141.8), the other closes **-X**. The far wall (Y -206.2 to -198.2) goes. **+X and -Y are open** (motor cables, 2.5 key, coupling). Top plate and motor plate screw to both legs.
-- **Base L:** one laser-cut and bent **4 mm steel** part from a **bending service**: tub upright against the tub face (Y -41 to -37), arm, wall upright on the tub-side leg; the arm's long edges bent up 20 (U channel, top at Z 12). No gusset. Arm bending stiffness about as before (EI about 2.2e9 against 2.3e9); end bends and twist not worked out: bench check.
+- **Base L (superseded by D-301 above):** one laser-cut and bent **4 mm steel** part from a **bending service**: tub upright against the tub face (Y -41 to -37), arm, wall upright on the tub-side leg; the arm's long edges bent up 20 (U channel, top at Z 12). No gusset. Arm bending stiffness about as before (EI about 2.2e9 against 2.3e9); end bends and twist not worked out: bench check.
 - Superseded below: the 2 walls, the motor plate joints of D-298, the 70 x 38 x 8 flange, the 10-thick tub plate with Ø11 counterbores, the gusset.
 
 ## Why

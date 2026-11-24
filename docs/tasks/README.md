@@ -4,7 +4,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/hopeful-sagan-28twty` (continues `claude/charming-cori-349jm7`). Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-300; D-295 to D-297 are kept for ATC plan task 7).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-301; D-295 to D-297 are kept for ATC plan task 7).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). When Claude edits it, a hook (`tools/bom_hook.py`) runs the 5 generators automatically and reports only errors. After a hand edit, set `PYTHONUTF8=1` and run `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
 - **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£4,041.97, £158.03 left** (20 Nov 2026 repricing, D-242 to D-245, plus G05 roller steel £78.62 on 23 Nov, D-281 to D-283: G03 dropped; G01 beam and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
@@ -30,6 +30,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 - 23 Nov, 17th: ATC plan task 4 finished (column joints and dowels, motor plate 8 thick, sensor grub; D-298) and task 5 done (strip 50 x 10 x 40, base L with a wall flange); clash check clean; not saved. Next: task 6 (sweep, spindle), task 7 docs (D-295 to D-297).
 - 23 Nov, 18th: owner changed the ATC column to one aluminium angle (closed -X, open +X) and the base L to bent 4 mm steel with a U-channel arm (D-299); docs only, the model still has the old parts. Next: plan task 5b, then 6 and 7.
 - 23 Nov, 19th: ATC plan task 5b modelled (D-300): column one 80 x 80 x 8 angle (cut, root R 6), far wall gone, bent 4 mm steel base L with U arm and a 70-wide upright (4 x M5 at 57 x 17); clash and key checks clean; **not saved**. Next: owner saves, then task 6, then task 7.
+- 24 Nov, 20th: ATC base L replaced by one milled 6082 part (D-301): tub plate 10 thick, M6 heads proud, solid arm + 10-wide gusset, upright 70 x 52 x 8, M5 heads proud, 2 x dowel Ø5; clash clean; **not saved**. Next: owner saves, then task 6, then task 7.
 - Background, only if a task needs it: `docs/HANDOVER.md`.
 
 ## Tasks

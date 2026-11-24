@@ -1,10 +1,21 @@
-# Type 0 CNC: handover (2026-11-23)
+# Type 0 CNC: handover (2026-11-24)
 
 **Branch:** `claude/hopeful-sagan-28twty` on `yousef-chitani/Type_0_CNC` (holds everything from `claude/charming-cori-349jm7` plus the 16 and 17 Nov LiMo sessions). Everything below is committed and pushed. Earlier work: `claude/charming-cori-349jm7`, `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
+
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (20th session): ATC base L becomes one milled 6082 part (D-301); modelled, not saved
+- **Owner Q&A (D-301):** replace the bent 4 mm steel base L with a single milled part: 6082-T6, solid 50 x 20 arm + gusset, made by a CNC service, old-spec fixings; then (counterbores on the tub plate face the wall upright 85 away, so a 3-axis spindle cannot cut them) **M6 heads proud**.
+- **Model:** bent body removed; component renamed `ATC Base L (6082, milled)`, one body (features: plate+arm extrude, upright, gusset, R 3 fillets, 2 hole cuts): tub plate 50 x 40 x 10 (Y -47 to -37, Z -10 to 30, 2 x Ø6.6 at X 185/215, Z 21); arm 50 x 20 Z -8 to 12 to Y -133.8; gusset X 195 to 205, Z 30 at Y -47 to Z 12 at Y -78; upright 70 x 52 x 8 (X 165 to 235, Y -141.8 to -133.8, Z -8 to 44) with 4 x Ø5.5 (X 172/229, Z 21/38), 2 x Ø9 key holes (X 193/207, Z 38), 2 x Ø5 dowel holes (X 186/214, Z 24); R 3 inside corners. 368 g (volume x 2.70; body material still says Steel, like the other 6082 parts).
+- **Angle:** 2 x Ø5 through the tub-side leg at X 186/214, Z 24 (dowels).
+- **Fasteners** (`ATC Fasteners`, base feature `Base L milled fasteners (D-301)`): the 6 old base L screws deleted; new 2 x M6 x 16 (head Y -53 to -47, tip Y -31), 2 x M5 x 20 at X 172 and 2 x M5 x 16 at X 229 (heads Y -133.8 to -128.8, tips unchanged), 2 x dowel Ø5 x 16.
+- **Checks:** interference of the 22 bodies around the base L: only screws in tapped holes (M6 in the strip, M5 in the angle). Proud M5 heads reach r 56.1 of the wheel axis (holders start r 66.5); gusset at Y > -78. Key swing worked out by hand, not with key bodies: M6 key blocked only toward +X (gusset) and down (arm), more than 180 deg free; M5 and the M4 through the Ø9 holes from +Y, free. Timeline 2181, 37 unhealthy (all old). Lowest Z -46.
+
+**Left:** task 6 (sweep, spindle against the wheel, rerun static overlap and masses), task 7 docs (D-295 to D-297, BOM: angle 80 x 80 x 8 and the milled base L, prices only from a live page or a service quote). Owner job 6: save, angle root R 12 or less.
+
+**Exact next step:** the owner saves `Type_0_v3`. Then a new session reads this entry and runs plan task 6 (`docs/superpowers/plans/2026-11-23-atc-fk-block-column.md`, sweep method in `docs/atc-wheel.md`), then task 7.
 
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (19th session): ATC plan task 5b modelled (D-300): angle column and bent 4 mm steel base L; not saved
 - **Owner Q&A (D-300):** angle 80 x 80 x 8, legs cut; base L without dowels (M5 only); root radius unknown, so R 6 modelled; the base L upright widened so the M5s spread again.
@@ -17,15 +28,6 @@
 **Left:** task 6 (sweep, spindle against the wheel, rerun static overlap and masses), task 7 docs (D-295 to D-297, BOM lines incl. angle 80 x 80 x 8 and the bent base L; prices only from a live page). Owner list: `docs/owner-todo.txt` job 6 (save, angle root R 12 or less, bending service: inside radius, minimum flange, corner relief); ask LiMo DB or DF pair and D20L25 hub depth.
 
 **Exact next step:** the owner saves `Type_0_v3`. Then a new session reads this entry and runs plan task 6 (`docs/superpowers/plans/2026-11-23-atc-fk-block-column.md`, sweep method in `docs/atc-wheel.md`), then task 7.
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (18th session): owner changes the ATC column to one angle and the base L to bent 4 mm steel (D-299); docs only, not modelled
-- **Owner (D-299):** the column is one continuous L in plan (aluminium angle): the tub-side wall plus a leg closing -X; the far wall goes; +X and -Y open. The base L is one laser-cut and bent 4 mm steel part from a bending service, the arm a U channel (long edges bent up 20, top Z 12), no gusset. Arm bending stiffness about as before (EI about 2.2e9 against 2.3e9, hand calc); end bends and twist not worked out: bench check.
-- Spec has a revision section at the top; plan has a new **task 5b** (remodel, with the checks: -X leg squeezed between motor X 179 and sensor edge about X 165.3, leg ends inside r 58, angle root radius at the motor corner, sheet details: no counterbores in 4 mm, M5 row near the bend, upright Z layout, dowels); task 6 static check unticked (rerun).
-- This session had no Fusion tools: **the model `Type_0_v3` still has the 2-wall column and the machined base L** (and is still not saved).
-
-**Left:** task 5b, task 6, task 7 (D-295 to D-297, now pointing at D-299 for the base L). Ask LiMo: DB or DF pair; D20L25 hub depth. Prices for the angle and the bent part only from a live page.
-
-**Exact next step:** the owner saves `Type_0_v3` (tasks 1 to 5 are healthy). Then a session with the Fusion MCP reads this entry and does plan task 5b (`docs/superpowers/plans/2026-11-23-atc-fk-block-column.md`), asking the owner the angle size first, then task 6, then task 7.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

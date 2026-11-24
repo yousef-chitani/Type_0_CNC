@@ -75,12 +75,14 @@
 - [x] Commit (model not saved).
 - Done 23 Nov (19th session, D-300): angle 80 x 80 x 8 cut (legs X 168 to 235 and Y -141.8 to -208), root R 6 modelled (the motor allows about R 18, the motor plate R 13 relief allows about R 12); base L upright 70 x 52 with 4 x M5 at 57 x 17 (Z 21/38, above the U flanges); R 4 inside bends and the 20 flange are not confirmed with a bending service.
 
+- Done 24 Nov (20th session, D-301): the bent base L replaced by one milled 6082 part `ATC Base L (6082, milled)` (tub plate 10 thick, M6 x 16 heads proud, solid arm 50 x 20, gusset 10 wide, upright 70 x 52 x 8, M5 x 20 / x 16 heads proud, 2 x dowel Ø5 x 16 through the angle leg, R 3 inside). Clash: only screws in their tapped holes; timeline 2181, 37 unhealthy (all old); lowest Z -46; 368 g.
+
 ### Task 6: Checks
 - [ ] (rerun after task 5b) Static overlap of every ATC body against all visible bodies in X 75 to 325, Y -300 to -15, Z -60 to 200: expect only screws in tapped holes.
 - [ ] Sweep as in `atc-wheel.md` (hub, forks, fork screws, hub M4s, holders 0 to 45° in 3°; flag 0 to 360° in 5°) against the static bodies: expect no hits above 0.1 mm³.
 - [ ] Spindle against the wheel at drop-off, pickup and lifted (the method in `atc-wheel.md`, 13th session): expect only holder 1 at the gripped pocket.
-- [ ] Mass of the new metal parts (rerun after task 5b; the base L is now steel); lowest Z (expect about -46). Record results.
+- [ ] Mass of the new metal parts (rerun after task 5b; the base L is now milled 6082, D-301); lowest Z (expect about -46). Record results.
 
 ### Task 7: Docs and handover
-**Files:** `docs/atc-wheel.md` (rewrite to the new parts, renders `atc-wheel.png`, `atc-wheel-under.png`), `docs/decisions.md` (D-295: FK12 block, column (now one angle, D-299), stub shaft, coupling, approach A; D-296: ATC overhangs the bench front, lowest Z about -46; D-297: strip 50 x 10 x 40; the base L itself is D-299, bent 4 mm steel), `docs/bom.csv` (A06, A07, new lines FK12, coupling, plate, angle, bent base L: prices only from a live page), `cad/v2/out/assembly/cast_in_features.md` (strip row), `docs/design-issues.md` (bench overhang), `docs/HANDOVER.md`, `docs/tasks/README.md`.
+**Files:** `docs/atc-wheel.md` (rewrite to the new parts, renders `atc-wheel.png`, `atc-wheel-under.png`), `docs/decisions.md` (D-295: FK12 block, column (now one angle, D-299), stub shaft, coupling, approach A; D-296: ATC overhangs the bench front, lowest Z about -46; D-297: strip 50 x 10 x 40; the base L itself is D-301, milled 6082), `docs/bom.csv` (A06, A07, new lines FK12, coupling, plate, angle, milled base L (service quote): prices only from a live page), `cad/v2/out/assembly/cast_in_features.md` (strip row), `docs/design-issues.md` (bench overhang), `docs/HANDOVER.md`, `docs/tasks/README.md`.
 - [ ] Write, commit, push.

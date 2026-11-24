@@ -2,6 +2,15 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (18th session): owner changes the ATC column to one angle and the base L to bent 4 mm steel (D-299); docs only, not modelled
+- **Owner (D-299):** the column is one continuous L in plan (aluminium angle): the tub-side wall plus a leg closing -X; the far wall goes; +X and -Y open. The base L is one laser-cut and bent 4 mm steel part from a bending service, the arm a U channel (long edges bent up 20, top Z 12), no gusset. Arm bending stiffness about as before (EI about 2.2e9 against 2.3e9, hand calc); end bends and twist not worked out: bench check.
+- Spec has a revision section at the top; plan has a new **task 5b** (remodel, with the checks: -X leg squeezed between motor X 179 and sensor edge about X 165.3, leg ends inside r 58, angle root radius at the motor corner, sheet details: no counterbores in 4 mm, M5 row near the bend, upright Z layout, dowels); task 6 static check unticked (rerun).
+- This session had no Fusion tools: **the model `Type_0_v3` still has the 2-wall column and the machined base L** (and is still not saved).
+
+**Left:** task 5b, task 6, task 7 (D-295 to D-297, now pointing at D-299 for the base L). Ask LiMo: DB or DF pair; D20L25 hub depth. Prices for the angle and the bent part only from a live page.
+
+**Exact next step:** the owner saves `Type_0_v3` (tasks 1 to 5 are healthy). Then a session with the Fusion MCP reads this entry and does plan task 5b (`docs/superpowers/plans/2026-11-23-atc-fk-block-column.md`), asking the owner the angle size first, then task 6, then task 7.
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 23 Nov 2026 (17th session): ATC FK12 plan task 4 finished and task 5 done in the model (not saved); clash check clean
 - **Owner Q&A (D-298):** motor plate 8 thick (Z 34 to 42) with M4s into its edges, motor screws M3 x 12; dowels only at the top plate; the base L arm ends in an upright flange screwed to the tub-side wall from the tub side (only 3.2 between the motor and the wall's inside face, and the motor goes in before the base L).
 - **Task 4 finished:** top plate to each wall 2 x M4 x 16 (X 172/228, counterbored Ø8 x 4.5) + 2 x Ø4 x 16 dowels (X 186/214); each wall to the motor plate 2 x M4 x 12 along Y at X 193/207, Z 38 (counterbored in the walls' outer faces); sensor lock: M4 x 4 brass-tip grub from the ear edge along 202.5°, Z 92. Cosmetic threads on all tapped holes. Locknut stand-in given an Ø11 bore (it was solid).

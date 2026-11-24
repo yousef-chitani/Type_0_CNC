@@ -96,12 +96,13 @@ The mould drawings can't start until this is done.
 
 === JOB 6: ATC COLUMN AND BASE L (added 23 Nov 2026) ===
 
-1. Save Type_0_v3 in Fusion (ATC plan task 5b, D-300, is not saved).
+1. Save Type_0_v3 in Fusion (ATC plan task 5b, D-300, and the milled
+   base L, D-301, are not saved).
 2. Buy the 80 x 80 x 8 aluminium angle with an inside root radius of
    R 12 or less (R 6 is modelled).
-3. Ask your bending service, for 4 mm steel: inside bend radius (R 4
-   modelled), minimum flange (20 modelled) and the corner relief they
-   want (1 mm modelled).
+3. The base L is now one milled 6082 part (D-301), no bending service.
+   When the model is saved, a session can export its STEP for a CNC
+   service quote (envelope 70 x 105 x 54).
 4. Assembly: screw the motor to the motor plate on the bench first, then
    slide the pair into the column from the open side (D-300).
 
