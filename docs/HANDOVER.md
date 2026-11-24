@@ -12,9 +12,11 @@
 - **Carried over (Claude's proposal, not objected to):** 400 x 250 x 150, Jianken ATC spindle, LiMo C5 1605 + HGR20, LinuxCNC/Mesa, £4,200, wave 1 on 4 Jan 2027 with lengths redone. Dropped: cast tub, moulds, Y2, front ATC.
 - **Doc:** `docs/superpowers/specs/2026-11-24-v4-fixed-gantry-design.md` (builder check done; its 4 questions answered or marked as Claude's calls).
 
-**Left:** owner approves the doc; then the plan (superpowers writing-plans), then a new Fusion model. The wave 1 order lengths must be redone before 4 Jan.
+- **Owner approved the doc** ("ignore mass keep budget write plan"): no mass limit; £4,200 kept. **Plan written:** `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md`, 7 tasks: sizing script, owner picks profiles and prices, BOM and budget, then the new Fusion model `Type_0_v4` (base and Y, uprights and X/Z, wheel), pour plan and wave 1 lengths.
 
-**Exact next step:** the owner reads the design doc and approves or corrects it; then a session writes the V4 plan (task 27).
+**Left:** all 7 plan tasks. The wave 1 order lengths must be redone before 4 Jan 2027.
+
+**Exact next step:** the owner reviews the plan; then a new session runs plan Task 1 (`tools/v4_sizes.py`, no Fusion needed).
 
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (23rd session): ATC carrier becomes a flat 6 mm disc on a longer hub, clips kept, column floor removed (D-304); docs only, not modelled
 - **Owner:** "ATC needs a better solution than standoffs" and the displacement must leave enough room to engage and disengage the clips. The column block floor "need not really exist". Q&A: "Flat disc on a longer hub", "Keep outlines, cheek full height", "clips, the force is not going to be an issue". A fixed fence behind the holders (no clips) was drawn for the owner and declined.

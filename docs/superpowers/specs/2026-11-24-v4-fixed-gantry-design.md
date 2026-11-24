@@ -54,8 +54,8 @@ The owner chose a new version, V4: fixed gantry, moving table, built on what v3 
 - Base width: the table width plus room for the uprights' bolting faces.
 
 ## Claude's calls (from the builder check; owner to correct)
-- **Site and mass:** the machine stands in the garage on the owner's heavy stand (`docs/requirements.md`); the old 40 kg per-piece limit of D-71 (upstairs flat) does not apply, as for v3's 88 kg tub (D-137). The EG is poured into the base in the garage, where the machine stands. The base is one filled tray unless the builder finds a reason to split it.
-- **Budget:** £4,200 stays the Phase 1 target. Pick the cheapest option that holds ±0.02 mm, and flag any overrun to the owner (the project's existing rule), rather than cutting accuracy.
+- **Mass: no limit (owner, 24 Nov 2026: "ignore mass").** The machine stands in the garage on the owner's heavy stand. The EG is poured into the base where the machine stands; the base is one filled tray unless the builder finds a reason to split it.
+- **Budget (owner: "keep budget"):** £4,200 stays the Phase 1 target. Pick the cheapest option that holds ±0.02 mm, and flag any overrun to the owner (the project's existing rule), rather than cutting accuracy.
 
 ## Left to the builder (to propose to the owner before modelling)
 - Extrusion profiles and the tray layout; where the EG pockets are and how they are closed.
