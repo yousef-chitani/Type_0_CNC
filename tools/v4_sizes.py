@@ -95,7 +95,7 @@ if __name__ == "__main__":
     assert axis_min + WORK_X + TOOL_MARGIN >= TABLE_X / 2, "X misses table +230"
     # Y: axis range 0 to y_travel in table coordinates, tool margin each end
     assert s["y_travel"] >= WORK_Y_AREA, "Y work area 250 not covered"
-    assert 0 - TOOL_MARGIN <= 0 and s["y_travel"] + TOOL_MARGIN >= TABLE_Y, "Y misses table 0 to 330"
+    assert s["y_travel"] + 2 * TOOL_MARGIN >= TABLE_Y, "Y misses table 0 to 330"
     for k in ("x_rail", "y_rail", "z_rail"):
         assert s[k] in LIMO_RAIL_SET, k
     custom = []
