@@ -83,7 +83,7 @@ def hollow_rect(b, d, t, ro=None, ri=None, step=0.25):
     pm = 2 * (bm + dm) - (8 - 2 * math.pi) * rm
     J = 4 * Am * Am * t / pm                          # Bredt
     void = (b - 2 * t) * (d - 2 * t) - (4 - math.pi) * ri * ri
-    return dict(A=A, Iy=Iy, Iz=Iz, J=J, Asy=A * d / (b + d), Asz=A * b / (b + d), void=void)
+    return dict(A=A, Iy=Iy, Iz=Iz, J=J, Asy=A * b / (b + d), Asz=A * d / (b + d), void=void)
 
 
 def rect(b, d):
@@ -391,7 +391,8 @@ def sag_offset(layout, upright):
     out = []
     for x in (0.0, PICKUP_X):
         fr, nose, part, ups, bn, car = build(layout, upright, True, x_load=x)
-        fr.solve({(car, 2): -CARRIAGE_KG * 9.81}, [(n, k) for n in bn for k in range(6)])
+        # weight at the nose (235 forward), so the beam's twist is in: an upper bound
+        fr.solve({(nose, 2): -CARRIAGE_KG * 9.81}, [(n, k) for n in bn for k in range(6)])
         out.append(fr.u[6 * nose + 2] * 1000.0)
     return out[1] - out[0]
 
@@ -456,7 +457,10 @@ def checks():
         assert abs(kg_m / seller - 1) < 0.05, f"SHS kg/m {kg_m:.2f} vs {seller}"
     rhs = UPRIGHTS["U1 RHS 160x80x8"]["sec"]["A"] * RHO_ST * 1000
     assert abs(rhs / 26.4 - 1) < 0.05, f"RHS kg/m {rhs:.2f} vs K I Metals 26.4"
-    # 7. Each upright fits the 80 width that sizes() is built on (else base_width, X reach, rails change)
+    # 7. Shear area of the RHS is larger along its 160 side (walls along the shear carry it)
+    r = UPRIGHTS["U1 RHS 160x80x8"]["sec"]
+    assert r["Asz"] > r["Asy"], "RHS shear areas"
+    # 8. Each upright fits the 80 width that sizes() is built on (else base_width, X reach, rails change)
     for name, u in UPRIGHTS.items():
         assert u["x_width"] <= UPRIGHT_W, f"{name} wider than UPRIGHT_W"
     return kg_m, rhs
@@ -534,6 +538,9 @@ def main():
               for d in range(3)]
         print(f"  C + U1, beam {lab:18s}: X {c[0]:.1f} Y {c[1]:.1f} Z {c[2]:.1f} | pickup X {cp[0]:.1f} "
               f"Y {cp[1]:.1f} Z {cp[2]:.1f}")
+    rigid = dict(EA=1e14, EIy=1e17, EIz=1e17, GJ=1e17, GAy=1e14, GAz=1e14)
+    c = [compliance("C", "U1 RHS 160x80x8", True, d, beam_props=rigid)[0] for d in range(3)]
+    print(f"  C + U1, beam made rigid (share of the beam): X {c[0]:.1f} Y {c[1]:.1f} Z {c[2]:.1f}")
     print("PASS")
     return results
 
