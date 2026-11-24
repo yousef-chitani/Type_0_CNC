@@ -14,7 +14,7 @@ Made by `tools/v4_sizes.py` (`PYTHONUTF8=1 python tools/v4_sizes.py`). All lengt
 | y_rail | 500 | 497.5, next LiMo size |
 | y_screw | 600 | 553, next 50 mm |
 | z_rail | 350 | v3 (need 347.5) |
-| z_screw | 350 | v3 (HM12-60 mount; the +253 rule does not apply) |
+| z_screw | 350 | v3 (HM12-60 mount; the +253 rule does not apply). D-136 orders Z 350; whether 350 clears the 150 travel with the HM12 mount is to check in Task 5 |
 | beam_len | 890 | X rail 850 + 20 each end |
 | base_len | 670 | table 330 + y_travel 300 + 20 each end |
 | base_width | 660 | table 460 + 2 x (20 gap + 80 upright) |
@@ -46,11 +46,13 @@ Made by `tools/v4_sizes.py` (`PYTHONUTF8=1 python tools/v4_sizes.py`). All lengt
 
 `curl -sL --compressed` on https://limobearing.com/. The site is not Shopify or WooCommerce (`/products.json` and `/wp-json/wc/store/products` return 404), so I read the product pages.
 - HGH20CA sets (page `linear-guide-set-hgh15-20-25-30`): 200 to 900 in 50 steps, then 1000 and up. 850, 500 and 350 are all sold.
-- DFU1605 (page `dfu1605-2005-2505-double-nut-ball-screw`): listed 300 to 1000 in 100 steps, plus "custom lengths 10 to 4,000 mm". So 900, 600 and 350 are buyable, 900 as a standard size and 600 and 350 by custom length or the next size down to cut. The 50 mm steps follow D-136's order. Confirm the exact screw length with LiMo before the order.
+- DFU1605 (page `dfu1605-2005-2505-double-nut-ball-screw`): listed 300 to 1000 in 100 steps, plus "custom lengths 10 to 4,000 mm". So 900 and 600 are standard sizes; 350 is not (next size up 400, cut to length, or custom length). The 50 mm steps follow D-136's order. Confirm the exact screw length with LiMo before the order.
+
+The base_len check assumes the Y screw lies along the base with the BK12 and BF12 supports outside its ends.
 
 ## Whip speed
 
-x_screw 900, DFU1605 root diameter 13.2, fixed-supported ends (BK12 fixed, BF12 supported), whole 900 as the span (a bit pessimistic): critical speed about 3,070 rpm, **2,460 rpm with the usual 80 % margin**. At 5 mm lead (1605) that is a feed of about 15 m/min, above what the steppers give, so whip is not the limit.
+x_screw 900, DFU1605 root diameter 13.2, fixed-supported ends (BK12 fixed, BF12 supported), whole 900 as the span (a bit pessimistic): critical speed about 3,070 rpm, **2,460 rpm with the usual 80 % margin**. At 5 mm lead (1605) that is a feed of about 12 m/min, above what the steppers give, so whip is not the limit.
 
 ## Open
 

@@ -86,18 +86,28 @@ if __name__ == "__main__":
     n = critical_rpm(s["x_screw"])
     print(f"{'x_screw_whip_rpm_80%':22s}{n:8.0f}")
 
-    assert s["y_travel"] >= WORK_Y_AREA
-    assert s["x_travel"] >= 430 + WHEEL_REACH
-    # spindle axis range plus tool margin covers the whole table
-    assert WORK_X + 2 * TOOL_MARGIN >= TABLE_X, "X does not cover table +-230"
-    assert s["y_travel"] + 2 * TOOL_MARGIN >= TABLE_Y, "Y does not cover table 0 to 330"
-    for k in ("x_rail", "y_rail"):
+    # Geometry in table-centre X. Spindle axis starts at -WORK_X/2 (left end of work travel).
+    axis_min = -WORK_X / 2
+    axis_max = axis_min + s["x_travel"]
+    pickup_x = TABLE_X / 2 + UPRIGHT_GAP + UPRIGHT_W + WHEEL_PICKUP_OFFSET
+    assert axis_max >= pickup_x, "spindle does not reach the wheel pickup"
+    assert axis_min - TOOL_MARGIN <= -TABLE_X / 2, "X misses table -230"
+    assert axis_min + WORK_X + TOOL_MARGIN >= TABLE_X / 2, "X misses table +230"
+    # Y: axis range 0 to y_travel in table coordinates, tool margin each end
+    assert s["y_travel"] >= WORK_Y_AREA, "Y work area 250 not covered"
+    assert 0 - TOOL_MARGIN <= 0 and s["y_travel"] + TOOL_MARGIN >= TABLE_Y, "Y misses table 0 to 330"
+    for k in ("x_rail", "y_rail", "z_rail"):
         assert s[k] in LIMO_RAIL_SET, k
-    assert s["z_rail"] in LIMO_RAIL_SET
+    custom = []
     for k in ("x_screw", "y_screw", "z_screw"):
         assert LIMO_SCREW_CUSTOM[0] <= s[k] <= LIMO_SCREW_CUSTOM[1], k
+        if s[k] not in LIMO_SCREW_STD:
+            custom.append(f"{k} {s[k]}")
+    print("screws by custom length (not a standard LiMo size):", ", ".join(custom) or "none")
     assert s["x_screw"] <= 1000, "1605 whip"
+    # Consistency check (true by construction of rail_len): Z rail holds Z travel plus blocks.
     assert s["z_rail"] >= Z_TRAVEL + BLOCK_PITCH + CARRIAGE_LEN + RAIL_END
+    # Assumes the Y screw lies along the base, with BK12 and BF12 outside its ends.
     assert s["base_len"] >= s["y_screw"] + BK12_LEN + BF12_LEN
     assert s["beam_overhang_right"] > 0
     print("PASS")
