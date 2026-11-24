@@ -6,6 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (23rd session): ATC carrier becomes a flat 6 mm disc on a longer hub, clips kept, column floor removed (D-304); docs only, not modelled
+- **Owner:** "ATC needs a better solution than standoffs" and the displacement must leave enough room to engage and disengage the clips. The column block floor "need not really exist". Q&A: "Flat disc on a longer hub", "Keep outlines, cheek full height", "clips, the force is not going to be an issue". A fixed fence behind the holders (no clips) was drawn for the owner and declined.
+- **No Fusion connection this session**, so nothing was modelled. `Type_0_v3` still has the D-303 carrier and the column floor.
+- **Check** (`tools/atc_carrier_stiffness.py`, hand estimate): a push along Y at the pickup fork, per 100 N: D-303 about 9.4 mm (3 mm disc 7.0, FK12 tilt 2.0, stub 0.35, standoffs under 0.01). Flat 6 mm disc on the hub: about 2.6 mm, now mostly the FK12 tilt (range 0.7 to 4.0; its stiffness is not published). Engage: the Y stop leaves 3 past the pickup, so the give at the snap force must be less than the clip's throat-to-seat distance and under 3. With 1 mm allowed, the clip limit is about 40 N (23 to 85 N). Disengage: 30 stroke, ample.
+- **D-304 (to model):** disc 5083 6 mm flat at Y -118 to -112, apothem about 150, Ø40 centre hole, 8 x M4 at r 41.75 into the hub; hub 31 longer forward (inside r 51), deeper counterbores for the hub-to-stub screws; forks get a foot on the disc's rear face (2 x M4 axial), clip mouth at Y -85 as now; standoffs, 16 standoff screws, 12 fork-to-tab screws and the bent carrier removed. Column block: floor Z -75 to -67 removed, outlines kept, cheek full height.
+
+**Left:** model D-304 (Remove features, not body deletes; lesson in the 21st entry, now in `docs/handover-archive.md`); check the disc rear face against the real ISO20 holder flange; the owner's clip shape (arm spread against the neighbours at 30 deg); clash check; flat pattern no longer needed (flat disc: a DXF of the outline). Bench: FK12 tilt (50 N along Y at a fork, dial at the rim). Then task 6 (sweep).
+
+**Exact next step:** the owner saves `Type_0_v3`. Then a session with the Fusion MCP reads this entry and D-304, models it, runs the clash check, and runs plan task 6.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (22nd session): ATC front carrier becomes laser-cut and bent 5754 sheet on 8 standoffs (D-303); modelled, not saved
 - **Owner:** the solid 6082 carrier (2.8 kg) is "too large and substantial, make it from a laser cut and bended sheet material". Q&A: aluminium 5754 3 mm; tabs tapped M4 ("I'll just tap them"); bought standoffs to the hub.
 - **Model:** `Front carrier 5754 3 mm sheet (D-303)` (base feature in `ATC Hub`): 12-gon disc Y -154 to -151 with 12 tabs bent +Y (inside R 3), tab outer face at apothem 142 (same fork seat), tab end Y -123.2 (fork step contact kept), tab 70 wide, tapped M4 (Ø3.3) at Y -132.25; Ø40 centre hole (key access to the hub-to-stub screws); 8 x Ø4.5 at r 41.75; 12 spokes 20 wide, 12 windows r 56 to 122, R 4 corners. **512 g** (was 2.8 kg). Old carrier removed (Remove feature). Fasteners (`Sheet carrier standoffs and screws (D-303)`): 12 x M4 x 8 countersunk fork to tab, 8 x M4 x 70 hex 7 AF male-female steel standoffs (stud into the hub's old M4 holes, 10 deep), 8 x M4 x 8 button head ISO 7380 at the front. The 20 old screws removed (Remove features).
@@ -16,16 +26,6 @@
 **Left:** owner decides the pickup stiffness fix (options in D-303: a fixed stop under the pickup fork, solid disc without windows, or thicker 5083), and whether ±1 deg bends are acceptable or the tabs get a shim/adjustment; flat pattern DXF for the laser service; standoff stock and price (owner's browser); then task 6 (sweep) as in the entry below.
 
 **Exact next step:** the owner saves `Type_0_v3` and answers the stiffness question (D-303). Then a new session applies the answer, makes the flat pattern, and runs plan task 6.
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (21st session): ATC wheel vertical, 12 radial pockets, column one block (D-302); modelled, not saved
-- **Owner moved the ATC** (90 deg about X: axis along Y, wheel in front of the tub, drive under the tub front). Q&A: top pickup with radial holders; lower 6; column top plate + motor plate one part joined by a -X cheek and a floor; angle gone; 12 pockets; bench pocket under the tub; drive torque "will sort later".
-- **Model:** ATC 6 lower (centre X 200, Z -40). `Column block 6082 (D-302)`: front plate Y -48 to -37, ear to the strip (2 x M6 x 20 at X 185/215, Z 21), -X cheek, floor Z -75 to -67, motor plate Y 8 to 16, nothing above Z -17 under the tub; FK12, coupling, motor, sensor unchanged. Old angle, top and motor plates removed (Remove features); base L and its fixings deleted. 12 forks (owner model turned: plate perpendicular to the radius, mouth +Y), groove r 142 at Y -85, fork top Z 107 at the pickup; 12 holders and tools pointing in (tips r 56). `Front carrier 6082 (D-302)` in `ATC Hub`: disc, 12-flat drum (apothem 142) the fork tabs screw onto (M4 x 12 csk, radial), Ø40 boss, Ø96 flange on the old hub with 8 x M4 x 12 in the old fork holes. Hub, flag, stub shaft unchanged.
-- **Checks:** clash of all ATC bodies and the tub: only screws in tapped holes, the sensor in its M12, the fork step contact. Timeline 2171, 37 unhealthy (old). Envelope X -22 to 396, Z -236 to 156.
-- **Lesson:** deleting a body made by a base feature deletes the whole base feature (the sensor grub went with the base L fixings; remade). Use Remove features.
-
-**Left:** drive torque (A03 0.8 Nm holding against about 0.65 Nm per holder, 2.5 Nm worst, and power-off swing; owner to decide: worm box, planetary, bigger motor); carrier 2.8 kg solid, lighten; bench pocket and wheel space (bench docs); spindle sweep at nose Z 112 vs holders at ±30 deg (task 6); docs `docs/atc-wheel.md` and BOM (task 7, D-295 to D-297).
-
-**Exact next step:** the owner saves `Type_0_v3`. Then a new session reads this entry and D-302 and runs plan task 6 (sweep method in `docs/atc-wheel.md`) at the new pickup: X 200, Y -85, nose Z 112, slide to Y -55.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
