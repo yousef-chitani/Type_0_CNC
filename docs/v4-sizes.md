@@ -50,7 +50,7 @@ Made by `tools/v4_sizes.py` (`PYTHONUTF8=1 python tools/v4_sizes.py`). All lengt
 
 ## Whip speed
 
-x_screw 900, DFU1605 root diameter 13.2, fixed-supported ends (BK12 fixed, BF12 supported), whole 900 as the span (a bit pessimistic): critical speed about 3,070 rpm, **2,460 rpm with the usual 80 % margin**. At 16 mm lead that is a feed of about 39 m/min, far above what the steppers give, so whip is not the limit.
+x_screw 900, DFU1605 root diameter 13.2, fixed-supported ends (BK12 fixed, BF12 supported), whole 900 as the span (a bit pessimistic): critical speed about 3,070 rpm, **2,460 rpm with the usual 80 % margin**. At 5 mm lead (1605) that is a feed of about 15 m/min, above what the steppers give, so whip is not the limit.
 
 ## Open
 
