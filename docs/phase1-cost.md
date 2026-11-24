@@ -1,35 +1,35 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,041.97** (budget £4,200, D-127). Not priced yet: G01, X18, G06, X19, X20, X21, X22. No eBay.
+**Phase 1 priced total: £4,415.66** (budget £4,200, D-127). Not priced yet: X18, X20, X21. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
-| Frame | £840.59 |
-| Motion | £1,220.03 |
-| Gantry | £78.62 |
+| Frame | £1,263.84 |
+| Motion | £1,089.53 |
+| Gantry | £184.52 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
-| Fixings | £97.60 |
-| **Total** | **£4,041.97** |
+| Fixings | £72.64 |
+| **Total** | **£4,415.66** |
 
 ## Frame
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
 | F01 | Main EG epoxy: Ampreg 30 + slow hardener, 22.68 kg | 1 kit | £354.00 |
-| F02 | Epoxy for the rail-seat pour / grout / samples (in F01) | 5 kg | £0.00 |
-| F03 | Coarse aggregate: quartz 2-5 mm | 3 25 kg bags | £43.56 |
-| F04 | Medium + fine: kiln-dried sand 0-1 mm | 3 20 kg bags | £19.14 |
+| F02 | Epoxy for the base pockets, beam fill and test bricks (in F01) | 7 kg | £0.00 |
+| F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
+| F04 | Medium + fine: kiln-dried sand 0-1 mm | 2 20 kg bags | £12.76 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
 | F07 | Steel flat bar 40 x 10 (2 m) + 25 x 10 (2 m) | 1 lot | £54.90 |
 | F08 | M12 threaded rod 2 × 1 m + nuts (dropped: D-159) | 1 lot | £0.00 |
 | F09 | Steel or PVC tube for M12 bolt sleeves (dropped with the portal joint: D-154) | 2 m | £0.00 |
-| F10 | MDF sheets for moulds (floors + walls) | 1 sheet | £28.00 |
-| F11 | CLS timber 38 x 63 x 2400 (mould bracing) | 6 lengths | £23.82 |
+| F10 | MDF sheets for moulds (floors + walls) (dropped: D-305) | 0 sheet | £0.00 |
+| F11 | CLS timber 38 x 63 x 2400 (mould bracing) (dropped: D-305) | 0 lengths | £0.00 |
 | F12 | Release agents (Easy Composites) | 1 set | £14.90 |
 | F13 | Plasticine fillets (dropped: use silicone fillets) | 1 set | £0.00 |
 | F14 | Vibration table (only if the test bricks need it) | 2 pcs | £0.00 |
@@ -43,21 +43,27 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F22 | Curing tent: 50 mm foil-faced PIR board + foil tape | 3 sheets | £139.99 |
 | F23 | Tent heater: 500 W oil-filled radiator | 1 pcs | £20.99 |
 | F24 | Thermostat controller with remote probe | 1 pcs | £33.19 |
-| G06 | Steel plate 80 x 10 x 690, wall tops (D-256) | 2 pcs | to price |
+| G06 | Steel plate 80 x 10 x 690, wall tops (D-256) (dropped: D-311) | 0 pcs | £0.00 |
+| F25 | Base extrusion: KJN 90 x 90 H profile, 4 x 500, ends tapped M16 | 4 pcs | £301.15 |
+| F26 | Base end plates: steel flat bar 90 x 20, 2 x 670 | 2 pcs | £55.86 |
+| F27 | Base end plate bolts M16 socket cap (profile ends to end plates) | 8 pcs | £0.00 |
+| F28 | Pocket bottom sheet and pocket sealing | 1 lot | £0.00 |
+| F29 | Rail seat bars: bright flat bar 50 x 20 (Y 2 x 500, X 2 x 850) | 1 lot | £138.96 |
+| F30 | Shop surface grinding of the 4 rail seat bars | 4 pcs | £0.00 |
 
 ## Motion
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| M01 | HGR20 rail set Y: 2 × 550 mm + 4 blocks | 2 pcs | £29.50 |
-| M02 | HGR20 rail set X: 2 × 600 mm + 4 blocks | 2 pcs | £29.50 |
+| M01 | HGR20 rail set Y: 2 × 500 mm + 4 blocks | 2 pcs | £27.43 |
+| M02 | HGR20 rail set X: 2 × 850 mm + 4 blocks | 2 pcs | £34.65 |
 | M03 | HGR20 rail set Z: 2 × 350 mm + 4 blocks | 2 pcs | £24.34 |
 | M04 | HGH20CA carriages (in the rail kits) | 12 pcs | £0.00 |
-| M05 | DFU1605 C5 ballscrew sets X 700 / Y 650 × 2 / Z 350 | 4 pcs | £470.82 |
-| M06 | BK12 + BF12 end supports, C5 (in the screw sets) | 4 sets | £0.00 |
-| M07 | Steel nut housings (in the screw sets) | 4 pcs | £0.00 |
-| M08 | Flexible coupling D25L35, 10 mm to 10 mm (X, Z, Y1, Y2) | 4 pcs | £8.76 |
-| M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 3 sets | £164.05 |
+| M05 | DFU1605 C5 ballscrew sets X 900 / Y 600 / Z 350 | 3 pcs | £390.78 |
+| M06 | BK12 + BF12 end supports, C5 (in the screw sets) | 3 sets | £0.00 |
+| M07 | Steel nut housings (in the screw sets) | 3 pcs | £0.00 |
+| M08 | Flexible coupling D25L35, 10 mm to 10 mm (X, Z, Y) | 3 pcs | £6.56 |
+| M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | £112.71 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
 | M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore (dropped: D-182) | 2 pcs | £0.00 |
@@ -71,9 +77,13 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 
 | ID | Item | Qty | £ |
 |---|---|---|---|
-| G01 | Gantry beam: steel SHS 120 × 120 × 8, 775 long | 1 pcs | to price |
+| G01 | Gantry beam: steel SHS 120 × 120 × 8, 890 long | 1 pcs | £71.60 |
 | G03 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed (dropped: D-242) | 2 pcs | £0.00 |
-| G05 | Roller steel: X roller tube, 2 X roller angles, 2 Y roller tubes, 2 Y roller braces | 1 lot | £78.62 |
+| G05 | Roller steel: X roller tube, 2 X roller angles, 2 Y roller tubes, 2 Y roller braces (dropped: D-305) | 0 lot | £0.00 |
+| G07 | Uprights: steel flat bar 150 x 50, 2 x 325 | 2 pcs | £112.92 |
+| G08 | Dowels for the upright joints (2 per upright) | 4 pcs | £0.00 |
+| G09 | Upright and beam bolts M12 socket cap | 12 pcs | £0.00 |
+| G10 | Upright joint faces: ground or epoxy-shimmed | 1 lot | £0.00 |
 
 ## Spindle
 
@@ -156,14 +166,16 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X03 | Socket cap screws (M5/M6/M8/M10/M12) | 1 lot | £31.33 |
 | X04 | (covered by X03) | 1 set | £0.00 |
 | X11 | Motor plate screws M6 x 16 socket cap | 1 pack | £5.99 |
-| X12 | Y roller spacer screws M6 x 30 socket cap | 1 pack | £6.99 |
+| X12 | Y roller spacer screws M6 x 30 socket cap (dropped: D-305) | 0 pack | £0.00 |
 | X13 | Riser bolts M6 x 25 socket cap | 1 pack | £7.59 |
 | X14 | Riser bolts M6 x 35 socket cap | 1 pack | £7.49 |
-| X15 | Fixture plate cast-in inserts M8 x 24 hex connector nut | 1 pack | £7.52 |
+| X15 | Fixture plate cast-in inserts M8 x 24 hex connector nut (dropped: D-305) | 0 pack | £0.00 |
 | X16 | Fixture plate hold-down screws M8 x 30 socket cap | 1 box | £20.24 |
-| X17 | Insert back plugs M8 x 8 hex head set screw | 1 pack | £10.45 |
+| X17 | Insert back plugs M8 x 8 hex head set screw (dropped: D-305) | 0 pack | £0.00 |
 | X18 | Gantry and roller screws not yet in X03 to X17 | 1 lot | to price |
-| X19 | Plate hold-down screws M6 x 25 countersunk DIN 7991 | 20 pcs | to price |
-| X20 | Rail screws M5 x 16 socket cap | 18 pcs | to price |
+| X19 | Plate hold-down screws M6 x 25 countersunk DIN 7991 (dropped: D-311) | 0 pcs | £0.00 |
+| X20 | Rail screws M5 x 16 socket cap (X and Y rails into the ground bars) | 44 pcs | to price |
 | X21 | Joint screws added in the CAD (D-262) and not covered by X03 to X20 | 1 lot | to price |
-| X22 | Plate jack screws M6 x 20 set screw DIN 913 | 12 pcs | to price |
+| X22 | Plate jack screws M6 x 20 set screw DIN 913 (dropped: D-311) | 0 pcs | £0.00 |
+| X23 | Rail bar fixing: M8 socket cap screws and T-nuts | 1 lot | £0.00 |
+| X24 | Delivery charges for the V4 frame steel and extrusion | 1 lot | £0.00 |
