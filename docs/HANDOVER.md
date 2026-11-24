@@ -6,6 +6,17 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (25th session): V4 plan Tasks 3 to 5 done: BOM, Fusion base and Y, uprights, beam, X and Z (D-312 to D-314); model unsaved
+- **Task 3 (BOM):** `docs/bom.csv` for V4: v3-only lines dropped, V4 lines added. Phase 1 **£4,416.08, over £4,200**, and a lower bound: 14 lines unpriced (grinding F30, machining X25, bellows F31/F33, skirt F32, dowels, bolts, T-nuts, delivery). Owner: "Go over budget" for now, decide when the prices are in. Cheaper option on record: 2 x 4.66 kg Ampreg instead of the 22.68 kg kit (saves £145.61).
+- **Task 4 (Fusion: base, Y, table):** tray B (540 in X, 670 in Y), rail bars 670, Y rails 500, one Y screw with rear motor, bellows and a table drip skirt. Owner: no carrier plate (D-313). Docs: `docs/v4-model.md`.
+- **Task 5 (uprights, beam, X, Z):** flat-bar uprights at X ±270, beam X -350 to 540 with EG core and end dams, X rails 120 apart on one ground front plate 20 x 160 x 890 (D-312, Claude's call, owner no preference; about 2.4 x the roll stiffness of rails 70 apart), BK12/BF12 on ground pads, X bellows, v3 Z and spindle copied in. `tools/v4_sizes.py` updated: x_travel 620, base_width 640. Checks clean (nose 25/175, corners reached, carriage 19.6 clear of the uprights, longest tool clear).
+- **Wheel (owner, D-314):** axis along X, on the right upright. Not modelled yet.
+- **Fusion:** the V4 design is open as **"Untitled", not saved**. Type_0_v3 untouched. Reviews and fix rounds: `.superpowers/sdd/2026-11-24-v4-fixed-gantry/` (local, gitignored).
+
+**Left:** owner saves "Untitled" as `Type_0_v4` (CNC mill project); plan Task 6 (wheel on the right upright, D-304 disc, sweep, tool crossing, enclosure size) and Task 7 (pour plan, wave 1 lengths: X travel 620, one Y set, plate and pads); prices for the 14 pending lines; minor review items in the SDD ledger (stale construction sketches, price-check-v4.md F29 text, bellows closing ratios 1/7 to 1/15).
+
+**Exact next step:** the owner saves the Fusion design as `Type_0_v4`. Then a new session runs plan Task 6 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-314 and `docs/v4-model.md`, then Task 7.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (24th session): V4 started: fixed gantry, moving table (D-305 to D-307); design doc written, not approved
 - **Why:** outside feedback on v3: the front ATC wheel is in the way; rails want machinable faces; a hollow beam rings; tools better outside the frame on an extended gantry.
 - **Owner (Q&A):** fixed gantry, table moves in Y on rails on top of the base; base bolted aluminium extrusion with voids filled with EG; steel SHS 120 x 120 x 8 beam; steel uprights bolted to the base sides; v3's indexing wheel outside the frame on the right (+X), one pickup (about +200 mm X); enclosure goes round the wheel.
@@ -19,17 +30,6 @@
 **Left:** owner's shop grinding price for the 50 x 20 bars; plan Tasks 3 to 7. The wave 1 order lengths must be redone before 4 Jan 2027.
 
 **Exact next step:** a new session runs plan Task 3 (V4 BOM and budget) from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md`, using D-308 to D-311 and `docs/v4-frame-options.md`.
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (23rd session): ATC carrier becomes a flat 6 mm disc on a longer hub, clips kept, column floor removed (D-304); docs only, not modelled
-- **Owner:** "ATC needs a better solution than standoffs" and the displacement must leave enough room to engage and disengage the clips. The column block floor "need not really exist". Q&A: "Flat disc on a longer hub", "Keep outlines, cheek full height", "clips, the force is not going to be an issue". A fixed fence behind the holders (no clips) was drawn for the owner and declined.
-- **No Fusion connection this session**, so nothing was modelled. `Type_0_v3` still has the D-303 carrier and the column floor.
-- **Check** (`tools/atc_carrier_stiffness.py`, hand estimate): a push along Y at the pickup fork, per 100 N: D-303 about 9.4 mm (3 mm disc 7.0, FK12 tilt 2.0, stub 0.35, standoffs under 0.01). Flat 6 mm disc on the hub: about 2.6 mm, now mostly the FK12 tilt (range 0.7 to 4.0; its stiffness is not published). Engage: the Y stop leaves 3 past the pickup, so the give at the snap force must be less than the clip's throat-to-seat distance and under 3. With 1 mm allowed, the clip limit is about 40 N (23 to 85 N). Disengage: 30 stroke, ample.
-- **D-304 (to model):** disc 5083 6 mm flat at Y -118 to -112, apothem about 150, Ø40 centre hole, 8 x M4 at r 41.75 into the hub; hub 31 longer forward (inside r 51), deeper counterbores for the hub-to-stub screws; forks get a foot on the disc's rear face (2 x M4 axial), clip mouth at Y -85 as now; standoffs, 16 standoff screws, 12 fork-to-tab screws and the bent carrier removed. Column block: floor Z -75 to -67 removed, outlines kept, cheek full height.
-
-**Left:** model D-304 (Remove features, not body deletes; lesson in the 21st entry, now in `docs/handover-archive.md`); check the disc rear face against the real ISO20 holder flange; the owner's clip shape (arm spread against the neighbours at 30 deg); clash check; flat pattern no longer needed (flat disc: a DXF of the outline). Bench: FK12 tilt (50 N along Y at a fork, dial at the rim). Then task 6 (sweep).
-
-**Exact next step:** the owner saves `Type_0_v3`. Then a session with the Fusion MCP reads this entry and D-304, models it, runs the clash check, and runs plan task 6.
-
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
