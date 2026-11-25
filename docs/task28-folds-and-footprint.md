@@ -54,7 +54,9 @@ How the v3 + rack row was made: v3's Y reach is 385, so 660 of rack along Y need
 - **But it is more floor, not less**, and it goes back to the cast tub and the long Y that V4 left (D-305 to D-307). V4 + rack along X stays at about +480 X (V4 design spec).
 - If floor per work matters more than total floor, the question is a V5, not a change to V4.
 
-## Questions for the owner
+## Answered (25 Nov): 1 fold, stub shaft (D-325); 2 fold X (D-326); 3 keep V4, frozen (D-324)
+
+## Questions for the owner (answered)
 1. Z fold: go on with it (top about 110 lower)? If yes, (a) stub shaft in the HM12 or (b) longer screw end?
 2. X fold: worth a motor plate again (against D-320), for about 105 of X?
 3. Footprint: keep V4 as it is, or look at a moving-gantry V5 with a straight rack?
