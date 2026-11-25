@@ -1,0 +1,55 @@
+# Task 29: a quote-ready design before wave 1 (owner's goal, 25 Nov 2026)
+
+**Goal (owner):** before wave 1 (4 Jan 2027), the design is fully defined, can be made and can be put together, so machine shops can quote the made-to-order parts.
+
+**Done means:** one RFQ pack a shop can price without asking questions: per part a STEP and a PDF drawing (material, stock, quantity, holes and threads, the few tolerances that matter, finish), plus one cover sheet listing every part.
+
+**Read only:** this file, `docs/v4-model.md`, `docs/task28-folds-and-footprint.md` (the 3 open questions).
+
+## Where the model stands (read from `Type_0_v4`, timeline 194, 25 Nov)
+
+### Made-to-order parts in the model (wave 1 candidates)
+| # | Part | Qty | Material | Likely process | State in the model |
+|---|---|---|---|---|---|
+| 1 | Base end plate 670 x 90 x 20 | 2 | steel | saw, drill, tap | real |
+| 2 | Base profile 90 x 90 x 500 | 4 | aluminium extrusion | supplier cut and tap | real |
+| 3 | Y rail seat bar 50 x 20 x 670 | 2 | steel | surface grind, drill, tap | real |
+| 4 | Table plate 460 x 330 x 25 | 1 | 6082 | CNC mill | real; tapped grid / slots not defined |
+| 5 | Upright 50 x 150 x 325 | 2 | steel flat bar | mill, drill, tap, dowel holes | real |
+| 6 | Beam SHS 120 x 120 x 8 x 890 | 1 | steel | saw, drill, tap | real |
+| 7 | X rail front plate 160 x 20 x 890 | 1 | steel | surface grind, drill, tap | real |
+| 8 | X BK12 / BF12 pads 50 x 80 x 20 | 2 | steel | grind | **out of date: D-320 replaces the X BK12 with an HM12-60-V on a pad** |
+| 9 | X nut bracket 150 x 145 x 20 | 1 | 6082 | CNC mill | **envelope** |
+| 10 | X motor bracket 10 | 1 | — | — | **envelope, dropped by D-320, still in the model** |
+| 11 | Beam end dam 10 | 1–2 | steel | laser | **envelope** |
+| 12 | Y motor plate 10 | 1 | — | laser / mill | **envelope** |
+| 13 | Nut housing spacers 5 | 2 | — | laser | real, material not set |
+| 14 | Z fixed plate 150 x 442 x 20 | 1 | 6082 | CNC mill | from v3, check holes against V4 |
+| 15 | Z moving plate 150 x 200 x 20 | 1 | 6082 | CNC mill | from v3 |
+| 16 | Z risers 25 x 15 x 350 | 2 | 6082 | mill | from v3 |
+| 17 | Rear shear plate 10 x 200 x 445 | 2 | steel | laser | real (D-323) |
+| 18 | Beam rear spacer 80 x 25 x 200 | 2 | bright steel | saw, drill, countersink | real (D-323) |
+| 19 | Drip skirts | 2 | 2 mm sheet | laser, bend | envelope |
+| — | ATC hub block, stub shaft, fork disc (Phase 2) | — | — | — | leave out of the wave 1 RFQ unless the owner says |
+
+**Whole model:** every body has the material "Steel", aluminium parts included. Drawings need the right material on each part.
+
+## What is left, in order
+1. **Freeze the layout.** Owner answers the 3 questions in `docs/task28-folds-and-footprint.md` (Z fold, X fold against D-320, V4 or a V5). Nothing below is worth doing until V4 is frozen.
+2. **Finish the model** (task 27 Task 7 and the D-320 change): replace the envelopes (rows 8 to 12, 19) with real parts, model D-320's X HM12-60-V and its pad, set the material of every body, and give every hole a fastener (or a line in `bom.csv`). Clash check at all axis ends.
+3. **Assembly check.** Write the order the parts go together in, with the key for every screw (the D-215 lesson: tie rods and nuts can block keys). Include when the beam is filled with EG (D-310) against when its tapped holes and the D-323 spacer screws go in.
+4. **Make-ability check, part by part.** Stock size from a real supplier list, which faces need grinding or milling and which stay as rolled, tolerances only where they matter (rail seats, dowel holes H7, bearing seats), through or tapped, thread depth. Split the parts by process (laser, saw and drill, CNC mill, grind) because that decides which shops to ask.
+5. **Drawings and STEP.** One Fusion drawing and one STEP per part, part numbers matching `bom.csv`, quantity and material in the title block. Then the cover sheet.
+6. **Send for quotes** (owner). Shops and how many to ask: owner's call.
+
+## Timing
+Machined parts typically take a few weeks after an order, so the pack should go out around mid-December for parts to arrive near wave 1. Not confirmed with any shop.
+
+## Budget warning
+Phase 1 is already **£359.80 over** (£4,559.80, 25 Nov) and most made-to-order parts above are **not priced**. The quotes will add to that. The owner may want to decide which parts they make themselves before the RFQ goes out.
+
+## Questions for the owner (not decided)
+- Is V4 frozen once the 3 task 28 questions are answered?
+- Which parts go to a shop, and which do you make or cut yourself?
+- ATC (Phase 2) parts in this RFQ, or later?
+- One shop for everything, or split by process?
