@@ -5,10 +5,10 @@ The owner posted a V4 render (fixed gantry, moving table, ATC wheel on the right
 ## 1. Footprint: fixed gantry against moving gantry (MaxCahill)
 > "compare the footprint vs moving gantry ... more bed and still fit 12 tools with them laid out in a line ... no rotary to manage. but fixed will often be more rigid, just needs more footprint per bed area"
 
-- V4 now: work 430 x 250 (X travel 620, of which 190 is only to reach the wheel). Envelope about **1,102 x 805 x 978** (`docs/v4-model.md`). That is about 0.88 m² of floor for about 0.11 m² of work.
+- V4 now: work 430 x 250 (X travel 620, of which 190 is only to reach the wheel). Envelope about **1,058 x 805 x 978** (`docs/v4-model.md`, after D-317). That is about 0.85 m² of floor for about 0.11 m² of work.
 - A straight rack was checked in the V4 design (`docs/superpowers/specs/2026-11-24-v4-fixed-gantry-design.md`, "Approaches"): about **+480 mm of X** on the fixed gantry, long X screw that whips. A rack on a table wing holds only 4 to 5 tools.
 - On a moving gantry the rack would lie along the bed (Y), not add X: that is Max's point. But v3 (moving gantry) was left for other reasons: front wheel in the way, rear ATC failed (D-288), cast tub (D-305 to D-307).
-- **Fair point, not new.** It is the main cost of V4. A side-by-side footprint (v3 + rack along Y against V4 + wheel) is not drawn yet.
+- **Fair point, not new.** It is the main cost of V4. Side-by-side footprint drawn 25 Nov: `docs/task28-folds-and-footprint.md`.
 
 ## 2. Belt-fold the Z motor (MaxCahill)
 > "timing-belt-tucking the z motor ... can cut the headroom needed a lot"
@@ -73,7 +73,7 @@ Hand estimate of the joints as drawn (contact face taken as a short block, E·I/
 - These need a look in the model (room beside the table, ATC on the right) before choosing. Not modelled; not priced.
 
 ### Rear shear plates (D-323, modelled 25 Nov)
-Owner chose "One plate, foot + top". The upright's rear face and the tray's rear profile face are both at Y 335; the beam's rear face is at Y 310. So each side gets one 10 mm steel plate (X ±120 to ±320, Z -165 to 280) bolted to the profile (6 x M8 T-nuts), the upright (4 x M10 tapped) and an 80 x 25 spacer on the beam's rear wall (4 x M10). It works as a shear wall across both joints. Modelled in `Type_0_v4`, clash check clean, saved; details in `docs/v4-model.md` (Task 28). Steel £59.76 (G13, G14), screws not priced (G15). Phase 1 £4,538.86.
+Owner chose "One plate, foot + top". The upright's rear face and the tray's rear profile face are both at Y 335; the beam's rear face is at Y 310. So each side gets one 10 mm steel plate (X ±120 to ±320, Z -165 to 280) bolted to the profile (6 x M8 T-nuts), the upright (4 x M10 tapped) and an 80 x 25 spacer on the beam's rear wall (4 x M10). It works as a shear wall across both joints. Modelled in `Type_0_v4`, clash check clean, saved; details in `docs/v4-model.md` (Task 28). Steel £59.76 (G13, G14), screws £20.94 (G15, priced 25 Nov). Phase 1 £4,559.80.
 
 Stiffness, rough: the joints now depend on bolt groups in friction, not on the 50-wide edge. A guess of 3e9 to 1e10 N·mm/rad each gives X at the table about 2.1 to 1.8 µm per 100 N (wheel 2.6 to 2.2), against about 3.0 / 3.7 without the plates. Not modelled as a plate in the frame tool; a tap test on the built frame would settle it.
 
@@ -84,6 +84,7 @@ Stiffness, rough: the joints now depend on bolt groups in friction, not on the 5
 
 - **Gussets: check the joint** (done above). Next: owner picks the gusset options to model.
 - **Z fold: belt with margin, the brake stays on the motor (D-322).**
+- Z and X folds sketched and the footprint drawn (25 Nov): `docs/task28-folds-and-footprint.md`, with 3 questions for the owner.
 
 ## Still to ask the owner
 - Ribs: drop them, or turn them into gussets down to the tray (needs a joint check)?

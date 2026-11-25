@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1300" viewBox="-650 -1100 2750 3250" font-family="sans-serif" font-size="14">
+<rect x="-10000" y="-10000" width="20000" height="20000" fill="white"/>
+<text x="0" y="-1000" font-size="40" text-anchor="middle" dominant-baseline="middle" fill="#000">V4 + wheel (model)</text>
+<rect x="-270" y="-335" width="540" height="670" fill="#ddd" fill-opacity="0.8" stroke="#333"/>
+<text x="0.0" y="-0.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">base</text>
+<rect x="-350" y="-310" width="900" height="120" fill="#bbb" fill-opacity="0.8" stroke="#333"/>
+<text x="100.0" y="-250.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">beam</text>
+<rect x="-230" y="-315" width="460" height="630" fill="#eef" fill-opacity="0.8" stroke="#333"/>
+<rect x="380" y="-60" width="55" height="120" fill="#fc9" fill-opacity="0.8" stroke="#333"/>
+<text x="407.5" y="-0.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">wheel</text>
+<rect x="-100" y="-470" width="200" height="135" fill="#fbb" fill-opacity="0.8" stroke="#333"/>
+<text x="0.0" y="-402.5" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">Y motors</text>
+<rect x="-508" y="-470" width="1058" height="805" fill="none" fill-opacity="1.0" stroke="#c00" stroke-dasharray="6 4"/>
+<rect x="-215" y="-125" width="430" height="250" fill="#8c8" fill-opacity="0.5" stroke="#333"/>
+<text x="0.0" y="-0.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">work</text>
+<text x="0" y="380" font-size="32" text-anchor="middle" dominant-baseline="middle" fill="#000">1058 x 805 = 0.85 m2 floor</text>
+<text x="0" y="425" font-size="32" text-anchor="middle" dominant-baseline="middle" fill="#000">work 0.11 m2, floor / work 7.9</text>
+<text x="0" y="470" font-size="28" text-anchor="middle" dominant-baseline="middle" fill="#000">X motor inline at X -508 (old bracket)</text>
+<text x="1400" y="-1000" font-size="40" text-anchor="middle" dominant-baseline="middle" fill="#000">V4 + wheel, X folded</text>
+<rect x="1130" y="-335" width="540" height="670" fill="#ddd" fill-opacity="0.8" stroke="#333"/>
+<text x="1400.0" y="-0.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">base</text>
+<rect x="1050" y="-310" width="900" height="120" fill="#bbb" fill-opacity="0.8" stroke="#333"/>
+<text x="1500.0" y="-250.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">beam</text>
+<rect x="1170" y="-315" width="460" height="630" fill="#eef" fill-opacity="0.8" stroke="#333"/>
+<rect x="1780" y="-60" width="55" height="120" fill="#fc9" fill-opacity="0.8" stroke="#333"/>
+<text x="1807.5" y="-0.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">wheel</text>
+<rect x="1300" y="-470" width="200" height="135" fill="#fbb" fill-opacity="0.8" stroke="#333"/>
+<text x="1400.0" y="-402.5" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">Y motors</text>
+<rect x="970" y="-470" width="980" height="805" fill="none" fill-opacity="1.0" stroke="#c00" stroke-dasharray="6 4"/>
+<rect x="1185" y="-125" width="430" height="250" fill="#8c8" fill-opacity="0.5" stroke="#333"/>
+<text x="1400.0" y="-0.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">work</text>
+<text x="1400" y="380" font-size="32" text-anchor="middle" dominant-baseline="middle" fill="#000">980 x 805 = 0.79 m2 floor</text>
+<text x="1400" y="425" font-size="32" text-anchor="middle" dominant-baseline="middle" fill="#000">work 0.11 m2, floor / work 7.3</text>
+<text x="1400" y="470" font-size="28" text-anchor="middle" dominant-baseline="middle" fill="#000">X min about -430</text>
+<text x="0" y="700" font-size="40" text-anchor="middle" dominant-baseline="middle" fill="#000">v3 + wheel (model)</text>
+<rect x="-390" y="1047" width="780" height="690" fill="#ddd" fill-opacity="0.8" stroke="#333"/>
+<text x="0.0" y="1392.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">EG tub</text>
+<rect x="-388" y="1135" width="775" height="120" fill="#bbb" fill-opacity="0.8" stroke="#333"/>
+<text x="-0.5" y="1195.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">gantry</text>
+<rect x="-484" y="925" width="165" height="196" fill="#fbb" fill-opacity="0.8" stroke="#333"/>
+<text x="-401.5" y="1023.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">Y mot.</text>
+<rect x="319" y="925" width="165" height="196" fill="#fbb" fill-opacity="0.8" stroke="#333"/>
+<text x="401.5" y="1023.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">Y mot.</text>
+<rect x="58" y="1737" width="284" height="119" fill="#fc9" fill-opacity="0.8" stroke="#333"/>
+<text x="200.0" y="1796.5" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">wheel</text>
+<rect x="-484" y="925" width="999" height="931" fill="none" fill-opacity="1.0" stroke="#c00" stroke-dasharray="6 4"/>
+<rect x="-200" y="1450" width="400" height="250" fill="#8c8" fill-opacity="0.5" stroke="#333"/>
+<text x="0.0" y="1575.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">work</text>
+<text x="0" y="2080" font-size="32" text-anchor="middle" dominant-baseline="middle" fill="#000">999 x 931 = 0.93 m2 floor</text>
+<text x="0" y="2125" font-size="32" text-anchor="middle" dominant-baseline="middle" fill="#000">work 0.10 m2, floor / work 9.3</text>
+<text x="0" y="2170" font-size="28" text-anchor="middle" dominant-baseline="middle" fill="#000">moving gantry, front wheel</text>
+<text x="1760" y="1370" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">rack</text>
+<text x="1400" y="700" font-size="40" text-anchor="middle" dominant-baseline="middle" fill="#000">v3 + 12-tool rack (estimate)</text>
+<rect x="1010" y="772" width="840" height="965" fill="#ddd" fill-opacity="0.8" stroke="#333"/>
+<text x="1430.0" y="1254.5" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">tub +275 Y, +60 X</text>
+<rect x="1012" y="860" width="835" height="120" fill="#bbb" fill-opacity="0.8" stroke="#333"/>
+<text x="1429.5" y="920.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">gantry</text>
+<rect x="916" y="650" width="165" height="196" fill="#fbb" fill-opacity="0.8" stroke="#333"/>
+<text x="998.5" y="748.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">Y mot.</text>
+<rect x="1779" y="650" width="165" height="196" fill="#fbb" fill-opacity="0.8" stroke="#333"/>
+<text x="1861.5" y="748.0" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">Y mot.</text>
+<rect x="1730" y="1040" width="60" height="660" fill="#fc9" fill-opacity="0.8" stroke="#333"/>
+<rect x="916" y="650" width="1059" height="1087" fill="none" fill-opacity="1.0" stroke="#c00" stroke-dasharray="6 4"/>
+<rect x="1200" y="1175" width="400" height="525" fill="#8c8" fill-opacity="0.5" stroke="#333"/>
+<text x="1400.0" y="1437.5" font-size="24" text-anchor="middle" dominant-baseline="middle" fill="#000">work</text>
+<text x="1400" y="2080" font-size="32" text-anchor="middle" dominant-baseline="middle" fill="#000">1059 x 1087 = 1.15 m2 floor</text>
+<text x="1400" y="2125" font-size="32" text-anchor="middle" dominant-baseline="middle" fill="#000">work 0.21 m2, floor / work 5.5</text>
+<text x="1400" y="2170" font-size="28" text-anchor="middle" dominant-baseline="middle" fill="#000">12 at 60 pitch along Y, on the +X wall</text>
+</svg>
