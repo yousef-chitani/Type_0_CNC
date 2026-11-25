@@ -44,7 +44,7 @@ Generated from `docs/bom.csv` by `tools/gen_wave1_sheet.py`: edit the BOM, not t
 | ☐ | S04 | Screened 4-core cable 16 AWG, 4 × 5 m (spindle + motors) | 4 × 5 m | £19.03 each inc VAT, free shipping (AliExpress) | 76.12 | 2026-11-08 | [page](https://www.aliexpress.com/item/32971008305.html) |  |
 | ☐ | S08 | G-Penny 2.2 kW ER20 water-cooled spindle kit | 1 pcs | £217.39 + £100.77 shipping (owner, AliExpress), delivery 8 Jan | 318.16 | 2026-11-07 | [page](https://www.aliexpress.com/item/32253760001.html) | Re-check the price (£217.39 + shipping); add to the basket (open question 2) |
 
-## LiMo (DDP sea, code 10OFF): £496.79
+## LiMo (DDP sea, code 10OFF): £509.82
 
 | ✓ | ID | Item | Qty | Price as listed (option) | £ | Seen | Link | Check |
 |---|---|---|---|---|---|---|---|---|
@@ -53,7 +53,7 @@ Generated from `docs/bom.csv` by `tools/gen_wave1_sheet.py`: edit the BOM, not t
 | ☐ | M03 | HGR20 rail set Z: 2 × 350 mm + 4 blocks | 2 pcs | $35.76 less 10 % (LiMo, owner basket) | 24.34 | 2026-11-17 | [page](https://limobearing.com/) |  |
 | ☐ | M05 | DFU1605 C5 ballscrew sets X 900 / Y 600 / Z 350 | 3 pcs | $177.57 (900) + $141.57 (600) + $111.57 (350) less 10 % + DDP sea $129 (Checkout7 shipping, NOT re-checked) (LiMo C5 set page read 24 Nov 2026) | 390.78 | 2026-11-24 | [page](https://limobearing.com/) | Standard BK12 ends on X, Y and Z, no drawing (D-157, D-182); HGH20CA 600 price and a corrected checkout (Checkout6 still has HGH15CA 600 × 2 and D25L35 × 1); LiMo 6a answers; steel housing size; code 10OFF |
 | ☐ | M08 | Flexible coupling D25L35, 10 mm to 10 mm (X, Z, Y) | 3 pcs | $3.21 each less 10 % (LiMo, owner basket) | 6.56 | 2026-11-24 | [page](https://limobearing.com/) | Basket must have 4 (D-182) |
-| ☐ | M13 | Z motor mount and fixed bearing HM12-60-V (replaces the Z BK12) | 1 pcs | $19.14 less 10 % (LiMo HM12-60 C7, owner basket) | 13.03 | 2026-11-17 | [page](https://limobearing.com/) | Basket had HM10-60: must be HM12-60. Holes 49.5 mm: LiMo to drill to 50 (6a) |
+| ☐ | M13 | Z and X motor mounts and fixed bearings HM12-60-V (replace the Z and X BK12) | 2 pcs | 2 x $19.14 less 10 % (LiMo HM12-60 C7, owner basket 17 Nov 2026) | 26.06 | 2026-11-17 | [page](https://limobearing.com/) | Basket had HM10-60: must be HM12-60. Holes 49.5 mm: LiMo to drill to 50 (6a) |
 
 ## Other: £51.77
 
@@ -61,4 +61,4 @@ Generated from `docs/bom.csv` by `tools/gen_wave1_sheet.py`: edit the BOM, not t
 |---|---|---|---|---|---|---|---|---|
 | ☐ | S05 | Spindle cooling loop (DIY) | 1 pcs | 20 L bucket £10.00 (owner, Amazon, 15 Nov 2026) + barbs £2.38, clamps £17.89 + flow switch £12.51 (AliExpress) + 8 mm ID hose £8.99 (B&Q marketplace, free delivery) | 51.77 | 2026-11-15 | [page](https://www.amazon.co.uk/gp/product/B07NY2GQ1P) | Remove the 6 mm ID tube from the basket (open question 2). Flow switch contact rating not stated. Hose is from another shop (link in bom.csv notes) |
 
-**Wave 1 total: £1,969.02** (29 lines, 0 not priced; phase1-schedule.md says £1,969.02)
+**Wave 1 total: £1,982.05** (29 lines, 0 not priced; phase1-schedule.md says £1,982.05)

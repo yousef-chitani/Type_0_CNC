@@ -2,6 +2,16 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (28th session): ATC hub replaced by an off-the-shelf SHF12, fork disc a laser-cut spoked wheel (D-318); bellows hidden; price-check list; model not saved
+- **Owner:** "The ATC hub need not be so substantial nor octagonal and the fork disk can be laser cut sheet metal spoked wheel"; "hide the bellows and list all the components which need a price check". Q&A: hub "something off the shelf", "6 spokes, 6 mm 5083", "Flag on disc".
+- **Modelled in `Type_0_v4` (not saved), D-318:** the 8-flat hub is gone. An SHF12 shaft support (envelope: flange 47 sq x 7, body Ø25, bore 12) clamps on the stub end and bolts to the disc. The disc is a 6 mm 5083 spoked wheel: 12-gon rim, 6 spokes 30 wide, inner ring r 56, about 0.71 kg. The stub is redone with D-317 fault fix 3 and has no flange, so fault 1 is gone. The index flag is an M5 head on the disc at r 40; the LJ12A3 is at r 40 in a printed PETG sleeve on the wall. Clash check clean at wheel turns 0 to 30°; timeline healthy. The 4 bellows envelopes are hidden (not deleted). Details: `docs/v4-model.md`, last section.
+- **BOM:** A06 is now the hub block only; A09 updated; new A10 (SHF12) and A11 (laser-cut disc), both unpriced. Phase 1 unchanged.
+- **Price-check list:** `docs/price-check-task-18.md`: all lines still needing a price: the ATC lines (A03, A06, A08, A10, A11, screws), 15 Phase 1 lines with no price, and 13 with a partial or stale price.
+
+**Left:** owner saves `Type_0_v4`; choose the actual SHF12 and check its drawing against the envelope; a DXF of the disc for a laser-cut quote (24 x M4 fork-foot holes from the fork model, 4 x M5, flag M5, R 6 window corners); D-317 faults 2 (separate motor plate) and 4 (M8 drawing note); the price checks in task 18; Task 7.
+
+**Exact next step:** the owner saves `Type_0_v4` and runs `docs/price-check-task-18.md` (or picks the SHF12). A new session models D-317 fault 2 (motor plate), then runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (27th session): ATC mount reworked: inboard hub block on the end plate (D-317); model not saved
 - **Owner:** "the ATC bracket is a ridiculous shape, come up with something more elegant". Q&A: "Inboard hub (Recommended)" (over a hanger from the beam end and a tidied upright bracket), then "Approve, model it".
 - **Why the old one was a dog-leg:** the right upright stands behind the wheel (Y 185+), so the bracket had to go round the 197 sweep to the outboard drive. The end plate X+ is right behind the wheel axis.

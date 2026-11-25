@@ -4,6 +4,12 @@ Do these in any order. When you have results, open a new session and paste
 them in. Everything mentioned is in the docs folder of the repo.
 
 
+=== NEW 25 NOV: X MOTOR ON AN HM12-60 (D-320) ===
+- Add a second HM12-60-V to the LiMo basket (as Z), and ask for the X
+  screw 900 with the Z-style 10 mm end 21.5 long. Ask whether the X and Z
+  screw sets can come without the BK12.
+- In the same LiMo session: is there an SHF12 (A10)? Simply Bearings has none.
+
 === NEW 25 NOV: PRICE CHECK 18 (docs/price-check-task-18.md, Results) ===
 - G08 dowels: A1 stainless accepted (D-319). Done.
 - Confirm screw lengths: F27 M16 x 40, G09 M12 x 60 / M12 x 35, X23 M8 x 30.

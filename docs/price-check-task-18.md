@@ -108,3 +108,20 @@ X20 £5.06, F27 £12.83 (screws + washers), G09 £11.41, X23 £11.39 (16 T-nuts 
 | X24, G01 delivery | shown only at checkout |
 | F01, F07, X13, X14 | owner decisions (smaller pack; may drop in V4) |
 | F32 | sheet and bending: no supplier chosen |
+
+## Results, second pass (25 Nov 2026, curl only)
+Owner: "this part is silly, just use an integrated mount dont do this bracket nonsense on X"; "do the rest of the price check".
+
+### X motor bracket dropped (D-320)
+- The X motor bracket envelope (beam end plate and -X EG dam, foot, motor plate) goes. **M13 is now 2 x HM12-60-V** (Z and X), £26.06 (+£13.03; 17 Nov LiMo basket price, LiMo still 403 to curl). The X screw end becomes the Z-style 10 x 21.5 (M05); the X BK12 is not used (M06).
+- **New G12:** beam end cap plates (EG dams) from K I Metals mild steel flat bar 120 x 5 (product 150066), one 240 length cut into 2 x 120: £11.58/m ex x 0.24 = £2.78 ex / **£3.34 inc** (Store API; page opened: cut to length, minimum 50).
+- **Phase 1 priced total £4,479.10** (+£16.37), £279.10 over the £4,200 budget. Wave 1 £1,982.05.
+
+### Retried, still blocked
+| Line | Result |
+|---|---|
+| A06, M12 (Aluminium Warehouse) | 429 on every `/products/<handle>.js`, 5 tries 8 s apart and one more later |
+| A10 SHF12 | Simply Bearings answers curl now, but has no SHF12 (searches "SHF12", "SHF", "shaft support": only Rexroth and INA trestles over £97). Ooznest 403. Owner: LiMo or AliExpress |
+| A03, M09 (StepperOnline) | captcha on the first page; not passed |
+
+Nothing else in the list can be priced by curl: the rest are LiMo, AliExpress, shop quotes, checkout-only delivery, or wait for the V4 model (X18, X21) or an owner decision.

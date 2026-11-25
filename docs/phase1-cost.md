@@ -1,20 +1,20 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,462.73** (budget £4,200, D-127). Not priced yet: X18, X21, F28, F30, F31, F32, F33, G10, X24, X25. No eBay.
+**Phase 1 priced total: £4,479.10** (budget £4,200, D-127). Not priced yet: X18, X21, F28, F30, F31, F32, F33, G10, X24, X25. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
 | Subsystem | £ |
 |---|---|
 | Frame | £1,206.67 |
-| Motion | £1,089.53 |
-| Gantry | £272.31 |
+| Motion | £1,102.56 |
+| Gantry | £275.65 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
 | Fixings | £89.09 |
-| **Total** | **£4,462.73** |
+| **Total** | **£4,479.10** |
 
 ## Frame
 
@@ -74,7 +74,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M17 | Ø10 flange bearing (X screw outboard support) (dropped: D-182) | 1 pcs | £0.00 |
 | M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
 | M12 | Z plates, Z rail risers, X nut-housing spacer 6082 | 1 lot | £165.26 |
-| M13 | Z motor mount and fixed bearing HM12-60-V (replaces the Z BK12) | 1 pcs | £13.03 |
+| M13 | Z and X motor mounts and fixed bearings HM12-60-V (replace the Z and X BK12) | 2 pcs | £26.06 |
 
 ## Gantry
 
@@ -88,6 +88,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | G09 | Upright and beam bolts M12 socket cap | 12 pcs | £11.41 |
 | G10 | Upright joint faces: ground or epoxy-shimmed | 1 lot | to price |
 | G11 | X rail front plate: steel flat bar 160 x 20, one length 950 (plate 890 + 2 pads) | 1 pcs | £70.42 |
+| G12 | Beam end cap plates (EG dams): steel flat bar 120 x 5, 2 x 120 | 2 pcs | £3.34 |
 
 ## Spindle
 
