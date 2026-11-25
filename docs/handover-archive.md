@@ -2,6 +2,18 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (26th session): V4 plan Task 6 done: ATC wheel on the right side (D-315, D-316); wheel not saved
+- **Owner saved the design as `Type_0_v4`** before this session's changes.
+- **D-315 (owner):** the EG fill is not structural; a lean mix packed into the voids. Task 7's pour plan shrinks to quantities and fill order. The cheaper resin option (saves £145.61) is open again; BOM not changed.
+- **D-316 (owner, Q&A):** pickup at spindle X 402, Y 0, nose Z 70 (lift to 120); wheel centre Z -82, so the wheel reaches Z -278, 110 below the base: it hangs past the bench edge (X 330 or less) or the machine goes on risers. Drive turned round to the outboard side (copied as v3 it landed in the end plate and table edge). Longest tool 100 below the nose.
+- **Modelled:** component `ATC Wheel (Phase 2)`, 59 bodies copied from v3 (forks trimmed to a foot on the disc, holders, tools, hub 31 longer, FK12, stub, coupling, motor, column without ear and floor) plus the D-304 disc (6 mm 5083, no windows drawn) and a 6082 mount bracket envelope on the right upright's outer face. Checks clean: frame, carriage engaged, lifted (wheel turned 0 to 30°), withdrawn with a Ø20 x 100 tool; 184 timeline items healthy. Details: `docs/v4-model.md` (Task 6). Hand check: `tools/v4_wheel_fit.py`.
+- **Machine envelope:** about 1,102 x 805 x 978 (X -508 to 594, Y -335 to 470, Z -278 to 700).
+- A heavy read-only clash script locked Fusion for about 10 minutes; keep Fusion checks to bounding-box-filtered, few-pose scripts.
+
+**Left:** owner saves `Type_0_v4` again (the wheel is unsaved); index flag and sensor not placed; bracket bolts; BOM A-lines for the disc, longer hub and bracket; Task 7 (fill quantities per D-315, wave 1 lengths: X travel 620, one Y set, plate and pads); the 14 unpriced BOM lines.
+
+**Exact next step:** the owner saves `Type_0_v4`. A new session models the 4 D-317 fault fixes (`docs/v4-model.md`, last section), then runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (25th session): V4 plan Tasks 3 to 5 done: BOM, Fusion base and Y, uprights, beam, X and Z (D-312 to D-314); model unsaved
 - **Task 3 (BOM):** `docs/bom.csv` for V4: v3-only lines dropped, V4 lines added. Phase 1 **£4,416.08, over £4,200**, and a lower bound: 14 lines unpriced (grinding F30, machining X25, bellows F31/F33, skirt F32, dowels, bolts, T-nuts, delivery). Owner: "Go over budget" for now, decide when the prices are in. Cheaper option on record: 2 x 4.66 kg Ampreg instead of the 22.68 kg kit (saves £145.61).
 - **Task 4 (Fusion: base, Y, table):** tray B (540 in X, 670 in Y), rail bars 670, Y rails 500, one Y screw with rear motor, bellows and a table drip skirt. Owner: no carrier plate (D-313). Docs: `docs/v4-model.md`.

@@ -341,3 +341,22 @@ The clash check only finds overlaps between modelled bodies. Walking the assembl
 3. **The locknut cannot pass the pulley seat.** The M12 x 1 locknut goes on from the inboard end, so the seat has to be smaller than M12. **Fix:** the stub steps down to Ø8 from X 291 to 349 (the 60T bore is 8, as the old stub's drive end). Thread M12 x 1 X 349 to 357, journal Ø12 X 357 to 380. The stub goes in from the hub side through the FK12. The 60T and the locknut go on in the bay.
 4. **M8 positions (end plate X+, F26, wave 1):** 4 x M8 tapped 15 deep at **(Y -50, Z -95), (Y 95, Z -95), (Y -20, Z -150), (Y 80, Z -150)**. All are below the end plate top (Z -75), 25 or more from the Ø28 M16 pockets at (±45, -120), and 55 apart in Z. The 2 upper heads are reached from the open front of the bay and the rear corner behind the trimmed motor plate; the 2 lower heads from below the floor (Z -125).
 - **Envelope correction:** overall the machine is 44 narrower (X max 594 to 550, the beam end dam). The ATC itself ends 159 further in (X 435).
+
+# Hub and disc simplified (25 Nov 2026, D-318)
+Owner: the hub "need not be so substantial nor octagonal", the disc can be a laser-cut spoked wheel. Modelled in `Type_0_v4`, **not saved**. `ATC Wheel (Phase 2)` is still one base feature, now 49 bodies.
+
+- **Removed (9):** the 8-flat hub, the solid 12-gon disc, the D-317 stub shaft, the 4 hub-to-stub M4 x 40, the hub-face index flag and the old LJ12A3 stand-in.
+- **Added (6, names end in "D-318"):**
+  - `Fork disc 5083 6 mm, laser-cut spoked wheel`: X 429 to 435, 12-gon rim apothem 150 outside and 125 inside, 6 spokes 30 wide at 0, 60 ... 300 deg (behind forks 1, 3, 5, 7, 9, 11), inner ring r 56, centre hole Ø14. Window corners are sharp in the model; R 6 in the DXF. 266 cm3, about 0.71 kg.
+  - `SHF12 shaft support as hub` (envelope): flange 47 square x 7 on the disc rear face (X 422 to 429), body Ø25 X 401 to 422, bore 12. Check it against the bought part (A10).
+  - Stub shaft (fault fix 3 included): Ø8 X 291 to 349, Ø12 (M12 x 1) to 357, journal Ø12 to 380, shoulder Ø16 X 380 to 384, Ø12 to 428. The 60T stand-in still shows a 12 bore (buy bore 8, A08).
+  - Index flag: M5 cap head Ø8.5 x 5 on the disc inner ring rear face at Y -40, Z -82 (r 40), X 424 to 429.
+  - LJ12A3 stand-in at r 40, X 374 to 422 (face 2 from the flag), in a printed PETG sleeve (tube Ø18, X 374 to 411, with a tab to Y -64 for 2 x M3 into the wall). The cable goes back through the wall's old Ø12 hole at r 44.
+- **Bellows hidden:** the 4 bellows envelopes (Y front and rear, X- and X+) are hidden (light bulb off), not deleted.
+- **D-317 faults now:** fault 1 is gone (the stub has no flange). Fault 3 is modelled. Faults 2 (separate motor plate) and 4 (M8 positions, drawing note) are still open.
+
+## Checks (25 Nov 2026, D-318)
+- Timeline: 184 items, all healthy.
+- The 6 new bodies against every solid body in the design, with the turning set (forks, holders, tools, disc, SHF12, flag, stub) turned 0, 10, 20 and 30 deg: no overlaps.
+- Clearances: the sensor body (r 34 to 46) and sleeve (r 31 to 49) against the tool tips (r 56): 7; the SHF12 flange flat (23.5) against the sensor (r 34): 10.
+- Not rerun: the carriage poses. The new parts are inside the old hub and disc envelopes or below Z -58 (the withdrawn tool tip is at Z -30).
