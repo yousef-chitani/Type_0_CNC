@@ -164,7 +164,7 @@ Same unsaved design (`Untitled`; the owner saves it as `Type_0_v4`). `Type_0_v3`
 3. **X screw on the beam top, on the centreline** (Y 250, Z 305 = beam top + 25), the same stack as the Y axis:
    - BK12 at X -321 and BF12 at X 530 (outer face flush with the beam end, 540), both on the beam's top face (hot-rolled: shim or pad).
    - The nut hangs from a 150 x 145 x 20 6082 bracket bolted to the Z fixed plate's back face, on a DSG16H and a 5 spacer. The nut flange (flats 40 AF) clears the beam top by 5 and the bracket by 5.
-   - **The motor is in line at -X, beyond the beam end** (X -508 to -362), on a 10 mm bracket envelope. Its end plate bolts to the beam end and is also the EG dam. The coupling guard is copied from Y.
+   - **The motor is in line at -X, beyond the beam end** (X -508 to -362), on a 10 mm bracket envelope. Its end plate bolts to the beam end and is also the EG dam. *(Superseded by D-320: the bracket goes; a second HM12-60 on the X- pad carries the motor; plain caps close the beam ends.)* The coupling guard is copied from Y.
    - The screw is not covered (no bellows); chips can land on it.
 4. **The uprights stand at Y 185 to 335**, flush with the tray's rear end and 5 behind the beam's front face, so the lower bar overhangs them.
    - The beam sits on their top edges at Z 160. The upright is 325 from the tray bottom (-165), so G07's 2 x 325 is unchanged.
@@ -232,7 +232,7 @@ This section supersedes calls 1, 3 and 4 above where they differ. The review is 
 ### I3. X screw seats and cover
 - **The BK12 and BF12 stand on ground pads**, `X BK12 pad` and `X BF12 pad 50x80x20`, at X -350 to -300 and 490 to 540, Y 210 to 290, Z 280 to 300.
   - The pads are cut from the front plate's stock (one 950 length, G11) and ground with it (F30).
-- **The whole X screw stack is 20 higher** (Move `X screw stack on ground pads (+20)`): screw axis Z 325, nut bracket Z 350 to 370. The X motor bracket was redrawn for the new axis (motor plate Z 285 to 365); its end plate (Z 160 to 295) is the beam's -X EG dam.
+- **The whole X screw stack is 20 higher** (Move `X screw stack on ground pads (+20)`): screw axis Z 325, nut bracket Z 350 to 370. The X motor bracket was redrawn for the new axis (motor plate Z 285 to 365); its end plate (Z 160 to 295) is the beam's -X EG dam. *(Superseded by D-320, not yet modelled.)*
 - **X screw cover:** 2 bellows envelopes, `X screw bellows X-` and `X+`, 60 x 40 with a Ø20 bore. Their lengths follow x_pos: X- runs from the BK12 face to the nut flange, X+ from the nut end to the BF12 face.
   - X- is 63 to 683 long and X+ 45 to 665.
   - **Closed length must be 1/11 (X-) and 1/15 (X+) of open.** That is beyond ordinary bellows; the supplier must confirm, or use a telescopic or strip cover (BOM F33).
