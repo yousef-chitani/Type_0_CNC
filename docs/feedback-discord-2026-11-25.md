@@ -73,7 +73,7 @@ Hand estimate of the joints as drawn (contact face taken as a short block, E·I/
 - These need a look in the model (room beside the table, ATC on the right) before choosing. Not modelled; not priced.
 
 ### Rear shear plates (D-323, modelled 25 Nov)
-Owner chose "One plate, foot + top". The upright's rear face and the tray's rear profile face are both at Y 335; the beam's rear face is at Y 310. So each side gets one 10 mm steel plate (X ±120 to ±320, Z -165 to 280) bolted to the profile (6 x M8 T-nuts), the upright (4 x M10 tapped) and an 80 x 25 spacer on the beam's rear wall (4 x M10). It works as a shear wall across both joints. Modelled in `Type_0_v4`, clash check clean, not saved; details in `docs/v4-model.md` (Task 28). Steel £59.76 (G13, G14), screws not priced (G15). Phase 1 £4,538.86.
+Owner chose "One plate, foot + top". The upright's rear face and the tray's rear profile face are both at Y 335; the beam's rear face is at Y 310. So each side gets one 10 mm steel plate (X ±120 to ±320, Z -165 to 280) bolted to the profile (6 x M8 T-nuts), the upright (4 x M10 tapped) and an 80 x 25 spacer on the beam's rear wall (4 x M10). It works as a shear wall across both joints. Modelled in `Type_0_v4`, clash check clean, saved; details in `docs/v4-model.md` (Task 28). Steel £59.76 (G13, G14), screws not priced (G15). Phase 1 £4,538.86.
 
 Stiffness, rough: the joints now depend on bolt groups in friction, not on the 50-wide edge. A guess of 3e9 to 1e10 N·mm/rad each gives X at the table about 2.1 to 1.8 µm per 100 N (wheel 2.6 to 2.2), against about 3.0 / 3.7 without the plates. Not modelled as a plate in the frame tool; a tap test on the built frame would settle it.
 
