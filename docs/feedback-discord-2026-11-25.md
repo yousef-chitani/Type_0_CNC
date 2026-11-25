@@ -47,11 +47,37 @@ The owner posted a V4 render (fixed gantry, moving table, ATC wheel on the right
 - It is a new architecture: work holding, the table, the ATC, the EG base and the whole V4 model change. Out of scope for Phase 1 unless the owner wants a V5.
 - **Noted only.** For deep features, the V4 answer is air blast or flood coolant (Phase 2).
 
+### Joint check (25 Nov, owner: "Gussets, check joint")
+`tools/v4_joint_sweep.py` puts a rotation spring (about global Y, the X-sway direction) at each upright's **foot** (upright to end plate to tray) and **top** (beam on the upright's top edge). Tray B, U2 upright. µm at the nose per 100 N, EG bonded / ignored:
+
+| Joints (N·mm/rad) | Table X | Table Z | Wheel X | Wheel Z |
+|---|---|---|---|---|
+| both rigid (what the frame tool assumes) | 1.6 / 4.1 | 2.6 / 8.6 | 2.0 / 2.7 | 1.4 / 1.5 |
+| top 1e10, foot rigid | 1.7 / 4.2 | 2.6 / 8.6 | 2.1 / 2.8 | 1.5 / 1.5 |
+| top 1e9, foot rigid | 1.9 / 4.5 | 2.7 / 8.7 | 2.5 / 3.2 | 1.5 / 1.6 |
+| top 1e10, foot 1e10 | 1.8 / 4.3 | 2.6 / 8.7 | 2.2 / 2.9 | 1.5 / 1.5 |
+| top 3e9, foot 3e9 | 2.1 / 4.6 | 2.7 / 8.7 | 2.6 / 3.3 | 1.5 / 1.6 |
+| **top 1e9, foot 1e9 (likely as drawn)** | **3.0 / 5.5** | 2.7 / 8.7 | **3.7 / 4.4** | 1.5 / 1.6 |
+
+Y and Z hardly change; **X does.** With both joints soft the frame is a portal whose corners bend, and X at the nose gets about **twice as soft** as the frame tool says.
+
+Hand estimate of the joints as drawn (contact face taken as a short block, E·I/grip, then 3 to 10 times softer for real contact; good to a factor of about 3):
+- **Top joint:** the beam sits on the upright's 50 x 150 top edge; the 2 M12 beam bolts are on the edge's centreline (X ±295), so they add nothing against rocking in X. Lever in X: only 50. About **1e9 to 3e9**.
+- **Foot joint:** upright on the end plate (150 x 90 face, 4 x M12, stiff), but the end plate then bears on the aluminium profile ends, and its 8 x M16 bolts are all on one row at mid-height (Z -120). About **1e9**, set by the aluminium.
+- So the "likely" row above is the honest one: about **3 µm per 100 N in X at the table, 3.7 at the wheel**, not 1.6 and 2.0.
+
+**What gussets could do:**
+- **Foot: a rear fish plate.** The upright's rear face and the tray's rear profile face are both at Y 335 (the upright is flush with the tray's rear end). One flat steel plate (say 10 x 150 x 300) bolted to both: tapped M8 in the upright's rear face, T-nuts in the rear profile's slots spread along X. No bending in the plate; it takes the moment in its own plane. Rough estimate: doubles to triples the foot joint.
+- **Top: harder.** The beam's rear face (Y 300) is 35 short of the upright's rear face; the front is taken by the X rail plate and the carriage. Options: a corner brace under the beam on the inside (only the 40 gap between the table edge X 230 and the upright X 270, beside the moving table), on the outside (fine on the right, where the beam overhangs 220; only 30 of overhang on the left), or a 35 spacer bar on the beam's rear face plus a fish plate as at the foot.
+- Getting both joints to about 1e10 brings X back to about 1.8 / 2.2 (table / wheel).
+- These need a look in the model (room beside the table, ATC on the right) before choosing. Not modelled; not priced.
+
 ## Owner's answers (25 Nov 2026, D-321)
 - Work up all four: **upright ribs, belt-fold Z motor, belt-fold X motor, footprint comparison.** Task 28.
 - Horizontal layout: **note for later**, no change to V4.
 - Upright ribs: checked above (small gain in the frame model; the joint is the open question).
 
+- **Gussets: check the joint** (done above). Next: owner picks the gusset options to model.
 - **Z fold: belt with margin, the brake stays on the motor (D-322).**
 
 ## Still to ask the owner
