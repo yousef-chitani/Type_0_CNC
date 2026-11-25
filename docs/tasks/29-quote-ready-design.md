@@ -34,7 +34,7 @@
 | 21 | Z stub shaft Ø10 (D-325) | 1 | steel | lathe | **not modelled** |
 | 22 | X motor fold plate on the HM12 (D-326) | 1 | 6082 | CNC mill | **not modelled** |
 | 23 | X stub shaft Ø10, as Z (D-327) | 1 | steel | lathe | **not modelled** |
-| — | ATC hub block, stub shaft, fork disc (Phase 2) | — | — | — | leave out of the wave 1 RFQ unless the owner says |
+| — | ATC hub block, stub shaft, fork disc (Phase 2) | — | — | — | left out of this RFQ (D-328) |
 
 **Whole model:** every body has the material "Steel", aluminium parts included. Drawings need the right material on each part.
 
@@ -56,5 +56,5 @@ Phase 1 is already **£359.80 over** (£4,559.80, 25 Nov) and most made-to-order
 - ~~Is V4 frozen?~~ Yes (D-324).
 - ~~X pulley on a stub shaft as Z?~~ Yes (D-327).
 - Which parts go to a shop, and which do you make or cut yourself?
-- ATC (Phase 2) parts in this RFQ, or later?
+- ~~ATC parts in this RFQ?~~ No, wave 1 only (D-328).
 - One shop for everything, or split by process?
