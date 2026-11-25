@@ -67,13 +67,13 @@ Read from the site's own quantity price calculator (the page calls it; `cgi-bin/
 | G09 | M12 x 60 socket cap, 12.9 BZP | 8 | £6.51 | **£7.81** | lengths are proposals, from the model |
 | G09 | M12 x 35 socket cap, 12.9 BZP | 4 | £3.00 | **£3.60** | |
 | X23 | M8 x 30 socket cap, 12.9 BZP | 16 | £3.76 | **£4.51** | length not set anywhere: M8 x 30 is Claude's proposal (20 bar + T-nut). A2: £5.76 inc |
-| G08 | Dowel Ø10 m6 x 30, DIN 7, **A1 stainless** | 4 | £4.97 | £5.96 | **not chosen**: not hardened. Westfield (the only shop searched) lists only stainless dowels; for hardened, search ISO 8734 / DIN 6325 |
+| G08 | Dowel Ø10 m6 x 30, DIN 7, **A1 stainless** | 4 | £4.97 | **£5.96** | not hardened; **owner accepted it (D-319)** |
 | A06 (ATC) | M8 x 30 socket cap, A2 (block to end plate) | 4 | £2.56 | £3.07 | length is a proposal (20 flange + 15 tapped) |
 | A10 (ATC) | M5 x 12 socket cap, A2 | 10 (min) | £2.16 | £2.59 | 4 needed |
 | A09 (ATC) | M5 x 10 socket cap, A2 (flag) | 10 (min) | £2.50 | £3.00 | 1 needed |
 | A09 (ATC) | M3 x 10 socket cap, A2 (sensor sleeve) | 20 (min) | £2.06 | £2.47 | 2 needed; 4 more for the motor if M3 x 10 fits |
 
-Not priced (no length set): 4 x M4 FK12 to wall, 4 x M3 motor, 24 x M4 fork feet. Phase 1 lines above (X20, F27, G09, X23, G08) (without the dowels) together: £33.81 inc, £28.18 ex, so on their own they pay £3.50 delivery (not in the total); with the ATC screws (£9.28 ex) they still do not reach £40 ex.
+Not priced (no length set): 4 x M4 FK12 to wall, 4 x M3 motor, 24 x M4 fork feet. Phase 1 lines above (X20, F27, G09, X23, G08) together: £39.77 inc, £33.15 ex, so on their own they pay £3.50 delivery (not in the total); with the ATC screws (£9.28 ex) the order reaches £42.43 ex and delivery is free.
 
 ### K I Metals (kimetals.co.uk): product pages read by curl, 25 Nov 2026
 The page prices match the Store API figures used in the BOM (per metre).
@@ -91,7 +91,7 @@ The first page read gave **17HS16-2004S1** (NEMA 17, 42 x 42 x 40, 0.45 Nm, 2 A,
 M8 T-nut KJN530287: £0.36 ex / £0.43 inc each, 3903 in stock (page, 25 Nov 2026). 16 = £6.88 inc.
 
 ### Recorded in `docs/bom.csv` (25 Nov 2026)
-X20 £5.06, F27 £12.83 (screws + washers), G09 £11.41, X23 £11.39 (16 T-nuts + 16 screws, proposed). G08 left unpriced: the stainless dowel is only an option (owner). F26 and G11 confirmed, unchanged. ATC screw prices are in the notes of A06, A09, A10 (Phase 2, not in the total). **Phase 1 priced total: £4,416.08 to £4,456.77 (+£40.69), £256.77 over the £4,200 budget.** Westfield delivery £3.50 is not in it. None of these were priced before, so nothing is "dearer" than an old price.
+X20 £5.06, F27 £12.83 (screws + washers), G09 £11.41, X23 £11.39 (16 T-nuts + 16 screws, proposed). G08 £5.96 (stainless, D-319). F26 and G11 confirmed, unchanged. ATC screw prices are in the notes of A06, A09, A10 (Phase 2, not in the total). **Phase 1 priced total: £4,416.08 to £4,462.73 (+£46.65), £262.73 over the £4,200 budget.** Westfield delivery £3.50 is not in it. None of these were priced before, so nothing is "dearer" than an old price.
 
 ### Not priced, and why
 | Line | Why |

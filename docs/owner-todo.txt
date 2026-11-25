@@ -5,7 +5,7 @@ them in. Everything mentioned is in the docs folder of the repo.
 
 
 === NEW 25 NOV: PRICE CHECK 18 (docs/price-check-task-18.md, Results) ===
-- G08 dowels: only A1 stainless found (4 for 5.96 inc). Accept, or name a hardened one.
+- G08 dowels: A1 stainless accepted (D-319). Done.
 - Confirm screw lengths: F27 M16 x 40, G09 M12 x 60 / M12 x 35, X23 M8 x 30.
 - Westfield Fasteners is a new vendor for all the screws.
 - In your browser: StepperOnline (A03 motor + driver, M09), LiMo (M05, SHF12),
