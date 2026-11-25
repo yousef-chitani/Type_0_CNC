@@ -1,4 +1,4 @@
-# Type 0 CNC: handover (2026-11-24)
+# Type 0 CNC: handover (2026-11-25)
 
 **Branch:** `claude/hopeful-sagan-28twty` on `yousef-chitani/Type_0_CNC` (holds everything from `claude/charming-cori-349jm7` plus the 16 and 17 Nov LiMo sessions). Everything below is committed and pushed. Earlier work: `claude/charming-cori-349jm7`, `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
@@ -9,16 +9,19 @@
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (27th session): ATC mount reworked: inboard hub block on the end plate (D-317); model not saved
 - **Owner:** "the ATC bracket is a ridiculous shape, come up with something more elegant". Q&A: "Inboard hub (Recommended)" (over a hanger from the beam end and a tidied upright bracket), then "Approve, model it".
 - **Why the old one was a dog-leg:** the right upright stands behind the wheel (Y 185+), so the bracket had to go round the 197 sweep to the outboard drive. The end plate X+ is right behind the wheel axis.
-- **D-317 modelled in `Type_0_v4` (not saved):** one 6082 block on the end plate's outer face (flange with M16 head pockets, floor, motor web, wall). The FK12 goes through the wall and the stub runs to the hub's inboard face. GT2 20T/60T belt inside the block (X 293 to 307) from a 40-long NEMA 17 without encoder. The LJ12A3 sensor sits in the wall at r 44, with its flag on the hub. Bracket, column, coupling and 17HS24-E1K removed. Nothing is past the disc: ATC X max 435, machine X max 594 to 550.
+- **D-317 modelled in `Type_0_v4` (not saved):** one 6082 block on the end plate's outer face (flange with M16 head pockets, floor, motor web, wall). The FK12 goes through the wall and the stub runs to the hub's inboard face. GT2 20T/60T belt inside the block (X 293 to 307) from a 40-long NEMA 17 without encoder. The LJ12A3 sensor sits in the wall at r 44, with its flag on the hub. Bracket, column, coupling and 17HS24-E1K removed. Nothing is past the disc: ATC X max 435 (159 in), machine X max 594 to 550 (44 narrower; the beam end sets it).
 - **Checks clean:** 184 timeline items healthy; wheel turned 0 to 30°; the four poses (engaged, lifted, withdrawn with a Ø20 x 100 tool, withdrawn lifted); table at y ±150. Only expected overlaps (M4 x 40 in the untapped stub flange). Details: `docs/v4-model.md` (Task 6 rework).
 - **New constraint:** past X 265 the spindle needs a soft limit (nose 50 or higher); a 100 tool at nose 25 reaches the 60T at X 300.
 - **BOM:** A03 (needs re-pricing: 40-long NEMA 17 plus driver), A06, A07 (coupling dropped), A08 back in (£9.32, 7 Nov price), A09; F26/X25: end plate X+ gets 4 x M8 tapped now (wave 1). Phase 1 still £4,416.08.
 - Spec `docs/superpowers/specs/2026-11-25-atc-inboard-hub-block-design.md`, plan `docs/superpowers/plans/2026-11-25-atc-inboard-hub-block.md`.
 - Fusion note: inside a base feature edit, `component.bRepBodies` is empty and the bodies carry other names; use `baseFeature.bodies` and match them by bounding box. A script that fails mid-edit leaves Fusion in the edit (design reads as direct); `commandDefinitions.itemById('BaseFeatureStop').execute()` gets out.
 
-**Left:** owner saves `Type_0_v4`; owner confirms the D-317 sizes and the 40-long motor (A03 price); the 4 M8 and FK12/motor screws are not modelled; LinuxCNC keep-out past X 265; Task 7 (fill quantities per D-315, wave 1 lengths); the 14 unpriced BOM lines.
+- **4 faults found after modelling (assembly walk-through), fixes written, not modelled:** FK12 screw heads 1 from the stub flange (sink the flange into the hub); motor cannot be fitted between the web and the wall (separate slotted motor plate); locknut cannot pass the Ø12 pulley seat (Ø8 seat, 60T bore 8); M8 positions set. See `docs/v4-model.md`, end.
+- **Changed after the owner approved the spec:** pulleys moved next to the flange, a motor web added, the motor 40 long (about 0.45 Nm, not 48 and 0.59), the FK12 through the wall with its flange outboard.
 
-**Exact next step:** the owner saves `Type_0_v4`. Then a new session runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315, and adds the F26 X+ 4 x M8 to the wave 1 drawing notes.
+**Left:** model the 4 fault fixes; owner saves `Type_0_v4`; owner confirms the D-317 sizes and the 40-long motor (A03 price); the 4 M8 and FK12/motor screws are not modelled; LinuxCNC keep-out past X 265; Task 7 (fill quantities per D-315, wave 1 lengths); the 14 unpriced BOM lines.
+
+**Exact next step:** the owner saves `Type_0_v4`. A new session models the 4 D-317 fault fixes (`docs/v4-model.md`, last section), then runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315, and adds the F26 X+ 4 x M8 to the wave 1 drawing notes.
 
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (26th session): V4 plan Task 6 done: ATC wheel on the right side (D-315, D-316); wheel not saved
 - **Owner saved the design as `Type_0_v4`** before this session's changes.
@@ -30,7 +33,7 @@
 
 **Left:** owner saves `Type_0_v4` again (the wheel is unsaved); index flag and sensor not placed; bracket bolts; BOM A-lines for the disc, longer hub and bracket; Task 7 (fill quantities per D-315, wave 1 lengths: X travel 620, one Y set, plate and pads); the 14 unpriced BOM lines.
 
-**Exact next step:** the owner saves `Type_0_v4`. Then a new session runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315.
+**Exact next step:** the owner saves `Type_0_v4`. A new session models the 4 D-317 fault fixes (`docs/v4-model.md`, last section), then runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

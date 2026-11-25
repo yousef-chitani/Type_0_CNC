@@ -12,7 +12,7 @@ The owner called the D-316 bracket "a ridiculous shape". It bolts to the right u
 
 ## Goals
 - One part from the frame to the bearing, with a short and direct load path.
-- Nothing outboard of the disc, so the machine is narrower and the wheel lifts off outboard.
+- Nothing outboard of the disc, so the ATC is 159 shorter in X (the machine 44 narrower, set by the beam end) and the wheel lifts off outboard.
 - Same wheel, pickup and sweep as D-316: pickup X 402, Y 0, nose Z 70; wheel centre Y 0, Z -82; holders X 379.5 to 424.5; disc X 429 to 435.
 
 ## What changes from D-316
@@ -22,7 +22,7 @@ The owner called the D-316 bracket "a ridiculous shape". It bolts to the right u
 | Drive side | outboard (+X), motor out to X 594 | inboard, between the end plate and the wheel (X 270 to 379) |
 | Drive | direct: FK12, coupling, 17HS24-E1K (about 150 long in line) | GT2 belt 20T/60T (1:3); A08 comes back |
 | Motor (A03) | 17HS24-2004D-E1K, 80 long with encoder | short NEMA 17 without encoder, 48 long or less (for example 17HS19, about 0.59 Nm, about 1.8 Nm at the wheel through 1:3) |
-| Machine envelope X max | 594 | about 435 (the disc), 159 narrower |
+| Machine envelope X max | 594 | 550 (the beam end dam), 44 narrower; the ATC ends at 435, 159 further in |
 | Path from frame to bearing | about 400 (flange, arm, plate) | about 70 |
 
 The in-line stack does not fit inboard: FK12 23, coupling 25 and motor 92 need about 140, and the gap is 109. That is why the drive becomes a belt.

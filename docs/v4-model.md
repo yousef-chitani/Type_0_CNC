@@ -268,6 +268,8 @@ This section supersedes calls 1, 3 and 4 above where they differ. The review is 
 - **Nut to BK12:** 63 at the -X limit. **Nut to BF12:** 45 at the +X limit.
 
 # Task 6: ATC wheel on the right side (24 Nov 2026, D-314 to D-316)
+> **Superseded in part (25 Nov, D-317):** the mount bracket, column block, coupling and outboard motor below were replaced by an inboard hub block. See "Task 6 rework" at the end.
+
 The owner saved the design as `Type_0_v4` (CNC mill project) before this task. The wheel was added afterwards and **is not saved**. `Type_0_v3` was only read.
 
 ## Placement (D-316)
@@ -331,3 +333,11 @@ The owner found the D-316 bracket "a ridiculous shape". It is replaced by one bl
 - **Past the table:** x 300 with the nose at 25 and a 100 tool hits the 60T and the belt. LinuxCNC needs a keep-out past X 265: nose 50 or higher (the block top is Z -55).
 - **Envelope:** ATC X max 435 (the disc), machine X max 550 (the beam end dam), so about 1,058 x 805 x 978 (was 1,102).
 - Stiffness, hand estimate: a 100 N push along X at the pickup fork (r 152) bends the wall and floor by about 0.1 mm at the fork, against 0.2 for the D-316 bracket. Through 1:3, the motor's holding torque at the wheel is 3 x the direct drive's.
+
+## Faults found after modelling (assembly walk-through, 25 Nov 2026): fix in the next model session
+The clash check only finds overlaps between modelled bodies. Walking the assembly order turned up 4 faults. Proposed fixes (Claude; owner to confirm with D-317):
+1. **FK12 screw heads against the stub flange.** The FK12's 4 M4 (at ±15.5, ±15.5, r 21.9, not modelled) have their heads on the hub side of the flange (X 380 to 384, reaching in to r 18.4). The stub flange (r 20, X 381 to 386) turns 1 away from the FK12 flange. **Fix:** sink the stub flange into a Ø41 x 5 counterbore in the hub's inboard face (flange X 386 to 391, pilot X 391 to 397). That leaves a 6 gap between the FK12 flange and the hub face (heads 4 tall, 2 clear). Add a Ø14 shoulder X 380 to 386 against the bearing. The hub-to-stub screws become M4 x 35 (seat X 421, tip X 386). Model the 4 FK12 M4 x 12 and rerun the turn check.
+2. **The motor cannot be fitted.** The gap between the web and the wall is 43, but the motor is 40 long plus 24 of shaft through a closed hole in the web. **Fix:** make the web a separate 8 mm **motor plate** (6082) bolted to the floor with 2 x M5 in slots along Y, which also tensions the belt. The plate, motor and 20T (X 292 to 356, 64 long) drop into the bay (X 290 to 359) from above. Trim the plate to Y 25 to 85, so the rear M8 can be reached.
+3. **The locknut cannot pass the pulley seat.** The M12 x 1 locknut goes on from the inboard end, so the seat has to be smaller than M12. **Fix:** the stub steps down to Ø8 from X 291 to 349 (the 60T bore is 8, as the old stub's drive end). Thread M12 x 1 X 349 to 357, journal Ø12 X 357 to 380. The stub goes in from the hub side through the FK12. The 60T and the locknut go on in the bay.
+4. **M8 positions (end plate X+, F26, wave 1):** 4 x M8 tapped 15 deep at **(Y -50, Z -95), (Y 95, Z -95), (Y -20, Z -150), (Y 80, Z -150)**. All are below the end plate top (Z -75), 25 or more from the Ø28 M16 pockets at (±45, -120), and 55 apart in Z. The 2 upper heads are reached from the open front of the bay and the rear corner behind the trimmed motor plate; the 2 lower heads from below the floor (Z -125).
+- **Envelope correction:** overall the machine is 44 narrower (X max 594 to 550, the beam end dam). The ATC itself ends 159 further in (X 435).
