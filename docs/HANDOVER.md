@@ -6,19 +6,19 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (34th session): task 29 owner answers (D-329, D-330); V4 EG fill priced against two grouts
+- **D-329:** the owner makes the simple parts (saw, drill, tap): base end plates, uprights, beam, beam rear spacers. Shops make the rest. If the upright joint faces need milling, the uprights move to the mill pack (step 4).
+- **D-330:** the RFQ is split by process: laser (and bend), CNC mill, surface grind, lathe; one cover sheet per sub-pack. Parts sorted in `docs/tasks/29-quote-ready-design.md`.
+- **EG fill against grouts** (owner asked): `docs/eg-fill-vs-grouts.md`. V4 fill 23.5 L (pockets 2 x 6.98, beam 9.57), about 54 kg. EG (P1, 11 %, provisional) **£4.95/L used**; bought for V4 £416.22 (kit) or £270.61 (2 x 4.66 kg) = £17.70 or £11.51 per litre. **Sikadur-42+ HE Cold Climate** £326.95 per 8.85 L = **£36.94/L**, £980.85 for V4. **Parex 100 Newton Grout** (cement) £46.96 per 12.5 L = **£3.76/L**, £93.92 to £140.88; not checked: aluminium contact, damping, water cure. Rawlins, curl 25 Nov; delivery unknown. `bom.csv` not changed.
+- Task 29 is not finished: steps 2 to 6 (model, assembly check, make-ability, drawings and STEP, RFQ) remain and need several Fusion sessions.
+- **Exact next step:** task 29 step 2: finish `Type_0_v4` (task 27 Task 7; D-320 X HM12 and pad; D-325 to D-327 folds with `cad/vendor/htd5m_20t_15.step`; replace the envelopes; set the material of every body; a fastener for every hole; clash check at the axis ends). Owner: pick the EG fill.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (33rd session): goal set: a quote-ready design before wave 1 (task 29)
 - **Owner's goal:** before wave 1 (4 Jan 2027) the design is fully defined, makeable and assemblable, so machine shops can quote the made-to-order parts.
 - **Gap map written:** `docs/tasks/29-quote-ready-design.md`. Read from `Type_0_v4` (timeline 194, read-only, nothing changed): 19 made-to-order parts; 6 are envelopes or out of date (X BK12/BF12 pads and X motor bracket against D-320, X nut bracket, beam end dam, Y motor plate, drip skirts); every body has the material Steel. Steps: freeze V4 (task 28 questions), finish the model, assembly order with key access, make-ability check per part, drawings and STEP, RFQ.
 - Budget: Phase 1 already £359.80 over and most of these parts are unpriced.
 - **Owner answered (Q&A):** V4 frozen, no V5 (D-324); Z belt-folded with a stub shaft on 2 bearings in a fold plate on the HM12 (D-325); X belt-folded behind the beam with a motor plate on the HM12 again (D-326); X pulley on a stub shaft as Z (D-327); RFQ is wave 1 only, ATC later (D-328). Task 29 now lists 23 parts (4 fold parts, none modelled).
 - **Exact next step:** owner answers the 2 questions left in task 29 (which parts to a shop and which they make; one shop or split by process). Then finish the model: task 27 Task 7, D-320 X HM12, D-325 to D-327 folds, envelopes, materials.
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (32nd session): G15 screws priced; Z and X belt folds sketched; footprint drawn (task 28)
-- **G15 priced (curl, 25 Nov):** Westfield 16 x M10 x 30 socket cap 12.9 £6.98, 8 x M10 x 35 countersunk A2 £5.51, 12 x M8 x 20 12.9 £3.29; KJN 12 x M8 T-nut £5.16 (Store API). **£20.94; Phase 1 £4,559.80, £359.80 over.** The Westfield order now passes £40 ex, so delivery is free. The model draws the M10 x 30 with hex heads (socket cap fits). Owner to choose A2 or 12.9 (£7.28) for the countersunk screws.
-- **Folds and footprint sketched, docs only:** `docs/task28-folds-and-footprint.md`, drawings from `tools/task28_sketches.py` (`docs/sketches/task28_*.svg`). Z: motor behind the Z fixed plate, HTD 310-5M-15, top Z 700 to about 590 (spindle top at Z max is 545, so little more is possible). X: motor behind the beam, HTD 250-5M-15, X min about -536 (D-320 inline, estimate) to about -430. Both: the HM12-60 holds the coupling, so a pulley needs a stub shaft on 2 bearings or a longer screw end (reopens D-207/D-211); X fold needs a motor plate again, against D-320. Belt margin (D-322) not checked; pulleys and belts not priced.
-- **Footprint:** floor per work area V4 7.9, V4 X folded 7.3, v3 + wheel 9.3, v3 + 12-tool rack at 60 pitch about 5.5 (but 1.15 m² of floor against 0.85). Max is right on floor per work; it is more floor in total and goes back to the moving gantry.
-- Fusion: `Type_0_v3` was opened read-only for its sizes; `Type_0_v4` is active again. Nothing changed or saved.
-- **Exact next step:** owner answers the 3 questions at the end of `docs/task28-folds-and-footprint.md`. Task 27 (model D-320, Task 7) is still first in line.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

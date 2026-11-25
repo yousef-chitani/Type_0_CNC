@@ -2,6 +2,13 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (32nd session): G15 screws priced; Z and X belt folds sketched; footprint drawn (task 28)
+- **G15 priced (curl, 25 Nov):** Westfield 16 x M10 x 30 socket cap 12.9 £6.98, 8 x M10 x 35 countersunk A2 £5.51, 12 x M8 x 20 12.9 £3.29; KJN 12 x M8 T-nut £5.16 (Store API). **£20.94; Phase 1 £4,559.80, £359.80 over.** The Westfield order now passes £40 ex, so delivery is free. The model draws the M10 x 30 with hex heads (socket cap fits). Owner to choose A2 or 12.9 (£7.28) for the countersunk screws.
+- **Folds and footprint sketched, docs only:** `docs/task28-folds-and-footprint.md`, drawings from `tools/task28_sketches.py` (`docs/sketches/task28_*.svg`). Z: motor behind the Z fixed plate, HTD 310-5M-15, top Z 700 to about 590 (spindle top at Z max is 545, so little more is possible). X: motor behind the beam, HTD 250-5M-15, X min about -536 (D-320 inline, estimate) to about -430. Both: the HM12-60 holds the coupling, so a pulley needs a stub shaft on 2 bearings or a longer screw end (reopens D-207/D-211); X fold needs a motor plate again, against D-320. Belt margin (D-322) not checked; pulleys and belts not priced.
+- **Footprint:** floor per work area V4 7.9, V4 X folded 7.3, v3 + wheel 9.3, v3 + 12-tool rack at 60 pitch about 5.5 (but 1.15 m² of floor against 0.85). Max is right on floor per work; it is more floor in total and goes back to the moving gantry.
+- Fusion: `Type_0_v3` was opened read-only for its sizes; `Type_0_v4` is active again. Nothing changed or saved.
+- **Exact next step:** owner answers the 3 questions at the end of `docs/task28-folds-and-footprint.md`. Task 27 (model D-320, Task 7) is still first in line.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (31st session): Discord feedback on the V4 render checked (D-321); upright ribs checked
 - **Owner posted Discord replies** to the V4 render: Max (fixed vs moving gantry footprint and a straight 12-tool rack; belt-fold the Z motor; angle or flat-bar ribs on the uprights), rcw (turn it sideways, horizontal mill, for chips). Each checked against the V4 docs in `docs/feedback-discord-2026-11-25.md`.
 - **D-321 (owner, Q&A):** work up all four of Max's points (task 28); horizontal layout noted for later, V4 unchanged.
