@@ -6,6 +6,12 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (29th session): price check 18 by curl: screws at Westfield Fasteners, K I Metals confirmed; Phase 1 £4,462.73
+- **Done:** `docs/price-check-task-18.md` has a Results section. Screws priced at **Westfield Fasteners** (new vendor; its own price calculator answers curl; free UK delivery over £40 ex VAT, else £3.50): X20 £5.06, F27 £12.83 (with washers), G09 £11.41, X23 £11.39 (with 16 KJN T-nuts), G08 £5.96. ATC screws priced in the notes of A06, A09, A10 (Phase 2). K I Metals pages confirm F26 and G11 (and show drilling at £4 to £9 a hole). `bom.csv` updated, generators run. **Phase 1 £4,462.73 (+£46.65), £262.73 over budget.**
+- **Flags for the owner:** G08 dowels are **A1 stainless, not hardened** (the only Ø10 m6 found by curl): accept or name a source. F27, G09, X23 and the ATC M8 lengths are Claude's proposals (M16 x 40, M12 x 60 / 35, M8 x 30): confirm from the model.
+- **Blocked:** Aluminium Warehouse and Simply Bearings rate-limited (429) (A06, M12, A10 SHF12); StepperOnline bot check after one page (A03: 17HS16-2004S1 read at $9.13, driver not priced; M09); LiMo 403 (M05); AliExpress lines for the owner's browser. X18, X21 wait for the screw lists from the V4 model; F28 for a material; F30, G10, X25 for shop quotes.
+- **Next step:** retry Aluminium Warehouse (`/products/<handle>.js`) and Simply Bearings (`/search/suggest.json?q=SHF12`) slowly by curl; then owner prices the browser-only lines. Model `Type_0_v4` still not saved (task 27, Task 7 next).
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (28th session): ATC hub replaced by an off-the-shelf SHF12, fork disc a laser-cut spoked wheel (D-318); bellows hidden; price-check list; model not saved
 - **Owner:** "The ATC hub need not be so substantial nor octagonal and the fork disk can be laser cut sheet metal spoked wheel"; "hide the bellows and list all the components which need a price check". Q&A: hub "something off the shelf", "6 spokes, 6 mm 5083", "Flag on disc".
 - **Modelled in `Type_0_v4` (not saved), D-318:** the 8-flat hub is gone. An SHF12 shaft support (envelope: flange 47 sq x 7, body Ø25, bore 12) clamps on the stub end and bolts to the disc. The disc is a 6 mm 5083 spoked wheel: 12-gon rim, 6 spokes 30 wide, inner ring r 56, about 0.71 kg. The stub is redone with D-317 fault fix 3 and has no flange, so fault 1 is gone. The index flag is an M5 head on the disc at r 40; the LJ12A3 is at r 40 in a printed PETG sleeve on the wall. Clash check clean at wheel turns 0 to 30°; timeline healthy. The 4 bellows envelopes are hidden (not deleted). Details: `docs/v4-model.md`, last section.
@@ -15,23 +21,6 @@
 **Left:** owner saves `Type_0_v4`; choose the actual SHF12 and check its drawing against the envelope; a DXF of the disc for a laser-cut quote (24 x M4 fork-foot holes from the fork model, 4 x M5, flag M5, R 6 window corners); D-317 faults 2 (separate motor plate) and 4 (M8 drawing note); the price checks in task 18; Task 7.
 
 **Exact next step:** the owner saves `Type_0_v4` and runs `docs/price-check-task-18.md` (or picks the SHF12). A new session models D-317 fault 2 (motor plate), then runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315.
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (27th session): ATC mount reworked: inboard hub block on the end plate (D-317); model not saved
-- **Owner:** "the ATC bracket is a ridiculous shape, come up with something more elegant". Q&A: "Inboard hub (Recommended)" (over a hanger from the beam end and a tidied upright bracket), then "Approve, model it".
-- **Why the old one was a dog-leg:** the right upright stands behind the wheel (Y 185+), so the bracket had to go round the 197 sweep to the outboard drive. The end plate X+ is right behind the wheel axis.
-- **D-317 modelled in `Type_0_v4` (not saved):** one 6082 block on the end plate's outer face (flange with M16 head pockets, floor, motor web, wall). The FK12 goes through the wall and the stub runs to the hub's inboard face. GT2 20T/60T belt inside the block (X 293 to 307) from a 40-long NEMA 17 without encoder. The LJ12A3 sensor sits in the wall at r 44, with its flag on the hub. Bracket, column, coupling and 17HS24-E1K removed. Nothing is past the disc: ATC X max 435 (159 in), machine X max 594 to 550 (44 narrower; the beam end sets it).
-- **Checks clean:** 184 timeline items healthy; wheel turned 0 to 30°; the four poses (engaged, lifted, withdrawn with a Ø20 x 100 tool, withdrawn lifted); table at y ±150. Only expected overlaps (M4 x 40 in the untapped stub flange). Details: `docs/v4-model.md` (Task 6 rework).
-- **New constraint:** past X 265 the spindle needs a soft limit (nose 50 or higher); a 100 tool at nose 25 reaches the 60T at X 300.
-- **BOM:** A03 (needs re-pricing: 40-long NEMA 17 plus driver), A06, A07 (coupling dropped), A08 back in (£9.32, 7 Nov price), A09; F26/X25: end plate X+ gets 4 x M8 tapped now (wave 1). Phase 1 still £4,416.08.
-- Spec `docs/superpowers/specs/2026-11-25-atc-inboard-hub-block-design.md`, plan `docs/superpowers/plans/2026-11-25-atc-inboard-hub-block.md`.
-- Fusion note: inside a base feature edit, `component.bRepBodies` is empty and the bodies carry other names; use `baseFeature.bodies` and match them by bounding box. A script that fails mid-edit leaves Fusion in the edit (design reads as direct); `commandDefinitions.itemById('BaseFeatureStop').execute()` gets out.
-
-- **4 faults found after modelling (assembly walk-through), fixes written, not modelled:** FK12 screw heads 1 from the stub flange (sink the flange into the hub); motor cannot be fitted between the web and the wall (separate slotted motor plate); locknut cannot pass the Ø12 pulley seat (Ø8 seat, 60T bore 8); M8 positions set. See `docs/v4-model.md`, end.
-- **Changed after the owner approved the spec:** pulleys moved next to the flange, a motor web added, the motor 40 long (about 0.45 Nm, not 48 and 0.59), the FK12 through the wall with its flange outboard.
-
-**Left:** model the 4 fault fixes; owner saves `Type_0_v4`; owner confirms the D-317 sizes and the 40-long motor (A03 price); the 4 M8 and FK12/motor screws are not modelled; LinuxCNC keep-out past X 265; Task 7 (fill quantities per D-315, wave 1 lengths); the 14 unpriced BOM lines.
-
-**Exact next step:** the owner saves `Type_0_v4`. A new session models the 4 D-317 fault fixes (`docs/v4-model.md`, last section), then runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315, and adds the F26 X+ 4 x M8 to the wave 1 drawing notes.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
