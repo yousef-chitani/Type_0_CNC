@@ -33,13 +33,13 @@
 | 20 | Z fold plate with 2 bearing seats, on the HM12 top (D-325) | 1 | 6082 | CNC mill | **not modelled** |
 | 21 | Z stub shaft Ø10 (D-325) | 1 | steel | lathe | **not modelled** |
 | 22 | X motor fold plate on the HM12 (D-326) | 1 | 6082 | CNC mill | **not modelled** |
-| 23 | X stub shaft, if as Z (D-326, owner to confirm) | 1 | steel | lathe | **not modelled** |
+| 23 | X stub shaft Ø10, as Z (D-327) | 1 | steel | lathe | **not modelled** |
 | — | ATC hub block, stub shaft, fork disc (Phase 2) | — | — | — | leave out of the wave 1 RFQ unless the owner says |
 
 **Whole model:** every body has the material "Steel", aluminium parts included. Drawings need the right material on each part.
 
 ## What is left, in order
-1. **Freeze the layout. Done 25 Nov:** V4 frozen (D-324), Z fold with a stub shaft (D-325), X fold with a motor plate (D-326). Open from the folds: how the X pulley is carried; belt margin (D-322); pulleys, belts, bearings not priced.
+1. **Freeze the layout. Done 25 Nov:** V4 frozen (D-324), Z fold with a stub shaft (D-325), X fold with a motor plate (D-326). X pulley on a stub shaft as Z (D-327). Open from the folds: belt margin (D-322); pulleys, belts, bearings not priced.
 2. **Finish the model** (task 27 Task 7, D-320, D-325, D-326): replace the envelopes (rows 8 to 12, 19) with real parts, model the X HM12-60-V and its pad, both folds (rows 20 to 23, vendor pulley `cad/vendor/htd5m_20t_15.step`), set the material of every body, and give every hole a fastener (or a line in `bom.csv`). Clash check at all axis ends.
 3. **Assembly check.** Write the order the parts go together in, with the key for every screw (the D-215 lesson: tie rods and nuts can block keys). Include when the beam is filled with EG (D-310) against when its tapped holes and the D-323 spacer screws go in.
 4. **Make-ability check, part by part.** Stock size from a real supplier list, which faces need grinding or milling and which stay as rolled, tolerances only where they matter (rail seats, dowel holes H7, bearing seats), through or tapped, thread depth. Split the parts by process (laser, saw and drill, CNC mill, grind) because that decides which shops to ask.
@@ -54,7 +54,7 @@ Phase 1 is already **£359.80 over** (£4,559.80, 25 Nov) and most made-to-order
 
 ## Questions for the owner (not decided)
 - ~~Is V4 frozen?~~ Yes (D-324).
-- X fold: carry the pulley on a stub shaft as on Z?
+- ~~X pulley on a stub shaft as Z?~~ Yes (D-327).
 - Which parts go to a shop, and which do you make or cut yourself?
 - ATC (Phase 2) parts in this RFQ, or later?
 - One shop for everything, or split by process?
