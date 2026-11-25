@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,462.73** (budget £4,200, D-127). Not priced yet: X18, X21, F28, F30, F31, F32, F33, G10, X24, X25. No eBay.
+**Phase 1 priced total: £4,456.77** (budget £4,200, D-127). Not priced yet: X18, X21, F28, F30, F31, F32, F33, G08, G10, X24, X25. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -8,13 +8,13 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 |---|---|
 | Frame | £1,206.67 |
 | Motion | £1,089.53 |
-| Gantry | £272.31 |
+| Gantry | £266.35 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
 | Fixings | £89.09 |
-| **Total** | **£4,462.73** |
+| **Total** | **£4,456.77** |
 
 ## Frame
 
@@ -84,7 +84,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | G03 | Gantry foot blocks 268 × 140 × 40, 6061, pocketed (dropped: D-242) | 2 pcs | £0.00 |
 | G05 | Roller steel: X roller tube, 2 X roller angles, 2 Y roller tubes, 2 Y roller braces (dropped: D-305) | 0 lot | £0.00 |
 | G07 | Uprights: steel flat bar 150 x 50, 2 x 325 | 2 pcs | £112.92 |
-| G08 | Dowels for the upright joints (2 per upright) | 4 pcs | £5.96 |
+| G08 | Dowels for the upright joints (2 per upright) | 4 pcs | to price |
 | G09 | Upright and beam bolts M12 socket cap | 12 pcs | £11.41 |
 | G10 | Upright joint faces: ground or epoxy-shimmed | 1 lot | to price |
 | G11 | X rail front plate: steel flat bar 160 x 20, one length 950 (plate 890 + 2 pads) | 1 pcs | £70.42 |

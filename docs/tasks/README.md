@@ -7,7 +7,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 - **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-318; D-295 to D-297 are kept for ATC plan task 7).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). When Claude edits it, a hook (`tools/bom_hook.py`) runs the 5 generators automatically and reports only errors. After a hand edit, set `PYTHONUTF8=1` and run `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
-- **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£4,462.73 since V4 (25 Nov), £262.73 over**; before V4 £4,041.97 (20 Nov 2026 repricing, D-242 to D-245, plus G05 roller steel £78.62 on 23 Nov, D-281 to D-283: G03 dropped; G01 beam and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
+- **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£4,456.77 since V4 (25 Nov), £256.77 over**; before V4 £4,041.97 (20 Nov 2026 repricing, D-242 to D-245, plus G05 roller steel £78.62 on 23 Nov, D-281 to D-283: G03 dropped; G01 beam and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
 - Write plainly and briefly. Do not merge branch `claude/awesome-ramanujan-by9kds` (old design).
 
 ## State in five lines
@@ -39,7 +39,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 - 24 Nov, 26th: **V4 plan Task 6 done (D-315, D-316): ATC wheel on the right, pickup X 402, centre Z -82 (hangs 110 below the base), drive outboard, D-304 disc and longer hub, bracket on the right upright; checks clean.** Owner saved `Type_0_v4` before; the wheel is **not saved**. EG fill not structural (D-315). Next: Task 7 (task 27).
 - 25 Nov, 27th: **ATC mount reworked (D-317): one block on the end plate X+ face carries the FK12, a belt-driven short NEMA 17 and the sensor; nothing past the disc (machine X max 594 to 550).** Not saved (task 27).
 - 25 Nov, 28th: **ATC hub is an off-the-shelf SHF12; fork disc a laser-cut 6 mm 5083 spoked wheel; index flag on the disc (D-318). Bellows hidden. Price-check list: `docs/price-check-task-18.md`.** Not saved (task 27).
-- 25 Nov, 29th: **price check 18 run by curl: screws at Westfield Fasteners (new vendor; X20, F27, G08, G09, X23 priced), K I Metals F26 and G11 confirmed. Phase 1 £4,462.73. Blocked: Aluminium Warehouse and Simply Bearings (429), StepperOnline (bot check), LiMo, AliExpress. Results in `docs/price-check-task-18.md`.**
+- 25 Nov, 29th: **price check 18 run by curl: screws at Westfield Fasteners (new vendor; X20, F27, G09, X23 priced; G08 only stainless found), K I Metals F26 and G11 confirmed. Phase 1 £4,456.77. Blocked: Aluminium Warehouse and Simply Bearings (429), StepperOnline (bot check), LiMo, AliExpress. Results in `docs/price-check-task-18.md`.**
 - Background, only if a task needs it: `docs/HANDOVER.md`.
 
 ## Tasks
