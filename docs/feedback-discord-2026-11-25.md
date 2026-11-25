@@ -52,6 +52,7 @@ The owner posted a V4 render (fixed gantry, moving table, ATC wheel on the right
 - Horizontal layout: **note for later**, no change to V4.
 - Upright ribs: checked above (small gain in the frame model; the joint is the open question).
 
+- **Z fold: belt with margin, the brake stays on the motor (D-322).**
+
 ## Still to ask the owner
-- Z fold: belt with margin, or a brake on the screw?
 - Ribs: drop them, or turn them into gussets down to the tray (needs a joint check)?
