@@ -308,3 +308,26 @@ Copied from `Type_0_v3`'s `ATC Wheel (Phase 2)` with temporary BRep copies:
 - Bracket: bolt sizes and stiffness. Hand estimate: torsion of the 75 x 20 plate under the column adds about 0.2 mm per 100 N at the fork, on top of D-304's 2.6.
 - BOM A-lines (Phase 2): the disc, longer hub and bracket are not in `bom.csv` yet.
 - Bench: the right edge at X 330 or less, or risers.
+
+# Task 6 rework: inboard hub block (25 Nov 2026, D-317)
+The owner found the D-316 bracket "a ridiculous shape". It is replaced by one block on the base end plate, with the drive inboard. Modelled in `Type_0_v4`, **not saved**. Spec: `docs/superpowers/specs/2026-11-25-atc-inboard-hub-block-design.md`.
+
+## What changed in `ATC Wheel (Phase 2)` (still one base feature, now 52 bodies)
+- **Removed (21):** `ATC mount bracket 6082`, the column block, the D20L25 coupling, the 17HS24-E1K and its 2 inner bodies, the old stub shaft, 4 motor M3, 4 FK12-to-column M4, 4 hub-to-stub M4 x 12, and the FK12 and its locknut (re-added turned round).
+- **Added (14, names end in "D-317"):**
+  - `ATC hub block 6082`: a flange 20 thick on the end plate X+ face (X 270 to 290, Y -65 to 105, Z -165 to -55) with Ø28 x 17 pockets over the M16 heads at Y ±45; a floor (X 290 to 359, Z -125 to -110); a motor web (X 308 to 316, Y 25 to 105) with a Ø23 pilot hole; and a wall (X 359 to 374) with a Ø37 FK12 bore and a Ø12 sensor hole. The 4 M8 to the end plate are not modelled.
+  - The FK12 (turned 180° about the vertical line X 409.05): flange X 374 to 380 on the wall's outboard face, body through the wall, locknut inboard.
+  - Stub shaft: a pilot Ø12 in the hub (X 386 to 392), a flange Ø40 on the hub's inboard face (X 381 to 386), and Ø12 from X 291 to 381.
+  - GT2 60T (on the stub) and 20T (on the motor), X 293 to 307, centres 60 along Y; belt envelope X 297 to 303.
+  - NEMA 17 stand-in 42 x 42 x 40, no encoder, X 316 to 356, Y 39 to 81, Z -103 to -61, with its face on the web and its shaft pointing -X.
+  - LJ12A3 stand-in through the wall at Y -44, Z -82 (X 330 to 380), and an M5 head flag on the hub's inboard face (X 382.5 to 386).
+  - 4 x M4 x 40 from the hub's outboard face (heads X 421 to 425 in 8 deep counterbores, not cut) into the stub flange.
+
+## Checks (25 Nov 2026)
+- Timeline: 184 items, all healthy.
+- New parts against each other: only the 4 M4 x 40 in the stub flange (tapped holes not cut).
+- New stationary parts against the turning wheel (hub, forks, holders, tools, disc) at 0°, 10°, 20° and 30°: clean.
+- Against the frame, carriage and Z: rest, engaged (x 402, nose 70), lifted (x 402, nose 120), withdrawn with a Ø20 x 100 tool (x 372, nose 70, tip Z -30), withdrawn and lifted, and the table at y ±150: clean.
+- **Past the table:** x 300 with the nose at 25 and a 100 tool hits the 60T and the belt. LinuxCNC needs a keep-out past X 265: nose 50 or higher (the block top is Z -55).
+- **Envelope:** ATC X max 435 (the disc), machine X max 550 (the beam end dam), so about 1,058 x 805 x 978 (was 1,102).
+- Stiffness, hand estimate: a 100 N push along X at the pickup fork (r 152) bends the wall and floor by about 0.1 mm at the fork, against 0.2 for the D-316 bracket. Through 1:3, the motor's holding torque at the wheel is 3 x the direct drive's.

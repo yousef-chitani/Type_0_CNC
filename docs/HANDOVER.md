@@ -6,6 +6,20 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (27th session): ATC mount reworked: inboard hub block on the end plate (D-317); model not saved
+- **Owner:** "the ATC bracket is a ridiculous shape, come up with something more elegant". Q&A: "Inboard hub (Recommended)" (over a hanger from the beam end and a tidied upright bracket), then "Approve, model it".
+- **Why the old one was a dog-leg:** the right upright stands behind the wheel (Y 185+), so the bracket had to go round the 197 sweep to the outboard drive. The end plate X+ is right behind the wheel axis.
+- **D-317 modelled in `Type_0_v4` (not saved):** one 6082 block on the end plate's outer face (flange with M16 head pockets, floor, motor web, wall). The FK12 goes through the wall and the stub runs to the hub's inboard face. GT2 20T/60T belt inside the block (X 293 to 307) from a 40-long NEMA 17 without encoder. The LJ12A3 sensor sits in the wall at r 44, with its flag on the hub. Bracket, column, coupling and 17HS24-E1K removed. Nothing is past the disc: ATC X max 435, machine X max 594 to 550.
+- **Checks clean:** 184 timeline items healthy; wheel turned 0 to 30°; the four poses (engaged, lifted, withdrawn with a Ø20 x 100 tool, withdrawn lifted); table at y ±150. Only expected overlaps (M4 x 40 in the untapped stub flange). Details: `docs/v4-model.md` (Task 6 rework).
+- **New constraint:** past X 265 the spindle needs a soft limit (nose 50 or higher); a 100 tool at nose 25 reaches the 60T at X 300.
+- **BOM:** A03 (needs re-pricing: 40-long NEMA 17 plus driver), A06, A07 (coupling dropped), A08 back in (£9.32, 7 Nov price), A09; F26/X25: end plate X+ gets 4 x M8 tapped now (wave 1). Phase 1 still £4,416.08.
+- Spec `docs/superpowers/specs/2026-11-25-atc-inboard-hub-block-design.md`, plan `docs/superpowers/plans/2026-11-25-atc-inboard-hub-block.md`.
+- Fusion note: inside a base feature edit, `component.bRepBodies` is empty and the bodies carry other names; use `baseFeature.bodies` and match them by bounding box. A script that fails mid-edit leaves Fusion in the edit (design reads as direct); `commandDefinitions.itemById('BaseFeatureStop').execute()` gets out.
+
+**Left:** owner saves `Type_0_v4`; owner confirms the D-317 sizes and the 40-long motor (A03 price); the 4 M8 and FK12/motor screws are not modelled; LinuxCNC keep-out past X 265; Task 7 (fill quantities per D-315, wave 1 lengths); the 14 unpriced BOM lines.
+
+**Exact next step:** the owner saves `Type_0_v4`. Then a new session runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315, and adds the F26 X+ 4 x M8 to the wave 1 drawing notes.
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (26th session): V4 plan Task 6 done: ATC wheel on the right side (D-315, D-316); wheel not saved
 - **Owner saved the design as `Type_0_v4`** before this session's changes.
 - **D-315 (owner):** the EG fill is not structural; a lean mix packed into the voids. Task 7's pour plan shrinks to quantities and fill order. The cheaper resin option (saves £145.61) is open again; BOM not changed.
@@ -17,17 +31,6 @@
 **Left:** owner saves `Type_0_v4` again (the wheel is unsaved); index flag and sensor not placed; bracket bolts; BOM A-lines for the disc, longer hub and bracket; Task 7 (fill quantities per D-315, wave 1 lengths: X travel 620, one Y set, plate and pads); the 14 unpriced BOM lines.
 
 **Exact next step:** the owner saves `Type_0_v4`. Then a new session runs plan Task 7 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-315.
-
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 24 Nov 2026 (25th session): V4 plan Tasks 3 to 5 done: BOM, Fusion base and Y, uprights, beam, X and Z (D-312 to D-314); model unsaved
-- **Task 3 (BOM):** `docs/bom.csv` for V4: v3-only lines dropped, V4 lines added. Phase 1 **£4,416.08, over £4,200**, and a lower bound: 14 lines unpriced (grinding F30, machining X25, bellows F31/F33, skirt F32, dowels, bolts, T-nuts, delivery). Owner: "Go over budget" for now, decide when the prices are in. Cheaper option on record: 2 x 4.66 kg Ampreg instead of the 22.68 kg kit (saves £145.61).
-- **Task 4 (Fusion: base, Y, table):** tray B (540 in X, 670 in Y), rail bars 670, Y rails 500, one Y screw with rear motor, bellows and a table drip skirt. Owner: no carrier plate (D-313). Docs: `docs/v4-model.md`.
-- **Task 5 (uprights, beam, X, Z):** flat-bar uprights at X ±270, beam X -350 to 540 with EG core and end dams, X rails 120 apart on one ground front plate 20 x 160 x 890 (D-312, Claude's call, owner no preference; about 2.4 x the roll stiffness of rails 70 apart), BK12/BF12 on ground pads, X bellows, v3 Z and spindle copied in. `tools/v4_sizes.py` updated: x_travel 620, base_width 640. Checks clean (nose 25/175, corners reached, carriage 19.6 clear of the uprights, longest tool clear).
-- **Wheel (owner, D-314):** axis along X, on the right upright. Not modelled yet.
-- **Fusion:** the V4 design is open as **"Untitled", not saved**. Type_0_v3 untouched. Reviews and fix rounds: `.superpowers/sdd/2026-11-24-v4-fixed-gantry/` (local, gitignored).
-
-**Left:** owner saves "Untitled" as `Type_0_v4` (CNC mill project); plan Task 6 (wheel on the right upright, D-304 disc, sweep, tool crossing, enclosure size) and Task 7 (pour plan, wave 1 lengths: X travel 620, one Y set, plate and pads); prices for the 14 pending lines; minor review items in the SDD ledger (stale construction sketches, price-check-v4.md F29 text, bellows closing ratios 1/7 to 1/15).
-
-**Exact next step:** the owner saves the Fusion design as `Type_0_v4`. Then a new session runs plan Task 6 from `docs/superpowers/plans/2026-11-24-v4-fixed-gantry.md` with D-314 and `docs/v4-model.md`, then Task 7.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
