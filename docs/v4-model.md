@@ -360,3 +360,10 @@ Owner: the hub "need not be so substantial nor octagonal", the disc can be a las
 - The 6 new bodies against every solid body in the design, with the turning set (forks, holders, tools, disc, SHF12, flag, stub) turned 0, 10, 20 and 30 deg: no overlaps.
 - Clearances: the sensor body (r 34 to 46) and sleeve (r 31 to 49) against the tool tips (r 56): 7; the SHF12 flange flat (23.5) against the sensor (r 34): 10.
 - Not rerun: the carriage poses. The new parts are inside the old hub and disc envelopes or below Z -58 (the withdrawn tool tip is at Z -30).
+
+# Task 28: rear shear plates (25 Nov 2026, D-323)
+
+- New component `Rear shear plates (D-323)`, one base feature, 40 bodies. Per side: `Rear shear plate X± 10x200x445` (X ±120 to ±320, Y 335 to 345, Z -165 to 280; 8 x Ø11, 6 x Ø9), `Beam rear spacer X± 80x25x200` (Y 310 to 335, Z 180 to 260; 4 x Ø8.5 x 22 tapped, 4 x Ø11 countersunk Ø20), 4 `Rear plate screw M10x30 ... upright`, 4 `... spacer`, 4 `Spacer screw M10x35 countersunk`, 6 `Rear plate screw M8x20 ... T-nut`. Steel, material copied from the upright.
+- Cuts into other components (base feature of tool bodies + Combine cut each): `Upright X+/X- rear M10 tapped holes D-323` (Ø8.5, Y 310 to 335, X ±295, Z -40, 20, 80, 140; clear of the M12 joint bolts at Z -140/-100 and the beam bolt holes at Y 220/280); `Beam rear wall M10 tapped holes D-323` (Ø8.5 through the 8 wall at X ±175, ±265, Z 200, 240); `Beam EG core screw-tip holes D-323` (Y 300 to 302).
+- Checks: timeline all healthy. New bodies against every visible body: only screw threads in their tapped holes (M10 in Ø8.5: 436 mm³ in the upright, 174 in the beam wall, 44 in the core, 436 in the spacer) and the M8 T-nut screws in the profile envelope (503 mm³ each; the T-slots are not modelled). Table at full +Y travel reaches Y 315, the plate is at 335 (20 clear); the Y motor plate is at X ±40 only; the X carriage stays in front of Y 285.
+- **Not saved.**

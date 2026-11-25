@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **154 line items, 142 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **157 line items, 144 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -8,7 +8,7 @@ Full list: [bom.csv](bom.csv). **154 line items, 142 priced.** Prices were read 
 |---|---|---|---|
 | Frame | 33 | 28 | £1,206.67 |
 | Motion | 17 | 17 | £1,102.56 |
-| Gantry | 9 | 8 | £275.65 |
+| Gantry | 11 | 10 | £335.41 |
 | Spindle | 9 | 9 | £1,533.95 |
 | Tool changer | 9 | 7 | £145.69 |
 | Pneumatics | 6 | 6 | £110.22 |
@@ -16,15 +16,15 @@ Full list: [bom.csv](bom.csv). **154 line items, 142 priced.** Prices were read 
 | Enclosure | 4 | 4 | £78.61 |
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
-| Fixings | 17 | 13 | £89.09 |
-| **All** | **154** | **142** | **£5,894.20** |
+| Fixings | 18 | 13 | £89.09 |
+| **All** | **157** | **144** | **£5,953.96** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,894.20**. Not priced yet: A10, A11, X18, X21, F28, F30, F31, F32, F33, G10, X24, X25.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,953.96**. Not priced yet: A10, A11, X18, X21, F28, F30, F31, F32, F33, G10, G15, X24, X25.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
-| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £4,479.10 |
+| 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £4,538.86 |
 | 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,415.10 |
 
 Lines still TO PRICE: see the list above.
@@ -207,6 +207,9 @@ Lines still TO PRICE: see the list above.
 | G10 | 1 | Upright joint faces: ground or epoxy-shimmed | 1 lot | Mill-scale faces of the two uprights (150 x 325) and the matching end plate outer faces: surface-ground by the shop (quote with F30), or epoxy-shimmed from F01 as the fallback (no purchase, under 0.5 kg binder) | [product]() | PRICE PENDING: owner to get the shop's price; the shim fallback costs nothing extra |  | D-309 (24 Nov 2026). Review Focus item: a ground or shimmed face on the upright joint. PRICE PENDING with F30. The joint is steel upright to steel end plate; the aluminium profiles meet the end plate at the cut and tapped profile ends (F25, F27), where the end plate face is the reference |
 | G11 | 1 | X rail front plate: steel flat bar 160 x 20, one length 950 (plate 890 + 2 pads) | 1 pcs | K I Metals mild steel flat bar 160 x 20 (hot rolled), one length 950: the X rail front plate 160 x 20 x 890 (Z 140 to 300 on the beam front face, overhanging the tube top and bottom; the 2 X rails on it 120 apart, M5 tapped, X20) and a 50 offcut cut into 2 pads 50 x 80 x 20 under the X BK12 and BF12. All shop-ground (F30). Bolted to the beam with studs or bolts fitted before the EG fill (D-310); uprights relieved 5 x 20 at the top front edge for the plate | [product](https://kimetals.co.uk/materials/mild-steel/mild-steel-flat-bar/kim151153) | £61.77/m ex VAT (£74.12 inc) x 0.95 m = £58.68 ex VAT (product page confirmed by curl 25 Nov 2026) | 70.42 | Task 5 fix round 1 (24 Nov 2026, D-312). £58.68 x 1.2 = £70.42 inc VAT. About 23.6 kg/m, 22 kg. Price from the Store API only (product 151153 "160mm x 20mm Mild Steel Flat Bar", 6177 pence/m), page not opened. Delivery not shown (X24). Grinding F30; drilling and tapping X25 Price check 18 (25 Nov 2026): product page read, matches the Store API price. D-320 (25 Nov 2026): the X- pad now carries the HM12-60 (foot 60 x 95), not the BK12: pad size and the G11 length to be set in the model. |
 | G12 | 1 | Beam end cap plates (EG dams): steel flat bar 120 x 5, 2 x 120 | 2 pcs | K I Metals mild steel flat bar 120 x 5, one length 240 cut into 2 x 120: plain caps over both ends of the 120 x 120 beam tube, bonded or bolted before the EG fill. Replace the X motor bracket end plate as the -X dam (D-320). No load on them | [product](https://kimetals.co.uk/materials/mild-steel/mild-steel-flat-bar/kim150066) | £11.58/m ex VAT x 0.24 m = £2.78 ex VAT (product page and Store API, 25 Nov 2026; 1 cut free) | 3.34 | D-320 (25 Nov 2026). £2.78 x 1.2 = £3.34 inc VAT. Product page read by curl: £11.58 per metre excl. VAT, cut to length, minimum 50; matches the Store API. Delivery with the other K I Metals lines (X24). Owner: "Plain steel cap plate" The owner was asked about the -X end only; the +X cap is from G01 (dams at both ends). |
+| G13 | 1 | Rear shear plates: steel flat bar 200 x 10, 2 x 445 | 2 pcs | K I Metals mild steel flat bar 200 x 10 (product 123860), 0.89 m cut into 2 x 445. One plate behind each upright in the Y 335 plane (X ±120 to ±320, Z -165 to 280): bolted to the tray rear profile (6 x M8 T-nut), the upright rear face (4 x M10, tapped) and the beam spacer G14 (4 x M10). Holes drilled by the owner: per plate 8 x Ø11, 6 x Ø9. Braces the upright foot and top joints (task 28) | [product](https://kimetals.co.uk/materials/mild-steel/mild-steel-flar-bar-200mm-x-10mm) | £38.60/m ex VAT x 0.89 m = £34.35 ex VAT (Store API, curl, 25 Nov 2026) | 41.22 | D-323 (25 Nov 2026). Not ground: a shear plate, not a rail seat |
+| G14 | 1 | Beam rear spacers: steel flat bar 80 x 25, 2 x 200 | 2 pcs | K I Metals mild steel flat bar 80 x 25 (product 151180), 0.4 m cut into 2 x 200. On the beam rear face (Y 310 to 335, Z 180 to 260, X ±120 to ±320), bringing it to the upright rear face plane. Per spacer: 4 x M10 tapped 22 deep (plate screws) and 4 x Ø11 countersunk (into the beam rear wall) | [product](https://kimetals.co.uk/materials/mild-steel/mild-steel-flat-bar/kim151180) | £38.63/m ex VAT x 0.4 m = £15.45 ex VAT (Store API, curl, 25 Nov 2026) | 18.54 | D-323 (25 Nov 2026). The beam rear wall gets 8 x M10 tapped holes before the EG fill (D-310); the screw tips go 2 mm into the core, so fit them (or greased dummies) before the pour |
+| G15 | 1 | Rear shear plate screws | 1 lot | Per D-323: 16 x M10 x 30 hex or socket cap (8 into the uprights, 8 into the spacers), 8 x M10 x 35 countersunk (spacers into the beam rear wall), 12 x M8 x 20 socket cap with 12 KJN M8 T-nuts (tray rear profile) | [product]() | PRICE PENDING (not checked yet) |  | D-323 (25 Nov 2026) |
 | X23 | 1 | Rail bar fixing: M8 socket cap screws and T-nuts | 1 lot | Fix the 4 bars F29: Y bars (670) to all 4 tray profiles with M8 T-nuts in the 10 mm top slots (KJN T-nut KJN530287, £0.36 ex VAT, £0.43 inc each) + M8 screws: proposed 2 per profile per bar = 8 per bar, 16 for Y (Claude's proposal, positions from the V4 model); X bars to the beam with screws or studs placed before the EG fill (count in Task 5) | [product](https://www.aluminium-profile.co.uk/m8-t-nut-10pk-kjn530287/) | 16 x KJN M8 T-nut KJN530287 £0.36 ex / £0.43 inc each = £6.88 inc (page, curl 25 Nov 2026, 3903 in stock) + 16 x M8 x 30 socket cap 12.9 BZP at Westfield Fasteners £3.76 ex / £4.51 inc | 11.39 | Task 4 fix round 1 (24 Nov 2026): Y bars 670 bolted into all 4 profiles, 16 T-nuts + 16 M8 screws proposed for Y. D-311 (24 Nov 2026). PRICE PENDING until the model gives the count (Task 5). T-nut price: price-check-v4.md, listed per item (the name says 10) Price check 18 (25 Nov 2026): priced for the proposed 16 (Y bars); M8 x 30 is Claude's proposed length (20 bar + T-nut). Count and length from the model. |
 | X24 | 1 | Delivery charges for the V4 frame steel and extrusion | 1 lot | KJN Aluminium Profile delivery (F25) and K I Metals delivery (F26, F29, G01, G07) | [product]() | PRICE PENDING: shown only at checkout (KJN from £15.50 + VAT; K I Metals free over £150 + VAT but heavy items excluded) |  | 24 Nov 2026. PRICE PENDING. Not read by curl. The steel is about 83 kg (beam 24, uprights 38, end plates 19): a heavy or oversize exclusion is likely, so ask K I Metals in writing Fix round 1: the total and overrun are lower bounds while pending lines are blank. |
 | X25 | 1 | Machining of the V4 steel: counterbore, tap, ream (end plates, uprights, beam) | 1 lot | Drilling and tapping the 2 end plates F26 (4 x M16 clearance each, M12 tapped for the upright bolts, blind dowel holes), the 2 uprights G07 (4 M12 counterbores each, dowel holes, 2 M12 tapped in the top edge), and the beam G01 (rail and upright bolt holes, fill ports, before the EG fill). Owner at home or the shop (ask in the F30 quote) Also 4 x M8 tapped 15 deep in the F26 X+ plate outer face for the ATC hub block, positions in F26 (D-317) | [product]() | PRICE PENDING: owner to say who machines it and the price |  | D-309 (24 Nov 2026). PRICE PENDING. Added because no line carried this work. With X24 delivery, F30 grinding, G10 and the other pending lines, the total is a LOWER BOUND and the budget overrun (£215.66 at the time of writing) is a minimum. |

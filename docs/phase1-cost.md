@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,479.10** (budget £4,200, D-127). Not priced yet: X18, X21, F28, F30, F31, F32, F33, G10, X24, X25. No eBay.
+**Phase 1 priced total: £4,538.86** (budget £4,200, D-127). Not priced yet: X18, X21, F28, F30, F31, F32, F33, G10, G15, X24, X25. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -8,13 +8,13 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 |---|---|
 | Frame | £1,206.67 |
 | Motion | £1,102.56 |
-| Gantry | £275.65 |
+| Gantry | £335.41 |
 | Spindle | £477.09 |
 | Electronics | £820.03 |
 | Stand | £243.36 |
 | Metrology | £264.65 |
 | Fixings | £89.09 |
-| **Total** | **£4,479.10** |
+| **Total** | **£4,538.86** |
 
 ## Frame
 
@@ -89,6 +89,8 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | G10 | Upright joint faces: ground or epoxy-shimmed | 1 lot | to price |
 | G11 | X rail front plate: steel flat bar 160 x 20, one length 950 (plate 890 + 2 pads) | 1 pcs | £70.42 |
 | G12 | Beam end cap plates (EG dams): steel flat bar 120 x 5, 2 x 120 | 2 pcs | £3.34 |
+| G13 | Rear shear plates: steel flat bar 200 x 10, 2 x 445 | 2 pcs | £41.22 |
+| G14 | Beam rear spacers: steel flat bar 80 x 25, 2 x 200 | 2 pcs | £18.54 |
 
 ## Spindle
 
@@ -182,6 +184,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | X20 | Rail screws M5 x 16 socket cap (X and Y rails into the ground bars) | 44 pcs | £5.06 |
 | X21 | Joint screws added in the CAD (D-262) and not covered by X03 to X20 | 1 lot | to price |
 | X22 | Plate jack screws M6 x 20 set screw DIN 913 (dropped: D-311) | 0 pcs | £0.00 |
+| G15 | Rear shear plate screws | 1 lot | to price |
 | X23 | Rail bar fixing: M8 socket cap screws and T-nuts | 1 lot | £11.39 |
 | X24 | Delivery charges for the V4 frame steel and extrusion | 1 lot | to price |
 | X25 | Machining of the V4 steel: counterbore, tap, ream (end plates, uprights, beam) | 1 lot | to price |
