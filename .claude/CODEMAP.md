@@ -9,7 +9,7 @@ because they grow every session.
   Metalcutter, re-sized; D-338 on). It is **not in git** and is often unsaved: only the owner saves it.
 - The repo holds the decisions, BOM, design notes, price checks, calc scripts (Python 3.13) and the
   LinuxCNC config. `cad/v2`, `cad/type0_*.py`, `cad/v4` are history (fixed gantry, V4).
-- No build. Scripts: `PYTHONUTF8=1 python tools/<script>.py` (stdlib; some need numpy/scipy/
+- No build. Scripts: `python tools/<script>.py` (PowerShell: set `$env:PYTHONUTF8=1` first; stdlib; some need numpy/scipy/
   matplotlib/openpyxl; `cad/` needs `pip install cadquery`). Checks: `python tools/v5_sizes.py`
   (prints PASS), `python tools/v5_parts_check.py`, `python tools/codemap.py --check`.
 - Fusion scripts (`tools/fusion/*.py`) run inside Fusion through the MCP `fusion_mcp_execute`
@@ -65,8 +65,8 @@ docs/bom.csv ─(tools/bom_hook.py, on edit)─┬→ tools/gen_bom_md.py      �
 tools/v5_sizes.py:sizes() → tools/v5_beam.py ; numbers copied by hand into docs/v5-sizes.md, Fusion params
 tools/v4_sizes.py:sizes() → tools/v4_frame_stiffness.py → tools/v4_joint_sweep.py
 docs/v5-parts.md → tools/v5_parts_check.py (every "How made" cell valid)
-cad/v2/type0_v2.py → cad/v2/assembly.py → out/assembly/assembly_data.json
-                     → cad/v2/enclosure.py, cad/v2/base_cores_sketch.py ; cad/v2/render_views.py (history)
+cad/v2/type0_v2.py → cad/v2/assembly.py → out/assembly/assembly_data.json → cad/v2/enclosure.py, base_cores_sketch.py
+                     assembly.py imported by render_views.py, render_steps.py, base_cores_sketch.py (all history)
 cad/vendor/*.step → cad/v2/assembly.py, tools/build_fusion_parts.py; imported by hand into Fusion
 linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) → sim/test_sim.py
 ```
@@ -122,7 +122,7 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
   rail(length, pitch), main()
 - `tools/build_open_links.py` (23) Rebuild tools/open_links.py with the current parts list embedded. Run: python tools/build_open_links.py  
   vendor(u)
-- `tools/codemap.py` (143) Regenerate the mechanical sections of .claude/CODEMAP.md (tree, script index, where-index).  
+- `tools/codemap.py` (145) Regenerate the mechanical sections of .claude/CODEMAP.md (tree, script index, where-index).  
   files(), tree(fs), sig(fn), symbols(fs), where(), main()
 - `tools/cure_heat.py` (40) Curing heat estimate for the epoxy-granite castings with Ampreg 30 + 3X Slow (D-122).
 - `tools/fusion/v5_check_task4.py` (96) Read-only check of Type_0_v5 for V5 plan Task 4 (run through fusion_mcp_execute, readOnly). 1. timeline warnin  
@@ -198,7 +198,7 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
 - Printed parts and settings → `docs/printed-parts.md`
 - Epoxy granite (V3/V4 history) → `docs/eg-*.md`, `docs/curing-heat.md`, `docs/v4-pour.md`
 
-## Docs map (`docs/`, 93 files; read only what a task names)
+## Docs map (`docs/`; read only what a task names)
 - **Live:** `decisions.md`, `bom.csv` (+ generated `bom.md`, `phase1-*`, `wave1-order-sheet.md`),
   `requirements.md`, `owner-todo.txt`, `open-questions.md`, `design-issues.md`, `spec-gaps.md`,
   `v5-*.md` (idea-matrix, sizes, parts, model), `price-check-v5.md`, `printnc-assessment.md`,
@@ -222,6 +222,6 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
 - Fusion: occurrence transforms on some imports do not hold (DFU1605): a Move feature places it.
   Hide replaced PrintNC parts, do not delete them. Re-running `v5_y1_place.py` only resets transforms.
 - `SEAT` in `v5_y1_place.py` is 0 until the 3 mm seat step; then delete `Y 1605 Screw` first.
-- Windows: set `PYTHONUTF8=1`; use `encoding="utf-8"` in new scripts.
+- Windows: set `PYTHONUTF8=1` (bash) or `$env:PYTHONUTF8=1` (PowerShell); use `encoding="utf-8"` in new scripts.
 - The two untracked `*.step` files in the root and `cad/v2/` are the owner's: do not commit them.
 - Do not merge branch `claude/awesome-ramanujan-by9kds` (old design).

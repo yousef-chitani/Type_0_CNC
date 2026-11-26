@@ -30,6 +30,7 @@ Stop point if split: after Y2 + check (seats and plates next).
 - [ ] `cad/__pycache__/type0_layout.cpython-313.pyc` is tracked despite `.gitignore`: `git rm --cached`
 - [ ] `docs/open-questions.md` header (15 Nov, £3,969.54, D-134) is stale: refresh the header line only, or mark the file V3 history (ask the owner which)
 - [ ] `docs/supplier-messages.md`: add the LiMo question "HM12-60 motor holes: 49.4 or 50 square?" (a few lines) if not there
+- [ ] `docs/tasks/README.md` "State in five lines" has about 30 dated session lines: move them, unchanged, to `docs/handover-archive.md` and keep 5 lines
 - [ ] Note in `docs/v5-model.md`: PrintNC drill guide 3B holes 0.75 off its riser screws (Y -24.25/55.75 vs -25/55)
 
 Files: `docs/HANDOVER.md:30-45`, `README.md:1-30`, `docs/tasks/20-*.md` (17 lines), `docs/open-questions.md:1-5`, `docs/supplier-messages.md` (grep `LiMo`).
@@ -37,9 +38,9 @@ Files: `docs/HANDOVER.md:30-45`, `README.md:1-30`, `docs/tasks/20-*.md` (17 line
 ## C. V5 bed and Task 5: beam, X, Z, spindle (V5 plan Task 4 item 5, Task 5) — L
 **Needs:** A done; owner's bed STEP in `cad/vendor/` (D-364) for the bed part.
 - [ ] Bed from the owner's STEP; world origin at the bed top centre (`docs/v5-model.md` "Origin"); spindle reach at Y min/max
-- [ ] Beam RHS 200 x 150 x 8 with both X rails (122 apart) and 3 mm seats on the front face; X screw between the rails
-- [ ] Front carriage plate (= Z fixed plate, D-357 to D-360); Type 0 Z from `Type_0_v4` (derive), 50 longer (D-348), brake motor
-- [ ] Spindle `cad/vendor/jianken_jgl80_2.2r24.step` in the bought clamp
+- [ ] Beam RHS 200 x 150 x 8 with both X rails (122 apart) and epoxy seats on the front face (thickness: ask; D-363 is the Y seats only); X screw between the rails
+- [ ] X carriage = the Type 0 Z fixed plate on the 4 X blocks (D-358), Z block shims (D-359); Type 0 Z from `Type_0_v4` (derive), 50 longer (D-348), brake motor
+- [ ] Spindle `cad/vendor/jianken_jgl80_2.2r24.step` in the bought 80 mm clamp (D-360)
 - [ ] Check: nose 25 and 225 at the Z limits; bed corners reachable; overlaps clean at 3 gantry positions
 
 Files: plan `docs/superpowers/plans/2026-11-26-v5-printnc.md:69-89`, `tools/v5_beam.py`, `tools/v5_sizes.py:98-`, `docs/v5-parts.md`, `docs/v5-sizes.md`.
@@ -77,12 +78,16 @@ Files: plan `:107-113`, `docs/bom.csv` (hook runs the generators), `tools/gen_wa
 ```
 # Next session
 ## Context (≤5 lines)
+What the project state is now, what just got done, anything half-finished.
 ## Do this bundle: <name>
-- [ ] task
+- [ ] task 1
+- [ ] task 2
 ## Files to load (exact paths + line ranges)
-- path:lines — why
+- path/file:40-120 — why
 ## Already known (don't re-investigate)
+Facts, decisions and dead ends found this session.
 ## Done when
+Checks/commands that must pass; CODEMAP.md and TASKS.md updated.
 ## Then
 Hand over (CLAUDE.md), tick TASKS.md, write the next NEXT_PROMPT.md with this template.
 ```

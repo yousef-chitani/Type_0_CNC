@@ -8,7 +8,7 @@
 
 **No stand-ins for real parts.** Never use a stand-in (a box, a guessed shape, rough sizes) when an accurate STEP or drawing of the part is available: use it. If none is in the repo's folders (e.g. `cad/vendor/`), stop and ask the owner to fetch it.
 
-Start here: `docs/tasks/README.md` (rules and task list).
+Start here: `.claude/NEXT_PROMPT.md` and `.claude/CODEMAP.md`; then the rules in `docs/tasks/README.md` (lines 5 to 11) and only the table row you need.
 
 ## Navigation and handoff (keeps sessions cheap)
 - **First, read `.claude/NEXT_PROMPT.md` (if it exists) and `.claude/CODEMAP.md`.** Then only the files they name.
@@ -17,4 +17,4 @@ Start here: `docs/tasks/README.md` (rules and task list).
 - Do not re-read a file this session unless it changed.
 - When you add, move, rename or delete a file or a public function, update `.claude/CODEMAP.md` in the same task: run `python tools/codemap.py` (tree, script index, where-index), and fix the hand-written lines. A stale map is worse than none. `python tools/codemap.py --check` tells you if it is stale.
 - **Work in bundles** from `.claude/TASKS.md`: tasks that share files or context, done in one pass (load once, change all, check once at the end, tick off). Small related finds fold in; others go to the right bundle. Split a bundle across sessions only if it is too big, and say exactly where you stopped. `docs/tasks/README.md` stays the record of task state; TASKS.md only groups the work.
-- **End of every bundle (or a forced stop):** the handover above, plus overwrite `.claude/NEXT_PROMPT.md` with the template at the top of TASKS.md, and print it in chat. The handover's "exact next step" points to it.
+- **End of every bundle (or a forced stop):** the handover above, plus overwrite `.claude/NEXT_PROMPT.md` with the template at the bottom of `.claude/TASKS.md`, and print it in chat. The handover's "exact next step" points to it.

@@ -2,7 +2,8 @@
 
 Run from anywhere: python tools/codemap.py   (add --check to only report if the map is stale).
 Only text between '<!-- AUTO:<name> -->' and '<!-- /AUTO:<name> -->' is rewritten; everything
-else in CODEMAP.md is hand-written and kept byte for byte. Uses git ls-files and Python's ast.
+else in CODEMAP.md is hand-written and kept byte for byte. Uses git ls-files and Python's ast,
+so `git add` new files before running it (untracked files are not mapped).
 """
 import ast
 import re
@@ -113,8 +114,9 @@ def symbols(fs):
 def where():
     lines = []
     for concept, f, rx in WHERE:
-        n = next((i for i, ln in enumerate((ROOT / f).read_text(encoding="utf-8").splitlines(), 1)
-                  if re.search(rx, ln)), None)
+        p = ROOT / f
+        n = next((i for i, ln in enumerate(p.read_text(encoding="utf-8").splitlines(), 1)
+                  if re.search(rx, ln)), None) if p.exists() else None
         lines.append(f"- {concept} → `{f}:{n}`" if n else f"- {concept} → `{f}` (NOT FOUND: fix WHERE)")
     return lines
 
