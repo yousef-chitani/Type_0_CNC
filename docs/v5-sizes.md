@@ -2,7 +2,7 @@
 
 Made by `tools/v5_sizes.py` (`PYTHONUTF8=1 python tools/v5_sizes.py`). All lengths in mm. The one source of V5 lengths for plan Tasks 2 to 8. Asserts at the bottom fail if a rule breaks.
 
-**State (26 Nov 2026): every check passes except one input.** `holder_top_min` waits for the real ISO20 holder STEP. The owner is fetching it (the stand-in 44 is not used, CLAUDE.md rule). Until then the script ends with `INCOMPLETE` and exit code 2.
+**State (26 Nov 2026): PASS, all inputs filled.** The holder stack comes from the real ISO20-ER16 holder STEP (`cad/vendor/iso20_er16_holder.step`), with the nose taken as the spindle front face where the holder flange seats (D-352). Rack holder tops can sit from **70.85 to 120** above the table.
 
 ## Result
 
@@ -13,7 +13,7 @@ Made by `tools/v5_sizes.py` (`PYTHONUTF8=1 python tools/v5_sizes.py`). All lengt
 | z_travel | 200 | nose 25 to 225 (D-348) |
 | rack_row_span | 420 | 7 x 60, first to last holder centre |
 | rack_y_depth | 150 | 40 gap + 30 entry slide + 80 row pitch (D-351) |
-| holder_top_min | waiting | 25 + nose-to-holder-top at pickup (real ISO20 holder) |
+| holder_top_min | 70.85 | 25 + 45.85 holder stack (real ISO20 holder, D-352) |
 | holder_top_max | 120 | 225 - 5 - 100 tool (D-350) |
 | x_rail | 650 | 433 + 177.5 carriage (100 pitch + 77.5 block) + 20 = 630.5, next LiMo size |
 | y_rail | 650 | 450 + 175 Y roller + 2 x 0.5 = 626, next LiMo size |
@@ -37,12 +37,13 @@ Tags: **STEP** measured, **DRAWING**, **D-** decision, **LIMO** live page, **EST
 | Y travel for the work | 300 | requirements (250 of work), as V4 |
 | Nose | 25 to 225 | D-348 |
 | Tool radius | 6.5 | ER20 max collet 13 (D-78 spindle ER20) |
-| Rack | 2 x 8, pitch 60 | D-344 (holder flange Ø45, `docs/atc-wheel.md`, stand-in) |
+| Rack | 2 x 8, pitch 60 | D-344. Real holder flange Ø33 (STEP), so 27 between flanges (the Ø45 stand-in left 15) |
 | Entry slide | 30 | `docs/atc-wheel.md` (Y -55 to -85) |
 | Row pitch Y, bed gap | 80, 40 | D-351 |
 | Clear over the front row | 5 | plan Review Focus |
 | Longest tool | 100 | D-350 |
-| Nose to holder top at pickup | **waiting** | real ISO20 holder STEP, owner fetching (44 was a stand-in, D-252) |
+| Nose to holder top at pickup | 45.85 | STEP `cad/vendor/iso20_er16_holder.step`: flange top 7.483 to pull-stud top 53.329. Nose = spindle front face, where the flange top seats (D-352; the Jianken STEP shows the flange top at its front face X 319). From the taper's gauge diameter (Ø22.22, at 8.233) it is 45.10; the larger figure is used |
+| Holder flange | Ø33 | STEP `cad/vendor/iso20_er16_holder.step` (row-spacing check: 80 >= 30 entry + 33 + 5) |
 | HGH20CA length | 77.5 | STEP `cad/vendor/hgh20ca_block.step` |
 | Block pitch, rail spare (X, Z) | 100, 20 | D-150 |
 | X carriage | 150 | Type 0 Z fixed plate width (D-179, D-191) |

@@ -19,14 +19,15 @@ WORK_Y = 250                # D-344
 Y_WORK_TRAVEL = 300         # Y travel for 250 of work (requirements; v4-sizes rule)
 NOSE_MIN, NOSE_MAX = 25, 225   # table to nose (D-348)
 TOOL_RADIUS = 6.5           # largest ER20 collet, 13 mm (Phase 1 spindle ER20, D-78)
-RACK_PITCH_X = 60           # D-344 (holder flange Ø45, docs/atc-wheel.md)
+RACK_PITCH_X = 60           # D-344 (real holder flange Ø33, so 27 between flanges)
 TOOLS_PER_ROW = 8           # D-344
 RACK_ROWS = 2               # D-344
 ENTRY_STROKE = 30           # fork entry slide along Y (docs/atc-wheel.md: Y -55 to -85)
 CLEAR = 5                   # tool tip over the front-row holder tops (plan, Review Focus)
 
-HOLDER_STACK = None         # nose to holder top at pickup. Waits for the real ISO20 holder STEP
-                            # (owner fetching, 26 Nov); 44 was from STAND-IN holders (D-252)
+HOLDER_STACK = 45.85        # nose (spindle front face, D-352) to pull-stud top at pickup: flange top
+                            # 7.483 to stud top 53.329 (STEP cad/vendor/iso20_er16_holder.step)
+HOLDER_FLANGE_DIA = 33      # STEP cad/vendor/iso20_er16_holder.step (the stand-in was Ø45)
 TOOL_MAX = 100              # longest tool below the nose (D-350)
 ROW_PITCH_Y = 80            # front row to back row, holder centres (D-351)
 RACK_BED_GAP = 40           # Y axis at end of work travel to front-row entry point (D-351)
@@ -138,7 +139,7 @@ if __name__ == "__main__":
         assert s["holder_top_min"] >= s["nose_min"] + HOLDER_STACK
         assert s["holder_top_min"] <= s["holder_top_max"], "no rack height works"
     # back row reached over the front row: carried holder clears the front holders
-    assert ROW_PITCH_Y >= ENTRY_STROKE + 45 + CLEAR, "rows too close for the entry slide"
+    assert ROW_PITCH_Y >= ENTRY_STROKE + HOLDER_FLANGE_DIA + CLEAR, "rows too close for the entry slide"
     for k in ("x_rail", "y_rail", "z_rail"):
         assert s[k] in LIMO_RAIL_SET, k
     custom = []
