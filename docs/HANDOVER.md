@@ -7,8 +7,8 @@
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (41st session): V5 design doc written (Task 31)
-- **Decided (owner, Q&A):** **D-344** work area 400 x 250, 16 tools (2 rows of 8); **D-345** rack behind the bed, rows along X (Y travel about +150); **D-346** model starts fresh from PrintNC, not `Type_0_v3` (Claude had proposed v3); **D-347** nose stays 25 to 175 (D-267), ihavenofish's +50 Z not taken, rack mounted below the bed top.
-- **Done:** `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`: goals, decisions, Claude's calls (beam SHS 120 x 120 x 8, inline drives, Type 0 Z on bought tooling plate, T-slot bed, sand, printed forks on extrusion, rail-seat pass mark 0.02 mm to check against HIWIN HG20 tolerances), a table of how each PrintNC "Printed-Milled" part is made under D-339, rough sizes (X travel about 430, Y about 450, Z 150), risks. No model, no BOM change.
+- **Decided (owner, Q&A):** **D-344** work area 400 x 250, 16 tools (2 rows of 8); **D-345** rack behind the bed, rows along X (Y travel about +150); **D-346** model starts fresh from PrintNC, not `Type_0_v3` (Claude had proposed v3); **D-347** (keep nose 175, rack at bed level) was found impossible in review and **replaced by D-348: +50 Z, nose 25 to 225**, rack holder tops about 70 to 120 above the table (at pickup the nose is 44 below the holder top; with 175 the rack fits only at 69 to 70 with 100 tools).
+- **Done:** `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`: goals, decisions, Claude's calls (beam SHS 120 x 120 x 8, inline drives, Type 0 Z on bought tooling plate, T-slot bed, sand, printed forks on extrusion, rail-seat pass mark 0.02 mm to check against HIWIN HG20 tolerances), a table of how each PrintNC "Printed-Milled" part is made under D-339, rough sizes (X travel about 430, Y about 450, Z 200), the rack height check, risks. **Beam section left open:** a 120 x 120 beam's 88 front face puts two HGR20 rails at most about 68 apart with no room for the BK12 or nut, so front-face X rails need a taller tube, a front bar, or rails top and bottom as PrintNC. No model, no BOM change.
 - **What is left:** owner reads and approves the design doc (or corrects Claude's calls). Task 29 (V4 RFQ) still on hold.
 - **Exact next step:** on approval, write the V5 implementation plan (`docs/superpowers/plans/2026-11-26-v5-printnc.md`) with the writing-plans skill; first plan task is setting the parametric PrintNC model's parameters for V5 in a new `Type_0_v5`.
 
@@ -25,7 +25,7 @@
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-347**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-348**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
