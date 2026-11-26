@@ -28,6 +28,8 @@ CLEAR = 5                   # tool tip over the front-row holder tops (plan, Rev
 HOLDER_STACK = 45.85        # nose (spindle front face, D-352) to pull-stud top at pickup: flange top
                             # 7.483 to stud top 53.329 (STEP cad/vendor/iso20_er16_holder.step)
 HOLDER_FLANGE_DIA = 33      # STEP cad/vendor/iso20_er16_holder.step (the stand-in was Ø45)
+BEAM_H, BEAM_D, BEAM_T = 200, 150, 8   # RHS standing up (D-353)
+X_RAIL_SPACING = 122        # X rail centres on the beam front (D-355)
 TOOL_MAX = 100              # longest tool below the nose (D-350)
 ROW_PITCH_Y = 80            # front row to back row, holder centres (D-351)
 RACK_BED_GAP = 40           # Y axis at end of work travel to front-row entry point (D-351)
@@ -51,7 +53,7 @@ BF_RISER_LEN = 35.5         # BF12 riser along the screw (1439.5..1475)
 BF_SCREW_PAST = 32          # screw end past the rail end on the BF side (rail 1439, screw 1471)
 BEAM_BF_END = 49            # beam end to BF riser (beam -530, riser -481)
 ROLLER_HALF = 40            # Y roller half width; Y rail on its centre (roller 80, rail at ±490)
-FRAME_TUBE_W = 80           # Y frame tube width: PrintNC 80 until Task 2
+FRAME_TUBE_W = 80           # Y frame tube width: SHS 80 x 80 x 6 (D-354)
 X_CARRIAGE = 150            # Type 0 Z fixed plate width along X (D-179, D-191)
 Z_RAIL_V3, Z_SCREW_V3, Z_TRAVEL_V3 = 350, 350, 150   # D-136
 
@@ -120,6 +122,7 @@ def sizes():
         beam_len=beam_len, frame_x=frame_x, frame_y=frame_y,
         y_rail_spacing=frame_x - 2 * ROLLER_HALF,
         frame_inner_x=frame_x - 2 * FRAME_TUBE_W,
+        beam_h=BEAM_H, beam_d=BEAM_D, x_rail_spacing=X_RAIL_SPACING,
     )
 
 

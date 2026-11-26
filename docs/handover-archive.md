@@ -2,6 +2,11 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (42nd session): CLAUDE.md rule, no stand-ins
+- **Done:** new rule in `CLAUDE.md` (owner): never use a stand-in when an accurate STEP or drawing is available; if none is in the repo's folders, ask the owner to fetch it.
+- **What is left:** V5 plan unchanged; Task 32 open.
+- **Exact next step:** plan Task 1 of `docs/superpowers/plans/2026-11-26-v5-printnc.md`: write `tools/v5_sizes.py` and `docs/v5-sizes.md`.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (41st session): V5 design doc written (Task 31)
 - **Decided (owner, Q&A):** **D-344** work area 400 x 250, 16 tools (2 rows of 8); **D-345** rack behind the bed, rows along X (Y travel about +150); **D-346** model starts fresh from PrintNC, not `Type_0_v3` (Claude had proposed v3); **D-347** (keep nose 175, rack at bed level) was found impossible in review and **replaced by D-348: +50 Z, nose 25 to 225**, rack holder tops about 70 to 120 above the table (at pickup the nose is 44 below the holder top; with 175 the rack fits only at 69 to 70 with 100 tools).
 - **Done:** `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`: goals, decisions, Claude's calls (beam SHS 120 x 120 x 8, inline drives, Type 0 Z on bought tooling plate, T-slot bed, sand, printed forks on extrusion, rail-seat pass mark 0.02 mm to check against HIWIN HG20 tolerances), a table of how each PrintNC "Printed-Milled" part is made under D-339, rough sizes (X travel about 430, Y about 450, Z 200), the rack height check, risks. **Beam section left open:** a 120 x 120 beam's 88 front face puts two HGR20 rails at most about 68 apart with no room for the BK12 or nut, so front-face X rails need a taller tube, a front bar, or rails top and bottom as PrintNC. No model, no BOM change.

@@ -23,7 +23,9 @@ Made by `tools/v5_sizes.py` (`PYTHONUTF8=1 python tools/v5_sizes.py`). All lengt
 | beam_len = frame_x | 830.7 | 49 + 35.5 BF riser + 0.5 + rail 650 + 0.7 + 95 HM12 (beam spans the Y rollers' outer faces, PrintNC) |
 | frame_y | 781.7 | HM12 95 + 0.7 + rail 650 + 0.5 + BF riser 35.5, on the Y tube (motor overhangs the tube end, as PrintNC) |
 | y_rail_spacing | 750.7 | frame_x - 2 x 40 |
-| frame_inner_x | 670.7 | between the Y tubes (80 each until Task 2) |
+| frame_inner_x | 670.7 | between the Y tubes (SHS 80 x 80 x 6, D-354) |
+| beam_h, beam_d | 200, 150 | RHS 200 x 150 x 8 standing up (D-353) |
+| x_rail_spacing | 122 | X rail centres on the beam front (D-355) |
 
 **Whip:** longest screw 750 (X and Y), root Ø12.8, fixed-supported, whole length (conservative): **3,433 rpm at 80 %** of critical, 17.2 m/min at lead 5.
 
@@ -59,7 +61,8 @@ Tags: **STEP** measured, **DRAWING**, **D-** decision, **LIMO** live page, **EST
 | Screw past the rail, BF end | 32 | STEP PrintNC: rail 1439, screw 1471 |
 | Beam end to BF riser | 49 | STEP PrintNC: beam -530, riser -481 |
 | Y roller half width | 40 | STEP PrintNC: roller 80, rail at its centre (±490) |
-| Y frame tube width | 80 | STEP PrintNC; **ESTIMATE until Task 2** |
+| Y frame tube width | 80 | SHS 80 x 80 x 6 (D-354); PrintNC's roller is 80 (STEP) |
+| Beam | RHS 200 x 150 x 8, rails 122 apart | D-353, D-355 (`tools/v5_beam.py`) |
 | Z v3 | rail 350, screw 350, travel 150 | D-136 |
 
 PrintNC STEP: `PrintNC V4 Metalcutter V4.0.33 Elements to take.step` (repo root, not in git). It holds the rollers, beam, rails, screws and supports, but **not the frame tubes**, so the frame tube lengths beyond the Y axis parts (`frame_y`) come from the axis parts, not from PrintNC's tubes.
