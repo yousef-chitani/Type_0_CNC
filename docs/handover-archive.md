@@ -2,6 +2,13 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (34th session): task 29 owner answers (D-329, D-330); V4 EG fill priced against two grouts
+- **D-329:** the owner makes the simple parts (saw, drill, tap): base end plates, uprights, beam, beam rear spacers. Shops make the rest. If the upright joint faces need milling, the uprights move to the mill pack (step 4).
+- **D-330:** the RFQ is split by process: laser (and bend), CNC mill, surface grind, lathe; one cover sheet per sub-pack. Parts sorted in `docs/tasks/29-quote-ready-design.md`.
+- **EG fill against grouts** (owner asked): `docs/eg-fill-vs-grouts.md`. V4 fill 23.5 L (pockets 2 x 6.98, beam 9.57), about 54 kg. EG (P1, 11 %, provisional) **£4.95/L used**; bought for V4 £416.22 (kit) or £270.61 (2 x 4.66 kg) = £17.70 or £11.51 per litre. **Sikadur-42+ HE Cold Climate** £326.95 per 8.85 L = **£36.94/L**, £980.85 for V4. **Parex 100 Newton Grout** (cement) £46.96 per 12.5 L = **£3.76/L**, £93.92 to £140.88; not checked: aluminium contact, damping, water cure. Rawlins, curl 25 Nov; delivery unknown. `bom.csv` not changed.
+- Task 29 is not finished: steps 2 to 6 (model, assembly check, make-ability, drawings and STEP, RFQ) remain and need several Fusion sessions.
+- **Exact next step:** task 29 step 2: finish `Type_0_v4` (task 27 Task 7; D-320 X HM12 and pad; D-325 to D-327 folds with `cad/vendor/htd5m_20t_15.step`; replace the envelopes; set the material of every body; a fastener for every hole; clash check at the axis ends). Owner: pick the EG fill.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (33rd session): goal set: a quote-ready design before wave 1 (task 29)
 - **Owner's goal:** before wave 1 (4 Jan 2027) the design is fully defined, makeable and assemblable, so machine shops can quote the made-to-order parts.
 - **Gap map written:** `docs/tasks/29-quote-ready-design.md`. Read from `Type_0_v4` (timeline 194, read-only, nothing changed): 19 made-to-order parts; 6 are envelopes or out of date (X BK12/BF12 pads and X motor bracket against D-320, X nut bracket, beam end dam, Y motor plate, drip skirts); every body has the material Steel. Steps: freeze V4 (task 28 questions), finish the model, assembly order with key access, make-ability check per part, drawings and STEP, RFQ.

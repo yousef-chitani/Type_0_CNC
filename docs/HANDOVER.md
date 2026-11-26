@@ -6,6 +6,14 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (36th session): D-337 edge-wall fixes on `Table plate M11` and `X`/`Z` fold plates in `Type_0_v4`
+- **Done (`D-337`, `Type_0_v4` NOT saved — owner saves in Fusion):**
+  - **X & Z fold plates (`70 x 142 x 20` 6082):** removed the `4 x Ø8 x 6` HM12 counterbores (front edge wall was `1.25 mm`, now **`3.00 mm`** with plain `Ø4.5` through-holes); updated the `8 x` HM12 mounting screws from `M4 x 25` to surface-mounted **`M4 x 30`** A2 SHCS (`WF2362` in `X21`, price to re-check at checkout; heads clear pulleys by `13.5 mm` and belts by `3.75 mm` laterally / `5.8 mm` axially; envelope unchanged).
+  - **Table plate `M11` (`460 x 330 x 25`) & Y rails:** moved `rail_x` inward `5 mm` from `205` to **`200 mm`** (Y bars `X ±175..±225`, M8 T-nut holes `X ±183`, Y rails `X ±190..±210`, Y blocks `X ±178..±222`, table block mounting holes + `16 x M5 x 16` screws `X ±184` and `±216`). Outer `X = ±200` M6 fixture hole columns are now centred between the rail block mounting holes; outer counterbore edge wall increased from `4.0 mm` to **`9.0 mm`**; drip-skirt clearance to blocks increased from `3 mm` to **`8 mm`**.
+  - **Checks:** timeline **320 items, 0 unhealthy**; **0 unexpected overlaps** at `y_pos = 0, -150, +150`.
+- **What is left:** owner saves `Type_0_v4` in Fusion and updates LiMo (`865 mm` X screw) + prices `M15`/`M16`/bearings + re-checks `WF2362` (`M4 x 30`) at checkout; Task 29 steps 3 to 6 (assembly check with key access, make-ability check per part, Fusion drawings + STEP per part, RFQ cover sheets).
+- **Exact next step:** owner saves `Type_0_v4`; next session runs **Task 29 step 3** (assembly order check on `Type_0_v4`, verifying hex-key access for every screw and the pre-pour vs post-pour beam fastener sequence).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (35th session): Task 29 step 2 and Task 27 Task 7 done — `Type_0_v4` finished (timeline 320, 0 unhealthy, 9 poses clean), BOM updated (£4,386.61)
 - **Owner decisions (D-331 to D-336, Q&A):**
   - **D-331:** Z and X belt folds both use **75 mm centres** (`HTD 250-5M-15` 50T, fixing the 310 mm slip in `task28-folds-and-footprint.md`; Optibelt 5M-15 working pull 570 N vs 189 N Z / 251 N X stall, 2.3–3.0x margin, D-322), `2 x 6000-2RS` (`10 x 26 x 8`) in identical `70 x 142 x 20` 6082 fold plates and identical `Ø10 x 68` steel stub shafts (`Ø14 x 1.5` shoulder).
@@ -19,20 +27,13 @@
 - **What is left:** owner saves `Type_0_v4` in Fusion and updates LiMo (`865 mm` X screw) + prices `M15`/`M16`/bearings (`docs/owner-todo.txt`); Task 29 steps 3 to 6 (assembly check with key access, make-ability check per part, Fusion drawings + STEP per part, RFQ cover sheets). Note: ATC D-317 fault 2 (separate slotted motor plate) remains open for Phase 2 (`D-328`).
 - **Exact next step:** owner saves `Type_0_v4`; next session runs **Task 29 step 3** (assembly order check on `Type_0_v4`, verifying hex-key access for every screw and the pre-pour vs post-pour beam fastener sequence).
 
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 25 Nov 2026 (34th session): task 29 owner answers (D-329, D-330); V4 EG fill priced against two grouts
-- **D-329:** the owner makes the simple parts (saw, drill, tap): base end plates, uprights, beam, beam rear spacers. Shops make the rest. If the upright joint faces need milling, the uprights move to the mill pack (step 4).
-- **D-330:** the RFQ is split by process: laser (and bend), CNC mill, surface grind, lathe; one cover sheet per sub-pack. Parts sorted in `docs/tasks/29-quote-ready-design.md`.
-- **EG fill against grouts** (owner asked): `docs/eg-fill-vs-grouts.md`. V4 fill 23.5 L (pockets 2 x 6.98, beam 9.57), about 54 kg. EG (P1, 11 %, provisional) **£4.95/L used**; bought for V4 £416.22 (kit) or £270.61 (2 x 4.66 kg) = £17.70 or £11.51 per litre. **Sikadur-42+ HE Cold Climate** £326.95 per 8.85 L = **£36.94/L**, £980.85 for V4. **Parex 100 Newton Grout** (cement) £46.96 per 12.5 L = **£3.76/L**, £93.92 to £140.88; not checked: aluminium contact, damping, water cure. Rawlins, curl 25 Nov; delivery unknown. `bom.csv` not changed.
-- Task 29 is not finished: steps 2 to 6 (model, assembly check, make-ability, drawings and STEP, RFQ) remain and need several Fusion sessions.
-- **Exact next step:** task 29 step 2: finish `Type_0_v4` (task 27 Task 7; D-320 X HM12 and pad; D-325 to D-327 folds with `cad/vendor/htd5m_20t_15.step`; replace the envelopes; set the material of every body; a fastener for every hole; clash check at the axis ends). Owner: pick the EG fill.
-
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
 - **Only prices confirmed from a live page** (or given by the owner), with the date. Never estimate prices.
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-336**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-337**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
