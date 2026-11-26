@@ -1,6 +1,6 @@
-# Open questions (updated 2026-11-15, in priority order)
+# Open questions (header refreshed 2026-11-26; items in priority order, many from V3: check against V5)
 
-Resolved items are in decisions.md (D-01 … D-134). **Phase 1 is £3,969.54 priced (17 Nov 2026, task 22 step 3, excluding 6 lines not priced: M01, M02 (LiMo HGH20CA 600) and G01–G04 (JLC gantry, not in a wave yet); was £3,908.22, D-136); the Ampreg and GCL delivery costs, the square and shims (X10, X11) and the M5 × 20 bolts are not in it yet.** Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell). The owner's short list is `owner-todo.txt`.
+Resolved items are in decisions.md (D-01 … D-372). **Phase 1 is £4,386.61 priced (26 Nov 2026, `docs/phase1-cost.md`; budget £4,200; V4 BOM, the V5 lines come in V5 plan Task 8).** V5 design questions are in `docs/v5-model.md` ("Left for Task 4") and `.claude/TASKS.md`. Ordered by when the answer is needed (order waves in phase1-schedule.md) and by how costly a wrong answer would be. **Who** says who can answer it: *owner* (you), *session* (Claude, from here), or *bench* (only the hardware can tell). The owner's short list is `owner-todo.txt`.
 
 ## Before wave 1 (4 Jan 2027)
 

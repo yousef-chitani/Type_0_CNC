@@ -119,6 +119,14 @@ For you: C5 price done (17 Nov: C5 sets with supports $424.71; see `price-check-
 
 For you: the all-in DDP price must beat **£464.41** (price check 16). Need the rail accuracy class and a clear yes on the HM12-60 fitting the 50 mm / Ø36 motor face (or drilled to fit). If it won't fit, task 14 makes the mount from the 10 mm plate.
 
+### 6b. HM12-60 motor holes (draft, owner sends; 26 Nov 2026, V5 model)
+In the V5 model the HM12-60 STEP (`cad/vendor/hm12_60.step`, third-party, D-365) has its 4 motor holes on a **49.4** square, the seller's HM12-60-V drawing shows **49.5**, and the 24HS40 motor STEP has **50**. Still not answered by LiMo (6a, question 2).
+
+> Hi Amy, one more question on the HM12-60-V motor mount: what is the exact square of the 4 motor holes, 49.4, 49.5 or 50 mm? My NEMA 24 motor has its holes on a 50 mm square with a 38.1 mm pilot. If it is not 50, can you drill it for 50, and at what cost?
+>
+> Thanks,
+> [name]
+
 ## 7. Jianken (reply to the quote of 18 Nov 2026, draft, owner sends)
 
 Quote received: JGL-80/2.2R24 $1,200 with one ISO20 holder and one ER16 collet, DDP shipping to the UK $260, total $1,460. Rated torque 0.87 Nm, PNP 24 V sensors, about 8 kg, 6 working days to make, about 15 working days to ship. The reply says tariff and customs duties are covered but does not mention import VAT, and it has no pull stud drawing.

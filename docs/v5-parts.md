@@ -42,11 +42,11 @@ PrintNC prints these first and lets builders mill them later. The model's bodies
 
 | PrintNC part | V5 | How made | Stock | Load | Notes |
 |---|---|---|---|---|---|
-| `X/Y/Y2 1610 Nut Plate` (75 x 50 x 15, stepped, Ø28.2 bore) | changed (D-356) | owner | aluminium flat bar, about 75 x 15, cut 50 | thrust | In the screw thrust path. The DFU1605 flange (6 holes PCD 38) and Ø28 body fit the plate (D-277). A plain drilled plate: bore by hole saw or step drill, 6 x M5 tapped. No pockets |
-| `X/Y/Y2 1610 Fill Plate` (75 x 50 x 15, Ø18 hole) | changed (D-356) | owner | as the nut plate | thrust | Clamped with the nut plate inside the Y roller by M5 threaded rod (`M5 Threaded Rod and Nuts`) |
+| `X/Y/Y2 1610 Nut Plate` (75 x 50 x 15, stepped, Ø28.2 bore) | changed (D-356, D-370) | owner | Y: aluminium flat bar 40 x 15, cut 80 (end cap on the 80 x 40 roller's front face, D-370); X: as D-356 until Task 5 | thrust | In the screw thrust path. The DFU1605 flange (6 holes PCD 38) and Ø28 body fit the plate (D-277). A plain drilled plate: Ø28 bore by hole saw or step drill, 6 x M5 tapped on PCD 38. No pockets |
+| `X/Y/Y2 1610 Fill Plate` (75 x 50 x 15, Ø18 hole) | changed (D-356, D-370) | owner | as the nut plate (Y: 40 x 15 cut 80, on the roller's back face) | thrust | Ø18 hole, 6 x Ø5.5 on PCD 38. Clamps the roller against the nut plate with 6 M5 threaded rods about 200 long and nuts (in front of the DFU flange and behind the fill plate) |
 | `X/Y/Y2 2010 Nut/Fill Plate` (hidden) | dropped | none | | | SFU2010 option |
-| `Y BKHM12 Riser`, `X BKHM12 Riser`, `BKHM12 Riser(Mirror)` (96.5 x 60 x 30, stepped) | changed (D-357) | owner | steel flat bar stack, plus shim stock | thrust | Carries the HM12-60-V. Height changes for V5 (HGH20CA, DFU1605 housing, HM12-60): set in Task 4. Plain bar to the nominal height, final height by shims so the HM12 and BF12 centres match the nut, checked with a dial gauge along the screw |
-| `Y BF12 Riser`, `X BF12 Riser`, `BF12 Riser(Mirror)` (60 x 35.5 x 30) | changed (D-357) | owner | as above | thrust | As the BKHM12 riser |
+| `Y BKHM12 Riser`, `X BKHM12 Riser`, `BKHM12 Riser(Mirror)` (96.5 x 60 x 30, stepped) | changed (D-357, D-367, D-369) | owner | steel flat bar, plus shim stock | thrust | Carries the HM12-60-V. Y (modelled): 60 wide x **23 tall** (20 bar + 3 seat, D-363), Y -47 to 62.5, tapped M6 for the HM12-60, M6 counterbored screws to the tube (D-369). X: set in Task 5. Plain bar to the nominal height, final height by shims so the HM12 and BF12 centres match the nut, checked with a dial gauge along the screw |
+| `Y BF12 Riser`, `X BF12 Riser`, `BF12 Riser(Mirror)` (60 x 35.5 x 30) | changed (D-357, D-367, D-369) | owner | as above | thrust | As the BKHM12 riser. Y (modelled): 60 wide x **28 tall** (25 bar + 3 seat), Y 714.5 to 750 |
 | `X/Y BKHM15`, `BF15` risers (hidden) | dropped | none | | | SFU2010 option |
 | `Nema23 Plate`, `Nema24 Plate` and mirrors (85 x 60 x 12, hidden) | dropped | none | | | The HM12-60-V takes the NEMA 24 flange directly |
 | `HM10 Toolhead Adapter`, `ZAxis Nema23 Stepper Mount`, `ZAxis Nema24 Stepper Mount` (steel, milled) | dropped | none | | | PrintNC Z |

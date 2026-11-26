@@ -75,3 +75,4 @@ Scripts (re-runnable, each in its own `fusion_mcp_execute` call; Fusion can run 
 4. ~~Nut and fill plates~~ (51st session: end caps, D-370).
 5. The bed, once the owner has chosen it and put its STEP in `cad/vendor/` (D-364); then the origin offset and the spindle reach at Y min and Y max.
 6. ~~Fix the carriage line in the check script~~ (done 26 Nov 2026); full check re-run after the swap (51st session).
+7. Before printing PrintNC's drill guide 3B: its holes read Y -24.25 and 55.75, 0.75 off PrintNC's own riser screws (Y -25, 55; our HM12 riser follows the screws). Check or correct the guide, or drill the riser through the tube holes (transfer). Guide 3A matches (722, 739).

@@ -29,6 +29,10 @@ SCREW = [(-11.0, 4.0, 10.0), (4.0, 18.0, 12.0), (18.0, 43.0, 12.0), (43.0, 728.0
 HM_SCREW_FACE_Y = 43.0           # PrintNC HM12-57 screw-end face
 NUT_PLATE = 'Y1 Nut Plate (flat bar 40 x 15, cut 80)'
 FILL_PLATE = 'Y1 Fill Plate (flat bar 40 x 15, cut 80)'
+# The 6 threaded rods and 12 nuts that clamp the plates (D-370, as PrintNC: nut 4 thick, rod 1 proud).
+# Name kept clear of the check's SKIP list ('M5', 'Threaded Rod'), so the check sees them.
+RODS = 'Y1 Plate Rods and Nuts (6 x d5, nuts 8 AF x 4)'
+NUT_T, NUT_AF, ROD_PROUD = 4.0, 8.0, 1.0
 
 
 def mat(cols, t_mm):
@@ -54,7 +58,7 @@ def run(_context: str):
     # Parts built once at AX_Z: drop them when SEAT has changed (their centre is off the axis), so
     # they are rebuilt below (drop also removes the Y2 twins; v5_y2_place.py adds new ones). Done
     # first: once 'DFU place' is redone, boxes read 0 in the same call.
-    for n in ('Y 1605 Screw', 'D25L35 Coupling', NUT_PLATE, FILL_PLATE):
+    for n in ('Y 1605 Screw', 'D25L35 Coupling', NUT_PLATE, FILL_PLATE, RODS):
         if n in kid:
             bb = kid[n].boundingBox
             if abs((bb.minPoint.z + bb.maxPoint.z) * 5 - AX_Z) > 0.01:
@@ -250,6 +254,36 @@ def run(_context: str):
         for dx, dz in pcd:
             tb.booleanOperation(b, ycyl(AX_X + dx, AX_Z + dz, y0 - 1, y1 + 1, hole), U.DifferenceBooleanType)
         new_comp(name, [(name, b)])
+
+    # Rods and nuts: each rod Ø5 (thread shown plain) from the nut in front of the DFU flange to the
+    # nut behind the fill plate, ROD_PROUD past each nut; nuts M5 hex 8 AF x 4, a flat facing +-X.
+    # Rod in the nut plate's Ø4.2 tapped hole reads as a small overlap (thread in a tapped hole).
+    if RODS not in kid:
+        y_front = NUT_FACE_Y - NUT_T          # front nut, on the flange front face
+        y_back = ROLLER_Y[1] + PLATE_T + NUT_T  # rear nut, on the fill plate back face
+
+        def hex_nut(x, z, y0, y1):
+            n = None
+            for a in (0, 60, 120):  # three 8-wide slabs about the rod axis, intersected
+                r = math.radians(a)
+                bx = tb.createBox(adsk.core.OrientedBoundingBox3D.create(
+                    adsk.core.Point3D.create(x / 10, (y0 + y1) / 20, z / 10),
+                    adsk.core.Vector3D.create(math.cos(r), 0, math.sin(r)), adsk.core.Vector3D.create(0, 1, 0),
+                    NUT_AF / 10, (y1 - y0) / 10, 2.0))
+                if n is None:
+                    n = bx
+                else:
+                    tb.booleanOperation(n, bx, U.IntersectionBooleanType)
+            tb.booleanOperation(n, ycyl(x, z, y0 - 1, y1 + 1, 5.0), U.DifferenceBooleanType)
+            return n
+        parts = []
+        for i, (dx, dz) in enumerate(pcd, 1):
+            x, z = AX_X + dx, AX_Z + dz
+            parts.append(('Rod %d (d5, %g long)' % (i, y_back - y_front + 2 * ROD_PROUD),
+                          ycyl(x, z, y_front - ROD_PROUD, y_back + ROD_PROUD, 5.0)))
+            parts.append(('Rod %d front nut' % i, hex_nut(x, z, y_front, NUT_FACE_Y)))
+            parts.append(('Rod %d rear nut' % i, hex_nut(x, z, y_back - NUT_T, y_back)))
+        new_comp(RODS, parts)
 
     # Hide (never delete) the PrintNC Y1 parts these replace.
     for o in root.allOccurrences:

@@ -21,8 +21,7 @@ because they grow every session.
 <!-- AUTO:tree -->
 ```
 .claude/  (4 files)  # settings.json (BOM hook), this map, TASKS.md, NEXT_PROMPT.md
-cad/  (184 files)  # type0_layout.py / type0_drawings.py: v1 CadQuery layout (history)
-  __pycache__/  (1 files)
+cad/  (183 files)  # type0_layout.py / type0_drawings.py: v1 CadQuery layout (history)
   out/  (14 files)  # v1 outputs (history)
   v2/  (104 files)  # CadQuery fixed-gantry design (history, D-137); bench, enclosure, printed parts still used
     out/  (87 files)  # generated STEP/PNG/SVG/JSON from cad/v2 scripts
@@ -38,8 +37,8 @@ docs/  (131 files)  # the project: decisions, BOM, design notes, price checks (s
 linuxcnc/  (14 files)
   type0/  (14 files)  # LinuxCNC 2.9 config: type0.ini + HAL, Mesa 7I76EU
     sim/  (5 files)  # simulator ini builder + checks
-tools/  (25 files)  # calc scripts, BOM generators, hook
-  fusion/  (2 files)  # scripts run inside Fusion via fusion_mcp_execute (not python)
+tools/  (26 files)  # calc scripts, BOM generators, hook
+  fusion/  (3 files)  # scripts run inside Fusion via fusion_mcp_execute (not python)
 ```
 <!-- /AUTO:tree -->
 
@@ -125,10 +124,12 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
 - `tools/codemap.py` (145) Regenerate the mechanical sections of .claude/CODEMAP.md (tree, script index, where-index).  
   files(), tree(fs), sig(fn), symbols(fs), where(), main()
 - `tools/cure_heat.py` (40) Curing heat estimate for the epoxy-granite castings with Ampreg 30 + 3X Slow (D-122).
-- `tools/fusion/v5_check_task4.py` (90) Read-only check of Type_0_v5 for V5 plan Task 4 (run through fusion_mcp_execute, readOnly). 1. timeline warnin  
+- `tools/fusion/v5_check_task4.py` (115) Read-only check of Type_0_v5 for V5 plan Task 4 (run through fusion_mcp_execute, readOnly). 1. timeline warnin  
   bodies(root), run(_context)
-- `tools/fusion/v5_y1_place.py` (279) Place the Y1 vendor parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute (not read-only  
+- `tools/fusion/v5_y1_place.py` (313) Place the Y1 vendor parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute (not read-only  
   mat(cols, t_mm), run(_context)
+- `tools/fusion/v5_y2_place.py` (143) Place the Y2 parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute (not read-only) AFTER  
+  move(dx_mm), turn_about_y(x_mm, z_mm), placed(t1, extra), run(_context)
 - `tools/gen_bom_md.py` (62) Regenerate docs/bom.md from docs/bom.csv. Run from the repo root: python tools/gen_bom_md.py  
   esc(s)
 - `tools/gen_phase1_cost.py` (29) Regenerate docs/phase1-cost.md from docs/bom.csv (Phase 1 lines only).
@@ -171,7 +172,7 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
 - V5 parts-list check (How made) → `tools/v5_parts_check.py:13`
 - Y1 datums (axis X/Z, SEAT, BF12 centre) → `tools/fusion/v5_y1_place.py:13`
 - Y1 1605 screw profile → `tools/fusion/v5_y1_place.py:27`
-- Y1 placement entry → `tools/fusion/v5_y1_place.py:41`
+- Y1 placement entry → `tools/fusion/v5_y1_place.py:45`
 - Task 4 check: skipped body names → `tools/fusion/v5_check_task4.py:7`
 - Task 4 check entry → `tools/fusion/v5_check_task4.py:25`
 - BOM hook: generator list → `tools/bom_hook.py:14`

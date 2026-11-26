@@ -73,18 +73,43 @@ def run(_context: str):
     for side, sx in (('Y1', -1), ('Y2', 1)):
         on = lambda bb: bb[0] * sx > 300 or bb[3] * sx > 300
         mov = [m for m in boxes(lambda o: o.component.name in ('HGH20CA Block', 'YRoller', 'YRoller(Mirror)')
-                                or 'DFU1605' in o.component.name
+                                or 'DFU1605' in o.component.name or 'Plate Rods' in o.component.name
                                 or ('Nut Plate' in o.component.name or 'Fill Plate' in o.component.name)
                                 and 'XAxis' not in o.fullPathName) if on(m[1])]
         fix = [f for f in boxes(lambda o: o.fullPathName.startswith(side + ' screw and motor') and (
             'Riser' in o.component.name or '+HM12-60:' in o.fullPathName or '+BF12:' in o.fullPathName)) if on(f[1])]
+        # A fixed body in front of the moving one (by centre) limits forward, behind it limits back.
+        # Gaps may be negative (already overlapping at the model's position): travel is still the sum.
         fwd, back = (1e9, None), (1e9, None)
         for mn, m in mov:
             for fn, f in fix:
                 if m[0] < f[3] and f[0] < m[3] and m[2] < f[5] and f[2] < m[5]:
-                    if f[4] <= m[1] + 0.01 and m[1] - f[4] < fwd[0]:
-                        fwd = (m[1] - f[4], mn + ' / ' + fn)
-                    if f[1] >= m[4] - 0.01 and f[1] - m[4] < back[0]:
+                    if f[1] + f[4] < m[1] + m[4]:
+                        if m[1] - f[4] < fwd[0]:
+                            fwd = (m[1] - f[4], mn + ' / ' + fn)
+                    elif f[1] - m[4] < back[0]:
                         back = (f[1] - m[4], mn + ' / ' + fn)
         print('%s: forward %.1f (%s), back %.1f (%s), Y travel %.1f'
               % (side, fwd[0], fwd[1], back[0], back[1], fwd[0] + back[0]))
+
+    # Plate rods and nuts against every visible body, fasteners included (the HGH20CA block screws
+    # inside the roller are PrintNC fasteners, which the overlap pass above skips).
+    rods = [(o.fullPathName, b) for o in design.rootComponent.allOccurrences
+            if o.isVisible and 'Plate Rods' in o.component.name for b in o.bRepBodies if b.isVisible]
+    others = [(o.fullPathName, b) for o in design.rootComponent.allOccurrences
+              if o.isVisible and 'Plate Rods' not in o.component.name for b in o.bRepBodies
+              if b.isVisible and b.isSolid]
+    for rp, rb in rods:
+        a = rb.boundingBox
+        for op, ob in others:
+            b = ob.boundingBox
+            if (a.minPoint.x < b.maxPoint.x and b.minPoint.x < a.maxPoint.x and a.minPoint.y < b.maxPoint.y
+                    and b.minPoint.y < a.maxPoint.y and a.minPoint.z < b.maxPoint.z and b.minPoint.z < a.maxPoint.z):
+                t = tm.copy(rb)
+                try:
+                    tm.booleanOperation(t, tm.copy(ob), adsk.fusion.BooleanTypes.IntersectionBooleanType)
+                except RuntimeError:
+                    print('  ROD boolean failed | %s | %s | %s' % (rb.name, op, ob.name))
+                    continue
+                if t.volume * 1000 > 0.01:
+                    print('  ROD HIT %.2f mm3 | %s %s | %s %s' % (t.volume * 1000, rp.split('+')[0], rb.name, op, ob.name))

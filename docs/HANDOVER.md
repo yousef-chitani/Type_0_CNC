@@ -25,16 +25,16 @@
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-369**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-372**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
 ## 8. Key files
 | File | What |
 |---|---|
-| `docs/assembly.md`, `cad/v2/assembly.py`, `cad/v2/out/assembly/` | **Old** CadQuery assembly of the fixed-gantry design: **superseded by the Fusion 360 model `Type_0_v3`** (D-137, D-183). `cad/v2/out/assembly/cast_in_features.md` has a current section for the EG tub |
+| `docs/assembly.md`, `cad/v2/assembly.py`, `cad/v2/out/assembly/` | **Old** CadQuery assembly of the fixed-gantry design: superseded by the Fusion 360 models (D-137, D-183); **the live CAD is `Type_0_v5`** (V5, D-338 on; `docs/v5-model.md`). `cad/v2/out/assembly/cast_in_features.md` has a section for the old EG tub |
 | `cad/vendor/` | Manufacturer STEP files (and the Z motor PDF) used by the assembly |
-| `docs/decisions.md` | Decision log D-01 … D-336 |
+| `docs/decisions.md` | Decision log D-01 … D-372 |
 | `docs/open-questions.md` | What's still open, in priority order |
 | `docs/portal-relocation.md` | Assessment: how the portal goes back in the same place after a move |
 | `docs/handoff-opus-tasks.md` | Routine tasks with ready-to-paste briefs for a session on Opus 5.5 |
@@ -55,7 +55,7 @@
 | `docs/review-task-eg-design.md`, `docs/review-eg-design-report.md` | EG design review: brief and report |
 
 ## 9. Working notes for the next session
-- **Fusion 360 MCP:** configured in Antigravity via plugin `fusion-mcp` (`http://127.0.0.1:27182/mcp`). `Type_0_v4` is the active V4 design; do not save Fusion documents unless asked by the owner.
+- **Fusion 360 MCP:** configured in Antigravity via plugin `fusion-mcp` (`http://127.0.0.1:27182/mcp`). `Type_0_v5` is the live V5 design (`Type_0_v4` is frozen); do not save Fusion documents unless asked by the owner.
 - **CadQuery** isn't preinstalled in the cloud container: `pip install cadquery` (about 1 minute). `python cad/v2/assembly.py` takes about 2–3 minutes (vendor STEP import + clash check at 3 positions); `--envelopes` skips the vendor models.
 - After changing the assembly, also run `cad/v2/enclosure.py`, `cad/v2/bench.py` and `cad/v2/base_cores_sketch.py` (they read `cad/v2/out/assembly/assembly_data.json` or the assembly numbers), and regenerate `cast_in_features.md` from the `features` list in `assembly_data.json` (one table per casting; no script in the repo).
 - **Views:** `python cad/v2/render_views.py` re-renders the PNG views in `cad/v2/out/assembly/` (about 3 minutes; run it after `assembly.py`).

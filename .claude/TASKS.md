@@ -25,15 +25,15 @@ Files: `tools/fusion/v5_y1_place.py` (218 lines: datums 11–25, `run` 32–), `
 Stop point if split: after Y2 + check (seats and plates next).
 
 ## B. Docs consistency (no Fusion) — S
-- [ ] `docs/HANDOVER.md` key-files table: "Decision log D-01 … D-336" → D-369; `Type_0_v3` row says superseded by Fusion: name `Type_0_v5`
-- [ ] Root `README.md`: lines 3 and 26 say the CAD is `Type_0_v3`, 8-tool changer: update for V5 (PrintNC moving gantry, 16-tool rack Phase 2)
-- [ ] `docs/tasks/20-housekeeping-after-each-task.md:3`: branch `claude/charming-cori-349jm7` → current branch; add "run `python tools/codemap.py --check`"
-- [ ] `cad/__pycache__/type0_layout.cpython-313.pyc` is tracked despite `.gitignore`: `git rm --cached`
-- [ ] `docs/open-questions.md` header (15 Nov, £3,969.54, D-134) is stale: refresh the header line only, or mark the file V3 history (ask the owner which)
-- [ ] `docs/supplier-messages.md`: add the LiMo question "HM12-60 motor holes: 49.4 or 50 square?" (a few lines) if not there
-- [ ] `docs/tasks/README.md` "State in five lines" has about 30 dated session lines: move them, unchanged, to `docs/handover-archive.md` and keep 5 lines
-- [ ] `docs/v5-parts.md`: old plate and riser sizes (75 x 15 cut 50, 60 x 20, 60 x 25) to D-370 and 23/28 tall risers
-- [ ] Note in `docs/v5-model.md`: PrintNC drill guide 3B holes 0.75 off its riser screws (Y -24.25/55.75 vs -25/55)
+- [x] `docs/HANDOVER.md` key-files table: "Decision log D-01 … D-336" → D-369; `Type_0_v3` row says superseded by Fusion: name `Type_0_v5`
+- [x] Root `README.md`: lines 3 and 26 say the CAD is `Type_0_v3`, 8-tool changer: update for V5 (PrintNC moving gantry, 16-tool rack Phase 2)
+- [x] `docs/tasks/20-housekeeping-after-each-task.md:3`: branch `claude/charming-cori-349jm7` → current branch; add "run `python tools/codemap.py --check`"
+- [x] `cad/__pycache__/type0_layout.cpython-313.pyc` is tracked despite `.gitignore`: `git rm --cached`
+- [x] `docs/open-questions.md` header (15 Nov, £3,969.54, D-134) is stale: refresh the header line only, or mark the file V3 history (ask the owner which)
+- [x] `docs/supplier-messages.md`: add the LiMo question "HM12-60 motor holes: 49.4 or 50 square?" (a few lines) if not there
+- [x] `docs/tasks/README.md` "State in five lines" has about 30 dated session lines: move them, unchanged, to `docs/handover-archive.md` and keep 5 lines
+- [x] `docs/v5-parts.md`: old plate and riser sizes (75 x 15 cut 50, 60 x 20, 60 x 25) to D-370 and 23/28 tall risers
+- [x] Note in `docs/v5-model.md`: PrintNC drill guide 3B holes 0.75 off its riser screws (Y -24.25/55.75 vs -25/55)
 
 Files: `docs/HANDOVER.md:30-45`, `README.md:1-30`, `docs/tasks/20-*.md` (17 lines), `docs/open-questions.md:1-5`, `docs/supplier-messages.md` (grep `LiMo`).
 
@@ -55,7 +55,7 @@ Files: plan `docs/superpowers/plans/2026-11-26-v5-printnc.md:69-89`, `tools/v5_b
 Files: plan `:90-100`, `tools/v5_sizes.py` (`rack_row_span`, `rack_y_depth`).
 
 ## E. V5 Task 7: rail-seat pour plan — M (E1 now, E2 after A)
-- [ ] E1 (no Fusion): HIWIN HG20 mounting tolerances by curl; pass mark with the owner (D-number)
+- [x] E1 (no Fusion): HIWIN HG20 mounting tolerances by curl; pass mark with the owner (D-number) (52nd session: `docs/v5-rail-seats.md`, D-371 pass mark, D-372 seats 30 wide)
 - [ ] E2 (needs the seat bodies: model them with their footprint first): pour plan in `docs/v5-rail-seats.md` (dams, resin and quantity from the model's seat volumes, levelling across both Y tubes and the beam front, cure, measuring, fail → grinding)
 
 Files: plan `:101-106`; resin notes `docs/epoxy-options.md`, `docs/curing-heat.md` (headings only).
