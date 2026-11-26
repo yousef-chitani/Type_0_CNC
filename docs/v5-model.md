@@ -36,7 +36,7 @@ Run after the parameters above, before any part swap. The script text is in the 
   - **Screws in holes:** each 1610 screw in its SFU nut, nut plate and fill plate; Z 1204 screw in its HM10.
   - **Self-overlaps inside PrintNC's vendor models** (`HM12-57`, couplers, `HGR20` against `HGW20CC`; 7 rail/block pairs fail the boolean with bad vendor geometry, ASM_INCONS_VERT_ATT). All go when the HGH20CA, HM12-60-V, DFU1605 and coupler models replace them.
   - **New with the RHS 80 x 40 roller (D-362):** the Y and Y2 fill plates (80 x 40 x 15, PrintNC parameters do not size them) cut the roller wall (747 mm³ each) and the SFU nut cuts the roller (487 mm³ each). The plates are re-made as aluminium flat bar (D-356) and the nut becomes the DFU1605: size both inside the 74 x 34 roller bore when they are swapped.
-- **Y limits:** carriage 175 long (SFU nut front Y 539 to fill plate back Y 714, as `v5_sizes`), free between the BKHM12 riser face (Y 62.5) and the BF12 riser face (Y 714.5): **Y travel 477** (450 needed). (The script's own "carriage" line takes the nut plate component's box, which holds bodies down to Y -6.5, and so prints -68.5: read the 175 carriage, not that line. Fix the script before the next run.)
+- **Y limits:** carriage 175 long (SFU nut front Y 539 to fill plate back Y 714, as `v5_sizes`), free between the BKHM12 riser face (Y 62.5) and the BF12 riser face (Y 714.5): **Y travel 477** (450 needed). (The first run's script printed a wrong carriage line, -68.5: the nut plate component holds two small bodies at Y -6.5. Fixed 26 Nov 2026: only bodies over the roller in X count; it now prints 539 to 714, 175 long, travel 477.)
 - **Grease fittings at Y max:** the PrintNC block's fitting reaches Y 716.8, 2.8 past the fill plate and 2.3 past the BF12 riser face: **it hits the riser at the hard end of travel.** Travel to a soft limit 3 short still leaves 474. Re-check with the HGH20CA block's fitting.
 - **Gantry at Y min:** the beam (Y 611 to 777, Z 194 up, at the stock section) moves 476.5 forward to Y 134.5: 85 clear of the HM12 (Y max 49.3) and 114 above the front X tube (Z 80). **Not checked yet:** the spindle reaching the bed's front and rear edges. There is no spindle (Task 5) and no bed (D-364); the beam section and the front-face carriage are Task 5.
 
@@ -46,4 +46,4 @@ Run after the parameters above, before any part swap. The script text is in the 
 3. Y rail seats 3 mm (D-363): the Y rails, blocks, rollers and risers go up 3; the risers' nominal heights (D-357) follow.
 4. Nut and fill plates as flat bar inside the 80 x 40 roller (D-356, D-362).
 5. The bed, once the owner has chosen it and put its STEP in `cad/vendor/` (D-364); then the origin offset and the spindle reach at Y min and Y max.
-6. Fix the carriage line in the check script; re-run it.
+6. ~~Fix the carriage line in the check script~~ (done 26 Nov 2026); re-run the full check after the swap.

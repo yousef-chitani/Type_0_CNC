@@ -62,16 +62,21 @@ def run(_context: str):
             if o.component.name == name and o.isVisible:
                 return o.boundingBox
     bk, bf = box('Y BKHM12 Riser'), box('Y BF12 Riser')
-    roller, fill = box('YRoller'), box('Y 1610 Fill Plate')
-    nutp = None
+    roller = box('YRoller')
+    # Carriage = the Y-moving parts that sit at the roller: the roller, the Y nut and the nut and
+    # fill plates. Only bodies overlapping the roller in X count (the nut plate component also
+    # holds two small bodies at Y -6.5 that are not on the carriage).
+    rx0, rx1 = roller.minPoint.x, roller.maxPoint.x
+    front, back = roller.minPoint.y * 10, roller.maxPoint.y * 10
     for o in design.rootComponent.allOccurrences:
-        if o.component.name == 'Y 1610 Nut Plate' and o.isVisible:
+        n = o.component.name
+        if not o.isVisible or 'Y2' in o.fullPathName or o.fullPathName.startswith('Hardware:1+XAxis'):
+            continue
+        if n in ('Y 1610 Nut Plate', 'Y 1610 Fill Plate') or 'SFU1610 Nut' in n or 'DFU1605' in n:
             for b in o.bRepBodies:
-                if b.isVisible:
-                    bb = b.boundingBox
-                    nutp = bb if nutp is None or bb.minPoint.y < nutp.minPoint.y else nutp
-    front = min(roller.minPoint.y, nutp.minPoint.y if nutp else 1e9) * 10
-    back = max(roller.maxPoint.y, fill.maxPoint.y) * 10
+                bb = b.boundingBox
+                if b.isVisible and bb.minPoint.x < rx1 and bb.maxPoint.x > rx0:
+                    front, back = min(front, bb.minPoint.y * 10), max(back, bb.maxPoint.y * 10)
     fit = None
     for o in design.rootComponent.allOccurrences:
         if 'Grease Fitting' in o.component.name and o.isVisible and 'Y HGW20CC' in o.fullPathName \
