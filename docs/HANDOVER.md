@@ -6,18 +6,16 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (43rd session): V5 plan Task 1, sizing script
+- **Decided (owner, Q&A):** **D-350** longest tool 100 (holder tops up to 120); **D-351** rack rows 80 apart, 40 gap, rack adds 150, Y travel 450.
+- **Done:** `tools/v5_sizes.py` and `docs/v5-sizes.md`. Inputs are measured from the vendor STEPs, the drawings and the PrintNC STEP in the repo root (Y roller 175 with the nut, risers, beam ends), each one tagged with its source. Result: X travel 433, Y 450, Z 200; X and Y rails 650, X and Y screws 750, Z rail and screw 400 (all standard LiMo lengths, re-read by curl 26 Nov); beam = frame X 830.7; whip 3,433 rpm at 80 %.
+- **Not done:** the lowest holder top waits for the **real ISO20 holder STEP**, which the owner is fetching (the 44 came from a stand-in; new CLAUDE.md rule). Until then the script ends `INCOMPLETE` (exit 2). The PrintNC STEP has no frame tubes. Check the 59 mm screw end inside the HM12 against the 95 drawing (the figure came from the 90 model).
+- **Exact next step:** when the holder STEP is in `cad/vendor/`, measure the nose to holder top at pickup with the Jianken STEP, set `HOLDER_STACK`, and run until it prints PASS. Then plan Task 2 (`tools/v5_beam.py`, beam pick).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (42nd session): CLAUDE.md rule, no stand-ins
 - **Done:** new rule in `CLAUDE.md` (owner): never use a stand-in when an accurate STEP or drawing is available; if none is in the repo's folders, ask the owner to fetch it.
 - **What is left:** V5 plan unchanged; Task 32 open.
 - **Exact next step:** plan Task 1 of `docs/superpowers/plans/2026-11-26-v5-printnc.md`: write `tools/v5_sizes.py` and `docs/v5-sizes.md`.
-
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (41st session): V5 design doc written (Task 31)
-- **Decided (owner, Q&A):** **D-344** work area 400 x 250, 16 tools (2 rows of 8); **D-345** rack behind the bed, rows along X (Y travel about +150); **D-346** model starts fresh from PrintNC, not `Type_0_v3` (Claude had proposed v3); **D-347** (keep nose 175, rack at bed level) was found impossible in review and **replaced by D-348: +50 Z, nose 25 to 225**, rack holder tops about 70 to 120 above the table (at pickup the nose is 44 below the holder top; with 175 the rack fits only at 69 to 70 with 100 tools).
-- **Done:** `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`: goals, decisions, Claude's calls (beam SHS 120 x 120 x 8, inline drives, Type 0 Z on bought tooling plate, T-slot bed, sand, printed forks on extrusion, rail-seat pass mark 0.02 mm to check against HIWIN HG20 tolerances), a table of how each PrintNC "Printed-Milled" part is made under D-339, rough sizes (X travel about 430, Y about 450, Z 200), the rack height check, risks. **Beam section left open:** a 120 x 120 beam's 88 front face puts two HGR20 rails at most about 68 apart with no room for the BK12 or nut, so front-face X rails need a taller tube, a front bar, or rails top and bottom as PrintNC. No model, no BOM change.
-- **Approved (owner: "taller beam, write plan"):** **D-349** beam is a taller steel tube standing up, both X rails on its front face; section picked in plan Task 2.
-- **Plan written:** `docs/superpowers/plans/2026-11-26-v5-printnc.md`, 8 tasks (sizes script, beam pick with stiffness script, PrintNC parts list by how made, `Type_0_v5` frame/Y/bed, beam/X/Z, rack, rail-seat pour plan, BOM). Task 31 done; Task 32 open. Task 29 (V4 RFQ) still on hold.
-- **What is left:** owner reviews the plan and picks how it is run (one task per session, as the project rule).
-- **Exact next step:** plan Task 1: write `tools/v5_sizes.py` and `docs/v5-sizes.md` (no Fusion needed). Plan Task 4 needs the owner to open a fresh copy of the parametric PrintNC model saved as `Type_0_v5`.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
@@ -25,7 +23,7 @@
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-349**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-351**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 

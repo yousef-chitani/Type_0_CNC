@@ -4,6 +4,12 @@ Do these in any order. When you have results, open a new session and paste
 them in. Everything mentioned is in the docs folder of the repo.
 
 
+=== NEW 26 NOV: ISO20 TOOL HOLDER STEP FOR THE V5 RACK ===
+- Put a STEP (or a dimensioned drawing) of the real ISO20-ER16 tool holder
+  in cad/vendor/. V5 plan Task 1 waits for it: it sets how high the rack
+  holders sit (nose to holder top at pickup). The 44 we had was a stand-in.
+
+
 === NEW 26 NOV: SAVE TYPE_0_V4 + FOLD PARTS & 865 MM X SCREW (D-331 to D-336) ===
 - SAVE Type_0_v4 in Fusion 360 (timeline 320, 0 unhealthy: X HM12-60-V + 90x60x20
   pad + 865 mm X screw, Z & X 75 mm belt folds, table grid, laser/mill parts,
