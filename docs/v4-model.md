@@ -367,3 +367,52 @@ Owner: the hub "need not be so substantial nor octagonal", the disc can be a las
 - Cuts into other components (base feature of tool bodies + Combine cut each): `Upright X+/X- rear M10 tapped holes D-323` (Ø8.5, Y 310 to 335, X ±295, Z -40, 20, 80, 140; clear of the M12 joint bolts at Z -140/-100 and the beam bolt holes at Y 220/280); `Beam rear wall M10 tapped holes D-323` (Ø8.5 through the 8 wall at X ±175, ±265, Z 200, 240); `Beam EG core screw-tip holes D-323` (Y 300 to 302).
 - Checks: timeline all healthy. New bodies against every visible body: only screw threads in their tapped holes (M10 in Ø8.5: 436 mm³ in the upright, 174 in the beam wall, 44 in the core, 436 in the spacer) and the M8 T-nut screws in the profile envelope (503 mm³ each; the T-slots are not modelled). Table at full +Y travel reaches Y 315, the plate is at 335 (20 clear); the Y motor plate is at X ±40 only; the X carriage stays in front of Y 285.
 - **Saved** (owner asked, 25 Nov 2026).
+
+# Task 29 Step 2: model completed for RFQ (26 Nov 2026, D-320, D-325–D-327, D-331–D-335)
+
+Modelled in `Type_0_v4` (timeline **320 items, 0 unhealthy**; **464 visible solid bodies**, **not saved** — owner saves). Every envelope is replaced with a real part, every body has its material set, and every joint hole has a modelled fastener.
+
+## 1. X HM12-60-V, ground pads, 865 mm screw, and beam end caps (`D-320`, `D-332`, `D-335`)
+- **Removed (7):** `Beam end dam X+ 10`, `X motor bracket 10`, `X BK12 fixed support`, `X coupling guard`, `X BK12 pad 50x80x20`, `X screw DFU1605 900`, old `X coupling D25L35`.
+- **`X HM12-60-V mount` (`D-320`):** transformed copy of `Z HM12-60-V` at `X -356 to -266, Y 220 to 280, Z 295 to 355` (foot on `Z = 300`, axis `Y = 250, Z = 325`).
+- **`X HM12 pad 90 x 60 x 20` (`G11`, `D-332`):** `X -350 to -260, Y 220 to 280, Z 280 to 300`, with a `6.5 x 5.5` step relief at `X -350 to -343.5, Z 294.5 to 300` so the HM12's 12 mm motor flange (`X -356 to -344, Z 295 to 355`) clears the pad by `0.5 mm`. Held to the beam top wall by `4 x M6 x 20` counterbored (`Ø10.5 x 8`) screws (`X -338, -301; Y 235, 265`); carries `2 x M6 x 35` + `4 x M6 x 45` HM12 bolts (`X -316, -286, -273; Y 227, 273`). `X BF12 pad 50 x 80 x 20` gets `4 x M6 x 20` counterbored hold-downs + `2 x M6 x 40` BF12 bolts. Both pads cut from one `90 mm` slice of the `160 x 20` `G11` flat bar (`890 + 90 = 980 mm`).
+- **`X screw DFU1605 865` (`D-332`):** user parameter `x_screw = 865 mm`; `Ø10` drive end `X -325 to -303` (`22 mm`), `Ø12` bearing journal `X -303 to -266` (`37 mm`), `Ø16` thread `X -266 to +520` (`786 mm`), `Ø10` BF12 journal `X +520 to +540` (`20 mm`). `X coupling D25L35` sits inside the HM12 at `X -348 to -313`.
+- **`Beam end caps 120 x 120 x 5` (`G12`, `D-320`, `D-335`):** two rounded (`R16`) 5 mm mild steel plates at `X -355 to -350` and `X 540 to 545`, each held by `4 x M5 x 16` into blind tapped holes in the 8 mm SHS walls (`(Y 250, Z 276), (Y 250, Z 164), (Y 194, Z 220), (Y 306, Z 220)`) + `F18` silicone.
+
+## 2. Z and X 75 mm belt folds (`D-325`–`D-327`, `D-331`)
+Both axes share **identical** fold components (`75 mm` centres, `HTD 250-5M-15` 50T belt, `2 x 6000-2RS` `10 x 26 x 8` bearings, vendor pulley `cad/vendor/htd5m_20t_15.step` bored `Ø10` hub-inboard):
+- **Fold plate (`70 x 142 x 20` 6082, qty 2):** full `20 mm` bearing boss over the HM12 (`Ø26` bearing bores `8` deep each side of a `Ø22 x 4` shoulder; `4 x M4 x 25` in `Ø8 x 6` counterbores on `±24.75` square), stepped to an `8 mm` motor wing (`±4 mm` slotted `Ø38.5` pilot opening + `4 x Ø5.5` tension slots on `50 x 50` for `4 x M5 x 16` + M5 nuts).
+- **Stub shaft (`Ø10 x 68` steel, qty 2):** `Ø10 h6 x 42` lower coupling/bearing shaft, `Ø14 x 1.5` shoulder above the upper bearing inner race, `Ø10 h6 x 24.5` upper pulley seat (retained below the lower bearing by a DIN 471 `10 mm` circlip inside the HM12 `Ø50` pilot bore).
+- **Z fold (`Z axis and spindle`, moves with `x_pos`):** `Z fold plate` at `Z 554 to 574`; pulleys at `Z 575.5 to 601.7` (**machine Z max `601.7 mm`**, down `98.3 mm` from `700.0`); `24HS34` brake motor flipped behind `Z fixed plate` (`X ±30, Y 140 to 211, Z 420 to 566`, shaft up to `587`, `50 mm` clear above `X nut bracket` top `Z 370`).
+- **X fold (`X axis`):** `X fold plate` at `X -376 to -356, Y 220 to 362, Z 290 to 360`; pulleys at `X -403.7 to -377.5` (**machine X min `-403.7 mm`**, down `104.3 mm` from `-508.0` and `132 mm` shorter than inline HM12); `24HS40` motor behind the beam (`X -368 to -243, Y 294.5 to 355.5, Z 294 to 355.5`, shaft to `-389`, `14 mm` above beam and rear shear plate tops `Z 280`).
+
+## 3. Envelopes replaced, table grid, and joint fasteners (`D-333`–`D-335`)
+- **Table (`M11`, `D-334`, `D-335`):** `54 x M6` blind (`20 mm` deep) grid on `50 mm` pitch (`X -200..+200, Y -125..+125`) + `4 x Ø8 H7 x 18` blind dowels at `(±175, ±100)` + `Ø10 x 15` top counterbores for `16 x M5 x 16` Y-block screws and `4 x M5 x 25` Y-nut screws. Drip skirts replaced by `4 x` printed **PETG** side skirts (`164.5 x 67 x 3`, 2 halves per side to fit the P1S bed) screwed horizontally (`8 x M4 x 10`) into M4 tapped holes in the table side edges (`X = ±230, Z = -12.5`), clearing the `HGH20CA` blocks (`X ±227`) by `3 mm`.
+- **Laser mild-steel parts (`D-335`):** `Y motor plate 80 x 155 x 10` (`Ø38.5` bore, `4 x M5 x 16` motor screws, `4 x M8 x 20` rear-profile T-nut screws), `Y` and `X` `nut housing spacers 52 x 40 x 5`, and `Bottom sheet 500 x 670 x 3` (`F28`, `12 x M6 x 12` button screws into profile bottom T-nuts).
+- **`X nut bracket` & `Z fixed plate` (`D-333`):** tapered `150 -> 80 x 145 x 20` 6082 bracket bolted through `Z fixed plate` at `Z = 360` with `4 x M6 x 35` (`X = ±68.5, ±26.0`, clear of Z risers) + `2 x Ø6 x 24` dowels (`X = ±12.0`), plus `4 x M5 x 25` into `X DSG16H`. The 9 obsolete v3 PrintNC X-roller holes in `Z fixed plate` are plugged.
+- **Remaining rail, plate and frame holes & screws:** `16 x M5 x 16` Y rail screws + `16 x M8 x 25` counterbored Y bar T-nut screws (`X = ±188`); `28 x M5 x 16` X rail screws + `12 x M8 x 20` counterbored X front-plate-to-beam screws (`Z = 195, 245`); `12 x M5 x 35` Z rail+riser screws + `4 x Ø6 x 18` riser dowels; `16 x M5 x 16` X-block screws; `6 x` Z HM12 screws (`2 x M6 x 35`, `4 x M6 x 45`); `16 x M5 x 16` Z-block screws + `4 x M5 x 20` Z-nut screws; `4 x M6 x 40` Y BK12 + `2 x M6 x 35` Y BF12 screws; end-plate & upright clearance/tapped/dowel holes + `4 x M8 x 30` ATC block flange bolts (`D-317`).
+
+## 4. Materials assigned (`470` total bodies: `464` visible, `6` hidden)
+- `Steel`: 393 (bars, plates, beam, uprights, rear shear plates/spacers, rails, carriages, ballscrews, nuts, housings, motors, bearings, stub shafts, steel bolts/screws)
+- `Aluminum 6061` (stands in for 6082/6063 in Fusion's library; drawings state 6082-T6): 33 (4 base profiles, table M11, Z fixed/moving plates, 2 Z risers, X nut bracket, Z & X fold plates, Z & X HM12s, 4 pulleys, 2 couplings, spindle clamp + 2 tram blocks, ATC hub block, SHF12, etc.)
+- `Aluminum 5083 87 Cold Formed`: 1 (`Fork disc 5083 6 mm`)
+- `Stainless Steel`: 6 (4 upright dowels `G08`, ATC `Stub shaft 303`, Jianken spindle + nose)
+- `ABS Plastic` (stands in for printed PETG): 27 (4 drip skirts, coupling guard, 12 ATC forks, sensor sleeve, etc.)
+- `Rubber`: 7 (Z, X and ATC belts + 4 hidden bellows)
+- `Granite, Cut, Polished` (stands in for EG fill): 3 (2 base pockets + beam core)
+
+## 5. Clash and clearance check across 9 poses (26 Nov 2026)
+Overall machine envelope at rest (incl. ATC wheel): **`X -403.7 to +550.0` (`953.7`) × `Y -335.0 to +470.0` (`805.0`) × `Z -278.0 to +601.7` (`879.7`)**.
+
+| Pose `(x_pos, z_pos, y_pos)` | Unhealthy timeline | Unexpected overlaps | Nose Z | Z motor to X motor | X nut brkt to X motor | Z motor to X nut brkt | X nut to HM12 / BF12 | Table to Y motor |
+|---|---|---|---|---|---|---|---|---|
+| `0, 0, 0` (rest, all 464 pairs) | 0 | **0** | 100.0 | 237.7 | 168.3 | 50.0 | 236.0 / 450.0 | 159.0 |
+| `-215, -75, -150` | 0 | **0** | 25.0 | 105.5 | **9.5** | 50.0 | **21.0** / 665.0 | 309.0 |
+| `-215, +75, +150` | 0 | **0** | 175.0 | 105.5 | **9.5** | 50.0 | **21.0** / 665.0 | **9.0** |
+| `+215, -75, +150` (table +X) | 0 | **0** | 25.0 | 440.8 | 383.1 | 50.0 | 451.0 / 235.0 | **9.0** |
+| `+215, +75, -150` (table +X) | 0 | **0** | 175.0 | 440.8 | 383.1 | 50.0 | 451.0 / 235.0 | 309.0 |
+| `+405, +75, +150` (hard +X) | 0 | **0** | 175.0 | 626.9 | 573.1 | 50.0 | 641.0 / 45.0 | **9.0** |
+| `+405, +75, -150` (hard +X) | 0 | **0** | 175.0 | 626.9 | 573.1 | 50.0 | 641.0 / 45.0 | 309.0 |
+| `+402, +20, 0` (ATC lifted) | 0 | **0** | 120.0 | 624.0 | 570.1 | 50.0 | 638.0 / 48.0 | 159.0 |
+| `+402, -30, 0` (ATC engaged) | 0 | **0** (excl. held holder 1) | 70.0 | 624.0 | 570.1 | 50.0 | 638.0 / 48.0 | 159.0 |
+

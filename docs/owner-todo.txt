@@ -4,6 +4,26 @@ Do these in any order. When you have results, open a new session and paste
 them in. Everything mentioned is in the docs folder of the repo.
 
 
+=== NEW 26 NOV: SAVE TYPE_0_V4 + FOLD PARTS & 865 MM X SCREW (D-331 to D-336) ===
+- SAVE Type_0_v4 in Fusion 360 (timeline 320, 0 unhealthy: X HM12-60-V + 90x60x20
+  pad + 865 mm X screw, Z & X 75 mm belt folds, table grid, laser/mill parts,
+  all materials & fasteners).
+- LiMo basket update (D-320, D-332):
+  1. X DFU1605 C5 screw length is now CUSTOM 865 mm (not 900 mm), with the
+     same Z-style Ø10 x 21.5-22 mm drive end + Ø12 x 37 mm bearing journal for
+     the HM12-60-V. Ask whether the X and Z screw sets can come with BF12 only
+     (omitting the two unused BK12s).
+  2. Confirm 2 x HM12-60-V (M13) and 1 x HGH20CA 850, 1 x 500, 1 x 350, 1 x
+     DFU1605 600 (Y), 1 x 350 (Z), 3 x D25L35 10x10 couplings.
+  3. Check if LiMo sells SHF12 (A10).
+- Fold drive parts to price in your browser (AliExpress / UK bearing shop, M15-M17):
+  - 4 x HTD-5M 20T timing pulleys, for 15 mm belt, Ø10 mm bore with 2 grub screws
+  - 2 x HTD 250-5M-15 closed timing belts (50 teeth, 15 mm wide; +1 spare optional)
+  - 4 x 6000-2RS deep-groove ball bearings (10 x 26 x 8 mm, branded e.g. SKF/NSK/FAG)
+  - 2 x DIN 471 10 mm external circlips (stub-shaft retention)
+- EG resin (D-336): order 2 x 4.66 kg Gurit Ampreg 30 SLOW packs (£208.39 inc at
+  EC Fibreglass Supplies) instead of the 22.68 kg kit (saves £145.61).
+
 === NEW 25 NOV: X MOTOR ON AN HM12-60 (D-320) ===
 - Add a second HM12-60-V to the LiMo basket (as Z), and ask for the X
   screw 900 with the Z-style 10 mm end 21.5 long. Ask whether the X and Z

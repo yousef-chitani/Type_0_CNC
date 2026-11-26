@@ -16,8 +16,9 @@ TOOL_MARGIN = 15         # tool radius allowed past each end of axis travel (est
 CARRIAGE_LEN = 77.5      # HGH20CA block length (D-150)
 BLOCK_PITCH = 100        # two blocks on one rail, centre to centre (D-150)
 RAIL_END = 20            # spare rail past the blocks (D-150)
-SCREW_EXTRA = 253        # screw length minus travel: 653 - 400 (D-150); covers nut,
-                         # BK12 and BF12 ends
+SCREW_EXTRA = 253        # screw length minus travel for Y (BK12 + BF12): 653 - 400 (D-150)
+X_SCREW_HM12 = 865       # X screw with HM12-60-V at X -356..-266 (pad X -350..-260) and BF12 at
+                         # X 520..540: screw spans X -325..+540 = 865 mm (D-320, D-332)
 BK12_LEN = 25            # BK12 support body length (estimate; check LiMo drawing)
 BF12_LEN = 20            # BF12 support body length (estimate; check LiMo drawing)
 SCREW_ROOT_DIA = 13.2    # DFU1605 root diameter (typical 1605 screw, estimate)
@@ -65,7 +66,7 @@ def critical_rpm(length, dia=SCREW_ROOT_DIA, k=3.927, safety=0.8):
 def sizes():
     x_travel = WORK_X + WHEEL_REACH
     y_travel = TABLE_Y - 2 * TOOL_MARGIN      # 300: axis range plus tool margin covers the table
-    x_rail, x_screw = rail_len(x_travel), screw_len(x_travel)
+    x_rail, x_screw = rail_len(x_travel), X_SCREW_HM12
     y_rail, y_screw = rail_len(y_travel), screw_len(y_travel)
     base_width = TABLE_X + 2 * (UPRIGHT_GAP + UPRIGHT_W)
     beam_len = x_rail + 2 * BEAM_END_MARGIN
