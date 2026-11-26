@@ -6,6 +6,12 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (41st session): V5 design doc written (Task 31)
+- **Decided (owner, Q&A):** **D-344** work area 400 x 250, 16 tools (2 rows of 8); **D-345** rack behind the bed, rows along X (Y travel about +150); **D-346** model starts fresh from PrintNC, not `Type_0_v3` (Claude had proposed v3); **D-347** nose stays 25 to 175 (D-267), ihavenofish's +50 Z not taken, rack mounted below the bed top.
+- **Done:** `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`: goals, decisions, Claude's calls (beam SHS 120 x 120 x 8, inline drives, Type 0 Z on bought tooling plate, T-slot bed, sand, printed forks on extrusion, rail-seat pass mark 0.02 mm to check against HIWIN HG20 tolerances), a table of how each PrintNC "Printed-Milled" part is made under D-339, rough sizes (X travel about 430, Y about 450, Z 150), risks. No model, no BOM change.
+- **What is left:** owner reads and approves the design doc (or corrects Claude's calls). Task 29 (V4 RFQ) still on hold.
+- **Exact next step:** on approval, write the V5 implementation plan (`docs/superpowers/plans/2026-11-26-v5-printnc.md`) with the writing-plans skill; first plan task is setting the parametric PrintNC model's parameters for V5 in a new `Type_0_v5`.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (40th session): V5 started; weighted matrix of ideas to keep
 - **Decided (owner):** **D-338** V5 starts (V4 kept as history); **D-339** shops do surface grinding only, everything else bought or printed (owner saw/drill/tap allowed: confirmed 26 Nov); **D-340** no wheel: fixed rack, 2 rows, 16 to 18 tools.
 - **Done:** `docs/v5-idea-matrix.md` (tables from `tools/v5_matrix.py`; weights accuracy 25, cost 20, build 15, bought/printed 15, proven 10, carry 10, rack 5; out if it needs milling/turning/laser or scores accuracy 2 or less; sensitivity under 2 other weightings). Result, not decided: **close to stock PrintNC** (moving gantry, bolted steel tube frame, steel beam, epoxy-poured rail seats with grinding as fallback, inline drives, Type 0 Z on bought cut plate, T-slot bed, rack behind the bed under the gantry with +50 Z, sand fill). Screws C5/C7 a tie. Rack: 60 pitch, row of 8 spans 420, of 9 spans 480 (X travel must be at least that). Task 30 closed.
@@ -13,19 +19,13 @@
 - **What is left:** owner answers the 4 questions at the end of `docs/v5-idea-matrix.md`, and says whether the V4 JLC prices (Task 29) are still wanted.
 - **Exact next step:** all 4 matrix questions answered (owner-made allowed D-339; start from PrintNC D-341; epoxy pour first D-342; LiMo C5 D-343). Next session writes the V5 design doc (Task 31): `docs/superpowers/specs/YYYY-MM-DD-v5-printnc-design.md`, from the matrix's starting point, then the owner approves it; then next session writes the V5 design doc (Task 31) from the matrix winners.
 
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (39th session): Discord feedback, "too many custom parts" / use PrintNC
-- **Done:** owner's and ihavenofish's Discord points checked against the repo: `docs/feedback-discord-2026-11-26.md`. No design change, no D-number, model untouched.
-- **Findings:** V4 wave 1 is 30 custom pieces (about 22 shapes) over 4 shop processes (mill, lathe, laser, grind); Phase 1 already over budget. v3 was PrintNC on our EG tub and was left mostly for tub reasons (D-288, D-305); ihavenofish proposes stock PrintNC (own frame) with 3 changes: X rails on the front face, X overhang off one side for a rack along Y, +50 Z. A side rack fits about 6 tools per row (Ø45 holder flanges, about 60 pitch) in 300 Y travel. *(Corrected in the 40th session: first said 40 pitch, 8 to 9 tools.)*
-- **What is left:** owner answers the 4 questions at the end of the feedback doc (above all: why a new machine rather than a PrintNC). JLC prices for `cad/v4/jlc-step/` still wanted either way.
-- **Exact next step:** owner uploads the JLC parts and answers question 2; if "now", next session writes the one-page V4 vs PrintNC + 3 changes side-by-side (no modelling).
-
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
 - **Only prices confirmed from a live page** (or given by the owner), with the date. Never estimate prices.
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-343**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-347**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 

@@ -2,6 +2,12 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (39th session): Discord feedback, "too many custom parts" / use PrintNC
+- **Done:** owner's and ihavenofish's Discord points checked against the repo: `docs/feedback-discord-2026-11-26.md`. No design change, no D-number, model untouched.
+- **Findings:** V4 wave 1 is 30 custom pieces (about 22 shapes) over 4 shop processes (mill, lathe, laser, grind); Phase 1 already over budget. v3 was PrintNC on our EG tub and was left mostly for tub reasons (D-288, D-305); ihavenofish proposes stock PrintNC (own frame) with 3 changes: X rails on the front face, X overhang off one side for a rack along Y, +50 Z. A side rack fits about 6 tools per row (Ø45 holder flanges, about 60 pitch) in 300 Y travel. *(Corrected in the 40th session: first said 40 pitch, 8 to 9 tools.)*
+- **What is left:** owner answers the 4 questions at the end of the feedback doc (above all: why a new machine rather than a PrintNC). JLC prices for `cad/v4/jlc-step/` still wanted either way.
+- **Exact next step:** owner uploads the JLC parts and answers question 2; if "now", next session writes the one-page V4 vs PrintNC + 3 changes side-by-side (no modelling).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (38th session): STEP export of the wave 1 custom parts for JLC instant quotes
 - **Done:** 30 STEP files (one solid each, mm, at the origin) exported from the saved `Type_0_v4` (not changed) into `cad/v4/jlc-step/`, by process: `mill-6082` (8), `lathe-steel` (2), `laser-steel` (8), `ground-steel` (5, comparison only: JLC does not grind), `owner-made` (7, comparison only, D-329). Sizes checked against the names. Part sheet with qty, material and notes: `cad/v4/jlc-step/README.md`. Threads are not in the STEP (tap-drill holes only): mark them in the JLC form.
 - **Note:** the Fusion API wrote STEP units as cm on one export and mm on the next. The files in the repo were checked: all mm, true size.
