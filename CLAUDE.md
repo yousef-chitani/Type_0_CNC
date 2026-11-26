@@ -6,4 +6,6 @@
 
 **Web prices: use curl, never the browser.** Fetch with `curl -sL --compressed` and parse with a short Python script (Shopify: `/products.json`; WooCommerce: `/wp-json/wc/store/products`). If curl is blocked or rate-limited, wait and retry slowly, or report it; do not open the browser.
 
+**No stand-ins for real parts.** Never use a stand-in (a box, a guessed shape, rough sizes) when an accurate STEP or drawing of the part is available: use it. If none is in the repo's folders (e.g. `cad/vendor/`), stop and ask the owner to fetch it.
+
 Start here: `docs/tasks/README.md` (rules and task list).

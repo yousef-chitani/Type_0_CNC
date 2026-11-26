@@ -6,6 +6,11 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (42nd session): CLAUDE.md rule, no stand-ins
+- **Done:** new rule in `CLAUDE.md` (owner): never use a stand-in when an accurate STEP or drawing is available; if none is in the repo's folders, ask the owner to fetch it.
+- **What is left:** V5 plan unchanged; Task 32 open.
+- **Exact next step:** plan Task 1 of `docs/superpowers/plans/2026-11-26-v5-printnc.md`: write `tools/v5_sizes.py` and `docs/v5-sizes.md`.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (41st session): V5 design doc written (Task 31)
 - **Decided (owner, Q&A):** **D-344** work area 400 x 250, 16 tools (2 rows of 8); **D-345** rack behind the bed, rows along X (Y travel about +150); **D-346** model starts fresh from PrintNC, not `Type_0_v3` (Claude had proposed v3); **D-347** (keep nose 175, rack at bed level) was found impossible in review and **replaced by D-348: +50 Z, nose 25 to 225**, rack holder tops about 70 to 120 above the table (at pickup the nose is 44 below the holder top; with 175 the rack fits only at 69 to 70 with 100 tools).
 - **Done:** `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`: goals, decisions, Claude's calls (beam SHS 120 x 120 x 8, inline drives, Type 0 Z on bought tooling plate, T-slot bed, sand, printed forks on extrusion, rail-seat pass mark 0.02 mm to check against HIWIN HG20 tolerances), a table of how each PrintNC "Printed-Milled" part is made under D-339, rough sizes (X travel about 430, Y about 450, Z 200), the rack height check, risks. **Beam section left open:** a 120 x 120 beam's 88 front face puts two HGR20 rails at most about 68 apart with no room for the BK12 or nut, so front-face X rails need a taller tube, a front bar, or rails top and bottom as PrintNC. No model, no BOM change.
@@ -13,13 +18,6 @@
 - **Plan written:** `docs/superpowers/plans/2026-11-26-v5-printnc.md`, 8 tasks (sizes script, beam pick with stiffness script, PrintNC parts list by how made, `Type_0_v5` frame/Y/bed, beam/X/Z, rack, rail-seat pour plan, BOM). Task 31 done; Task 32 open. Task 29 (V4 RFQ) still on hold.
 - **What is left:** owner reviews the plan and picks how it is run (one task per session, as the project rule).
 - **Exact next step:** plan Task 1: write `tools/v5_sizes.py` and `docs/v5-sizes.md` (no Fusion needed). Plan Task 4 needs the owner to open a fresh copy of the parametric PrintNC model saved as `Type_0_v5`.
-
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (40th session): V5 started; weighted matrix of ideas to keep
-- **Decided (owner):** **D-338** V5 starts (V4 kept as history); **D-339** shops do surface grinding only, everything else bought or printed (owner saw/drill/tap allowed: confirmed 26 Nov); **D-340** no wheel: fixed rack, 2 rows, 16 to 18 tools.
-- **Done:** `docs/v5-idea-matrix.md` (tables from `tools/v5_matrix.py`; weights accuracy 25, cost 20, build 15, bought/printed 15, proven 10, carry 10, rack 5; out if it needs milling/turning/laser or scores accuracy 2 or less; sensitivity under 2 other weightings). Result, not decided: **close to stock PrintNC** (moving gantry, bolted steel tube frame, steel beam, epoxy-poured rail seats with grinding as fallback, inline drives, Type 0 Z on bought cut plate, T-slot bed, rack behind the bed under the gantry with +50 Z, sand fill). Screws C5/C7 a tie. Rack: 60 pitch, row of 8 spans 420, of 9 spans 480 (X travel must be at least that). Task 30 closed.
-- **Biggest risks named in the doc:** ±0.02 on a PrintNC with +50 Z not shown; PrintNC no-welding not confirmed; grinding unpriced.
-- **What is left:** owner answers the 4 questions at the end of `docs/v5-idea-matrix.md`, and says whether the V4 JLC prices (Task 29) are still wanted.
-- **Exact next step:** all 4 matrix questions answered (owner-made allowed D-339; start from PrintNC D-341; epoxy pour first D-342; LiMo C5 D-343). Next session writes the V5 design doc (Task 31): `docs/superpowers/specs/YYYY-MM-DD-v5-printnc-design.md`, from the matrix's starting point, then the owner approves it; then next session writes the V5 design doc (Task 31) from the matrix winners.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
