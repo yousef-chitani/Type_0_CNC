@@ -119,7 +119,80 @@ def run(_context: str):
         sc.bRepBodies.add(body, bf)
         bf.finishEdit()
         sc.bRepBodies.item(0).name = 'DFU1605 screw 750 (LiMo BK12/BF12 ends)'
-    # Not placed yet: D25L35 (to model, D-366).
+    # D25L35 10 x 10 coupling (D-366), from the MH table (cad/vendor/drawings/mh_jaw_coupling.webp,
+    # MH1 Ø25: L 35, hub L1 11.75, M3 clamp). Centred on the gap between the screw journal end
+    # (SCREW[0][0]) and the 24HS40 shaft tip (motor flange face + 20). The spider zone (11.5) is a
+    # solid Ø25 envelope with the bore: the table gives no jaw sizes.
+    tb = adsk.fusion.TemporaryBRepManager.get()
+    U = adsk.fusion.BooleanTypes
+
+    def box(x0, x1, y0, y1, z0, z1):
+        c = adsk.core.Point3D.create((x0 + x1) / 20, (y0 + y1) / 20, (z0 + z1) / 20)
+        return tb.createBox(adsk.core.OrientedBoundingBox3D.create(
+            c, adsk.core.Vector3D.create(1, 0, 0), adsk.core.Vector3D.create(0, 1, 0),
+            (x1 - x0) / 10, (y1 - y0) / 10, (z1 - z0) / 10))
+
+    def zcyl(x, y, z0, z1, dia):
+        return tb.createCylinderOrCone(adsk.core.Point3D.create(x / 10, y / 10, z0 / 10), dia / 20,
+                                       adsk.core.Point3D.create(x / 10, y / 10, z1 / 10), dia / 20)
+
+    def new_comp(name, bodies):
+        oc = top.component.occurrences.addNewComponent(adsk.core.Matrix3D.create())
+        cc = oc.component
+        cc.name = name
+        bf = cc.features.baseFeatures.add()
+        bf.startEdit()
+        for bname, b in bodies:
+            cc.bRepBodies.add(b, bf).name = bname
+        bf.finishEdit()
+
+    if 'D25L35 Coupling' not in kid:
+        motor_tip = HM_SCREW_FACE_Y - 90 + 20
+        yc = (SCREW[0][0] + motor_tip) / 2
+        L, L1, D, BORE = 35.0, 11.75, 25.0, 10.0
+        P = lambda y, dz=0.0: adsk.core.Point3D.create(AX_X / 10, y / 10, (AX_Z + dz) / 10)
+        parts = []
+        for name, y0, y1, clamp in (('Hub, screw side', yc + L / 2 - L1, yc + L / 2, True),
+                                    ('Spider zone (envelope)', yc - L / 2 + L1, yc + L / 2 - L1, False),
+                                    ('Hub, motor side', yc - L / 2, yc - L / 2 + L1, True)):
+            b = tb.createCylinderOrCone(P(y0), D / 20, P(y1), D / 20)
+            tb.booleanOperation(b, tb.createCylinderOrCone(P(y0), BORE / 20, P(y1), BORE / 20), U.DifferenceBooleanType)
+            if clamp:  # 1 wide slit up from the bore, M3 clamp hole across it (along X, 7 above the axis)
+                tb.booleanOperation(b, box(AX_X - 0.5, AX_X + 0.5, y0, y1, AX_Z, AX_Z + D / 2 + 1), U.DifferenceBooleanType)
+                ym = (y0 + y1) / 2
+                h = tb.createCylinderOrCone(adsk.core.Point3D.create((AX_X - D) / 10, ym / 10, (AX_Z + 7) / 10), 0.17,
+                                            adsk.core.Point3D.create((AX_X + D) / 10, ym / 10, (AX_Z + 7) / 10), 0.17)
+                tb.booleanOperation(b, h, U.DifferenceBooleanType)
+            parts.append((name, b))
+        new_comp('D25L35 Coupling', parts)
+
+    # Risers (D-357, owner 26 Nov: tapped steel flat bar, as PrintNC): HM12-60 riser 60 x 20 bar,
+    # BF12 riser 60 x 25 bar; tops at the housing bases (AX_Z - 30, AX_Z - 25), so their heights
+    # follow SEAT. Footprints: PrintNC's riser end faces Y 62.5 and 714.5 kept, since the risers are
+    # now below the DFU flange and these faces stop the HGH20CA blocks (Z 164.6 up) before the block
+    # ends leave the rail (Y 64 to 714). HM12 riser runs forward to the HM12-60 front, Y -47.
+    # Holes: HM12-60 and BF12 base holes (read from their STEPs: X +-23 from the axis; HM12 at
+    # 50, 20 and 7 in front of its screw-end face, BF12 on its centre) tapped M6 (Ø5 drill, through);
+    # riser to Y tube: M6 cap screws in Ø11 x 6.5 counterbores, Ø6.6 through, tube wall tapped M6,
+    # at PrintNC's riser-screw positions (its M6x30s) so its drill guides 3A and 3B still drill the tube.
+    # If SEAT changes, delete 'Y1 HM12 Riser ...' and 'Y1 BF12 Riser ...' first (built once).
+    TUBE_TOP = 160.0
+    for name, y0, y1, top_z, taps, cbores in (
+            ('Y1 HM12 Riser (flat bar 60 x 20)', HM_SCREW_FACE_Y - 90, 62.5, AX_Z - 30,
+             [(s * 23, HM_SCREW_FACE_Y - k) for s in (-1, 1) for k in (50, 20, 7)],
+             [(s * 15, y) for s in (-1, 1) for y in (-25.0, 55.0)]),
+            ('Y1 BF12 Riser (flat bar 60 x 25)', 714.5, 750.0, AX_Z - 25,
+             [(s * 23, BF_YC) for s in (-1, 1)],
+             [(-15, 722.0), (15, 722.0), (0, 739.0)])):
+        if name in kid:
+            continue
+        b = box(AX_X - 30, AX_X + 30, y0, y1, TUBE_TOP, top_z)
+        for dx, y in taps:
+            tb.booleanOperation(b, zcyl(AX_X + dx, y, TUBE_TOP - 1, top_z + 1, 5.0), U.DifferenceBooleanType)
+        for dx, y in cbores:
+            tb.booleanOperation(b, zcyl(AX_X + dx, y, TUBE_TOP - 1, top_z + 1, 6.6), U.DifferenceBooleanType)
+            tb.booleanOperation(b, zcyl(AX_X + dx, y, top_z - 6.5, top_z + 1, 11.0), U.DifferenceBooleanType)
+        new_comp(name, [(name, b)])
 
     # Hide (never delete) the PrintNC Y1 parts these replace.
     for o in root.allOccurrences:
@@ -128,6 +201,14 @@ def run(_context: str):
                 'Y HGW20CC:1', 'Y SFU1610 Nut:1', 'Y BF12:1', 'M6-1.0 90 Grease Fitting:1',
                 'Y HM12-57:1', 'Y NEMA23 Stepper:1', 'Y 1610 Ballscrew:1', 'Y D30L40 8-10mm Coupler:1'):
             o.isLightBulbOn = False
+        if p.startswith('Printed-Milled Parts:1+YAxis Printed-Milled Parts:1+Y 1610 BFBKHM12:1+') and o.name in (
+                'Y BKHM12 Riser:1', 'Y BF12 Riser:1'):
+            o.isLightBulbOn = False
+        # Their screws (riser M6x30, housing M6x50) and the NEMA23's M4x16: Y1 bodies only (X < -300).
+        if p.startswith('Fasteners:1+YAxisFasteners:1+') and o.name in ('M6x30:1', 'M6x50:1', 'HM12 M6x50:1', 'M4x16:1'):
+            for b in o.bRepBodies:
+                if b.boundingBox.maxPoint.x < -30 and (b.boundingBox.maxPoint.y < 8 or b.boundingBox.minPoint.y > 70):
+                    b.isLightBulbOn = False
     if d.snapshots.hasPendingSnapshot:
         d.snapshots.add()
     for o in [dfu, kid['BF12'], kid['HM12-60'], kid['24HS40 Motor']] + blocks:  # DFU: bodies moved, so its box is the placed one
