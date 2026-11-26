@@ -16,7 +16,8 @@ session), M (one session), L (may need two: say where you stopped). Owner-only i
 - [x] Y2 (51st session, `tools/fusion/v5_y2_place.py`): mirror `Y1 screw and motor` (DFU1605, BF12, HM12-60, 24HS40, 1605 screw, D25L35, risers) and the two HGH20CA blocks to X +377.5; cable lead outboard (+X); hide PrintNC's Y2 parts as for Y1 (`docs/v5-model.md` "Hidden" list)
 - [x] 3 mm rail seats (D-363; 51st: user parameter `YRailSeat` on joints Rigid 2/202, `SEAT = 3`; seat bodies left for E2): delete `Y 1605 Screw` and riser components first, set `SEAT = 3.0`, re-run; rails, blocks, rollers, risers up 3
 - [x] Nut and fill plates (51st: end caps outside the roller, 40 x 15 cut 80, D-370), first planned as flat bar inside the 80 x 40 roller (D-356, D-362); hide PrintNC's 1610 nut/fill plates and their M5 rods
-- [x] Full check with `v5_check_task4.py` (51st: Y travel 489.4 both sides): re-point the carriage, riser and grease-fitting lines for Y1 and Y2; Y travel at both sides
+- [x] Full check with `v5_check_task4.py` (51st: Y travel 489.4 both sides, without rod ends)
+- [ ] Model the 6 M5 rods and nuts of the end-cap plates (names the check's SKIP list does not catch), re-run travel (about 480 expected); check the lower rods against the HGH20CA screw heads inside the roller; rear may need tapped fill-plate holes (owner): re-point the carriage, riser and grease-fitting lines for Y1 and Y2; Y travel at both sides
 - [x] Update `docs/v5-model.md`, task 32 row, CODEMAP if a script is added (e.g. `tools/fusion/v5_y2_place.py`)
 
 Files: `tools/fusion/v5_y1_place.py` (218 lines: datums 11–25, `run` 32–), `tools/fusion/v5_check_task4.py` (96),
@@ -31,6 +32,7 @@ Stop point if split: after Y2 + check (seats and plates next).
 - [ ] `docs/open-questions.md` header (15 Nov, £3,969.54, D-134) is stale: refresh the header line only, or mark the file V3 history (ask the owner which)
 - [ ] `docs/supplier-messages.md`: add the LiMo question "HM12-60 motor holes: 49.4 or 50 square?" (a few lines) if not there
 - [ ] `docs/tasks/README.md` "State in five lines" has about 30 dated session lines: move them, unchanged, to `docs/handover-archive.md` and keep 5 lines
+- [ ] `docs/v5-parts.md`: old plate and riser sizes (75 x 15 cut 50, 60 x 20, 60 x 25) to D-370 and 23/28 tall risers
 - [ ] Note in `docs/v5-model.md`: PrintNC drill guide 3B holes 0.75 off its riser screws (Y -24.25/55.75 vs -25/55)
 
 Files: `docs/HANDOVER.md:30-45`, `README.md:1-30`, `docs/tasks/20-*.md` (17 lines), `docs/open-questions.md:1-5`, `docs/supplier-messages.md` (grep `LiMo`).

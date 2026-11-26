@@ -4,8 +4,12 @@ V5 (PrintNC re-sized, Fusion `Type_0_v5`, not in git). V5 plan Task 4: the Y axi
 (51st session: Y2 = Y1 moved +755, 3 mm seats via user parameter `YRailSeat`, end-cap nut/fill plates D-370,
 Y travel 489.4 both sides). **Not saved** at the 51st session's end (started from the owner's version 4).
 Last D-number D-370. Left in Task 4: the bed (needs the owner's STEP, not in `cad/vendor/`) and the seat bodies.
+**Travel 489.4 leaves out the plates' M5 rod ends and nuts (not modelled): about 480 real, to verify first.**
 
-## Do this bundle: B. Docs consistency (no Fusion), then E1
+## First (needs Fusion and the owner's save): finish bundle A's open item
+- [ ] Model the 6 M5 rods (Ø5, flange front to fill plate back + nut) and nuts (M5, 8 AF, 4 thick) on PCD 38, both sides, in `v5_y1_place.py`; names must not match the check's SKIP list ('M5' is in it); re-run `v5_y2_place.py` and `v5_check_task4.py`: travel and any rod hits on the BF12 housing, HM12-60 face and HGH20CA screw heads; rear fix options to the owner
+
+## Then this bundle: B. Docs consistency (no Fusion), then E1
 **If the owner says a bed STEP is now in `cad/vendor/` and `Type_0_v5` is saved, do bundle C instead** (`.claude/TASKS.md`).
 - [ ] Bundle B items in `.claude/TASKS.md` (key-files D-range → D-370, root README for V5, task 20 branch, tracked `.pyc`, open-questions header (ask), LiMo hole-square question, trim "State in five lines", drill guide 3B note)
 - [ ] E1: HIWIN HG20 mounting tolerances by curl (CLAUDE.md: curl, never the browser); propose the pass mark and the seat footprint (rail width or wider) to the owner, record a D-number
