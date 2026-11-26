@@ -11,7 +11,7 @@
 - **Done:** `docs/v5-idea-matrix.md` (tables from `tools/v5_matrix.py`; weights accuracy 25, cost 20, build 15, bought/printed 15, proven 10, carry 10, rack 5; out if it needs milling/turning/laser or scores accuracy 2 or less; sensitivity under 2 other weightings). Result, not decided: **close to stock PrintNC** (moving gantry, bolted steel tube frame, steel beam, epoxy-poured rail seats with grinding as fallback, inline drives, Type 0 Z on bought cut plate, T-slot bed, rack behind the bed under the gantry with +50 Z, sand fill). Screws C5/C7 a tie. Rack: 60 pitch, row of 8 spans 420, of 9 spans 480 (X travel must be at least that). Task 30 closed.
 - **Biggest risks named in the doc:** ±0.02 on a PrintNC with +50 Z not shown; PrintNC no-welding not confirmed; grinding unpriced.
 - **What is left:** owner answers the 4 questions at the end of `docs/v5-idea-matrix.md`, and says whether the V4 JLC prices (Task 29) are still wanted.
-- **Exact next step:** owner answers questions 3 (epoxy pour or grinding) and 4 (C5 or C7); questions 1 and 2 answered (owner-made allowed, D-339; start from PrintNC, D-341); then next session writes the V5 design doc (Task 31) from the matrix winners.
+- **Exact next step:** owner answers question 4 (C5 or C7 screws); questions 1 to 3 answered (owner-made allowed, D-339; start from PrintNC, D-341; epoxy pour first, D-342); then next session writes the V5 design doc (Task 31) from the matrix winners.
 
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (39th session): Discord feedback, "too many custom parts" / use PrintNC
 - **Done:** owner's and ihavenofish's Discord points checked against the repo: `docs/feedback-discord-2026-11-26.md`. No design change, no D-number, model untouched.
@@ -25,7 +25,7 @@
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-341**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-342**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
