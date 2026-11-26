@@ -6,6 +6,12 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (50th session): code map, task bundles, next-session prompt
+- **State at start:** `Type_0_v5` with the 48th and 49th sessions' work, **not saved**. No Fusion work this session.
+- **Done:** `.claude/CODEMAP.md` (225 lines: overview, tree, entry points, data flow, script index, where-index, docs map, gotchas); `tools/codemap.py` regenerates its AUTO sections (`--check` reports a stale map). `.claude/TASKS.md`: open work in 6 bundles (A to F) plus parked tasks, and the NEXT_PROMPT template. `.claude/NEXT_PROMPT.md`: bundle A. `CLAUDE.md`: navigation and handoff section. Tasks README: one bundle per session; last D-number D-369 (was D-364).
+- **Left:** bundle B (stale docs: handover key-files D-336, root README `Type_0_v3`, task 20 branch, tracked `.pyc`, open-questions header, LiMo hole-square question).
+- **Exact next step:** follow `.claude/NEXT_PROMPT.md` (bundle A: Y2, 3 mm seats, flat-bar plates, full check; needs the owner's save and Fusion, else bundle B then E1).
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (49th session): V5 plan Task 4, Y1 coupling and risers
 - **State at start:** `Type_0_v5` version 3 open with the 48th session's work in it, **not saved** (the owner had not saved it). This session's work is on top; still not saved.
 - **Decided (owner, Q&A):** **D-369** risers fastened as PrintNC's: HM12-60 and BF12 bolt into M6 tapped in the steel bar; separate M6 cap screws in counterbores hold each riser to the Y tube (tube wall tapped).
@@ -13,12 +19,6 @@
 - **Found:** PrintNC drill guide 3B's holes are 0.75 off its own riser screws (Y -24.25/55.75 vs -25/55): transfer-drill the riser or check the guide.
 - **Left:** Y2 (mirror of Y1: blocks, DFU, BF12, HM12-60, motor, screw, coupling, risers), 3 mm seats (SEAT, D-363: delete the screw and riser components first), flat-bar nut and fill plates, full check (re-point the carriage, riser and grease-fitting lines). Still open: HM12-60 vs 24HS40 hole square (49.4 vs 50), ask LiMo.
 - **Exact next step:** owner saves `Type_0_v5` (48th and 49th sessions' work). Next session does Y2: mirror the `Y1 screw and motor` parts and the two HGH20CA blocks to X +377.5 (check the cable lead goes outboard, +X) and hides PrintNC's Y2 parts as for Y1.
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (48th session): V5 plan Task 4, Y1 swap part 2 (DFU, HM12-60, motor, 1605 screw)
-- **Done (Fusion, not saved; owner saved version 3 before it):** DFU1605 placed (axis X -377.5, Z 210, flange face Y 539, nut to Y 639, flats top and bottom). Its occurrence transform never holds, so a Move feature `DFU place` moves its bodies. HM12-60 placed (screw-end face Y 43, as PrintNC's HM12-57; motor end faces front; base Z 180) and 24HS40 on it (body to Y -172, cable lead outboard). PrintNC HM12-57 and NEMA23 hidden. **Then, from LiMo's end drawing (owner, now `cad/vendor/drawings/limo_1605_bk12_bf12_ends.png`):** the 1605 screw modelled (`Y 1605 Screw`, L 750, Y -11 to 739, Ø12 shoulder on the HM12 bearing at Y 43); the BF12 moved 5.1 forward (centre Y 733.15) and turned round so its circlip sits in the screw's groove. PrintNC's 1610 screw and coupler hidden. Screw clear of all bearings and the DFU bore. Overlap checks: only PrintNC parts being replaced are hit (old screw, coupler, 1610 nut plate and its M5 tie rods, 30-tall risers and their screws). Timeline: the same 4 known warnings, no errors. `tools/fusion/v5_y1_place.py` and `docs/v5-model.md` updated.
-- **Found:** the HM12-60 STEP has its motor holes on a 49.4 square (its drawing: M4 on PCD 70 = 49.5), the 24HS40 STEP on 50. Ask LiMo which is right (owner).
-- **Left:** D25L35 coupling (model it from the MH table, D-366; 16 gap between the Ø10 x 15 screw journal and the Ø10 x 20 motor shaft), risers 25 and 20 (hide the PrintNC risers and their screws), then Y2, 3 mm seats, flat-bar plates, full check (re-point the grease-fitting line).
-- **Exact next step:** owner saves `Type_0_v5`; next session models the D25L35 10 x 10 in `Y1 screw and motor` from `cad/vendor/drawings/mh_jaw_coupling.webp`, centred on the gap between the screw journal end (Y -11) and the motor shaft tip (Y -27).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
