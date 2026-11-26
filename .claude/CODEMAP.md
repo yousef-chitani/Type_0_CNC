@@ -53,7 +53,7 @@ tools/  (25 files)  # calc scripts, BOM generators, hook
   `.claude/settings.json`) → the 5 generators.
 - **V5 work:** spec `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`, plan
   `docs/superpowers/plans/2026-11-26-v5-printnc.md` (Tasks 1–8), model log `docs/v5-model.md`.
-- **Fusion:** `tools/fusion/v5_y1_place.py` (writes), `tools/fusion/v5_check_task4.py` (read-only).
+- **Fusion:** `tools/fusion/v5_y1_place.py` then `tools/fusion/v5_y2_place.py` (write; separate calls), `tools/fusion/v5_check_task4.py` (read-only). Fusion can `exec` the repo file (see `docs/v5-model.md`, Y axis finish).
 
 ## Data flow (who reads what)
 ```
@@ -125,9 +125,9 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
 - `tools/codemap.py` (145) Regenerate the mechanical sections of .claude/CODEMAP.md (tree, script index, where-index).  
   files(), tree(fs), sig(fn), symbols(fs), where(), main()
 - `tools/cure_heat.py` (40) Curing heat estimate for the epoxy-granite castings with Ampreg 30 + 3X Slow (D-122).
-- `tools/fusion/v5_check_task4.py` (96) Read-only check of Type_0_v5 for V5 plan Task 4 (run through fusion_mcp_execute, readOnly). 1. timeline warnin  
+- `tools/fusion/v5_check_task4.py` (90) Read-only check of Type_0_v5 for V5 plan Task 4 (run through fusion_mcp_execute, readOnly). 1. timeline warnin  
   bodies(root), run(_context)
-- `tools/fusion/v5_y1_place.py` (218) Place the Y1 vendor parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute (not read-only  
+- `tools/fusion/v5_y1_place.py` (279) Place the Y1 vendor parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute (not read-only  
   mat(cols, t_mm), run(_context)
 - `tools/gen_bom_md.py` (62) Regenerate docs/bom.md from docs/bom.csv. Run from the repo root: python tools/gen_bom_md.py  
   esc(s)
@@ -169,9 +169,9 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
 - V5 beam section pick → `tools/v5_beam.py:77`
 - V5 idea matrix weights → `tools/v5_matrix.py:60`
 - V5 parts-list check (How made) → `tools/v5_parts_check.py:13`
-- Y1 datums (axis X/Z, SEAT, BF12 centre) → `tools/fusion/v5_y1_place.py:11`
-- Y1 1605 screw profile → `tools/fusion/v5_y1_place.py:20`
-- Y1 placement entry → `tools/fusion/v5_y1_place.py:32`
+- Y1 datums (axis X/Z, SEAT, BF12 centre) → `tools/fusion/v5_y1_place.py:13`
+- Y1 1605 screw profile → `tools/fusion/v5_y1_place.py:27`
+- Y1 placement entry → `tools/fusion/v5_y1_place.py:41`
 - Task 4 check: skipped body names → `tools/fusion/v5_check_task4.py:7`
 - Task 4 check entry → `tools/fusion/v5_check_task4.py:25`
 - BOM hook: generator list → `tools/bom_hook.py:14`
@@ -220,8 +220,8 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
 - `docs/bom.csv`: CRLF, CSV-escaped quotes; edit it, never the generated files.
 - Real parts only: vendor STEP from `cad/vendor/`; if missing, stop and ask the owner.
 - Fusion: occurrence transforms on some imports do not hold (DFU1605): a Move feature places it.
-  Hide replaced PrintNC parts, do not delete them. Re-running `v5_y1_place.py` only resets transforms.
-- `SEAT` in `v5_y1_place.py` is 0 until the 3 mm seat step; then delete `Y 1605 Screw` first.
+  Hide replaced PrintNC parts, do not delete them. Re-running `v5_y1_place.py` resets transforms and rebuilds the parts built at the axis height when `SEAT` changes.
+- `SEAT = 3` in `v5_y1_place.py` must match user parameter `YRailSeat` (joints Rigid 2/202 lift PrintNC's rails). A new occurrence's `transform2` set in its creating call does not hold: pass the matrix at creation. DFU1605 occurrence transforms never hold (Move feature on Y1, copied bodies on Y2).
 - Windows: set `PYTHONUTF8=1` (bash) or `$env:PYTHONUTF8=1` (PowerShell); use `encoding="utf-8"` in new scripts.
 - The two untracked `*.step` files in the root and `cad/v2/` are the owner's: do not commit them.
 - Do not merge branch `claude/awesome-ramanujan-by9kds` (old design).

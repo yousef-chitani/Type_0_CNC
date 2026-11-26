@@ -1,6 +1,6 @@
 # Read-only check of Type_0_v5 for V5 plan Task 4 (run through fusion_mcp_execute, readOnly).
 # 1. timeline warnings / errors; 2. solid overlaps between visible bodies (fasteners, drill
-# guides and printed chain/sensor parts left out: screws sit in holes); 3. Y carriage limits
+# guides and printed chain/sensor parts left out: screws sit in holes); 3. Y travel, Y1 and Y2.
 # from the riser faces, and the block grease fittings against the BF12 riser at Y max.
 import adsk.core, adsk.fusion
 
@@ -32,7 +32,7 @@ def run(_context: str):
            if tl.item(i).healthState in (H.WarningFeatureHealthState, H.ErrorFeatureHealthState)]
     print('timeline', tl.count, 'warnings+errors', len(bad), bad)
 
-    bs = bodies(design.rootComponent)
+    bs = [] if globals().get('TRAVEL_ONLY') else bodies(design.rootComponent)
     tm = adsk.fusion.TemporaryBRepManager.get()
     hits = []
     for i in range(len(bs)):
@@ -55,42 +55,36 @@ def run(_context: str):
     for h in sorted(hits, reverse=True):
         print('  OVERLAP %d mm3 | %s | %s' % h)  # -1 = boolean failed
 
-    # Y limits: the carriage (nut plate front to fill plate back) runs between the BKHM12 riser
-    # back face and the BF12 riser front face; grease fittings stick out past the fill plate.
-    def box(name):
+    # Y travel per side (bounding boxes of bodies). Moving: the HGH20CA blocks, the roller, the DFU1605
+    # and the nut and fill plates of that side. Fixed: that side's risers, HM12-60 and BF12. For
+    # each moving/fixed body pair that overlaps in X and Z, the free gap along Y; travel = the
+    # smallest gap forward + the smallest gap back.
+    def boxes(pred_occ):
+        out = []
         for o in design.rootComponent.allOccurrences:
-            if o.component.name == name and o.isVisible:
-                return o.boundingBox
-    bk, bf = box('Y BKHM12 Riser'), box('Y BF12 Riser')
-    roller = box('YRoller')
-    # Carriage = the Y-moving parts that sit at the roller: the roller, the Y nut and the nut and
-    # fill plates. Only bodies overlapping the roller in X count (the nut plate component also
-    # holds two small bodies at Y -6.5 that are not on the carriage).
-    rx0, rx1 = roller.minPoint.x, roller.maxPoint.x
-    front, back = roller.minPoint.y * 10, roller.maxPoint.y * 10
-    for o in design.rootComponent.allOccurrences:
-        n = o.component.name
-        if not o.isVisible or 'Y2' in o.fullPathName or o.fullPathName.startswith('Hardware:1+XAxis'):
-            continue
-        if n in ('Y 1610 Nut Plate', 'Y 1610 Fill Plate') or 'SFU1610 Nut' in n or 'DFU1605' in n:
-            for b in o.bRepBodies:
-                bb = b.boundingBox
-                if b.isVisible and bb.minPoint.x < rx1 and bb.maxPoint.x > rx0:
-                    front, back = min(front, bb.minPoint.y * 10), max(back, bb.maxPoint.y * 10)
-    fit = None
-    for o in design.rootComponent.allOccurrences:
-        if 'Grease Fitting' in o.component.name and o.isVisible and 'Y HGW20CC' in o.fullPathName \
-                and 'Y2' not in o.fullPathName:
-            y = o.boundingBox.maxPoint.y * 10
-            fit = y if fit is None else max(fit, y)
-    bk_face, bf_face = bk.maxPoint.y * 10, bf.minPoint.y * 10
-    print('carriage now Y %.1f to %.1f (%.1f long); BKHM12 face %.1f, BF12 face %.1f'
-          % (front, back, back - front, bk_face, bf_face))
-    print('Y travel = %.1f (free between risers)' % ((bf_face - bk_face) - (back - front)))
-    if fit is not None:
-        print('grease fittings max Y %.1f: past the carriage back by %.1f; at Y max they %s the BF12 riser'
-              % (fit, fit - back, 'HIT' if fit - back > 0 else 'clear'))
-    beam = box('XGantry')
-    print('XGantry bbox Y %.1f to %.1f, Z %.1f to %.1f; at Y min it moves %.1f forward'
-          % (beam.minPoint.y * 10, beam.maxPoint.y * 10, beam.minPoint.z * 10, beam.maxPoint.z * 10,
-             front - bk_face))
+            if o.isVisible and pred_occ(o):
+                for b in o.bRepBodies:
+                    if b.isVisible and b.isSolid:
+                        bb = b.boundingBox
+                        out.append((o.component.name, [v * 10 for v in (bb.minPoint.x, bb.minPoint.y, bb.minPoint.z,
+                                                                        bb.maxPoint.x, bb.maxPoint.y, bb.maxPoint.z)]))
+        return out
+
+    for side, sx in (('Y1', -1), ('Y2', 1)):
+        on = lambda bb: bb[0] * sx > 300 or bb[3] * sx > 300
+        mov = [m for m in boxes(lambda o: o.component.name in ('HGH20CA Block', 'YRoller', 'YRoller(Mirror)')
+                                or 'DFU1605' in o.component.name
+                                or ('Nut Plate' in o.component.name or 'Fill Plate' in o.component.name)
+                                and 'XAxis' not in o.fullPathName) if on(m[1])]
+        fix = [f for f in boxes(lambda o: o.fullPathName.startswith(side + ' screw and motor') and (
+            'Riser' in o.component.name or '+HM12-60:' in o.fullPathName or '+BF12:' in o.fullPathName)) if on(f[1])]
+        fwd, back = (1e9, None), (1e9, None)
+        for mn, m in mov:
+            for fn, f in fix:
+                if m[0] < f[3] and f[0] < m[3] and m[2] < f[5] and f[2] < m[5]:
+                    if f[4] <= m[1] + 0.01 and m[1] - f[4] < fwd[0]:
+                        fwd = (m[1] - f[4], mn + ' / ' + fn)
+                    if f[1] >= m[4] - 0.01 and f[1] - m[4] < back[0]:
+                        back = (f[1] - m[4], mn + ' / ' + fn)
+        print('%s: forward %.1f (%s), back %.1f (%s), Y travel %.1f'
+              % (side, fwd[0], fwd[1], back[0], back[1], fwd[0] + back[0]))

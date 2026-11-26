@@ -13,11 +13,11 @@ session), M (one session), L (may need two: say where you stopped). Owner-only i
 
 ## A. V5 Y axis finish in Fusion (task 32, V5 plan Task 4 items 2–4, 6) — L
 **Needs:** Fusion MCP connected; owner has saved `Type_0_v5` (48th + 49th sessions' work).
-- [ ] Y2: mirror `Y1 screw and motor` (DFU1605, BF12, HM12-60, 24HS40, 1605 screw, D25L35, risers) and the two HGH20CA blocks to X +377.5; cable lead outboard (+X); hide PrintNC's Y2 parts as for Y1 (`docs/v5-model.md` "Hidden" list)
-- [ ] 3 mm rail seats (D-363): delete `Y 1605 Screw` and riser components first, set `SEAT = 3.0`, re-run; rails, blocks, rollers, risers up 3
-- [ ] Nut and fill plates as flat bar inside the 80 x 40 roller (D-356, D-362); hide PrintNC's 1610 nut/fill plates and their M5 rods
-- [ ] Full check with `v5_check_task4.py`: re-point the carriage, riser and grease-fitting lines for Y1 and Y2; Y travel at both sides
-- [ ] Update `docs/v5-model.md`, task 32 row, CODEMAP if a script is added (e.g. `tools/fusion/v5_y2_place.py`)
+- [x] Y2 (51st session, `tools/fusion/v5_y2_place.py`): mirror `Y1 screw and motor` (DFU1605, BF12, HM12-60, 24HS40, 1605 screw, D25L35, risers) and the two HGH20CA blocks to X +377.5; cable lead outboard (+X); hide PrintNC's Y2 parts as for Y1 (`docs/v5-model.md` "Hidden" list)
+- [x] 3 mm rail seats (D-363; 51st: user parameter `YRailSeat` on joints Rigid 2/202, `SEAT = 3`; seat bodies left for E2): delete `Y 1605 Screw` and riser components first, set `SEAT = 3.0`, re-run; rails, blocks, rollers, risers up 3
+- [x] Nut and fill plates (51st: end caps outside the roller, 40 x 15 cut 80, D-370), first planned as flat bar inside the 80 x 40 roller (D-356, D-362); hide PrintNC's 1610 nut/fill plates and their M5 rods
+- [x] Full check with `v5_check_task4.py` (51st: Y travel 489.4 both sides): re-point the carriage, riser and grease-fitting lines for Y1 and Y2; Y travel at both sides
+- [x] Update `docs/v5-model.md`, task 32 row, CODEMAP if a script is added (e.g. `tools/fusion/v5_y2_place.py`)
 
 Files: `tools/fusion/v5_y1_place.py` (218 lines: datums 11–25, `run` 32–), `tools/fusion/v5_check_task4.py` (96),
 `docs/v5-model.md:43-70`, `docs/v5-parts.md` (rows for nut plates, risers), decisions D-356, D-362, D-363, D-366 to D-369.
@@ -54,7 +54,7 @@ Files: plan `:90-100`, `tools/v5_sizes.py` (`rack_row_span`, `rack_y_depth`).
 
 ## E. V5 Task 7: rail-seat pour plan — M (E1 now, E2 after A)
 - [ ] E1 (no Fusion): HIWIN HG20 mounting tolerances by curl; pass mark with the owner (D-number)
-- [ ] E2 (needs A's seat bodies): pour plan in `docs/v5-rail-seats.md` (dams, resin and quantity from the model's seat volumes, levelling across both Y tubes and the beam front, cure, measuring, fail → grinding)
+- [ ] E2 (needs the seat bodies: model them with their footprint first): pour plan in `docs/v5-rail-seats.md` (dams, resin and quantity from the model's seat volumes, levelling across both Y tubes and the beam front, cure, measuring, fail → grinding)
 
 Files: plan `:101-106`; resin notes `docs/epoxy-options.md`, `docs/curing-heat.md` (headings only).
 

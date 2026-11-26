@@ -6,19 +6,18 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (51st session): V5 Task 4, Y axis finished (Y2, 3 mm seats, end-cap plates)
+- **State at start:** `Type_0_v5` saved by the owner (version 4) with the 48th and 49th sessions' Y1 work. This session's work is on top, **not saved**.
+- **Decided (owner, Q&A):** **D-370** Y nut and fill plates are end caps on the 80 x 40 roller (40 x 15 aluminium bar cut 80), clamped by 6 M5 rods on the DFU's PCD 38; D-356's sizes were for the old 75 x 50 roller.
+- **Done (Fusion, not saved):** Y2 = Y1 moved +755 (new `tools/fusion/v5_y2_place.py`; DFU1605 as copied bodies, its occurrence transform does not hold); PrintNC's Y2 parts hidden. 3 mm seats: user parameter `YRailSeat` on joints Rigid 2/202 lifts both rails and all they carry by 3.0; `SEAT = 3` in `v5_y1_place.py`, risers now 23 and 28 tall, parts at the axis height rebuild themselves when `SEAT` changes. End-cap plates, DFU flange at Y 531.5. `v5_check_task4.py` checks travel on both sides (new plates included). Check: the same 4 warnings, no errors; Y overlaps only the known ones (rail vs block groove, threads); **Y travel 489.4 on Y1 and Y2** (back stop: fill plate on the BF12 housing).
+- **Left:** seat bodies (footprint with the pour plan, bundle E); the bed (bundle C, needs the owner's STEP, not in `cad/vendor/`); M5 rods about 200 long for the BOM. Still open: HM12-60 vs 24HS40 hole square (49.4 vs 50), ask LiMo.
+- **Exact next step:** owner saves `Type_0_v5`. Then follow `.claude/NEXT_PROMPT.md` (bundle C if the bed STEP is in `cad/vendor/`, else bundle B, then E1).
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (50th session): code map, task bundles, next-session prompt
 - **State at start:** `Type_0_v5` with the 48th and 49th sessions' work, **not saved**. No Fusion work this session.
 - **Done:** `.claude/CODEMAP.md` (227 lines: overview, tree, entry points, data flow, script index, where-index, docs map, gotchas); `tools/codemap.py` regenerates its AUTO sections (`--check` reports a stale map). `.claude/TASKS.md`: open work in 6 bundles (A to F) plus parked tasks, and the NEXT_PROMPT template. `.claude/NEXT_PROMPT.md`: bundle A. `CLAUDE.md`: navigation and handoff section. Tasks README: one bundle per session; last D-number D-369 (was D-364).
 - **Left:** bundle B (stale docs: handover key-files D-336, root README `Type_0_v3`, task 20 branch, tracked `.pyc`, open-questions header, LiMo hole-square question).
 - **Exact next step:** follow `.claude/NEXT_PROMPT.md` (bundle A: Y2, 3 mm seats, flat-bar plates, full check; needs the owner's save and Fusion, else bundle B then E1).
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (49th session): V5 plan Task 4, Y1 coupling and risers
-- **State at start:** `Type_0_v5` version 3 open with the 48th session's work in it, **not saved** (the owner had not saved it). This session's work is on top; still not saved.
-- **Decided (owner, Q&A):** **D-369** risers fastened as PrintNC's: HM12-60 and BF12 bolt into M6 tapped in the steel bar; separate M6 cap screws in counterbores hold each riser to the Y tube (tube wall tapped).
-- **Done (Fusion, not saved):** D25L35 coupling modelled from the MH table (hubs Ø25 x 11.75, Ø10 bores, clamp slit and M3 hole; spider zone as a Ø25 envelope), Y -36.5 to -1.5; screw journal and motor shaft each 9.5 into a hub; 0 overlap with the screw, the motor and the HM12-60. Risers: HM12 60 x 20 bar Y -47 to 62.5, BF12 60 x 25 bar Y 714.5 to 750; tapped holes on the housing patterns; tube screws at PrintNC's positions. PrintNC Y1 risers, their screws and the NEMA23 screws hidden. Y travel now 489.4 (blocks against the riser end faces). Timeline: the same 4 warnings. `tools/fusion/v5_y1_place.py`, `docs/v5-model.md` updated.
-- **Found:** PrintNC drill guide 3B's holes are 0.75 off its own riser screws (Y -24.25/55.75 vs -25/55): transfer-drill the riser or check the guide.
-- **Left:** Y2 (mirror of Y1: blocks, DFU, BF12, HM12-60, motor, screw, coupling, risers), 3 mm seats (SEAT, D-363: delete the screw and riser components first), flat-bar nut and fill plates, full check (re-point the carriage, riser and grease-fitting lines). Still open: HM12-60 vs 24HS40 hole square (49.4 vs 50), ask LiMo.
-- **Exact next step:** owner saves `Type_0_v5` (48th and 49th sessions' work). Next session does Y2: mirror the `Y1 screw and motor` parts and the two HGH20CA blocks to X +377.5 (check the cable lead goes outboard, +X) and hides PrintNC's Y2 parts as for Y1.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

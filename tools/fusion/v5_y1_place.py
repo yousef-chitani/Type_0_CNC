@@ -1,18 +1,25 @@
 # Place the Y1 vendor parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute
 # (not read-only) AFTER the vendor STEPs were imported into component 'Y1 screw and motor'
 # (26 Nov 2026: DFU1605 Nut, BF12, HM12-60, 24HS40 Motor, HGH20CA Block, identity transforms).
-# Re-running only resets the transforms (and skips cuts / copies that already exist).
-# SEAT note: if SEAT changes, delete 'Y 1605 Screw' first (it is built once at AX_Z).
+# Re-running resets the transforms, skips cuts / copies that already exist, and rebuilds the parts
+# built at AX_Z (DFU place, screw, coupling, risers) when SEAT has changed. Then run v5_y2_place.py.
 # Datums (PrintNC model mm): Y1 screw axis X -377.5, **Z 210 = roller centre** (owner 26 Nov:
 # was PrintNC's 215; the DFU body Ø28 needs the 34 bore of the 80 x 40 roller centred).
-# SEAT = epoxy rail-seat height (D-363, 3 mm): 0 until item 3 lifts rails, blocks and rollers.
+# SEAT = epoxy rail-seat height (D-363, 3 mm). PrintNC's rails (and so the rollers and the gantry)
+# are lifted by the same 3 through user parameter YRailSeat, the offset of joints Rigid 2 / Rigid 202.
+import re
 import adsk.core, adsk.fusion
 
-SEAT = 0.0
+SEAT = 3.0
 AX_X, AX_Z = -377.5, 210.0 + SEAT
 RAIL_BOT = 160.0 + SEAT          # Y frame tube top
 BLOCK_YC = (589.0, 674.0)        # PrintNC HGW20CC block centres (same pattern, HGH20CA 77.5 long)
-NUT_FACE_Y = 539.0               # front face of PrintNC's SFU nut flange = carriage front
+# Carriage, Y (D-370): the nut and fill plates are end caps on the 80 x 40 roller (Y 556.5 to 706.5),
+# 40 x 15 aluminium flat bar cut 80, so the DFU flange sits on the nut plate front, 7.5 further
+# forward than PrintNC's SFU flange (539).
+ROLLER_Y = (556.5, 706.5)
+PLATE_T = 15.0
+NUT_FACE_Y = ROLLER_Y[0] - PLATE_T - 10.0  # DFU flange front face (flange 10 thick) = 531.5
 BF_YC = 733.15                   # BF12 centre: bearing seat from the LiMo end drawing (was PrintNC's 738.25)
 # Y 1605 screw, LiMo drawing cad/vendor/drawings/limo_1605_bk12_bf12_ends.png, L 750 (v5_sizes):
 # BK end Ø10 x 15, M12x1 x 14, Ø12 x 25 (39 to the thread); BF end Ø10 x 11, groove Ø9.6 x 1.15
@@ -20,6 +27,8 @@ BF_YC = 733.15                   # BF12 centre: bearing seat from the LiMo end d
 SCREW = [(-11.0, 4.0, 10.0), (4.0, 18.0, 12.0), (18.0, 43.0, 12.0), (43.0, 728.0, 16.0),
          (728.0, 737.15, 10.0), (737.15, 738.30, 9.6), (738.30, 739.0, 10.0)]
 HM_SCREW_FACE_Y = 43.0           # PrintNC HM12-57 screw-end face
+NUT_PLATE = 'Y1 Nut Plate (flat bar 40 x 15, cut 80)'
+FILL_PLATE = 'Y1 Fill Plate (flat bar 40 x 15, cut 80)'
 
 
 def mat(cols, t_mm):
@@ -35,7 +44,21 @@ def run(_context: str):
     d = adsk.fusion.Design.cast(app.activeProduct)
     root = d.rootComponent
     top = [o for o in root.occurrences if o.component.name == 'Y1 screw and motor'][0]
-    kid = {o.component.name: o for o in top.childOccurrences}
+    # Keyed by base name: a rebuilt part gets ' (1)' etc. (Fusion keeps the old component's name taken).
+    kid = {re.sub(r' \(\d+\)$', '', o.component.name): o for o in top.childOccurrences}
+
+    def drop(o):  # every occurrence (Y1 and the Y2 twin), so the component goes and its name is free
+        for x in list(root.allOccurrencesByComponent(o.component)):
+            x.deleteMe()
+
+    # Parts built once at AX_Z: drop them when SEAT has changed (their centre is off the axis), so
+    # they are rebuilt below (drop also removes the Y2 twins; v5_y2_place.py adds new ones). Done
+    # first: once 'DFU place' is redone, boxes read 0 in the same call.
+    for n in ('Y 1605 Screw', 'D25L35 Coupling', NUT_PLATE, FILL_PLATE):
+        if n in kid:
+            bb = kid[n].boundingBox
+            if abs((bb.minPoint.z + bb.maxPoint.z) * 5 - AX_Z) > 0.01:
+                drop(kid.pop(n))
 
     # DFU1605: local X = screw axis, flange face at x -15, nut to x -115. Local y -> Z so the
     # 40 flats (local |y| > 20, clear of the 6 x Ø5.5 holes) are top and bottom.
@@ -62,6 +85,11 @@ def run(_context: str):
         ei.participantBodies = flange
         f = c.features.extrudeFeatures.add(ei)
         f.name = 'DFU flats 40'
+    for f in list(c.features.moveFeatures):  # SEAT changed: move again from the vendor frame
+        bb = dfu.boundingBox
+        if f.name == 'DFU place' and (abs((bb.minPoint.z + bb.maxPoint.z) * 5 - AX_Z) > 0.01
+                                      or abs(bb.minPoint.y * 10 - NUT_FACE_Y) > 0.01):
+            f.deleteMe()
     if not any(f.name == 'DFU place' for f in c.features.moveFeatures):
         col = adsk.core.ObjectCollection.create()
         for b in c.bRepBodies:
@@ -81,10 +109,13 @@ def run(_context: str):
     rs.component.name = 'Y rails and seats'
     if 'HGH20CA Block' in kid:
         kid['HGH20CA Block'].moveToComponent(rs)
-    blocks = [o for o in rs.childOccurrences if o.component.name == 'HGH20CA Block']
+    # Y1 blocks are the first two by name (:1, :2); v5_y2_place.py adds :3 and :4 for Y2.
+    by_name = lambda: sorted([o for o in rs.childOccurrences if o.component.name == 'HGH20CA Block'], key=lambda o: o.name)
+    blocks = by_name()
     while len(blocks) < 2:
         rs.component.occurrences.addExistingComponent(blocks[0].component, adsk.core.Matrix3D.create())
-        blocks = [o for o in rs.childOccurrences if o.component.name == 'HGH20CA Block']
+        blocks = by_name()
+    blocks = blocks[:2]
     for b in blocks[0].component.bRepBodies:
         if b.name == 'Body2':
             b.isLightBulbOn = False  # 150 rail stub from the vendor file
@@ -175,15 +206,18 @@ def run(_context: str):
     # 50, 20 and 7 in front of its screw-end face, BF12 on its centre) tapped M6 (Ø5 drill, through);
     # riser to Y tube: M6 cap screws in Ø11 x 6.5 counterbores, Ø6.6 through, tube wall tapped M6,
     # at PrintNC's riser-screw positions (its M6x30s) so its drill guides 3A and 3B still drill the tube.
-    # If SEAT changes, delete 'Y1 HM12 Riser ...' and 'Y1 BF12 Riser ...' first (built once).
+    # Riser heights follow SEAT (20 + SEAT, 25 + SEAT: flat bar plus shims, D-357); the name carries
+    # the height, and a riser of another height is dropped and rebuilt.
     TUBE_TOP = 160.0
     for name, y0, y1, top_z, taps, cbores in (
-            ('Y1 HM12 Riser (flat bar 60 x 20)', HM_SCREW_FACE_Y - 90, 62.5, AX_Z - 30,
+            ('Y1 HM12 Riser (60 wide, %g tall)' % (AX_Z - 30 - TUBE_TOP), HM_SCREW_FACE_Y - 90, 62.5, AX_Z - 30,
              [(s * 23, HM_SCREW_FACE_Y - k) for s in (-1, 1) for k in (50, 20, 7)],
              [(s * 15, y) for s in (-1, 1) for y in (-25.0, 55.0)]),
-            ('Y1 BF12 Riser (flat bar 60 x 25)', 714.5, 750.0, AX_Z - 25,
+            ('Y1 BF12 Riser (60 wide, %g tall)' % (AX_Z - 25 - TUBE_TOP), 714.5, 750.0, AX_Z - 25,
              [(s * 23, BF_YC) for s in (-1, 1)],
              [(-15, 722.0), (15, 722.0), (0, 739.0)])):
+        for n in [k for k in kid if k.startswith(name.split(' (')[0]) and k != name]:
+            drop(kid.pop(n))
         if name in kid:
             continue
         b = box(AX_X - 30, AX_X + 30, y0, y1, TUBE_TOP, top_z)
@@ -192,6 +226,29 @@ def run(_context: str):
         for dx, y in cbores:
             tb.booleanOperation(b, zcyl(AX_X + dx, y, TUBE_TOP - 1, top_z + 1, 6.6), U.DifferenceBooleanType)
             tb.booleanOperation(b, zcyl(AX_X + dx, y, top_z - 6.5, top_z + 1, 11.0), U.DifferenceBooleanType)
+        new_comp(name, [(name, b)])
+
+    # Nut and fill plates (D-356, D-370): end caps on the roller, 40 x 15 aluminium flat bar cut 80
+    # (the roller's outside, X +-40, Z +-20 about the axis), drilled by the owner. Nut plate: Ø28 bore
+    # for the DFU1605 body; 6 x M5 tapped (Ø4.2) on the flange's PCD 38 (holes at 0, +-45, 180,
+    # +-135 deg from +X). Fill plate: Ø18 for the screw; the same 6 holes Ø5.5. As PrintNC, 6 M5
+    # threaded rods run from the flange through both plates and the roller (hole edges 15.9 from the
+    # axis, inside the roller's 34 opening) and clamp the roller between the plates.
+    import math
+    pcd = [(19 * math.cos(math.radians(a)), 19 * math.sin(math.radians(a))) for a in (0, 45, 135, 180, 225, 315)]
+
+    def ycyl(x, z, y0, y1, dia):
+        return tb.createCylinderOrCone(adsk.core.Point3D.create(x / 10, y0 / 10, z / 10), dia / 20,
+                                       adsk.core.Point3D.create(x / 10, y1 / 10, z / 10), dia / 20)
+    for name, y0, bore, hole in ((NUT_PLATE, ROLLER_Y[0] - PLATE_T, 28.0, 4.2),
+                                 (FILL_PLATE, ROLLER_Y[1], 18.0, 5.5)):
+        if name in kid:
+            continue
+        y1 = y0 + PLATE_T
+        b = box(AX_X - 40, AX_X + 40, y0, y1, AX_Z - 20, AX_Z + 20)
+        tb.booleanOperation(b, ycyl(AX_X, AX_Z, y0 - 1, y1 + 1, bore), U.DifferenceBooleanType)
+        for dx, dz in pcd:
+            tb.booleanOperation(b, ycyl(AX_X + dx, AX_Z + dz, y0 - 1, y1 + 1, hole), U.DifferenceBooleanType)
         new_comp(name, [(name, b)])
 
     # Hide (never delete) the PrintNC Y1 parts these replace.
@@ -204,6 +261,10 @@ def run(_context: str):
         if p.startswith('Printed-Milled Parts:1+YAxis Printed-Milled Parts:1+Y 1610 BFBKHM12:1+') and o.name in (
                 'Y BKHM12 Riser:1', 'Y BF12 Riser:1'):
             o.isLightBulbOn = False
+        if p.startswith('Printed-Milled Parts:1+YAxis Printed-Milled Parts:1+Y 1610 BFBKHM12:1+Y 1610 Roller Plates:1+')                 and o.name in ('Y 1610 Nut Plate:1', 'Y 1610 Fill Plate:1'):
+            o.isLightBulbOn = False
+        if p.startswith('Fasteners:1+YRollerFasteners:1+') and o.name.startswith('M5 Threaded Rod and Nuts'):
+            o.isLightBulbOn = False  # PrintNC's SFU flange rods; new rods on the DFU's PCD 38 (BOM)
         # Their screws (riser M6x30, housing M6x50) and the NEMA23's M4x16: Y1 bodies only (X < -300).
         if p.startswith('Fasteners:1+YAxisFasteners:1+') and o.name in ('M6x30:1', 'M6x50:1', 'HM12 M6x50:1', 'M4x16:1'):
             for b in o.bRepBodies:
