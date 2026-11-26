@@ -12,6 +12,7 @@ Values are copied from the images and PDFs in this folder. All sizes in mm. None
 | `hm12_60_v_motor_mount.png` | HM12-60-V motor mount with bearing. Listing: https://www.aliexpress.com/item/1005006232398099.html | D1 50, W1 PCD 70, Y 4 x M4, L 95, h 25, B 60, P 45, P1 45, T 30, d1 12, CL1 5.5, L2 35, L3 1.5, H 44, H1 37, B1 35, S 6.6, Q 11, Z 5, E 40, C1 12, C2 70, F 6, J 89, j 5.5, 0.35 kg, bearing 7001, support end BF12, coupling 30-42 Ø10-14 | See the flags below. The second table labels both rows HM12-60-V; the first row is presumably HM12-57-V |
 | `mh_jaw_coupling.webp` | MH jaw coupling table | D25 L35 (MH1): bores 4 to 14, hub L1 11.75, clamp screw M3, rated 6 Nm, max 12 Nm | Table does not name LiMo as the maker |
 | `m12_inductive_sensor.png` | M12 x 1 inductive sensor | 60 long overall, 55 threaded, nuts 4 thick, 17 across flats, Ø21 washer, cable Ø4, cable relief 9, sensing 4 | **The drawing is labelled NPN NO. The BOM (E10) buys PNP NO (LJ12A3-4-Z/BY)** |
+| `limo_1605_bk12_bf12_ends.png` | LiMo ball screw end machining, BK12 / BF12 ends (from the owner, 26 Nov 2026) | BK12 end: Ø10 (0/-0.015) x 15, M12x1 x 14, Ø12 (-0.01/-0.02) to 39 from the Ø10 shoulder. BF12 end: Ø10 (-0.01/-0.02) x 11, circlip groove Ø9.6 (0/-0.2) x 1.15 (+0.14) at 9.15 (+0.2) from the shoulder. L = whole screw. Modelled as `Y 1605 Screw` in `Type_0_v5` | Reading of the 9.15: taken from the shoulder to the groove's near face |
 
 ## Flags for the next session
 

@@ -2,6 +2,7 @@
 # (not read-only) AFTER the vendor STEPs were imported into component 'Y1 screw and motor'
 # (26 Nov 2026: DFU1605 Nut, BF12, HM12-60, 24HS40 Motor, HGH20CA Block, identity transforms).
 # Re-running only resets the transforms (and skips cuts / copies that already exist).
+# SEAT note: if SEAT changes, delete 'Y 1605 Screw' first (it is built once at AX_Z).
 # Datums (PrintNC model mm): Y1 screw axis X -377.5, **Z 210 = roller centre** (owner 26 Nov:
 # was PrintNC's 215; the DFU body Ø28 needs the 34 bore of the 80 x 40 roller centred).
 # SEAT = epoxy rail-seat height (D-363, 3 mm): 0 until item 3 lifts rails, blocks and rollers.
@@ -12,7 +13,12 @@ AX_X, AX_Z = -377.5, 210.0 + SEAT
 RAIL_BOT = 160.0 + SEAT          # Y frame tube top
 BLOCK_YC = (589.0, 674.0)        # PrintNC HGW20CC block centres (same pattern, HGH20CA 77.5 long)
 NUT_FACE_Y = 539.0               # front face of PrintNC's SFU nut flange = carriage front
-BF_YC = 738.25                   # PrintNC BF12 centre in Y
+BF_YC = 733.15                   # BF12 centre: bearing seat from the LiMo end drawing (was PrintNC's 738.25)
+# Y 1605 screw, LiMo drawing cad/vendor/drawings/limo_1605_bk12_bf12_ends.png, L 750 (v5_sizes):
+# BK end Ø10 x 15, M12x1 x 14, Ø12 x 25 (39 to the thread); BF end Ø10 x 11, groove Ø9.6 x 1.15
+# at 9.15 from the shoulder. The Ø12 shoulder sits on the HM12 bearing face (Y 43). (Y from, to, Ø)
+SCREW = [(-11.0, 4.0, 10.0), (4.0, 18.0, 12.0), (18.0, 43.0, 12.0), (43.0, 728.0, 16.0),
+         (728.0, 737.15, 10.0), (737.15, 738.30, 9.6), (738.30, 739.0, 10.0)]
 HM_SCREW_FACE_Y = 43.0           # PrintNC HM12-57 screw-end face
 
 
@@ -64,8 +70,9 @@ def run(_context: str):
         mi.defineAsFreeMove(mat([(0, -1, 0), (0, 0, 1), (-1, 0, 0)], (AX_X, NUT_FACE_Y - 15, AX_Z)))
         c.features.moveFeatures.add(mi).name = 'DFU place'
 
-    # BF12: bore axis local Z at local y 3.5, base at local y -21.5 (centre height 25).
-    kid['BF12'].transform2 = mat([(1, 0, 0), (0, 0, 1), (0, -1, 0)], (AX_X, BF_YC, AX_Z - 3.5))
+    # BF12: bore axis local Z at local y 3.5, base at local y -21.5 (centre height 25). Turned
+    # round (local z -> +Y) so the vendor model's circlip is outboard, in the screw's groove.
+    kid['BF12'].transform2 = mat([(-1, 0, 0), (0, 0, 1), (0, 1, 0)], (AX_X, BF_YC, AX_Z - 3.5))
 
     # HGH20CA: rail stub along local Z, up = local Y, rail bottom at local y -17.5. Blocks go in
     # 'Y rails and seats' (plan Task 4 component); PrintNC's HGR20 rail is kept.
@@ -93,14 +100,33 @@ def run(_context: str):
     kid['24HS40 Motor'].transform2 = mat([(0, 0, 1), (1, 0, 0), (0, 1, 0)], (AX_X, HM_SCREW_FACE_Y - 90, AX_Z))
     for n in ('HM12-60', '24HS40 Motor'):
         kid[n].isLightBulbOn = True
-    # Not placed yet: D25L35 (to model, D-366), the 1605 screw (needs LiMo's end drawing).
+    # 1605 screw: solid of revolution from SCREW, in its own component (plain Ø16 for the thread).
+    if 'Y 1605 Screw' not in kid:
+        so = top.component.occurrences.addNewComponent(adsk.core.Matrix3D.create())
+        sc = so.component
+        sc.name = 'Y 1605 Screw'
+        tb = adsk.fusion.TemporaryBRepManager.get()
+        P = lambda y: adsk.core.Point3D.create(AX_X / 10, y / 10, AX_Z / 10)
+        body = None
+        for y0, y1, dia in SCREW:
+            cyl = tb.createCylinderOrCone(P(y0), dia / 20, P(y1), dia / 20)
+            if body is None:
+                body = cyl
+            else:
+                tb.booleanOperation(body, cyl, adsk.fusion.BooleanTypes.UnionBooleanType)
+        bf = sc.features.baseFeatures.add()
+        bf.startEdit()
+        sc.bRepBodies.add(body, bf)
+        bf.finishEdit()
+        sc.bRepBodies.item(0).name = 'DFU1605 screw 750 (LiMo BK12/BF12 ends)'
+    # Not placed yet: D25L35 (to model, D-366).
 
     # Hide (never delete) the PrintNC Y1 parts these replace.
     for o in root.allOccurrences:
         p = o.fullPathName
         if p.startswith('Hardware:1+YAxis Hardware:1+') and o.name in (
                 'Y HGW20CC:1', 'Y SFU1610 Nut:1', 'Y BF12:1', 'M6-1.0 90 Grease Fitting:1',
-                'Y HM12-57:1', 'Y NEMA23 Stepper:1'):
+                'Y HM12-57:1', 'Y NEMA23 Stepper:1', 'Y 1610 Ballscrew:1', 'Y D30L40 8-10mm Coupler:1'):
             o.isLightBulbOn = False
     if d.snapshots.hasPendingSnapshot:
         d.snapshots.add()
