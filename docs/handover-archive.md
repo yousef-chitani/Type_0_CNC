@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (36th session): D-337 edge-wall fixes on `Table plate M11` and `X`/`Z` fold plates in `Type_0_v4`
+- **Done (`D-337`, `Type_0_v4` NOT saved — owner saves in Fusion):**
+  - **X & Z fold plates (`70 x 142 x 20` 6082):** removed the `4 x Ø8 x 6` HM12 counterbores (front edge wall was `1.25 mm`, now **`3.00 mm`** with plain `Ø4.5` through-holes); updated the `8 x` HM12 mounting screws from `M4 x 25` to surface-mounted **`M4 x 30`** A2 SHCS (`WF2362` in `X21`, price to re-check at checkout; heads clear pulleys by `13.5 mm` and belts by `3.75 mm` laterally / `5.8 mm` axially; envelope unchanged).
+  - **Table plate `M11` (`460 x 330 x 25`) & Y rails:** moved `rail_x` inward `5 mm` from `205` to **`200 mm`** (Y bars `X ±175..±225`, M8 T-nut holes `X ±183`, Y rails `X ±190..±210`, Y blocks `X ±178..±222`, table block mounting holes + `16 x M5 x 16` screws `X ±184` and `±216`). Outer `X = ±200` M6 fixture hole columns are now centred between the rail block mounting holes; outer counterbore edge wall increased from `4.0 mm` to **`9.0 mm`**; drip-skirt clearance to blocks increased from `3 mm` to **`8 mm`**.
+  - **Checks:** timeline **320 items, 0 unhealthy**; **0 unexpected overlaps** at `y_pos = 0, -150, +150`.
+- **What is left:** owner saves `Type_0_v4` in Fusion and updates LiMo (`865 mm` X screw) + prices `M15`/`M16`/bearings + re-checks `WF2362` (`M4 x 30`) at checkout; Task 29 steps 3 to 6 (assembly check with key access, make-ability check per part, Fusion drawings + STEP per part, RFQ cover sheets).
+- **Exact next step:** owner saves `Type_0_v4`; next session runs **Task 29 step 3** (assembly order check on `Type_0_v4`, verifying hex-key access for every screw and the pre-pour vs post-pour beam fastener sequence).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (35th session): Task 29 step 2 and Task 27 Task 7 done — `Type_0_v4` finished (timeline 320, 0 unhealthy, 9 poses clean), BOM updated (£4,386.61)
 - **Owner decisions (D-331 to D-336, Q&A):**
   - **D-331:** Z and X belt folds both use **75 mm centres** (`HTD 250-5M-15` 50T, fixing the 310 mm slip in `task28-folds-and-footprint.md`; Optibelt 5M-15 working pull 570 N vs 189 N Z / 251 N X stall, 2.3–3.0x margin, D-322), `2 x 6000-2RS` (`10 x 26 x 8`) in identical `70 x 142 x 20` 6082 fold plates and identical `Ø10 x 68` steel stub shafts (`Ø14 x 1.5` shoulder).

@@ -6,19 +6,17 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (38th session): STEP export of the wave 1 custom parts for JLC instant quotes
+- **Done:** 30 STEP files (one solid each, mm, at the origin) exported from the saved `Type_0_v4` (not changed) into `cad/v4/jlc-step/`, by process: `mill-6082` (8), `lathe-steel` (2), `laser-steel` (8), `ground-steel` (5, comparison only: JLC does not grind), `owner-made` (7, comparison only, D-329). Sizes checked against the names. Part sheet with qty, material and notes: `cad/v4/jlc-step/README.md`. Threads are not in the STEP (tap-drill holes only): mark them in the JLC form.
+- **Note:** the Fusion API wrote STEP units as cm on one export and mm on the next. The files in the repo were checked: all mm, true size.
+- **What is left:** owner uploads to JLC and records the instant prices; then put them against M11/M12/M17/G12/G13/F28 in the BOM. Task 29 steps 3 to 6 as before.
+- **Exact next step:** owner uploads `cad/v4/jlc-step/mill-6082` and `laser-steel` files to JLC and sends the prices; next session puts them in the BOM, then Task 29 step 3.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (37th session): review of D-320 to D-337; stale D-337 values fixed in the docs
 - **Done:** checked D-320 to D-337 against the BOM and `docs/v4-model.md`. The numbers hold (D-331 belt 250 mm / 50T at 75 mm centres, pull margins 2.3x to 3.2x; D-337 edge walls and rail/block positions; D-336 F01 £208.39). Stale values from before D-337 fixed: Y bar M8 screws `X = ±188` -> **`±183`** in `X23` (`docs/bom.md`, `docs/bom.csv`) and `docs/v4-model.md`; `rail_x` 205 -> **200** in the `docs/v4-model.md` parameter list. No decisions changed, model untouched.
 - **Open points found (owner to decide, not changed):** (1) the `Ø14` bar-screw counterbore at `X ±183` reaches `X ±190`, exactly the rail edge: no margin (same as before at ±188 / rail 195); move 1 to 2 mm inboard? (2) D-320's "no bracket" and "coupling inside the HM12" are overtaken by D-326/D-331 but not marked; (3) D-333 "plugged/removed" for the 9 old Z-plate holes: the RFQ drawing must say which; (4) Phase 1 £4,386.61 is at least £186.61 over the £4,200 budget (X24, X25, F30, G10 and others unpriced); the X25 note still quotes an old £215.66 overrun.
 - **What is left:** as the 36th-session entry: owner saves `Type_0_v4`, LiMo `865 mm` X screw, `M15`/`M16`/bearings prices; Task 29 steps 3 to 6.
 - **Exact next step:** owner saves `Type_0_v4`; next session runs **Task 29 step 3** (assembly order and hex-key access check on `Type_0_v4`).
-
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (36th session): D-337 edge-wall fixes on `Table plate M11` and `X`/`Z` fold plates in `Type_0_v4`
-- **Done (`D-337`, `Type_0_v4` NOT saved — owner saves in Fusion):**
-  - **X & Z fold plates (`70 x 142 x 20` 6082):** removed the `4 x Ø8 x 6` HM12 counterbores (front edge wall was `1.25 mm`, now **`3.00 mm`** with plain `Ø4.5` through-holes); updated the `8 x` HM12 mounting screws from `M4 x 25` to surface-mounted **`M4 x 30`** A2 SHCS (`WF2362` in `X21`, price to re-check at checkout; heads clear pulleys by `13.5 mm` and belts by `3.75 mm` laterally / `5.8 mm` axially; envelope unchanged).
-  - **Table plate `M11` (`460 x 330 x 25`) & Y rails:** moved `rail_x` inward `5 mm` from `205` to **`200 mm`** (Y bars `X ±175..±225`, M8 T-nut holes `X ±183`, Y rails `X ±190..±210`, Y blocks `X ±178..±222`, table block mounting holes + `16 x M5 x 16` screws `X ±184` and `±216`). Outer `X = ±200` M6 fixture hole columns are now centred between the rail block mounting holes; outer counterbore edge wall increased from `4.0 mm` to **`9.0 mm`**; drip-skirt clearance to blocks increased from `3 mm` to **`8 mm`**.
-  - **Checks:** timeline **320 items, 0 unhealthy**; **0 unexpected overlaps** at `y_pos = 0, -150, +150`.
-- **What is left:** owner saves `Type_0_v4` in Fusion and updates LiMo (`865 mm` X screw) + prices `M15`/`M16`/bearings + re-checks `WF2362` (`M4 x 30`) at checkout; Task 29 steps 3 to 6 (assembly check with key access, make-ability check per part, Fusion drawings + STEP per part, RFQ cover sheets).
-- **Exact next step:** owner saves `Type_0_v4`; next session runs **Task 29 step 3** (assembly order check on `Type_0_v4`, verifying hex-key access for every screw and the pre-pour vs post-pour beam fastener sequence).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
