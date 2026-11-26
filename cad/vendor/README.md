@@ -22,6 +22,9 @@ Manufacturer STEP files (and PDF drawings) for the bought parts, downloaded by t
 | `vallder_200x96.dxf` | Vallder CNC X-axis profile 200 × 96 (section only) | Owner's download, Vallder (`CNC-X-Axis-alu-profil-dxf.dxf`) | 8.53 kg/m from the DXF (Vallder: 8.20). Rail grooves 126.5 apart. `cad/v2/vallder_profiles.py` |
 | `vallder_heavy_235x125.dxf` | Vallder CNC X-axis heavy profile 235 × 125 (section only) | Owner's download, Vallder (`X-Axis Heavy mod3.dxf`) | 14.77 kg/m (Vallder: 14.80). Rail grooves 154 apart, 3 deep, seat 26 behind the lips. Vallder's STEP models (95 MB, 47 MB) are not in git |
 
+| `hm12_60.step` | HM12-60 motor mount with bearing (Y, Y2; D-365) | Owner, 26 Nov 2026 (`HM12-60.step`, third-party, 2022, Autodesk export) | Axis local Z, body Z 0 to **90**, 60 x 60, axis **30 above the base** (local y -30); 6 x Ø6.6 base holes at x ±23, rows z 7, 20, 50 (Ø11 counterbores); lock nut Z 25 to 33; 2 x 7901 bearings (drawing: 7001, L 95, P 45) |
+| `mh2530_6.35_10_coupling.step` | MH2530 jaw coupling Ø25 x 30, bores 6.35 / 10 | Owner, 26 Nov 2026 (`MH2530-6.35-10.step`) | **Not the bought part** (D25L35 10 x 10, D-366): reference for the jaw shape only, not used in the model |
+
 Not available as CAD: HGR20R rail alone (use the rail stub or the values above), DSG16H housing (52 × 40 face, 40 high, centre 20 below the face, 4 × M5 at 40 × 24, from the AliExpress drawing), D26 L35 coupling, NEMA 24 mount with 50 mm holes.
 
 `dfu_din69051_form_b_catalogue.webp`: catalogue page for DFU nuts, given by the owner on 18 Nov 2026. It names no maker. DFU01605-4: D 28, A 48, B 10, L 100, W 38, X 5.5, H 40 across flats, Q M6 oil hole.

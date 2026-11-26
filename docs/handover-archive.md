@@ -2,6 +2,13 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (45th session): V5 plan Task 3 done
+- **Decided (owner, Q&A):** **D-356** nut and fill plates are drilled aluminium flat bar; **D-357** HM12 and BF12 risers are steel flat bar with shims; **D-358** one X carriage plate: the Z fixed plate bolts straight onto the 4 X blocks; **D-359** 2 mm shims under the Z blocks and nut housing replace the D-205 pocket; **D-360** a bought 80 mm spindle clamp replaces PrintNC's (D-247).
+- **Done:** `docs/v5-parts.md` lists every PrintNC part (Fusion names in `Type_0_v5`, STEP names where they differ) as kept, changed or dropped, with how made, stock, load and notes, plus the new V5 parts. `tools/v5_parts_check.py` **PASS** (52 rows; how-made only bought / printed / owner / shop grind / none; no mill, turn or laser). Joint check in Fusion (read-only, bounding boxes): every PrintNC structural joint is bolted, no welding.
+- **Found:** `Type_0_v5` already exists in Fusion as a saved, unmodified copy of PrintNC at stock sizes (1182 timeline items, 94 parameters). Not changed this session. PrintNC has 3 X frame tubes; V5 buys 2 (D-354): what carries the bed and rack is for Task 4.
+- **Left:** riser heights, M5/M6 thread length in the 6 mm tube wall, and the spindle clamp choice and price (Task 8). The two untracked STEPs in the repo (`PrintNC ... Elements to take.step`, `cad/v2/Facebutton v2 frame.step`) are not committed.
+- **Exact next step:** plan Task 4: in `Type_0_v5`, set PrintNC's parameters for the V5 frame, Y axis and bed (sizes from `tools/v5_sizes.py`, D-353 to D-360), then the check script.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (44th session): V5 plan Tasks 1 and 2 done
 - **Decided (owner, Q&A):** **D-352** the "nose" is the spindle front face, where the holder flange seats; **D-353** beam RHS 200 x 150 x 8 standing up; **D-354** frame tubes SHS 80 x 80 x 6; **D-355** X rails 122 apart on the beam front.
 - **Done, Task 1:** the owner's ISO20-ER16 holder STEP is now `cad/vendor/iso20_er16_holder.step` (README row). Flange top to pull-stud top is 45.85 and the flange is Ø33 (the stand-in had Ø45). `tools/v5_sizes.py` **PASS**: holder tops 70.85 to 120 above the table.

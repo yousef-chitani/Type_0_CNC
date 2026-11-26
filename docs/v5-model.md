@@ -40,8 +40,22 @@ Run after the parameters above, before any part swap. The script text is in the 
 - **Grease fittings at Y max:** the PrintNC block's fitting reaches Y 716.8, 2.8 past the fill plate and 2.3 past the BF12 riser face: **it hits the riser at the hard end of travel.** Travel to a soft limit 3 short still leaves 474. Re-check with the HGH20CA block's fitting.
 - **Gantry at Y min:** the beam (Y 611 to 777, Z 194 up, at the stock section) moves 476.5 forward to Y 134.5: 85 clear of the HM12 (Y max 49.3) and 114 above the front X tube (Z 80). **Not checked yet:** the spindle reaching the bed's front and rear edges. There is no spindle (Task 5) and no bed (D-364); the beam section and the front-face carriage are Task 5.
 
+## Y1 hardware swap, part 1 (26 Nov 2026, 47th session; Fusion **not saved**, owner saved version 2 before it)
+Script `tools/fusion/v5_y1_place.py` (not read-only; re-runnable; `SEAT` = 0 until item 3). Owner's answers: D-365 to D-368.
+- **Imported** into new component `Y1 screw and motor` (identity, then moved): `DFU1605 Nut`, `BF12`, `HM12-60`, `24HS40 Motor`; `HGH20CA Block` moved into new component `Y rails and seats` and copied (2 blocks). Vendor frames:
+  - DFU1605: axis local X, flange outer face x -15, nut to x -115 (100 long), flange Ø48 x 10 at x -25 to -15, 6 x Ø5.5 on PCD 38; Body3 = 130 screw piece (hidden). **Flats 40 cut** (`DFU flats 40`, local |y| > 20, Body6 only).
+  - BF12: bore axis local Z at local y 3.5, base local y -21.5 (centre height 25).
+  - HM12-60: axis local Z, body Z 0 to 90, base local y -30 (axis 30 above the base). **Which end takes the motor is not checked yet** (bearings in sub-occurrence frames).
+  - 24HS40: shaft Ø10 axis local -Z, at local (0, 0), shaft tip near Z 21 (from the Ø10 face list): **confirm the flange face Z** before placing.
+  - HGH20CA: rail stub along local Z (Body2, hidden), up = local Y, rail bottom local y -17.5, block top 12.5 (H 30).
+- **Placed (PrintNC mm):** 2 x HGH20CA at X -377.5, Y centres 589 and 674 (PrintNC's HGW20CC centres), Z 164.6 to 190 (on the kept HGR20 rail, bottom Z 160): **OK.** BF12 at Y 738.25, base Z 185, axis Z 210: **OK.**
+- **DFU1605 not placed:** `transform2` + snapshot did not hold (it reads back at the origin; it probably fails because the flats cut is a feature in its own component). Target: axis (X -377.5, Z 210), flange outer face Y 539, nut back Y 639, local x -> -Y, local y -> +Z. Next try: set the transform with the timeline marker at the end and check `transform2` reads back, or move it with a Move feature / joint to a construction point.
+- **Hidden (not deleted):** PrintNC `Y HGW20CC` (with its grease fittings), `Y SFU1610 Nut`, its `M6-1.0 90 Grease Fitting`, `Y BF12`. Still visible: PrintNC `Y HM12-57`, `Y D30L40 8-10mm Coupler`, `Y NEMA23 Stepper`, `Y 1610 Ballscrew` (Z 215).
+- **Overlap check of the new parts (read-only):** BF12 housing cuts the 30-tall `Y BF12 Riser` (5,098 mm³: the riser is 25 tall now, D-367) and an M6 x 30; BF12 bearing against the old screw at Z 215 (goes with the screw swap); HGH20CA against PrintNC's `Y HGR20 Rail` (709 and 725 mm³: rail model profile against the vendor block's groove, check by section) and PrintNC's M6 x 12 block screws (hide with the HGW20CC fasteners); block 2 against the printed drill guide (skipped as printed).
+- **Grease nipple:** the HGH20CA STEP has none. PrintNC's HGW20CC fitting reached 2.3 past the BF12 riser face at Y max (first run): keep the 3 mm soft limit until the bought block's nipple is measured.
+
 ## Left for Task 4
-1. Owner saves `Type_0_v5` (parameters above).
+1. ~~Owner saves `Type_0_v5`~~ (version 2, 26 Nov 2026). The Y1 swap part 1 above is not saved.
 2. Swap the Y hardware for the real models in `cad/vendor/`: `hgh20ca_block.step` (Y, Y2), `dfu1605_nut.step`, `bf12.step`, `24hs40_motor.step`; HM12-60-V (only a drawing, `cad/vendor/drawings/hm12_60_v_motor_mount.png`: model it from the drawing, or the owner fetches a STEP); D25L35 coupling (no STEP in the repo: ask).
 3. Y rail seats 3 mm (D-363): the Y rails, blocks, rollers and risers go up 3; the risers' nominal heights (D-357) follow.
 4. Nut and fill plates as flat bar inside the 80 x 40 roller (D-356, D-362).
