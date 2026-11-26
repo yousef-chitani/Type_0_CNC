@@ -2,6 +2,12 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (37th session): review of D-320 to D-337; stale D-337 values fixed in the docs
+- **Done:** checked D-320 to D-337 against the BOM and `docs/v4-model.md`. The numbers hold (D-331 belt 250 mm / 50T at 75 mm centres, pull margins 2.3x to 3.2x; D-337 edge walls and rail/block positions; D-336 F01 £208.39). Stale values from before D-337 fixed: Y bar M8 screws `X = ±188` -> **`±183`** in `X23` (`docs/bom.md`, `docs/bom.csv`) and `docs/v4-model.md`; `rail_x` 205 -> **200** in the `docs/v4-model.md` parameter list. No decisions changed, model untouched.
+- **Open points found (owner to decide, not changed):** (1) the `Ø14` bar-screw counterbore at `X ±183` reaches `X ±190`, exactly the rail edge: no margin (same as before at ±188 / rail 195); move 1 to 2 mm inboard? (2) D-320's "no bracket" and "coupling inside the HM12" are overtaken by D-326/D-331 but not marked; (3) D-333 "plugged/removed" for the 9 old Z-plate holes: the RFQ drawing must say which; (4) Phase 1 £4,386.61 is at least £186.61 over the £4,200 budget (X24, X25, F30, G10 and others unpriced); the X25 note still quotes an old £215.66 overrun.
+- **What is left:** as the 36th-session entry: owner saves `Type_0_v4`, LiMo `865 mm` X screw, `M15`/`M16`/bearings prices; Task 29 steps 3 to 6.
+- **Exact next step:** owner saves `Type_0_v4`; next session runs **Task 29 step 3** (assembly order and hex-key access check on `Type_0_v4`).
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (36th session): D-337 edge-wall fixes on `Table plate M11` and `X`/`Z` fold plates in `Type_0_v4`
 - **Done (`D-337`, `Type_0_v4` NOT saved — owner saves in Fusion):**
   - **X & Z fold plates (`70 x 142 x 20` 6082):** removed the `4 x Ø8 x 6` HM12 counterbores (front edge wall was `1.25 mm`, now **`3.00 mm`** with plain `Ø4.5` through-holes); updated the `8 x` HM12 mounting screws from `M4 x 25` to surface-mounted **`M4 x 30`** A2 SHCS (`WF2362` in `X21`, price to re-check at checkout; heads clear pulleys by `13.5 mm` and belts by `3.75 mm` laterally / `5.8 mm` axially; envelope unchanged).
