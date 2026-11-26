@@ -9,8 +9,10 @@
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (41st session): V5 design doc written (Task 31)
 - **Decided (owner, Q&A):** **D-344** work area 400 x 250, 16 tools (2 rows of 8); **D-345** rack behind the bed, rows along X (Y travel about +150); **D-346** model starts fresh from PrintNC, not `Type_0_v3` (Claude had proposed v3); **D-347** (keep nose 175, rack at bed level) was found impossible in review and **replaced by D-348: +50 Z, nose 25 to 225**, rack holder tops about 70 to 120 above the table (at pickup the nose is 44 below the holder top; with 175 the rack fits only at 69 to 70 with 100 tools).
 - **Done:** `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`: goals, decisions, Claude's calls (beam SHS 120 x 120 x 8, inline drives, Type 0 Z on bought tooling plate, T-slot bed, sand, printed forks on extrusion, rail-seat pass mark 0.02 mm to check against HIWIN HG20 tolerances), a table of how each PrintNC "Printed-Milled" part is made under D-339, rough sizes (X travel about 430, Y about 450, Z 200), the rack height check, risks. **Beam section left open:** a 120 x 120 beam's 88 front face puts two HGR20 rails at most about 68 apart with no room for the BK12 or nut, so front-face X rails need a taller tube, a front bar, or rails top and bottom as PrintNC. No model, no BOM change.
-- **What is left:** owner reads and approves the design doc (or corrects Claude's calls). Task 29 (V4 RFQ) still on hold.
-- **Exact next step:** on approval, write the V5 implementation plan (`docs/superpowers/plans/2026-11-26-v5-printnc.md`) with the writing-plans skill; first plan task is setting the parametric PrintNC model's parameters for V5 in a new `Type_0_v5`.
+- **Approved (owner: "taller beam, write plan"):** **D-349** beam is a taller steel tube standing up, both X rails on its front face; section picked in plan Task 2.
+- **Plan written:** `docs/superpowers/plans/2026-11-26-v5-printnc.md`, 8 tasks (sizes script, beam pick with stiffness script, PrintNC parts list by how made, `Type_0_v5` frame/Y/bed, beam/X/Z, rack, rail-seat pour plan, BOM). Task 31 done; Task 32 open. Task 29 (V4 RFQ) still on hold.
+- **What is left:** owner reviews the plan and picks how it is run (one task per session, as the project rule).
+- **Exact next step:** plan Task 1: write `tools/v5_sizes.py` and `docs/v5-sizes.md` (no Fusion needed). Plan Task 4 needs the owner to open a fresh copy of the parametric PrintNC model saved as `Type_0_v5`.
 
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (40th session): V5 started; weighted matrix of ideas to keep
 - **Decided (owner):** **D-338** V5 starts (V4 kept as history); **D-339** shops do surface grinding only, everything else bought or printed (owner saw/drill/tap allowed: confirmed 26 Nov); **D-340** no wheel: fixed rack, 2 rows, 16 to 18 tools.
@@ -25,7 +27,7 @@
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-348**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-349**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
