@@ -1,6 +1,6 @@
 # Discord feedback on V4: too many custom parts (26 Nov 2026)
 
-The owner (Quin) and ihavenofish, after the V4 render. Claude's check of each point against the repo. **Nothing here is decided: the owner chooses.** The earlier round (MaxCahill, rcw) is `docs/feedback-discord-2026-11-25.md`.
+The owner (Quin) and ihavenofish, after the V4 render. Claude's check of each point against the repo. **Nothing here is decided: the owner chooses.** Follow-up: the owner started V5 (D-338 to D-340, `docs/v5-idea-matrix.md`). The earlier round (MaxCahill, rcw) is `docs/feedback-discord-2026-11-25.md`.
 
 ## What was said
 - **Owner:** too many custom parts; it may be very expensive (JLC prices not in yet); the university might buy a good mill for students.
@@ -31,7 +31,7 @@ What ihavenofish suggests is different from v3: **stock PrintNC on its own frame
 ## 3. The three changes, as Claude reads them (owner to check with ihavenofish)
 1. **X rail to the front.** In PrintNC the two X rails are on the **top and bottom** of the beam (`docs/printnc-assessment.md`). The bottom rail and its roller hang below the beam and use up the room under the gantry. With both rails on the **front face** (as V4 does, D-312) the beam's underside is clear. *Claude's reading; ihavenofish may mean something else.*
 2. **Overhang X off one side.** The beam runs past one Y rail, so the spindle can go outside the bed. The tool rack sits there, **along Y**, beside the bed: no wheel, no motor, no indexing.
-   - **Catch: how many tools.** A straight rack at about 40 mm pitch (from the V4 spec's 480 mm for 12) needs about 480 mm of rack. Type 0's Y travel is 300 to 350, so a side rack holds about **8 to 9 tools**, not 12, unless Y travel grows or a second row is added. Not checked against a real holder and fork.
+   - **Catch: how many tools.** The holders have Ø45 flanges (`docs/atc-wheel.md`), so the forks need about 60 mm pitch (D-17 used 60). Type 0's Y travel is 300 to 350, so a side rack along Y holds about **6 tools per row**, not 12. *(Corrected 26 Nov: this first said 40 pitch and 8 to 9 tools.)*
    - The overhang puts more load on one Y roller, and the X screw gets longer.
 3. **+50 mm Z.** Room for tool holders under the gantry, so a rack can also sit along the back of the bed. **Cost:** taller Y rollers (or raised rails) and a longer lever from the Y rails to the tool: the machine gets softer in Y. Not worked out.
 
@@ -48,5 +48,5 @@ Then the owner could make the 7 milled 6082 parts (and later the ATC parts) them
 ## To ask the owner
 1. Why a new machine rather than a PrintNC: which of fixed gantry, EG fill, ground seats, 12-tool wheel is a must?
 2. Do the side-by-side (V4 vs PrintNC + 3 changes) now, or wait for the JLC prices?
-3. Is 8 to 9 tools in a side rack enough, or must it be 12?
+3. Is about 6 tools per row in a side rack enough? *(Answered by D-340: rack of 16 to 18 in 2 rows; see `docs/v5-idea-matrix.md`.)*
 4. Ask ihavenofish what "move the X rail to the front" means exactly.

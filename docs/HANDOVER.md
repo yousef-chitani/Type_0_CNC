@@ -6,17 +6,18 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (40th session): V5 started; weighted matrix of ideas to keep
+- **Decided (owner):** **D-338** V5 starts (V4 kept as history); **D-339** shops do surface grinding only, everything else bought or printed (owner saw/drill/tap assumed allowed: to confirm); **D-340** no wheel: fixed rack, 2 rows, 16 to 18 tools.
+- **Done:** `docs/v5-idea-matrix.md` (tables from `tools/v5_matrix.py`; weights accuracy 25, cost 20, build 15, bought/printed 15, proven 10, carry 10, rack 5; out if it needs milling/turning/laser or scores accuracy 2 or less; sensitivity under 2 other weightings). Result, not decided: **close to stock PrintNC** (moving gantry, bolted steel tube frame, steel beam, epoxy-poured rail seats with grinding as fallback, inline drives, Type 0 Z on bought cut plate, T-slot bed, rack behind the bed under the gantry with +50 Z, sand fill). Screws C5/C7 a tie. Rack: 60 pitch, row of 8 spans 420, of 9 spans 480 (X travel must be at least that). Task 30 closed.
+- **Biggest risks named in the doc:** ±0.02 on a PrintNC with +50 Z not shown; PrintNC no-welding not confirmed; grinding unpriced.
+- **What is left:** owner answers the 4 questions at the end of `docs/v5-idea-matrix.md`, and says whether the V4 JLC prices (Task 29) are still wanted.
+- **Exact next step:** owner confirms question 1 (owner-made parts allowed) and question 2 (start from PrintNC); then next session writes the V5 design doc (Task 31) from the matrix winners.
+
 ## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (39th session): Discord feedback, "too many custom parts" / use PrintNC
 - **Done:** owner's and ihavenofish's Discord points checked against the repo: `docs/feedback-discord-2026-11-26.md`. No design change, no D-number, model untouched.
-- **Findings:** V4 wave 1 is 30 custom pieces (about 22 shapes) over 4 shop processes (mill, lathe, laser, grind); Phase 1 already over budget. v3 was PrintNC on our EG tub and was left mostly for tub reasons (D-288, D-305); ihavenofish proposes stock PrintNC (own frame) with 3 changes: X rails on the front face, X overhang off one side for a rack along Y, +50 Z. A side rack fits about 8 to 9 tools at 40 pitch in 300 to 350 Y travel, not 12 (not checked against a real holder).
+- **Findings:** V4 wave 1 is 30 custom pieces (about 22 shapes) over 4 shop processes (mill, lathe, laser, grind); Phase 1 already over budget. v3 was PrintNC on our EG tub and was left mostly for tub reasons (D-288, D-305); ihavenofish proposes stock PrintNC (own frame) with 3 changes: X rails on the front face, X overhang off one side for a rack along Y, +50 Z. A side rack fits about 6 tools per row (Ø45 holder flanges, about 60 pitch) in 300 Y travel. *(Corrected in the 40th session: first said 40 pitch, 8 to 9 tools.)*
 - **What is left:** owner answers the 4 questions at the end of the feedback doc (above all: why a new machine rather than a PrintNC). JLC prices for `cad/v4/jlc-step/` still wanted either way.
 - **Exact next step:** owner uploads the JLC parts and answers question 2; if "now", next session writes the one-page V4 vs PrintNC + 3 changes side-by-side (no modelling).
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (38th session): STEP export of the wave 1 custom parts for JLC instant quotes
-- **Done:** 30 STEP files (one solid each, mm, at the origin) exported from the saved `Type_0_v4` (not changed) into `cad/v4/jlc-step/`, by process: `mill-6082` (8), `lathe-steel` (2), `laser-steel` (8), `ground-steel` (5, comparison only: JLC does not grind), `owner-made` (7, comparison only, D-329). Sizes checked against the names. Part sheet with qty, material and notes: `cad/v4/jlc-step/README.md`. Threads are not in the STEP (tap-drill holes only): mark them in the JLC form.
-- **Note:** the Fusion API wrote STEP units as cm on one export and mm on the next. The files in the repo were checked: all mm, true size.
-- **What is left:** owner uploads to JLC and records the instant prices; then put them against M11/M12/M17/G12/G13/F28 in the BOM. Task 29 steps 3 to 6 as before.
-- **Exact next step:** owner uploads `cad/v4/jlc-step/mill-6082` and `laser-steel` files to JLC and sends the prices; next session puts them in the BOM, then Task 29 step 3.
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
@@ -24,7 +25,7 @@
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-337**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-340**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
