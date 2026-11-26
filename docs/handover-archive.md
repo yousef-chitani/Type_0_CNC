@@ -2,6 +2,12 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (50th session): code map, task bundles, next-session prompt
+- **State at start:** `Type_0_v5` with the 48th and 49th sessions' work, **not saved**. No Fusion work this session.
+- **Done:** `.claude/CODEMAP.md` (227 lines: overview, tree, entry points, data flow, script index, where-index, docs map, gotchas); `tools/codemap.py` regenerates its AUTO sections (`--check` reports a stale map). `.claude/TASKS.md`: open work in 6 bundles (A to F) plus parked tasks, and the NEXT_PROMPT template. `.claude/NEXT_PROMPT.md`: bundle A. `CLAUDE.md`: navigation and handoff section. Tasks README: one bundle per session; last D-number D-369 (was D-364).
+- **Left:** bundle B (stale docs: handover key-files D-336, root README `Type_0_v3`, task 20 branch, tracked `.pyc`, open-questions header, LiMo hole-square question).
+- **Exact next step:** follow `.claude/NEXT_PROMPT.md` (bundle A: Y2, 3 mm seats, flat-bar plates, full check; needs the owner's save and Fusion, else bundle B then E1).
+
 ## State lines from the tasks README (moved unchanged from `docs/tasks/README.md` "State in five lines", 26 Nov 2026, 52nd session)
 - **Moving-gantry mill (D-137):** one cast EG tub (about 88.8 kg), Ampreg 30 resin, hand-tamped; steel SHS 120 x 120 x 8 gantry beam; PrintNC-style rollers; two Y motors (Y1, Y2).
 - **The CAD is the Fusion 360 model `Type_0_v3`.** `cad/v2/assembly.py` (CadQuery, fixed gantry) is the old design, kept as history only. Not every Phase 1 part is priced yet (see the budget line above).

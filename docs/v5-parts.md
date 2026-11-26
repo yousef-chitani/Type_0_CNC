@@ -87,7 +87,7 @@ PrintNC prints these first and lets builders mill them later. The model's bodies
 ## No welding: joint check (26 Nov 2026)
 Read-only script on `Type_0_v5`: for every pair of structure and motion bodies whose bounding boxes touch, the fasteners whose boxes overlap both. This is a bounding-box check, not a contact check.
 
-- **Bolted:** XFrame to both YFrames (`M6x12`), Y and X rails to tubes (`M5x20`), BKHM12 and BF12 risers to tubes and beam (`M6x30`), HM12 and BF12 to risers (`M6x50`, `HM12 M6x50`), Y rollers to blocks, braces and beam (`M6x12 (4)`), nuts to roller plates (`M5 Threaded Rod and Nuts`), X roller parts to each other and the X blocks (`M6x12 (1)`, `M6x12 (2)`, `M5x20 (1)`).
+- **Bolted:** XFrame to both YFrames (`M6x12`), Y and X rails to tubes (`M5x20`), BKHM12 and BF12 risers to tubes and beam (`M6x30`), HM12 and BF12 to risers (`M6x50`, `HM12 M6x50`), Y rollers to blocks, braces and beam (`M6x12 (4)`; 2 per side above the plate rods cut to M6 x 9, D-373), nuts to roller plates (`M5 Threaded Rod and Nuts`), X roller parts to each other and the X blocks (`M6x12 (1)`, `M6x12 (2)`, `M5x20 (1)`).
 - **Touching with no fastener:** the 1610 nut and fill plates against the HGW20CC blocks (4 pairs). They sit side by side; the plates are held by the threaded rod through the roller, not by the block. Not a weld.
 - **Not in the pair check:** sensor mounts, chain supports and endcaps (printed, held by `M4x16`, `M5x20`, `M6x12` screws in the fastener groups), the wasteboard (`Wasteboard M6x20`) and the PrintNC Z (dropped; `1Z/2Z Fasteners`).
 - Every structural joint has a numbered printed drill guide (guides 1 to 11). **Result: no welded joint in PrintNC.** V5 joints are new in Task 4 and stay bolted.

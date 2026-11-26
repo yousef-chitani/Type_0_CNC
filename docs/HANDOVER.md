@@ -6,6 +6,13 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (52nd and 53rd sessions): bundle B, E1, Y plate rods and roller screws
+- **State at start:** the 52nd session did bundle B (docs consistency) and E1 (`docs/v5-rail-seats.md`: HIWIN HG20 tolerances by curl, **D-371** pass mark, **D-372** seats 30 wide) and wrote the M5 rod code, but ended without committing or running it; the 53rd committed that (f1d1189). `Type_0_v5` saved by the owner with the 51st session's work.
+- **Decided (owner, Q&A):** **D-373** through rods with nuts at both ends (Y travel 480.1, 450 needed); the 2 gantry-to-roller M6x12 per side above the upper outboard rod cut to 9 under the head.
+- **Done (Fusion, not saved):** 6 rods Ø5 x 200 and 12 nuts per side (`v5_y1_place.py`, Y2 by `v5_y2_place.py`); new `tools/fusion/v5_roller_screws.py` cuts the 4 screws (copies, PrintNC bodies hidden); `v5_check_task4.py` checks rods against every body. Check: same 4 warnings, no errors, **Y travel 480.1 on Y1 and Y2**; lower rods clear the HGH20CA block screw heads by 0.44 (tight with real ISO 7380 heads, about 0.2). Notes in `docs/v5-model.md` "Plate rods and roller screws".
+- **Left:** bundle C (bed: needs the owner's STEP in `cad/vendor/`, not there); E2 (seat bodies 30 wide, then the pour plan). Owner: save `Type_0_v5`; the untracked `PrintNC V4 Metalcutter V4.0.33 Elements to take.step` (repo root) and `cad/v2/Facebutton v2 frame.step` are not committed (yours: say if they belong in git).
+- **Exact next step:** owner saves `Type_0_v5`. Then follow `.claude/NEXT_PROMPT.md` (E2 seat bodies, or bundle C if the bed STEP is in).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (51st session): V5 Task 4, Y axis finished (Y2, 3 mm seats, end-cap plates)
 - **State at start:** `Type_0_v5` saved by the owner (version 4) with the 48th and 49th sessions' Y1 work. This session's work is on top, **not saved**.
 - **Decided (owner, Q&A):** **D-370** Y nut and fill plates are end caps on the 80 x 40 roller (40 x 15 aluminium bar cut 80), clamped by 6 M5 rods on the DFU's PCD 38; D-356's sizes were for the old 75 x 50 roller.
@@ -13,19 +20,13 @@
 - **Left:** seat bodies (footprint with the pour plan, bundle E); the bed (bundle C, needs the owner's STEP, not in `cad/vendor/`); M5 rods about 200 long for the BOM. Still open: HM12-60 vs 24HS40 hole square (49.4 vs 50), ask LiMo.
 - **Exact next step:** owner saves `Type_0_v5`. Then follow `.claude/NEXT_PROMPT.md` (first: model the M5 rods and nuts and re-check travel; then bundle C if the bed STEP is in `cad/vendor/`, else bundle B, then E1).
 
-## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (50th session): code map, task bundles, next-session prompt
-- **State at start:** `Type_0_v5` with the 48th and 49th sessions' work, **not saved**. No Fusion work this session.
-- **Done:** `.claude/CODEMAP.md` (227 lines: overview, tree, entry points, data flow, script index, where-index, docs map, gotchas); `tools/codemap.py` regenerates its AUTO sections (`--check` reports a stale map). `.claude/TASKS.md`: open work in 6 bundles (A to F) plus parked tasks, and the NEXT_PROMPT template. `.claude/NEXT_PROMPT.md`: bundle A. `CLAUDE.md`: navigation and handoff section. Tasks README: one bundle per session; last D-number D-369 (was D-364).
-- **Left:** bundle B (stale docs: handover key-files D-336, root README `Type_0_v3`, task 20 branch, tracked `.pyc`, open-questions header, LiMo hole-square question).
-- **Exact next step:** follow `.claude/NEXT_PROMPT.md` (bundle A: Y2, 3 mm seats, flat-bar plates, full check; needs the owner's save and Fusion, else bundle B then E1).
-
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
 - **Only prices confirmed from a live page** (or given by the owner), with the date. Never estimate prices.
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-372**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-373**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
@@ -34,7 +35,7 @@
 |---|---|
 | `docs/assembly.md`, `cad/v2/assembly.py`, `cad/v2/out/assembly/` | **Old** CadQuery assembly of the fixed-gantry design: superseded by the Fusion 360 models (D-137, D-183); **the live CAD is `Type_0_v5`** (V5, D-338 on; `docs/v5-model.md`). `cad/v2/out/assembly/cast_in_features.md` has a section for the old EG tub |
 | `cad/vendor/` | Manufacturer STEP files (and the Z motor PDF) used by the assembly |
-| `docs/decisions.md` | Decision log D-01 … D-372 |
+| `docs/decisions.md` | Decision log D-01 … D-373 |
 | `docs/open-questions.md` | What's still open, in priority order |
 | `docs/portal-relocation.md` | Assessment: how the portal goes back in the same place after a move |
 | `docs/handoff-opus-tasks.md` | Routine tasks with ready-to-paste briefs for a session on Opus 5.5 |

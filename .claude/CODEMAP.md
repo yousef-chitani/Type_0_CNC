@@ -29,7 +29,7 @@ cad/  (183 files)  # type0_layout.py / type0_drawings.py: v1 CadQuery layout (hi
     jlc-step/  (31 files)  # V4 per-part STEP for JLC quotes (task 29, on hold), README inside
   vendor/  (32 files)  # manufacturer STEP/PDF (real parts: use these, never stand-ins), README inside
     drawings/  (10 files)  # supplier drawings (LiMo ends, HM12-60, MH coupling, spindle clamp)
-docs/  (131 files)  # the project: decisions, BOM, design notes, price checks (see Docs map)
+docs/  (132 files)  # the project: decisions, BOM, design notes, price checks (see Docs map)
   img/  (2 files)
   sketches/  (3 files)  # SVG sketches from tools/task28_sketches.py
   superpowers/  (11 files)  # specs/ and plans/ (design docs and step plans, dated)
@@ -52,7 +52,7 @@ tools/  (26 files)  # calc scripts, BOM generators, hook
   `.claude/settings.json`) → the 5 generators.
 - **V5 work:** spec `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`, plan
   `docs/superpowers/plans/2026-11-26-v5-printnc.md` (Tasks 1–8), model log `docs/v5-model.md`.
-- **Fusion:** `tools/fusion/v5_y1_place.py` then `tools/fusion/v5_y2_place.py` (write; separate calls), `tools/fusion/v5_check_task4.py` (read-only). Fusion can `exec` the repo file (see `docs/v5-model.md`, Y axis finish).
+- **Fusion:** `tools/fusion/v5_y1_place.py` then `tools/fusion/v5_y2_place.py` then `tools/fusion/v5_roller_screws.py` (write; separate calls), `tools/fusion/v5_check_task4.py` (read-only). Fusion can `exec` the repo file (see `docs/v5-model.md`, Y axis finish).
 
 ## Data flow (who reads what)
 ```

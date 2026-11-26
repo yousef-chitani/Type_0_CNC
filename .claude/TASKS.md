@@ -6,7 +6,7 @@ session), M (one session), L (may need two: say where you stopped). Owner-only i
 (saving Fusion, browser prices, sending messages) are in `docs/owner-todo.txt`, not here.
 
 ## Order
-1. **A** when Fusion is connected and the owner has saved `Type_0_v5`; otherwise **B**, then **E1**.
+1. A, B and E1 done (53rd session). Next: **C** once the owner has saved `Type_0_v5` and put the bed STEP in `cad/vendor/`; else **E2** (seat bodies, then the pour plan).
 2. Then C (needs the owner's bed STEP), D, E2, F.
 
 ---
@@ -17,7 +17,7 @@ session), M (one session), L (may need two: say where you stopped). Owner-only i
 - [x] 3 mm rail seats (D-363; 51st: user parameter `YRailSeat` on joints Rigid 2/202, `SEAT = 3`; seat bodies left for E2): delete `Y 1605 Screw` and riser components first, set `SEAT = 3.0`, re-run; rails, blocks, rollers, risers up 3
 - [x] Nut and fill plates (51st: end caps outside the roller, 40 x 15 cut 80, D-370), first planned as flat bar inside the 80 x 40 roller (D-356, D-362); hide PrintNC's 1610 nut/fill plates and their M5 rods
 - [x] Full check with `v5_check_task4.py` (51st: Y travel 489.4 both sides, without rod ends)
-- [ ] Model the 6 M5 rods and nuts of the end-cap plates (names the check's SKIP list does not catch), re-run travel (about 480 expected); check the lower rods against the HGH20CA screw heads inside the roller; rear may need tapped fill-plate holes (owner): re-point the carriage, riser and grease-fitting lines for Y1 and Y2; Y travel at both sides
+- [x] (53rd session: rods and nuts in `v5_y1_place.py`, screws cut by `tools/fusion/v5_roller_screws.py`, D-373, travel 480.1) Model the 6 M5 rods and nuts of the end-cap plates (names the check's SKIP list does not catch), re-run travel (about 480 expected); check the lower rods against the HGH20CA screw heads inside the roller; rear may need tapped fill-plate holes (owner): re-point the carriage, riser and grease-fitting lines for Y1 and Y2; Y travel at both sides
 - [x] Update `docs/v5-model.md`, task 32 row, CODEMAP if a script is added (e.g. `tools/fusion/v5_y2_place.py`)
 
 Files: `tools/fusion/v5_y1_place.py` (218 lines: datums 11–25, `run` 32–), `tools/fusion/v5_check_task4.py` (96),
