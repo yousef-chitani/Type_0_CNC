@@ -2,6 +2,12 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (43rd session): V5 plan Task 1, sizing script
+- **Decided (owner, Q&A):** **D-350** longest tool 100 (holder tops up to 120); **D-351** rack rows 80 apart, 40 gap, rack adds 150, Y travel 450.
+- **Done:** `tools/v5_sizes.py` and `docs/v5-sizes.md`. Inputs are measured from the vendor STEPs, the drawings and the PrintNC STEP in the repo root (Y roller 175 with the nut, risers, beam ends), each one tagged with its source. Result: X travel 433, Y 450, Z 200; X and Y rails 650, X and Y screws 750, Z rail and screw 400 (all standard LiMo lengths, re-read by curl 26 Nov); beam = frame X 830.7; whip 3,433 rpm at 80 %.
+- **Not done:** the lowest holder top waits for the **real ISO20 holder STEP**, which the owner is fetching (the 44 came from a stand-in; new CLAUDE.md rule). Until then the script ends `INCOMPLETE` (exit 2). The PrintNC STEP has no frame tubes. Check the 59 mm screw end inside the HM12 against the 95 drawing (the figure came from the 90 model).
+- **Exact next step:** when the holder STEP is in `cad/vendor/`, measure the nose to holder top at pickup with the Jianken STEP, set `HOLDER_STACK`, and run until it prints PASS. Then plan Task 2 (`tools/v5_beam.py`, beam pick).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (42nd session): CLAUDE.md rule, no stand-ins
 - **Done:** new rule in `CLAUDE.md` (owner): never use a stand-in when an accurate STEP or drawing is available; if none is in the repo's folders, ask the owner to fetch it.
 - **What is left:** V5 plan unchanged; Task 32 open.

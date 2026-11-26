@@ -6,6 +6,13 @@
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (45th session): V5 plan Task 3 done
+- **Decided (owner, Q&A):** **D-356** nut and fill plates are drilled aluminium flat bar; **D-357** HM12 and BF12 risers are steel flat bar with shims; **D-358** one X carriage plate: the Z fixed plate bolts straight onto the 4 X blocks; **D-359** 2 mm shims under the Z blocks and nut housing replace the D-205 pocket; **D-360** a bought 80 mm spindle clamp replaces PrintNC's (D-247).
+- **Done:** `docs/v5-parts.md` lists every PrintNC part (Fusion names in `Type_0_v5`, STEP names where they differ) as kept, changed or dropped, with how made, stock, load and notes, plus the new V5 parts. `tools/v5_parts_check.py` **PASS** (52 rows; how-made only bought / printed / owner / shop grind / none; no mill, turn or laser). Joint check in Fusion (read-only, bounding boxes): every PrintNC structural joint is bolted, no welding.
+- **Found:** `Type_0_v5` already exists in Fusion as a saved, unmodified copy of PrintNC at stock sizes (1182 timeline items, 94 parameters). Not changed this session. PrintNC has 3 X frame tubes; V5 buys 2 (D-354): what carries the bed and rack is for Task 4.
+- **Left:** riser heights, M5/M6 thread length in the 6 mm tube wall, and the spindle clamp choice and price (Task 8). The two untracked STEPs in the repo (`PrintNC ... Elements to take.step`, `cad/v2/Facebutton v2 frame.step`) are not committed.
+- **Exact next step:** plan Task 4: in `Type_0_v5`, set PrintNC's parameters for the V5 frame, Y axis and bed (sizes from `tools/v5_sizes.py`, D-353 to D-360), then the check script.
+
 ## 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (44th session): V5 plan Tasks 1 and 2 done
 - **Decided (owner, Q&A):** **D-352** the "nose" is the spindle front face, where the holder flange seats; **D-353** beam RHS 200 x 150 x 8 standing up; **D-354** frame tubes SHS 80 x 80 x 6; **D-355** X rails 122 apart on the beam front.
 - **Done, Task 1:** the owner's ISO20-ER16 holder STEP is now `cad/vendor/iso20_er16_holder.step` (README row). Flange top to pull-stud top is 45.85 and the flange is Ø33 (the stand-in had Ø45). `tools/v5_sizes.py` **PASS**: holder tops 70.85 to 120 above the table.
@@ -13,19 +20,13 @@
 - **Left:** the lever arms in `v5_beam.py` (173 front face to axis, beam centre 45 above nose max) are estimates until Task 5. Measure the delivered tube's corner radius before drilling. The holder STEP is converted from a drawing (taper modelled at 8.000°). Still open from the 43rd session: the 59 mm screw end inside the HM12 against the 95 drawing.
 - **Exact next step:** plan Task 3. Write `docs/v5-parts.md`: list every PrintNC part (STEP `PrintNC V4 Metalcutter V4.0.33 Elements to take.step`, repo root) as kept, changed or dropped, with how each is made, then Q&A on flagged parts.
 
-## 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (43rd session): V5 plan Task 1, sizing script
-- **Decided (owner, Q&A):** **D-350** longest tool 100 (holder tops up to 120); **D-351** rack rows 80 apart, 40 gap, rack adds 150, Y travel 450.
-- **Done:** `tools/v5_sizes.py` and `docs/v5-sizes.md`. Inputs are measured from the vendor STEPs, the drawings and the PrintNC STEP in the repo root (Y roller 175 with the nut, risers, beam ends), each one tagged with its source. Result: X travel 433, Y 450, Z 200; X and Y rails 650, X and Y screws 750, Z rail and screw 400 (all standard LiMo lengths, re-read by curl 26 Nov); beam = frame X 830.7; whip 3,433 rpm at 80 %.
-- **Not done:** the lowest holder top waits for the **real ISO20 holder STEP**, which the owner is fetching (the 44 came from a stand-in; new CLAUDE.md rule). Until then the script ends `INCOMPLETE` (exit 2). The PrintNC STEP has no frame tubes. Check the 59 mm screw end inside the HM12 against the 95 drawing (the figure came from the 90 model).
-- **Exact next step:** when the holder STEP is in `cad/vendor/`, measure the nose to holder top at pickup with the Jianken STEP, set `HOLDER_STACK`, and run until it prints PASS. Then plan Task 2 (`tools/v5_beam.py`, beam pick).
-
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).
 - **Only prices confirmed from a live page** (or given by the owner), with the date. Never estimate prices.
 - **No eBay.** Few vendors; prefer B&Q / Screwfix (local), then RS. Flag swaps costing > 10% or £5 more.
 - Supplier sites block this cloud session. Prices and vendor CAD come from the owner's **local browser session** via task files (`docs/price-check-task-N.md`, `docs/cad-download-task.md`). The owner logs in themselves; the session never handles credentials.
 - **Cast, not welded.** Keep the frame in carriable pieces.
-- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-355**).
+- Write plainly; record every decision in `docs/decisions.md` with a D-number (last: **D-360**).
 - Design small low-load parts for printing (PETG) rather than buying (D-100, D-101).
 - The owner uses **Fusion 360**; deliver CAD as STEP with named components.
 
