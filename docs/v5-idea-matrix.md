@@ -6,7 +6,7 @@
 
 ## How it works
 - **Hard rules first:** an option that needs milling, turning or laser cutting is **out** and is not scored. An option scoring **2 or less on accuracy** is also out: it cannot meet ±0.02 (requirements).
-- **Claude's call (owner to confirm):** parts the owner saws, drills and taps themselves (D-329) are allowed. They are not commissioned.
+- **Owner-made parts are allowed (D-339, owner 26 Nov: "Yes, allowed"):** parts the owner saws, drills and taps themselves (D-329) are not commissioned.
 - Each option gets **1 to 5** on each criterion (5 is best: most accurate, cheapest, easiest, most bought/printed, most proven, easiest to carry, best for the rack). The total is the weighted sum, out of 100.
 - Weights (proposed 26 Nov, owner said "let's do this"):
 
@@ -148,7 +148,7 @@ Put the group winners together and V5 is **close to a stock PrintNC**, with Type
 - Sand against EG fill and C5 against C7 are close; small changes in score flip them.
 
 ## To ask the owner
-1. Does owner sawing, drilling and tapping count as allowed? (Assumed yes.)
+1. ~~Does owner sawing, drilling and tapping count as allowed?~~ **Yes (D-339).**
 2. Are you happy for V5 to start from PrintNC itself, as the matrix says, rather than a new frame?
 3. Epoxy-pour rail seats with grinding as the fallback, or grinding from the start?
 4. C5 (LiMo) or C7 screws?
