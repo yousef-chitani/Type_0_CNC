@@ -76,10 +76,15 @@ Run order: `v5_y1_place.py`, `v5_y2_place.py`, `tools/fusion/v5_roller_screws.py
 - **Lower rods:** clear the HGH20CA block screw heads (`M6x12` Z 184 to 202 inside the roller), the closest by 0.44 (rod 6 to the inboard head). Tight: check on the real heads (D-264 ISO 7380, Ø10.5 heads would leave about 0.2).
 - **Check (after all of it):** timeline 1255, the same 4 warnings, no errors; Y overlaps only the known ones plus the rods in the tapped holes and the BF12 at the back stop. The only other rod hits are PrintNC's printed drill guides 4 and 5 (7.6 mm3; drilling jigs, not in the built machine).
 
+## Y rail seat bodies (26 Nov 2026, 54th session; started from the owner's saved `Type_0_v5`; **not saved**)
+Run order now: `v5_y1_place.py`, `v5_y2_place.py`, `v5_roller_screws.py`, `tools/fusion/v5_y_seats.py` (new; drops and rebuilds its component), `v5_check_task4.py`.
+- `Y Rail Seats (epoxy, 30 wide)` (root, identity transform): `Y1 seat`, `Y2 seat`, 30 wide centred on each rail, Y 64 to 714, Z 160 (tube top) to 163 (rail underside), 11 Ø6 holes each under the rail holes. 58,500 mm³ gross, 57,567 net per seat. Pour plan and D-374 to D-377 in `docs/v5-rail-seats.md`.
+- **Check:** timeline 1257, the same 4 warnings, no errors; no seat overlaps (the seats are in the check's body list; tested directly against the rails, tubes, M5x20 rail screws and `YRail Centering Guide`: 0). The M5x20 tips sit at Z 152.5, through the full tube wall (154 to 160). Y travel 480.1.
+
 ## Left for Task 4
 1. ~~Owner saves `Type_0_v5`~~ (version 2, 26 Nov 2026). The Y1 swap part 1 above is not saved.
 2. Swap the Y hardware for the real models in `cad/vendor/`: `hgh20ca_block.step` (Y, Y2), `dfu1605_nut.step`, `bf12.step`, `24hs40_motor.step`; Y1 done (49th session: D25L35 and risers); **Y2 done (51st session)**.
-3. ~~Y rail seats 3 mm (D-363)~~ (51st session: `YRailSeat`, `SEAT = 3`); seat bodies still to model, footprint from the pour plan (Task 7).
+3. ~~Y rail seats 3 mm (D-363)~~ (51st session: `YRailSeat`, `SEAT = 3`); ~~seat bodies~~ (54th session: `tools/fusion/v5_y_seats.py`, see below).
 4. ~~Nut and fill plates~~ (51st session: end caps, D-370).
 5. The bed, once the owner has chosen it and put its STEP in `cad/vendor/` (D-364); then the origin offset and the spindle reach at Y min and Y max.
 6. ~~Fix the carriage line in the check script~~ (done 26 Nov 2026); full check re-run after the swap (51st session).

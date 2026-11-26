@@ -37,8 +37,8 @@ docs/  (132 files)  # the project: decisions, BOM, design notes, price checks (s
 linuxcnc/  (14 files)
   type0/  (14 files)  # LinuxCNC 2.9 config: type0.ini + HAL, Mesa 7I76EU
     sim/  (5 files)  # simulator ini builder + checks
-tools/  (26 files)  # calc scripts, BOM generators, hook
-  fusion/  (3 files)  # scripts run inside Fusion via fusion_mcp_execute (not python)
+tools/  (28 files)  # calc scripts, BOM generators, hook
+  fusion/  (5 files)  # scripts run inside Fusion via fusion_mcp_execute (not python)
 ```
 <!-- /AUTO:tree -->
 
@@ -52,7 +52,7 @@ tools/  (26 files)  # calc scripts, BOM generators, hook
   `.claude/settings.json`) → the 5 generators.
 - **V5 work:** spec `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`, plan
   `docs/superpowers/plans/2026-11-26-v5-printnc.md` (Tasks 1–8), model log `docs/v5-model.md`.
-- **Fusion:** `tools/fusion/v5_y1_place.py` then `tools/fusion/v5_y2_place.py` then `tools/fusion/v5_roller_screws.py` (write; separate calls), `tools/fusion/v5_check_task4.py` (read-only). Fusion can `exec` the repo file (see `docs/v5-model.md`, Y axis finish).
+- **Fusion:** `tools/fusion/v5_y1_place.py` then `tools/fusion/v5_y2_place.py` then `tools/fusion/v5_roller_screws.py` then `tools/fusion/v5_y_seats.py` (write; separate calls), `tools/fusion/v5_check_task4.py` (read-only). Fusion can `exec` the repo file (see `docs/v5-model.md`, Y axis finish).
 
 ## Data flow (who reads what)
 ```
@@ -126,10 +126,14 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
 - `tools/cure_heat.py` (40) Curing heat estimate for the epoxy-granite castings with Ampreg 30 + 3X Slow (D-122).
 - `tools/fusion/v5_check_task4.py` (115) Read-only check of Type_0_v5 for V5 plan Task 4 (run through fusion_mcp_execute, readOnly). 1. timeline warnin  
   bodies(root), run(_context)
+- `tools/fusion/v5_roller_screws.py` (75) Cut the gantry-to-roller M6x12 screws that the Y plate rods hit to M6 x 9 (D-373). Run through fusion_mcp_exec  
+  run(_context)
 - `tools/fusion/v5_y1_place.py` (313) Place the Y1 vendor parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute (not read-only  
   mat(cols, t_mm), run(_context)
 - `tools/fusion/v5_y2_place.py` (143) Place the Y2 parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute (not read-only) AFTER  
   move(dx_mm), turn_about_y(x_mm, z_mm), placed(t1, extra), run(_context)
+- `tools/fusion/v5_y_seats.py` (66) Y rail seats (V5 plan Task 7, bundle E2): the cured epoxy seat under each Y HGR20, as bodies. Run through fusi  
+  run(_context)
 - `tools/gen_bom_md.py` (62) Regenerate docs/bom.md from docs/bom.csv. Run from the repo root: python tools/gen_bom_md.py  
   esc(s)
 - `tools/gen_phase1_cost.py` (29) Regenerate docs/phase1-cost.md from docs/bom.csv (Phase 1 lines only).

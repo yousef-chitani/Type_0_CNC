@@ -6,7 +6,7 @@ session), M (one session), L (may need two: say where you stopped). Owner-only i
 (saving Fusion, browser prices, sending messages) are in `docs/owner-todo.txt`, not here.
 
 ## Order
-1. A, B and E1 done (53rd session). Next: **C** once the owner has saved `Type_0_v5` and put the bed STEP in `cad/vendor/`; else **E2** (seat bodies, then the pour plan).
+1. A, B, E1 and E2 for Y done (54th session). Next: **C** once the owner has saved `Type_0_v5` and put the bed STEP in `cad/vendor/`; else **D** (tool rack).
 2. Then C (needs the owner's bed STEP), D, E2, F.
 
 ---
@@ -56,7 +56,8 @@ Files: plan `:90-100`, `tools/v5_sizes.py` (`rack_row_span`, `rack_y_depth`).
 
 ## E. V5 Task 7: rail-seat pour plan — M (E1 now, E2 after A)
 - [x] E1 (no Fusion): HIWIN HG20 mounting tolerances by curl; pass mark with the owner (D-number) (52nd session: `docs/v5-rail-seats.md`, D-371 pass mark, D-372 seats 30 wide)
-- [ ] E2 (needs the seat bodies: model them with their footprint first): pour plan in `docs/v5-rail-seats.md` (dams, resin and quantity from the model's seat volumes, levelling across both Y tubes and the beam front, cure, measuring, fail → grinding)
+- [x] E2 for Y (54th session: `tools/fusion/v5_y_seats.py`, 58,500 mm³ per seat; pour plan D-374 to D-377)
+- [ ] E2 for X (folds into C: the beam front is not modelled): X seat thickness, bodies and pour; was: pour plan in `docs/v5-rail-seats.md` (dams, resin and quantity from the model's seat volumes, levelling across both Y tubes and the beam front, cure, measuring, fail → grinding)
 
 Files: plan `:101-106`; resin notes `docs/epoxy-options.md`, `docs/curing-heat.md` (headings only).
 

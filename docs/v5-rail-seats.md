@@ -1,8 +1,8 @@
 # V5 rail seats: tolerances and pass mark (plan Task 7)
 
 Epoxy seat under each rail, 3 mm thick nominal (D-363). This file: HIWIN's mounting tolerances,
-the pass mark (D-371) and the seat footprint (D-372). The pour plan (dams, resin, levelling, cure,
-measuring, fail → grinding) comes in bundle E2, after the seat bodies are modelled.
+the pass mark (D-371), the seat footprint (D-372), the Y seat bodies in the model and the Y pour plan
+(D-374 to D-377). X seats on the beam front wait for bundle C (beam not modelled).
 
 ## HIWIN HG20 mounting tolerances (fetched by curl, 26 Nov 2026)
 Sources: HIWIN catalogue *Linear guideways HG/QH series* GW-11-6-EN-2302-K, pages 44–47
@@ -45,3 +45,66 @@ A seat that fails goes to a shop for grinding (plan Task 7; method in E2).
 the HGH20CA underside is 4.6 above the seat top (H1), so the ledge does not touch the block. The
 HM12 and BF12 risers stand on the tube top beyond the rail ends, not on the seat.
 X seats on the beam front: the same rule (30 wide per rail); thickness still to ask (bundle C).
+
+## Y seat bodies in the model (26 Nov 2026, 54th session)
+`tools/fusion/v5_y_seats.py` builds root component `Y Rail Seats (epoxy, 30 wide)` (bodies `Y1 seat`,
+`Y2 seat`) from the model: X centre and Y ends from each `Y HGR20` rail, Z from the tube top (160) to
+the rail underside (163). **Y1 X -392.5 to -362.5, Y2 X 362.5 to 392.5; Y 64 to 714; Z 160 to 163.**
+11 Ø6 holes each (the rail's through holes, Y 88.5 + 60k to 688.5). **Volume per seat: 58,500 mm³ gross,
+57,567 net**; both 117 cm³. Check: no overlap with the rails, tubes, M5x20 rail screws or
+`YRail Centering Guide` (touching faces only); the M5x20 tips now sit at Z 152.5, so they still pass
+through the full 6 mm tube wall (Z 154 to 160): no longer screw needed.
+
+## Y pour plan (D-374 to D-377, owner 26 Nov 2026)
+Resin: Ampreg 30 + 3X Slow (D-122), 100:26 by weight, 250–450 cP, pot life about 4 h at 25 °C,
+minimum 18 °C (`docs/epoxy-options.md`). The mixed density is not in our notes: about 1.1 g/cm³
+assumed here (check the TDS).
+
+**Before the pour**
+1. Frame assembled on its feet, the Y risers **not** fitted (they stand on the tube top beyond the
+   seat ends, 1.5 and 0.5 from them: no room for an end dam once fitted).
+2. **Rail holes first (D-375):** mark the rail holes on each tube (PrintNC's `YRail Centering Guide`,
+   rail on top as the template), drill Ø4.2 and tap M5 through the 6 mm top wall. Grease 22 M5 grub
+   screws (fill the hex with wax) and set each 0.5 below the tube top.
+3. Abrade the tube top in the seat strip (P80, through mill scale to bright steel), degrease, wax
+   everything outside the strip that resin may reach.
+4. **Dams (D-376):** waxed aluminium flat bar or angle, at least 6 tall, on double-sided tape, sealed
+   along the foot with a plasticine bead: two side dams 30 apart, centred on the rail line (X ±377.5),
+   and end dams at Y 64 and Y 714. The 5 mm ledge each side holds the meniscus (epoxy's capillary
+   length is about 2 mm), so the rail's 20 mm foot sits on the flat middle.
+5. Level the frame with the 200 mm level (X02): each tube along Y, and the two tubes to each other.
+   Then **measure the tube-top height of each strip relative to the other** (bar across both tubes plus
+   the level, read both ways round): this sets the dose below.
+
+**Pour (D-374: two separate pours, one per seat)**
+6. Shop at 20 °C or more, the frame and resin warmed to it for 24 h.
+7. Dose per seat **about 65 g for 3.0 thick** (58.5 cm³ x 1.1), plus about 15 g for the cup and the
+   dam fillets: mix about 64 g resin + 17 g hardener per seat, slowly (no air), let it stand 5 min.
+   **To match the two seat tops, the lower tube gets about 21 g more per 1 mm it sits lower**
+   (19,500 mm² x 1 mm x 1.1); weigh to 1 g (about 0.05 mm). Keep the thickness between 2 and 4.
+8. Pour along the strip centre from one end, in a thin stream; pop bubbles with a heat gun held well
+   off. Cover each strip (a box over it, not touching) against dust. Both seats from separate mixes,
+   the same hour.
+
+**Cure**
+9. 48 h at 18 °C or more, then the post-cure of `docs/curing-heat.md` (ramp 10 °C/h to 50 °C, hold
+   16 h, cool slowly in the tent). Measure only after it has cooled: the 1.64 % shrinkage
+   (about 0.05 mm on 3 mm) is then done, and it is even where the thickness is even.
+10. Dams off. Drill Ø6 through each seat at each hole, the rail on top as the drill guide, depth-stopped
+    at the seat underside (Z 160): the drill must not reach the M5 thread. Unscrew the grub screws.
+
+**Measuring against D-371** (kit: straightedge X05 500 mm DIN 874/2, DTI X01; the feelers X06 start at 0.04)
+11. Along each seat (≤ 0.02): straightedge on the seat on two equal spacers, a short flat steel block
+    under the DTI's magnetic base as a sled riding on the seat, tip on the straightedge; readings every
+    50 mm. Two overlapping spans (Y 64 to 564, 214 to 714) cover the 650. Repeat with the straightedge
+    turned end for end, to take its own error out.
+12. Across (≤ 0.05): a straight bar resting on both seats at the same Y, the level on it, read, bar
+    turned end for end, read again; at three Y (about 100, 390, 680). Half the difference of the two
+    readings is the tilt; over 755 mm, 0.05 is 0.066 mm/m. The level's sensitivity is not confirmed yet
+    (X02): if it cannot resolve that, the owner says what to use.
+
+**Fail (D-377)**
+13. A seat that fails gets a **skim pour**: abrade (P80), clean, dam again and pour about 1 mm (about
+    22 g mixed on one seat; dose the across difference as in step 7), cure and measure again. Small
+    high spots: hand-scrape or lap against the straightedge with abrasive paper on it. A grinding shop
+    only if that also fails (the frame is about 800 long).
