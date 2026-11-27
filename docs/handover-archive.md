@@ -2,6 +2,13 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (52nd and 53rd sessions): bundle B, E1, Y plate rods and roller screws
+- **State at start:** the 52nd session did bundle B (docs consistency) and E1 (`docs/v5-rail-seats.md`: HIWIN HG20 tolerances by curl, **D-371** pass mark, **D-372** seats 30 wide) and wrote the M5 rod code, but ended without committing or running it; the 53rd committed that (f1d1189). `Type_0_v5` saved by the owner with the 51st session's work.
+- **Decided (owner, Q&A):** **D-373** through rods with nuts at both ends (Y travel 480.1, 450 needed); the 2 gantry-to-roller M6x12 per side above the upper outboard rod cut to 9 under the head.
+- **Done (Fusion, not saved):** 6 rods Ø5 x 200 and 12 nuts per side (`v5_y1_place.py`, Y2 by `v5_y2_place.py`); new `tools/fusion/v5_roller_screws.py` cuts the 4 screws (copies, PrintNC bodies hidden); `v5_check_task4.py` checks rods against every body. Check: same 4 warnings, no errors, **Y travel 480.1 on Y1 and Y2**; lower rods clear the HGH20CA block screw heads by 0.44 (tight with real ISO 7380 heads, about 0.2). Notes in `docs/v5-model.md` "Plate rods and roller screws".
+- **Left:** bundle C (bed: needs the owner's STEP in `cad/vendor/`, not there); E2 (seat bodies 30 wide, then the pour plan). Owner: save `Type_0_v5`; the untracked `PrintNC V4 Metalcutter V4.0.33 Elements to take.step` (repo root) and `cad/v2/Facebutton v2 frame.step` are not committed (yours: say if they belong in git).
+- **Exact next step:** owner saves `Type_0_v5`. Then follow `.claude/NEXT_PROMPT.md` (E2 seat bodies, or bundle C if the bed STEP is in).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (51st session): V5 Task 4, Y axis finished (Y2, 3 mm seats, end-cap plates)
 - **State at start:** `Type_0_v5` saved by the owner (version 4) with the 48th and 49th sessions' Y1 work. This session's work is on top, **not saved**.
 - **Decided (owner, Q&A):** **D-370** Y nut and fill plates are end caps on the 80 x 40 roller (40 x 15 aluminium bar cut 80), clamped by 6 M5 rods on the DFU's PCD 38; D-356's sizes were for the old 75 x 50 roller.

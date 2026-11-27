@@ -38,12 +38,12 @@ Stop point if split: after Y2 + check (seats and plates next).
 Files: `docs/HANDOVER.md:30-45`, `README.md:1-30`, `docs/tasks/20-*.md` (17 lines), `docs/open-questions.md:1-5`, `docs/supplier-messages.md` (grep `LiMo`).
 
 ## C. V5 bed and Task 5: beam, X, Z, spindle (V5 plan Task 4 item 5, Task 5) — L
-**Needs:** A done; owner's bed STEP in `cad/vendor/` (D-364) for the bed part.
-- [ ] Bed from the owner's STEP; world origin at the bed top centre (`docs/v5-model.md` "Origin"); spindle reach at Y min/max
-- [ ] Beam RHS 200 x 150 x 8 with both X rails (122 apart) and epoxy seats on the front face (thickness: ask; D-363 is the Y seats only); X screw between the rails
+**Needs:** A done. The bed waits for its flood-coolant redesign (D-378); the model gives the redesign its inputs.
+- [ ] ~~Bed from the owner's STEP~~ waits (D-378): instead report the bed-top Z for nose 25 to 225 and the spindle's X/Y reach rectangle
+- [x] Beam RHS 200 x 150 x 8 with both X rails (122 apart) and epoxy seats on the front face (3 mm, D-379); X screw between the rails (D-380 to D-382; `tools/fusion/v5_x_place.py`, 55th session)
 - [ ] X carriage = the Type 0 Z fixed plate on the 4 X blocks (D-358), Z block shims (D-359); Type 0 Z from `Type_0_v4` (derive), 50 longer (D-348), brake motor
 - [ ] Spindle `cad/vendor/jianken_jgl80_2.2r24.step` in the bought 80 mm clamp (D-360)
-- [ ] Check: nose 25 and 225 at the Z limits; bed corners reachable; overlaps clean at 3 gantry positions
+- [ ] Check: nose 25 and 225 at the Z limits (as bed-top Z, D-378); overlaps clean at 3 gantry positions (X axis at carriage X 0 done: clean apart from the known kinds)
 
 Files: plan `docs/superpowers/plans/2026-11-26-v5-printnc.md:69-89`, `tools/v5_beam.py`, `tools/v5_sizes.py:98-`, `docs/v5-parts.md`, `docs/v5-sizes.md`.
 

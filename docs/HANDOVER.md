@@ -1,10 +1,18 @@
-# Type 0 CNC: handover (2026-11-26)
+# Type 0 CNC: handover (2026-11-27)
 
 **Branch:** `claude/hopeful-sagan-28twty` on `yousef-chitani/Type_0_CNC` (holds everything from `claude/charming-cori-349jm7` plus the 16 and 17 Nov LiMo sessions). Everything below is committed and pushed. Earlier work: `claude/charming-cori-349jm7`, `claude/trusting-shannon-uwrpm9`, `claude/ecstatic-ramanujan-mhh3xe`.
 
 > **Owner: your list is `docs/owner-todo.txt`.** **Sessions: start with `.claude/NEXT_PROMPT.md` and `.claude/CODEMAP.md`, then the rules in `docs/tasks/README.md`.** The work is split into small tasks, one per session, each listing the only files to read. This handover is background.
 
 > **Older entries and sections 1-4, 6 and 7 are in `docs/handover-archive.md`.** Read it only if a task needs the history. Keep the two newest entries here.
+
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 27 Nov 2026 (55th session): bundle C part 1: beam and X axis
+- **State at start:** `Type_0_v5` saved by the owner with the 54th session's work (seat bodies). No bed STEP in `cad/vendor/`.
+- **Decided (owner, Q&A):** **D-378** the bed waits for a flood-coolant redesign (amends D-364; the model gives it inputs instead); **D-379** X seats 3 mm as Y; **D-380** beam on the full roller tops (Z 233 to 433, front face Y 556.5), `YRollerBrace` dropped; **D-381** X screw between the rails, axis 30 off the face, 17 mm steel spacers under the 4 X blocks, HM12-60 on the face, BF12 on a 5 shim (first proposed with 12 spacers; corrected for the HM12-60 centre height 30); **D-382** X motor inline at -X on an HM12-60.
+- **Tried and dropped:** setting PrintNC's `XGantry*` parameters broke 154 features (Y rail joints among them); reverting left 2 errors in a drill guide, so the owner had the document closed unsaved and reopened (clean again). The beam is direct modelling.
+- **Done (Fusion, not saved):** new `tools/fusion/v5_x_place.py` builds `V5 Beam (RHS 200x150x8)` (33.6 kg) and `V5 X axis (front-face rails)` (seats, rails Z 272/394, 4 blocks and spacers, screw train copied from Y1, DFU1605 nut and DSG16H housing at carriage X 0), hides PrintNC's beam, braces, X hardware and Z. Plate back face Y 506.5. Check: timeline 1261, 4 known warnings, no errors, only known overlap kinds, Y travel 480.1. Details in `docs/v5-model.md` "Beam and X axis".
+- **Left (bundle C part 2):** the Type 0 Z from `Type_0_v4` (copy bodies, plate/rails/screw 50 longer, D-348), Z block shims (D-359), brake motor; the bought 80 mm clamp (`cad/vendor/drawings/spindle_clamp_80.png`, dimensioned) and the spindle STEP; the check at 3 gantry positions; bed inputs (bed-top Z for nose 25 to 225, X/Y reach). Open: X rail-end stops; PrintNC X/Z fasteners still visible.
+- **Exact next step:** owner saves `Type_0_v5`; then `.claude/NEXT_PROMPT.md`.
 
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (54th session): bundle E2 for Y: seat bodies and pour plan
 - **State at start:** `Type_0_v5` saved by the owner with the 53rd session's work (rods, nuts, roller screws).
@@ -13,13 +21,6 @@
 - **Done (docs):** pour plan in `docs/v5-rail-seats.md` (before, pour, cure, drilling, measuring with X05/X01/X02, fail); D-374 to D-377; run order in `docs/v5-model.md`.
 - **Left:** owner saves `Type_0_v5`; Ampreg 30 mixed density (1.1 assumed) and the X02 level's sensitivity to confirm; a stiff bar over 800 long for the across check and a flat sled block for the along check (neither on the parts list); whether the frame fits the post-cure tent; X seats on the beam front (thickness, pour) wait for bundle C.
 - **Exact next step:** `.claude/NEXT_PROMPT.md` (bundle C once the bed STEP is in `cad/vendor/`, else D).
-
-## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (52nd and 53rd sessions): bundle B, E1, Y plate rods and roller screws
-- **State at start:** the 52nd session did bundle B (docs consistency) and E1 (`docs/v5-rail-seats.md`: HIWIN HG20 tolerances by curl, **D-371** pass mark, **D-372** seats 30 wide) and wrote the M5 rod code, but ended without committing or running it; the 53rd committed that (f1d1189). `Type_0_v5` saved by the owner with the 51st session's work.
-- **Decided (owner, Q&A):** **D-373** through rods with nuts at both ends (Y travel 480.1, 450 needed); the 2 gantry-to-roller M6x12 per side above the upper outboard rod cut to 9 under the head.
-- **Done (Fusion, not saved):** 6 rods Ø5 x 200 and 12 nuts per side (`v5_y1_place.py`, Y2 by `v5_y2_place.py`); new `tools/fusion/v5_roller_screws.py` cuts the 4 screws (copies, PrintNC bodies hidden); `v5_check_task4.py` checks rods against every body. Check: same 4 warnings, no errors, **Y travel 480.1 on Y1 and Y2**; lower rods clear the HGH20CA block screw heads by 0.44 (tight with real ISO 7380 heads, about 0.2). Notes in `docs/v5-model.md` "Plate rods and roller screws".
-- **Left:** bundle C (bed: needs the owner's STEP in `cad/vendor/`, not there); E2 (seat bodies 30 wide, then the pour plan). Owner: save `Type_0_v5`; the untracked `PrintNC V4 Metalcutter V4.0.33 Elements to take.step` (repo root) and `cad/v2/Facebutton v2 frame.step` are not committed (yours: say if they belong in git).
-- **Exact next step:** owner saves `Type_0_v5`. Then follow `.claude/NEXT_PROMPT.md` (E2 seat bodies, or bundle C if the bed STEP is in).
 
 ## 5. Owner's rules
 - **Use the Q&A tool heavily** before decisions. Ask, don't assume. The owner pushes back on design details: take it seriously and check mouldability and casting orientation (e.g. D-113).

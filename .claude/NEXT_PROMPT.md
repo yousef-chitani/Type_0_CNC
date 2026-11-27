@@ -1,34 +1,36 @@
 # Next session
 ## Context (≤5 lines)
-V5 (PrintNC re-sized, Fusion `Type_0_v5`, not in git). Bundles A, B, E1 and E2 for Y done. 54th session: Y seat
-bodies (`tools/fusion/v5_y_seats.py`, 58,500 mm³ each) and the Y pour plan (D-374 to D-377) in `docs/v5-rail-seats.md`.
-**Not saved** at the 54th session's end (started from the owner's save with the 53rd session's work).
-Last D-number D-377. Y travel 480.1 (450 needed). X seats on the beam front (thickness, bodies, pour) fold into C.
+V5 (PrintNC re-sized, Fusion `Type_0_v5`, not in git). 55th session: bundle C part 1, the beam and X axis
+(`tools/fusion/v5_x_place.py`, D-378 to D-382); **not saved** at its end (started from the owner's save with the
+54th session's work). The bed waits for a flood-coolant redesign (D-378): no bed, give it inputs. Last D-number D-382.
 
-## Do this bundle: C (bed, beam, X, Z, spindle) if the bed STEP is in `cad/vendor/`; else D (tool rack)
-- [ ] Ask the owner first: has `Type_0_v5` been saved since the 54th session? If not, run the 5 scripts below in order.
-- [ ] Ask: is the bed STEP in `cad/vendor/`? If not, do bundle D (`.claude/TASKS.md` D).
-- [ ] C: follow `.claude/TASKS.md` C; include the X rail seats (30 wide per rail, D-372; thickness to ask; pass mark 0.02 across, D-371)
-- [ ] Also ask when convenient: the Ampreg 30 mixed density (1.1 g/cm³ assumed in the dose) and the X02 level's sensitivity
+## Do this bundle: C part 2 (Type 0 Z, clamp, spindle, checks)
+- [ ] Ask the owner first: has `Type_0_v5` been saved since the 55th session? If not, run the 6 scripts below in order.
+- [ ] Type 0 Z from `Type_0_v4` (component `Z axis and spindle`, copied bodies; doc id `urn:adsk.wipprod:dm.lineage:4QnxX7RCQFGKVl1ms7svww`): copy the bodies as V4 did from v3 (`docs/v4-model.md:151-155`), fixed plate on the X carriage (plate back Y 506.5, carriage X 0), plate, rails and screw 50 longer (D-348; z_rail and z_screw 400), Z block shims 2 mm (D-359), 24HS34 brake motor. Ask before any layout choice.
+- [ ] Bought 80 mm clamp from `cad/vendor/drawings/spindle_clamp_80.png` (values in `cad/vendor/drawings/README.md:10`) and the spindle `cad/vendor/jianken_jgl80_2.2r24.step`. If the drawing does not give enough, stop and ask.
+- [ ] Check at 3 gantry positions (X min, 0, max; a new or extended read-only check); report the bed-top Z for nose 25 and 225 and the spindle's X/Y reach (D-378). Tick `.claude/TASKS.md` C.
+- [ ] Ask when convenient: X rail-end stops (blocks leave the rail at carriage ±236.25); Ampreg 30 mixed density; X02 level sensitivity.
 
 ## Files to load (exact paths + line ranges)
-- `.claude/CODEMAP.md` — map; go to files from it
-- `.claude/TASKS.md` — bundle C (or D)
-- `docs/v5-model.md` — the last two dated sections (plate rods, seat bodies) and "Left for Task 4"
-- `docs/v5-rail-seats.md` — only if doing the X seats
+- `.claude/CODEMAP.md`, `.claude/TASKS.md` bundle C
+- `docs/v5-model.md` — section "Beam and X axis" (the layout numbers)
+- `tools/fusion/v5_x_place.py` — pattern for copying bodies with a matrix and naming them
+- `docs/v4-model.md:137-175` — the V4 Z bodies and how they were copied
 
 ## Already known (don't re-investigate)
-- Run order (each its own `fusion_mcp_execute` call): `v5_y1_place.py`, `v5_y2_place.py`, `v5_roller_screws.py`, `v5_y_seats.py`, then `v5_check_task4.py`. Fusion runs a repo file with `exec(compile(open('D:/Repos/Type_0_CNC/tools/fusion/<f>', encoding='utf-8').read(), '<f>', 'exec'), g)` then `g['run']('')`.
-- A new occurrence's `transform2` set in the creating call does not hold: pass the matrix at creation. Rebuilt components get ` (n)` suffixes.
-- Check (54th session): timeline 1257, 4 warnings (235, 236, 237, 243), no errors. Known overlaps: HGR20 rail vs HGH20CA groove (709/725 mm³); HM12 lock nut and BF12 circlip on the screw; rods in the nut plate's tapped holes (86.7 mm³ each); rear nuts and rods on the BF12 housing (the model sits 3.4 past the back stop); rods vs printed drill guides 4 and 5. PrintNC X/Z self-overlaps are old. Seats: none.
-- The check skips components whose name holds 'M5', 'M6', 'M4', 'M8x', 'Threaded Rod', 'Drill Guide' and others (`v5_check_task4.py:7`): name new parts clear of them.
-- Rails: Y HGR20 at X ±377.5, Y 64 to 714, underside Z 163; tube top 160, wall 6; X HGR20 rails at Z 215 and 308 (PrintNC, before the V5 beam).
-- `git commit` needs `-c user.name=Claude -c user.email=noreply@anthropic.com` (no identity set on this PC).
-- Untracked owner files (repo root PrintNC STEP, `cad/v2/Facebutton v2 frame.step`): leave them unless the owner says.
+- Run order (each its own `fusion_mcp_execute` call): `v5_y1_place.py`, `v5_y2_place.py`, `v5_roller_screws.py`, `v5_y_seats.py`, `v5_x_place.py`, then `v5_check_task4.py` (readOnly). Run a repo file: `g = {}; exec(compile(open('D:/Repos/Type_0_CNC/tools/fusion/<f>', encoding='utf-8').read(), '<f>', 'exec'), g)` then `g['run']('')` inside `def run(_context)`.
+- Do NOT set PrintNC's `XGantry*` parameters: it breaks 154 features (tried 55th session).
+- Body names set inside a base-feature edit do not hold on copied bodies: rename after `finishEdit` (as `v5_x_place.py`).
+- X layout: beam Y 556.5 to 706.5, Z 233 to 433, X ±417.5; rails Z 272/394; screw axis Y 526.5, Z 333; X carriage plate back Y 506.5 (17 spacers on the blocks); DSG16H X -20 to 20; gantry at the Y rear stop. Spindle axis estimate Y 366.5 (plate back - 140, V4).
+- Check (55th session): timeline 1261, 4 warnings (235, 236, 237, 243), no errors. Known overlaps: HGR20 rail vs HGH20CA groove (Y 709/725, X 725 x 4); HM12 lock nut and BF12 circlip on the screw (Y and X); rods in the nut plate's tapped holes; rear nuts and rods on the BF12 housing; rods vs drill guides 4 and 5.
+- The check skips components named with 'M5', 'M6', 'M4', 'M8x', 'Threaded Rod', 'Drill Guide' and others (`v5_check_task4.py:7`).
+- Hidden PrintNC parts: XGantry, YRollerBrace x 2, XAxis Hardware, ZAxis Hardware, Zaxis Dual Carriage HGH15CA. PrintNC X/Z fasteners in `Fasteners` are still visible.
+- `git commit` needs `-c user.name=Claude -c user.email=noreply@anthropic.com`.
+- Untracked owner files (repo root PrintNC STEP, `cad/v2/Facebutton v2 frame.step`): leave them.
 - Never save Fusion documents; the owner does.
 
 ## Done when
-- The bundle's TASKS.md items ticked, the check clean apart from the known list, decisions recorded as D-numbers.
+- TASKS.md C items ticked (the bed one stays waiting, D-378), the check clean apart from the known list, decisions as D-numbers.
 - `python tools/codemap.py --check` prints "up to date".
 
 ## Then

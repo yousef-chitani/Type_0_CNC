@@ -37,8 +37,8 @@ docs/  (132 files)  # the project: decisions, BOM, design notes, price checks (s
 linuxcnc/  (14 files)
   type0/  (14 files)  # LinuxCNC 2.9 config: type0.ini + HAL, Mesa 7I76EU
     sim/  (5 files)  # simulator ini builder + checks
-tools/  (28 files)  # calc scripts, BOM generators, hook
-  fusion/  (5 files)  # scripts run inside Fusion via fusion_mcp_execute (not python)
+tools/  (29 files)  # calc scripts, BOM generators, hook
+  fusion/  (6 files)  # scripts run inside Fusion via fusion_mcp_execute (not python)
 ```
 <!-- /AUTO:tree -->
 
@@ -52,7 +52,7 @@ tools/  (28 files)  # calc scripts, BOM generators, hook
   `.claude/settings.json`) → the 5 generators.
 - **V5 work:** spec `docs/superpowers/specs/2026-11-26-v5-printnc-design.md`, plan
   `docs/superpowers/plans/2026-11-26-v5-printnc.md` (Tasks 1–8), model log `docs/v5-model.md`.
-- **Fusion:** `tools/fusion/v5_y1_place.py` then `tools/fusion/v5_y2_place.py` then `tools/fusion/v5_roller_screws.py` then `tools/fusion/v5_y_seats.py` (write; separate calls), `tools/fusion/v5_check_task4.py` (read-only). Fusion can `exec` the repo file (see `docs/v5-model.md`, Y axis finish).
+- **Fusion:** `tools/fusion/v5_y1_place.py` then `tools/fusion/v5_y2_place.py` then `tools/fusion/v5_roller_screws.py` then `tools/fusion/v5_y_seats.py` then `tools/fusion/v5_x_place.py` (beam, X axis) (write; separate calls), `tools/fusion/v5_check_task4.py` (read-only). Fusion can `exec` the repo file (see `docs/v5-model.md`, Y axis finish).
 
 ## Data flow (who reads what)
 ```
@@ -128,6 +128,8 @@ linuxcnc/type0/type0.ini → sim/make_sim_ini.py → type0_sim.ini (sim_*.hal) �
   bodies(root), run(_context)
 - `tools/fusion/v5_roller_screws.py` (75) Cut the gantry-to-roller M6x12 screws that the Y plate rods hit to M6 x 9 (D-373). Run through fusion_mcp_exec  
   run(_context)
+- `tools/fusion/v5_x_place.py` (181) V5 beam and X axis (plan Task 5, bundle C part 1). Run through fusion_mcp_execute (not read-only) after v5_y1_  
+  mat(dx, ybase, zc), box(x0, x1, y0, y1, z0, z1), xcyl(x0, x1, y, z, r), rrect(x0, x1, y0, y1, z0, z1, r), copy(body, m), run(_context)
 - `tools/fusion/v5_y1_place.py` (313) Place the Y1 vendor parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute (not read-only  
   mat(cols, t_mm), run(_context)
 - `tools/fusion/v5_y2_place.py` (143) Place the Y2 parts in Type_0_v5 (V5 plan Task 4, item 2). Run through fusion_mcp_execute (not read-only) AFTER  
