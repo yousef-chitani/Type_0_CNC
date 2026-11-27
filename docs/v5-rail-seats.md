@@ -37,7 +37,7 @@ Measured on the cured seat tops before the rails go on.
 | Across the two X seats on the beam front | **≤ 0.02 mm** | S1 0.021 mm (a 122) |
 
 Rail parallelism (side datum, P ≤ 0.020 mm) is set when the rails are fitted, not by the pour.
-A seat that fails goes to a shop for grinding (plan Task 7; method in E2).
+A seat that fails gets a skim pour first, then scraping; a grinding shop last (D-377, below).
 
 ## Footprint (D-372, owner 26 Nov 2026)
 **30 wide, centred on the rail** (rail 20: a 5 mm ledge each side), 3 thick, over the rail length
@@ -65,7 +65,8 @@ assumed here (check the TDS).
    seat ends, 1.5 and 0.5 from them: no room for an end dam once fitted).
 2. **Rail holes first (D-375):** mark the rail holes on each tube (PrintNC's `YRail Centering Guide`,
    rail on top as the template), drill Ø4.2 and tap M5 through the 6 mm top wall. Grease 22 M5 grub
-   screws (fill the hex with wax) and set each 0.5 below the tube top.
+   screws, set each 0.5 below the tube top and fill the recess above it flush with wax (no epoxy
+   disc over the hex).
 3. Abrade the tube top in the seat strip (P80, through mill scale to bright steel), degrease, wax
    everything outside the strip that resin may reach.
 4. **Dams (D-376):** waxed aluminium flat bar or angle, at least 6 tall, on double-sided tape, sealed
@@ -80,8 +81,11 @@ assumed here (check the TDS).
 6. Shop at 20 °C or more, the frame and resin warmed to it for 24 h.
 7. Dose per seat **about 65 g for 3.0 thick** (58.5 cm³ x 1.1), plus about 15 g for the cup and the
    dam fillets: mix about 64 g resin + 17 g hardener per seat, slowly (no air), let it stand 5 min.
-   **To match the two seat tops, the lower tube gets about 21 g more per 1 mm it sits lower**
-   (19,500 mm² x 1 mm x 1.1); weigh to 1 g (about 0.05 mm). Keep the thickness between 2 and 4.
+   **Plan detail, not the owner's choice:** to bring the two seat tops close, the lower tube gets about
+   21 g more in the channel per 1 mm it sits lower (19,500 mm² x 1 mm x 1.1). Dose by delivered mass
+   (weigh the cup before and after pouring). This only gets close: 1 mm of error in the dam spacing
+   is about 0.1 mm of height, so **expect the across check (0.05) may fail** and go to step 13.
+   Keep the thickness between 2 and 4.
 8. Pour along the strip centre from one end, in a thin stream; pop bubbles with a heat gun held well
    off. Cover each strip (a box over it, not touching) against dust. Both seats from separate mixes,
    the same hour.
@@ -90,8 +94,8 @@ assumed here (check the TDS).
 9. 48 h at 18 °C or more, then the post-cure of `docs/curing-heat.md` (ramp 10 °C/h to 50 °C, hold
    16 h, cool slowly in the tent). Measure only after it has cooled: the 1.64 % shrinkage
    (about 0.05 mm on 3 mm) is then done, and it is even where the thickness is even.
-10. Dams off. Drill Ø6 through each seat at each hole, the rail on top as the drill guide, depth-stopped
-    at the seat underside (Z 160): the drill must not reach the M5 thread. Unscrew the grub screws.
+10. Dams off. Leave the grub screws and wax in until the seats pass (steps 11 to 13): a skim pour must
+    not run into open tapped holes.
 
 **Measuring against D-371** (kit: straightedge X05 500 mm DIN 874/2, DTI X01; the feelers X06 start at 0.04)
 11. Along each seat (≤ 0.02): straightedge on the seat on two equal spacers, a short flat steel block
@@ -105,6 +109,18 @@ assumed here (check the TDS).
 
 **Fail (D-377)**
 13. A seat that fails gets a **skim pour**: abrade (P80), clean, dam again and pour about 1 mm (about
-    22 g mixed on one seat; dose the across difference as in step 7), cure and measure again. Small
-    high spots: hand-scrape or lap against the straightedge with abrasive paper on it. A grinding shop
-    only if that also fails (the frame is about 800 long).
+    22 g mixed), cure and measure again. **Across fails** (seats flat, heights apart): skim both seats
+    (a 1 mm skim on the low one alone overshoots), dosing the difference as in step 7, or scrape the
+    high one down if the difference is small. Small high spots: hand-scrape or lap against the
+    straightedge with abrasive paper on it. A grinding shop only if that also fails (the frame is
+    about 800 long).
+
+**Rail holes (D-375), once both seats pass**
+14. Drill Ø6 through each seat at each hole, the rail on top as the drill guide, depth-stopped at the
+    seat underside (Z 160): the drill must not reach the M5 thread. Pick out the wax, unscrew the
+    grub screws.
+
+
+**Open (owner):** the across check needs a stiff straight bar over 800 long (X05 is 500); the along
+check needs a small flat steel sled block (not on the parts list); whether the V5 frame fits the
+tent for the 50 °C post-cure is not confirmed; the Ampreg 30 mixed density and the X02 sensitivity.
