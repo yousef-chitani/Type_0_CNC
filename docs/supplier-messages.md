@@ -140,3 +140,28 @@ Quote received: JGL-80/2.2R24 $1,200 with one ISO20 holder and one ER16 collet, 
 >
 > Thank you,
 > Yousef
+
+## 8. Dyfed Steels, Llanelli (phone 01554 772 255 or email): Type_0_v6 cut-to-length quote (27 Nov 2026)
+
+All sections verified on Dyfed Steels' live RHS/SHS stock tables on 27 Nov 2026 (`dyfedsteels.co.uk/steel-products/hollow-sections/`). With the monolithic EG cast base replacing the two `120 × 80` X-frame tubes, only 3 tube sections + plate/flat bar are needed.
+
+> Hi,
+>
+> Could you quote the following mild steel sections (S355 preferred, S235 fine), cut to length for collection in Llanelli (private buyer, card/cash)?
+>
+> **Hollow sections:**
+> - RHS **120 × 80 × 6.3 mm**: 2 × **709 mm** (~1.42 m total, ~26 kg) — Y frame tubes
+> - SHS **120 × 120 × 8.0 mm**: 1 × **810 mm** (~22.6 kg) — gantry beam
+> - SHS **80 × 80 × 3.0 mm** (or 4.0 mm): 2 × **150 mm** (~0.30 m total, ~2.2 kg) — Y rollers
+>
+> **Plate & flat bar (for the cast base):**
+> - Mild steel plate **6 mm thick**: 1 × **810 × 709 mm** (~27 kg) — bottom base plate
+> - Mild steel flat bar **80 × 8 mm**: 2 × **709 mm** (~7.1 kg) — embedded Y-tube pads
+> - Mild steel flat bar **20 × 6 mm**: 2 × **360 mm** (~0.7 kg) — embedded ATC rail strips
+>
+> Could you confirm cutting charges, VAT, lead time, and whether the Kemys Way (Swansea) depot is open for collection or Llanelli only?
+>
+> Thanks,
+> Yousef
+
+For you: check if they also have a `100 × 50 × 6.3` RHS offcut (~200 mm) or `75 × 50 × 6` angle if keeping `YRollerBrace`, and a `120 × 80 × 5.0` RHS offcut (~200 mm) for `XTopRoller`.

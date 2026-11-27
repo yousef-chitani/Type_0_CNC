@@ -2,6 +2,14 @@
 
 Older entries moved unchanged from `docs/HANDOVER.md` on 18 Nov 2026, newest first. Much of this describes superseded designs: `docs/decisions.md` and the current `docs/HANDOVER.md` take priority.
 
+## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (54th session): bundle E2 for Y: seat bodies and pour plan
+- **State at start:** `Type_0_v5` saved by the owner with the 53rd session's work (rods, nuts, roller screws).
+- **Decided (owner, Q&A):** **D-374** two separate pours, one per seat, risers off (height across not tied: the plan doses the lower about 21 g more per 1 mm, which only gets close, so an across failure is likely); **D-375** tube tapped M5 first, greased grub screws as plugs, Ø6 drilled through the seat with the rail as guide once it passes; **D-376** waxed aluminium bar dams on tape plus plasticine; **D-377** a failed seat gets a skim pour, then scraping, a grinding shop last.
+- **Done (Fusion, not saved):** new `tools/fusion/v5_y_seats.py` builds `Y Rail Seats (epoxy, 30 wide)`: Y1 X -392.5 to -362.5, Y2 X 362.5 to 392.5, Y 64 to 714, Z 160 to 163, 11 Ø6 holes each; **58,500 mm³ gross / 57,567 net per seat**. Check: timeline 1257, the same 4 warnings, no errors, no seat overlaps (seats confirmed in the check's list; direct test against rails, tubes, M5x20, centering guide: 0); Y travel 480.1. M5x20 rail screws still reach through the 6 mm wall.
+- **Done (docs):** pour plan in `docs/v5-rail-seats.md` (before, pour, cure, drilling, measuring with X05/X01/X02, fail); D-374 to D-377; run order in `docs/v5-model.md`.
+- **Left:** owner saves `Type_0_v5`; Ampreg 30 mixed density (1.1 assumed) and the X02 level's sensitivity to confirm; a stiff bar over 800 long for the across check and a flat sled block for the along check (neither on the parts list); whether the frame fits the post-cure tent; X seats on the beam front (thickness, pour) wait for bundle C.
+- **Exact next step:** `.claude/NEXT_PROMPT.md` (bundle C once the bed STEP is in `cad/vendor/`, else D).
+
 ## 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000. 26 Nov 2026 (52nd and 53rd sessions): bundle B, E1, Y plate rods and roller screws
 - **State at start:** the 52nd session did bundle B (docs consistency) and E1 (`docs/v5-rail-seats.md`: HIWIN HG20 tolerances by curl, **D-371** pass mark, **D-372** seats 30 wide) and wrote the M5 rod code, but ended without committing or running it; the 53rd committed that (f1d1189). `Type_0_v5` saved by the owner with the 51st session's work.
 - **Decided (owner, Q&A):** **D-373** through rods with nuts at both ends (Y travel 480.1, 450 needed); the 2 gantry-to-roller M6x12 per side above the upper outboard rod cut to 9 under the head.
