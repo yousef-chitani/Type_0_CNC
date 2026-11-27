@@ -5,10 +5,11 @@ V5 (PrintNC re-sized, Fusion `Type_0_v5`, not in git). 55th session: bundle C pa
 54th session's work). The bed waits for a flood-coolant redesign (D-378): no bed, give it inputs. Last D-number D-382.
 
 ## Do this bundle: C part 2 (Type 0 Z, clamp, spindle, checks)
-- [ ] Ask the owner first: has `Type_0_v5` been saved since the 55th session? If not, run the 6 scripts below in order.
+- [ ] Ask the owner first: has `Type_0_v5` been saved since the 55th session? If not, run only `v5_x_place.py`, then the check (the owner's save already holds the Y work; re-running the Y scripts can add ` (n)` suffixes, and `v5_x_place.py` finds the Y seat component, BF12 riser and `HGH20CA Block:1` by exact name).
 - [ ] Type 0 Z from `Type_0_v4` (component `Z axis and spindle`, copied bodies; doc id `urn:adsk.wipprod:dm.lineage:4QnxX7RCQFGKVl1ms7svww`): copy the bodies as V4 did from v3 (`docs/v4-model.md:151-155`), fixed plate on the X carriage (plate back Y 506.5, carriage X 0), plate, rails and screw 50 longer (D-348; z_rail and z_screw 400), Z block shims 2 mm (D-359), 24HS34 brake motor. Ask before any layout choice.
 - [ ] Bought 80 mm clamp from `cad/vendor/drawings/spindle_clamp_80.png` (values in `cad/vendor/drawings/README.md:10`) and the spindle `cad/vendor/jianken_jgl80_2.2r24.step`. If the drawing does not give enough, stop and ask.
 - [ ] Check at 3 gantry positions (X min, 0, max; a new or extended read-only check); report the bed-top Z for nose 25 and 225 and the spindle's X/Y reach (D-378). Tick `.claude/TASKS.md` C.
+- [ ] Ask the owner: the beam-to-roller bolt pattern (not modelled; the D-373 M6 x 9 copies sit in the old brace footprint and run into the beam's bottom wall); `FRONT_TO_AXIS` (`tools/v5_beam.py`) 173 -> about 190 with the spacers: re-run the D-353 figures once the Z is in.
 - [ ] Ask when convenient: X rail-end stops (blocks leave the rail at carriage ±236.25); Ampreg 30 mixed density; X02 level sensitivity.
 
 ## Files to load (exact paths + line ranges)

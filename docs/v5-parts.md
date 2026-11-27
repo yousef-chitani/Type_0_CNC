@@ -13,7 +13,7 @@
 | `YFrame`, `YFrame(Mirror)` (RHS 75 x 50 x 3, 950) | changed: 2 Y tubes 781.7 | owner | SHS 80 x 80 x 6 (D-354) | frame | Y rail seats poured on the top face (D-342, Task 7) |
 | `XGantry` (RHS 75 x 75 x 4, 975) | changed: beam 830.7 | owner | RHS 200 x 150 x 8 standing up (D-353) | frame, cut | Both X rails on the front face, 122 apart (D-355). A self-levelling pour needs a level face: the beam lies on its back for the X seat pour (Task 7) |
 | `YRoller`, `YRoller(Mirror)` (RHS 75 x 50 x 3, 150) | changed: holes | owner | RHS 75 x 50 x 3 x 150 (D-283) | frame | Holes change from HGW20CC (M6 through) to HGH20CA (4 x M5 tapped in the block top, screws from inside the tube through access holes); beam bolt holes for the 150-deep beam |
-| `YRollerBrace`, `YRollerBrace(Mirror)` (angle 75 x 50 x 6, 75) | kept, holes moved | owner | aluminium angle 75 x 50 x 6 (D-283) | frame | Bolts the beam's back face to the Y roller |
+| `YRollerBrace`, `YRollerBrace(Mirror)` (angle 75 x 50 x 6, 75) | dropped (D-380) | none | | | The 150 deep beam covers the whole roller top and bolts down into it; beam-to-roller bolt pattern still to set (owner) |
 | `XRollers` (STEP `XRoller Top`; RHS 75 x 50 x 3, 150) | dropped | none | | | Wraps the top of the beam; the X rails move to the front face (spec, D-349) |
 | `XRollerShim` (6061, 125 x 50 x 8) | dropped | none | | | Goes with `XRollers` |
 | `XRoller Bottom` (6061 angle 100 x 50, 150) | dropped | none | | | Goes with `XRollers` |
@@ -45,7 +45,7 @@ PrintNC prints these first and lets builders mill them later. The model's bodies
 | `X/Y/Y2 1610 Nut Plate` (75 x 50 x 15, stepped, Ø28.2 bore) | changed (D-356, D-370) | owner | Y: aluminium flat bar 40 x 15, cut 80 (end cap on the 80 x 40 roller's front face, D-370); X: as D-356 until Task 5 | thrust | In the screw thrust path. The DFU1605 flange (6 holes PCD 38) and Ø28 body fit the plate (D-277). A plain drilled plate: Ø28 bore by hole saw or step drill, 6 x M5 tapped on PCD 38. No pockets |
 | `X/Y/Y2 1610 Fill Plate` (75 x 50 x 15, Ø18 hole) | changed (D-356, D-370) | owner | as the nut plate (Y: 40 x 15 cut 80, on the roller's back face) | thrust | Ø18 hole, 6 x Ø5.5 on PCD 38. Clamps the roller against the nut plate with 6 M5 threaded rods about 200 long and nuts (in front of the DFU flange and behind the fill plate) |
 | `X/Y/Y2 2010 Nut/Fill Plate` (hidden) | dropped | none | | | SFU2010 option |
-| `Y BKHM12 Riser`, `X BKHM12 Riser`, `BKHM12 Riser(Mirror)` (96.5 x 60 x 30, stepped) | changed (D-357, D-367, D-369) | owner | steel flat bar, plus shim stock | thrust | Carries the HM12-60-V. Y (modelled): 60 wide x **23 tall** (20 bar + 3 seat, D-363), Y -47 to 62.5, tapped M6 for the HM12-60, M6 counterbored screws to the tube (D-369). X: set in Task 5. Plain bar to the nominal height, final height by shims so the HM12 and BF12 centres match the nut, checked with a dial gauge along the screw |
+| `Y BKHM12 Riser`, `X BKHM12 Riser`, `BKHM12 Riser(Mirror)` (96.5 x 60 x 30, stepped) | changed (D-357, D-367, D-369) | owner | steel flat bar, plus shim stock | thrust | Carries the HM12-60-V. Y (modelled): 60 wide x **23 tall** (20 bar + 3 seat, D-363), Y -47 to 62.5, tapped M6 for the HM12-60, M6 counterbored screws to the tube (D-369). X (D-381, 55th session): no riser, the HM12-60 sits on the beam face; the X BF12 on a 5 mm steel shim. Plain bar to the nominal height, final height by shims so the HM12 and BF12 centres match the nut, checked with a dial gauge along the screw |
 | `Y BF12 Riser`, `X BF12 Riser`, `BF12 Riser(Mirror)` (60 x 35.5 x 30) | changed (D-357, D-367, D-369) | owner | as above | thrust | As the BKHM12 riser. Y (modelled): 60 wide x **28 tall** (25 bar + 3 seat), Y 714.5 to 750 |
 | `X/Y BKHM15`, `BF15` risers (hidden) | dropped | none | | | SFU2010 option |
 | `Nema23 Plate`, `Nema24 Plate` and mirrors (85 x 60 x 12, hidden) | dropped | none | | | The HM12-60-V takes the NEMA 24 flange directly |
@@ -77,6 +77,8 @@ PrintNC prints these first and lets builders mill them later. The model's bodies
 | X carriage plate (on the 4 X HGH20CA blocks, front-face rails) | owner | bought cast tooling plate, cut to size | cut | One plate: it is the Z fixed plate (D-358). Block screws from the front, counterbored |
 | Type 0 Z: fixed and moving plates (D-179, D-184, D-202) | owner | bought cast tooling plate 6082/5083, cut to size, 20 thick | cut | D-205 pocket replaced by 2 mm shims under the Z blocks and nut housing (D-359); D-248 counterbores are drill-press work |
 | Type 0 Z: HGR20 rails, HGH20CA, DFU1605 Z, HM12-60-V, NEMA 24 brake motor, coupling | bought | LiMo (Z 400 rail and screw, `v5_sizes`) | cut, thrust | |
+| X block spacers, 4 off (D-381) | owner | steel flat bar 44 x 50 x 17 (footprint Claude's pick), drilled for the block screws | cut | Plate back 50 off the beam face |
+| X nut housing DSG16H (D-381) | bought | | | On the X carriage plate back, nut flange at -X |
 | Z rail risers 15 (D-184) | owner | flat bar | cut | Height only |
 | Bed | bought | aluminium T-slot bed, fly-cut on the machine (spec) | cut | Task 4 |
 | Rail seats (X and Y) | owner; shop grind if the pour fails | epoxy self-levelling pour with printed dams | cut | Task 7; pass mark 0.02 |
