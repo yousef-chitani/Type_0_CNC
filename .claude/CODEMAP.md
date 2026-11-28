@@ -29,7 +29,7 @@ cad/  (183 files)  # type0_layout.py / type0_drawings.py: v1 CadQuery layout (hi
     jlc-step/  (31 files)  # V4 per-part STEP for JLC quotes (task 29, on hold), README inside
   vendor/  (32 files)  # manufacturer STEP/PDF (real parts: use these, never stand-ins), README inside
     drawings/  (10 files)  # supplier drawings (LiMo ends, HM12-60, MH coupling, spindle clamp)
-docs/  (132 files)  # the project: decisions, BOM, design notes, price checks (see Docs map)
+docs/  (133 files)  # the project: decisions, BOM, design notes, price checks (see Docs map)
   img/  (2 files)
   sketches/  (3 files)  # SVG sketches from tools/task28_sketches.py
   superpowers/  (11 files)  # specs/ and plans/ (design docs and step plans, dated)

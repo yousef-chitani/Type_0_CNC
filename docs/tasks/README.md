@@ -4,17 +4,17 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/hopeful-sagan-28twty` (continues `claude/charming-cori-349jm7`). Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-388; D-295 to D-297 are kept for ATC plan task 7).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-390; D-295 to D-297 are kept for ATC plan task 7).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). When Claude edits it, a hook (`tools/bom_hook.py`) runs the 5 generators automatically and reports only errors. After a hand edit, set `PYTHONUTF8=1` and run `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
 - **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£4,386.61 since Task 29 Step 2 (26 Nov, D-331–D-336: F01 2 x 4.66 kg, v3 dead lines dropped, X18/X21/F28/F32/M17 priced), £186.61 over**; before V4 £4,041.97 (20 Nov 2026 repricing, D-242 to D-245, plus G05 roller steel £78.62 on 23 Nov, D-281 to D-283: G03 dropped; G01 beam and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
 - Write plainly and briefly. Do not merge branch `claude/awesome-ramanujan-by9kds` (old design).
 
 ## State in five lines
-- **V5 (D-338 on): PrintNC V4 Metalcutter, re-sized.** Moving gantry on SHS 80 x 80 x 6 frame tubes, beam RHS 200 x 150 x 8 with both X rails on its front face, the Type 0 Z, two Y motors; 16-tool rack behind the bed in Phase 2.
-- **The CAD is the Fusion 360 document `Type_0_v5`** (not in git; only the owner saves it). Plan `docs/superpowers/plans/2026-11-26-v5-printnc.md`, model log `docs/v5-model.md`. `Type_0_v4` is frozen (D-324); V3 and older are history.
-- **Now:** V5 plan Task 4 (task 32): Y axis done on both sides (D-370); the bed waits for the owner's STEP (D-364). Work goes by bundles in `.claude/TASKS.md`.
-- Phase 1 priced **£4,386.61** against £4,200 (V4 BOM; V5 lines come in plan Task 8). Wave 1 order: 4 Jan 2027.
+- **V6 (D-383 on): PrintNC 450×450 moving gantry on a monolithic upside-down EG base (`32.81 L`, flood-coolant moat + 3×Ø36 drains), Dyfed Steels tubes (`120×80×6.3`, `80×80×3`, `120×120×8`), 14-tool sliding rear ATC (`CD85N20-175` + `350 mm` HGR15), `1:1` Y belt drives (`HTD 5M-300`, `6 mm` steel plates, PETG covers, front `BK12`), inline X `HM12-60` + `24HS40`.**
+- **The CAD is the Fusion 360 document `Type_0_v6`** (plus `v6_Base`; not in git; only the owner saves them). `Type_0_v5` and `Type_0_v4` are prior versions.
+- **Now:** `Type_0_v6` core mechanical layout (base, moat, fixture plate, 14-tool ATC, splash shields, Y belt drives/BK12/covers, X `HM12-60` + `24HS40`) is modelled (`1325` timeline items, `0` errors; unsaved). Next: owner saves, runs `docs/price-check-task-19.md` & Dyfed Steels quote (`docs/supplier-messages.md` §8), mounts real `CD85N20-175` STEP.
+- Phase 1 priced **£4,386.61** against £4,200 (awaiting Dyfed Steels + `price-check-task-19.md` live prices to replace V4 steel/plate lines). Wave 1 order: 4 Jan 2027.
 - Older state lines (V3 tub, ATC wheel, V4), moved unchanged on 26 Nov 2026: `docs/handover-archive.md`, section "State lines from the tasks README". Background: `docs/HANDOVER.md`.
 
 ## Tasks

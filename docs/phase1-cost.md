@@ -1,6 +1,6 @@
 # Phase 1 cost (generated from bom.csv)
 
-**Phase 1 priced total: £4,386.61** (budget £4,200, D-127). Not priced yet: M15, M16, F30, F31, F33, G10, X24, X25. No eBay.
+**Phase 1 priced total: £4,386.61** (budget £4,200, D-127). Not priced yet: M15, M16, F30, F31, F33, G10, X24, X25, G16. No eBay.
 
 Regenerate with `python tools/gen_phase1_cost.py`.
 
@@ -21,7 +21,7 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | ID | Item | Qty | £ |
 |---|---|---|---|
 | F01 | Main EG epoxy: Ampreg 30 + slow hardener, 2 x 4.66 kg packs | 2 4.66 kg packs | £208.39 |
-| F02 | Epoxy for the base pockets, beam fill and test bricks (in F01) | 7 kg | £0.00 |
+| F02 | Epoxy for the Type_0_v6 monolithic EG base and test bricks (in F01) | 7.4 kg | £0.00 |
 | F03 | Coarse aggregate: quartz 2-5 mm | 2 25 kg bags | £29.04 |
 | F04 | Medium + fine: kiln-dried sand 0-1 mm | 2 20 kg bags | £12.76 |
 | F06 | Filler: whiting (calcium carbonate powder) | 1 25 kg bag | £20.42 |
@@ -53,6 +53,8 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | F31 | Y screw bellows covers (2) | 2 pcs | to price |
 | F32 | Y rail drip skirts (PETG printed, 4 pcs) + M4 x 10 screws + printed rail wipers | 1 lot | £3.08 |
 | F33 | X screw bellows covers (2) | 2 pcs | to price |
+| F34 | Y1/Y2 PETG belt covers (2x, Type_0_v6) | 2 pcs | £0.00 |
+| G16 | Type_0_v6 Dyfed Steels frame & plate pack (tubes, bottom plate, Y pads, ATC strips, Y belt plates) | 1 lot | to price |
 
 ## Motion
 
@@ -69,10 +71,10 @@ Regenerate with `python tools/gen_phase1_cost.py`.
 | M09 | NEMA 24 closed-loop stepper + driver about 4 Nm | 2 sets | £112.71 |
 | M10 | NEMA 24 closed-loop stepper with 24 V brake | 1 set | £59.22 |
 | M14 | CL57T V4.1 closed-loop driver | 1 pcs | £34.22 |
-| M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore (Z and X folds) | 4 pcs | to price |
-| M16 | HTD 250-5M-15 timing belts, 15 mm wide, 50T (Z and X folds) | 2 pcs | to price |
+| M15 | HTD-5M timing pulleys 20T, 15 mm belt, 10 mm bore (Type_0_v6 Y1/Y2 belt drives) | 4 pcs | to price |
+| M16 | HTD 300-5M-15 timing belts, 15 mm wide, 60T (Type_0_v6 Y1/Y2 belt drives) | 2 pcs | to price |
 | M17 | Fold stub-shaft bearings (4 x 6000-2RS), circlips, and Ø16 bright bar for 2 stub shafts | 1 lot | £6.22 |
-| M11 | Table plate 6082 460 × 330 × 25 | 1 pcs | £221.33 |
+| M11 | Table fixture plate 6082 450 × 280 × 25 (Type_0_v6) | 1 pcs | £221.33 |
 | M12 | 6082-T6 CNC-milled plates: Z fixed, Z moving, 2 Z risers, X nut bracket, 2 fold plates | 1 lot | £165.26 |
 | M13 | Z and X motor mounts and fixed bearings HM12-60-V (replace the Z and X BK12) | 2 pcs | £26.06 |
 
