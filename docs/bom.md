@@ -1,6 +1,6 @@
 # Bill of materials (summary)
 
-Full list: [bom.csv](bom.csv). **161 line items, 148 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
+Full list: [bom.csv](bom.csv). **161 line items, 149 priced.** Prices were read from live pages on 2026-11-04/05 (by this session and a local browser session).
 
 **Pricing rule:** `price_listed` is exactly what the page showed. `price_gbp` is the GBP line total (all units + listed shipping), inc VAT where known. Lines marked *VAT?* may get VAT added, and import VAT may apply to non-UK orders. EUR/USD prices are not converted.
 
@@ -10,22 +10,22 @@ Full list: [bom.csv](bom.csv). **161 line items, 148 priced.** Prices were read 
 | Motion | 17 | 15 | £1,108.78 |
 | Gantry | 11 | 10 | £336.65 |
 | Spindle | 10 | 9 | £1,533.95 |
-| Tool changer | 10 | 7 | £145.69 |
+| Tool changer | 10 | 8 | £185.08 |
 | Pneumatics | 6 | 6 | £110.22 |
 | Electronics | 25 | 25 | £843.75 |
 | Enclosure | 4 | 4 | £78.61 |
 | Stand | 17 | 17 | £243.36 |
 | Metrology | 8 | 8 | £264.65 |
 | Fixings | 18 | 16 | £117.67 |
-| **All** | **161** | **148** | **£5,801.71** |
+| **All** | **161** | **149** | **£5,841.10** |
 
-**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,801.71**. Not priced yet: M15, M16, A10, A11, F30, F31, F33, G10, X24, X25, G16, A12, S10.
+**Budget (D-127): Phase 1 ≤ £4,200. Phases 2 and 3 later.** Priced total: **£5,841.10**. Not priced yet: M15, M16, A10, A11, F30, F31, F33, G10, X24, X25, G16, S10.
 
 ## Phase totals (D-66, D-86)
 | Phase | What | GBP priced |
 |---|---|---|
 | 1 | Frame, motion, electronics, ER20 spindle, cooling, stand | £4,386.61 |
-| 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,415.10 |
+| 2 | ATC spindle + holders, air, mist, enclosure, tool wheel (D-86) | £1,454.49 |
 
 Lines still TO PRICE: see the list above.
 
@@ -215,5 +215,5 @@ Lines still TO PRICE: see the list above.
 | X25 | 1 | Machining of the V4 steel: counterbore, tap, ream (end plates, uprights, beam) | 1 lot | Drilling and tapping the 2 end plates F26 (4 x M16 clearance each, M12 tapped for the upright bolts, blind dowel holes), the 2 uprights G07 (4 M12 counterbores each, dowel holes, 2 M12 tapped in the top edge), and the beam G01 (rail and upright bolt holes, fill ports, before the EG fill). Owner at home or the shop (ask in the F30 quote) Also 4 x M8 tapped 15 deep in the F26 X+ plate outer face for the ATC hub block, positions in F26 (D-317) | [product]() | PRICE PENDING: owner to say who machines it and the price |  | D-309 (24 Nov 2026). PRICE PENDING. Added because no line carried this work. With X24 delivery, F30 grinding, G10 and the other pending lines, the total is a LOWER BOUND and the budget overrun (£215.66 at the time of writing) is a minimum. |
 | F34 | 1 | Y1/Y2 PETG belt covers (2x, Type_0_v6) | 2 pcs | 3D-printed PETG stadium shrouds (3 mm wall + 3 mm front cap, Y -39..-6, R_out 25) over both Y1 & Y2 HTD 5M-300 belt drives; bottom 48 × 38 cable archway left clear (D-389) | [product]() | 3D printed, owner filament | 0.00 | D-389 (28 Nov 2026): modelled in Type_0_v6 under V6 Y Motor Belt Drives:1. |
 | G16 | 1 | Type_0_v6 Dyfed Steels frame & plate pack (tubes, bottom plate, Y pads, ATC strips, Y belt plates) | 1 lot | Dyfed Steels cut-to-length quote (docs/supplier-messages.md §8, D-383, D-388, D-389): YFrame 120×80×6.3 RHS, YRoller 80×80×3.0 SHS, XGantry 120×120×8.0 SHS, 6 mm base bottom plate, 80×8 Y-pads, 20×6 ATC strips, 2× 6 mm Y motor belt plates (80×195) | [product]() | PRICE PENDING: owner to phone Dyfed Steels (01554 772 255, docs/supplier-messages.md §8) |  | D-388, D-389 (28 Nov 2026): replaces V4 F25/F26/F29/G01/G07/G11-G14 once Dyfed Steels quote is confirmed. |
-| A12 | 2 | Type_0_v6 14-tool sliding ATC kit: CY3B15-200 magnetic rodless cylinder, reed switches, 5/2 valve, 2× 350 mm HGR15 | 1 lot | Retractable rear 14-tool (2×7 @ 56 mm X pitch) ATC (D-386, D-391): CY3B15-200 magnetic rodless cylinder (ZZ=303 mm, 200 mm stroke, 0 mm rear overhang, 100% sealed stainless tube), 2× reed switches, 4V210-08 24V 5/2 solenoid + flow controls, 2× 350 mm HGR15 rails + 4 HGH15CA blocks | [product]() | PRICE PENDING: owner browser check (docs/price-check-task-19.md) |  | D-391 (28 Nov 2026): switched from CD85N20-175 to CY3B15-200 magnetic rodless cylinder for 0 mm rear overhang. Replaces V4 rotary ATC wheel A03/A06-A11 once priced. |
+| A12 | 2 | Type_0_v6 14-tool sliding ATC kit: CY3B10-200 magnetic rodless cylinder (£39.39) + reed switches, 5/2 valve, 2× 350 mm HGR15 | 1 lot | Retractable rear 14-tool (2×7 @ 56 mm X pitch) ATC (D-386, D-391): CY3B10-200 magnetic rodless cylinder (ZZ=281 mm, 200 mm stroke, 0 mm rear overhang, 100% sealed stainless tube; £39.39 confirmed AliExpress 28 Nov 2026) + 2× reed switches, 4V210-08 24V 5/2 solenoid + flow controls, 2× 350 mm HGR15 rails + 4 HGH15CA blocks | [product](https://www.aliexpress.com/item/1005006196785965.html) | CY3B10-200 £39.39 inc VAT (owner AliExpress page 28 Nov 2026); valves/switches/HGR15 PRICE PENDING (docs/price-check-task-19.md) | 39.39 | D-391 (28 Nov 2026): CY3B10-200 priced at £39.39 (owner saved AliExpress page); valves, reed switches, and 2× 350 mm HGR15 still pending in docs/price-check-task-19.md. |
 | S10 | 2 | Type_0_v6 flood-coolant sump recirculation loop | 1 lot | 3-stage sump tank, 240V submersible/centrifugal coolant pump, 3× Ø36 rear drain fittings + hoses, stainless mesh pre-filter, Loc-Line manifold & nozzles (D-384) | [product]() | PRICE PENDING: owner browser check (docs/price-check-task-19.md) |  | D-384 (28 Nov 2026): flood-coolant loop feeding from the Type_0_v6 U-shaped EG moat + 3×Ø36 drains. |
