@@ -1,6 +1,6 @@
 # Next session
 ## Context (≤5 lines)
-57th session finished the `Type_0_v6` Y1/Y2 belt drives (`6 mm` steel plates with `48×38` cable archway, `1:1` `20T` `HTD 5M-300`, top M5 push-down tensioning lug), swapped front `BF12` for real `BK12` blocks (`bk12.step`), added 3D-printed PETG front belt covers, and mounted real `HM12-60` + inline `24HS40` motor at the `+X` drive end (D-389, D-390). Timeline: **1325 items, 0 errors** (**not saved** — owner saves). `docs/bom.csv` updated with v6 lines (`PRICE PENDING` until Dyfed Steels & `price-check-task-19.md` quotes arrive). Last D-number: **D-390**.
+57th session finished the `Type_0_v6` Y1/Y2 belt drives (`6 mm` steel plates with `48×38` cable archway, `1:1` `20T` `HTD 5M-300`, top M5 push-down tensioning lug), swapped front `BF12` for real `BK12` blocks (`bk12.step`), added 3D-printed PETG front belt covers, mounted real `HM12-60` + inline `24HS40` motor at `+X`, and bulkhead-mounted the SMC datasheet-exact `CD85N20-175` + `JA20-8-125` floating joint + 2 reed switches dry behind `Rear Splash Wall 6mm` (D-389..D-391). Timeline: **1330 items, 0 errors** (**not saved** — owner saves). Last D-number: **D-391**.
 
 ## Do this bundle: Type_0_v6 ATC cylinder, homing/chains & v6 BOM pricing
 - [ ] Ask owner: did they save `Type_0_v6`? Any live prices from `docs/price-check-task-19.md` or Dyfed Steels (`docs/supplier-messages.md` §8)?

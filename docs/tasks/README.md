@@ -4,7 +4,7 @@ The project is split into small tasks so each can be done in a fresh session wit
 
 ## Rules for every task (the owner's rules, short)
 - Branch `claude/hopeful-sagan-28twty` (continues `claude/charming-cori-349jm7`). Commit and push there.
-- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-390; D-295 to D-297 are kept for ATC plan task 7).
+- **Ask the owner before deciding** anything not already decided. Record decisions in `docs/decisions.md` with the next D-number (last used: D-391; D-295 to D-297 are kept for ATC plan task 7).
 - **Prices:** only from a live page or from the owner, with the date. Never estimate. No eBay. Flag anything more than 10 % or £5 dearer.
 - `docs/bom.csv` is the source of truth (CRLF line endings). When Claude edits it, a hook (`tools/bom_hook.py`) runs the 5 generators automatically and reports only errors. After a hand edit, set `PYTHONUTF8=1` and run `python tools/gen_bom_md.py`, `tools/gen_phase1_xlsx.py`, `tools/gen_phase1_cost.py`, `tools/build_open_links.py`, `tools/gen_wave1_sheet.py`.
 - **Castings: keep them simple.** Do not add cast-in features (except the 3 tapped steel strips, D-200). Phase 1 budget £4,200; priced total **£4,386.61 since Task 29 Step 2 (26 Nov, D-331–D-336: F01 2 x 4.66 kg, v3 dead lines dropped, X18/X21/F28/F32/M17 priced), £186.61 over**; before V4 £4,041.97 (20 Nov 2026 repricing, D-242 to D-245, plus G05 roller steel £78.62 on 23 Nov, D-281 to D-283: G03 dropped; G01 beam and X18 screws not priced; M12 and the LiMo 550/650 lines not re-checked).
